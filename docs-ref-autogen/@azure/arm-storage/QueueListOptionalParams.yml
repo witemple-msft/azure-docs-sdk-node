@@ -1,17 +1,16 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams'
-    name: BlobContainersListOptionalParams
-    fullName: BlobContainersListOptionalParams
+  - uid: '@azure/arm-storage.QueueListOptionalParams'
+    name: QueueListOptionalParams
+    fullName: QueueListOptionalParams
     children:
-      - '@azure/arm-storage.BlobContainersListOptionalParams.abortSignal'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.customHeaders'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.filter'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.include'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.maxpagesize'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.onDownloadProgress'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.onUploadProgress'
-      - '@azure/arm-storage.BlobContainersListOptionalParams.timeout'
+      - '@azure/arm-storage.QueueListOptionalParams.abortSignal'
+      - '@azure/arm-storage.QueueListOptionalParams.customHeaders'
+      - '@azure/arm-storage.QueueListOptionalParams.filter'
+      - '@azure/arm-storage.QueueListOptionalParams.maxpagesize'
+      - '@azure/arm-storage.QueueListOptionalParams.onDownloadProgress'
+      - '@azure/arm-storage.QueueListOptionalParams.onUploadProgress'
+      - '@azure/arm-storage.QueueListOptionalParams.timeout'
     langs:
       - typeScript
     type: interface
@@ -19,7 +18,7 @@ items:
     extends:
       name: RequestOptionsBase
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.abortSignal'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.abortSignal'
     name: abortSignal
     fullName: abortSignal
     children: []
@@ -35,7 +34,7 @@ items:
           - AbortSignalLike
         description: ''
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.customHeaders'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.customHeaders'
     name: customHeaders
     fullName: customHeaders
     children: []
@@ -53,7 +52,7 @@ items:
           - 'undefined | [key: string]: string'
         description: ''
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.filter'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.filter'
     name: filter
     fullName: filter
     children: []
@@ -61,8 +60,10 @@ items:
       - typeScript
     type: property
     summary: >-
-      Optional. When specified, only container names starting with the filter
-      will be listed.
+      Optional, When specified, only the queues with a name starting with the
+      given filter will be
+
+      listed.
     optional: true
     syntax:
       content: 'filter?: undefined | string'
@@ -71,27 +72,7 @@ items:
           - undefined | string
         description: ''
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.include'
-    name: include
-    fullName: include
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Optional, used to include the properties for soft deleted blob containers.
-      Possible values
-
-      include: 'deleted'
-    optional: true
-    syntax:
-      content: 'include?: ListContainersInclude'
-      return:
-        type:
-          - '@azure/arm-storage.ListContainersInclude'
-        description: ''
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.maxpagesize'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.maxpagesize'
     name: maxpagesize
     fullName: maxpagesize
     children: []
@@ -99,8 +80,8 @@ items:
       - typeScript
     type: property
     summary: >-
-      Optional. Specified maximum number of containers that can be included in
-      the list.
+      Optional, a maximum number of queues that should be included in a list
+      queue response
     optional: true
     syntax:
       content: 'maxpagesize?: undefined | string'
@@ -109,7 +90,7 @@ items:
           - undefined | string
         description: ''
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.onDownloadProgress'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.onDownloadProgress'
     name: onDownloadProgress
     fullName: onDownloadProgress
     children: []
@@ -127,7 +108,7 @@ items:
           - 'undefined | (progress: TransferProgressEvent) => void'
         description: ''
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.onUploadProgress'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.onUploadProgress'
     name: onUploadProgress
     fullName: onUploadProgress
     children: []
@@ -143,7 +124,7 @@ items:
           - 'undefined | (progress: TransferProgressEvent) => void'
         description: ''
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainersListOptionalParams.timeout'
+  - uid: '@azure/arm-storage.QueueListOptionalParams.timeout'
     name: timeout
     fullName: timeout
     children: []
@@ -161,10 +142,3 @@ items:
           - undefined | number
         description: ''
     package: '@azure/arm-storage'
-references:
-  - uid: '@azure/arm-storage.ListContainersInclude'
-    name: ListContainersInclude
-    spec.typeScript:
-      - name: ListContainersInclude
-        fullName: ListContainersInclude
-        uid: '@azure/arm-storage.ListContainersInclude'
