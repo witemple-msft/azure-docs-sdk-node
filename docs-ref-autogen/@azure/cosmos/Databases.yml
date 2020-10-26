@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Databases
-uid: '@azure/cosmos.Databases'
+uid: '@azure/cosmos.index.d.Databases'
 package: '@azure/cosmos'
 summary: 'Operations for creating new databases, and reading/querying all databases'
 fullName: Databases
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 properties:
   - name: client
-    uid: '@azure/cosmos.Databases.client'
+    uid: '@azure/cosmos.index.d.Databases.client'
     package: '@azure/cosmos'
     summary: ''
     fullName: client
@@ -20,11 +20,11 @@ properties:
     syntax:
       content: 'client: CosmosClient'
       return:
-        type: <xref uid="@azure/cosmos.CosmosClient" />
+        type: <xref uid="@azure/cosmos.index.d.CosmosClient" />
         description: ''
 methods:
   - name: 'create(DatabaseRequest, RequestOptions)'
-    uid: '@azure/cosmos.Databases.create'
+    uid: '@azure/cosmos.index.d.Databases.create'
     package: '@azure/cosmos'
     summary: >
       Send a request for creating a database.
@@ -52,20 +52,20 @@ methods:
       content: 'function create(body: DatabaseRequest, options?: RequestOptions)'
       parameters:
         - id: body
-          type: <xref uid="@azure/cosmos.DatabaseRequest" />
+          type: <xref uid="@azure/cosmos.index.d.DatabaseRequest" />
           description: >-
             The <xref:DatabaseDefinition> that represents the <xref:Database> to
             be created.
         - id: options
-          type: <xref uid="@azure/cosmos.RequestOptions" />
+          type: <xref uid="@azure/cosmos.index.d.RequestOptions" />
           description: >
             Use to set options like response page size, continuation tokens,
             etc.
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.DatabaseResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/cosmos.index.d.DatabaseResponse" />&gt;
         description: ''
   - name: 'createIfNotExists(DatabaseRequest, RequestOptions)'
-    uid: '@azure/cosmos.Databases.createIfNotExists'
+    uid: '@azure/cosmos.index.d.Databases.createIfNotExists'
     package: '@azure/cosmos'
     summary: >
       Check if a database exists, and if it doesn't, create it.
@@ -98,19 +98,19 @@ methods:
         RequestOptions)
       parameters:
         - id: body
-          type: <xref uid="@azure/cosmos.DatabaseRequest" />
+          type: <xref uid="@azure/cosmos.index.d.DatabaseRequest" />
           description: >-
             The <xref:DatabaseDefinition> that represents the <xref:Database> to
             be created.
         - id: options
-          type: <xref uid="@azure/cosmos.RequestOptions" />
+          type: <xref uid="@azure/cosmos.index.d.RequestOptions" />
           description: |+
 
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.DatabaseResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/cosmos.index.d.DatabaseResponse" />&gt;
         description: ''
   - name: 'query(string | SqlQuerySpec, FeedOptions)'
-    uid: '@azure/cosmos.Databases.query'
+    uid: '@azure/cosmos.index.d.Databases.query'
     package: '@azure/cosmos'
     summary: Queries all databases.
     remarks: ''
@@ -120,22 +120,22 @@ methods:
       content: 'function query(query: string | SqlQuerySpec, options?: FeedOptions)'
       parameters:
         - id: query
-          type: string | <xref uid="@azure/cosmos.SqlQuerySpec" />
+          type: string | <xref uid="@azure/cosmos.index.d.SqlQuerySpec" />
           description: >-
             Query configuration for the operation. See <xref:SqlQuerySpec> for
             more info on how to configure a query.
         - id: options
-          type: <xref uid="@azure/cosmos.FeedOptions" />
+          type: <xref uid="@azure/cosmos.index.d.FeedOptions" />
           description: >-
             Use to set options like response page size, continuation tokens,
             etc.
       return:
-        type: <xref uid="@azure/cosmos.QueryIterator" />&lt;any&gt;
+        type: <xref uid="@azure/cosmos.index.d.QueryIterator" />&lt;any&gt;
         description: >-
-          Allows you to return all databases in an array or iterate over them
-          one at a time.
+          {@link QueryIterator} Allows you to return all databases in an array
+          or iterate over them one at a time.
   - name: 'query<T>(string | SqlQuerySpec, FeedOptions)'
-    uid: '@azure/cosmos.Databases.query_1'
+    uid: '@azure/cosmos.index.d.Databases.query_1'
     package: '@azure/cosmos'
     summary: Queries all databases.
     remarks: ''
@@ -145,22 +145,22 @@ methods:
       content: 'function query<T>(query: string | SqlQuerySpec, options?: FeedOptions)'
       parameters:
         - id: query
-          type: string | <xref uid="@azure/cosmos.SqlQuerySpec" />
+          type: string | <xref uid="@azure/cosmos.index.d.SqlQuerySpec" />
           description: >-
             Query configuration for the operation. See <xref:SqlQuerySpec> for
             more info on how to configure a query.
         - id: options
-          type: <xref uid="@azure/cosmos.FeedOptions" />
+          type: <xref uid="@azure/cosmos.index.d.FeedOptions" />
           description: >-
             Use to set options like response page size, continuation tokens,
             etc.
       return:
-        type: <xref uid="@azure/cosmos.QueryIterator" />&lt;T&gt;
+        type: <xref uid="@azure/cosmos.index.d.QueryIterator" />&lt;T&gt;
         description: >-
-          Allows you to return all databases in an array or iterate over them
-          one at a time.
+          {@link QueryIterator} Allows you to return all databases in an array
+          or iterate over them one at a time.
   - name: readAll(FeedOptions)
-    uid: '@azure/cosmos.Databases.readAll'
+    uid: '@azure/cosmos.index.d.Databases.readAll'
     package: '@azure/cosmos'
     summary: Reads all databases.
     remarks: ''
@@ -170,15 +170,15 @@ methods:
       content: 'function readAll(options?: FeedOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/cosmos.FeedOptions" />
+          type: <xref uid="@azure/cosmos.index.d.FeedOptions" />
           description: >-
             Use to set options like response page size, continuation tokens,
             etc.
       return:
         type: >-
-          <xref uid="@azure/cosmos.QueryIterator" />&lt;<xref
-          uid="@azure/cosmos.DatabaseDefinition" /> & <xref
-          uid="@azure/cosmos.Resource" />&gt;
+          <xref uid="@azure/cosmos.index.d.QueryIterator" />&lt;<xref
+          uid="@azure/cosmos.index.d.DatabaseDefinition" /> & <xref
+          uid="@azure/cosmos.index.d.Resource" />&gt;
         description: >-
-          Allows you to return all databases in an array or iterate over them
-          one at a time.
+          {@link QueryIterator} Allows you to return all databases in an array
+          or iterate over them one at a time.

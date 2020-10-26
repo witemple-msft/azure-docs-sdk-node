@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: StreamingLocatorCollection
-uid: '@azure/arm-mediaservices.StreamingLocatorCollection'
+uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection'
 package: '@azure/arm-mediaservices'
 summary: ''
 fullName: StreamingLocatorCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.Array'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.Array'
     package: '@azure/arm-mediaservices'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.length'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.length'
     package: '@azure/arm-mediaservices'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,8 @@ properties:
         type: number
         description: ''
   - name: odatanextLink
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.odatanextLink'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.odatanextLink
     package: '@azure/arm-mediaservices'
     summary: >-
       A link to the next page of the collection (when the collection contains
@@ -56,7 +57,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<StreamingLocator>[])'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.concat'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.concat'
     package: '@azure/arm-mediaservices'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +68,45 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-mediaservices.StreamingLocator"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.concat_1'
+  - name: 'concat(StreamingLocator | ConcatArray<StreamingLocator>[])'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.concat_1
     package: '@azure/arm-mediaservices'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: StreamingLocator |
+        ConcatArray<StreamingLocator>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.copyWithin'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.copyWithin
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +144,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.entries'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.entries'
     package: '@azure/arm-mediaservices'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +158,7 @@ methods:
   - name: >-
       every((value: StreamingLocator, index: number, array: StreamingLocator[])
       => unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.every'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.every_1'
     package: '@azure/arm-mediaservices'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +166,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: StreamingLocator, index: number,
+        function every(predicate: (value: StreamingLocator, index: number,
         array: StreamingLocator[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingLocator, index: number, array: StreamingLocator[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: StreamingLocator, index: number, array:
+      StreamingLocator[]) => value, any)
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.every'
+    package: '@azure/arm-mediaservices'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: StreamingLocator, index: number,
+        array: StreamingLocator[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: StreamingLocator, index: number, array: StreamingLocator[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(StreamingLocator, undefined | number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.fill'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.fill'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +244,9 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +268,8 @@ methods:
   - name: >-
       filter((value: StreamingLocator, index: number, array: StreamingLocator[])
       => unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.filter_1'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.filter_1
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +279,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: StreamingLocator, index: number,
+        function filter(predicate: (value: StreamingLocator, index: number,
         array: StreamingLocator[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingLocator, index: number, array: StreamingLocator[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: StreamingLocator, index: number, array:
-      StreamingLocator[]) => boolean, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.filter'
+      StreamingLocator[]) => value, any)
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.filter'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +313,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: StreamingLocator, index: number,
-        array: StreamingLocator[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: StreamingLocator, index: number,
+        array: StreamingLocator[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingLocator, index: number, array: StreamingLocator[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +335,7 @@ methods:
   - name: >-
       find((value: StreamingLocator, index: number, obj: StreamingLocator[]) =>
       unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.find_1'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.find_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -295,12 +355,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: StreamingLocator, index: number, obj:
-      StreamingLocator[]) => boolean, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.find'
+      StreamingLocator[]) => value, any)
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.find'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +375,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: StreamingLocator, index:
-        number, obj: StreamingLocator[]) => boolean, thisArg?: any)
+        number, obj: StreamingLocator[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: StreamingLocator, index: number, obj:
-            StreamingLocator[]) =&gt; boolean
+            StreamingLocator[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +403,8 @@ methods:
   - name: >-
       findIndex((value: StreamingLocator, index: number, obj:
       StreamingLocator[]) => unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.findIndex'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.findIndex
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +445,7 @@ methods:
   - name: >-
       forEach((value: StreamingLocator, index: number, array:
       StreamingLocator[]) => void, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.forEach'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.forEach'
     package: '@azure/arm-mediaservices'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +470,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(StreamingLocator, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.includes'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.includes
     package: '@azure/arm-mediaservices'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +485,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +498,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(StreamingLocator, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.indexOf'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.indexOf'
     package: '@azure/arm-mediaservices'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +510,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +523,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.join'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.join'
     package: '@azure/arm-mediaservices'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +544,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.keys'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.keys'
     package: '@azure/arm-mediaservices'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +556,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(StreamingLocator, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.lastIndexOf
     package: '@azure/arm-mediaservices'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +569,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +584,7 @@ methods:
   - name: >-
       map<U>((value: StreamingLocator, index: number, array: StreamingLocator[])
       => U, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.map'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.map'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +614,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.pop'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.pop'
     package: '@azure/arm-mediaservices'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +623,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          /> | undefined
         description: ''
   - name: 'push(StreamingLocator[])'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.push'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.push'
     package: '@azure/arm-mediaservices'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +638,9 @@ methods:
       content: 'function push(items: StreamingLocator[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -574,7 +649,7 @@ methods:
   - name: >-
       reduce((previousValue: StreamingLocator, currentValue: StreamingLocator,
       currentIndex: number, array: StreamingLocator[]) => StreamingLocator)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reduce'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reduce'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +674,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />
         description: ''
   - name: >-
       reduce((previousValue: StreamingLocator, currentValue: StreamingLocator,
       currentIndex: number, array: StreamingLocator[]) => StreamingLocator,
       StreamingLocator)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reduce_1'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reduce_1
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -624,15 +702,20 @@ methods:
             StreamingLocator
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: StreamingLocator, currentIndex:
       number, array: StreamingLocator[]) => U, U)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reduce_2'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reduce_2
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -668,7 +751,8 @@ methods:
       reduceRight((previousValue: StreamingLocator, currentValue:
       StreamingLocator, currentIndex: number, array: StreamingLocator[]) =>
       StreamingLocator)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reduceRight'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reduceRight
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -694,13 +778,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: StreamingLocator, currentValue:
       StreamingLocator, currentIndex: number, array: StreamingLocator[]) =>
       StreamingLocator, StreamingLocator)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reduceRight_1
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -719,15 +806,20 @@ methods:
             StreamingLocator
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" />
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: StreamingLocator,
       currentIndex: number, array: StreamingLocator[]) => U, U)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reduceRight_2
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -761,7 +853,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.reverse'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.reverse'
     package: '@azure/arm-mediaservices'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -770,10 +862,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.shift'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.shift'
     package: '@azure/arm-mediaservices'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -782,10 +876,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingLocator" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.slice'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.slice'
     package: '@azure/arm-mediaservices'
     summary: Returns a section of an array.
     remarks: ''
@@ -799,15 +895,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
   - name: >-
       some((value: StreamingLocator, index: number, array: StreamingLocator[])
       => unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.some'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.some'
     package: '@azure/arm-mediaservices'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -817,28 +916,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: StreamingLocator, index: number,
-        array: StreamingLocator[]) => unknown, thisArg?: any)
+        function some(predicate: (value: StreamingLocator, index: number, array:
+        StreamingLocator[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingLocator, index: number, array: StreamingLocator[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: StreamingLocator, b: StreamingLocator) => number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.sort'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.sort'
     package: '@azure/arm-mediaservices'
     summary: Sorts an array.
     remarks: ''
@@ -852,14 +956,26 @@ methods:
         - id: compareFn
           type: 'undefined | (a: StreamingLocator, b: StreamingLocator) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, StreamingLocator[])'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.splice_1'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.splice_1
     package: '@azure/arm-mediaservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -881,14 +997,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.splice'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.splice'
     package: '@azure/arm-mediaservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -909,10 +1029,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.toLocaleString'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.toLocaleString
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -926,7 +1049,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.toString'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.toString
     package: '@azure/arm-mediaservices'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -938,7 +1062,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(StreamingLocator[])'
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.unshift'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.unshift'
     package: '@azure/arm-mediaservices'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -948,14 +1072,16 @@ methods:
       content: 'function unshift(items: StreamingLocator[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.StreamingLocator" />[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-mediaservices.StreamingLocatorCollection.values'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.values'
     package: '@azure/arm-mediaservices'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -966,6 +1092,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-mediaservices.StreamingLocator" />&gt;
+          uid="@azure/arm-mediaservices.models.index.d.StreamingLocator" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-mediaservices.StreamingLocator" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.[Symbol.iterator]
+    package: '@azure/arm-mediaservices'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-mediaservices.models.index.d.StreamingLocator" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingLocatorCollection.[Symbol.unscopables]
+    package: '@azure/arm-mediaservices'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-mediaservices.models.index.d.AccountFilterCollection.Array"
+  />&lt;<xref uid="@azure/arm-mediaservices.models.index.d.StreamingLocator"
+  />&gt;

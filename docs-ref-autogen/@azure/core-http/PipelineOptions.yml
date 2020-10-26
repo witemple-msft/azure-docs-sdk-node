@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: PipelineOptions
-uid: '@azure/core-http.PipelineOptions'
+uid: '@azure/core-http.pipelineOptions.d.PipelineOptions'
 package: '@azure/core-http'
 summary: |-
   Defines options that are used to configure the HTTP pipeline for
@@ -12,7 +12,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: httpClient
-    uid: '@azure/core-http.PipelineOptions.httpClient'
+    uid: '@azure/core-http.pipelineOptions.d.PipelineOptions.httpClient'
     package: '@azure/core-http'
     summary: |-
       The HttpClient implementation to use for outgoing HTTP requests.  Defaults
@@ -24,10 +24,10 @@ properties:
     syntax:
       content: 'httpClient?: HttpClient'
       return:
-        type: <xref uid="@azure/core-http.HttpClient" />
+        type: <xref uid="@azure/core-http.httpClient.d.HttpClient" />
         description: ''
   - name: keepAliveOptions
-    uid: '@azure/core-http.PipelineOptions.keepAliveOptions'
+    uid: '@azure/core-http.pipelineOptions.d.PipelineOptions.keepAliveOptions'
     package: '@azure/core-http'
     summary: ''
     fullName: keepAliveOptions
@@ -37,10 +37,12 @@ properties:
     syntax:
       content: 'keepAliveOptions?: KeepAliveOptions'
       return:
-        type: <xref uid="@azure/core-http.KeepAliveOptions" />
+        type: >-
+          <xref
+          uid="@azure/core-http.policies.keepAlivePolicy.d.KeepAliveOptions" />
         description: ''
   - name: proxyOptions
-    uid: '@azure/core-http.PipelineOptions.proxyOptions'
+    uid: '@azure/core-http.pipelineOptions.d.PipelineOptions.proxyOptions'
     package: '@azure/core-http'
     summary: Options to configure a proxy for outgoing requests.
     fullName: proxyOptions
@@ -50,10 +52,10 @@ properties:
     syntax:
       content: 'proxyOptions?: ProxyOptions'
       return:
-        type: <xref uid="@azure/core-http.ProxyOptions" />
+        type: <xref uid="@azure/core-http.serviceClient.d.ProxyOptions" />
         description: ''
   - name: redirectOptions
-    uid: '@azure/core-http.PipelineOptions.redirectOptions'
+    uid: '@azure/core-http.pipelineOptions.d.PipelineOptions.redirectOptions'
     package: '@azure/core-http'
     summary: Options for how redirect responses are handled.
     fullName: redirectOptions
@@ -63,10 +65,12 @@ properties:
     syntax:
       content: 'redirectOptions?: RedirectOptions'
       return:
-        type: <xref uid="@azure/core-http.RedirectOptions" />
+        type: >-
+          <xref uid="@azure/core-http.policies.redirectPolicy.d.RedirectOptions"
+          />
         description: ''
   - name: retryOptions
-    uid: '@azure/core-http.PipelineOptions.retryOptions'
+    uid: '@azure/core-http.pipelineOptions.d.PipelineOptions.retryOptions'
     package: '@azure/core-http'
     summary: Options that control how to retry failed requests.
     fullName: retryOptions
@@ -76,10 +80,13 @@ properties:
     syntax:
       content: 'retryOptions?: RetryOptions'
       return:
-        type: <xref uid="@azure/core-http.RetryOptions" />
+        type: >-
+          <xref
+          uid="@azure/core-http.policies.exponentialRetryPolicy.d.RetryOptions"
+          />
         description: ''
   - name: userAgentOptions
-    uid: '@azure/core-http.PipelineOptions.userAgentOptions'
+    uid: '@azure/core-http.pipelineOptions.d.PipelineOptions.userAgentOptions'
     package: '@azure/core-http'
     summary: Options for adding user agent details to outgoing requests.
     fullName: userAgentOptions
@@ -89,5 +96,7 @@ properties:
     syntax:
       content: 'userAgentOptions?: UserAgentOptions'
       return:
-        type: <xref uid="@azure/core-http.UserAgentOptions" />
+        type: >-
+          <xref
+          uid="@azure/core-http.policies.userAgentPolicy.d.UserAgentOptions" />
         description: ''

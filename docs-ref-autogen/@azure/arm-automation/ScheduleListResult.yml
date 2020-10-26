@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ScheduleListResult
-uid: '@azure/arm-automation.ScheduleListResult'
+uid: '@azure/arm-automation.models.index.d.ScheduleListResult'
 package: '@azure/arm-automation'
 summary: ''
 fullName: ScheduleListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-automation.ScheduleListResult.Array'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.Array'
     package: '@azure/arm-automation'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-automation.ScheduleListResult.length'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.length'
     package: '@azure/arm-automation'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-automation.ScheduleListResult.nextLink'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.nextLink'
     package: '@azure/arm-automation'
     summary: Gets or sets the next link.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Schedule>[])'
-    uid: '@azure/arm-automation.ScheduleListResult.concat'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.concat'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<Schedule>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-automation.Schedule" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.Schedule" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-automation.ScheduleListResult.concat_1'
+  - name: 'concat(Schedule | ConcatArray<Schedule>[])'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.concat_1'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Schedule | ConcatArray<Schedule>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.Schedule" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.Schedule" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.copyWithin'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.copyWithin'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-automation.ScheduleListResult.entries'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.entries'
     package: '@azure/arm-automation'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Schedule, index: number, array: Schedule[]) => unknown, any)'
-    uid: '@azure/arm-automation.ScheduleListResult.every'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.every_1'
     package: '@azure/arm-automation'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Schedule, index: number, array:
+        function every(predicate: (value: Schedule, index: number, array:
         Schedule[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Schedule, index: number, array: Schedule[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Schedule, index: number, array: Schedule[]) => value,
+      any)
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.every'
+    package: '@azure/arm-automation'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Schedule, index: number, array:
+        Schedule[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Schedule, index: number, array: Schedule[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Schedule, undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.fill'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.fill'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +223,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-automation.Schedule" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +245,7 @@ methods:
   - name: >-
       filter((value: Schedule, index: number, array: Schedule[]) => unknown,
       any)
-    uid: '@azure/arm-automation.ScheduleListResult.filter_1'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.filter_1'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,28 +255,27 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Schedule, index: number, array:
+        function filter(predicate: (value: Schedule, index: number, array:
         Schedule[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Schedule, index: number, array: Schedule[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
   - name: >-
-      filter<S>((value: Schedule, index: number, array: Schedule[]) => boolean,
+      filter<S>((value: Schedule, index: number, array: Schedule[]) => value,
       any)
-    uid: '@azure/arm-automation.ScheduleListResult.filter'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.filter'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +285,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Schedule, index: number, array:
-        Schedule[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Schedule, index: number, array:
+        Schedule[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Schedule, index: number, array: Schedule[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Schedule, index: number, array: Schedule[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Schedule, index: number, obj: Schedule[]) => unknown, any)'
-    uid: '@azure/arm-automation.ScheduleListResult.find_1'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.find_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -277,12 +321,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.Schedule" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Schedule, index: number, obj: Schedule[]) =>
-      boolean, any)
-    uid: '@azure/arm-automation.ScheduleListResult.find'
+      value, any)
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.find'
     package: '@azure/arm-automation'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +341,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Schedule, index: number,
-        obj: Schedule[]) => boolean, thisArg?: any)
+        obj: Schedule[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Schedule, index: number, obj: Schedule[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -323,7 +369,7 @@ methods:
   - name: >-
       findIndex((value: Schedule, index: number, obj: Schedule[]) => unknown,
       any)
-    uid: '@azure/arm-automation.ScheduleListResult.findIndex'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.findIndex'
     package: '@azure/arm-automation'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -360,7 +406,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Schedule, index: number, array: Schedule[]) => void, any)'
-    uid: '@azure/arm-automation.ScheduleListResult.forEach'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.forEach'
     package: '@azure/arm-automation'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -383,7 +429,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Schedule, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.includes'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.includes'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -397,7 +443,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Schedule" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -408,7 +454,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Schedule, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.indexOf'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.indexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -420,7 +466,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Schedule" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -431,7 +477,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-automation.ScheduleListResult.join'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.join'
     package: '@azure/arm-automation'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -452,7 +498,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-automation.ScheduleListResult.keys'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.keys'
     package: '@azure/arm-automation'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -464,7 +510,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Schedule, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.lastIndexOf'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.lastIndexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -476,7 +522,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Schedule" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -487,7 +533,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Schedule, index: number, array: Schedule[]) => U, any)'
-    uid: '@azure/arm-automation.ScheduleListResult.map'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.map'
     package: '@azure/arm-automation'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -515,7 +561,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-automation.ScheduleListResult.pop'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.pop'
     package: '@azure/arm-automation'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -524,10 +570,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.Schedule" /> |
+          undefined
         description: ''
   - name: 'push(Schedule[])'
-    uid: '@azure/arm-automation.ScheduleListResult.push'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.push'
     package: '@azure/arm-automation'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -537,7 +585,7 @@ methods:
       content: 'function push(items: Schedule[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
           description: |
             New elements of the Array.
       return:
@@ -546,7 +594,7 @@ methods:
   - name: >-
       reduce((previousValue: Schedule, currentValue: Schedule, currentIndex:
       number, array: Schedule[]) => Schedule)
-    uid: '@azure/arm-automation.ScheduleListResult.reduce'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reduce'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -569,12 +617,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
         description: ''
   - name: >-
       reduce((previousValue: Schedule, currentValue: Schedule, currentIndex:
       number, array: Schedule[]) => Schedule, Schedule)
-    uid: '@azure/arm-automation.ScheduleListResult.reduce_1'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reduce_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -592,15 +640,15 @@ methods:
             number, array: Schedule[]) =&gt; Schedule
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.Schedule" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Schedule, currentIndex: number,
       array: Schedule[]) => U, U)
-    uid: '@azure/arm-automation.ScheduleListResult.reduce_2'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reduce_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -635,7 +683,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Schedule, currentValue: Schedule,
       currentIndex: number, array: Schedule[]) => Schedule)
-    uid: '@azure/arm-automation.ScheduleListResult.reduceRight'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reduceRight'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -659,12 +707,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
         description: ''
   - name: >-
       reduceRight((previousValue: Schedule, currentValue: Schedule,
       currentIndex: number, array: Schedule[]) => Schedule, Schedule)
-    uid: '@azure/arm-automation.ScheduleListResult.reduceRight_1'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reduceRight_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -682,15 +730,15 @@ methods:
             number, array: Schedule[]) =&gt; Schedule
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.Schedule" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Schedule" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Schedule, currentIndex:
       number, array: Schedule[]) => U, U)
-    uid: '@azure/arm-automation.ScheduleListResult.reduceRight_2'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reduceRight_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -724,7 +772,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-automation.ScheduleListResult.reverse'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.reverse'
     package: '@azure/arm-automation'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -733,10 +781,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-automation.ScheduleListResult.shift'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.shift'
     package: '@azure/arm-automation'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -745,10 +793,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-automation.Schedule" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.Schedule" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.slice'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.slice'
     package: '@azure/arm-automation'
     summary: Returns a section of an array.
     remarks: ''
@@ -762,13 +812,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
   - name: 'some((value: Schedule, index: number, array: Schedule[]) => unknown, any)'
-    uid: '@azure/arm-automation.ScheduleListResult.some'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.some'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -778,26 +829,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Schedule, index: number, array:
+        function some(predicate: (value: Schedule, index: number, array:
         Schedule[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Schedule, index: number, array: Schedule[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Schedule, b: Schedule) => number)'
-    uid: '@azure/arm-automation.ScheduleListResult.sort'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.sort'
     package: '@azure/arm-automation'
     summary: Sorts an array.
     remarks: ''
@@ -811,14 +867,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Schedule, b: Schedule) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Schedule[])'
-    uid: '@azure/arm-automation.ScheduleListResult.splice_1'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.splice_1'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -838,14 +905,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-automation.ScheduleListResult.splice'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.splice'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -866,10 +933,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-automation.ScheduleListResult.toLocaleString'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.toLocaleString'
     package: '@azure/arm-automation'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -883,7 +950,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-automation.ScheduleListResult.toString'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.toString'
     package: '@azure/arm-automation'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -895,7 +962,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Schedule[])'
-    uid: '@azure/arm-automation.ScheduleListResult.unshift'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.unshift'
     package: '@azure/arm-automation'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -905,14 +972,14 @@ methods:
       content: 'function unshift(items: Schedule[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.Schedule" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Schedule" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-automation.ScheduleListResult.values'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.values'
     package: '@azure/arm-automation'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -921,6 +988,40 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-automation.Schedule" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.Schedule" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-automation.Schedule" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-automation.models.index.d.ScheduleListResult.[Symbol.iterator]'
+    package: '@azure/arm-automation'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.Schedule" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.ScheduleListResult.[Symbol.unscopables]
+    package: '@azure/arm-automation'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-automation.models.index.d.AutomationAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-automation.models.index.d.Schedule" />&gt;

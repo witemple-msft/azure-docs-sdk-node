@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Application
-uid: '@azure/batch.Application'
+uid: '@azure/batch.operations.application.d.Application'
 package: '@azure/batch'
 summary: Class representing a Application.
 fullName: Application
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Application(BatchServiceClientContext)
-    uid: '@azure/batch.Application.constructor'
+    uid: '@azure/batch.operations.application.d.Application.constructor'
     package: '@azure/batch'
     summary: Create a Application.
     remarks: ''
@@ -20,14 +20,17 @@ constructors:
       content: 'new Application(client: BatchServiceClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          type: >-
+            <xref
+            uid="@azure/batch.batchServiceClientContext.d.BatchServiceClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       get(string, ApplicationGetOptionalParams,
       ServiceCallback<ApplicationSummary>)
-    uid: '@azure/batch.Application.get_2'
+    uid: '@azure/batch.operations.application.d.Application.get_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -41,30 +44,32 @@ methods:
       parameters:
         - id: applicationId
           type: string
-          description: The ID of the application.
+          description: The ID of the Application.
         - id: options
-          type: <xref uid="@azure/batch.ApplicationGetOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.ApplicationGetOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.ApplicationSummary"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;
           description: |
             The callback
   - name: 'get(string, Models.ApplicationGetOptionalParams)'
-    uid: '@azure/batch.Application.get'
+    uid: '@azure/batch.operations.application.d.Application.get'
     package: '@azure/batch'
     summary: >-
-      This operation returns only applications and versions that are available
-      for use on compute
+      This operation returns only Applications and versions that are available
+      for use on Compute
 
-      nodes; that is, that can be used in an application package reference. For
-      administrator
+      Nodes; that is, that can be used in an Package reference. For
+      administrator information about
 
-      information about applications and versions that are not yet available to
-      compute nodes, use the
+      Applications and versions that are not yet available to Compute Nodes, use
+      the Azure portal or
 
-      Azure portal or the Azure Resource Manager API.
+      the Azure Resource Manager API.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -75,7 +80,7 @@ methods:
       parameters:
         - id: applicationId
           type: string
-          description: The ID of the application.
+          description: The ID of the Application.
         - id: options
           type: <xref uid="Models.ApplicationGetOptionalParams" />
           description: ''
@@ -83,7 +88,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ApplicationGetResponse" />&gt;
         description: Promise<Models.ApplicationGetResponse>
   - name: 'get(string, ServiceCallback<ApplicationSummary>)'
-    uid: '@azure/batch.Application.get_1'
+    uid: '@azure/batch.operations.application.d.Application.get_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -96,17 +101,17 @@ methods:
       parameters:
         - id: applicationId
           type: string
-          description: The ID of the application.
+          description: The ID of the Application.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.ApplicationSummary"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;
           description: |
             The callback
   - name: >-
       list(ApplicationListOptionalParams,
       ServiceCallback<ApplicationListResult>)
-    uid: '@azure/batch.Application.list_2'
+    uid: '@azure/batch.operations.application.d.Application.list_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -118,28 +123,30 @@ methods:
         ServiceCallback<ApplicationListResult>)
       parameters:
         - id: options
-          type: <xref uid="@azure/batch.ApplicationListOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.ApplicationListOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.ApplicationListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationListResult" />&gt;
           description: |
             The callback
   - name: list(Models.ApplicationListOptionalParams)
-    uid: '@azure/batch.Application.list'
+    uid: '@azure/batch.operations.application.d.Application.list'
     package: '@azure/batch'
     summary: >-
-      This operation returns only applications and versions that are available
-      for use on compute
+      This operation returns only Applications and versions that are available
+      for use on Compute
 
-      nodes; that is, that can be used in an application package reference. For
-      administrator
+      Nodes; that is, that can be used in an Package reference. For
+      administrator information about
 
-      information about applications and versions that are not yet available to
-      compute nodes, use the
+      applications and versions that are not yet available to Compute Nodes, use
+      the Azure portal or
 
-      Azure portal or the Azure Resource Manager API.
+      the Azure Resource Manager API.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -153,7 +160,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ApplicationListResponse" />&gt;
         description: Promise<Models.ApplicationListResponse>
   - name: list(ServiceCallback<ApplicationListResult>)
-    uid: '@azure/batch.Application.list_1'
+    uid: '@azure/batch.operations.application.d.Application.list_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -164,14 +171,14 @@ methods:
       parameters:
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.ApplicationListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationListResult" />&gt;
           description: |
             The callback
   - name: >-
       listNext(string, ApplicationListNextOptionalParams,
       ServiceCallback<ApplicationListResult>)
-    uid: '@azure/batch.Application.listNext_2'
+    uid: '@azure/batch.operations.application.d.Application.listNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -187,28 +194,31 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.ApplicationListNextOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.ApplicationListNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.ApplicationListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationListResult" />&gt;
           description: |
             The callback
   - name: 'listNext(string, Models.ApplicationListNextOptionalParams)'
-    uid: '@azure/batch.Application.listNext'
+    uid: '@azure/batch.operations.application.d.Application.listNext'
     package: '@azure/batch'
     summary: >-
-      This operation returns only applications and versions that are available
-      for use on compute
+      This operation returns only Applications and versions that are available
+      for use on Compute
 
-      nodes; that is, that can be used in an application package reference. For
-      administrator
+      Nodes; that is, that can be used in an Package reference. For
+      administrator information about
 
-      information about applications and versions that are not yet available to
-      compute nodes, use the
+      applications and versions that are not yet available to Compute Nodes, use
+      the Azure portal or
 
-      Azure portal or the Azure Resource Manager API.
+      the Azure Resource Manager API.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -227,7 +237,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ApplicationListResponse" />&gt;
         description: Promise<Models.ApplicationListResponse>
   - name: 'listNext(string, ServiceCallback<ApplicationListResult>)'
-    uid: '@azure/batch.Application.listNext_1'
+    uid: '@azure/batch.operations.application.d.Application.listNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -243,7 +253,7 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.ApplicationListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationListResult" />&gt;
           description: |
             The callback

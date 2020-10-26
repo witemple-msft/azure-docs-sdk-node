@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: IntegrationServiceEnvironmentSkuList
-uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList'
+uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList'
 package: '@azure/arm-logic'
 summary: ''
 fullName: IntegrationServiceEnvironmentSkuList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.Array'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.Array'
     package: '@azure/arm-logic'
     summary: ''
     fullName: Array
@@ -23,7 +23,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.length'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.length
     package: '@azure/arm-logic'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +39,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.nextLink'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.nextLink
     package: '@azure/arm-logic'
     summary: The URL to get the next set of results.
     fullName: nextLink
@@ -52,7 +54,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<IntegrationServiceEnvironmentSkuDefinition>[])'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.concat'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.concat
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,36 +69,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition"
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.concat_1'
+  - name: >-
+      concat(IntegrationServiceEnvironmentSkuDefinition |
+      ConcatArray<IntegrationServiceEnvironmentSkuDefinition>[])
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.concat_1
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: IntegrationServiceEnvironmentSkuDefinition |
+        ConcatArray<IntegrationServiceEnvironmentSkuDefinition>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.copyWithin'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.copyWithin
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -133,7 +149,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.entries'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.entries
     package: '@azure/arm-logic'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -147,7 +164,8 @@ methods:
   - name: >-
       every((value: IntegrationServiceEnvironmentSkuDefinition, index: number,
       array: IntegrationServiceEnvironmentSkuDefinition[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.every'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.every_1
     package: '@azure/arm-logic'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -155,31 +173,76 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value:
+        function every(predicate: (value:
         IntegrationServiceEnvironmentSkuDefinition, index: number, array:
         IntegrationServiceEnvironmentSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationServiceEnvironmentSkuDefinition, index: number,
             array: IntegrationServiceEnvironmentSkuDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
+      every<S>((value: IntegrationServiceEnvironmentSkuDefinition, index:
+      number, array: IntegrationServiceEnvironmentSkuDefinition[]) => value,
+      any)
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.every'
+    package: '@azure/arm-logic'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value:
+        IntegrationServiceEnvironmentSkuDefinition, index: number, array:
+        IntegrationServiceEnvironmentSkuDefinition[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: IntegrationServiceEnvironmentSkuDefinition, index: number,
+            array: IntegrationServiceEnvironmentSkuDefinition[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
+  - name: >-
       fill(IntegrationServiceEnvironmentSkuDefinition, undefined | number,
       undefined | number)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.fill'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.fill'
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -195,7 +258,8 @@ methods:
         - id: value
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -217,7 +281,8 @@ methods:
   - name: >-
       filter((value: IntegrationServiceEnvironmentSkuDefinition, index: number,
       array: IntegrationServiceEnvironmentSkuDefinition[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.filter_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.filter_1
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -227,34 +292,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value:
+        function filter(predicate: (value:
         IntegrationServiceEnvironmentSkuDefinition, index: number, array:
         IntegrationServiceEnvironmentSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationServiceEnvironmentSkuDefinition, index: number,
             array: IntegrationServiceEnvironmentSkuDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: IntegrationServiceEnvironmentSkuDefinition, index:
-      number, array: IntegrationServiceEnvironmentSkuDefinition[]) => boolean,
+      number, array: IntegrationServiceEnvironmentSkuDefinition[]) => value,
       any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.filter'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.filter
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -264,22 +330,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value:
+        function filter<S>(predicate: (value:
         IntegrationServiceEnvironmentSkuDefinition, index: number, array:
-        IntegrationServiceEnvironmentSkuDefinition[]) => boolean, thisArg?: any)
+        IntegrationServiceEnvironmentSkuDefinition[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationServiceEnvironmentSkuDefinition, index: number,
-            array: IntegrationServiceEnvironmentSkuDefinition[]) =&gt; boolean
+            array: IntegrationServiceEnvironmentSkuDefinition[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -288,7 +353,8 @@ methods:
   - name: >-
       find((value: IntegrationServiceEnvironmentSkuDefinition, index: number,
       obj: IntegrationServiceEnvironmentSkuDefinition[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.find_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.find_1
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -311,14 +377,14 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" /> |
-          undefined
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: IntegrationServiceEnvironmentSkuDefinition,
       index: number, obj: IntegrationServiceEnvironmentSkuDefinition[]) =>
-      boolean, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.find'
+      value, any)
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.find'
     package: '@azure/arm-logic'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -332,13 +398,13 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         IntegrationServiceEnvironmentSkuDefinition, index: number, obj:
-        IntegrationServiceEnvironmentSkuDefinition[]) => boolean, thisArg?: any)
+        IntegrationServiceEnvironmentSkuDefinition[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: IntegrationServiceEnvironmentSkuDefinition,
             index: number, obj: IntegrationServiceEnvironmentSkuDefinition[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -362,7 +428,8 @@ methods:
       findIndex((value: IntegrationServiceEnvironmentSkuDefinition, index:
       number, obj: IntegrationServiceEnvironmentSkuDefinition[]) => unknown,
       any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.findIndex'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.findIndex
     package: '@azure/arm-logic'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -404,7 +471,8 @@ methods:
   - name: >-
       forEach((value: IntegrationServiceEnvironmentSkuDefinition, index: number,
       array: IntegrationServiceEnvironmentSkuDefinition[]) => void, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.forEach'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.forEach
     package: '@azure/arm-logic'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -430,7 +498,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(IntegrationServiceEnvironmentSkuDefinition, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.includes'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.includes
     package: '@azure/arm-logic'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -447,7 +516,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +528,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(IntegrationServiceEnvironmentSkuDefinition, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.indexOf'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.indexOf
     package: '@azure/arm-logic'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -473,7 +544,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -484,7 +556,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.join'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.join'
     package: '@azure/arm-logic'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -505,7 +577,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.keys'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.keys'
     package: '@azure/arm-logic'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -519,7 +591,8 @@ methods:
   - name: >-
       lastIndexOf(IntegrationServiceEnvironmentSkuDefinition, undefined |
       number)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.lastIndexOf'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.lastIndexOf
     package: '@azure/arm-logic'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -534,7 +607,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -547,7 +621,7 @@ methods:
   - name: >-
       map<U>((value: IntegrationServiceEnvironmentSkuDefinition, index: number,
       array: IntegrationServiceEnvironmentSkuDefinition[]) => U, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.map'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.map'
     package: '@azure/arm-logic'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -578,7 +652,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.pop'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.pop'
     package: '@azure/arm-logic'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -589,11 +663,11 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" /> |
-          undefined
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          /> | undefined
         description: ''
   - name: 'push(IntegrationServiceEnvironmentSkuDefinition[])'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.push'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.push'
     package: '@azure/arm-logic'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -605,7 +679,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition"
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
             />[]
           description: |
             New elements of the Array.
@@ -617,7 +691,8 @@ methods:
       currentValue: IntegrationServiceEnvironmentSkuDefinition, currentIndex:
       number, array: IntegrationServiceEnvironmentSkuDefinition[]) =>
       IntegrationServiceEnvironmentSkuDefinition)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reduce'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reduce
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -648,7 +723,8 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />
         description: ''
   - name: >-
       reduce((previousValue: IntegrationServiceEnvironmentSkuDefinition,
@@ -656,7 +732,8 @@ methods:
       number, array: IntegrationServiceEnvironmentSkuDefinition[]) =>
       IntegrationServiceEnvironmentSkuDefinition,
       IntegrationServiceEnvironmentSkuDefinition)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reduce_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reduce_1
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -682,18 +759,21 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue:
       IntegrationServiceEnvironmentSkuDefinition, currentIndex: number, array:
       IntegrationServiceEnvironmentSkuDefinition[]) => U, U)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reduce_2'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reduce_2
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -731,7 +811,8 @@ methods:
       currentValue: IntegrationServiceEnvironmentSkuDefinition, currentIndex:
       number, array: IntegrationServiceEnvironmentSkuDefinition[]) =>
       IntegrationServiceEnvironmentSkuDefinition)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reduceRight'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reduceRight
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -763,7 +844,8 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: IntegrationServiceEnvironmentSkuDefinition,
@@ -771,7 +853,8 @@ methods:
       number, array: IntegrationServiceEnvironmentSkuDefinition[]) =>
       IntegrationServiceEnvironmentSkuDefinition,
       IntegrationServiceEnvironmentSkuDefinition)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reduceRight_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reduceRight_1
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -797,18 +880,21 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+            />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       IntegrationServiceEnvironmentSkuDefinition, currentIndex: number, array:
       IntegrationServiceEnvironmentSkuDefinition[]) => U, U)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reduceRight_2'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reduceRight_2
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -843,7 +929,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.reverse'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.reverse
     package: '@azure/arm-logic'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -854,10 +941,11 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.shift'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.shift'
     package: '@azure/arm-logic'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -868,11 +956,11 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" /> |
-          undefined
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.slice'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.slice'
     package: '@azure/arm-logic'
     summary: Returns a section of an array.
     remarks: ''
@@ -886,17 +974,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
   - name: >-
       some((value: IntegrationServiceEnvironmentSkuDefinition, index: number,
       array: IntegrationServiceEnvironmentSkuDefinition[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.some'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.some'
     package: '@azure/arm-logic'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -906,31 +996,36 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value:
+        function some(predicate: (value:
         IntegrationServiceEnvironmentSkuDefinition, index: number, array:
         IntegrationServiceEnvironmentSkuDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationServiceEnvironmentSkuDefinition, index: number,
             array: IntegrationServiceEnvironmentSkuDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: IntegrationServiceEnvironmentSkuDefinition, b:
       IntegrationServiceEnvironmentSkuDefinition) => number)
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.sort'
+    uid: '@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.sort'
     package: '@azure/arm-logic'
     summary: Sorts an array.
     remarks: ''
@@ -947,14 +1042,26 @@ methods:
             undefined | (a: IntegrationServiceEnvironmentSkuDefinition, b:
             IntegrationServiceEnvironmentSkuDefinition) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, IntegrationServiceEnvironmentSkuDefinition[])'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.splice_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.splice_1
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -978,17 +1085,19 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition"
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.splice'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.splice
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -1011,10 +1120,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />[]
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.toLocaleString'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.toLocaleString
     package: '@azure/arm-logic'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -1028,7 +1139,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.toString'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.toString
     package: '@azure/arm-logic'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -1040,7 +1152,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(IntegrationServiceEnvironmentSkuDefinition[])'
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.unshift'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.unshift
     package: '@azure/arm-logic'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -1052,7 +1165,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition"
+            uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -1060,7 +1173,8 @@ methods:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-logic.IntegrationServiceEnvironmentSkuList.values'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.values
     package: '@azure/arm-logic'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1071,9 +1185,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition"
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
           />&gt;
         description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.[Symbol.iterator]
+    package: '@azure/arm-logic'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuList.[Symbol.unscopables]
+    package: '@azure/arm-logic'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
 extends: >-
-  Array&lt;<xref
-  uid="@azure/arm-logic.IntegrationServiceEnvironmentSkuDefinition" />&gt;
+  <xref uid="@azure/arm-logic.models.index.d.WorkflowListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-logic.models.index.d.IntegrationServiceEnvironmentSkuDefinition"
+  />&gt;

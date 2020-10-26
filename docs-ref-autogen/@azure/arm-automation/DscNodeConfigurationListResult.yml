@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DscNodeConfigurationListResult
-uid: '@azure/arm-automation.DscNodeConfigurationListResult'
+uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult'
 package: '@azure/arm-automation'
 summary: ''
 fullName: DscNodeConfigurationListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.Array'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.Array'
     package: '@azure/arm-automation'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.length'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.length'
     package: '@azure/arm-automation'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.nextLink'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.nextLink
     package: '@azure/arm-automation'
     summary: Gets or sets the next link.
     fullName: nextLink
@@ -51,7 +52,8 @@ properties:
         type: undefined | string
         description: ''
   - name: totalCount
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.totalCount'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.totalCount
     package: '@azure/arm-automation'
     summary: Gets or sets the total rows in query.
     fullName: totalCount
@@ -65,7 +67,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<DscNodeConfiguration>[])'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.concat'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.concat'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
@@ -77,31 +79,45 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-automation.DscNodeConfiguration" />&gt;[]
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.concat_1'
+  - name: 'concat(DscNodeConfiguration | ConcatArray<DscNodeConfiguration>[])'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.concat_1
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: DscNodeConfiguration |
+        ConcatArray<DscNodeConfiguration>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.copyWithin'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.copyWithin
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -139,7 +155,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.entries'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.entries
     package: '@azure/arm-automation'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -153,7 +170,8 @@ methods:
   - name: >-
       every((value: DscNodeConfiguration, index: number, array:
       DscNodeConfiguration[]) => unknown, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.every'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.every_1
     package: '@azure/arm-automation'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -161,28 +179,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: DscNodeConfiguration, index: number,
+        function every(predicate: (value: DscNodeConfiguration, index: number,
         array: DscNodeConfiguration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscNodeConfiguration, index: number, array:
             DscNodeConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: DscNodeConfiguration, index: number, array:
+      DscNodeConfiguration[]) => value, any)
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.every'
+    package: '@azure/arm-automation'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: DscNodeConfiguration, index:
+        number, array: DscNodeConfiguration[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: DscNodeConfiguration, index: number, array:
+            DscNodeConfiguration[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(DscNodeConfiguration, undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.fill'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.fill'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -196,7 +257,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -218,7 +281,8 @@ methods:
   - name: >-
       filter((value: DscNodeConfiguration, index: number, array:
       DscNodeConfiguration[]) => unknown, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.filter_1'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.filter_1
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -228,30 +292,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: DscNodeConfiguration, index: number,
+        function filter(predicate: (value: DscNodeConfiguration, index: number,
         array: DscNodeConfiguration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscNodeConfiguration, index: number, array:
             DscNodeConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: DscNodeConfiguration, index: number, array:
-      DscNodeConfiguration[]) => boolean, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.filter'
+      DscNodeConfiguration[]) => value, any)
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.filter'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -261,21 +326,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: DscNodeConfiguration, index:
-        number, array: DscNodeConfiguration[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: DscNodeConfiguration, index:
+        number, array: DscNodeConfiguration[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscNodeConfiguration, index: number, array:
-            DscNodeConfiguration[]) =&gt; boolean
+            DscNodeConfiguration[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -284,7 +348,7 @@ methods:
   - name: >-
       find((value: DscNodeConfiguration, index: number, obj:
       DscNodeConfiguration[]) => unknown, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.find_1'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.find_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -304,12 +368,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: DscNodeConfiguration, index: number, obj:
-      DscNodeConfiguration[]) => boolean, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.find'
+      DscNodeConfiguration[]) => value, any)
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.find'
     package: '@azure/arm-automation'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -322,12 +388,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: DscNodeConfiguration,
-        index: number, obj: DscNodeConfiguration[]) => boolean, thisArg?: any)
+        index: number, obj: DscNodeConfiguration[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: DscNodeConfiguration, index: number, obj:
-            DscNodeConfiguration[]) =&gt; boolean
+            DscNodeConfiguration[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -350,7 +416,8 @@ methods:
   - name: >-
       findIndex((value: DscNodeConfiguration, index: number, obj:
       DscNodeConfiguration[]) => unknown, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.findIndex'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.findIndex
     package: '@azure/arm-automation'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -391,7 +458,8 @@ methods:
   - name: >-
       forEach((value: DscNodeConfiguration, index: number, array:
       DscNodeConfiguration[]) => void, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.forEach'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.forEach
     package: '@azure/arm-automation'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -416,7 +484,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(DscNodeConfiguration, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.includes'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.includes
     package: '@azure/arm-automation'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -430,7 +499,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -441,7 +512,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(DscNodeConfiguration, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.indexOf'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.indexOf
     package: '@azure/arm-automation'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -453,7 +525,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -464,7 +538,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.join'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.join'
     package: '@azure/arm-automation'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -485,7 +559,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.keys'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.keys'
     package: '@azure/arm-automation'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -497,7 +571,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(DscNodeConfiguration, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.lastIndexOf
     package: '@azure/arm-automation'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -509,7 +584,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -522,7 +599,7 @@ methods:
   - name: >-
       map<U>((value: DscNodeConfiguration, index: number, array:
       DscNodeConfiguration[]) => U, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.map'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.map'
     package: '@azure/arm-automation'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -552,7 +629,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.pop'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.pop'
     package: '@azure/arm-automation'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -561,10 +638,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          /> | undefined
         description: ''
   - name: 'push(DscNodeConfiguration[])'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.push'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.push'
     package: '@azure/arm-automation'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -574,7 +653,9 @@ methods:
       content: 'function push(items: DscNodeConfiguration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />[]
           description: |
             New elements of the Array.
       return:
@@ -584,7 +665,7 @@ methods:
       reduce((previousValue: DscNodeConfiguration, currentValue:
       DscNodeConfiguration, currentIndex: number, array: DscNodeConfiguration[])
       => DscNodeConfiguration)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reduce'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reduce'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -609,13 +690,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />
         description: ''
   - name: >-
       reduce((previousValue: DscNodeConfiguration, currentValue:
       DscNodeConfiguration, currentIndex: number, array: DscNodeConfiguration[])
       => DscNodeConfiguration, DscNodeConfiguration)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reduce_1'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reduce_1
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -635,15 +719,20 @@ methods:
             DscNodeConfiguration[]) =&gt; DscNodeConfiguration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: DscNodeConfiguration,
       currentIndex: number, array: DscNodeConfiguration[]) => U, U)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reduce_2'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reduce_2
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -679,7 +768,8 @@ methods:
       reduceRight((previousValue: DscNodeConfiguration, currentValue:
       DscNodeConfiguration, currentIndex: number, array: DscNodeConfiguration[])
       => DscNodeConfiguration)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reduceRight'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reduceRight
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -705,13 +795,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: DscNodeConfiguration, currentValue:
       DscNodeConfiguration, currentIndex: number, array: DscNodeConfiguration[])
       => DscNodeConfiguration, DscNodeConfiguration)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reduceRight_1
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -731,15 +824,20 @@ methods:
             DscNodeConfiguration[]) =&gt; DscNodeConfiguration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" />
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: DscNodeConfiguration,
       currentIndex: number, array: DscNodeConfiguration[]) => U, U)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reduceRight_2
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -773,7 +871,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.reverse'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.reverse
     package: '@azure/arm-automation'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -782,10 +881,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.shift'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.shift'
     package: '@azure/arm-automation'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -794,10 +895,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-automation.DscNodeConfiguration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.slice'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.slice'
     package: '@azure/arm-automation'
     summary: Returns a section of an array.
     remarks: ''
@@ -811,15 +914,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
   - name: >-
       some((value: DscNodeConfiguration, index: number, array:
       DscNodeConfiguration[]) => unknown, any)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.some'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.some'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -829,30 +935,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: DscNodeConfiguration, index: number,
+        function some(predicate: (value: DscNodeConfiguration, index: number,
         array: DscNodeConfiguration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscNodeConfiguration, index: number, array:
             DscNodeConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: DscNodeConfiguration, b: DscNodeConfiguration) =>
       number)
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.sort'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.sort'
     package: '@azure/arm-automation'
     summary: Sorts an array.
     remarks: ''
@@ -868,14 +979,26 @@ methods:
             undefined | (a: DscNodeConfiguration, b: DscNodeConfiguration) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, DscNodeConfiguration[])'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.splice_1'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.splice_1
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -897,14 +1020,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.splice'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.splice'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -925,10 +1052,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.toLocaleString'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.toLocaleString
     package: '@azure/arm-automation'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -942,7 +1072,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.toString'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.toString
     package: '@azure/arm-automation'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -954,7 +1085,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(DscNodeConfiguration[])'
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.unshift'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.unshift
     package: '@azure/arm-automation'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -964,14 +1096,16 @@ methods:
       content: 'function unshift(items: DscNodeConfiguration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.DscNodeConfiguration" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-automation.DscNodeConfigurationListResult.values'
+    uid: '@azure/arm-automation.models.index.d.DscNodeConfigurationListResult.values'
     package: '@azure/arm-automation'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -982,6 +1116,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-automation.DscNodeConfiguration" />&gt;
+          uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-automation.DscNodeConfiguration" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.[Symbol.iterator]
+    package: '@azure/arm-automation'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.DscNodeConfiguration" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscNodeConfigurationListResult.[Symbol.unscopables]
+    package: '@azure/arm-automation'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-automation.models.index.d.AutomationAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-automation.models.index.d.DscNodeConfiguration"
+  />&gt;

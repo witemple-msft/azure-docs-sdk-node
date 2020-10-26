@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: PartitionContext
-uid: '@azure/event-hubs.PartitionContext'
+uid: '@azure/event-hubs.event-hubs.d.PartitionContext'
 package: '@azure/event-hubs'
 summary: >-
   Interface that describes the context passed to each of the functions that are
@@ -19,7 +19,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: consumerGroup
-    uid: '@azure/event-hubs.PartitionContext.consumerGroup'
+    uid: '@azure/event-hubs.event-hubs.d.PartitionContext.consumerGroup'
     package: '@azure/event-hubs'
     summary: The consumer group name.
     fullName: consumerGroup
@@ -32,7 +32,7 @@ properties:
         type: string
         description: ''
   - name: eventHubName
-    uid: '@azure/event-hubs.PartitionContext.eventHubName'
+    uid: '@azure/event-hubs.event-hubs.d.PartitionContext.eventHubName'
     package: '@azure/event-hubs'
     summary: The event hub name.
     fullName: eventHubName
@@ -45,7 +45,7 @@ properties:
         type: string
         description: ''
   - name: fullyQualifiedNamespace
-    uid: '@azure/event-hubs.PartitionContext.fullyQualifiedNamespace'
+    uid: '@azure/event-hubs.event-hubs.d.PartitionContext.fullyQualifiedNamespace'
     package: '@azure/event-hubs'
     summary: |-
       The fully qualified Event Hubs namespace. This is likely to be similar to
@@ -60,7 +60,8 @@ properties:
         type: string
         description: ''
   - name: lastEnqueuedEventProperties
-    uid: '@azure/event-hubs.PartitionContext.lastEnqueuedEventProperties'
+    uid: >-
+      @azure/event-hubs.event-hubs.d.PartitionContext.lastEnqueuedEventProperties
     package: '@azure/event-hubs'
     summary: >-
       Information on the last enqueued event in the partition that is being
@@ -77,10 +78,12 @@ properties:
     syntax:
       content: 'lastEnqueuedEventProperties?: LastEnqueuedEventProperties'
       return:
-        type: <xref uid="@azure/event-hubs.LastEnqueuedEventProperties" />
+        type: >-
+          <xref uid="@azure/event-hubs.event-hubs.d.LastEnqueuedEventProperties"
+          />
         description: ''
   - name: partitionId
-    uid: '@azure/event-hubs.PartitionContext.partitionId'
+    uid: '@azure/event-hubs.event-hubs.d.PartitionContext.partitionId'
     package: '@azure/event-hubs'
     summary: The identifier of the Event Hub partition.
     fullName: partitionId
@@ -94,7 +97,7 @@ properties:
         description: ''
 methods:
   - name: updateCheckpoint(ReceivedEventData)
-    uid: '@azure/event-hubs.PartitionContext.updateCheckpoint'
+    uid: '@azure/event-hubs.event-hubs.d.PartitionContext.updateCheckpoint'
     package: '@azure/event-hubs'
     summary: >
       Updates the checkpoint using the event data.
@@ -110,7 +113,7 @@ methods:
       content: 'function updateCheckpoint(eventData: ReceivedEventData)'
       parameters:
         - id: eventData
-          type: <xref uid="@azure/event-hubs.ReceivedEventData" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.ReceivedEventData" />
           description: The event that you want to update the checkpoint with.
       return:
         type: Promise&lt;void&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RetryOptions
-uid: '@azure/core-http.RetryOptions'
+uid: '@azure/core-http.policies.exponentialRetryPolicy.d.RetryOptions'
 package: '@azure/core-http'
 summary: Options that control how to retry failed requests.
 fullName: RetryOptions
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: maxRetries
-    uid: '@azure/core-http.RetryOptions.maxRetries'
+    uid: '@azure/core-http.policies.exponentialRetryPolicy.d.RetryOptions.maxRetries'
     package: '@azure/core-http'
     summary: The maximum number of retry attempts.  Defaults to 3.
     fullName: maxRetries
@@ -23,7 +23,8 @@ properties:
         type: number
         description: ''
   - name: maxRetryDelayInMs
-    uid: '@azure/core-http.RetryOptions.maxRetryDelayInMs'
+    uid: >-
+      @azure/core-http.policies.exponentialRetryPolicy.d.RetryOptions.maxRetryDelayInMs
     package: '@azure/core-http'
     summary: >-
       The maximum delay in milliseconds allowed before retrying an operation.
@@ -40,7 +41,7 @@ properties:
         type: number
         description: ''
   - name: mode
-    uid: '@azure/core-http.RetryOptions.mode'
+    uid: '@azure/core-http.policies.exponentialRetryPolicy.d.RetryOptions.mode'
     package: '@azure/core-http'
     summary: Currently supporting only Exponential mode.
     fullName: mode
@@ -50,10 +51,13 @@ properties:
     syntax:
       content: 'mode?: RetryMode'
       return:
-        type: <xref uid="@azure/core-http.RetryMode" />
+        type: >-
+          <xref
+          uid="@azure/core-http.policies.exponentialRetryPolicy.d.RetryMode" />
         description: ''
   - name: retryDelayInMs
-    uid: '@azure/core-http.RetryOptions.retryDelayInMs'
+    uid: >-
+      @azure/core-http.policies.exponentialRetryPolicy.d.RetryOptions.retryDelayInMs
     package: '@azure/core-http'
     summary: >-
       The amount of delay in milliseconds between retry attempts. Defaults to

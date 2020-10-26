@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AllowedConnectionsList
-uid: '@azure/arm-security.AllowedConnectionsList'
+uid: '@azure/arm-security.models.index.d.AllowedConnectionsList'
 package: '@azure/arm-security'
 summary: ''
 fullName: AllowedConnectionsList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-security.AllowedConnectionsList.Array'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.Array'
     package: '@azure/arm-security'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-security.AllowedConnectionsList.length'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.length'
     package: '@azure/arm-security'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-security.AllowedConnectionsList.nextLink'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.nextLink'
     package: '@azure/arm-security'
     summary: >-
       The URI to fetch the next page.
@@ -55,8 +55,37 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: >-
+      concat(AllowedConnectionsResource |
+      ConcatArray<AllowedConnectionsResource>[])
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.concat_1'
+    package: '@azure/arm-security'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: AllowedConnectionsResource |
+        ConcatArray<AllowedConnectionsResource>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<AllowedConnectionsResource>[])'
-    uid: '@azure/arm-security.AllowedConnectionsList.concat'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.concat'
     package: '@azure/arm-security'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +97,18 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-security.AllowedConnectionsResource" />&gt;[]
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-security.AllowedConnectionsList.concat_1'
-    package: '@azure/arm-security'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.copyWithin'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.copyWithin'
     package: '@azure/arm-security'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +146,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-security.AllowedConnectionsList.entries'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.entries'
     package: '@azure/arm-security'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +160,7 @@ methods:
   - name: >-
       every((value: AllowedConnectionsResource, index: number, array:
       AllowedConnectionsResource[]) => unknown, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.every'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.every_1'
     package: '@azure/arm-security'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +168,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: AllowedConnectionsResource, index:
+        function every(predicate: (value: AllowedConnectionsResource, index:
         number, array: AllowedConnectionsResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AllowedConnectionsResource, index: number, array:
             AllowedConnectionsResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: AllowedConnectionsResource, index: number, array:
+      AllowedConnectionsResource[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.every'
+    package: '@azure/arm-security'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: AllowedConnectionsResource, index:
+        number, array: AllowedConnectionsResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: AllowedConnectionsResource, index: number, array:
+            AllowedConnectionsResource[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(AllowedConnectionsResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.fill'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.fill'
     package: '@azure/arm-security'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +246,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +271,7 @@ methods:
   - name: >-
       filter((value: AllowedConnectionsResource, index: number, array:
       AllowedConnectionsResource[]) => unknown, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.filter_1'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.filter_1'
     package: '@azure/arm-security'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +281,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: AllowedConnectionsResource, index:
+        function filter(predicate: (value: AllowedConnectionsResource, index:
         number, array: AllowedConnectionsResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AllowedConnectionsResource, index: number, array:
             AllowedConnectionsResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: AllowedConnectionsResource, index: number, array:
-      AllowedConnectionsResource[]) => boolean, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.filter'
+      AllowedConnectionsResource[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.filter'
     package: '@azure/arm-security'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,22 +316,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: AllowedConnectionsResource,
-        index: number, array: AllowedConnectionsResource[]) => boolean,
-        thisArg?: any)
+        function filter<S>(predicate: (value: AllowedConnectionsResource, index:
+        number, array: AllowedConnectionsResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AllowedConnectionsResource, index: number, array:
-            AllowedConnectionsResource[]) =&gt; boolean
+            AllowedConnectionsResource[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -276,7 +338,7 @@ methods:
   - name: >-
       find((value: AllowedConnectionsResource, index: number, obj:
       AllowedConnectionsResource[]) => unknown, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.find_1'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.find_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -297,13 +359,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-security.AllowedConnectionsResource" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: AllowedConnectionsResource, index: number,
-      obj: AllowedConnectionsResource[]) => boolean, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.find'
+      obj: AllowedConnectionsResource[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.find'
     package: '@azure/arm-security'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -317,12 +380,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         AllowedConnectionsResource, index: number, obj:
-        AllowedConnectionsResource[]) => boolean, thisArg?: any)
+        AllowedConnectionsResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: AllowedConnectionsResource, index: number, obj:
-            AllowedConnectionsResource[]) =&gt; boolean
+            AllowedConnectionsResource[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -345,7 +408,7 @@ methods:
   - name: >-
       findIndex((value: AllowedConnectionsResource, index: number, obj:
       AllowedConnectionsResource[]) => unknown, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.findIndex'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.findIndex'
     package: '@azure/arm-security'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -386,7 +449,7 @@ methods:
   - name: >-
       forEach((value: AllowedConnectionsResource, index: number, array:
       AllowedConnectionsResource[]) => void, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.forEach'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.forEach'
     package: '@azure/arm-security'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -411,7 +474,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(AllowedConnectionsResource, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.includes'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.includes'
     package: '@azure/arm-security'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -425,7 +488,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -436,7 +502,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(AllowedConnectionsResource, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.indexOf'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.indexOf'
     package: '@azure/arm-security'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -448,7 +514,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -459,7 +528,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-security.AllowedConnectionsList.join'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.join'
     package: '@azure/arm-security'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -480,7 +549,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-security.AllowedConnectionsList.keys'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.keys'
     package: '@azure/arm-security'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -492,7 +561,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(AllowedConnectionsResource, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.lastIndexOf'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.lastIndexOf'
     package: '@azure/arm-security'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -504,7 +573,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -517,7 +589,7 @@ methods:
   - name: >-
       map<U>((value: AllowedConnectionsResource, index: number, array:
       AllowedConnectionsResource[]) => U, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.map'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.map'
     package: '@azure/arm-security'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -547,7 +619,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-security.AllowedConnectionsList.pop'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.pop'
     package: '@azure/arm-security'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -557,11 +629,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-security.AllowedConnectionsResource" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
+          | undefined
         description: ''
   - name: 'push(AllowedConnectionsResource[])'
-    uid: '@azure/arm-security.AllowedConnectionsList.push'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.push'
     package: '@azure/arm-security'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -571,7 +644,10 @@ methods:
       content: 'function push(items: AllowedConnectionsResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -581,7 +657,7 @@ methods:
       reduce((previousValue: AllowedConnectionsResource, currentValue:
       AllowedConnectionsResource, currentIndex: number, array:
       AllowedConnectionsResource[]) => AllowedConnectionsResource)
-    uid: '@azure/arm-security.AllowedConnectionsList.reduce'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reduce'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -606,14 +682,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
         description: ''
   - name: >-
       reduce((previousValue: AllowedConnectionsResource, currentValue:
       AllowedConnectionsResource, currentIndex: number, array:
       AllowedConnectionsResource[]) => AllowedConnectionsResource,
       AllowedConnectionsResource)
-    uid: '@azure/arm-security.AllowedConnectionsList.reduce_1'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reduce_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -633,15 +711,20 @@ methods:
             AllowedConnectionsResource[]) =&gt; AllowedConnectionsResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: AllowedConnectionsResource,
       currentIndex: number, array: AllowedConnectionsResource[]) => U, U)
-    uid: '@azure/arm-security.AllowedConnectionsList.reduce_2'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reduce_2'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -677,7 +760,7 @@ methods:
       reduceRight((previousValue: AllowedConnectionsResource, currentValue:
       AllowedConnectionsResource, currentIndex: number, array:
       AllowedConnectionsResource[]) => AllowedConnectionsResource)
-    uid: '@azure/arm-security.AllowedConnectionsList.reduceRight'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reduceRight'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -704,14 +787,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
         description: ''
   - name: >-
       reduceRight((previousValue: AllowedConnectionsResource, currentValue:
       AllowedConnectionsResource, currentIndex: number, array:
       AllowedConnectionsResource[]) => AllowedConnectionsResource,
       AllowedConnectionsResource)
-    uid: '@azure/arm-security.AllowedConnectionsList.reduceRight_1'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reduceRight_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -731,16 +816,21 @@ methods:
             AllowedConnectionsResource[]) =&gt; AllowedConnectionsResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-security.AllowedConnectionsResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       AllowedConnectionsResource, currentIndex: number, array:
       AllowedConnectionsResource[]) => U, U)
-    uid: '@azure/arm-security.AllowedConnectionsList.reduceRight_2'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reduceRight_2'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -774,7 +864,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-security.AllowedConnectionsList.reverse'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.reverse'
     package: '@azure/arm-security'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -783,10 +873,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-security.AllowedConnectionsList.shift'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.shift'
     package: '@azure/arm-security'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -796,11 +889,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-security.AllowedConnectionsResource" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.slice'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.slice'
     package: '@azure/arm-security'
     summary: Returns a section of an array.
     remarks: ''
@@ -814,15 +908,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
         description: ''
   - name: >-
       some((value: AllowedConnectionsResource, index: number, array:
       AllowedConnectionsResource[]) => unknown, any)
-    uid: '@azure/arm-security.AllowedConnectionsList.some'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.some'
     package: '@azure/arm-security'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -832,30 +930,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: AllowedConnectionsResource, index:
+        function some(predicate: (value: AllowedConnectionsResource, index:
         number, array: AllowedConnectionsResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AllowedConnectionsResource, index: number, array:
             AllowedConnectionsResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: AllowedConnectionsResource, b:
       AllowedConnectionsResource) => number)
-    uid: '@azure/arm-security.AllowedConnectionsList.sort'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.sort'
     package: '@azure/arm-security'
     summary: Sorts an array.
     remarks: ''
@@ -871,14 +974,25 @@ methods:
             undefined | (a: AllowedConnectionsResource, b:
             AllowedConnectionsResource) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, AllowedConnectionsResource[])'
-    uid: '@azure/arm-security.AllowedConnectionsList.splice_1'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.splice_1'
     package: '@azure/arm-security'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,14 +1014,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-security.AllowedConnectionsList.splice'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.splice'
     package: '@azure/arm-security'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -928,10 +1048,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-security.AllowedConnectionsList.toLocaleString'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.toLocaleString'
     package: '@azure/arm-security'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -945,7 +1068,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-security.AllowedConnectionsList.toString'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.toString'
     package: '@azure/arm-security'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -957,7 +1080,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(AllowedConnectionsResource[])'
-    uid: '@azure/arm-security.AllowedConnectionsList.unshift'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.unshift'
     package: '@azure/arm-security'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -967,14 +1090,17 @@ methods:
       content: 'function unshift(items: AllowedConnectionsResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-security.AllowedConnectionsResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-security.AllowedConnectionsList.values'
+    uid: '@azure/arm-security.models.index.d.AllowedConnectionsList.values'
     package: '@azure/arm-security'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -985,6 +1111,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-security.AllowedConnectionsResource" />&gt;
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-security.AllowedConnectionsResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-security.models.index.d.AllowedConnectionsList.[Symbol.iterator]
+    package: '@azure/arm-security'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-security.models.index.d.AllowedConnectionsResource"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-security.models.index.d.AllowedConnectionsList.[Symbol.unscopables]
+    package: '@azure/arm-security'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-security.models.index.d.ComplianceResultList.Array"
+  />&lt;<xref
+  uid="@azure/arm-security.models.index.d.AllowedConnectionsResource" />&gt;

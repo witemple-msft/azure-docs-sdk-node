@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SubtaskInformation
-uid: '@azure/batch.SubtaskInformation'
+uid: '@azure/batch.models.index.d.SubtaskInformation'
 package: '@azure/batch'
 summary: An interface representing SubtaskInformation.
 fullName: SubtaskInformation
@@ -10,13 +10,13 @@ isDeprecated: false
 type: interface
 properties:
   - name: containerInfo
-    uid: '@azure/batch.SubtaskInformation.containerInfo'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.containerInfo'
     package: '@azure/batch'
     summary: >-
-      Information about the container under which the task is executing. This
+      Information about the container under which the Task is executing. This
       property is set only
 
-      if the task runs in a container context.
+      if the Task runs in a container context.
     fullName: containerInfo
     remarks: ''
     isPreview: false
@@ -24,10 +24,12 @@ properties:
     syntax:
       content: 'containerInfo?: TaskContainerExecutionInformation'
       return:
-        type: <xref uid="@azure/batch.TaskContainerExecutionInformation" />
+        type: >-
+          <xref
+          uid="@azure/batch.models.index.d.TaskContainerExecutionInformation" />
         description: ''
   - name: endTime
-    uid: '@azure/batch.SubtaskInformation.endTime'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.endTime'
     package: '@azure/batch'
     summary: >-
       The time at which the subtask completed. This property is set only if the
@@ -44,7 +46,7 @@ properties:
         type: Date
         description: ''
   - name: exitCode
-    uid: '@azure/batch.SubtaskInformation.exitCode'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.exitCode'
     package: '@azure/batch'
     summary: >-
       The exit code of the program specified on the subtask command line. This
@@ -74,11 +76,11 @@ properties:
         type: undefined | number
         description: ''
   - name: failureInfo
-    uid: '@azure/batch.SubtaskInformation.failureInfo'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.failureInfo'
     package: '@azure/batch'
     summary: >-
-      Information describing the task failure, if any. This property is set only
-      if the task is in
+      Information describing the Task failure, if any. This property is set only
+      if the Task is in
 
       the completed state and encountered a failure.
     fullName: failureInfo
@@ -88,10 +90,10 @@ properties:
     syntax:
       content: 'failureInfo?: TaskFailureInformation'
       return:
-        type: <xref uid="@azure/batch.TaskFailureInformation" />
+        type: <xref uid="@azure/batch.models.index.d.TaskFailureInformation" />
         description: ''
   - name: id
-    uid: '@azure/batch.SubtaskInformation.id'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.id'
     package: '@azure/batch'
     summary: The ID of the subtask.
     fullName: id
@@ -104,9 +106,9 @@ properties:
         type: undefined | number
         description: ''
   - name: nodeInfo
-    uid: '@azure/batch.SubtaskInformation.nodeInfo'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.nodeInfo'
     package: '@azure/batch'
-    summary: Information about the compute node on which the subtask ran.
+    summary: Information about the Compute Node on which the subtask ran.
     fullName: nodeInfo
     remarks: ''
     isPreview: false
@@ -114,10 +116,10 @@ properties:
     syntax:
       content: 'nodeInfo?: ComputeNodeInformation'
       return:
-        type: <xref uid="@azure/batch.ComputeNodeInformation" />
+        type: <xref uid="@azure/batch.models.index.d.ComputeNodeInformation" />
         description: ''
   - name: previousState
-    uid: '@azure/batch.SubtaskInformation.previousState'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.previousState'
     package: '@azure/batch'
     summary: >-
       The previous state of the subtask. This property is not set if the subtask
@@ -132,10 +134,10 @@ properties:
     syntax:
       content: 'previousState?: SubtaskState'
       return:
-        type: <xref uid="@azure/batch.SubtaskState" />
+        type: <xref uid="@azure/batch.models.index.d.SubtaskState" />
         description: ''
   - name: previousStateTransitionTime
-    uid: '@azure/batch.SubtaskInformation.previousStateTransitionTime'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.previousStateTransitionTime'
     package: '@azure/batch'
     summary: >-
       The time at which the subtask entered its previous state. This property is
@@ -152,10 +154,10 @@ properties:
         type: Date
         description: ''
   - name: result
-    uid: '@azure/batch.SubtaskInformation.result'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.result'
     package: '@azure/batch'
     summary: >-
-      The result of the task execution. If the value is 'failed', then the
+      The result of the Task execution. If the value is 'failed', then the
       details of the failure
 
       can be found in the failureInfo property. Possible values include:
@@ -167,10 +169,10 @@ properties:
     syntax:
       content: 'result?: TaskExecutionResult'
       return:
-        type: <xref uid="@azure/batch.TaskExecutionResult" />
+        type: <xref uid="@azure/batch.models.index.d.TaskExecutionResult" />
         description: ''
   - name: startTime
-    uid: '@azure/batch.SubtaskInformation.startTime'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.startTime'
     package: '@azure/batch'
     summary: >-
       The time at which the subtask started running. If the subtask has been
@@ -187,7 +189,7 @@ properties:
         type: Date
         description: ''
   - name: state
-    uid: '@azure/batch.SubtaskInformation.state'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.state'
     package: '@azure/batch'
     summary: >-
       The current state of the subtask. Possible values include: 'preparing',
@@ -199,10 +201,10 @@ properties:
     syntax:
       content: 'state?: SubtaskState'
       return:
-        type: <xref uid="@azure/batch.SubtaskState" />
+        type: <xref uid="@azure/batch.models.index.d.SubtaskState" />
         description: ''
   - name: stateTransitionTime
-    uid: '@azure/batch.SubtaskInformation.stateTransitionTime'
+    uid: '@azure/batch.models.index.d.SubtaskInformation.stateTransitionTime'
     package: '@azure/batch'
     summary: The time at which the subtask entered its current state.
     fullName: stateTransitionTime

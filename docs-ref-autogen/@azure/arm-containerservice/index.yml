@@ -4,164 +4,216 @@ name: '@azure/arm-containerservice'
 summary: ''
 type: package
 classes:
-  - '@azure/arm-containerservice.ContainerServiceClient'
-  - '@azure/arm-containerservice.ContainerServiceClientContext'
-  - '@azure/arm-containerservice.AgentPools'
-  - '@azure/arm-containerservice.ContainerServices'
-  - '@azure/arm-containerservice.ManagedClusters'
-  - '@azure/arm-containerservice.OpenShiftManagedClusters'
-  - '@azure/arm-containerservice.Operations'
-  - '@azure/arm-containerservice.PrivateEndpointConnections'
+  - '@azure/arm-containerservice.containerServiceClient.d.ContainerServiceClient'
+  - >-
+    @azure/arm-containerservice.containerServiceClientContext.d.ContainerServiceClientContext
+  - '@azure/arm-containerservice.operations.agentPools.d.AgentPools'
+  - '@azure/arm-containerservice.operations.containerServices.d.ContainerServices'
+  - '@azure/arm-containerservice.operations.managedClusters.d.ManagedClusters'
+  - >-
+    @azure/arm-containerservice.operations.openShiftManagedClusters.d.OpenShiftManagedClusters
+  - '@azure/arm-containerservice.operations.operations.d.Operations'
+  - >-
+    @azure/arm-containerservice.operations.privateEndpointConnections.d.PrivateEndpointConnections
 interfaces:
-  - '@azure/arm-containerservice.AgentPool'
-  - '@azure/arm-containerservice.AgentPoolAvailableVersions'
+  - '@azure/arm-containerservice.models.index.d.AgentPool'
+  - '@azure/arm-containerservice.models.index.d.AgentPoolAvailableVersions'
   - >-
-    @azure/arm-containerservice.AgentPoolAvailableVersionsPropertiesAgentPoolVersionsItem
-  - '@azure/arm-containerservice.AgentPoolListResult'
-  - '@azure/arm-containerservice.AgentPoolUpgradeProfile'
-  - '@azure/arm-containerservice.AgentPoolUpgradeProfilePropertiesUpgradesItem'
-  - '@azure/arm-containerservice.AgentPoolUpgradeSettings'
-  - '@azure/arm-containerservice.ContainerService'
-  - '@azure/arm-containerservice.ContainerServiceAgentPoolProfile'
-  - '@azure/arm-containerservice.ContainerServiceClientOptions'
-  - '@azure/arm-containerservice.ContainerServiceCustomProfile'
-  - '@azure/arm-containerservice.ContainerServiceDiagnosticsProfile'
-  - '@azure/arm-containerservice.ContainerServiceLinuxProfile'
-  - '@azure/arm-containerservice.ContainerServiceListResult'
-  - '@azure/arm-containerservice.ContainerServiceMasterProfile'
-  - '@azure/arm-containerservice.ContainerServiceNetworkProfile'
-  - '@azure/arm-containerservice.ContainerServiceOrchestratorProfile'
-  - '@azure/arm-containerservice.ContainerServiceServicePrincipalProfile'
-  - '@azure/arm-containerservice.ContainerServiceSshConfiguration'
-  - '@azure/arm-containerservice.ContainerServiceSshPublicKey'
-  - '@azure/arm-containerservice.ContainerServiceVMDiagnostics'
-  - '@azure/arm-containerservice.ContainerServiceWindowsProfile'
-  - '@azure/arm-containerservice.ContainerServicesListOrchestratorsOptionalParams'
-  - '@azure/arm-containerservice.CredentialResult'
-  - '@azure/arm-containerservice.CredentialResults'
-  - '@azure/arm-containerservice.KeyVaultSecretRef'
-  - '@azure/arm-containerservice.ManagedCluster'
-  - '@azure/arm-containerservice.ManagedClusterAADProfile'
-  - '@azure/arm-containerservice.ManagedClusterAPIServerAccessProfile'
-  - '@azure/arm-containerservice.ManagedClusterAccessProfile'
-  - '@azure/arm-containerservice.ManagedClusterAddonProfile'
-  - '@azure/arm-containerservice.ManagedClusterAddonProfileIdentity'
-  - '@azure/arm-containerservice.ManagedClusterAgentPoolProfile'
-  - '@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties'
-  - '@azure/arm-containerservice.ManagedClusterIdentity'
+    @azure/arm-containerservice.models.index.d.AgentPoolAvailableVersionsPropertiesAgentPoolVersionsItem
+  - '@azure/arm-containerservice.models.index.d.AgentPoolListResult'
+  - '@azure/arm-containerservice.models.index.d.AgentPoolUpgradeProfile'
   - >-
-    @azure/arm-containerservice.ManagedClusterIdentityUserAssignedIdentitiesValue
-  - '@azure/arm-containerservice.ManagedClusterListResult'
-  - '@azure/arm-containerservice.ManagedClusterLoadBalancerProfile'
+    @azure/arm-containerservice.models.index.d.AgentPoolUpgradeProfilePropertiesUpgradesItem
+  - '@azure/arm-containerservice.models.index.d.AgentPoolUpgradeSettings'
+  - '@azure/arm-containerservice.models.index.d.ContainerService'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceAgentPoolProfile'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceClientOptions'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceCustomProfile'
   - >-
-    @azure/arm-containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPs
+    @azure/arm-containerservice.models.index.d.ContainerServiceDiagnosticsProfile
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceLinuxProfile'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceListResult'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceMasterProfile'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceNetworkProfile'
   - >-
-    @azure/arm-containerservice.ManagedClusterLoadBalancerProfileOutboundIPPrefixes
-  - '@azure/arm-containerservice.ManagedClusterLoadBalancerProfileOutboundIPs'
-  - '@azure/arm-containerservice.ManagedClusterPoolUpgradeProfile'
-  - '@azure/arm-containerservice.ManagedClusterPoolUpgradeProfileUpgradesItem'
-  - '@azure/arm-containerservice.ManagedClusterPropertiesAutoScalerProfile'
-  - '@azure/arm-containerservice.ManagedClusterPropertiesIdentityProfileValue'
-  - '@azure/arm-containerservice.ManagedClusterSKU'
-  - '@azure/arm-containerservice.ManagedClusterServicePrincipalProfile'
-  - '@azure/arm-containerservice.ManagedClusterUpgradeProfile'
-  - '@azure/arm-containerservice.ManagedClusterWindowsProfile'
-  - '@azure/arm-containerservice.NetworkProfile'
-  - '@azure/arm-containerservice.OpenShiftManagedCluster'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterAADIdentityProvider'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterAgentPoolProfile'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterAuthProfile'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterBaseIdentityProvider'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterIdentityProvider'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterListResult'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterMasterPoolProfile'
-  - '@azure/arm-containerservice.OpenShiftRouterProfile'
-  - '@azure/arm-containerservice.OperationListResult'
-  - '@azure/arm-containerservice.OperationValue'
-  - '@azure/arm-containerservice.OrchestratorProfile'
-  - '@azure/arm-containerservice.OrchestratorVersionProfile'
-  - '@azure/arm-containerservice.OrchestratorVersionProfileListResult'
-  - '@azure/arm-containerservice.PrivateEndpoint'
-  - '@azure/arm-containerservice.PrivateEndpointConnection'
-  - '@azure/arm-containerservice.PrivateEndpointConnectionListResult'
-  - '@azure/arm-containerservice.PrivateLinkServiceConnectionState'
-  - '@azure/arm-containerservice.PurchasePlan'
-  - '@azure/arm-containerservice.Resource'
-  - '@azure/arm-containerservice.ResourceReference'
-  - '@azure/arm-containerservice.SubResource'
-  - '@azure/arm-containerservice.TagsObject'
-  - '@azure/arm-containerservice.UserAssignedIdentity'
+    @azure/arm-containerservice.models.index.d.ContainerServiceOrchestratorProfile
+  - >-
+    @azure/arm-containerservice.models.index.d.ContainerServiceServicePrincipalProfile
+  - >-
+    @azure/arm-containerservice.models.index.d.ContainerServicesListOrchestratorsOptionalParams
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceSshConfiguration'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceSshPublicKey'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceVMDiagnostics'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceWindowsProfile'
+  - '@azure/arm-containerservice.models.index.d.CredentialResult'
+  - '@azure/arm-containerservice.models.index.d.CredentialResults'
+  - '@azure/arm-containerservice.models.index.d.KeyVaultSecretRef'
+  - '@azure/arm-containerservice.models.index.d.ManagedCluster'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterAADProfile'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterAccessProfile'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterAddonProfile'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterAddonProfileIdentity
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterAgentPoolProfile'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterAgentPoolProfileProperties
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterAPIServerAccessProfile
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterIdentity'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterIdentityUserAssignedIdentitiesValue
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterListResult'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterLoadBalancerProfile'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterLoadBalancerProfileManagedOutboundIPs
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterLoadBalancerProfileOutboundIPPrefixes
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterLoadBalancerProfileOutboundIPs
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterPoolUpgradeProfile'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterPoolUpgradeProfileUpgradesItem
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterPropertiesAutoScalerProfile
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterPropertiesIdentityProfileValue
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClusterServicePrincipalProfile
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterSKU'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterUpgradeProfile'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterWindowsProfile'
+  - '@azure/arm-containerservice.models.index.d.NetworkProfile'
+  - '@azure/arm-containerservice.models.index.d.OpenShiftManagedCluster'
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterAADIdentityProvider
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterAgentPoolProfile
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterAuthProfile
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterBaseIdentityProvider
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterIdentityProvider
+  - '@azure/arm-containerservice.models.index.d.OpenShiftManagedClusterListResult'
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterMasterPoolProfile
+  - '@azure/arm-containerservice.models.index.d.OpenShiftRouterProfile'
+  - '@azure/arm-containerservice.models.index.d.OperationListResult'
+  - '@azure/arm-containerservice.models.index.d.OperationValue'
+  - '@azure/arm-containerservice.models.index.d.OrchestratorProfile'
+  - '@azure/arm-containerservice.models.index.d.OrchestratorVersionProfile'
+  - >-
+    @azure/arm-containerservice.models.index.d.OrchestratorVersionProfileListResult
+  - '@azure/arm-containerservice.models.index.d.PrivateEndpoint'
+  - '@azure/arm-containerservice.models.index.d.PrivateEndpointConnection'
+  - >-
+    @azure/arm-containerservice.models.index.d.PrivateEndpointConnectionListResult
+  - '@azure/arm-containerservice.models.index.d.PrivateLinkServiceConnectionState'
+  - '@azure/arm-containerservice.models.index.d.PurchasePlan'
+  - '@azure/arm-containerservice.models.index.d.Resource'
+  - '@azure/arm-containerservice.models.index.d.ResourceReference'
+  - '@azure/arm-containerservice.models.index.d.SubResource'
+  - '@azure/arm-containerservice.models.index.d.TagsObject'
+  - '@azure/arm-containerservice.models.index.d.UserAssignedIdentity'
 typeAliases:
-  - '@azure/arm-containerservice.AgentPoolMode'
-  - '@azure/arm-containerservice.AgentPoolType'
-  - '@azure/arm-containerservice.AgentPoolsBeginCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.AgentPoolsCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.AgentPoolsGetAvailableAgentPoolVersionsResponse'
-  - '@azure/arm-containerservice.AgentPoolsGetResponse'
-  - '@azure/arm-containerservice.AgentPoolsGetUpgradeProfileResponse'
-  - '@azure/arm-containerservice.AgentPoolsListNextResponse'
-  - '@azure/arm-containerservice.AgentPoolsListResponse'
-  - '@azure/arm-containerservice.ConnectionStatus'
-  - '@azure/arm-containerservice.ContainerServiceOrchestratorTypes'
-  - '@azure/arm-containerservice.ContainerServiceStorageProfileTypes'
-  - '@azure/arm-containerservice.ContainerServiceVMSizeTypes'
-  - '@azure/arm-containerservice.ContainerServicesBeginCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.ContainerServicesCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.ContainerServicesGetResponse'
-  - '@azure/arm-containerservice.ContainerServicesListByResourceGroupNextResponse'
-  - '@azure/arm-containerservice.ContainerServicesListByResourceGroupResponse'
-  - '@azure/arm-containerservice.ContainerServicesListNextResponse'
-  - '@azure/arm-containerservice.ContainerServicesListOrchestratorsResponse'
-  - '@azure/arm-containerservice.ContainerServicesListResponse'
-  - '@azure/arm-containerservice.LicenseType'
-  - '@azure/arm-containerservice.LoadBalancerSku'
-  - '@azure/arm-containerservice.ManagedClusterSKUName'
-  - '@azure/arm-containerservice.ManagedClusterSKUTier'
-  - '@azure/arm-containerservice.ManagedClustersBeginCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.ManagedClustersBeginUpdateTagsResponse'
+  - '@azure/arm-containerservice.models.index.d.AgentPoolMode'
   - >-
-    @azure/arm-containerservice.ManagedClustersBeginUpgradeNodeImageVersionResponse
-  - '@azure/arm-containerservice.ManagedClustersCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.ManagedClustersGetAccessProfileResponse'
-  - '@azure/arm-containerservice.ManagedClustersGetResponse'
-  - '@azure/arm-containerservice.ManagedClustersGetUpgradeProfileResponse'
-  - '@azure/arm-containerservice.ManagedClustersListByResourceGroupNextResponse'
-  - '@azure/arm-containerservice.ManagedClustersListByResourceGroupResponse'
+    @azure/arm-containerservice.models.index.d.AgentPoolsBeginCreateOrUpdateResponse
+  - '@azure/arm-containerservice.models.index.d.AgentPoolsCreateOrUpdateResponse'
   - >-
-    @azure/arm-containerservice.ManagedClustersListClusterAdminCredentialsResponse
+    @azure/arm-containerservice.models.index.d.AgentPoolsGetAvailableAgentPoolVersionsResponse
+  - '@azure/arm-containerservice.models.index.d.AgentPoolsGetResponse'
   - >-
-    @azure/arm-containerservice.ManagedClustersListClusterMonitoringUserCredentialsResponse
+    @azure/arm-containerservice.models.index.d.AgentPoolsGetUpgradeProfileResponse
+  - '@azure/arm-containerservice.models.index.d.AgentPoolsListNextResponse'
+  - '@azure/arm-containerservice.models.index.d.AgentPoolsListResponse'
+  - '@azure/arm-containerservice.models.index.d.AgentPoolType'
+  - '@azure/arm-containerservice.models.index.d.ConnectionStatus'
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceOrchestratorTypes'
   - >-
-    @azure/arm-containerservice.ManagedClustersListClusterUserCredentialsResponse
-  - '@azure/arm-containerservice.ManagedClustersListNextResponse'
-  - '@azure/arm-containerservice.ManagedClustersListResponse'
-  - '@azure/arm-containerservice.ManagedClustersUpdateTagsResponse'
-  - '@azure/arm-containerservice.ManagedClustersUpgradeNodeImageVersionResponse'
-  - '@azure/arm-containerservice.NetworkMode'
-  - '@azure/arm-containerservice.NetworkPlugin'
-  - '@azure/arm-containerservice.NetworkPolicy'
-  - '@azure/arm-containerservice.OSType'
-  - '@azure/arm-containerservice.OpenShiftAgentPoolProfileRole'
-  - '@azure/arm-containerservice.OpenShiftContainerServiceVMSize'
-  - '@azure/arm-containerservice.OpenShiftManagedClusterBaseIdentityProviderUnion'
+    @azure/arm-containerservice.models.index.d.ContainerServicesBeginCreateOrUpdateResponse
   - >-
-    @azure/arm-containerservice.OpenShiftManagedClustersBeginCreateOrUpdateResponse
-  - '@azure/arm-containerservice.OpenShiftManagedClustersBeginUpdateTagsResponse'
-  - '@azure/arm-containerservice.OpenShiftManagedClustersCreateOrUpdateResponse'
-  - '@azure/arm-containerservice.OpenShiftManagedClustersGetResponse'
+    @azure/arm-containerservice.models.index.d.ContainerServicesCreateOrUpdateResponse
+  - '@azure/arm-containerservice.models.index.d.ContainerServicesGetResponse'
   - >-
-    @azure/arm-containerservice.OpenShiftManagedClustersListByResourceGroupNextResponse
+    @azure/arm-containerservice.models.index.d.ContainerServicesListByResourceGroupNextResponse
   - >-
-    @azure/arm-containerservice.OpenShiftManagedClustersListByResourceGroupResponse
-  - '@azure/arm-containerservice.OpenShiftManagedClustersListNextResponse'
-  - '@azure/arm-containerservice.OpenShiftManagedClustersListResponse'
-  - '@azure/arm-containerservice.OpenShiftManagedClustersUpdateTagsResponse'
-  - '@azure/arm-containerservice.OperationsListResponse'
-  - '@azure/arm-containerservice.OutboundType'
-  - '@azure/arm-containerservice.PrivateEndpointConnectionProvisioningState'
-  - '@azure/arm-containerservice.PrivateEndpointConnectionsGetResponse'
-  - '@azure/arm-containerservice.PrivateEndpointConnectionsListResponse'
-  - '@azure/arm-containerservice.PrivateEndpointConnectionsUpdateResponse'
-  - '@azure/arm-containerservice.ResourceIdentityType'
-  - '@azure/arm-containerservice.ScaleSetEvictionPolicy'
-  - '@azure/arm-containerservice.ScaleSetPriority'
+    @azure/arm-containerservice.models.index.d.ContainerServicesListByResourceGroupResponse
+  - '@azure/arm-containerservice.models.index.d.ContainerServicesListNextResponse'
+  - >-
+    @azure/arm-containerservice.models.index.d.ContainerServicesListOrchestratorsResponse
+  - '@azure/arm-containerservice.models.index.d.ContainerServicesListResponse'
+  - >-
+    @azure/arm-containerservice.models.index.d.ContainerServiceStorageProfileTypes
+  - '@azure/arm-containerservice.models.index.d.ContainerServiceVMSizeTypes'
+  - '@azure/arm-containerservice.models.index.d.LicenseType'
+  - '@azure/arm-containerservice.models.index.d.LoadBalancerSku'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersBeginUpdateTagsResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersBeginUpgradeNodeImageVersionResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersCreateOrUpdateResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersGetAccessProfileResponse
+  - '@azure/arm-containerservice.models.index.d.ManagedClustersGetResponse'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersGetUpgradeProfileResponse
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterSKUName'
+  - '@azure/arm-containerservice.models.index.d.ManagedClusterSKUTier'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersListByResourceGroupNextResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersListByResourceGroupResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersListClusterAdminCredentialsResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersListClusterMonitoringUserCredentialsResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersListClusterUserCredentialsResponse
+  - '@azure/arm-containerservice.models.index.d.ManagedClustersListNextResponse'
+  - '@azure/arm-containerservice.models.index.d.ManagedClustersListResponse'
+  - '@azure/arm-containerservice.models.index.d.ManagedClustersUpdateTagsResponse'
+  - >-
+    @azure/arm-containerservice.models.index.d.ManagedClustersUpgradeNodeImageVersionResponse
+  - '@azure/arm-containerservice.models.index.d.NetworkMode'
+  - '@azure/arm-containerservice.models.index.d.NetworkPlugin'
+  - '@azure/arm-containerservice.models.index.d.NetworkPolicy'
+  - '@azure/arm-containerservice.models.index.d.OpenShiftAgentPoolProfileRole'
+  - '@azure/arm-containerservice.models.index.d.OpenShiftContainerServiceVMSize'
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClusterBaseIdentityProviderUnion
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersBeginUpdateTagsResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersCreateOrUpdateResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersGetResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersListByResourceGroupNextResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersListByResourceGroupResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersListNextResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersListResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.OpenShiftManagedClustersUpdateTagsResponse
+  - '@azure/arm-containerservice.models.index.d.OperationsListResponse'
+  - '@azure/arm-containerservice.models.index.d.OSType'
+  - '@azure/arm-containerservice.models.index.d.OutboundType'
+  - >-
+    @azure/arm-containerservice.models.index.d.PrivateEndpointConnectionProvisioningState
+  - >-
+    @azure/arm-containerservice.models.index.d.PrivateEndpointConnectionsGetResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.PrivateEndpointConnectionsListResponse
+  - >-
+    @azure/arm-containerservice.models.index.d.PrivateEndpointConnectionsUpdateResponse
+  - '@azure/arm-containerservice.models.index.d.ResourceIdentityType'
+  - '@azure/arm-containerservice.models.index.d.ScaleSetEvictionPolicy'
+  - '@azure/arm-containerservice.models.index.d.ScaleSetPriority'

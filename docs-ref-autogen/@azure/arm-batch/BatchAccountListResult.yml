@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BatchAccountListResult
-uid: '@azure/arm-batch.BatchAccountListResult'
+uid: '@azure/arm-batch.models.index.d.BatchAccountListResult'
 package: '@azure/arm-batch'
 summary: ''
 fullName: BatchAccountListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-batch.BatchAccountListResult.Array'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.Array'
     package: '@azure/arm-batch'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-batch.BatchAccountListResult.length'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.length'
     package: '@azure/arm-batch'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,9 +38,9 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-batch.BatchAccountListResult.nextLink'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.nextLink'
     package: '@azure/arm-batch'
-    summary: ''
+    summary: The continuation token.
     fullName: nextLink
     remarks: ''
     isPreview: false
@@ -51,8 +51,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(BatchAccount | ConcatArray<BatchAccount>[])'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.concat_1'
+    package: '@azure/arm-batch'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: BatchAccount | ConcatArray<BatchAccount>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-batch.models.index.d.BatchAccount" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-batch.models.index.d.BatchAccount" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
+        description: ''
   - name: 'concat(ConcatArray<BatchAccount>[])'
-    uid: '@azure/arm-batch.BatchAccountListResult.concat'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.concat'
     package: '@azure/arm-batch'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +82,16 @@ methods:
       content: 'function concat(items: ConcatArray<BatchAccount>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-batch.BatchAccount" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-batch.models.index.d.BatchAccount" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-batch.BatchAccountListResult.concat_1'
-    package: '@azure/arm-batch'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.copyWithin'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.copyWithin'
     package: '@azure/arm-batch'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-batch.BatchAccountListResult.entries'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.entries'
     package: '@azure/arm-batch'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +143,7 @@ methods:
   - name: >-
       every((value: BatchAccount, index: number, array: BatchAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.every'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.every_1'
     package: '@azure/arm-batch'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: BatchAccount, index: number, array:
+        function every(predicate: (value: BatchAccount, index: number, array:
         BatchAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchAccount, index: number, array: BatchAccount[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: BatchAccount, index: number, array: BatchAccount[]) =>
+      value, any)
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.every'
+    package: '@azure/arm-batch'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: BatchAccount, index: number, array:
+        BatchAccount[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: BatchAccount, index: number, array: BatchAccount[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(BatchAccount, undefined | number, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.fill'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.fill'
     package: '@azure/arm-batch'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-batch.BatchAccount" />
+          type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -203,7 +251,7 @@ methods:
   - name: >-
       filter((value: BatchAccount, index: number, array: BatchAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.filter_1'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.filter_1'
     package: '@azure/arm-batch'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -213,30 +261,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: BatchAccount, index: number, array:
+        function filter(predicate: (value: BatchAccount, index: number, array:
         BatchAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchAccount, index: number, array: BatchAccount[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
         description: ''
   - name: >-
       filter<S>((value: BatchAccount, index: number, array: BatchAccount[]) =>
-      boolean, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.filter'
+      value, any)
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.filter'
     package: '@azure/arm-batch'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -246,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: BatchAccount, index: number,
-        array: BatchAccount[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: BatchAccount, index: number,
+        array: BatchAccount[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchAccount, index: number, array: BatchAccount[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -269,7 +315,7 @@ methods:
   - name: >-
       find((value: BatchAccount, index: number, obj: BatchAccount[]) => unknown,
       any)
-    uid: '@azure/arm-batch.BatchAccountListResult.find_1'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.find_1'
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -289,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-batch.models.index.d.BatchAccount" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: BatchAccount, index: number, obj:
-      BatchAccount[]) => boolean, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.find'
+      BatchAccount[]) => value, any)
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.find'
     package: '@azure/arm-batch'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -307,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: BatchAccount, index:
-        number, obj: BatchAccount[]) => boolean, thisArg?: any)
+        number, obj: BatchAccount[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: BatchAccount, index: number, obj:
-            BatchAccount[]) =&gt; boolean
+            BatchAccount[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -335,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: BatchAccount, index: number, obj: BatchAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.findIndex'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.findIndex'
     package: '@azure/arm-batch'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +424,7 @@ methods:
   - name: >-
       forEach((value: BatchAccount, index: number, array: BatchAccount[]) =>
       void, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.forEach'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.forEach'
     package: '@azure/arm-batch'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -401,7 +449,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(BatchAccount, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.includes'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.includes'
     package: '@azure/arm-batch'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -415,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-batch.BatchAccount" />
+          type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -426,7 +474,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(BatchAccount, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.indexOf'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.indexOf'
     package: '@azure/arm-batch'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -438,7 +486,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-batch.BatchAccount" />
+          type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -449,7 +497,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-batch.BatchAccountListResult.join'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.join'
     package: '@azure/arm-batch'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -470,7 +518,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-batch.BatchAccountListResult.keys'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.keys'
     package: '@azure/arm-batch'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -482,7 +530,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(BatchAccount, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.lastIndexOf'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.lastIndexOf'
     package: '@azure/arm-batch'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -494,7 +542,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-batch.BatchAccount" />
+          type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -507,7 +555,7 @@ methods:
   - name: >-
       map<U>((value: BatchAccount, index: number, array: BatchAccount[]) => U,
       any)
-    uid: '@azure/arm-batch.BatchAccountListResult.map'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.map'
     package: '@azure/arm-batch'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -535,7 +583,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-batch.BatchAccountListResult.pop'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.pop'
     package: '@azure/arm-batch'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -544,10 +592,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-batch.models.index.d.BatchAccount" /> |
+          undefined
         description: ''
   - name: 'push(BatchAccount[])'
-    uid: '@azure/arm-batch.BatchAccountListResult.push'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.push'
     package: '@azure/arm-batch'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -557,7 +607,7 @@ methods:
       content: 'function push(items: BatchAccount[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+          type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
           description: |
             New elements of the Array.
       return:
@@ -566,7 +616,7 @@ methods:
   - name: >-
       reduce((previousValue: BatchAccount, currentValue: BatchAccount,
       currentIndex: number, array: BatchAccount[]) => BatchAccount)
-    uid: '@azure/arm-batch.BatchAccountListResult.reduce'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reduce'
     package: '@azure/arm-batch'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -590,13 +640,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" />
+        type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
         description: ''
   - name: >-
       reduce((previousValue: BatchAccount, currentValue: BatchAccount,
       currentIndex: number, array: BatchAccount[]) => BatchAccount,
       BatchAccount)
-    uid: '@azure/arm-batch.BatchAccountListResult.reduce_1'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reduce_1'
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -614,15 +664,15 @@ methods:
             currentIndex: number, array: BatchAccount[]) =&gt; BatchAccount
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-batch.BatchAccount" />
+          type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" />
+        type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: BatchAccount, currentIndex:
       number, array: BatchAccount[]) => U, U)
-    uid: '@azure/arm-batch.BatchAccountListResult.reduce_2'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reduce_2'
     package: '@azure/arm-batch'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -657,7 +707,7 @@ methods:
   - name: >-
       reduceRight((previousValue: BatchAccount, currentValue: BatchAccount,
       currentIndex: number, array: BatchAccount[]) => BatchAccount)
-    uid: '@azure/arm-batch.BatchAccountListResult.reduceRight'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reduceRight'
     package: '@azure/arm-batch'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -682,13 +732,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" />
+        type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
         description: ''
   - name: >-
       reduceRight((previousValue: BatchAccount, currentValue: BatchAccount,
       currentIndex: number, array: BatchAccount[]) => BatchAccount,
       BatchAccount)
-    uid: '@azure/arm-batch.BatchAccountListResult.reduceRight_1'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reduceRight_1'
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -706,15 +756,15 @@ methods:
             currentIndex: number, array: BatchAccount[]) =&gt; BatchAccount
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-batch.BatchAccount" />
+          type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" />
+        type: <xref uid="@azure/arm-batch.models.index.d.BatchAccount" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: BatchAccount,
       currentIndex: number, array: BatchAccount[]) => U, U)
-    uid: '@azure/arm-batch.BatchAccountListResult.reduceRight_2'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reduceRight_2'
     package: '@azure/arm-batch'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -748,7 +798,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-batch.BatchAccountListResult.reverse'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.reverse'
     package: '@azure/arm-batch'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -757,10 +807,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-batch.BatchAccountListResult.shift'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.shift'
     package: '@azure/arm-batch'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -769,10 +819,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-batch.BatchAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-batch.models.index.d.BatchAccount" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.slice'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.slice'
     package: '@azure/arm-batch'
     summary: Returns a section of an array.
     remarks: ''
@@ -786,15 +838,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
         description: ''
   - name: >-
       some((value: BatchAccount, index: number, array: BatchAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-batch.BatchAccountListResult.some'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.some'
     package: '@azure/arm-batch'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -804,28 +857,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: BatchAccount, index: number, array:
+        function some(predicate: (value: BatchAccount, index: number, array:
         BatchAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchAccount, index: number, array: BatchAccount[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: BatchAccount, b: BatchAccount) => number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.sort'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.sort'
     package: '@azure/arm-batch'
     summary: Sorts an array.
     remarks: ''
@@ -839,14 +897,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: BatchAccount, b: BatchAccount) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, BatchAccount[])'
-    uid: '@azure/arm-batch.BatchAccountListResult.splice_1'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.splice_1'
     package: '@azure/arm-batch'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -868,14 +937,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+          type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-batch.BatchAccountListResult.splice'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.splice'
     package: '@azure/arm-batch'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -896,10 +965,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+        type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-batch.BatchAccountListResult.toLocaleString'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.toLocaleString'
     package: '@azure/arm-batch'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -913,7 +982,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-batch.BatchAccountListResult.toString'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.toString'
     package: '@azure/arm-batch'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -925,7 +994,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(BatchAccount[])'
-    uid: '@azure/arm-batch.BatchAccountListResult.unshift'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.unshift'
     package: '@azure/arm-batch'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -935,14 +1004,14 @@ methods:
       content: 'function unshift(items: BatchAccount[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-batch.BatchAccount" />[]'
+          type: '<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-batch.BatchAccountListResult.values'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.values'
     package: '@azure/arm-batch'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -951,6 +1020,39 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-batch.BatchAccount" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-batch.models.index.d.BatchAccount" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-batch.BatchAccount" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-batch.models.index.d.BatchAccountListResult.[Symbol.iterator]'
+    package: '@azure/arm-batch'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-batch.models.index.d.BatchAccount" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-batch.models.index.d.BatchAccountListResult.[Symbol.unscopables]
+    package: '@azure/arm-batch'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-batch.models.index.d.BatchAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-batch.models.index.d.BatchAccount" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ProvisioningDeviceClient
-uid: azure-iot-provisioning-device.ProvisioningDeviceClient
+uid: azure-iot-provisioning-device.client.d.ProvisioningDeviceClient
 package: azure-iot-provisioning-device
 summary: >-
   Client object used to communicate with the Azure IoT Hub Device Provisioning
@@ -15,7 +15,7 @@ methods:
       create(string, string, X509ProvisioningTransport |
       TpmProvisioningTransport | SymmetricKeyProvisioningTransport,
       X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)
-    uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
+    uid: azure-iot-provisioning-device.client.d.ProvisioningDeviceClient.create
     package: azure-iot-provisioning-device
     summary: >-
       Construct a client object which can be used to communicate with the Azure
@@ -56,8 +56,9 @@ methods:
                                      [azure-iot-provisioning-device-mqtt.MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)
         - id: securityClient
           type: >-
-            <xref uid="azure-iot-provisioning-device.X509SecurityClient" /> |
-            TpmSecurityClient | SymmetricKeySecurityClient
+            <xref
+            uid="azure-iot-provisioning-device.interfaces.d.X509SecurityClient"
+            /> | TpmSecurityClient | SymmetricKeySecurityClient
           description: |
             Instance of Security client object implementing either the
                                      [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) or the
@@ -68,7 +69,9 @@ methods:
                                      [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)
                                      [SymmetricKeySecurityClient](xref:azure-iot-security-symmetric-key.SymmetricKeySecurityClient)
       return:
-        type: <xref uid="azure-iot-provisioning-device.RegistrationClient" />
+        type: >-
+          <xref
+          uid="azure-iot-provisioning-device.interfaces.d.RegistrationClient" />
         description: >-
           An object supporting the [RegistrationClient]{@link
           module:azure-iot-provisioning-device:RegistrationClient}

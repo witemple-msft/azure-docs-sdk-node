@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: JobCollection
-uid: '@azure/arm-recoveryservices-siterecovery.JobCollection'
+uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection'
 package: '@azure/arm-recoveryservices-siterecovery'
 summary: ''
 fullName: JobCollection
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.Array'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.Array
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.length'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.length
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.nextLink'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.nextLink
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: nextLink
@@ -52,7 +55,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Job>[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.concat'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.concat
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +68,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-recoveryservices-siterecovery.Job" />&gt;[]
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.concat_1'
+  - name: 'concat(Job | ConcatArray<Job>[])'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.concat_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Job | ConcatArray<Job>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.copyWithin'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.copyWithin
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +142,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.entries'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.entries
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +155,8 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Job, index: number, array: Job[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.every'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.every_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,26 +164,66 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Job, index: number, array: Job[]) =>
+        function every(predicate: (value: Job, index: number, array: Job[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Job, index: number, array: Job[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Job, index: number, array: Job[]) => value, any)'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.every
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Job, index: number, array: Job[])
+        => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Job, index: number, array: Job[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Job, undefined | number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.fill'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.fill'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -179,7 +237,9 @@ methods:
         number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +259,8 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Job, index: number, array: Job[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.filter_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.filter_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,26 +270,28 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Job, index: number, array: Job[]) =>
+        function filter(predicate: (value: Job, index: number, array: Job[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Job, index: number, array: Job[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
-  - name: 'filter<S>((value: Job, index: number, array: Job[]) => boolean, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.filter'
+  - name: 'filter<S>((value: Job, index: number, array: Job[]) => value, any)'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.filter
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +301,26 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Job, index: number, array: Job[])
-        => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Job, index: number, array: Job[])
+        => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Job, index: number, array: Job[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Job, index: number, array: Job[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Job, index: number, obj: Job[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.find_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.find_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -276,13 +339,12 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-recoveryservices-siterecovery.Job" /> |
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" /> |
           undefined
         description: ''
-  - name: >-
-      find<S>((this: void, value: Job, index: number, obj: Job[]) => boolean,
-      any)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.find'
+  - name: 'find<S>((this: void, value: Job, index: number, obj: Job[]) => value, any)'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.find'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,10 +357,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Job, index: number, obj:
-        Job[]) => boolean, thisArg?: any)
+        Job[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: '(this: void, value: Job, index: number, obj: Job[]) =&gt; boolean'
+          type: '(this: void, value: Job, index: number, obj: Job[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -319,7 +381,8 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Job, index: number, obj: Job[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.findIndex'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.findIndex
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -356,7 +419,8 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Job, index: number, array: Job[]) => void, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.forEach'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.forEach
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -379,7 +443,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Job, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.includes'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.includes
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -391,7 +456,9 @@ methods:
       content: 'function includes(searchElement: Job, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -402,7 +469,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Job, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.indexOf'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.indexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -412,7 +480,9 @@ methods:
       content: 'function indexOf(searchElement: Job, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -423,7 +493,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.join'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.join'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -444,7 +514,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.keys'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.keys'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -456,7 +526,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Job, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.lastIndexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -466,7 +537,9 @@ methods:
       content: 'function lastIndexOf(searchElement: Job, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -477,7 +550,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Job, index: number, array: Job[]) => U, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.map'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.map'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -505,7 +578,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.pop'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.pop'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -515,11 +588,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-recoveryservices-siterecovery.Job" /> |
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" /> |
           undefined
         description: ''
   - name: 'push(Job[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.push'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.push'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -529,7 +603,10 @@ methods:
       content: 'function push(items: Job[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -538,7 +615,8 @@ methods:
   - name: >-
       reduce((previousValue: Job, currentValue: Job, currentIndex: number,
       array: Job[]) => Job)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reduce'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reduce
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -561,12 +639,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
         description: ''
   - name: >-
       reduce((previousValue: Job, currentValue: Job, currentIndex: number,
       array: Job[]) => Job, Job)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reduce_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reduce_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -583,15 +664,20 @@ methods:
             Job[]) =&gt; Job
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Job, currentIndex: number,
       array: Job[]) => U, U)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reduce_2'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reduce_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -625,7 +711,8 @@ methods:
   - name: >-
       reduceRight((previousValue: Job, currentValue: Job, currentIndex: number,
       array: Job[]) => Job)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reduceRight'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reduceRight
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -649,12 +736,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
         description: ''
   - name: >-
       reduceRight((previousValue: Job, currentValue: Job, currentIndex: number,
       array: Job[]) => Job, Job)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reduceRight_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -671,15 +761,20 @@ methods:
             Job[]) =&gt; Job
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Job" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Job, currentIndex: number,
       array: Job[]) => U, U)
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reduceRight_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -712,7 +807,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.reverse'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.reverse
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -721,10 +817,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.shift'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.shift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -734,11 +833,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-recoveryservices-siterecovery.Job" /> |
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" /> |
           undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.slice'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.slice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a section of an array.
     remarks: ''
@@ -752,13 +853,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
   - name: 'some((value: Job, index: number, array: Job[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.some'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.some'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -768,26 +872,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Job, index: number, array: Job[]) =>
+        function some(predicate: (value: Job, index: number, array: Job[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Job, index: number, array: Job[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Job, b: Job) => number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.sort'
+    uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.sort'
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Sorts an array.
     remarks: ''
@@ -799,14 +908,26 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Job, b: Job) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Job[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.splice_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.splice_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -826,14 +947,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.splice'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.splice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -854,10 +981,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job" />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.toLocaleString'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.toLocaleString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -871,7 +1001,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.toString'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.toString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -883,7 +1014,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Job[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.unshift'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.unshift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -893,14 +1025,18 @@ methods:
       content: 'function unshift(items: Job[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-recoveryservices-siterecovery.JobCollection.values'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.values
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -911,6 +1047,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-recoveryservices-siterecovery.Job" />&gt;
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-recoveryservices-siterecovery.Job" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.[Symbol.iterator]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.JobCollection.[Symbol.unscopables]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.OperationsDiscoveryCollection.Array"
+  />&lt;<xref uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Job"
+  />&gt;

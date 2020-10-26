@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Container
-uid: '@azure/cosmos.Container'
+uid: '@azure/cosmos.index.d.Container'
 package: '@azure/cosmos'
 summary: >-
   Operations for reading, replacing, or deleting a specific, existing container
@@ -12,7 +12,7 @@ isDeprecated: false
 type: class
 properties:
   - name: conflicts
-    uid: '@azure/cosmos.Container.conflicts'
+    uid: '@azure/cosmos.index.d.Container.conflicts'
     package: '@azure/cosmos'
     summary: |
       Opertaions for reading and querying conflicts for the given container.
@@ -24,10 +24,10 @@ properties:
     syntax:
       content: Conflicts conflicts
       return:
-        type: <xref uid="@azure/cosmos.Conflicts" />
+        type: <xref uid="@azure/cosmos.index.d.Conflicts" />
         description: ''
   - name: database
-    uid: '@azure/cosmos.Container.database'
+    uid: '@azure/cosmos.index.d.Container.database'
     package: '@azure/cosmos'
     summary: ''
     fullName: database
@@ -37,10 +37,10 @@ properties:
     syntax:
       content: 'database: Database'
       return:
-        type: <xref uid="@azure/cosmos.Database" />
+        type: <xref uid="@azure/cosmos.index.d.Database" />
         description: ''
   - name: id
-    uid: '@azure/cosmos.Container.id'
+    uid: '@azure/cosmos.index.d.Container.id'
     package: '@azure/cosmos'
     summary: ''
     fullName: id
@@ -53,7 +53,7 @@ properties:
         type: string
         description: ''
   - name: items
-    uid: '@azure/cosmos.Container.items'
+    uid: '@azure/cosmos.index.d.Container.items'
     package: '@azure/cosmos'
     summary: |
       Operations for creating new items, and reading/querying all items
@@ -65,10 +65,10 @@ properties:
     syntax:
       content: Items items
       return:
-        type: <xref uid="@azure/cosmos.Items" />
+        type: <xref uid="@azure/cosmos.index.d.Items" />
         description: ''
   - name: scripts
-    uid: '@azure/cosmos.Container.scripts'
+    uid: '@azure/cosmos.index.d.Container.scripts'
     package: '@azure/cosmos'
     summary: 'All operations for Stored Procedures, Triggers, and User Defined Functions'
     fullName: scripts
@@ -78,10 +78,10 @@ properties:
     syntax:
       content: Scripts scripts
       return:
-        type: <xref uid="@azure/cosmos.Scripts" />
+        type: <xref uid="@azure/cosmos.index.d.Scripts" />
         description: ''
   - name: url
-    uid: '@azure/cosmos.Container.url'
+    uid: '@azure/cosmos.index.d.Container.url'
     package: '@azure/cosmos'
     summary: Returns a reference URL to the resource. Used for linking in Permissions.
     fullName: url
@@ -95,7 +95,7 @@ properties:
         description: ''
 methods:
   - name: conflict(string)
-    uid: '@azure/cosmos.Container.conflict'
+    uid: '@azure/cosmos.index.d.Container.conflict'
     package: '@azure/cosmos'
     summary: >-
       Used to read, replace, or delete a specific, existing <xref:Conflict> by
@@ -114,10 +114,10 @@ methods:
           description: |
             The id of the <xref:Conflict>.
       return:
-        type: <xref uid="@azure/cosmos.Conflict" />
+        type: <xref uid="@azure/cosmos.index.d.Conflict" />
         description: ''
   - name: delete(RequestOptions)
-    uid: '@azure/cosmos.Container.delete'
+    uid: '@azure/cosmos.index.d.Container.delete'
     package: '@azure/cosmos'
     summary: Delete the container
     remarks: ''
@@ -127,13 +127,13 @@ methods:
       content: 'function delete(options?: RequestOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/cosmos.RequestOptions" />
+          type: <xref uid="@azure/cosmos.index.d.RequestOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.ContainerResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/cosmos.index.d.ContainerResponse" />&gt;
         description: ''
   - name: getPartitionKeyDefinition()
-    uid: '@azure/cosmos.Container.getPartitionKeyDefinition'
+    uid: '@azure/cosmos.index.d.Container.getPartitionKeyDefinition'
     package: '@azure/cosmos'
     summary: >-
       Gets the partition key definition first by looking into the cache
@@ -146,11 +146,12 @@ methods:
       content: function getPartitionKeyDefinition()
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/cosmos.ResourceResponse" />&lt;<xref
-          uid="@azure/cosmos.PartitionKeyDefinition" />&gt;&gt;
+          Promise&lt;<xref uid="@azure/cosmos.index.d.ResourceResponse"
+          />&lt;<xref uid="@azure/cosmos.index.d.PartitionKeyDefinition"
+          />&gt;&gt;
         description: ''
   - name: getQueryPlan(string | SqlQuerySpec)
-    uid: '@azure/cosmos.Container.getQueryPlan'
+    uid: '@azure/cosmos.index.d.Container.getQueryPlan'
     package: '@azure/cosmos'
     summary: ''
     remarks: ''
@@ -160,13 +161,13 @@ methods:
       content: 'function getQueryPlan(query: string | SqlQuerySpec)'
       parameters:
         - id: query
-          type: string | <xref uid="@azure/cosmos.SqlQuerySpec" />
+          type: string | <xref uid="@azure/cosmos.index.d.SqlQuerySpec" />
           description: ''
       return:
         type: Promise&lt;Response&lt;PartitionedQueryExecutionInfo&gt;&gt;
         description: ''
   - name: 'item(string, any)'
-    uid: '@azure/cosmos.Container.item'
+    uid: '@azure/cosmos.index.d.Container.item'
     package: '@azure/cosmos'
     summary: |
       Used to read, replace, or delete a specific, existing <xref:Item> by id.
@@ -184,10 +185,10 @@ methods:
           type: any
           description: 'The value of the <xref:Item> partition key'
       return:
-        type: <xref uid="@azure/cosmos.Item" />
+        type: <xref uid="@azure/cosmos.index.d.Item" />
         description: ''
   - name: read(RequestOptions)
-    uid: '@azure/cosmos.Container.read'
+    uid: '@azure/cosmos.index.d.Container.read'
     package: '@azure/cosmos'
     summary: Read the container's definition
     remarks: ''
@@ -197,13 +198,13 @@ methods:
       content: 'function read(options?: RequestOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/cosmos.RequestOptions" />
+          type: <xref uid="@azure/cosmos.index.d.RequestOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.ContainerResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/cosmos.index.d.ContainerResponse" />&gt;
         description: ''
   - name: readOffer(RequestOptions)
-    uid: '@azure/cosmos.Container.readOffer'
+    uid: '@azure/cosmos.index.d.Container.readOffer'
     package: '@azure/cosmos'
     summary: >-
       Gets offer on container. If none exists, returns an OfferResponse with
@@ -215,14 +216,14 @@ methods:
       content: 'function readOffer(options?: RequestOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/cosmos.RequestOptions" />
+          type: <xref uid="@azure/cosmos.index.d.RequestOptions" />
           description: |+
 
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.OfferResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/cosmos.index.d.OfferResponse" />&gt;
         description: ''
   - name: readPartitionKeyRanges(FeedOptions)
-    uid: '@azure/cosmos.Container.readPartitionKeyRanges'
+    uid: '@azure/cosmos.index.d.Container.readPartitionKeyRanges'
     package: '@azure/cosmos'
     summary: ''
     remarks: ''
@@ -232,13 +233,15 @@ methods:
       content: 'function readPartitionKeyRanges(feedOptions?: FeedOptions)'
       parameters:
         - id: feedOptions
-          type: <xref uid="@azure/cosmos.FeedOptions" />
+          type: <xref uid="@azure/cosmos.index.d.FeedOptions" />
           description: ''
       return:
-        type: <xref uid="@azure/cosmos.QueryIterator" />&lt;PartitionKeyRange&gt;
+        type: >-
+          <xref uid="@azure/cosmos.index.d.QueryIterator"
+          />&lt;PartitionKeyRange&gt;
         description: ''
   - name: 'replace(ContainerDefinition, RequestOptions)'
-    uid: '@azure/cosmos.Container.replace'
+    uid: '@azure/cosmos.index.d.Container.replace'
     package: '@azure/cosmos'
     summary: Replace the container's definition
     remarks: ''
@@ -248,11 +251,11 @@ methods:
       content: 'function replace(body: ContainerDefinition, options?: RequestOptions)'
       parameters:
         - id: body
-          type: <xref uid="@azure/cosmos.ContainerDefinition" />
+          type: <xref uid="@azure/cosmos.index.d.ContainerDefinition" />
           description: ''
         - id: options
-          type: <xref uid="@azure/cosmos.RequestOptions" />
+          type: <xref uid="@azure/cosmos.index.d.RequestOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.ContainerResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/cosmos.index.d.ContainerResponse" />&gt;
         description: ''

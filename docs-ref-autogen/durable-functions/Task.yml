@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Task
-uid: durable-functions.Task
+uid: durable-functions.tasks.task.d.Task
 package: durable-functions
 summary: |
   Represents some pending action. Similar to a native JavaScript promise in
@@ -20,7 +20,7 @@ isDeprecated: false
 type: class
 properties:
   - name: exception
-    uid: durable-functions.Task.exception
+    uid: durable-functions.tasks.task.d.Task.exception
     package: durable-functions
     summary: |-
       The error thrown when attempting to perform the task's action. If
@@ -33,10 +33,12 @@ properties:
     syntax:
       content: 'exception?: Error | undefined'
       return:
-        type: Error | undefined
+        type: >-
+          <xref uid="durable-functions.aggregatederror.d.AggregatedError.Error"
+          /> | undefined
         description: ''
   - name: isCompleted
-    uid: durable-functions.Task.isCompleted
+    uid: durable-functions.tasks.task.d.Task.isCompleted
     package: durable-functions
     summary: |-
       Whether the task has completed. Note that completion is not
@@ -51,7 +53,7 @@ properties:
         type: boolean
         description: ''
   - name: isFaulted
-    uid: durable-functions.Task.isFaulted
+    uid: durable-functions.tasks.task.d.Task.isFaulted
     package: durable-functions
     summary: Whether the task faulted in some way due to error.
     fullName: isFaulted
@@ -64,7 +66,7 @@ properties:
         type: boolean
         description: ''
   - name: result
-    uid: durable-functions.Task.result
+    uid: durable-functions.tasks.task.d.Task.result
     package: durable-functions
     summary: 'The result of the task, if completed. Otherwise `undefined`.'
     fullName: result

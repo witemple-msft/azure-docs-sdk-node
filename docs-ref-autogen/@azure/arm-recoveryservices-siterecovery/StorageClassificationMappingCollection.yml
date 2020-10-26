@@ -1,7 +1,7 @@
 ### YamlMime:TSType
 name: StorageClassificationMappingCollection
 uid: >-
-  @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection
+  @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection
 package: '@azure/arm-recoveryservices-siterecovery'
 summary: ''
 fullName: StorageClassificationMappingCollection
@@ -12,7 +12,7 @@ type: interface
 properties:
   - name: Array
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.Array
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.Array
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: Array
@@ -26,7 +26,7 @@ properties:
         description: ''
   - name: length
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.length
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.length
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -42,7 +42,7 @@ properties:
         description: ''
   - name: nextLink
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.nextLink
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.nextLink
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: nextLink
@@ -57,7 +57,7 @@ properties:
 methods:
   - name: 'concat(ConcatArray<StorageClassificationMapping>[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.concat
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.concat
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
@@ -69,40 +69,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
+  - name: >-
+      concat(StorageClassificationMapping |
+      ConcatArray<StorageClassificationMapping>[])
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.concat_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.concat_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: StorageClassificationMapping |
+        ConcatArray<StorageClassificationMapping>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.copyWithin
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.copyWithin
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -141,7 +150,7 @@ methods:
         description: ''
   - name: entries()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.entries
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.entries
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -156,7 +165,7 @@ methods:
       every((value: StorageClassificationMapping, index: number, array:
       StorageClassificationMapping[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.every
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.every_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -164,30 +173,75 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: StorageClassificationMapping, index:
+        function every(predicate: (value: StorageClassificationMapping, index:
         number, array: StorageClassificationMapping[]) => unknown, thisArg?:
         any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageClassificationMapping, index: number, array:
             StorageClassificationMapping[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: StorageClassificationMapping, index: number, array:
+      StorageClassificationMapping[]) => value, any)
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.every
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: StorageClassificationMapping,
+        index: number, array: StorageClassificationMapping[]) => value,
+        thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: StorageClassificationMapping, index: number, array:
+            StorageClassificationMapping[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(StorageClassificationMapping, undefined | number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.fill
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.fill
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -203,7 +257,7 @@ methods:
         - id: value
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />
           description: value to fill array section with
         - id: start
@@ -227,7 +281,7 @@ methods:
       filter((value: StorageClassificationMapping, index: number, array:
       StorageClassificationMapping[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.filter_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.filter_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -237,35 +291,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: StorageClassificationMapping, index:
+        function filter(predicate: (value: StorageClassificationMapping, index:
         number, array: StorageClassificationMapping[]) => unknown, thisArg?:
         any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageClassificationMapping, index: number, array:
             StorageClassificationMapping[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
   - name: >-
       filter<S>((value: StorageClassificationMapping, index: number, array:
-      StorageClassificationMapping[]) => boolean, any)
+      StorageClassificationMapping[]) => value, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.filter
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.filter
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -275,22 +328,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: StorageClassificationMapping,
-        index: number, array: StorageClassificationMapping[]) => boolean,
+        function filter<S>(predicate: (value: StorageClassificationMapping,
+        index: number, array: StorageClassificationMapping[]) => value,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageClassificationMapping, index: number, array:
-            StorageClassificationMapping[]) =&gt; boolean
+            StorageClassificationMapping[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -300,7 +352,7 @@ methods:
       find((value: StorageClassificationMapping, index: number, obj:
       StorageClassificationMapping[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.find_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.find_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -322,14 +374,14 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: StorageClassificationMapping, index: number,
-      obj: StorageClassificationMapping[]) => boolean, any)
+      obj: StorageClassificationMapping[]) => value, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.find
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.find
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -343,12 +395,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         StorageClassificationMapping, index: number, obj:
-        StorageClassificationMapping[]) => boolean, thisArg?: any)
+        StorageClassificationMapping[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: StorageClassificationMapping, index: number,
-            obj: StorageClassificationMapping[]) =&gt; boolean
+            obj: StorageClassificationMapping[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -372,7 +424,7 @@ methods:
       findIndex((value: StorageClassificationMapping, index: number, obj:
       StorageClassificationMapping[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.findIndex
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.findIndex
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -415,7 +467,7 @@ methods:
       forEach((value: StorageClassificationMapping, index: number, array:
       StorageClassificationMapping[]) => void, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.forEach
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.forEach
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -442,7 +494,7 @@ methods:
             value.
   - name: 'includes(StorageClassificationMapping, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.includes
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.includes
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -458,7 +510,7 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />
           description: The element to search for.
         - id: fromIndex
@@ -471,7 +523,7 @@ methods:
         description: ''
   - name: 'indexOf(StorageClassificationMapping, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.indexOf
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.indexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -485,7 +537,7 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />
           description: The value to locate in the array.
         - id: fromIndex
@@ -498,7 +550,7 @@ methods:
         description: ''
   - name: join(undefined | string)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.join
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.join
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -520,7 +572,7 @@ methods:
         description: ''
   - name: keys()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.keys
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.keys
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -533,7 +585,7 @@ methods:
         description: ''
   - name: 'lastIndexOf(StorageClassificationMapping, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.lastIndexOf
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.lastIndexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -547,7 +599,7 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />
           description: The value to locate in the array.
         - id: fromIndex
@@ -562,7 +614,7 @@ methods:
       map<U>((value: StorageClassificationMapping, index: number, array:
       StorageClassificationMapping[]) => U, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.map
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.map
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -593,7 +645,7 @@ methods:
         description: ''
   - name: pop()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.pop
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.pop
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -604,12 +656,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           /> | undefined
         description: ''
   - name: 'push(StorageClassificationMapping[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.push
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.push
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -621,7 +673,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />[]
           description: |
             New elements of the Array.
@@ -633,7 +685,7 @@ methods:
       StorageClassificationMapping, currentIndex: number, array:
       StorageClassificationMapping[]) => StorageClassificationMapping)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reduce
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reduce
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +713,7 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />
         description: ''
   - name: >-
@@ -670,7 +722,7 @@ methods:
       StorageClassificationMapping[]) => StorageClassificationMapping,
       StorageClassificationMapping)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reduce_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reduce_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -693,20 +745,20 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: StorageClassificationMapping,
       currentIndex: number, array: StorageClassificationMapping[]) => U, U)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reduce_2
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reduce_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -743,7 +795,7 @@ methods:
       StorageClassificationMapping, currentIndex: number, array:
       StorageClassificationMapping[]) => StorageClassificationMapping)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reduceRight
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reduceRight
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -772,7 +824,7 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />
         description: ''
   - name: >-
@@ -781,7 +833,7 @@ methods:
       StorageClassificationMapping[]) => StorageClassificationMapping,
       StorageClassificationMapping)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reduceRight_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reduceRight_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -804,13 +856,13 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />
         description: ''
   - name: >-
@@ -818,7 +870,7 @@ methods:
       StorageClassificationMapping, currentIndex: number, array:
       StorageClassificationMapping[]) => U, U)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reduceRight_2
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reduceRight_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -853,7 +905,7 @@ methods:
         description: ''
   - name: reverse()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.reverse
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.reverse
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -864,12 +916,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
   - name: shift()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.shift
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.shift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -880,12 +932,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.slice
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.slice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a section of an array.
     remarks: ''
@@ -899,19 +951,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
   - name: >-
       some((value: StorageClassificationMapping, index: number, array:
       StorageClassificationMapping[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.some
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.some
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -921,24 +974,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: StorageClassificationMapping, index:
+        function some(predicate: (value: StorageClassificationMapping, index:
         number, array: StorageClassificationMapping[]) => unknown, thisArg?:
         any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageClassificationMapping, index: number, array:
             StorageClassificationMapping[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
@@ -946,7 +1004,7 @@ methods:
       sort(undefined | (a: StorageClassificationMapping, b:
       StorageClassificationMapping) => number)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.sort
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.sort
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Sorts an array.
     remarks: ''
@@ -962,15 +1020,26 @@ methods:
             undefined | (a: StorageClassificationMapping, b:
             StorageClassificationMapping) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, StorageClassificationMapping[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.splice_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.splice_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -994,19 +1063,19 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
   - name: 'splice(number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.splice
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.splice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -1029,12 +1098,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />[]
         description: ''
   - name: toLocaleString()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.toLocaleString
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.toLocaleString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -1049,7 +1118,7 @@ methods:
         description: ''
   - name: toString()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.toString
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.toString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -1062,7 +1131,7 @@ methods:
         description: ''
   - name: 'unshift(StorageClassificationMapping[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.unshift
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.unshift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -1074,7 +1143,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -1083,7 +1152,7 @@ methods:
         description: ''
   - name: values()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.StorageClassificationMappingCollection.values
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.values
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1094,10 +1163,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
           />&gt;
         description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.[Symbol.iterator]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMappingCollection.[Symbol.unscopables]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
 extends: >-
-  Array&lt;<xref
-  uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
+  <xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.OperationsDiscoveryCollection.Array"
+  />&lt;<xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.StorageClassificationMapping"
   />&gt;

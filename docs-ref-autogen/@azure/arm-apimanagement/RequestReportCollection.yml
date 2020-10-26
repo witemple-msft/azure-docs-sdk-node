@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RequestReportCollection
-uid: '@azure/arm-apimanagement.RequestReportCollection'
+uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection'
 package: '@azure/arm-apimanagement'
 summary: ''
 fullName: RequestReportCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-apimanagement.RequestReportCollection.Array'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.Array'
     package: '@azure/arm-apimanagement'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: count
-    uid: '@azure/arm-apimanagement.RequestReportCollection.count'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.count'
     package: '@azure/arm-apimanagement'
     summary: Total record count number across all pages.
     fullName: count
@@ -36,7 +36,7 @@ properties:
         type: undefined | number
         description: ''
   - name: length
-    uid: '@azure/arm-apimanagement.RequestReportCollection.length'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.length'
     package: '@azure/arm-apimanagement'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<RequestReportRecordContract>[])'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.concat'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.concat'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +64,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-apimanagement.RequestReportRecordContract" />&gt;[]
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.concat_1'
+  - name: >-
+      concat(RequestReportRecordContract |
+      ConcatArray<RequestReportRecordContract>[])
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.concat_1'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: RequestReportRecordContract |
+        ConcatArray<RequestReportRecordContract>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.copyWithin'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.copyWithin'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.entries'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.entries'
     package: '@azure/arm-apimanagement'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +156,7 @@ methods:
   - name: >-
       every((value: RequestReportRecordContract, index: number, array:
       RequestReportRecordContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.every'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.every_1'
     package: '@azure/arm-apimanagement'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +164,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: RequestReportRecordContract, index:
+        function every(predicate: (value: RequestReportRecordContract, index:
         number, array: RequestReportRecordContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RequestReportRecordContract, index: number, array:
             RequestReportRecordContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: RequestReportRecordContract, index: number, array:
+      RequestReportRecordContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.every'
+    package: '@azure/arm-apimanagement'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: RequestReportRecordContract, index:
+        number, array: RequestReportRecordContract[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: RequestReportRecordContract, index: number, array:
+            RequestReportRecordContract[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(RequestReportRecordContract, undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.fill'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.fill'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +242,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +267,7 @@ methods:
   - name: >-
       filter((value: RequestReportRecordContract, index: number, array:
       RequestReportRecordContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.filter_1'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.filter_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +277,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: RequestReportRecordContract, index:
+        function filter(predicate: (value: RequestReportRecordContract, index:
         number, array: RequestReportRecordContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RequestReportRecordContract, index: number, array:
             RequestReportRecordContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: RequestReportRecordContract, index: number, array:
-      RequestReportRecordContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.filter'
+      RequestReportRecordContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.filter'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,22 +312,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: RequestReportRecordContract,
-        index: number, array: RequestReportRecordContract[]) => boolean,
-        thisArg?: any)
+        function filter<S>(predicate: (value: RequestReportRecordContract,
+        index: number, array: RequestReportRecordContract[]) => value, thisArg?:
+        any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RequestReportRecordContract, index: number, array:
-            RequestReportRecordContract[]) =&gt; boolean
+            RequestReportRecordContract[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -272,7 +335,7 @@ methods:
   - name: >-
       find((value: RequestReportRecordContract, index: number, obj:
       RequestReportRecordContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.find_1'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.find_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -293,13 +356,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" /> |
-          undefined
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: RequestReportRecordContract, index: number,
-      obj: RequestReportRecordContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.find'
+      obj: RequestReportRecordContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.find'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +377,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         RequestReportRecordContract, index: number, obj:
-        RequestReportRecordContract[]) => boolean, thisArg?: any)
+        RequestReportRecordContract[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: RequestReportRecordContract, index: number, obj:
-            RequestReportRecordContract[]) =&gt; boolean
+            RequestReportRecordContract[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +405,7 @@ methods:
   - name: >-
       findIndex((value: RequestReportRecordContract, index: number, obj:
       RequestReportRecordContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.findIndex'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.findIndex'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -383,7 +447,7 @@ methods:
   - name: >-
       forEach((value: RequestReportRecordContract, index: number, array:
       RequestReportRecordContract[]) => void, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.forEach'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.forEach'
     package: '@azure/arm-apimanagement'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -408,7 +472,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(RequestReportRecordContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.includes'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.includes'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -422,7 +486,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -433,7 +500,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(RequestReportRecordContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.indexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.indexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -445,7 +512,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -456,7 +526,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.join'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.join'
     package: '@azure/arm-apimanagement'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -477,7 +547,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.keys'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.keys'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -489,7 +559,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(RequestReportRecordContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.lastIndexOf
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -501,7 +572,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -514,7 +588,7 @@ methods:
   - name: >-
       map<U>((value: RequestReportRecordContract, index: number, array:
       RequestReportRecordContract[]) => U, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.map'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.map'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -544,7 +618,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.pop'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.pop'
     package: '@azure/arm-apimanagement'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -554,11 +628,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" /> |
-          undefined
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          /> | undefined
         description: ''
   - name: 'push(RequestReportRecordContract[])'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.push'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.push'
     package: '@azure/arm-apimanagement'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -569,7 +644,8 @@ methods:
       parameters:
         - id: items
           type: >-
-            <xref uid="@azure/arm-apimanagement.RequestReportRecordContract"
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
             />[]
           description: |
             New elements of the Array.
@@ -580,7 +656,7 @@ methods:
       reduce((previousValue: RequestReportRecordContract, currentValue:
       RequestReportRecordContract, currentIndex: number, array:
       RequestReportRecordContract[]) => RequestReportRecordContract)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reduce'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.reduce'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -605,14 +681,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />
         description: ''
   - name: >-
       reduce((previousValue: RequestReportRecordContract, currentValue:
       RequestReportRecordContract, currentIndex: number, array:
       RequestReportRecordContract[]) => RequestReportRecordContract,
       RequestReportRecordContract)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reduce_1'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.reduce_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -632,15 +711,21 @@ methods:
             RequestReportRecordContract[]) =&gt; RequestReportRecordContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: RequestReportRecordContract,
       currentIndex: number, array: RequestReportRecordContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reduce_2'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.reduce_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -676,7 +761,8 @@ methods:
       reduceRight((previousValue: RequestReportRecordContract, currentValue:
       RequestReportRecordContract, currentIndex: number, array:
       RequestReportRecordContract[]) => RequestReportRecordContract)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reduceRight'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.reduceRight
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -703,14 +789,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: RequestReportRecordContract, currentValue:
       RequestReportRecordContract, currentIndex: number, array:
       RequestReportRecordContract[]) => RequestReportRecordContract,
       RequestReportRecordContract)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.reduceRight_1
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -730,16 +820,23 @@ methods:
             RequestReportRecordContract[]) =&gt; RequestReportRecordContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       RequestReportRecordContract, currentIndex: number, array:
       RequestReportRecordContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.reduceRight_2
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -773,7 +870,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.reverse'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.reverse'
     package: '@azure/arm-apimanagement'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -782,10 +879,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.shift'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.shift'
     package: '@azure/arm-apimanagement'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -795,11 +895,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.RequestReportRecordContract" /> |
-          undefined
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.slice'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.slice'
     package: '@azure/arm-apimanagement'
     summary: Returns a section of an array.
     remarks: ''
@@ -813,15 +914,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
   - name: >-
       some((value: RequestReportRecordContract, index: number, array:
       RequestReportRecordContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.some'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.some'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -831,30 +936,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: RequestReportRecordContract, index:
+        function some(predicate: (value: RequestReportRecordContract, index:
         number, array: RequestReportRecordContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RequestReportRecordContract, index: number, array:
             RequestReportRecordContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: RequestReportRecordContract, b:
       RequestReportRecordContract) => number)
-    uid: '@azure/arm-apimanagement.RequestReportCollection.sort'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.sort'
     package: '@azure/arm-apimanagement'
     summary: Sorts an array.
     remarks: ''
@@ -870,14 +980,25 @@ methods:
             undefined | (a: RequestReportRecordContract, b:
             RequestReportRecordContract) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, RequestReportRecordContract[])'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.splice_1'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.splice_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,15 +1021,19 @@ methods:
           description: The number of elements to remove.
         - id: items
           type: >-
-            <xref uid="@azure/arm-apimanagement.RequestReportRecordContract"
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.splice'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.splice'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -929,10 +1054,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.RequestReportRecordContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.toLocaleString'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.toLocaleString
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -946,7 +1075,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.toString'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.toString'
     package: '@azure/arm-apimanagement'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -958,7 +1087,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(RequestReportRecordContract[])'
-    uid: '@azure/arm-apimanagement.RequestReportCollection.unshift'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.unshift'
     package: '@azure/arm-apimanagement'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -969,7 +1098,8 @@ methods:
       parameters:
         - id: items
           type: >-
-            <xref uid="@azure/arm-apimanagement.RequestReportRecordContract"
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -977,7 +1107,7 @@ methods:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-apimanagement.RequestReportCollection.values'
+    uid: '@azure/arm-apimanagement.models.index.d.RequestReportCollection.values'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -988,8 +1118,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-apimanagement.RequestReportRecordContract" />&gt;
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />&gt;
+        description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.[Symbol.iterator]
+    package: '@azure/arm-apimanagement'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.RequestReportCollection.[Symbol.unscopables]
+    package: '@azure/arm-apimanagement'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
         description: ''
 extends: >-
-  Array&lt;<xref uid="@azure/arm-apimanagement.RequestReportRecordContract"
+  <xref uid="@azure/arm-apimanagement.models.index.d.ApiCollection.Array"
+  />&lt;<xref
+  uid="@azure/arm-apimanagement.models.index.d.RequestReportRecordContract"
   />&gt;

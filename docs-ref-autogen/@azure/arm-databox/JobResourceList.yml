@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: JobResourceList
-uid: '@azure/arm-databox.JobResourceList'
+uid: '@azure/arm-databox.models.index.d.JobResourceList'
 package: '@azure/arm-databox'
 summary: ''
 fullName: JobResourceList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-databox.JobResourceList.Array'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.Array'
     package: '@azure/arm-databox'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-databox.JobResourceList.length'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.length'
     package: '@azure/arm-databox'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-databox.JobResourceList.nextLink'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.nextLink'
     package: '@azure/arm-databox'
     summary: Link for the next set of job resources.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<JobResource>[])'
-    uid: '@azure/arm-databox.JobResourceList.concat'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.concat'
     package: '@azure/arm-databox'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<JobResource>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-databox.JobResource" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-databox.models.index.d.JobResource" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-databox.JobResourceList.concat_1'
+  - name: 'concat(JobResource | ConcatArray<JobResource>[])'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.concat_1'
     package: '@azure/arm-databox'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: JobResource | ConcatArray<JobResource>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-databox.models.index.d.JobResource" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-databox.models.index.d.JobResource" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.copyWithin'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.copyWithin'
     package: '@azure/arm-databox'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-databox.JobResourceList.entries'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.entries'
     package: '@azure/arm-databox'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +143,7 @@ methods:
   - name: >-
       every((value: JobResource, index: number, array: JobResource[]) =>
       unknown, any)
-    uid: '@azure/arm-databox.JobResourceList.every'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.every_1'
     package: '@azure/arm-databox'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: JobResource, index: number, array:
+        function every(predicate: (value: JobResource, index: number, array:
         JobResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobResource, index: number, array: JobResource[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: JobResource, index: number, array: JobResource[]) =>
+      value, any)
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.every'
+    package: '@azure/arm-databox'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: JobResource, index: number, array:
+        JobResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: JobResource, index: number, array: JobResource[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(JobResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.fill'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.fill'
     package: '@azure/arm-databox'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-databox.JobResource" />
+          type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -203,7 +251,7 @@ methods:
   - name: >-
       filter((value: JobResource, index: number, array: JobResource[]) =>
       unknown, any)
-    uid: '@azure/arm-databox.JobResourceList.filter_1'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.filter_1'
     package: '@azure/arm-databox'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -213,30 +261,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: JobResource, index: number, array:
+        function filter(predicate: (value: JobResource, index: number, array:
         JobResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobResource, index: number, array: JobResource[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
   - name: >-
       filter<S>((value: JobResource, index: number, array: JobResource[]) =>
-      boolean, any)
-    uid: '@azure/arm-databox.JobResourceList.filter'
+      value, any)
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.filter'
     package: '@azure/arm-databox'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -246,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: JobResource, index: number,
-        array: JobResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: JobResource, index: number, array:
+        JobResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobResource, index: number, array: JobResource[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -269,7 +315,7 @@ methods:
   - name: >-
       find((value: JobResource, index: number, obj: JobResource[]) => unknown,
       any)
-    uid: '@azure/arm-databox.JobResourceList.find_1'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.find_1'
     package: '@azure/arm-databox'
     summary: ''
     remarks: ''
@@ -289,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-databox.models.index.d.JobResource" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: JobResource, index: number, obj:
-      JobResource[]) => boolean, any)
-    uid: '@azure/arm-databox.JobResourceList.find'
+      JobResource[]) => value, any)
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.find'
     package: '@azure/arm-databox'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -307,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: JobResource, index:
-        number, obj: JobResource[]) => boolean, thisArg?: any)
+        number, obj: JobResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: JobResource, index: number, obj: JobResource[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -335,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: JobResource, index: number, obj: JobResource[]) =>
       unknown, any)
-    uid: '@azure/arm-databox.JobResourceList.findIndex'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.findIndex'
     package: '@azure/arm-databox'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +424,7 @@ methods:
   - name: >-
       forEach((value: JobResource, index: number, array: JobResource[]) => void,
       any)
-    uid: '@azure/arm-databox.JobResourceList.forEach'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.forEach'
     package: '@azure/arm-databox'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -399,7 +447,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(JobResource, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.includes'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.includes'
     package: '@azure/arm-databox'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -413,7 +461,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-databox.JobResource" />
+          type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -424,7 +472,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(JobResource, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.indexOf'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.indexOf'
     package: '@azure/arm-databox'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -436,7 +484,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-databox.JobResource" />
+          type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -447,7 +495,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-databox.JobResourceList.join'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.join'
     package: '@azure/arm-databox'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -468,7 +516,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-databox.JobResourceList.keys'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.keys'
     package: '@azure/arm-databox'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -480,7 +528,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(JobResource, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.lastIndexOf'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.lastIndexOf'
     package: '@azure/arm-databox'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -492,7 +540,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-databox.JobResource" />
+          type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -505,7 +553,7 @@ methods:
   - name: >-
       map<U>((value: JobResource, index: number, array: JobResource[]) => U,
       any)
-    uid: '@azure/arm-databox.JobResourceList.map'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.map'
     package: '@azure/arm-databox'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -533,7 +581,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-databox.JobResourceList.pop'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.pop'
     package: '@azure/arm-databox'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -542,10 +590,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-databox.models.index.d.JobResource" /> |
+          undefined
         description: ''
   - name: 'push(JobResource[])'
-    uid: '@azure/arm-databox.JobResourceList.push'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.push'
     package: '@azure/arm-databox'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -555,7 +605,7 @@ methods:
       content: 'function push(items: JobResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+          type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
           description: |
             New elements of the Array.
       return:
@@ -564,7 +614,7 @@ methods:
   - name: >-
       reduce((previousValue: JobResource, currentValue: JobResource,
       currentIndex: number, array: JobResource[]) => JobResource)
-    uid: '@azure/arm-databox.JobResourceList.reduce'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reduce'
     package: '@azure/arm-databox'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -587,12 +637,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" />
+        type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
         description: ''
   - name: >-
       reduce((previousValue: JobResource, currentValue: JobResource,
       currentIndex: number, array: JobResource[]) => JobResource, JobResource)
-    uid: '@azure/arm-databox.JobResourceList.reduce_1'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reduce_1'
     package: '@azure/arm-databox'
     summary: ''
     remarks: ''
@@ -610,15 +660,15 @@ methods:
             currentIndex: number, array: JobResource[]) =&gt; JobResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-databox.JobResource" />
+          type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" />
+        type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: JobResource, currentIndex:
       number, array: JobResource[]) => U, U)
-    uid: '@azure/arm-databox.JobResourceList.reduce_2'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reduce_2'
     package: '@azure/arm-databox'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -653,7 +703,7 @@ methods:
   - name: >-
       reduceRight((previousValue: JobResource, currentValue: JobResource,
       currentIndex: number, array: JobResource[]) => JobResource)
-    uid: '@azure/arm-databox.JobResourceList.reduceRight'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reduceRight'
     package: '@azure/arm-databox'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -678,12 +728,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" />
+        type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
         description: ''
   - name: >-
       reduceRight((previousValue: JobResource, currentValue: JobResource,
       currentIndex: number, array: JobResource[]) => JobResource, JobResource)
-    uid: '@azure/arm-databox.JobResourceList.reduceRight_1'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reduceRight_1'
     package: '@azure/arm-databox'
     summary: ''
     remarks: ''
@@ -701,15 +751,15 @@ methods:
             currentIndex: number, array: JobResource[]) =&gt; JobResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-databox.JobResource" />
+          type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" />
+        type: <xref uid="@azure/arm-databox.models.index.d.JobResource" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: JobResource, currentIndex:
       number, array: JobResource[]) => U, U)
-    uid: '@azure/arm-databox.JobResourceList.reduceRight_2'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reduceRight_2'
     package: '@azure/arm-databox'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -743,7 +793,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-databox.JobResourceList.reverse'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.reverse'
     package: '@azure/arm-databox'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -752,10 +802,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-databox.JobResourceList.shift'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.shift'
     package: '@azure/arm-databox'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -764,10 +814,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-databox.JobResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-databox.models.index.d.JobResource" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.slice'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.slice'
     package: '@azure/arm-databox'
     summary: Returns a section of an array.
     remarks: ''
@@ -781,15 +833,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
   - name: >-
       some((value: JobResource, index: number, array: JobResource[]) => unknown,
       any)
-    uid: '@azure/arm-databox.JobResourceList.some'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.some'
     package: '@azure/arm-databox'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -799,28 +852,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: JobResource, index: number, array:
+        function some(predicate: (value: JobResource, index: number, array:
         JobResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobResource, index: number, array: JobResource[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: JobResource, b: JobResource) => number)'
-    uid: '@azure/arm-databox.JobResourceList.sort'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.sort'
     package: '@azure/arm-databox'
     summary: Sorts an array.
     remarks: ''
@@ -834,14 +892,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: JobResource, b: JobResource) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, JobResource[])'
-    uid: '@azure/arm-databox.JobResourceList.splice_1'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.splice_1'
     package: '@azure/arm-databox'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -863,14 +932,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+          type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-databox.JobResourceList.splice'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.splice'
     package: '@azure/arm-databox'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -891,10 +960,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+        type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-databox.JobResourceList.toLocaleString'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.toLocaleString'
     package: '@azure/arm-databox'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -908,7 +977,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-databox.JobResourceList.toString'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.toString'
     package: '@azure/arm-databox'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -920,7 +989,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(JobResource[])'
-    uid: '@azure/arm-databox.JobResourceList.unshift'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.unshift'
     package: '@azure/arm-databox'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -930,14 +999,14 @@ methods:
       content: 'function unshift(items: JobResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-databox.JobResource" />[]'
+          type: '<xref uid="@azure/arm-databox.models.index.d.JobResource" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-databox.JobResourceList.values'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.values'
     package: '@azure/arm-databox'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -946,6 +1015,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-databox.JobResource" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-databox.models.index.d.JobResource" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-databox.JobResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.[Symbol.iterator]'
+    package: '@azure/arm-databox'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-databox.models.index.d.JobResource" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-databox.models.index.d.JobResourceList.[Symbol.unscopables]'
+    package: '@azure/arm-databox'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-databox.models.index.d.OperationList.Array" />&lt;<xref
+  uid="@azure/arm-databox.models.index.d.JobResource" />&gt;

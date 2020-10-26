@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ScriptActionsList
-uid: '@azure/arm-hdinsight.ScriptActionsList'
+uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList'
 package: '@azure/arm-hdinsight'
 summary: ''
 fullName: ScriptActionsList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-hdinsight.ScriptActionsList.Array'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.Array'
     package: '@azure/arm-hdinsight'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-hdinsight.ScriptActionsList.length'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.length'
     package: '@azure/arm-hdinsight'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-hdinsight.ScriptActionsList.nextLink'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.nextLink'
     package: '@azure/arm-hdinsight'
     summary: >-
       The link (url) to the next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<RuntimeScriptActionDetail>[])'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.concat'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.concat'
     package: '@azure/arm-hdinsight'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +68,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />&gt;[]
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.concat_1'
+  - name: >-
+      concat(RuntimeScriptActionDetail |
+      ConcatArray<RuntimeScriptActionDetail>[])
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.concat_1'
     package: '@azure/arm-hdinsight'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: RuntimeScriptActionDetail |
+        ConcatArray<RuntimeScriptActionDetail>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.copyWithin'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.copyWithin'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +146,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.entries'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.entries'
     package: '@azure/arm-hdinsight'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +160,7 @@ methods:
   - name: >-
       every((value: RuntimeScriptActionDetail, index: number, array:
       RuntimeScriptActionDetail[]) => unknown, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.every'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.every_1'
     package: '@azure/arm-hdinsight'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +168,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: RuntimeScriptActionDetail, index:
+        function every(predicate: (value: RuntimeScriptActionDetail, index:
         number, array: RuntimeScriptActionDetail[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RuntimeScriptActionDetail, index: number, array:
             RuntimeScriptActionDetail[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: RuntimeScriptActionDetail, index: number, array:
+      RuntimeScriptActionDetail[]) => value, any)
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.every'
+    package: '@azure/arm-hdinsight'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: RuntimeScriptActionDetail, index:
+        number, array: RuntimeScriptActionDetail[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: RuntimeScriptActionDetail, index: number, array:
+            RuntimeScriptActionDetail[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(RuntimeScriptActionDetail, undefined | number, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.fill'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.fill'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +246,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +271,7 @@ methods:
   - name: >-
       filter((value: RuntimeScriptActionDetail, index: number, array:
       RuntimeScriptActionDetail[]) => unknown, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.filter_1'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.filter_1'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +281,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: RuntimeScriptActionDetail, index:
+        function filter(predicate: (value: RuntimeScriptActionDetail, index:
         number, array: RuntimeScriptActionDetail[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RuntimeScriptActionDetail, index: number, array:
             RuntimeScriptActionDetail[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: RuntimeScriptActionDetail, index: number, array:
-      RuntimeScriptActionDetail[]) => boolean, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.filter'
+      RuntimeScriptActionDetail[]) => value, any)
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.filter'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +316,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: RuntimeScriptActionDetail, index:
-        number, array: RuntimeScriptActionDetail[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: RuntimeScriptActionDetail, index:
+        number, array: RuntimeScriptActionDetail[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RuntimeScriptActionDetail, index: number, array:
-            RuntimeScriptActionDetail[]) =&gt; boolean
+            RuntimeScriptActionDetail[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +338,7 @@ methods:
   - name: >-
       find((value: RuntimeScriptActionDetail, index: number, obj:
       RuntimeScriptActionDetail[]) => unknown, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.find_1'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.find_1'
     package: '@azure/arm-hdinsight'
     summary: ''
     remarks: ''
@@ -296,13 +359,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" /> |
-          undefined
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: RuntimeScriptActionDetail, index: number, obj:
-      RuntimeScriptActionDetail[]) => boolean, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.find'
+      RuntimeScriptActionDetail[]) => value, any)
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.find'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -316,12 +380,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         RuntimeScriptActionDetail, index: number, obj:
-        RuntimeScriptActionDetail[]) => boolean, thisArg?: any)
+        RuntimeScriptActionDetail[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: RuntimeScriptActionDetail, index: number, obj:
-            RuntimeScriptActionDetail[]) =&gt; boolean
+            RuntimeScriptActionDetail[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -344,7 +408,7 @@ methods:
   - name: >-
       findIndex((value: RuntimeScriptActionDetail, index: number, obj:
       RuntimeScriptActionDetail[]) => unknown, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.findIndex'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.findIndex'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -385,7 +449,7 @@ methods:
   - name: >-
       forEach((value: RuntimeScriptActionDetail, index: number, array:
       RuntimeScriptActionDetail[]) => void, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.forEach'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.forEach'
     package: '@azure/arm-hdinsight'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -410,7 +474,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(RuntimeScriptActionDetail, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.includes'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.includes'
     package: '@azure/arm-hdinsight'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -424,7 +488,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +502,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(RuntimeScriptActionDetail, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.indexOf'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.indexOf'
     package: '@azure/arm-hdinsight'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -447,7 +514,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +528,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.join'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.join'
     package: '@azure/arm-hdinsight'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -479,7 +549,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.keys'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.keys'
     package: '@azure/arm-hdinsight'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -491,7 +561,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(RuntimeScriptActionDetail, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.lastIndexOf'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.lastIndexOf'
     package: '@azure/arm-hdinsight'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -503,7 +573,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -516,7 +589,7 @@ methods:
   - name: >-
       map<U>((value: RuntimeScriptActionDetail, index: number, array:
       RuntimeScriptActionDetail[]) => U, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.map'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.map'
     package: '@azure/arm-hdinsight'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -546,7 +619,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.pop'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.pop'
     package: '@azure/arm-hdinsight'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -556,11 +629,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" /> |
-          undefined
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
+          | undefined
         description: ''
   - name: 'push(RuntimeScriptActionDetail[])'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.push'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.push'
     package: '@azure/arm-hdinsight'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -570,7 +644,10 @@ methods:
       content: 'function push(items: RuntimeScriptActionDetail[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -580,7 +657,7 @@ methods:
       reduce((previousValue: RuntimeScriptActionDetail, currentValue:
       RuntimeScriptActionDetail, currentIndex: number, array:
       RuntimeScriptActionDetail[]) => RuntimeScriptActionDetail)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reduce'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reduce'
     package: '@azure/arm-hdinsight'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -605,14 +682,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
         description: ''
   - name: >-
       reduce((previousValue: RuntimeScriptActionDetail, currentValue:
       RuntimeScriptActionDetail, currentIndex: number, array:
       RuntimeScriptActionDetail[]) => RuntimeScriptActionDetail,
       RuntimeScriptActionDetail)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reduce_1'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reduce_1'
     package: '@azure/arm-hdinsight'
     summary: ''
     remarks: ''
@@ -632,15 +711,20 @@ methods:
             RuntimeScriptActionDetail[]) =&gt; RuntimeScriptActionDetail
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: RuntimeScriptActionDetail,
       currentIndex: number, array: RuntimeScriptActionDetail[]) => U, U)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reduce_2'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reduce_2'
     package: '@azure/arm-hdinsight'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -676,7 +760,7 @@ methods:
       reduceRight((previousValue: RuntimeScriptActionDetail, currentValue:
       RuntimeScriptActionDetail, currentIndex: number, array:
       RuntimeScriptActionDetail[]) => RuntimeScriptActionDetail)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reduceRight'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reduceRight'
     package: '@azure/arm-hdinsight'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -703,14 +787,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
         description: ''
   - name: >-
       reduceRight((previousValue: RuntimeScriptActionDetail, currentValue:
       RuntimeScriptActionDetail, currentIndex: number, array:
       RuntimeScriptActionDetail[]) => RuntimeScriptActionDetail,
       RuntimeScriptActionDetail)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reduceRight_1'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reduceRight_1'
     package: '@azure/arm-hdinsight'
     summary: ''
     remarks: ''
@@ -730,15 +816,20 @@ methods:
             RuntimeScriptActionDetail[]) =&gt; RuntimeScriptActionDetail
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: RuntimeScriptActionDetail,
       currentIndex: number, array: RuntimeScriptActionDetail[]) => U, U)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reduceRight_2'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reduceRight_2'
     package: '@azure/arm-hdinsight'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -772,7 +863,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.reverse'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.reverse'
     package: '@azure/arm-hdinsight'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -781,10 +872,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.shift'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.shift'
     package: '@azure/arm-hdinsight'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -794,11 +888,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" /> |
-          undefined
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.slice'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.slice'
     package: '@azure/arm-hdinsight'
     summary: Returns a section of an array.
     remarks: ''
@@ -812,15 +907,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
   - name: >-
       some((value: RuntimeScriptActionDetail, index: number, array:
       RuntimeScriptActionDetail[]) => unknown, any)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.some'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.some'
     package: '@azure/arm-hdinsight'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -830,30 +929,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: RuntimeScriptActionDetail, index:
+        function some(predicate: (value: RuntimeScriptActionDetail, index:
         number, array: RuntimeScriptActionDetail[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RuntimeScriptActionDetail, index: number, array:
             RuntimeScriptActionDetail[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: RuntimeScriptActionDetail, b:
       RuntimeScriptActionDetail) => number)
-    uid: '@azure/arm-hdinsight.ScriptActionsList.sort'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.sort'
     package: '@azure/arm-hdinsight'
     summary: Sorts an array.
     remarks: ''
@@ -869,14 +973,25 @@ methods:
             undefined | (a: RuntimeScriptActionDetail, b:
             RuntimeScriptActionDetail) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, RuntimeScriptActionDetail[])'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.splice_1'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.splice_1'
     package: '@azure/arm-hdinsight'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -898,14 +1013,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.splice'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.splice'
     package: '@azure/arm-hdinsight'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -926,10 +1047,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.toLocaleString'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.toLocaleString'
     package: '@azure/arm-hdinsight'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -943,7 +1067,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.toString'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.toString'
     package: '@azure/arm-hdinsight'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -955,7 +1079,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(RuntimeScriptActionDetail[])'
-    uid: '@azure/arm-hdinsight.ScriptActionsList.unshift'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.unshift'
     package: '@azure/arm-hdinsight'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -965,14 +1089,17 @@ methods:
       content: 'function unshift(items: RuntimeScriptActionDetail[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-hdinsight.ScriptActionsList.values'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.values'
     package: '@azure/arm-hdinsight'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -983,6 +1110,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />&gt;
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-hdinsight.RuntimeScriptActionDetail" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.[Symbol.iterator]'
+    package: '@azure/arm-hdinsight'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-hdinsight.models.index.d.ScriptActionsList.[Symbol.unscopables]'
+    package: '@azure/arm-hdinsight'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-hdinsight.models.index.d.ClusterListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-hdinsight.models.index.d.RuntimeScriptActionDetail" />&gt;

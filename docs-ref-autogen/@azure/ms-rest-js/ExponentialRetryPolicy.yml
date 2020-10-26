@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ExponentialRetryPolicy
-uid: '@azure/ms-rest-js.ExponentialRetryPolicy'
+uid: '@azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy'
 package: '@azure/ms-rest-js'
 summary: ''
 fullName: ExponentialRetryPolicy
@@ -12,7 +12,8 @@ constructors:
   - name: >-
       ExponentialRetryPolicy(RequestPolicy, RequestPolicyOptionsLike, number,
       number, number, number)
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.constructor'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.constructor
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -25,10 +26,15 @@ constructors:
         minRetryInterval?: number, maxRetryInterval?: number)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/ms-rest-js.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicy"
+            />
           description: The next RequestPolicy in the pipeline chain.
         - id: options
-          type: <xref uid="@azure/ms-rest-js.RequestPolicyOptionsLike" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicyOptionsLike"
+            />
           description: The options for this RequestPolicy.
         - id: retryCount
           type: number
@@ -44,7 +50,8 @@ constructors:
           description: ''
 properties:
   - name: maxRetryInterval
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.maxRetryInterval'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.maxRetryInterval
     package: '@azure/ms-rest-js'
     summary: The maximum retry interval in milliseconds.
     fullName: maxRetryInterval
@@ -57,7 +64,8 @@ properties:
         type: number
         description: ''
   - name: minRetryInterval
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.minRetryInterval'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.minRetryInterval
     package: '@azure/ms-rest-js'
     summary: The minimum retry interval in milliseconds.
     fullName: minRetryInterval
@@ -70,7 +78,8 @@ properties:
         type: number
         description: ''
   - name: retryCount
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.retryCount'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.retryCount
     package: '@azure/ms-rest-js'
     summary: The client retry count.
     fullName: retryCount
@@ -83,7 +92,8 @@ properties:
         type: number
         description: ''
   - name: retryInterval
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.retryInterval'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.retryInterval
     package: '@azure/ms-rest-js'
     summary: The client retry interval in milliseconds.
     fullName: retryInterval
@@ -97,7 +107,8 @@ properties:
         description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.log'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.log
     package: '@azure/ms-rest-js'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -112,14 +123,18 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.sendRequest'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.sendRequest
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -129,13 +144,17 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+          type: <xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/ms-rest-js.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/ms-rest-js.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/ms-rest-js.ExponentialRetryPolicy.shouldLog'
+    uid: >-
+      @azure/ms-rest-js.policies.exponentialRetryPolicy.d.ExponentialRetryPolicy.shouldLog
     package: '@azure/ms-rest-js'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -145,9 +164,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/ms-rest-js.BaseRequestPolicy" />
+extends: <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.BaseRequestPolicy" />

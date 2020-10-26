@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LinkedServiceListResponse
-uid: '@azure/arm-datafactory.LinkedServiceListResponse'
+uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse'
 package: '@azure/arm-datafactory'
 summary: ''
 fullName: LinkedServiceListResponse
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.Array'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.Array'
     package: '@azure/arm-datafactory'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.length'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.length'
     package: '@azure/arm-datafactory'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.nextLink'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.nextLink'
     package: '@azure/arm-datafactory'
     summary: 'The link to the next page of results, if any remaining results exist.'
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<LinkedServiceResource>[])'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.concat'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.concat'
     package: '@azure/arm-datafactory'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +64,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-datafactory.LinkedServiceResource" />&gt;[]
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.concat_1'
+  - name: 'concat(LinkedServiceResource | ConcatArray<LinkedServiceResource>[])'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.concat_1'
     package: '@azure/arm-datafactory'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: LinkedServiceResource |
+        ConcatArray<LinkedServiceResource>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.copyWithin'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.copyWithin'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.entries'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.entries'
     package: '@azure/arm-datafactory'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: LinkedServiceResource, index: number, array:
       LinkedServiceResource[]) => unknown, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.every'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.every_1'
     package: '@azure/arm-datafactory'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: LinkedServiceResource, index: number,
+        function every(predicate: (value: LinkedServiceResource, index: number,
         array: LinkedServiceResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LinkedServiceResource, index: number, array:
             LinkedServiceResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: LinkedServiceResource, index: number, array:
+      LinkedServiceResource[]) => value, any)
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.every'
+    package: '@azure/arm-datafactory'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: LinkedServiceResource, index:
+        number, array: LinkedServiceResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: LinkedServiceResource, index: number, array:
+            LinkedServiceResource[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(LinkedServiceResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.fill'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.fill'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: LinkedServiceResource, index: number, array:
       LinkedServiceResource[]) => unknown, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.filter_1'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.filter_1'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: LinkedServiceResource, index:
-        number, array: LinkedServiceResource[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: LinkedServiceResource, index: number,
+        array: LinkedServiceResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LinkedServiceResource, index: number, array:
             LinkedServiceResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
   - name: >-
       filter<S>((value: LinkedServiceResource, index: number, array:
-      LinkedServiceResource[]) => boolean, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.filter'
+      LinkedServiceResource[]) => value, any)
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.filter'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: LinkedServiceResource, index:
-        number, array: LinkedServiceResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: LinkedServiceResource, index:
+        number, array: LinkedServiceResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LinkedServiceResource, index: number, array:
-            LinkedServiceResource[]) =&gt; boolean
+            LinkedServiceResource[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: LinkedServiceResource, index: number, obj:
       LinkedServiceResource[]) => unknown, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.find_1'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.find_1'
     package: '@azure/arm-datafactory'
     summary: ''
     remarks: ''
@@ -292,13 +349,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-datafactory.LinkedServiceResource" /> |
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" /> |
           undefined
         description: ''
   - name: >-
       find<S>((this: void, value: LinkedServiceResource, index: number, obj:
-      LinkedServiceResource[]) => boolean, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.find'
+      LinkedServiceResource[]) => value, any)
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.find'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +369,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: LinkedServiceResource,
-        index: number, obj: LinkedServiceResource[]) => boolean, thisArg?: any)
+        index: number, obj: LinkedServiceResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: LinkedServiceResource, index: number, obj:
-            LinkedServiceResource[]) =&gt; boolean
+            LinkedServiceResource[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +397,7 @@ methods:
   - name: >-
       findIndex((value: LinkedServiceResource, index: number, obj:
       LinkedServiceResource[]) => unknown, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.findIndex'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.findIndex'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +438,7 @@ methods:
   - name: >-
       forEach((value: LinkedServiceResource, index: number, array:
       LinkedServiceResource[]) => void, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.forEach'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.forEach'
     package: '@azure/arm-datafactory'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +463,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(LinkedServiceResource, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.includes'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.includes'
     package: '@azure/arm-datafactory'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +477,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +490,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(LinkedServiceResource, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.indexOf'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.indexOf'
     package: '@azure/arm-datafactory'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +502,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +515,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.join'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.join'
     package: '@azure/arm-datafactory'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +536,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.keys'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.keys'
     package: '@azure/arm-datafactory'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +548,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(LinkedServiceResource, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.lastIndexOf'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.lastIndexOf
     package: '@azure/arm-datafactory'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +561,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +576,7 @@ methods:
   - name: >-
       map<U>((value: LinkedServiceResource, index: number, array:
       LinkedServiceResource[]) => U, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.map'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.map'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +606,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.pop'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.pop'
     package: '@azure/arm-datafactory'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -551,11 +616,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-datafactory.LinkedServiceResource" /> |
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" /> |
           undefined
         description: ''
   - name: 'push(LinkedServiceResource[])'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.push'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.push'
     package: '@azure/arm-datafactory'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +631,10 @@ methods:
       content: 'function push(items: LinkedServiceResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +644,7 @@ methods:
       reduce((previousValue: LinkedServiceResource, currentValue:
       LinkedServiceResource, currentIndex: number, array:
       LinkedServiceResource[]) => LinkedServiceResource)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reduce'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reduce'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +669,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
         description: ''
   - name: >-
       reduce((previousValue: LinkedServiceResource, currentValue:
       LinkedServiceResource, currentIndex: number, array:
       LinkedServiceResource[]) => LinkedServiceResource, LinkedServiceResource)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reduce_1'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reduce_1'
     package: '@azure/arm-datafactory'
     summary: ''
     remarks: ''
@@ -626,15 +697,19 @@ methods:
             LinkedServiceResource[]) =&gt; LinkedServiceResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: LinkedServiceResource,
       currentIndex: number, array: LinkedServiceResource[]) => U, U)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reduce_2'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reduce_2'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +745,8 @@ methods:
       reduceRight((previousValue: LinkedServiceResource, currentValue:
       LinkedServiceResource, currentIndex: number, array:
       LinkedServiceResource[]) => LinkedServiceResource)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reduceRight'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reduceRight
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +772,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
         description: ''
   - name: >-
       reduceRight((previousValue: LinkedServiceResource, currentValue:
       LinkedServiceResource, currentIndex: number, array:
       LinkedServiceResource[]) => LinkedServiceResource, LinkedServiceResource)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reduceRight_1'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reduceRight_1
     package: '@azure/arm-datafactory'
     summary: ''
     remarks: ''
@@ -722,15 +801,20 @@ methods:
             LinkedServiceResource[]) =&gt; LinkedServiceResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-datafactory.LinkedServiceResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: LinkedServiceResource,
       currentIndex: number, array: LinkedServiceResource[]) => U, U)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reduceRight_2'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reduceRight_2
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +848,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.reverse'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.reverse'
     package: '@azure/arm-datafactory'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +857,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.shift'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.shift'
     package: '@azure/arm-datafactory'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -786,11 +872,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-datafactory.LinkedServiceResource" /> |
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" /> |
           undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.slice'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.slice'
     package: '@azure/arm-datafactory'
     summary: Returns a section of an array.
     remarks: ''
@@ -804,15 +891,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
   - name: >-
       some((value: LinkedServiceResource, index: number, array:
       LinkedServiceResource[]) => unknown, any)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.some'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.some'
     package: '@azure/arm-datafactory'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -822,30 +912,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: LinkedServiceResource, index: number,
+        function some(predicate: (value: LinkedServiceResource, index: number,
         array: LinkedServiceResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LinkedServiceResource, index: number, array:
             LinkedServiceResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: LinkedServiceResource, b: LinkedServiceResource) =>
       number)
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.sort'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.sort'
     package: '@azure/arm-datafactory'
     summary: Sorts an array.
     remarks: ''
@@ -861,14 +956,25 @@ methods:
             undefined | (a: LinkedServiceResource, b: LinkedServiceResource)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, LinkedServiceResource[])'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.splice_1'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.splice_1'
     package: '@azure/arm-datafactory'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -890,14 +996,19 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.splice'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.splice'
     package: '@azure/arm-datafactory'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -918,10 +1029,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource" />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.toLocaleString'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.toLocaleString
     package: '@azure/arm-datafactory'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -935,7 +1049,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.toString'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.toString'
     package: '@azure/arm-datafactory'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -947,7 +1061,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(LinkedServiceResource[])'
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.unshift'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.unshift'
     package: '@azure/arm-datafactory'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -957,14 +1071,17 @@ methods:
       content: 'function unshift(items: LinkedServiceResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-datafactory.LinkedServiceResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-datafactory.LinkedServiceListResponse.values'
+    uid: '@azure/arm-datafactory.models.index.d.LinkedServiceListResponse.values'
     package: '@azure/arm-datafactory'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -975,6 +1092,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-datafactory.LinkedServiceResource" />&gt;
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-datafactory.LinkedServiceResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.[Symbol.iterator]
+    package: '@azure/arm-datafactory'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.LinkedServiceListResponse.[Symbol.unscopables]
+    package: '@azure/arm-datafactory'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-datafactory.models.index.d.OperationListResponse.Array"
+  />&lt;<xref uid="@azure/arm-datafactory.models.index.d.LinkedServiceResource"
+  />&gt;

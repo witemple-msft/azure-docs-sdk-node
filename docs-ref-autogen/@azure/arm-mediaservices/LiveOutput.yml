@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LiveOutput
-uid: '@azure/arm-mediaservices.LiveOutput'
+uid: '@azure/arm-mediaservices.models.index.d.LiveOutput'
 package: '@azure/arm-mediaservices'
 summary: The Live Output.
 fullName: LiveOutput
@@ -10,13 +10,17 @@ isDeprecated: false
 type: interface
 properties:
   - name: archiveWindowLength
-    uid: '@azure/arm-mediaservices.LiveOutput.archiveWindowLength'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.archiveWindowLength'
     package: '@azure/arm-mediaservices'
     summary: >-
-      ISO 8601 timespan duration of the archive window length. This is duration
-      that customer want
+      ISO 8601 time between 1 minute to 25 hours to indicate the maximum content
+      length that can be
 
-      to retain the recorded content.
+      archived in the asset for this live output. This also sets the maximum
+      content length for the
+
+      rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes
+      of archive window.
     fullName: archiveWindowLength
     remarks: ''
     isPreview: false
@@ -27,9 +31,9 @@ properties:
         type: string
         description: ''
   - name: assetName
-    uid: '@azure/arm-mediaservices.LiveOutput.assetName'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.assetName'
     package: '@azure/arm-mediaservices'
-    summary: The asset name.
+    summary: The asset that the live output will write to.
     fullName: assetName
     remarks: ''
     isPreview: false
@@ -40,10 +44,10 @@ properties:
         type: string
         description: ''
   - name: created
-    uid: '@azure/arm-mediaservices.LiveOutput.created'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.created'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The exact time the Live Output was created.
+      The creation time the live output.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -57,9 +61,9 @@ properties:
         type: Date
         description: ''
   - name: description
-    uid: '@azure/arm-mediaservices.LiveOutput.description'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.description'
     package: '@azure/arm-mediaservices'
-    summary: The description of the Live Output.
+    summary: The description of the live output.
     fullName: description
     remarks: ''
     isPreview: false
@@ -70,9 +74,9 @@ properties:
         type: undefined | string
         description: ''
   - name: hls
-    uid: '@azure/arm-mediaservices.LiveOutput.hls'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.hls'
     package: '@azure/arm-mediaservices'
-    summary: The HLS configuration.
+    summary: HTTP Live Streaming (HLS) packing setting for the live output.
     fullName: hls
     remarks: ''
     isPreview: false
@@ -80,13 +84,15 @@ properties:
     syntax:
       content: 'hls?: Hls'
       return:
-        type: <xref uid="@azure/arm-mediaservices.Hls" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Hls" />
         description: ''
   - name: id
-    uid: '@azure/arm-mediaservices.LiveOutput.id'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.id'
     package: '@azure/arm-mediaservices'
     summary: >-
-      Fully qualified resource ID for the resource.
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -100,10 +106,10 @@ properties:
         type: undefined | string
         description: ''
   - name: lastModified
-    uid: '@azure/arm-mediaservices.LiveOutput.lastModified'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.lastModified'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The exact time the Live Output was last modified.
+      The time the live output was last modified.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -117,10 +123,10 @@ properties:
         type: Date
         description: ''
   - name: manifestName
-    uid: '@azure/arm-mediaservices.LiveOutput.manifestName'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.manifestName'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The manifest file name.  If not provided, the service will generate one
+      The manifest file name. If not provided, the service will generate one
       automatically.
     fullName: manifestName
     remarks: ''
@@ -132,10 +138,10 @@ properties:
         type: undefined | string
         description: ''
   - name: name
-    uid: '@azure/arm-mediaservices.LiveOutput.name'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.name'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The name of the resource.
+      The name of the resource
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -149,9 +155,13 @@ properties:
         type: undefined | string
         description: ''
   - name: outputSnapTime
-    uid: '@azure/arm-mediaservices.LiveOutput.outputSnapTime'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.outputSnapTime'
     package: '@azure/arm-mediaservices'
-    summary: The output snapshot time.
+    summary: >-
+      The initial timestamp that the live output will start at, any content
+      before this value will
+
+      not be archived.
     fullName: outputSnapTime
     remarks: ''
     isPreview: false
@@ -162,10 +172,10 @@ properties:
         type: undefined | number
         description: ''
   - name: provisioningState
-    uid: '@azure/arm-mediaservices.LiveOutput.provisioningState'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.provisioningState'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The provisioning state of the Live Output.
+      The provisioning state of the live output.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -179,10 +189,10 @@ properties:
         type: undefined | string
         description: ''
   - name: resourceState
-    uid: '@azure/arm-mediaservices.LiveOutput.resourceState'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.resourceState'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The resource state of the Live Output. Possible values include:
+      The resource state of the live output. Possible values include:
       'Creating', 'Running',
 
       'Deleting'
@@ -196,13 +206,18 @@ properties:
     syntax:
       content: 'resourceState?: LiveOutputResourceState'
       return:
-        type: <xref uid="@azure/arm-mediaservices.LiveOutputResourceState" />
+        type: >-
+          <xref
+          uid="@azure/arm-mediaservices.models.index.d.LiveOutputResourceState"
+          />
         description: ''
   - name: type
-    uid: '@azure/arm-mediaservices.LiveOutput.type'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveOutput.type'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The type of the resource.
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -215,4 +230,4 @@ properties:
       return:
         type: undefined | string
         description: ''
-extends: <xref uid="@azure/arm-mediaservices.ProxyResource" />
+extends: <xref uid="@azure/arm-mediaservices.models.index.d.ProxyResource" />

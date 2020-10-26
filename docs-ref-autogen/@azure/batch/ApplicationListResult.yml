@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ApplicationListResult
-uid: '@azure/batch.ApplicationListResult'
+uid: '@azure/batch.models.index.d.ApplicationListResult'
 package: '@azure/batch'
 summary: ''
 fullName: ApplicationListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/batch.ApplicationListResult.Array'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.Array'
     package: '@azure/batch'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/batch.ApplicationListResult.length'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.length'
     package: '@azure/batch'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: odatanextLink
-    uid: '@azure/batch.ApplicationListResult.odatanextLink'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.odatanextLink'
     package: '@azure/batch'
     summary: ''
     fullName: odatanextLink
@@ -51,8 +51,30 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(ApplicationSummary | ConcatArray<ApplicationSummary>[])'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.concat_1'
+    package: '@azure/batch'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: ApplicationSummary |
+        ConcatArray<ApplicationSummary>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/batch.models.index.d.ApplicationSummary" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
+        description: ''
   - name: 'concat(ConcatArray<ApplicationSummary>[])'
-    uid: '@azure/batch.ApplicationListResult.concat'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.concat'
     package: '@azure/batch'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +84,16 @@ methods:
       content: 'function concat(items: ConcatArray<ApplicationSummary>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/batch.ApplicationSummary" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/batch.ApplicationListResult.concat_1'
-    package: '@azure/batch'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.copyWithin'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.copyWithin'
     package: '@azure/batch'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +131,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/batch.ApplicationListResult.entries'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.entries'
     package: '@azure/batch'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +145,7 @@ methods:
   - name: >-
       every((value: ApplicationSummary, index: number, array:
       ApplicationSummary[]) => unknown, any)
-    uid: '@azure/batch.ApplicationListResult.every'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.every_1'
     package: '@azure/batch'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,28 +153,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ApplicationSummary, index: number,
+        function every(predicate: (value: ApplicationSummary, index: number,
         array: ApplicationSummary[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ApplicationSummary, index: number, array:
             ApplicationSummary[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ApplicationSummary, index: number, array:
+      ApplicationSummary[]) => value, any)
+    uid: '@azure/batch.models.index.d.ApplicationListResult.every'
+    package: '@azure/batch'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ApplicationSummary, index: number,
+        array: ApplicationSummary[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ApplicationSummary, index: number, array:
+            ApplicationSummary[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ApplicationSummary, undefined | number, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.fill'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.fill'
     package: '@azure/batch'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +231,7 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/batch.ApplicationSummary" />
+          type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -203,7 +253,7 @@ methods:
   - name: >-
       filter((value: ApplicationSummary, index: number, array:
       ApplicationSummary[]) => unknown, any)
-    uid: '@azure/batch.ApplicationListResult.filter_1'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.filter_1'
     package: '@azure/batch'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -213,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ApplicationSummary, index: number,
+        function filter(predicate: (value: ApplicationSummary, index: number,
         array: ApplicationSummary[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ApplicationSummary, index: number, array:
             ApplicationSummary[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
         description: ''
   - name: >-
       filter<S>((value: ApplicationSummary, index: number, array:
-      ApplicationSummary[]) => boolean, any)
-    uid: '@azure/batch.ApplicationListResult.filter'
+      ApplicationSummary[]) => value, any)
+    uid: '@azure/batch.models.index.d.ApplicationListResult.filter'
     package: '@azure/batch'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -246,21 +295,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ApplicationSummary, index:
-        number, array: ApplicationSummary[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ApplicationSummary, index: number,
+        array: ApplicationSummary[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ApplicationSummary, index: number, array:
-            ApplicationSummary[]) =&gt; boolean
+            ApplicationSummary[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -269,7 +317,7 @@ methods:
   - name: >-
       find((value: ApplicationSummary, index: number, obj: ApplicationSummary[])
       => unknown, any)
-    uid: '@azure/batch.ApplicationListResult.find_1'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.find_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -289,12 +337,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" /> | undefined
+        type: >-
+          <xref uid="@azure/batch.models.index.d.ApplicationSummary" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ApplicationSummary, index: number, obj:
-      ApplicationSummary[]) => boolean, any)
-    uid: '@azure/batch.ApplicationListResult.find'
+      ApplicationSummary[]) => value, any)
+    uid: '@azure/batch.models.index.d.ApplicationListResult.find'
     package: '@azure/batch'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -307,12 +357,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: ApplicationSummary,
-        index: number, obj: ApplicationSummary[]) => boolean, thisArg?: any)
+        index: number, obj: ApplicationSummary[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ApplicationSummary, index: number, obj:
-            ApplicationSummary[]) =&gt; boolean
+            ApplicationSummary[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -335,7 +385,7 @@ methods:
   - name: >-
       findIndex((value: ApplicationSummary, index: number, obj:
       ApplicationSummary[]) => unknown, any)
-    uid: '@azure/batch.ApplicationListResult.findIndex'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.findIndex'
     package: '@azure/batch'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +426,7 @@ methods:
   - name: >-
       forEach((value: ApplicationSummary, index: number, array:
       ApplicationSummary[]) => void, any)
-    uid: '@azure/batch.ApplicationListResult.forEach'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.forEach'
     package: '@azure/batch'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -401,7 +451,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ApplicationSummary, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.includes'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.includes'
     package: '@azure/batch'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -415,7 +465,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/batch.ApplicationSummary" />
+          type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -426,7 +476,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ApplicationSummary, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.indexOf'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.indexOf'
     package: '@azure/batch'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -438,7 +488,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/batch.ApplicationSummary" />
+          type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -449,7 +499,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/batch.ApplicationListResult.join'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.join'
     package: '@azure/batch'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -470,7 +520,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/batch.ApplicationListResult.keys'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.keys'
     package: '@azure/batch'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -482,7 +532,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ApplicationSummary, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.lastIndexOf'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.lastIndexOf'
     package: '@azure/batch'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -494,7 +544,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/batch.ApplicationSummary" />
+          type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -507,7 +557,7 @@ methods:
   - name: >-
       map<U>((value: ApplicationSummary, index: number, array:
       ApplicationSummary[]) => U, any)
-    uid: '@azure/batch.ApplicationListResult.map'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.map'
     package: '@azure/batch'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -537,7 +587,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/batch.ApplicationListResult.pop'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.pop'
     package: '@azure/batch'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -546,10 +596,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" /> | undefined
+        type: >-
+          <xref uid="@azure/batch.models.index.d.ApplicationSummary" /> |
+          undefined
         description: ''
   - name: 'push(ApplicationSummary[])'
-    uid: '@azure/batch.ApplicationListResult.push'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.push'
     package: '@azure/batch'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -559,7 +611,7 @@ methods:
       content: 'function push(items: ApplicationSummary[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
           description: |
             New elements of the Array.
       return:
@@ -569,7 +621,7 @@ methods:
       reduce((previousValue: ApplicationSummary, currentValue:
       ApplicationSummary, currentIndex: number, array: ApplicationSummary[]) =>
       ApplicationSummary)
-    uid: '@azure/batch.ApplicationListResult.reduce'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reduce'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -594,13 +646,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" />
+        type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
         description: ''
   - name: >-
       reduce((previousValue: ApplicationSummary, currentValue:
       ApplicationSummary, currentIndex: number, array: ApplicationSummary[]) =>
       ApplicationSummary, ApplicationSummary)
-    uid: '@azure/batch.ApplicationListResult.reduce_1'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reduce_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -620,15 +672,15 @@ methods:
             ApplicationSummary[]) =&gt; ApplicationSummary
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/batch.ApplicationSummary" />
+          type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
           description: ''
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" />
+        type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ApplicationSummary,
       currentIndex: number, array: ApplicationSummary[]) => U, U)
-    uid: '@azure/batch.ApplicationListResult.reduce_2'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reduce_2'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -664,7 +716,7 @@ methods:
       reduceRight((previousValue: ApplicationSummary, currentValue:
       ApplicationSummary, currentIndex: number, array: ApplicationSummary[]) =>
       ApplicationSummary)
-    uid: '@azure/batch.ApplicationListResult.reduceRight'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reduceRight'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -690,13 +742,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" />
+        type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
         description: ''
   - name: >-
       reduceRight((previousValue: ApplicationSummary, currentValue:
       ApplicationSummary, currentIndex: number, array: ApplicationSummary[]) =>
       ApplicationSummary, ApplicationSummary)
-    uid: '@azure/batch.ApplicationListResult.reduceRight_1'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reduceRight_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -716,15 +768,15 @@ methods:
             ApplicationSummary[]) =&gt; ApplicationSummary
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/batch.ApplicationSummary" />
+          type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
           description: ''
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" />
+        type: <xref uid="@azure/batch.models.index.d.ApplicationSummary" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ApplicationSummary,
       currentIndex: number, array: ApplicationSummary[]) => U, U)
-    uid: '@azure/batch.ApplicationListResult.reduceRight_2'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reduceRight_2'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -758,7 +810,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/batch.ApplicationListResult.reverse'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.reverse'
     package: '@azure/batch'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -767,10 +819,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/batch.ApplicationListResult.shift'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.shift'
     package: '@azure/batch'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -779,10 +831,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/batch.ApplicationSummary" /> | undefined
+        type: >-
+          <xref uid="@azure/batch.models.index.d.ApplicationSummary" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.slice'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.slice'
     package: '@azure/batch'
     summary: Returns a section of an array.
     remarks: ''
@@ -796,15 +850,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
         description: ''
   - name: >-
       some((value: ApplicationSummary, index: number, array:
       ApplicationSummary[]) => unknown, any)
-    uid: '@azure/batch.ApplicationListResult.some'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.some'
     package: '@azure/batch'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -814,28 +869,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ApplicationSummary, index: number,
+        function some(predicate: (value: ApplicationSummary, index: number,
         array: ApplicationSummary[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ApplicationSummary, index: number, array:
             ApplicationSummary[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: ApplicationSummary, b: ApplicationSummary) => number)'
-    uid: '@azure/batch.ApplicationListResult.sort'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.sort'
     package: '@azure/batch'
     summary: Sorts an array.
     remarks: ''
@@ -851,14 +911,25 @@ methods:
             undefined | (a: ApplicationSummary, b: ApplicationSummary) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ApplicationSummary[])'
-    uid: '@azure/batch.ApplicationListResult.splice_1'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.splice_1'
     package: '@azure/batch'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -880,14 +951,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/batch.ApplicationListResult.splice'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.splice'
     package: '@azure/batch'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -908,10 +979,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/batch.ApplicationListResult.toLocaleString'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.toLocaleString'
     package: '@azure/batch'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -925,7 +996,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/batch.ApplicationListResult.toString'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.toString'
     package: '@azure/batch'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -937,7 +1008,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ApplicationSummary[])'
-    uid: '@azure/batch.ApplicationListResult.unshift'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.unshift'
     package: '@azure/batch'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -947,14 +1018,14 @@ methods:
       content: 'function unshift(items: ApplicationSummary[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/batch.ApplicationSummary" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.ApplicationSummary" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/batch.ApplicationListResult.values'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.values'
     package: '@azure/batch'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -963,6 +1034,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/batch.ApplicationSummary" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/batch.ApplicationSummary" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.[Symbol.iterator]'
+    package: '@azure/batch'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/batch.models.index.d.ApplicationListResult.[Symbol.unscopables]'
+    package: '@azure/batch'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/batch.models.index.d.ApplicationListResult.Array"
+  />&lt;<xref uid="@azure/batch.models.index.d.ApplicationSummary" />&gt;

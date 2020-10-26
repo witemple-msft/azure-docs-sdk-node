@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ResponseWithContinuationLabAccount
-uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount'
+uid: '@azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount'
 package: '@azure/arm-labservices'
 summary: ''
 fullName: ResponseWithContinuationLabAccount
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.Array'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.Array
     package: '@azure/arm-labservices'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.length'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.length
     package: '@azure/arm-labservices'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.nextLink'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.nextLink
     package: '@azure/arm-labservices'
     summary: Link for next set of results.
     fullName: nextLink
@@ -52,7 +55,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<LabAccount>[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.concat'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.concat
     package: '@azure/arm-labservices'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +67,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-labservices.LabAccount"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-labservices.models.index.d.LabAccount" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.concat_1'
+  - name: 'concat(LabAccount | ConcatArray<LabAccount>[])'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.concat_1
     package: '@azure/arm-labservices'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: LabAccount | ConcatArray<LabAccount>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-labservices.models.index.d.LabAccount" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-labservices.models.index.d.LabAccount" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.copyWithin'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.copyWithin
     package: '@azure/arm-labservices'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +135,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.entries'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.entries
     package: '@azure/arm-labservices'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +150,8 @@ methods:
   - name: >-
       every((value: LabAccount, index: number, array: LabAccount[]) => unknown,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.every'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.every_1
     package: '@azure/arm-labservices'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +159,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: LabAccount, index: number, array:
+        function every(predicate: (value: LabAccount, index: number, array:
         LabAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LabAccount, index: number, array: LabAccount[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: LabAccount, index: number, array: LabAccount[]) => value,
+      any)
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.every
+    package: '@azure/arm-labservices'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: LabAccount, index: number, array:
+        LabAccount[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: LabAccount, index: number, array: LabAccount[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(LabAccount, undefined | number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.fill'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.fill
     package: '@azure/arm-labservices'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +237,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-labservices.LabAccount" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +259,8 @@ methods:
   - name: >-
       filter((value: LabAccount, index: number, array: LabAccount[]) => unknown,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.filter_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.filter_1
     package: '@azure/arm-labservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +270,30 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: LabAccount, index: number, array:
+        function filter(predicate: (value: LabAccount, index: number, array:
         LabAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LabAccount, index: number, array: LabAccount[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
   - name: >-
       filter<S>((value: LabAccount, index: number, array: LabAccount[]) =>
-      boolean, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.filter'
+      value, any)
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.filter
     package: '@azure/arm-labservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +303,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: LabAccount, index: number, array:
-        LabAccount[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: LabAccount, index: number, array:
+        LabAccount[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: LabAccount, index: number, array: LabAccount[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: LabAccount, index: number, array: LabAccount[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +323,8 @@ methods:
   - name: >-
       find((value: LabAccount, index: number, obj: LabAccount[]) => unknown,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.find_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.find_1
     package: '@azure/arm-labservices'
     summary: ''
     remarks: ''
@@ -289,12 +342,15 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-labservices.models.index.d.LabAccount" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: LabAccount, index: number, obj: LabAccount[])
-      => boolean, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.find'
+      => value, any)
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.find
     package: '@azure/arm-labservices'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -307,12 +363,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: LabAccount, index:
-        number, obj: LabAccount[]) => boolean, thisArg?: any)
+        number, obj: LabAccount[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: LabAccount, index: number, obj: LabAccount[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -335,7 +391,8 @@ methods:
   - name: >-
       findIndex((value: LabAccount, index: number, obj: LabAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.findIndex'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.findIndex
     package: '@azure/arm-labservices'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -374,7 +431,8 @@ methods:
   - name: >-
       forEach((value: LabAccount, index: number, array: LabAccount[]) => void,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.forEach'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.forEach
     package: '@azure/arm-labservices'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -397,7 +455,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(LabAccount, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.includes'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.includes
     package: '@azure/arm-labservices'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -411,7 +470,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-labservices.LabAccount" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -422,7 +481,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(LabAccount, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.indexOf'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.indexOf
     package: '@azure/arm-labservices'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -434,7 +494,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-labservices.LabAccount" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -445,7 +505,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.join'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.join
     package: '@azure/arm-labservices'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -466,7 +527,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.keys'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.keys
     package: '@azure/arm-labservices'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -478,7 +540,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(LabAccount, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.lastIndexOf'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.lastIndexOf
     package: '@azure/arm-labservices'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -490,7 +553,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-labservices.LabAccount" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -501,7 +564,8 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: LabAccount, index: number, array: LabAccount[]) => U, any)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.map'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.map
     package: '@azure/arm-labservices'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -529,7 +593,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.pop'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.pop
     package: '@azure/arm-labservices'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -538,10 +603,13 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-labservices.models.index.d.LabAccount" /> |
+          undefined
         description: ''
   - name: 'push(LabAccount[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.push'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.push
     package: '@azure/arm-labservices'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -551,7 +619,7 @@ methods:
       content: 'function push(items: LabAccount[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+          type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
           description: |
             New elements of the Array.
       return:
@@ -560,7 +628,8 @@ methods:
   - name: >-
       reduce((previousValue: LabAccount, currentValue: LabAccount, currentIndex:
       number, array: LabAccount[]) => LabAccount)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reduce'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reduce
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,12 +652,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
         description: ''
   - name: >-
       reduce((previousValue: LabAccount, currentValue: LabAccount, currentIndex:
       number, array: LabAccount[]) => LabAccount, LabAccount)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reduce_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reduce_1
     package: '@azure/arm-labservices'
     summary: ''
     remarks: ''
@@ -606,15 +676,16 @@ methods:
             number, array: LabAccount[]) =&gt; LabAccount
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-labservices.LabAccount" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: LabAccount, currentIndex:
       number, array: LabAccount[]) => U, U)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reduce_2'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reduce_2
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -649,7 +720,8 @@ methods:
   - name: >-
       reduceRight((previousValue: LabAccount, currentValue: LabAccount,
       currentIndex: number, array: LabAccount[]) => LabAccount)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reduceRight'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reduceRight
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -674,12 +746,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
         description: ''
   - name: >-
       reduceRight((previousValue: LabAccount, currentValue: LabAccount,
       currentIndex: number, array: LabAccount[]) => LabAccount, LabAccount)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reduceRight_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reduceRight_1
     package: '@azure/arm-labservices'
     summary: ''
     remarks: ''
@@ -697,15 +770,16 @@ methods:
             number, array: LabAccount[]) =&gt; LabAccount
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-labservices.LabAccount" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.LabAccount" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: LabAccount, currentIndex:
       number, array: LabAccount[]) => U, U)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reduceRight_2'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reduceRight_2
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -739,7 +813,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.reverse'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.reverse
     package: '@azure/arm-labservices'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -748,10 +823,11 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.shift'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.shift
     package: '@azure/arm-labservices'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -760,10 +836,13 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-labservices.LabAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-labservices.models.index.d.LabAccount" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.slice'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.slice
     package: '@azure/arm-labservices'
     summary: Returns a section of an array.
     remarks: ''
@@ -777,15 +856,17 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
   - name: >-
       some((value: LabAccount, index: number, array: LabAccount[]) => unknown,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.some'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.some
     package: '@azure/arm-labservices'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -795,28 +876,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: LabAccount, index: number, array:
+        function some(predicate: (value: LabAccount, index: number, array:
         LabAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LabAccount, index: number, array: LabAccount[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: LabAccount, b: LabAccount) => number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.sort'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.sort
     package: '@azure/arm-labservices'
     summary: Sorts an array.
     remarks: ''
@@ -830,14 +917,26 @@ methods:
         - id: compareFn
           type: 'undefined | (a: LabAccount, b: LabAccount) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, LabAccount[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.splice_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.splice_1
     package: '@azure/arm-labservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -857,14 +956,15 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+          type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.splice'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.splice
     package: '@azure/arm-labservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -885,10 +985,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.toLocaleString'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.toLocaleString
     package: '@azure/arm-labservices'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -902,7 +1003,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.toString'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.toString
     package: '@azure/arm-labservices'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -914,7 +1016,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(LabAccount[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.unshift'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.unshift
     package: '@azure/arm-labservices'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -924,14 +1027,15 @@ methods:
       content: 'function unshift(items: LabAccount[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-labservices.LabAccount" />[]'
+          type: '<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-labservices.ResponseWithContinuationLabAccount.values'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.values
     package: '@azure/arm-labservices'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -941,7 +1045,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-labservices.LabAccount"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-labservices.models.index.d.LabAccount" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-labservices.LabAccount" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.[Symbol.iterator]
+    package: '@azure/arm-labservices'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-labservices.models.index.d.LabAccount" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationLabAccount.[Symbol.unscopables]
+    package: '@azure/arm-labservices'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-labservices.models.index.d.ProviderOperationResult.Array"
+  />&lt;<xref uid="@azure/arm-labservices.models.index.d.LabAccount" />&gt;

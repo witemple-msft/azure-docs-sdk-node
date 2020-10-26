@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SecurityAssessmentMetadataList
-uid: '@azure/arm-security.SecurityAssessmentMetadataList'
+uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList'
 package: '@azure/arm-security'
 summary: ''
 fullName: SecurityAssessmentMetadataList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.Array'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.Array'
     package: '@azure/arm-security'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.length'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.length'
     package: '@azure/arm-security'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.nextLink'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.nextLink'
     package: '@azure/arm-security'
     summary: >-
       The URI to fetch the next page.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SecurityAssessmentMetadata>[])'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.concat'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.concat'
     package: '@azure/arm-security'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +68,48 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-security.SecurityAssessmentMetadata" />&gt;[]
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.concat_1'
+  - name: >-
+      concat(SecurityAssessmentMetadata |
+      ConcatArray<SecurityAssessmentMetadata>[])
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.concat_1'
     package: '@azure/arm-security'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SecurityAssessmentMetadata |
+        ConcatArray<SecurityAssessmentMetadata>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.copyWithin'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.copyWithin
     package: '@azure/arm-security'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +147,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.entries'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.entries'
     package: '@azure/arm-security'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +161,7 @@ methods:
   - name: >-
       every((value: SecurityAssessmentMetadata, index: number, array:
       SecurityAssessmentMetadata[]) => unknown, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.every'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.every_1'
     package: '@azure/arm-security'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +169,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SecurityAssessmentMetadata, index:
+        function every(predicate: (value: SecurityAssessmentMetadata, index:
         number, array: SecurityAssessmentMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecurityAssessmentMetadata, index: number, array:
             SecurityAssessmentMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SecurityAssessmentMetadata, index: number, array:
+      SecurityAssessmentMetadata[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.every'
+    package: '@azure/arm-security'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SecurityAssessmentMetadata, index:
+        number, array: SecurityAssessmentMetadata[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SecurityAssessmentMetadata, index: number, array:
+            SecurityAssessmentMetadata[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SecurityAssessmentMetadata, undefined | number, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.fill'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.fill'
     package: '@azure/arm-security'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +247,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +272,7 @@ methods:
   - name: >-
       filter((value: SecurityAssessmentMetadata, index: number, array:
       SecurityAssessmentMetadata[]) => unknown, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.filter_1'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.filter_1'
     package: '@azure/arm-security'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +282,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SecurityAssessmentMetadata, index:
+        function filter(predicate: (value: SecurityAssessmentMetadata, index:
         number, array: SecurityAssessmentMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecurityAssessmentMetadata, index: number, array:
             SecurityAssessmentMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SecurityAssessmentMetadata, index: number, array:
-      SecurityAssessmentMetadata[]) => boolean, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.filter'
+      SecurityAssessmentMetadata[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.filter'
     package: '@azure/arm-security'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,22 +317,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SecurityAssessmentMetadata,
-        index: number, array: SecurityAssessmentMetadata[]) => boolean,
-        thisArg?: any)
+        function filter<S>(predicate: (value: SecurityAssessmentMetadata, index:
+        number, array: SecurityAssessmentMetadata[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecurityAssessmentMetadata, index: number, array:
-            SecurityAssessmentMetadata[]) =&gt; boolean
+            SecurityAssessmentMetadata[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -276,7 +339,7 @@ methods:
   - name: >-
       find((value: SecurityAssessmentMetadata, index: number, obj:
       SecurityAssessmentMetadata[]) => unknown, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.find_1'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.find_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -297,13 +360,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-security.SecurityAssessmentMetadata" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SecurityAssessmentMetadata, index: number,
-      obj: SecurityAssessmentMetadata[]) => boolean, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.find'
+      obj: SecurityAssessmentMetadata[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.find'
     package: '@azure/arm-security'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -317,12 +381,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         SecurityAssessmentMetadata, index: number, obj:
-        SecurityAssessmentMetadata[]) => boolean, thisArg?: any)
+        SecurityAssessmentMetadata[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SecurityAssessmentMetadata, index: number, obj:
-            SecurityAssessmentMetadata[]) =&gt; boolean
+            SecurityAssessmentMetadata[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -345,7 +409,8 @@ methods:
   - name: >-
       findIndex((value: SecurityAssessmentMetadata, index: number, obj:
       SecurityAssessmentMetadata[]) => unknown, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.findIndex'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.findIndex
     package: '@azure/arm-security'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -386,7 +451,7 @@ methods:
   - name: >-
       forEach((value: SecurityAssessmentMetadata, index: number, array:
       SecurityAssessmentMetadata[]) => void, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.forEach'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.forEach'
     package: '@azure/arm-security'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -411,7 +476,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SecurityAssessmentMetadata, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.includes'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.includes'
     package: '@azure/arm-security'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -425,7 +490,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -436,7 +504,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SecurityAssessmentMetadata, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.indexOf'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.indexOf'
     package: '@azure/arm-security'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -448,7 +516,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -459,7 +530,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.join'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.join'
     package: '@azure/arm-security'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -480,7 +551,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.keys'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.keys'
     package: '@azure/arm-security'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -492,7 +563,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SecurityAssessmentMetadata, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.lastIndexOf'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.lastIndexOf
     package: '@azure/arm-security'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -504,7 +576,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -517,7 +592,7 @@ methods:
   - name: >-
       map<U>((value: SecurityAssessmentMetadata, index: number, array:
       SecurityAssessmentMetadata[]) => U, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.map'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.map'
     package: '@azure/arm-security'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -547,7 +622,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.pop'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.pop'
     package: '@azure/arm-security'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -557,11 +632,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-security.SecurityAssessmentMetadata" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
+          | undefined
         description: ''
   - name: 'push(SecurityAssessmentMetadata[])'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.push'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.push'
     package: '@azure/arm-security'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -571,7 +647,10 @@ methods:
       content: 'function push(items: SecurityAssessmentMetadata[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -581,7 +660,7 @@ methods:
       reduce((previousValue: SecurityAssessmentMetadata, currentValue:
       SecurityAssessmentMetadata, currentIndex: number, array:
       SecurityAssessmentMetadata[]) => SecurityAssessmentMetadata)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reduce'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reduce'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -606,14 +685,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
         description: ''
   - name: >-
       reduce((previousValue: SecurityAssessmentMetadata, currentValue:
       SecurityAssessmentMetadata, currentIndex: number, array:
       SecurityAssessmentMetadata[]) => SecurityAssessmentMetadata,
       SecurityAssessmentMetadata)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reduce_1'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reduce_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -633,15 +714,20 @@ methods:
             SecurityAssessmentMetadata[]) =&gt; SecurityAssessmentMetadata
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SecurityAssessmentMetadata,
       currentIndex: number, array: SecurityAssessmentMetadata[]) => U, U)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reduce_2'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reduce_2'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -677,7 +763,8 @@ methods:
       reduceRight((previousValue: SecurityAssessmentMetadata, currentValue:
       SecurityAssessmentMetadata, currentIndex: number, array:
       SecurityAssessmentMetadata[]) => SecurityAssessmentMetadata)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reduceRight'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reduceRight
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -704,14 +791,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
         description: ''
   - name: >-
       reduceRight((previousValue: SecurityAssessmentMetadata, currentValue:
       SecurityAssessmentMetadata, currentIndex: number, array:
       SecurityAssessmentMetadata[]) => SecurityAssessmentMetadata,
       SecurityAssessmentMetadata)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reduceRight_1'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reduceRight_1
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -731,16 +821,22 @@ methods:
             SecurityAssessmentMetadata[]) =&gt; SecurityAssessmentMetadata
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-security.SecurityAssessmentMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       SecurityAssessmentMetadata, currentIndex: number, array:
       SecurityAssessmentMetadata[]) => U, U)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reduceRight_2'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reduceRight_2
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -774,7 +870,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.reverse'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.reverse'
     package: '@azure/arm-security'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -783,10 +879,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.shift'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.shift'
     package: '@azure/arm-security'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -796,11 +895,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-security.SecurityAssessmentMetadata" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.slice'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.slice'
     package: '@azure/arm-security'
     summary: Returns a section of an array.
     remarks: ''
@@ -814,15 +914,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
   - name: >-
       some((value: SecurityAssessmentMetadata, index: number, array:
       SecurityAssessmentMetadata[]) => unknown, any)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.some'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.some'
     package: '@azure/arm-security'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -832,30 +936,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SecurityAssessmentMetadata, index:
+        function some(predicate: (value: SecurityAssessmentMetadata, index:
         number, array: SecurityAssessmentMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecurityAssessmentMetadata, index: number, array:
             SecurityAssessmentMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: SecurityAssessmentMetadata, b:
       SecurityAssessmentMetadata) => number)
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.sort'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.sort'
     package: '@azure/arm-security'
     summary: Sorts an array.
     remarks: ''
@@ -871,14 +980,25 @@ methods:
             undefined | (a: SecurityAssessmentMetadata, b:
             SecurityAssessmentMetadata) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SecurityAssessmentMetadata[])'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.splice_1'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.splice_1'
     package: '@azure/arm-security'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,14 +1020,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.splice'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.splice'
     package: '@azure/arm-security'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -928,10 +1054,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.toLocaleString'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.toLocaleString
     package: '@azure/arm-security'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -945,7 +1075,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.toString'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.toString'
     package: '@azure/arm-security'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -957,7 +1087,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SecurityAssessmentMetadata[])'
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.unshift'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.unshift'
     package: '@azure/arm-security'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -967,14 +1097,17 @@ methods:
       content: 'function unshift(items: SecurityAssessmentMetadata[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-security.SecurityAssessmentMetadataList.values'
+    uid: '@azure/arm-security.models.index.d.SecurityAssessmentMetadataList.values'
     package: '@azure/arm-security'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -985,6 +1118,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-security.SecurityAssessmentMetadata" />&gt;
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-security.SecurityAssessmentMetadata" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.[Symbol.iterator]
+    package: '@azure/arm-security'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-security.models.index.d.SecurityAssessmentMetadataList.[Symbol.unscopables]
+    package: '@azure/arm-security'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-security.models.index.d.ComplianceResultList.Array"
+  />&lt;<xref
+  uid="@azure/arm-security.models.index.d.SecurityAssessmentMetadata" />&gt;

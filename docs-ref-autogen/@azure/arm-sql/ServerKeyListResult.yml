@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ServerKeyListResult
-uid: '@azure/arm-sql.ServerKeyListResult'
+uid: '@azure/arm-sql.models.index.d.ServerKeyListResult'
 package: '@azure/arm-sql'
 summary: ''
 fullName: ServerKeyListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-sql.ServerKeyListResult.Array'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.Array'
     package: '@azure/arm-sql'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-sql.ServerKeyListResult.length'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.length'
     package: '@azure/arm-sql'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-sql.ServerKeyListResult.nextLink'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.nextLink'
     package: '@azure/arm-sql'
     summary: >-
       Link to retrieve next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<ServerKey>[])'
-    uid: '@azure/arm-sql.ServerKeyListResult.concat'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.concat'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<ServerKey>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-sql.ServerKey" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-sql.models.index.d.ServerKey"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-sql.ServerKeyListResult.concat_1'
+  - name: 'concat(ServerKey | ConcatArray<ServerKey>[])'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.concat_1'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: ServerKey | ConcatArray<ServerKey>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.ServerKey" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-sql.models.index.d.ServerKey"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.copyWithin'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.copyWithin'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-sql.ServerKeyListResult.entries'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.entries'
     package: '@azure/arm-sql'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: ServerKey, index: number, array: ServerKey[]) => unknown,
       any)
-    uid: '@azure/arm-sql.ServerKeyListResult.every'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.every_1'
     package: '@azure/arm-sql'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,26 +155,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ServerKey, index: number, array:
+        function every(predicate: (value: ServerKey, index: number, array:
         ServerKey[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: ServerKey, index: number, array: ServerKey[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ServerKey, index: number, array: ServerKey[]) => value,
+      any)
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.every'
+    package: '@azure/arm-sql'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ServerKey, index: number, array:
+        ServerKey[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: ServerKey, index: number, array: ServerKey[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ServerKey, undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.fill'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.fill'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-sql.ServerKey" />
+          type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +251,7 @@ methods:
   - name: >-
       filter((value: ServerKey, index: number, array: ServerKey[]) => unknown,
       any)
-    uid: '@azure/arm-sql.ServerKeyListResult.filter_1'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.filter_1'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,28 +261,27 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ServerKey, index: number, array:
+        function filter(predicate: (value: ServerKey, index: number, array:
         ServerKey[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: ServerKey, index: number, array: ServerKey[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
   - name: >-
-      filter<S>((value: ServerKey, index: number, array: ServerKey[]) =>
-      boolean, any)
-    uid: '@azure/arm-sql.ServerKeyListResult.filter'
+      filter<S>((value: ServerKey, index: number, array: ServerKey[]) => value,
+      any)
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.filter'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -246,26 +291,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ServerKey, index: number, array:
-        ServerKey[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ServerKey, index: number, array:
+        ServerKey[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: ServerKey, index: number, array: ServerKey[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: ServerKey, index: number, array: ServerKey[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: ServerKey, index: number, obj: ServerKey[]) => unknown, any)'
-    uid: '@azure/arm-sql.ServerKeyListResult.find_1'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.find_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -283,12 +327,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ServerKey, index: number, obj: ServerKey[]) =>
-      boolean, any)
-    uid: '@azure/arm-sql.ServerKeyListResult.find'
+      value, any)
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.find'
     package: '@azure/arm-sql'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -301,12 +345,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: ServerKey, index:
-        number, obj: ServerKey[]) => boolean, thisArg?: any)
+        number, obj: ServerKey[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ServerKey, index: number, obj: ServerKey[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -329,7 +373,7 @@ methods:
   - name: >-
       findIndex((value: ServerKey, index: number, obj: ServerKey[]) => unknown,
       any)
-    uid: '@azure/arm-sql.ServerKeyListResult.findIndex'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.findIndex'
     package: '@azure/arm-sql'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -368,7 +412,7 @@ methods:
   - name: >-
       forEach((value: ServerKey, index: number, array: ServerKey[]) => void,
       any)
-    uid: '@azure/arm-sql.ServerKeyListResult.forEach'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.forEach'
     package: '@azure/arm-sql'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -391,7 +435,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ServerKey, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.includes'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.includes'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -405,7 +449,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.ServerKey" />
+          type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -416,7 +460,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ServerKey, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.indexOf'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.indexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -428,7 +472,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.ServerKey" />
+          type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -439,7 +483,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-sql.ServerKeyListResult.join'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.join'
     package: '@azure/arm-sql'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -460,7 +504,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-sql.ServerKeyListResult.keys'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.keys'
     package: '@azure/arm-sql'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -472,7 +516,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ServerKey, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.lastIndexOf'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.lastIndexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -484,7 +528,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.ServerKey" />
+          type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -495,7 +539,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: ServerKey, index: number, array: ServerKey[]) => U, any)'
-    uid: '@azure/arm-sql.ServerKeyListResult.map'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.map'
     package: '@azure/arm-sql'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -523,7 +567,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-sql.ServerKeyListResult.pop'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.pop'
     package: '@azure/arm-sql'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -532,10 +576,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" /> | undefined
         description: ''
   - name: 'push(ServerKey[])'
-    uid: '@azure/arm-sql.ServerKeyListResult.push'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.push'
     package: '@azure/arm-sql'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -545,7 +589,7 @@ methods:
       content: 'function push(items: ServerKey[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
           description: |
             New elements of the Array.
       return:
@@ -554,7 +598,7 @@ methods:
   - name: >-
       reduce((previousValue: ServerKey, currentValue: ServerKey, currentIndex:
       number, array: ServerKey[]) => ServerKey)
-    uid: '@azure/arm-sql.ServerKeyListResult.reduce'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reduce'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -577,12 +621,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" />
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
         description: ''
   - name: >-
       reduce((previousValue: ServerKey, currentValue: ServerKey, currentIndex:
       number, array: ServerKey[]) => ServerKey, ServerKey)
-    uid: '@azure/arm-sql.ServerKeyListResult.reduce_1'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reduce_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -600,15 +644,15 @@ methods:
             number, array: ServerKey[]) =&gt; ServerKey
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.ServerKey" />
+          type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" />
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ServerKey, currentIndex:
       number, array: ServerKey[]) => U, U)
-    uid: '@azure/arm-sql.ServerKeyListResult.reduce_2'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reduce_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -643,7 +687,7 @@ methods:
   - name: >-
       reduceRight((previousValue: ServerKey, currentValue: ServerKey,
       currentIndex: number, array: ServerKey[]) => ServerKey)
-    uid: '@azure/arm-sql.ServerKeyListResult.reduceRight'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reduceRight'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -668,12 +712,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" />
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
         description: ''
   - name: >-
       reduceRight((previousValue: ServerKey, currentValue: ServerKey,
       currentIndex: number, array: ServerKey[]) => ServerKey, ServerKey)
-    uid: '@azure/arm-sql.ServerKeyListResult.reduceRight_1'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reduceRight_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -691,15 +735,15 @@ methods:
             number, array: ServerKey[]) =&gt; ServerKey
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.ServerKey" />
+          type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" />
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ServerKey, currentIndex:
       number, array: ServerKey[]) => U, U)
-    uid: '@azure/arm-sql.ServerKeyListResult.reduceRight_2'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reduceRight_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -733,7 +777,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-sql.ServerKeyListResult.reverse'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.reverse'
     package: '@azure/arm-sql'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -742,10 +786,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-sql.ServerKeyListResult.shift'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.shift'
     package: '@azure/arm-sql'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -754,10 +798,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-sql.ServerKey" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.ServerKey" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.slice'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.slice'
     package: '@azure/arm-sql'
     summary: Returns a section of an array.
     remarks: ''
@@ -771,15 +815,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
   - name: >-
       some((value: ServerKey, index: number, array: ServerKey[]) => unknown,
       any)
-    uid: '@azure/arm-sql.ServerKeyListResult.some'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.some'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -789,26 +834,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ServerKey, index: number, array:
+        function some(predicate: (value: ServerKey, index: number, array:
         ServerKey[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: ServerKey, index: number, array: ServerKey[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: ServerKey, b: ServerKey) => number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.sort'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.sort'
     package: '@azure/arm-sql'
     summary: Sorts an array.
     remarks: ''
@@ -822,14 +872,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: ServerKey, b: ServerKey) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ServerKey[])'
-    uid: '@azure/arm-sql.ServerKeyListResult.splice_1'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.splice_1'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -849,14 +910,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-sql.ServerKeyListResult.splice'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.splice'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -877,10 +938,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-sql.ServerKeyListResult.toLocaleString'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.toLocaleString'
     package: '@azure/arm-sql'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -894,7 +955,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-sql.ServerKeyListResult.toString'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.toString'
     package: '@azure/arm-sql'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -906,7 +967,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ServerKey[])'
-    uid: '@azure/arm-sql.ServerKeyListResult.unshift'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.unshift'
     package: '@azure/arm-sql'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -916,14 +977,14 @@ methods:
       content: 'function unshift(items: ServerKey[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.ServerKey" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.ServerKey" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-sql.ServerKeyListResult.values'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.values'
     package: '@azure/arm-sql'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -932,6 +993,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-sql.ServerKey" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.ServerKey" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-sql.ServerKey" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.[Symbol.iterator]'
+    package: '@azure/arm-sql'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.ServerKey" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-sql.models.index.d.ServerKeyListResult.[Symbol.unscopables]'
+    package: '@azure/arm-sql'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-sql.models.index.d.RecoverableDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-sql.models.index.d.ServerKey" />&gt;

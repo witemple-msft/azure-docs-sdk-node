@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SigningPolicy
-uid: '@azure/core-http.SigningPolicy'
+uid: '@azure/core-http.policies.signingPolicy.d.SigningPolicy'
 package: '@azure/core-http'
 summary: ''
 fullName: SigningPolicy
@@ -12,7 +12,7 @@ constructors:
   - name: >-
       SigningPolicy(RequestPolicy, RequestPolicyOptions,
       ServiceClientCredentials)
-    uid: '@azure/core-http.SigningPolicy.constructor'
+    uid: '@azure/core-http.policies.signingPolicy.d.SigningPolicy.constructor'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -24,17 +24,26 @@ constructors:
         RequestPolicyOptions, authenticationProvider: ServiceClientCredentials)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: authenticationProvider
-          type: <xref uid="@azure/core-http.ServiceClientCredentials" />
+          type: >-
+            <xref
+            uid="@azure/core-http.credentials.serviceClientCredentials.d.ServiceClientCredentials"
+            />
           description: ''
 properties:
   - name: authenticationProvider
-    uid: '@azure/core-http.SigningPolicy.authenticationProvider'
+    uid: >-
+      @azure/core-http.policies.signingPolicy.d.SigningPolicy.authenticationProvider
     package: '@azure/core-http'
     summary: ''
     fullName: authenticationProvider
@@ -44,11 +53,14 @@ properties:
     syntax:
       content: 'authenticationProvider: ServiceClientCredentials'
       return:
-        type: <xref uid="@azure/core-http.ServiceClientCredentials" />
+        type: >-
+          <xref
+          uid="@azure/core-http.credentials.serviceClientCredentials.d.ServiceClientCredentials"
+          />
         description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.SigningPolicy.log'
+    uid: '@azure/core-http.policies.signingPolicy.d.SigningPolicy.log'
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -63,14 +75,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.SigningPolicy.sendRequest'
+    uid: '@azure/core-http.policies.signingPolicy.d.SigningPolicy.sendRequest'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -80,13 +95,16 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.SigningPolicy.shouldLog'
+    uid: '@azure/core-http.policies.signingPolicy.d.SigningPolicy.shouldLog'
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -96,13 +114,16 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
   - name: signRequest(WebResourceLike)
-    uid: '@azure/core-http.SigningPolicy.signRequest'
+    uid: '@azure/core-http.policies.signingPolicy.d.SigningPolicy.signRequest'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -112,9 +133,11 @@ methods:
       content: 'function signRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.WebResourceLike" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-http.webResource.d.WebResourceLike"
+          />&gt;
         description: ''
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

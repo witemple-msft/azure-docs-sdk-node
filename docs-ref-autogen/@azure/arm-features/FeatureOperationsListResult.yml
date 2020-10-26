@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: FeatureOperationsListResult
-uid: '@azure/arm-features.FeatureOperationsListResult'
+uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult'
 package: '@azure/arm-features'
 summary: ''
 fullName: FeatureOperationsListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-features.FeatureOperationsListResult.Array'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.Array'
     package: '@azure/arm-features'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-features.FeatureOperationsListResult.length'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.length'
     package: '@azure/arm-features'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-features.FeatureOperationsListResult.nextLink'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.nextLink'
     package: '@azure/arm-features'
     summary: The URL to use for getting the next set of results.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<FeatureResult>[])'
-    uid: '@azure/arm-features.FeatureOperationsListResult.concat'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.concat'
     package: '@azure/arm-features'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-features.FeatureResult"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-features.models.index.d.FeatureResult" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-features.FeatureOperationsListResult.concat_1'
+  - name: 'concat(FeatureResult | ConcatArray<FeatureResult>[])'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.concat_1'
     package: '@azure/arm-features'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: FeatureResult | ConcatArray<FeatureResult>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-features.models.index.d.FeatureResult" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-features.models.index.d.FeatureResult" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.copyWithin'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.copyWithin'
     package: '@azure/arm-features'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-features.FeatureOperationsListResult.entries'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.entries'
     package: '@azure/arm-features'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +143,7 @@ methods:
   - name: >-
       every((value: FeatureResult, index: number, array: FeatureResult[]) =>
       unknown, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.every'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.every_1'
     package: '@azure/arm-features'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: FeatureResult, index: number, array:
+        function every(predicate: (value: FeatureResult, index: number, array:
         FeatureResult[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FeatureResult, index: number, array: FeatureResult[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: FeatureResult, index: number, array: FeatureResult[]) =>
+      value, any)
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.every'
+    package: '@azure/arm-features'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: FeatureResult, index: number,
+        array: FeatureResult[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: FeatureResult, index: number, array: FeatureResult[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(FeatureResult, undefined | number, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.fill'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.fill'
     package: '@azure/arm-features'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-features.FeatureResult" />
+          type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +251,7 @@ methods:
   - name: >-
       filter((value: FeatureResult, index: number, array: FeatureResult[]) =>
       unknown, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.filter_1'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.filter_1'
     package: '@azure/arm-features'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +261,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: FeatureResult, index: number, array:
+        function filter(predicate: (value: FeatureResult, index: number, array:
         FeatureResult[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FeatureResult, index: number, array: FeatureResult[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
   - name: >-
       filter<S>((value: FeatureResult, index: number, array: FeatureResult[]) =>
-      boolean, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.filter'
+      value, any)
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.filter'
     package: '@azure/arm-features'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: FeatureResult, index: number,
-        array: FeatureResult[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: FeatureResult, index: number,
+        array: FeatureResult[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FeatureResult, index: number, array: FeatureResult[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +315,7 @@ methods:
   - name: >-
       find((value: FeatureResult, index: number, obj: FeatureResult[]) =>
       unknown, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.find_1'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.find_1'
     package: '@azure/arm-features'
     summary: ''
     remarks: ''
@@ -291,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-features.models.index.d.FeatureResult" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: FeatureResult, index: number, obj:
-      FeatureResult[]) => boolean, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.find'
+      FeatureResult[]) => value, any)
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.find'
     package: '@azure/arm-features'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: FeatureResult, index:
-        number, obj: FeatureResult[]) => boolean, thisArg?: any)
+        number, obj: FeatureResult[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: FeatureResult, index: number, obj:
-            FeatureResult[]) =&gt; boolean
+            FeatureResult[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: FeatureResult, index: number, obj: FeatureResult[]) =>
       unknown, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.findIndex'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.findIndex'
     package: '@azure/arm-features'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +424,7 @@ methods:
   - name: >-
       forEach((value: FeatureResult, index: number, array: FeatureResult[]) =>
       void, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.forEach'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.forEach'
     package: '@azure/arm-features'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +449,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(FeatureResult, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.includes'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.includes'
     package: '@azure/arm-features'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-features.FeatureResult" />
+          type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +474,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(FeatureResult, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.indexOf'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.indexOf'
     package: '@azure/arm-features'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +486,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-features.FeatureResult" />
+          type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +497,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-features.FeatureOperationsListResult.join'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.join'
     package: '@azure/arm-features'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +518,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-features.FeatureOperationsListResult.keys'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.keys'
     package: '@azure/arm-features'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +530,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(FeatureResult, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.lastIndexOf'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.lastIndexOf'
     package: '@azure/arm-features'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +542,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-features.FeatureResult" />
+          type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +555,7 @@ methods:
   - name: >-
       map<U>((value: FeatureResult, index: number, array: FeatureResult[]) => U,
       any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.map'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.map'
     package: '@azure/arm-features'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +585,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-features.FeatureOperationsListResult.pop'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.pop'
     package: '@azure/arm-features'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +594,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-features.models.index.d.FeatureResult" /> |
+          undefined
         description: ''
   - name: 'push(FeatureResult[])'
-    uid: '@azure/arm-features.FeatureOperationsListResult.push'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.push'
     package: '@azure/arm-features'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +609,7 @@ methods:
       content: 'function push(items: FeatureResult[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+          type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
           description: |
             New elements of the Array.
       return:
@@ -570,7 +618,7 @@ methods:
   - name: >-
       reduce((previousValue: FeatureResult, currentValue: FeatureResult,
       currentIndex: number, array: FeatureResult[]) => FeatureResult)
-    uid: '@azure/arm-features.FeatureOperationsListResult.reduce'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.reduce'
     package: '@azure/arm-features'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -594,13 +642,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" />
+        type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
         description: ''
   - name: >-
       reduce((previousValue: FeatureResult, currentValue: FeatureResult,
       currentIndex: number, array: FeatureResult[]) => FeatureResult,
       FeatureResult)
-    uid: '@azure/arm-features.FeatureOperationsListResult.reduce_1'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.reduce_1'
     package: '@azure/arm-features'
     summary: ''
     remarks: ''
@@ -618,15 +666,15 @@ methods:
             currentIndex: number, array: FeatureResult[]) =&gt; FeatureResult
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-features.FeatureResult" />
+          type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" />
+        type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: FeatureResult, currentIndex:
       number, array: FeatureResult[]) => U, U)
-    uid: '@azure/arm-features.FeatureOperationsListResult.reduce_2'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.reduce_2'
     package: '@azure/arm-features'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +709,7 @@ methods:
   - name: >-
       reduceRight((previousValue: FeatureResult, currentValue: FeatureResult,
       currentIndex: number, array: FeatureResult[]) => FeatureResult)
-    uid: '@azure/arm-features.FeatureOperationsListResult.reduceRight'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.reduceRight'
     package: '@azure/arm-features'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -686,13 +734,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" />
+        type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
         description: ''
   - name: >-
       reduceRight((previousValue: FeatureResult, currentValue: FeatureResult,
       currentIndex: number, array: FeatureResult[]) => FeatureResult,
       FeatureResult)
-    uid: '@azure/arm-features.FeatureOperationsListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-features.models.index.d.FeatureOperationsListResult.reduceRight_1
     package: '@azure/arm-features'
     summary: ''
     remarks: ''
@@ -710,15 +759,16 @@ methods:
             currentIndex: number, array: FeatureResult[]) =&gt; FeatureResult
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-features.FeatureResult" />
+          type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" />
+        type: <xref uid="@azure/arm-features.models.index.d.FeatureResult" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: FeatureResult,
       currentIndex: number, array: FeatureResult[]) => U, U)
-    uid: '@azure/arm-features.FeatureOperationsListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-features.models.index.d.FeatureOperationsListResult.reduceRight_2
     package: '@azure/arm-features'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -752,7 +802,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-features.FeatureOperationsListResult.reverse'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.reverse'
     package: '@azure/arm-features'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -761,10 +811,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-features.FeatureOperationsListResult.shift'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.shift'
     package: '@azure/arm-features'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -773,10 +823,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-features.FeatureResult" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-features.models.index.d.FeatureResult" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.slice'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.slice'
     package: '@azure/arm-features'
     summary: Returns a section of an array.
     remarks: ''
@@ -790,15 +842,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
   - name: >-
       some((value: FeatureResult, index: number, array: FeatureResult[]) =>
       unknown, any)
-    uid: '@azure/arm-features.FeatureOperationsListResult.some'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.some'
     package: '@azure/arm-features'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -808,28 +861,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: FeatureResult, index: number, array:
+        function some(predicate: (value: FeatureResult, index: number, array:
         FeatureResult[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FeatureResult, index: number, array: FeatureResult[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: FeatureResult, b: FeatureResult) => number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.sort'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.sort'
     package: '@azure/arm-features'
     summary: Sorts an array.
     remarks: ''
@@ -843,14 +901,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: FeatureResult, b: FeatureResult) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, FeatureResult[])'
-    uid: '@azure/arm-features.FeatureOperationsListResult.splice_1'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.splice_1'
     package: '@azure/arm-features'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,14 +941,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+          type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-features.FeatureOperationsListResult.splice'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.splice'
     package: '@azure/arm-features'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,10 +969,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+        type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-features.FeatureOperationsListResult.toLocaleString'
+    uid: >-
+      @azure/arm-features.models.index.d.FeatureOperationsListResult.toLocaleString
     package: '@azure/arm-features'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -917,7 +987,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-features.FeatureOperationsListResult.toString'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.toString'
     package: '@azure/arm-features'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -929,7 +999,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(FeatureResult[])'
-    uid: '@azure/arm-features.FeatureOperationsListResult.unshift'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.unshift'
     package: '@azure/arm-features'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -939,14 +1009,14 @@ methods:
       content: 'function unshift(items: FeatureResult[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-features.FeatureResult" />[]'
+          type: '<xref uid="@azure/arm-features.models.index.d.FeatureResult" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-features.FeatureOperationsListResult.values'
+    uid: '@azure/arm-features.models.index.d.FeatureOperationsListResult.values'
     package: '@azure/arm-features'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -956,7 +1026,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-features.FeatureResult"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-features.models.index.d.FeatureResult" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-features.FeatureResult" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-features.models.index.d.FeatureOperationsListResult.[Symbol.iterator]
+    package: '@azure/arm-features'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-features.models.index.d.FeatureResult" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-features.models.index.d.FeatureOperationsListResult.[Symbol.unscopables]
+    package: '@azure/arm-features'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-features.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-features.models.index.d.FeatureResult" />&gt;

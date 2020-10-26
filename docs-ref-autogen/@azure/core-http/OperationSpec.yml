@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: OperationSpec
-uid: '@azure/core-http.OperationSpec'
+uid: '@azure/core-http.operationSpec.d.OperationSpec'
 package: '@azure/core-http'
 summary: A specification that defines an operation.
 fullName: OperationSpec
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: baseUrl
-    uid: '@azure/core-http.OperationSpec.baseUrl'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.baseUrl'
     package: '@azure/core-http'
     summary: >-
       The URL that was provided in the service's specification. This will still
@@ -30,7 +30,7 @@ properties:
         type: string
         description: ''
   - name: contentType
-    uid: '@azure/core-http.OperationSpec.contentType'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.contentType'
     package: '@azure/core-http'
     summary: >-
       The content type of the request body. This value will be used as the
@@ -47,7 +47,7 @@ properties:
         type: string
         description: ''
   - name: formDataParameters
-    uid: '@azure/core-http.OperationSpec.formDataParameters'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.formDataParameters'
     package: '@azure/core-http'
     summary: >-
       The parameters to the operation method that will be used to create a
@@ -62,11 +62,11 @@ properties:
       content: 'formDataParameters?: ReadonlyArray<OperationParameter>'
       return:
         type: >-
-          ReadonlyArray&lt;<xref uid="@azure/core-http.OperationParameter"
-          />&gt;
+          ReadonlyArray&lt;<xref
+          uid="@azure/core-http.operationParameter.d.OperationParameter" />&gt;
         description: ''
   - name: headerParameters
-    uid: '@azure/core-http.OperationSpec.headerParameters'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.headerParameters'
     package: '@azure/core-http'
     summary: >-
       The parameters to the operation method that will be converted to headers
@@ -81,11 +81,11 @@ properties:
       content: 'headerParameters?: ReadonlyArray<OperationParameter>'
       return:
         type: >-
-          ReadonlyArray&lt;<xref uid="@azure/core-http.OperationParameter"
-          />&gt;
+          ReadonlyArray&lt;<xref
+          uid="@azure/core-http.operationParameter.d.OperationParameter" />&gt;
         description: ''
   - name: httpMethod
-    uid: '@azure/core-http.OperationSpec.httpMethod'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.httpMethod'
     package: '@azure/core-http'
     summary: The HTTP method that should be used by requests for this operation.
     fullName: httpMethod
@@ -95,10 +95,10 @@ properties:
     syntax:
       content: 'httpMethod: HttpMethods'
       return:
-        type: <xref uid="@azure/core-http.HttpMethods" />
+        type: <xref uid="@azure/core-http.webResource.d.HttpMethods" />
         description: ''
   - name: isXML
-    uid: '@azure/core-http.OperationSpec.isXML'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.isXML'
     package: '@azure/core-http'
     summary: Whether or not this operation uses XML request and response bodies.
     fullName: isXML
@@ -111,7 +111,7 @@ properties:
         type: boolean
         description: ''
   - name: mediaType
-    uid: '@azure/core-http.OperationSpec.mediaType'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.mediaType'
     package: '@azure/core-http'
     summary: |-
       The media type of the request body.
@@ -130,7 +130,7 @@ properties:
           | string
         description: ''
   - name: path
-    uid: '@azure/core-http.OperationSpec.path'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.path'
     package: '@azure/core-http'
     summary: >-
       The fixed path for this operation's URL. This will still have all of the
@@ -147,7 +147,7 @@ properties:
         type: string
         description: ''
   - name: queryParameters
-    uid: '@azure/core-http.OperationSpec.queryParameters'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.queryParameters'
     package: '@azure/core-http'
     summary: >-
       The parameters to the operation method that will be added to the
@@ -160,11 +160,12 @@ properties:
       content: 'queryParameters?: ReadonlyArray<OperationQueryParameter>'
       return:
         type: >-
-          ReadonlyArray&lt;<xref uid="@azure/core-http.OperationQueryParameter"
+          ReadonlyArray&lt;<xref
+          uid="@azure/core-http.operationParameter.d.OperationQueryParameter"
           />&gt;
         description: ''
   - name: requestBody
-    uid: '@azure/core-http.OperationSpec.requestBody'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.requestBody'
     package: '@azure/core-http'
     summary: The parameter that will be used to construct the HTTP request's body.
     fullName: requestBody
@@ -174,10 +175,12 @@ properties:
     syntax:
       content: 'requestBody?: OperationParameter'
       return:
-        type: <xref uid="@azure/core-http.OperationParameter" />
+        type: >-
+          <xref uid="@azure/core-http.operationParameter.d.OperationParameter"
+          />
         description: ''
   - name: responses
-    uid: '@azure/core-http.OperationSpec.responses'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.responses'
     package: '@azure/core-http'
     summary: >-
       The different types of responses that this operation can return based on
@@ -191,10 +194,12 @@ properties:
     syntax:
       content: 'responses: [key: string]: OperationResponse'
       return:
-        type: '[key: string]\: <xref uid="@azure/core-http.OperationResponse" />'
+        type: >-
+          [key: string]\: <xref
+          uid="@azure/core-http.operationResponse.d.OperationResponse" />
         description: ''
   - name: serializer
-    uid: '@azure/core-http.OperationSpec.serializer'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.serializer'
     package: '@azure/core-http'
     summary: The serializer to use in this operation.
     fullName: serializer
@@ -204,10 +209,10 @@ properties:
     syntax:
       content: 'serializer: Serializer'
       return:
-        type: <xref uid="@azure/core-http.Serializer" />
+        type: <xref uid="@azure/core-http.serializer.d.Serializer" />
         description: ''
   - name: urlParameters
-    uid: '@azure/core-http.OperationSpec.urlParameters'
+    uid: '@azure/core-http.operationSpec.d.OperationSpec.urlParameters'
     package: '@azure/core-http'
     summary: >-
       The parameters to the operation method that will be substituted into the
@@ -220,6 +225,7 @@ properties:
       content: 'urlParameters?: ReadonlyArray<OperationURLParameter>'
       return:
         type: >-
-          ReadonlyArray&lt;<xref uid="@azure/core-http.OperationURLParameter"
+          ReadonlyArray&lt;<xref
+          uid="@azure/core-http.operationParameter.d.OperationURLParameter"
           />&gt;
         description: ''

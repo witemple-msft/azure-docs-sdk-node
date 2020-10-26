@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: QueryIterator
-uid: '@azure/cosmos.QueryIterator'
+uid: '@azure/cosmos.index.d.QueryIterator'
 package: '@azure/cosmos'
 summary: >-
   Represents a QueryIterator Object, an implementation of feed or query response
@@ -16,7 +16,7 @@ isDeprecated: false
 type: class
 methods:
   - name: fetchAll()
-    uid: '@azure/cosmos.QueryIterator.fetchAll'
+    uid: '@azure/cosmos.index.d.QueryIterator.fetchAll'
     package: '@azure/cosmos'
     summary: Fetch all pages for the query and return a single FeedResponse.
     remarks: ''
@@ -25,10 +25,12 @@ methods:
     syntax:
       content: function fetchAll()
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.FeedResponse" />&lt;T&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/cosmos.index.d.FeedResponse"
+          />&lt;T&gt;&gt;
         description: ''
   - name: fetchNext()
-    uid: '@azure/cosmos.QueryIterator.fetchNext'
+    uid: '@azure/cosmos.index.d.QueryIterator.fetchNext'
     package: '@azure/cosmos'
     summary: >
       Retrieve the next batch from the feed.
@@ -46,10 +48,12 @@ methods:
     syntax:
       content: function fetchNext()
       return:
-        type: Promise&lt;<xref uid="@azure/cosmos.FeedResponse" />&lt;T&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/cosmos.index.d.FeedResponse"
+          />&lt;T&gt;&gt;
         description: ''
   - name: getAsyncIterator()
-    uid: '@azure/cosmos.QueryIterator.getAsyncIterator'
+    uid: '@azure/cosmos.index.d.QueryIterator.getAsyncIterator'
     package: '@azure/cosmos'
     summary: |
       Gets an async iterator that will yield results until completion.
@@ -71,11 +75,11 @@ methods:
       content: function getAsyncIterator()
       return:
         type: >-
-          AsyncIterable&lt;<xref uid="@azure/cosmos.FeedResponse"
+          AsyncIterable&lt;<xref uid="@azure/cosmos.index.d.FeedResponse"
           />&lt;T&gt;&gt;
         description: ''
   - name: hasMoreResults()
-    uid: '@azure/cosmos.QueryIterator.hasMoreResults'
+    uid: '@azure/cosmos.index.d.QueryIterator.hasMoreResults'
     package: '@azure/cosmos'
     summary: >-
       Determine if there are still remaining resources to processs based on the
@@ -91,7 +95,7 @@ methods:
         type: boolean
         description: true if there is other elements to process in the QueryIterator.
   - name: reset()
-    uid: '@azure/cosmos.QueryIterator.reset'
+    uid: '@azure/cosmos.index.d.QueryIterator.reset'
     package: '@azure/cosmos'
     summary: >-
       Reset the QueryIterator to the beginning and clear all the resources

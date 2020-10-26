@@ -4,478 +4,667 @@ name: microsoft-cognitiveservices-speech-sdk
 summary: ''
 type: package
 classes:
-  - microsoft-cognitiveservices-speech-sdk.Agent
-  - microsoft-cognitiveservices-speech-sdk.request
-  - microsoft-cognitiveservices-speech-sdk.utils
-  - microsoft-cognitiveservices-speech-sdk.CertCheckAgent
-  - microsoft-cognitiveservices-speech-sdk.ConsoleLoggingListener
-  - microsoft-cognitiveservices-speech-sdk.FileAudioSource
-  - microsoft-cognitiveservices-speech-sdk.MicAudioSource
-  - microsoft-cognitiveservices-speech-sdk.PcmRecorder
-  - microsoft-cognitiveservices-speech-sdk.ProxyInfo
-  - microsoft-cognitiveservices-speech-sdk.ReplayableAudioNode
-  - microsoft-cognitiveservices-speech-sdk.RestConfigBase
-  - microsoft-cognitiveservices-speech-sdk.RestMessageAdapter
-  - microsoft-cognitiveservices-speech-sdk.WebsocketConnection
-  - microsoft-cognitiveservices-speech-sdk.WebsocketMessageAdapter
-  - microsoft-cognitiveservices-speech-sdk.AddedLmIntent
-  - microsoft-cognitiveservices-speech-sdk.AgentConfig
+  - microsoft-cognitiveservices-speech-sdk.external.ocsp.ocsp.d.Agent
+  - microsoft-cognitiveservices-speech-sdk.external.ocsp.ocsp.d.request
+  - microsoft-cognitiveservices-speech-sdk.external.ocsp.ocsp.d.utils
   - >-
-    microsoft-cognitiveservices-speech-sdk.CognitiveSubscriptionKeyAuthentication
-  - microsoft-cognitiveservices-speech-sdk.CognitiveTokenAuthentication
-  - microsoft-cognitiveservices-speech-sdk.ConnectionFactoryBase
-  - microsoft-cognitiveservices-speech-sdk.DialogConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.DialogServiceAdapter
-  - microsoft-cognitiveservices-speech-sdk.DialogServiceTurnState
-  - microsoft-cognitiveservices-speech-sdk.DialogServiceTurnStateManager
-  - microsoft-cognitiveservices-speech-sdk.DynamicGrammarBuilder
-  - microsoft-cognitiveservices-speech-sdk.EnumTranslation
-  - microsoft-cognitiveservices-speech-sdk.AuthInfo
-  - microsoft-cognitiveservices-speech-sdk.IntentConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.IntentServiceRecognizer
-  - microsoft-cognitiveservices-speech-sdk.QueryParameterNames
-  - microsoft-cognitiveservices-speech-sdk.ConnectingToServiceEvent
-  - microsoft-cognitiveservices-speech-sdk.ListeningStartedEvent
-  - microsoft-cognitiveservices-speech-sdk.RecognitionEndedEvent
-  - microsoft-cognitiveservices-speech-sdk.RecognitionStartedEvent
-  - microsoft-cognitiveservices-speech-sdk.RecognitionTriggeredEvent
-  - microsoft-cognitiveservices-speech-sdk.SpeechRecognitionEvent
-  - microsoft-cognitiveservices-speech-sdk.Context
-  - microsoft-cognitiveservices-speech-sdk.Device
-  - microsoft-cognitiveservices-speech-sdk.OS
-  - microsoft-cognitiveservices-speech-sdk.RecognizerConfig
-  - microsoft-cognitiveservices-speech-sdk.SpeechServiceConfig
-  - microsoft-cognitiveservices-speech-sdk.System
-  - microsoft-cognitiveservices-speech-sdk.RequestSession
-  - microsoft-cognitiveservices-speech-sdk.ActivityPayloadResponse
-  - microsoft-cognitiveservices-speech-sdk.DetailedSpeechPhrase
-  - microsoft-cognitiveservices-speech-sdk.IntentResponse
-  - microsoft-cognitiveservices-speech-sdk.SimpleSpeechPhrase
-  - microsoft-cognitiveservices-speech-sdk.SpeechDetected
-  - microsoft-cognitiveservices-speech-sdk.SpeechHypothesis
-  - microsoft-cognitiveservices-speech-sdk.SynthesisAudioMetadata
-  - microsoft-cognitiveservices-speech-sdk.TranslationHypothesis
-  - microsoft-cognitiveservices-speech-sdk.TranslationPhrase
-  - microsoft-cognitiveservices-speech-sdk.TranslationSynthesisEnd
-  - microsoft-cognitiveservices-speech-sdk.ServiceRecognizerBase
-  - microsoft-cognitiveservices-speech-sdk.ServiceTelemetryListener
-  - microsoft-cognitiveservices-speech-sdk.SpeakerIdMessageAdapter
-  - microsoft-cognitiveservices-speech-sdk.SpeakerRecognitionConfig
-  - microsoft-cognitiveservices-speech-sdk.SpeechConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.SpeechConnectionMessage
-  - microsoft-cognitiveservices-speech-sdk.SpeechContext
-  - microsoft-cognitiveservices-speech-sdk.SpeechServiceRecognizer
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesisConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.SynthesisAdapterBase
-  - microsoft-cognitiveservices-speech-sdk.SynthesisContext
-  - microsoft-cognitiveservices-speech-sdk.ConnectingToSynthesisServiceEvent
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesisEvent
-  - microsoft-cognitiveservices-speech-sdk.SynthesisStartedEvent
-  - microsoft-cognitiveservices-speech-sdk.SynthesisTriggeredEvent
-  - microsoft-cognitiveservices-speech-sdk.SynthesisTurn
-  - microsoft-cognitiveservices-speech-sdk.SynthesizerConfig
-  - microsoft-cognitiveservices-speech-sdk.ConversationConnectionConfig
-  - microsoft-cognitiveservices-speech-sdk.ConversationConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.ConversationConnectionMessage
-  - microsoft-cognitiveservices-speech-sdk.ConversationManager
-  - microsoft-cognitiveservices-speech-sdk.ConversationRequestSession
-  - microsoft-cognitiveservices-speech-sdk.ConversationServiceAdapter
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.CertChecks.d.CertCheckAgent
   - >-
-    microsoft-cognitiveservices-speech-sdk.ConversationReceivedTranslationEventArgs
-  - microsoft-cognitiveservices-speech-sdk.LockRoomEventArgs
-  - microsoft-cognitiveservices-speech-sdk.MuteAllEventArgs
-  - microsoft-cognitiveservices-speech-sdk.ParticipantAttributeEventArgs
-  - microsoft-cognitiveservices-speech-sdk.ParticipantEventArgs
-  - microsoft-cognitiveservices-speech-sdk.ParticipantsListEventArgs
-  - microsoft-cognitiveservices-speech-sdk.InternalParticipants
-  - microsoft-cognitiveservices-speech-sdk.ConversationTranslatorRecognizer
-  - microsoft-cognitiveservices-speech-sdk.ConversationWebsocketMessageFormatter
-  - microsoft-cognitiveservices-speech-sdk.CommandResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.ParticipantPayloadResponse
-  - microsoft-cognitiveservices-speech-sdk.ParticipantsListPayloadResponse
-  - microsoft-cognitiveservices-speech-sdk.SpeechResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.TextResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.TranslationConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.TranslationServiceRecognizer
-  - microsoft-cognitiveservices-speech-sdk.WebsocketMessageFormatter
-  - microsoft-cognitiveservices-speech-sdk.AudioSourceErrorEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioSourceEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioSourceInitializingEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioSourceOffEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioSourceReadyEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioStreamNodeAttachedEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioStreamNodeAttachingEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioStreamNodeDetachedEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioStreamNodeErrorEvent
-  - microsoft-cognitiveservices-speech-sdk.AudioStreamNodeEvent
-  - microsoft-cognitiveservices-speech-sdk.ChunkedArrayBufferStream
-  - microsoft-cognitiveservices-speech-sdk.ConnectionClosedEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionErrorEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionEstablishErrorEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionEstablishedEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionMessageReceivedEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionMessageSentEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionStartEvent
-  - microsoft-cognitiveservices-speech-sdk.ServiceEvent
-  - microsoft-cognitiveservices-speech-sdk.ConnectionMessage
-  - microsoft-cognitiveservices-speech-sdk.ConnectionOpenResponse
-  - microsoft-cognitiveservices-speech-sdk.ArgumentNullError
-  - microsoft-cognitiveservices-speech-sdk.InvalidOperationError
-  - microsoft-cognitiveservices-speech-sdk.ObjectDisposedError
-  - microsoft-cognitiveservices-speech-sdk.EventSource
-  - microsoft-cognitiveservices-speech-sdk.Events
-  - microsoft-cognitiveservices-speech-sdk.List
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheEntryExpiredEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheEntryNeedsRefreshEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheFetchErrorEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheHitEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheMissEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheUpdateErrorEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheUpdateNeededEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPCacheUpdatehCompleteEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPDiskCacheHitEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPDiskCacheStoreEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPMemoryCacheHitEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPMemoryCacheStoreEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPResponseRetrievedEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPStapleReceivedEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPVerificationFailedEvent
-  - microsoft-cognitiveservices-speech-sdk.OCSPWSUpgradeStartedEvent
-  - microsoft-cognitiveservices-speech-sdk.PlatformEvent
-  - microsoft-cognitiveservices-speech-sdk.Deferred
-  - microsoft-cognitiveservices-speech-sdk.Promise
-  - microsoft-cognitiveservices-speech-sdk.PromiseHelper
-  - microsoft-cognitiveservices-speech-sdk.PromiseResult
-  - microsoft-cognitiveservices-speech-sdk.PromiseResultEventSource
-  - microsoft-cognitiveservices-speech-sdk.Sink
-  - microsoft-cognitiveservices-speech-sdk.Queue
-  - microsoft-cognitiveservices-speech-sdk.RawWebsocketMessage
-  - microsoft-cognitiveservices-speech-sdk.RiffPcmEncoder
-  - microsoft-cognitiveservices-speech-sdk.Stream
-  - microsoft-cognitiveservices-speech-sdk.Timeout
-  - microsoft-cognitiveservices-speech-sdk.ActivityReceivedEventArgs
-  - microsoft-cognitiveservices-speech-sdk.AudioConfig
-  - microsoft-cognitiveservices-speech-sdk.AudioOutputConfigImpl
-  - microsoft-cognitiveservices-speech-sdk.AudioFileWriter
-  - microsoft-cognitiveservices-speech-sdk.AudioInputStream
-  - microsoft-cognitiveservices-speech-sdk.PullAudioInputStream
-  - microsoft-cognitiveservices-speech-sdk.PushAudioInputStream
-  - microsoft-cognitiveservices-speech-sdk.AudioOutputStream
-  - microsoft-cognitiveservices-speech-sdk.PullAudioOutputStream
-  - microsoft-cognitiveservices-speech-sdk.PushAudioOutputStream
-  - microsoft-cognitiveservices-speech-sdk.AudioStreamFormat
-  - microsoft-cognitiveservices-speech-sdk.BaseAudioPlayer
-  - microsoft-cognitiveservices-speech-sdk.PullAudioInputStreamCallback
-  - microsoft-cognitiveservices-speech-sdk.PushAudioOutputStreamCallback
-  - microsoft-cognitiveservices-speech-sdk.SpeakerAudioDestination
-  - microsoft-cognitiveservices-speech-sdk.AutoDetectSourceLanguageConfig
-  - microsoft-cognitiveservices-speech-sdk.AutoDetectSourceLanguageResult
-  - microsoft-cognitiveservices-speech-sdk.BotFrameworkConfig
-  - microsoft-cognitiveservices-speech-sdk.CancellationDetails
-  - microsoft-cognitiveservices-speech-sdk.CancellationDetailsBase
-  - microsoft-cognitiveservices-speech-sdk.Connection
-  - microsoft-cognitiveservices-speech-sdk.ConnectionEventArgs
-  - microsoft-cognitiveservices-speech-sdk.ConnectionMessage
-  - microsoft-cognitiveservices-speech-sdk.ConnectionMessageImpl
-  - microsoft-cognitiveservices-speech-sdk.ConnectionMessageEventArgs
-  - microsoft-cognitiveservices-speech-sdk.CustomCommandsConfig
-  - microsoft-cognitiveservices-speech-sdk.DialogServiceConfig
-  - microsoft-cognitiveservices-speech-sdk.DialogServiceConfigImpl
-  - microsoft-cognitiveservices-speech-sdk.DialogServiceConnector
-  - microsoft-cognitiveservices-speech-sdk.IntentRecognitionCanceledEventArgs
-  - microsoft-cognitiveservices-speech-sdk.IntentRecognitionEventArgs
-  - microsoft-cognitiveservices-speech-sdk.IntentRecognitionResult
-  - microsoft-cognitiveservices-speech-sdk.IntentRecognizer
-  - microsoft-cognitiveservices-speech-sdk.KeywordRecognitionModel
-  - microsoft-cognitiveservices-speech-sdk.LanguageUnderstandingModel
-  - microsoft-cognitiveservices-speech-sdk.NoMatchDetails
-  - microsoft-cognitiveservices-speech-sdk.PhraseListGrammar
-  - microsoft-cognitiveservices-speech-sdk.PropertyCollection
-  - microsoft-cognitiveservices-speech-sdk.RecognitionEventArgs
-  - microsoft-cognitiveservices-speech-sdk.RecognitionResult
-  - microsoft-cognitiveservices-speech-sdk.Recognizer
-  - microsoft-cognitiveservices-speech-sdk.ServiceEventArgs
-  - microsoft-cognitiveservices-speech-sdk.SessionEventArgs
-  - microsoft-cognitiveservices-speech-sdk.SourceLanguageConfig
-  - microsoft-cognitiveservices-speech-sdk.SpeakerIdentificationModel
-  - microsoft-cognitiveservices-speech-sdk.SpeakerRecognitionCancellationDetails
-  - microsoft-cognitiveservices-speech-sdk.SpeakerRecognitionResult
-  - microsoft-cognitiveservices-speech-sdk.SpeakerRecognizer
-  - microsoft-cognitiveservices-speech-sdk.SpeakerVerificationModel
-  - microsoft-cognitiveservices-speech-sdk.SpeechConfig
-  - microsoft-cognitiveservices-speech-sdk.SpeechConfigImpl
-  - microsoft-cognitiveservices-speech-sdk.SpeechRecognitionCanceledEventArgs
-  - microsoft-cognitiveservices-speech-sdk.SpeechRecognitionEventArgs
-  - microsoft-cognitiveservices-speech-sdk.SpeechRecognitionResult
-  - microsoft-cognitiveservices-speech-sdk.SpeechRecognizer
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesisEventArgs
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesisResult
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesisWordBoundaryEventArgs
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesizer
-  - microsoft-cognitiveservices-speech-sdk.SynthesisRequest
-  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
-  - microsoft-cognitiveservices-speech-sdk.Conversation
-  - microsoft-cognitiveservices-speech-sdk.ConversationImpl
-  - microsoft-cognitiveservices-speech-sdk.ConversationExpirationEventArgs
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.ConsoleLoggingListener.d.ConsoleLoggingListener
   - >-
-    microsoft-cognitiveservices-speech-sdk.ConversationParticipantsChangedEventArgs
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.FileAudioSource.d.FileAudioSource
   - >-
-    microsoft-cognitiveservices-speech-sdk.ConversationTranslationCanceledEventArgs
-  - microsoft-cognitiveservices-speech-sdk.ConversationTranslationEventArgs
-  - microsoft-cognitiveservices-speech-sdk.ConversationTranslationResult
-  - microsoft-cognitiveservices-speech-sdk.ConversationTranslator
-  - microsoft-cognitiveservices-speech-sdk.Participant
-  - microsoft-cognitiveservices-speech-sdk.User
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.MicAudioSource.d.MicAudioSource
   - >-
-    microsoft-cognitiveservices-speech-sdk.TranslationRecognitionCanceledEventArgs
-  - microsoft-cognitiveservices-speech-sdk.TranslationRecognitionEventArgs
-  - microsoft-cognitiveservices-speech-sdk.TranslationRecognitionResult
-  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer
-  - microsoft-cognitiveservices-speech-sdk.TranslationSynthesisEventArgs
-  - microsoft-cognitiveservices-speech-sdk.TranslationSynthesisResult
-  - microsoft-cognitiveservices-speech-sdk.Translations
-  - microsoft-cognitiveservices-speech-sdk.VoiceProfile
-  - microsoft-cognitiveservices-speech-sdk.VoiceProfileClient
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.PCMRecorder.d.PcmRecorder
   - >-
-    microsoft-cognitiveservices-speech-sdk.VoiceProfileEnrollmentCancellationDetails
-  - microsoft-cognitiveservices-speech-sdk.VoiceProfileEnrollmentResult
-  - microsoft-cognitiveservices-speech-sdk.VoiceProfileCancellationDetails
-  - microsoft-cognitiveservices-speech-sdk.VoiceProfileResult
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.ProxyInfo.d.ProxyInfo
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.ReplayableAudioNode.d.ReplayableAudioNode
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.RestConfigBase.d.RestConfigBase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.RestMessageAdapter.d.RestMessageAdapter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.WebsocketConnection.d.WebsocketConnection
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.WebsocketMessageAdapter.d.WebsocketMessageAdapter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.AddedLmIntent.d.AddedLmIntent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.AgentConfig.d.AgentConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.CognitiveSubscriptionKeyAuthentication.d.CognitiveSubscriptionKeyAuthentication
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.CognitiveTokenAuthentication.d.CognitiveTokenAuthentication
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ConnectionFactoryBase.d.ConnectionFactoryBase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DialogConnectorFactory.d.DialogConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DialogServiceAdapter.d.DialogServiceAdapter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DialogServiceTurnState.d.DialogServiceTurnState
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DialogServiceTurnStateManager.d.DialogServiceTurnStateManager
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DynamicGrammarBuilder.d.DynamicGrammarBuilder
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.EnumTranslation.d.EnumTranslation
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.IAuthentication.d.AuthInfo
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.IntentConnectionFactory.d.IntentConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.IntentServiceRecognizer.d.IntentServiceRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.QueryParameterNames.d.QueryParameterNames
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.ConnectingToServiceEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.ListeningStartedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.RecognitionEndedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.RecognitionStartedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.RecognitionTriggeredEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.SpeechRecognitionEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.Context
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.Device
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.OS
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.RecognizerConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.SpeechServiceConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.System
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RequestSession.d.RequestSession
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.ActivityResponsePayload.d.ActivityPayloadResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.DetailedSpeechPhrase.d.DetailedSpeechPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.IntentResponse.d.IntentResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SimpleSpeechPhrase.d.SimpleSpeechPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SpeechDetected.d.SpeechDetected
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SpeechHypothesis.d.SpeechHypothesis
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SynthesisAudioMetadata.d.SynthesisAudioMetadata
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.TranslationHypothesis.d.TranslationHypothesis
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.TranslationPhrase.d.TranslationPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.TranslationSynthesisEnd.d.TranslationSynthesisEnd
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceRecognizerBase.d.ServiceRecognizerBase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceTelemetryListener.Internal.d.ServiceTelemetryListener
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeakerIdMessageAdapter.d.SpeakerIdMessageAdapter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeakerRecognitionConfig.d.SpeakerRecognitionConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechConnectionFactory.d.SpeechConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechConnectionMessage.Internal.d.SpeechConnectionMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechContext.d.SpeechContext
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceRecognizer.d.SpeechServiceRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechSynthesisConnectionFactory.d.SpeechSynthesisConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisAdapterBase.d.SynthesisAdapterBase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisContext.d.SynthesisContext
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisEvents.d.ConnectingToSynthesisServiceEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisEvents.d.SpeechSynthesisEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisEvents.d.SynthesisStartedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisEvents.d.SynthesisTriggeredEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisTurn.d.SynthesisTurn
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesizerConfig.d.SynthesizerConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationConnectionConfig.d.ConversationConnectionConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationConnectionFactory.d.ConversationConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationConnectionMessage.d.ConversationConnectionMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationManager.d.ConversationManager
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationRequestSession.d.ConversationRequestSession
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationServiceAdapter.d.ConversationServiceAdapter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorEventArgs.d.ConversationReceivedTranslationEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorEventArgs.d.LockRoomEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorEventArgs.d.MuteAllEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorEventArgs.d.ParticipantAttributeEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorEventArgs.d.ParticipantEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorEventArgs.d.ParticipantsListEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.InternalParticipants
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorRecognizer.d.ConversationTranslatorRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationWebsocketMessageFormatter.d.ConversationWebsocketMessageFormatter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.CommandResponsePayload.d.CommandResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.ParticipantResponsePayload.d.ParticipantPayloadResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.ParticipantResponsePayload.d.ParticipantsListPayloadResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.TranslationResponsePayload.d.SpeechResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.TranslationResponsePayload.d.TextResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.TranslationConnectionFactory.d.TranslationConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.TranslationServiceRecognizer.d.TranslationServiceRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.WebsocketMessageFormatter.d.WebsocketMessageFormatter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioSourceErrorEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioSourceEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioSourceInitializingEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioSourceOffEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioSourceReadyEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioStreamNodeAttachedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioStreamNodeAttachingEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioStreamNodeDetachedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioStreamNodeErrorEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.AudioSourceEvents.d.AudioStreamNodeEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ChunkedArrayBufferStream.d.ChunkedArrayBufferStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionClosedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionErrorEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionEstablishedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionEstablishErrorEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionMessageReceivedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionMessageSentEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ConnectionStartEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionEvents.d.ServiceEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionMessage.d.ConnectionMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionOpenResponse.d.ConnectionOpenResponse
+  - microsoft-cognitiveservices-speech-sdk.src.common.Error.d.ArgumentNullError
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.Error.d.InvalidOperationError
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.Error.d.ObjectDisposedError
+  - microsoft-cognitiveservices-speech-sdk.src.common.EventSource.d.EventSource
+  - microsoft-cognitiveservices-speech-sdk.src.common.Events.d.Events
+  - microsoft-cognitiveservices-speech-sdk.src.common.List.d.List
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheEntryExpiredEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheEntryNeedsRefreshEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheFetchErrorEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheHitEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheMissEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheUpdateErrorEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheUpdatehCompleteEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPCacheUpdateNeededEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPDiskCacheHitEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPDiskCacheStoreEvent
+  - microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPMemoryCacheHitEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPMemoryCacheStoreEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPResponseRetrievedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPStapleReceivedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPVerificationFailedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.OCSPEvents.d.OCSPWSUpgradeStartedEvent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.PlatformEvent.d.PlatformEvent
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.Deferred
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.Promise
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.PromiseHelper
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.PromiseResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.PromiseResultEventSource
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.Sink
+  - microsoft-cognitiveservices-speech-sdk.src.common.Queue.d.Queue
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.RawWebsocketMessage.d.RawWebsocketMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.RiffPcmEncoder.d.RiffPcmEncoder
+  - microsoft-cognitiveservices-speech-sdk.src.common.Stream.d.Stream
+  - microsoft-cognitiveservices-speech-sdk.src.common.Timeout.d.Timeout
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ActivityReceivedEventArgs.d.ActivityReceivedEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioConfig.d.AudioConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioConfig.d.AudioOutputConfigImpl
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioFileWriter.d.AudioFileWriter
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioInputStream.d.AudioInputStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioInputStream.d.PullAudioInputStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioInputStream.d.PushAudioInputStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioOutputStream.d.AudioOutputStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioOutputStream.d.PullAudioOutputStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioOutputStream.d.PushAudioOutputStream
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioStreamFormat.d.AudioStreamFormat
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.BaseAudioPlayer.d.BaseAudioPlayer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.PullAudioInputStreamCallback.d.PullAudioInputStreamCallback
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.PushAudioOutputStreamCallback.d.PushAudioOutputStreamCallback
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.SpeakerAudioDestination.d.SpeakerAudioDestination
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.AutoDetectSourceLanguageConfig.d.AutoDetectSourceLanguageConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.AutoDetectSourceLanguageResult.d.AutoDetectSourceLanguageResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.BotFrameworkConfig.d.BotFrameworkConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.CancellationDetails.d.CancellationDetails
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.CancellationDetailsBase.d.CancellationDetailsBase
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.Connection.d.Connection
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ConnectionEventArgs.d.ConnectionEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ConnectionMessage.d.ConnectionMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ConnectionMessage.d.ConnectionMessageImpl
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ConnectionMessageEventArgs.d.ConnectionMessageEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.CustomCommandsConfig.d.CustomCommandsConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.DialogServiceConfig.d.DialogServiceConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.DialogServiceConfig.d.DialogServiceConfigImpl
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.DialogServiceConnector.d.DialogServiceConnector
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.IntentRecognitionCanceledEventArgs.d.IntentRecognitionCanceledEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.IntentRecognitionEventArgs.d.IntentRecognitionEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.IntentRecognitionResult.d.IntentRecognitionResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.IntentRecognizer.d.IntentRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.KeywordRecognitionModel.d.KeywordRecognitionModel
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.LanguageUnderstandingModel.d.LanguageUnderstandingModel
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.NoMatchDetails.d.NoMatchDetails
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.PhraseListGrammar.d.PhraseListGrammar
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.PropertyCollection.d.PropertyCollection
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.RecognitionEventArgs.d.RecognitionEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.RecognitionResult.d.RecognitionResult
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.Recognizer.d.Recognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ServiceEventArgs.d.ServiceEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SessionEventArgs.d.SessionEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SourceLanguageConfig.d.SourceLanguageConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeakerIdentificationModel.d.SpeakerIdentificationModel
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeakerRecognitionResult.d.SpeakerRecognitionCancellationDetails
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeakerRecognitionResult.d.SpeakerRecognitionResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeakerRecognizer.d.SpeakerRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeakerVerificationModel.d.SpeakerVerificationModel
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechConfig.d.SpeechConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechConfig.d.SpeechConfigImpl
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechRecognitionCanceledEventArgs.d.SpeechRecognitionCanceledEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechRecognitionEventArgs.d.SpeechRecognitionEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechRecognitionResult.d.SpeechRecognitionResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechRecognizer.d.SpeechRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechSynthesisEventArgs.d.SpeechSynthesisEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechSynthesisResult.d.SpeechSynthesisResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechSynthesisWordBoundaryEventArgs.d.SpeechSynthesisWordBoundaryEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechSynthesizer.d.SpeechSynthesizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechSynthesizer.d.SynthesisRequest
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechTranslationConfig.d.SpeechTranslationConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.Conversation.d.Conversation
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.Conversation.d.ConversationImpl
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationExpirationEventArgs.d.ConversationExpirationEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationParticipantsChangedEventArgs.d.ConversationParticipantsChangedEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationTranslationCanceledEventArgs.d.ConversationTranslationCanceledEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationTranslationEventArgs.d.ConversationTranslationEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationTranslationResult.d.ConversationTranslationResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationTranslator.d.ConversationTranslator
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IParticipant.d.Participant
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IParticipant.d.User
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.TranslationRecognitionCanceledEventArgs.d.TranslationRecognitionCanceledEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.TranslationRecognitionEventArgs.d.TranslationRecognitionEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.TranslationRecognitionResult.d.TranslationRecognitionResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.TranslationRecognizer.d.TranslationRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.TranslationSynthesisEventArgs.d.TranslationSynthesisEventArgs
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.TranslationSynthesisResult.d.TranslationSynthesisResult
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.Translations.d.Translations
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfile.d.VoiceProfile
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileClient.d.VoiceProfileClient
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileEnrollmentResult.d.VoiceProfileEnrollmentCancellationDetails
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileEnrollmentResult.d.VoiceProfileEnrollmentResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileResult.d.VoiceProfileCancellationDetails
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileResult.d.VoiceProfileResult
 interfaces:
-  - microsoft-cognitiveservices-speech-sdk.Request
-  - microsoft-cognitiveservices-speech-sdk.Response
-  - microsoft-cognitiveservices-speech-sdk.VerifyOptions
-  - microsoft-cognitiveservices-speech-sdk.IRecorder
-  - microsoft-cognitiveservices-speech-sdk.IRequestOptions
-  - microsoft-cognitiveservices-speech-sdk.IRestParams
-  - microsoft-cognitiveservices-speech-sdk.IRestResponse
-  - microsoft-cognitiveservices-speech-sdk.IAgentConfig
-  - microsoft-cognitiveservices-speech-sdk.IDynamicGrammar
-  - microsoft-cognitiveservices-speech-sdk.IDynamicGrammarGeneric
-  - microsoft-cognitiveservices-speech-sdk.IDynamicGrammarGroup
-  - microsoft-cognitiveservices-speech-sdk.IDynamicGrammarPeople
-  - microsoft-cognitiveservices-speech-sdk.IAuthentication
-  - microsoft-cognitiveservices-speech-sdk.IConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.ISynthesisConnectionFactory
-  - microsoft-cognitiveservices-speech-sdk.ISpeechConfigAudio
-  - microsoft-cognitiveservices-speech-sdk.ISpeechConfigAudioDevice
-  - microsoft-cognitiveservices-speech-sdk.IActivityPayloadResponse
-  - microsoft-cognitiveservices-speech-sdk.IDetailedSpeechPhrase
-  - microsoft-cognitiveservices-speech-sdk.IPhrase
-  - microsoft-cognitiveservices-speech-sdk.IIntentEntity
-  - microsoft-cognitiveservices-speech-sdk.IIntentResponse
-  - microsoft-cognitiveservices-speech-sdk.ISingleIntent
-  - microsoft-cognitiveservices-speech-sdk.IPrimaryLanguage
-  - microsoft-cognitiveservices-speech-sdk.ISimpleSpeechPhrase
-  - microsoft-cognitiveservices-speech-sdk.ISpeechDetected
-  - microsoft-cognitiveservices-speech-sdk.ISpeechHypothesis
-  - microsoft-cognitiveservices-speech-sdk.ISynthesisAudioMetadata
-  - microsoft-cognitiveservices-speech-sdk.ISynthesisMetadata
-  - microsoft-cognitiveservices-speech-sdk.ITranslationHypothesis
-  - microsoft-cognitiveservices-speech-sdk.ITranslationPhrase
-  - microsoft-cognitiveservices-speech-sdk.ITranslationSynthesisEnd
-  - microsoft-cognitiveservices-speech-sdk.IMetric
-  - microsoft-cognitiveservices-speech-sdk.ITelemetry
-  - microsoft-cognitiveservices-speech-sdk.IResultErrorDetails
-  - microsoft-cognitiveservices-speech-sdk.ISpeechEndDetectedResult
-  - microsoft-cognitiveservices-speech-sdk.ITranslation
-  - microsoft-cognitiveservices-speech-sdk.ITranslations
-  - microsoft-cognitiveservices-speech-sdk.ITurnStart
-  - microsoft-cognitiveservices-speech-sdk.ITurnStartContext
-  - microsoft-cognitiveservices-speech-sdk.ISynthesisResponse
-  - microsoft-cognitiveservices-speech-sdk.ISynthesisResponseAudio
-  - microsoft-cognitiveservices-speech-sdk.ISynthesisResponseContext
-  - microsoft-cognitiveservices-speech-sdk.IChangeNicknameCommand
-  - microsoft-cognitiveservices-speech-sdk.IClientMessage
-  - microsoft-cognitiveservices-speech-sdk.ICommandMessage
-  - microsoft-cognitiveservices-speech-sdk.IConversationResponseError
-  - microsoft-cognitiveservices-speech-sdk.IConversationResponseErrorMessage
-  - microsoft-cognitiveservices-speech-sdk.IConversationTranslatorRecognizer
-  - microsoft-cognitiveservices-speech-sdk.IEjectParticipantCommand
-  - microsoft-cognitiveservices-speech-sdk.IInstantMessageCommand
-  - microsoft-cognitiveservices-speech-sdk.IInternalConversation
-  - microsoft-cognitiveservices-speech-sdk.IInternalParticipant
-  - microsoft-cognitiveservices-speech-sdk.ILockConversationCommand
-  - microsoft-cognitiveservices-speech-sdk.IMuteAllCommand
-  - microsoft-cognitiveservices-speech-sdk.IMuteCommand
-  - microsoft-cognitiveservices-speech-sdk.IResponse
-  - microsoft-cognitiveservices-speech-sdk.ICommandResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.IParticipantPayloadResponse
-  - microsoft-cognitiveservices-speech-sdk.IParticipantsListPayloadResponse
-  - microsoft-cognitiveservices-speech-sdk.ISpeechResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.ITextResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.ITranslationCommandMessage
-  - microsoft-cognitiveservices-speech-sdk.ITranslationResponsePayload
-  - microsoft-cognitiveservices-speech-sdk.IAudioDestination
-  - microsoft-cognitiveservices-speech-sdk.IAudioSource
-  - microsoft-cognitiveservices-speech-sdk.IAudioStreamNode
-  - microsoft-cognitiveservices-speech-sdk.IConnection
-  - microsoft-cognitiveservices-speech-sdk.IDetachable
-  - microsoft-cognitiveservices-speech-sdk.INumberDictionary
-  - microsoft-cognitiveservices-speech-sdk.IStringDictionary
-  - microsoft-cognitiveservices-speech-sdk.IDisposable
-  - microsoft-cognitiveservices-speech-sdk.IErrorMessages
-  - microsoft-cognitiveservices-speech-sdk.IEventListener
-  - microsoft-cognitiveservices-speech-sdk.IEventSource
-  - microsoft-cognitiveservices-speech-sdk.ITimer
-  - microsoft-cognitiveservices-speech-sdk.IWebsocketMessageFormatter
-  - microsoft-cognitiveservices-speech-sdk.IList
-  - microsoft-cognitiveservices-speech-sdk.IDeferred
-  - microsoft-cognitiveservices-speech-sdk.IPromise
-  - microsoft-cognitiveservices-speech-sdk.IQueue
-  - microsoft-cognitiveservices-speech-sdk.IStreamChunk
-  - microsoft-cognitiveservices-speech-sdk.IWorkerTimers
-  - microsoft-cognitiveservices-speech-sdk.IPlayer
-  - microsoft-cognitiveservices-speech-sdk.IConversation
-  - microsoft-cognitiveservices-speech-sdk.IConversationTranslator
-  - microsoft-cognitiveservices-speech-sdk.IParticipant
-  - microsoft-cognitiveservices-speech-sdk.IUser
-  - microsoft-cognitiveservices-speech-sdk.IEnrollmentResultDetails
-functions:
-  - name: 'check(any, (error: Error, res: any) => void)'
-    uid: microsoft-cognitiveservices-speech-sdk.check
-    package: microsoft-cognitiveservices-speech-sdk
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function check(options: any, cb: (error: Error, res: any) => void)'
-      parameters:
-        - id: options
-          type: any
-          description: ''
-        - id: cb
-          type: '(error: Error, res: any) =&gt; void'
-          description: ''
-      return:
-        type: any
-        description: ''
-  - name: 'verify(VerifyOptions, (error: string, res: any) => void)'
-    uid: microsoft-cognitiveservices-speech-sdk.verify
-    package: microsoft-cognitiveservices-speech-sdk
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function verify(options: VerifyOptions, cb: (error: string, res: any) =>
-        void)
-      parameters:
-        - id: options
-          type: <xref uid="microsoft-cognitiveservices-speech-sdk.VerifyOptions" />
-          description: ''
-        - id: cb
-          type: '(error: string, res: any) =&gt; void'
-          description: ''
-  - name: 'PromiseToEmptyCallback<T>(Promise<T>, Callback, Callback)'
-    uid: microsoft-cognitiveservices-speech-sdk.PromiseToEmptyCallback
-    package: microsoft-cognitiveservices-speech-sdk
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function PromiseToEmptyCallback<T>(promise: Promise<T>, cb?: Callback,
-        err?: Callback)
-      parameters:
-        - id: promise
-          type: >-
-            <xref uid="microsoft-cognitiveservices-speech-sdk.Promise"
-            />&lt;T&gt;
-          description: ''
-        - id: cb
-          type: <xref uid="microsoft-cognitiveservices-speech-sdk.Callback" />
-          description: ''
-        - id: err
-          type: <xref uid="microsoft-cognitiveservices-speech-sdk.Callback" />
-          description: ''
-  - name: 'extractHeaderValue(string, string)'
-    uid: microsoft-cognitiveservices-speech-sdk.extractHeaderValue
-    package: microsoft-cognitiveservices-speech-sdk
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function extractHeaderValue(headerKey: string, headers: string)'
-      parameters:
-        - id: headerKey
-          type: string
-          description: ''
-        - id: headers
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'request("get" | "post" | "delete", string, any, any, IRequestOptions, any)'
-    uid: microsoft-cognitiveservices-speech-sdk.request
-    package: microsoft-cognitiveservices-speech-sdk
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function request(method: "get" | "post" | "delete", url: string,
-        queryParams: any, body: any, options: IRequestOptions, callback: any)
-      parameters:
-        - id: method
-          type: '"get" | "post" | "delete"'
-          description: ''
-        - id: url
-          type: string
-          description: ''
-        - id: queryParams
-          type: any
-          description: ''
-        - id: body
-          type: any
-          description: ''
-        - id: options
-          type: >-
-            <xref uid="microsoft-cognitiveservices-speech-sdk.IRequestOptions"
-            />
-          description: ''
-        - id: callback
-          type: any
-          description: ''
-      return:
-        type: any
-        description: ''
+  - microsoft-cognitiveservices-speech-sdk.external.ocsp.ocsp.d.Request
+  - microsoft-cognitiveservices-speech-sdk.external.ocsp.ocsp.d.Response
+  - microsoft-cognitiveservices-speech-sdk.external.ocsp.ocsp.d.VerifyOptions
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.IRecorder.d.IRecorder
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.RestConfigBase.d.IRequestOptions
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.RestConfigBase.d.IRestParams
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.RestMessageAdapter.d.IRestResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.AgentConfig.d.IAgentConfig
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DynamicGrammarInterfaces.d.IDynamicGrammar
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DynamicGrammarInterfaces.d.IDynamicGrammarGeneric
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DynamicGrammarInterfaces.d.IDynamicGrammarGroup
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.DynamicGrammarInterfaces.d.IDynamicGrammarPeople
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.IAuthentication.d.IAuthentication
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.IConnectionFactory.d.IConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ISynthesisConnectionFactory.d.ISynthesisConnectionFactory
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.ISpeechConfigAudio
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.ISpeechConfigAudioDevice
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.ActivityResponsePayload.d.IActivityPayloadResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.DetailedSpeechPhrase.d.IDetailedSpeechPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.DetailedSpeechPhrase.d.IPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.IntentResponse.d.IIntentEntity
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.IntentResponse.d.IIntentResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.IntentResponse.d.ISingleIntent
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SimpleSpeechPhrase.d.IPrimaryLanguage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SimpleSpeechPhrase.d.ISimpleSpeechPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SpeechDetected.d.ISpeechDetected
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SpeechHypothesis.d.ISpeechHypothesis
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SynthesisAudioMetadata.d.ISynthesisAudioMetadata
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.SynthesisAudioMetadata.d.ISynthesisMetadata
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.TranslationHypothesis.d.ITranslationHypothesis
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.TranslationPhrase.d.ITranslationPhrase
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.TranslationSynthesisEnd.d.ITranslationSynthesisEnd
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceTelemetryListener.Internal.d.IMetric
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceTelemetryListener.Internal.d.ITelemetry
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceInterfaces.d.IResultErrorDetails
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceInterfaces.d.ISpeechEndDetectedResult
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceInterfaces.d.ITranslation
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceInterfaces.d.ITranslations
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceInterfaces.d.ITurnStart
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SpeechServiceInterfaces.d.ITurnStartContext
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisTurn.d.ISynthesisResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisTurn.d.ISynthesisResponseAudio
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesisTurn.d.ISynthesisResponseContext
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IChangeNicknameCommand
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IClientMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.ICommandMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IConversationResponseError
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IConversationResponseErrorMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IConversationTranslatorRecognizer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IEjectParticipantCommand
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IInstantMessageCommand
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IInternalConversation
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IInternalParticipant
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.ILockConversationCommand
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IMuteAllCommand
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IMuteCommand
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ConversationTranslatorInterfaces.d.IResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.CommandResponsePayload.d.ICommandResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.ParticipantResponsePayload.d.IParticipantPayloadResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.ParticipantResponsePayload.d.IParticipantsListPayloadResponse
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.TranslationResponsePayload.d.ISpeechResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.TranslationResponsePayload.d.ITextResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.TranslationResponsePayload.d.ITranslationCommandMessage
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.Transcription.ServiceMessages.TranslationResponsePayload.d.ITranslationResponsePayload
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IAudioDestination.d.IAudioDestination
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IAudioSource.d.IAudioSource
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IAudioSource.d.IAudioStreamNode
+  - microsoft-cognitiveservices-speech-sdk.src.common.IConnection.d.IConnection
+  - microsoft-cognitiveservices-speech-sdk.src.common.IDetachable.d.IDetachable
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IDictionary.d.INumberDictionary
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IDictionary.d.IStringDictionary
+  - microsoft-cognitiveservices-speech-sdk.src.common.IDisposable.d.IDisposable
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IErrorMessages.d.IErrorMessages
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IEventSource.d.IEventListener
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IEventSource.d.IEventSource
+  - microsoft-cognitiveservices-speech-sdk.src.common.ITimer.d.ITimer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IWebsocketMessageFormatter.d.IWebsocketMessageFormatter
+  - microsoft-cognitiveservices-speech-sdk.src.common.List.d.IList
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.IDeferred
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.IPromise
+  - microsoft-cognitiveservices-speech-sdk.src.common.Queue.d.IQueue
+  - microsoft-cognitiveservices-speech-sdk.src.common.Stream.d.IStreamChunk
+  - microsoft-cognitiveservices-speech-sdk.src.common.Timeout.d.IWorkerTimers
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.IPlayer.d.IPlayer
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IConversation.d.IConversation
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IConversationTranslator.d.IConversationTranslator
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IParticipant.d.IParticipant
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IParticipant.d.IUser
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileEnrollmentResult.d.IEnrollmentResultDetails
 enums:
-  - microsoft-cognitiveservices-speech-sdk.RestRequestType
-  - microsoft-cognitiveservices-speech-sdk.RecognitionCompletionStatus
-  - microsoft-cognitiveservices-speech-sdk.RecognitionMode
-  - microsoft-cognitiveservices-speech-sdk.SpeechResultFormat
-  - microsoft-cognitiveservices-speech-sdk.connectivity
-  - microsoft-cognitiveservices-speech-sdk.type
-  - microsoft-cognitiveservices-speech-sdk.MessageDataStreamType
-  - microsoft-cognitiveservices-speech-sdk.RecognitionStatus
-  - microsoft-cognitiveservices-speech-sdk.SynthesisServiceType
-  - microsoft-cognitiveservices-speech-sdk.TranslationStatus
-  - microsoft-cognitiveservices-speech-sdk.MessageType
-  - microsoft-cognitiveservices-speech-sdk.ConnectionState
-  - microsoft-cognitiveservices-speech-sdk.EventType
-  - microsoft-cognitiveservices-speech-sdk.PromiseState
-  - microsoft-cognitiveservices-speech-sdk.AudioFormatTag
-  - microsoft-cognitiveservices-speech-sdk.CancellationErrorCode
-  - microsoft-cognitiveservices-speech-sdk.CancellationReason
-  - microsoft-cognitiveservices-speech-sdk.NoMatchReason
-  - microsoft-cognitiveservices-speech-sdk.OutputFormat
-  - microsoft-cognitiveservices-speech-sdk.ProfanityOption
-  - microsoft-cognitiveservices-speech-sdk.PropertyId
-  - microsoft-cognitiveservices-speech-sdk.ResultReason
-  - microsoft-cognitiveservices-speech-sdk.ServicePropertyChannel
-  - microsoft-cognitiveservices-speech-sdk.SpeakerRecognitionResultType
-  - microsoft-cognitiveservices-speech-sdk.SpeechSynthesisOutputFormat
-  - microsoft-cognitiveservices-speech-sdk.SpeechState
-  - microsoft-cognitiveservices-speech-sdk.ParticipantChangedReason
-  - microsoft-cognitiveservices-speech-sdk.VoiceProfileType
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.browser.RestMessageAdapter.d.RestRequestType
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognitionEvents.d.RecognitionCompletionStatus
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.connectivity
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.RecognitionMode
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.SpeechResultFormat
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.RecognizerConfig.d.type
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.ActivityResponsePayload.d.MessageDataStreamType
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.ServiceMessages.Enums.d.RecognitionStatus
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.SynthesizerConfig.d.SynthesisServiceType
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.speech.TranslationStatus.d.TranslationStatus
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.ConnectionMessage.d.MessageType
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.common.IConnection.d.ConnectionState
+  - microsoft-cognitiveservices-speech-sdk.src.common.PlatformEvent.d.EventType
+  - microsoft-cognitiveservices-speech-sdk.src.common.Promise.d.PromiseState
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Audio.AudioOutputFormat.d.AudioFormatTag
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.CancellationErrorCodes.d.CancellationErrorCode
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.CancellationReason.d.CancellationReason
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.NoMatchReason.d.NoMatchReason
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.OutputFormat.d.OutputFormat
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ProfanityOption.d.ProfanityOption
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.PropertyId.d.PropertyId
+  - microsoft-cognitiveservices-speech-sdk.src.sdk.ResultReason.d.ResultReason
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.ServicePropertyChannel.d.ServicePropertyChannel
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeakerRecognitionResult.d.SpeakerRecognitionResultType
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.SpeechSynthesisOutputFormat.d.SpeechSynthesisOutputFormat
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ConversationTranslator.d.SpeechState
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.ParticipantChangedReason.d.ParticipantChangedReason
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.VoiceProfileType.d.VoiceProfileType
 typeAliases:
-  - microsoft-cognitiveservices-speech-sdk.Callback
+  - >-
+    microsoft-cognitiveservices-speech-sdk.src.sdk.Transcription.IConversation.d.Callback

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: WebTestListResult
-uid: '@azure/arm-appinsights.WebTestListResult'
+uid: '@azure/arm-appinsights.models.index.d.WebTestListResult'
 package: '@azure/arm-appinsights'
 summary: ''
 fullName: WebTestListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appinsights.WebTestListResult.Array'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.Array'
     package: '@azure/arm-appinsights'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appinsights.WebTestListResult.length'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.length'
     package: '@azure/arm-appinsights'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,9 +38,13 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appinsights.WebTestListResult.nextLink'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.nextLink'
     package: '@azure/arm-appinsights'
-    summary: ''
+    summary: >-
+      The link to get the next part of the returned list of web tests, should
+      the return set be too
+
+      large for a single request. May be null.
     fullName: nextLink
     remarks: ''
     isPreview: false
@@ -52,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<WebTest>[])'
-    uid: '@azure/arm-appinsights.WebTestListResult.concat'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.concat'
     package: '@azure/arm-appinsights'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<WebTest>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-appinsights.WebTest" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.WebTest" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appinsights.WebTestListResult.concat_1'
+  - name: 'concat(WebTest | ConcatArray<WebTest>[])'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.concat_1'
     package: '@azure/arm-appinsights'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: WebTest | ConcatArray<WebTest>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appinsights.models.index.d.WebTest" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.WebTest" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.copyWithin'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.copyWithin'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appinsights.WebTestListResult.entries'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.entries'
     package: '@azure/arm-appinsights'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +145,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: WebTest, index: number, array: WebTest[]) => unknown, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.every'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.every_1'
     package: '@azure/arm-appinsights'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +153,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: WebTest, index: number, array:
+        function every(predicate: (value: WebTest, index: number, array:
         WebTest[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: WebTest, index: number, array: WebTest[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: WebTest, index: number, array: WebTest[]) => value, any)'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.every'
+    package: '@azure/arm-appinsights'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: WebTest, index: number, array:
+        WebTest[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: WebTest, index: number, array: WebTest[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(WebTest, undefined | number, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.fill'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.fill'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +225,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appinsights.WebTest" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -197,7 +245,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: WebTest, index: number, array: WebTest[]) => unknown, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.filter_1'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.filter_1'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -207,28 +255,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: WebTest, index: number, array:
+        function filter(predicate: (value: WebTest, index: number, array:
         WebTest[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: WebTest, index: number, array: WebTest[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
-  - name: >-
-      filter<S>((value: WebTest, index: number, array: WebTest[]) => boolean,
-      any)
-    uid: '@azure/arm-appinsights.WebTestListResult.filter'
+  - name: 'filter<S>((value: WebTest, index: number, array: WebTest[]) => value, any)'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.filter'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +283,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: WebTest, index: number, array:
-        WebTest[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: WebTest, index: number, array:
+        WebTest[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: WebTest, index: number, array: WebTest[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: WebTest, index: number, array: WebTest[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: WebTest, index: number, obj: WebTest[]) => unknown, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.find_1'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.find_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -275,12 +319,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appinsights.models.index.d.WebTest" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: WebTest, index: number, obj: WebTest[]) =>
-      boolean, any)
-    uid: '@azure/arm-appinsights.WebTestListResult.find'
+      value, any)
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.find'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -293,12 +339,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: WebTest, index: number,
-        obj: WebTest[]) => boolean, thisArg?: any)
+        obj: WebTest[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: WebTest, index: number, obj: WebTest[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -319,7 +365,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: WebTest, index: number, obj: WebTest[]) => unknown, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.findIndex'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.findIndex'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -356,7 +402,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: WebTest, index: number, array: WebTest[]) => void, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.forEach'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.forEach'
     package: '@azure/arm-appinsights'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -379,7 +425,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(WebTest, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.includes'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.includes'
     package: '@azure/arm-appinsights'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -393,7 +439,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appinsights.WebTest" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -404,7 +450,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(WebTest, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.indexOf'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.indexOf'
     package: '@azure/arm-appinsights'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -414,7 +460,7 @@ methods:
       content: 'function indexOf(searchElement: WebTest, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appinsights.WebTest" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +471,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appinsights.WebTestListResult.join'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.join'
     package: '@azure/arm-appinsights'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -446,7 +492,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appinsights.WebTestListResult.keys'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.keys'
     package: '@azure/arm-appinsights'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -458,7 +504,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(WebTest, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.lastIndexOf'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.lastIndexOf'
     package: '@azure/arm-appinsights'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -470,7 +516,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appinsights.WebTest" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -481,7 +527,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: WebTest, index: number, array: WebTest[]) => U, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.map'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.map'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -509,7 +555,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appinsights.WebTestListResult.pop'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.pop'
     package: '@azure/arm-appinsights'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -518,10 +564,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appinsights.models.index.d.WebTest" /> |
+          undefined
         description: ''
   - name: 'push(WebTest[])'
-    uid: '@azure/arm-appinsights.WebTestListResult.push'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.push'
     package: '@azure/arm-appinsights'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -531,7 +579,7 @@ methods:
       content: 'function push(items: WebTest[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+          type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
           description: |
             New elements of the Array.
       return:
@@ -540,7 +588,7 @@ methods:
   - name: >-
       reduce((previousValue: WebTest, currentValue: WebTest, currentIndex:
       number, array: WebTest[]) => WebTest)
-    uid: '@azure/arm-appinsights.WebTestListResult.reduce'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reduce'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -563,12 +611,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
         description: ''
   - name: >-
       reduce((previousValue: WebTest, currentValue: WebTest, currentIndex:
       number, array: WebTest[]) => WebTest, WebTest)
-    uid: '@azure/arm-appinsights.WebTestListResult.reduce_1'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reduce_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -586,15 +634,15 @@ methods:
             number, array: WebTest[]) =&gt; WebTest
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appinsights.WebTest" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: WebTest, currentIndex: number,
       array: WebTest[]) => U, U)
-    uid: '@azure/arm-appinsights.WebTestListResult.reduce_2'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reduce_2'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -628,7 +676,7 @@ methods:
   - name: >-
       reduceRight((previousValue: WebTest, currentValue: WebTest, currentIndex:
       number, array: WebTest[]) => WebTest)
-    uid: '@azure/arm-appinsights.WebTestListResult.reduceRight'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reduceRight'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -652,12 +700,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
         description: ''
   - name: >-
       reduceRight((previousValue: WebTest, currentValue: WebTest, currentIndex:
       number, array: WebTest[]) => WebTest, WebTest)
-    uid: '@azure/arm-appinsights.WebTestListResult.reduceRight_1'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reduceRight_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -675,15 +723,15 @@ methods:
             number, array: WebTest[]) =&gt; WebTest
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appinsights.WebTest" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.WebTest" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: WebTest, currentIndex:
       number, array: WebTest[]) => U, U)
-    uid: '@azure/arm-appinsights.WebTestListResult.reduceRight_2'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reduceRight_2'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -716,7 +764,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appinsights.WebTestListResult.reverse'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.reverse'
     package: '@azure/arm-appinsights'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -725,10 +773,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appinsights.WebTestListResult.shift'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.shift'
     package: '@azure/arm-appinsights'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -737,10 +785,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appinsights.WebTest" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appinsights.models.index.d.WebTest" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.slice'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.slice'
     package: '@azure/arm-appinsights'
     summary: Returns a section of an array.
     remarks: ''
@@ -754,13 +804,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
   - name: 'some((value: WebTest, index: number, array: WebTest[]) => unknown, any)'
-    uid: '@azure/arm-appinsights.WebTestListResult.some'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.some'
     package: '@azure/arm-appinsights'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -770,26 +821,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: WebTest, index: number, array:
+        function some(predicate: (value: WebTest, index: number, array:
         WebTest[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: WebTest, index: number, array: WebTest[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: WebTest, b: WebTest) => number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.sort'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.sort'
     package: '@azure/arm-appinsights'
     summary: Sorts an array.
     remarks: ''
@@ -803,14 +859,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: WebTest, b: WebTest) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, WebTest[])'
-    uid: '@azure/arm-appinsights.WebTestListResult.splice_1'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.splice_1'
     package: '@azure/arm-appinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -830,14 +897,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+          type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appinsights.WebTestListResult.splice'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.splice'
     package: '@azure/arm-appinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -858,10 +925,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appinsights.WebTestListResult.toLocaleString'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.toLocaleString'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -875,7 +942,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appinsights.WebTestListResult.toString'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.toString'
     package: '@azure/arm-appinsights'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -887,7 +954,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(WebTest[])'
-    uid: '@azure/arm-appinsights.WebTestListResult.unshift'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.unshift'
     package: '@azure/arm-appinsights'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -897,14 +964,14 @@ methods:
       content: 'function unshift(items: WebTest[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appinsights.WebTest" />[]'
+          type: '<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appinsights.WebTestListResult.values'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.values'
     package: '@azure/arm-appinsights'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -913,6 +980,39 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-appinsights.WebTest" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appinsights.models.index.d.WebTest" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appinsights.WebTest" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-appinsights.models.index.d.WebTestListResult.[Symbol.iterator]'
+    package: '@azure/arm-appinsights'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appinsights.models.index.d.WebTest" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appinsights.models.index.d.WebTestListResult.[Symbol.unscopables]
+    package: '@azure/arm-appinsights'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-appinsights.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-appinsights.models.index.d.WebTest" />&gt;

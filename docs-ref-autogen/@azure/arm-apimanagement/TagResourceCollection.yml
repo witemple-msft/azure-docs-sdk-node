@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: TagResourceCollection
-uid: '@azure/arm-apimanagement.TagResourceCollection'
+uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection'
 package: '@azure/arm-apimanagement'
 summary: ''
 fullName: TagResourceCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-apimanagement.TagResourceCollection.Array'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.Array'
     package: '@azure/arm-apimanagement'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-apimanagement.TagResourceCollection.length'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.length'
     package: '@azure/arm-apimanagement'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-apimanagement.TagResourceCollection.nextLink'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.nextLink'
     package: '@azure/arm-apimanagement'
     summary: Next page link if any.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<TagResourceContract>[])'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.concat'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.concat'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +64,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-apimanagement.TagResourceContract" />&gt;[]
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.concat_1'
+  - name: 'concat(TagResourceContract | ConcatArray<TagResourceContract>[])'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.concat_1'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: TagResourceContract |
+        ConcatArray<TagResourceContract>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.copyWithin'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.copyWithin'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.entries'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.entries'
     package: '@azure/arm-apimanagement'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: TagResourceContract, index: number, array:
       TagResourceContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.every'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.every_1'
     package: '@azure/arm-apimanagement'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: TagResourceContract, index: number,
+        function every(predicate: (value: TagResourceContract, index: number,
         array: TagResourceContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagResourceContract, index: number, array:
             TagResourceContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: TagResourceContract, index: number, array:
+      TagResourceContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.every'
+    package: '@azure/arm-apimanagement'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: TagResourceContract, index: number,
+        array: TagResourceContract[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: TagResourceContract, index: number, array:
+            TagResourceContract[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(TagResourceContract, undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.fill'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.fill'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: TagResourceContract, index: number, array:
       TagResourceContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.filter_1'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.filter_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: TagResourceContract, index: number,
+        function filter(predicate: (value: TagResourceContract, index: number,
         array: TagResourceContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagResourceContract, index: number, array:
             TagResourceContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
   - name: >-
       filter<S>((value: TagResourceContract, index: number, array:
-      TagResourceContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.filter'
+      TagResourceContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.filter'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: TagResourceContract, index:
-        number, array: TagResourceContract[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: TagResourceContract, index:
+        number, array: TagResourceContract[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagResourceContract, index: number, array:
-            TagResourceContract[]) =&gt; boolean
+            TagResourceContract[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: TagResourceContract, index: number, obj:
       TagResourceContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.find_1'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.find_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -292,13 +349,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.TagResourceContract" /> |
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" /> |
           undefined
         description: ''
   - name: >-
       find<S>((this: void, value: TagResourceContract, index: number, obj:
-      TagResourceContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.find'
+      TagResourceContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.find'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +369,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: TagResourceContract,
-        index: number, obj: TagResourceContract[]) => boolean, thisArg?: any)
+        index: number, obj: TagResourceContract[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: TagResourceContract, index: number, obj:
-            TagResourceContract[]) =&gt; boolean
+            TagResourceContract[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +397,7 @@ methods:
   - name: >-
       findIndex((value: TagResourceContract, index: number, obj:
       TagResourceContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.findIndex'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.findIndex'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +438,7 @@ methods:
   - name: >-
       forEach((value: TagResourceContract, index: number, array:
       TagResourceContract[]) => void, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.forEach'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.forEach'
     package: '@azure/arm-apimanagement'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +463,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(TagResourceContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.includes'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.includes'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +477,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +490,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(TagResourceContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.indexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.indexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +502,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +515,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.join'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.join'
     package: '@azure/arm-apimanagement'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +536,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.keys'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.keys'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +548,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(TagResourceContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.lastIndexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.lastIndexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +560,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +575,7 @@ methods:
   - name: >-
       map<U>((value: TagResourceContract, index: number, array:
       TagResourceContract[]) => U, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.map'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.map'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +605,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.pop'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.pop'
     package: '@azure/arm-apimanagement'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -551,11 +615,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.TagResourceContract" /> |
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" /> |
           undefined
         description: ''
   - name: 'push(TagResourceContract[])'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.push'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.push'
     package: '@azure/arm-apimanagement'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +630,10 @@ methods:
       content: 'function push(items: TagResourceContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +643,7 @@ methods:
       reduce((previousValue: TagResourceContract, currentValue:
       TagResourceContract, currentIndex: number, array: TagResourceContract[])
       => TagResourceContract)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reduce'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.reduce'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +668,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
         description: ''
   - name: >-
       reduce((previousValue: TagResourceContract, currentValue:
       TagResourceContract, currentIndex: number, array: TagResourceContract[])
       => TagResourceContract, TagResourceContract)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reduce_1'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.reduce_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -626,15 +696,19 @@ methods:
             TagResourceContract[]) =&gt; TagResourceContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: TagResourceContract,
       currentIndex: number, array: TagResourceContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reduce_2'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.reduce_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +744,7 @@ methods:
       reduceRight((previousValue: TagResourceContract, currentValue:
       TagResourceContract, currentIndex: number, array: TagResourceContract[])
       => TagResourceContract)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reduceRight'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.reduceRight'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +770,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
         description: ''
   - name: >-
       reduceRight((previousValue: TagResourceContract, currentValue:
       TagResourceContract, currentIndex: number, array: TagResourceContract[])
       => TagResourceContract, TagResourceContract)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.TagResourceCollection.reduceRight_1
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -722,15 +799,20 @@ methods:
             TagResourceContract[]) =&gt; TagResourceContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.TagResourceContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: TagResourceContract,
       currentIndex: number, array: TagResourceContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.TagResourceCollection.reduceRight_2
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +846,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.reverse'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.reverse'
     package: '@azure/arm-apimanagement'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +855,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.shift'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.shift'
     package: '@azure/arm-apimanagement'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -786,11 +870,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.TagResourceContract" /> |
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" /> |
           undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.slice'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.slice'
     package: '@azure/arm-apimanagement'
     summary: Returns a section of an array.
     remarks: ''
@@ -804,15 +889,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
   - name: >-
       some((value: TagResourceContract, index: number, array:
       TagResourceContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.some'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.some'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -822,30 +910,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: TagResourceContract, index: number,
+        function some(predicate: (value: TagResourceContract, index: number,
         array: TagResourceContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagResourceContract, index: number, array:
             TagResourceContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: TagResourceContract, b: TagResourceContract) =>
       number)
-    uid: '@azure/arm-apimanagement.TagResourceCollection.sort'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.sort'
     package: '@azure/arm-apimanagement'
     summary: Sorts an array.
     remarks: ''
@@ -861,14 +954,25 @@ methods:
             undefined | (a: TagResourceContract, b: TagResourceContract) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, TagResourceContract[])'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.splice_1'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.splice_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -890,14 +994,19 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.splice'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.splice'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -918,10 +1027,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract" />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.toLocaleString'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.TagResourceCollection.toLocaleString
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -935,7 +1047,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.toString'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.toString'
     package: '@azure/arm-apimanagement'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -947,7 +1059,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(TagResourceContract[])'
-    uid: '@azure/arm-apimanagement.TagResourceCollection.unshift'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.unshift'
     package: '@azure/arm-apimanagement'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -957,14 +1069,17 @@ methods:
       content: 'function unshift(items: TagResourceContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.TagResourceContract" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-apimanagement.TagResourceCollection.values'
+    uid: '@azure/arm-apimanagement.models.index.d.TagResourceCollection.values'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -975,6 +1090,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-apimanagement.TagResourceContract" />&gt;
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-apimanagement.TagResourceContract" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.TagResourceCollection.[Symbol.iterator]
+    package: '@azure/arm-apimanagement'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.TagResourceCollection.[Symbol.unscopables]
+    package: '@azure/arm-apimanagement'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-apimanagement.models.index.d.ApiCollection.Array"
+  />&lt;<xref uid="@azure/arm-apimanagement.models.index.d.TagResourceContract"
+  />&gt;

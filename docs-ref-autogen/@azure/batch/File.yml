@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: File
-uid: '@azure/batch.File'
+uid: '@azure/batch.operations.file.d.File'
 package: '@azure/batch'
 summary: Class representing a File.
 fullName: File
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: File(BatchServiceClientContext)
-    uid: '@azure/batch.File.constructor'
+    uid: '@azure/batch.operations.file.d.File.constructor'
     package: '@azure/batch'
     summary: Create a File.
     remarks: ''
@@ -20,14 +20,17 @@ constructors:
       content: 'new File(client: BatchServiceClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          type: >-
+            <xref
+            uid="@azure/batch.batchServiceClientContext.d.BatchServiceClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       deleteFromComputeNode(string, string, string,
       FileDeleteFromComputeNodeOptionalParams, ServiceCallback<void>)
-    uid: '@azure/batch.File.deleteFromComputeNode_2'
+    uid: '@azure/batch.operations.file.d.File.deleteFromComputeNode_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -41,15 +44,18 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node from which you want to delete the file.
+          description: The ID of the Compute Node from which you want to delete the file.
         - id: filePath
           type: string
           description: The path to the file or directory that you want to delete.
         - id: options
-          type: <xref uid="@azure/batch.FileDeleteFromComputeNodeOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileDeleteFromComputeNodeOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -58,7 +64,7 @@ methods:
   - name: >-
       deleteFromComputeNode(string, string, string,
       Models.FileDeleteFromComputeNodeOptionalParams)
-    uid: '@azure/batch.File.deleteFromComputeNode'
+    uid: '@azure/batch.operations.file.d.File.deleteFromComputeNode'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -71,10 +77,10 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node from which you want to delete the file.
+          description: The ID of the Compute Node from which you want to delete the file.
         - id: filePath
           type: string
           description: The path to the file or directory that you want to delete.
@@ -85,7 +91,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileDeleteFromComputeNodeResponse" />&gt;
         description: Promise<Models.FileDeleteFromComputeNodeResponse>
   - name: 'deleteFromComputeNode(string, string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.File.deleteFromComputeNode_1'
+    uid: '@azure/batch.operations.file.d.File.deleteFromComputeNode_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -98,10 +104,10 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node from which you want to delete the file.
+          description: The ID of the Compute Node from which you want to delete the file.
         - id: filePath
           type: string
           description: The path to the file or directory that you want to delete.
@@ -112,7 +118,7 @@ methods:
   - name: >-
       deleteFromTask(string, string, string, FileDeleteFromTaskOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.File.deleteFromTask_2'
+    uid: '@azure/batch.operations.file.d.File.deleteFromTask_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -126,15 +132,18 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to delete.
+          description: The ID of the Task whose file you want to delete.
         - id: filePath
           type: string
-          description: The path to the task file or directory that you want to delete.
+          description: The path to the Task file or directory that you want to delete.
         - id: options
-          type: <xref uid="@azure/batch.FileDeleteFromTaskOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileDeleteFromTaskOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -143,7 +152,7 @@ methods:
   - name: >-
       deleteFromTask(string, string, string,
       Models.FileDeleteFromTaskOptionalParams)
-    uid: '@azure/batch.File.deleteFromTask'
+    uid: '@azure/batch.operations.file.d.File.deleteFromTask'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -156,13 +165,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to delete.
+          description: The ID of the Task whose file you want to delete.
         - id: filePath
           type: string
-          description: The path to the task file or directory that you want to delete.
+          description: The path to the Task file or directory that you want to delete.
         - id: options
           type: <xref uid="Models.FileDeleteFromTaskOptionalParams" />
           description: ''
@@ -170,7 +179,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileDeleteFromTaskResponse" />&gt;
         description: Promise<Models.FileDeleteFromTaskResponse>
   - name: 'deleteFromTask(string, string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.File.deleteFromTask_1'
+    uid: '@azure/batch.operations.file.d.File.deleteFromTask_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -183,13 +192,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to delete.
+          description: The ID of the Task whose file you want to delete.
         - id: filePath
           type: string
-          description: The path to the task file or directory that you want to delete.
+          description: The path to the Task file or directory that you want to delete.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -197,7 +206,7 @@ methods:
   - name: >-
       getFromComputeNode(string, string, string,
       FileGetFromComputeNodeOptionalParams, ServiceCallback<void>)
-    uid: '@azure/batch.File.getFromComputeNode_2'
+    uid: '@azure/batch.operations.file.d.File.getFromComputeNode_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -211,17 +220,20 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node that contains the file.
+          description: The ID of the Compute Node that contains the file.
         - id: filePath
           type: string
           description: >-
-            The path to the compute node file that you want to get the content
+            The path to the Compute Node file that you want to get the content
             of.
         - id: options
-          type: <xref uid="@azure/batch.FileGetFromComputeNodeOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileGetFromComputeNodeOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -230,9 +242,9 @@ methods:
   - name: >-
       getFromComputeNode(string, string, string,
       Models.FileGetFromComputeNodeOptionalParams)
-    uid: '@azure/batch.File.getFromComputeNode'
+    uid: '@azure/batch.operations.file.d.File.getFromComputeNode'
     package: '@azure/batch'
-    summary: Returns the content of the specified compute node file.
+    summary: Returns the content of the specified Compute Node file.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -243,14 +255,14 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node that contains the file.
+          description: The ID of the Compute Node that contains the file.
         - id: filePath
           type: string
           description: >-
-            The path to the compute node file that you want to get the content
+            The path to the Compute Node file that you want to get the content
             of.
         - id: options
           type: <xref uid="Models.FileGetFromComputeNodeOptionalParams" />
@@ -259,7 +271,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileGetFromComputeNodeResponse" />&gt;
         description: Promise<Models.FileGetFromComputeNodeResponse>
   - name: 'getFromComputeNode(string, string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.File.getFromComputeNode_1'
+    uid: '@azure/batch.operations.file.d.File.getFromComputeNode_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -272,14 +284,14 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node that contains the file.
+          description: The ID of the Compute Node that contains the file.
         - id: filePath
           type: string
           description: >-
-            The path to the compute node file that you want to get the content
+            The path to the Compute Node file that you want to get the content
             of.
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -288,7 +300,7 @@ methods:
   - name: >-
       getFromTask(string, string, string, FileGetFromTaskOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.File.getFromTask_2'
+    uid: '@azure/batch.operations.file.d.File.getFromTask_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -301,24 +313,26 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to retrieve.
+          description: The ID of the Task whose file you want to retrieve.
         - id: filePath
           type: string
-          description: The path to the task file that you want to get the content of.
+          description: The path to the Task file that you want to get the content of.
         - id: options
-          type: <xref uid="@azure/batch.FileGetFromTaskOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileGetFromTaskOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'getFromTask(string, string, string, Models.FileGetFromTaskOptionalParams)'
-    uid: '@azure/batch.File.getFromTask'
+    uid: '@azure/batch.operations.file.d.File.getFromTask'
     package: '@azure/batch'
-    summary: Returns the content of the specified task file.
+    summary: Returns the content of the specified Task file.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -329,13 +343,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to retrieve.
+          description: The ID of the Task whose file you want to retrieve.
         - id: filePath
           type: string
-          description: The path to the task file that you want to get the content of.
+          description: The path to the Task file that you want to get the content of.
         - id: options
           type: <xref uid="Models.FileGetFromTaskOptionalParams" />
           description: ''
@@ -343,7 +357,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileGetFromTaskResponse" />&gt;
         description: Promise<Models.FileGetFromTaskResponse>
   - name: 'getFromTask(string, string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.File.getFromTask_1'
+    uid: '@azure/batch.operations.file.d.File.getFromTask_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -356,13 +370,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to retrieve.
+          description: The ID of the Task whose file you want to retrieve.
         - id: filePath
           type: string
-          description: The path to the task file that you want to get the content of.
+          description: The path to the Task file that you want to get the content of.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -370,7 +384,7 @@ methods:
   - name: >-
       getPropertiesFromComputeNode(string, string, string,
       FileGetPropertiesFromComputeNodeOptionalParams, ServiceCallback<void>)
-    uid: '@azure/batch.File.getPropertiesFromComputeNode_2'
+    uid: '@azure/batch.operations.file.d.File.getPropertiesFromComputeNode_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -385,19 +399,20 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node that contains the file.
+          description: The ID of the Compute Node that contains the file.
         - id: filePath
           type: string
           description: >-
-            The path to the compute node file that you want to get the
+            The path to the Compute Node file that you want to get the
             properties of.
         - id: options
           type: >-
             <xref
-            uid="@azure/batch.FileGetPropertiesFromComputeNodeOptionalParams" />
+            uid="@azure/batch.models.index.d.FileGetPropertiesFromComputeNodeOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -406,9 +421,9 @@ methods:
   - name: >-
       getPropertiesFromComputeNode(string, string, string,
       Models.FileGetPropertiesFromComputeNodeOptionalParams)
-    uid: '@azure/batch.File.getPropertiesFromComputeNode'
+    uid: '@azure/batch.operations.file.d.File.getPropertiesFromComputeNode'
     package: '@azure/batch'
-    summary: Gets the properties of the specified compute node file.
+    summary: Gets the properties of the specified Compute Node file.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -420,14 +435,14 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node that contains the file.
+          description: The ID of the Compute Node that contains the file.
         - id: filePath
           type: string
           description: >-
-            The path to the compute node file that you want to get the
+            The path to the Compute Node file that you want to get the
             properties of.
         - id: options
           type: <xref uid="Models.FileGetPropertiesFromComputeNodeOptionalParams" />
@@ -440,7 +455,7 @@ methods:
   - name: >-
       getPropertiesFromComputeNode(string, string, string,
       ServiceCallback<void>)
-    uid: '@azure/batch.File.getPropertiesFromComputeNode_1'
+    uid: '@azure/batch.operations.file.d.File.getPropertiesFromComputeNode_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -453,14 +468,14 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node that contains the file.
+          description: The ID of the Compute Node that contains the file.
         - id: filePath
           type: string
           description: >-
-            The path to the compute node file that you want to get the
+            The path to the Compute Node file that you want to get the
             properties of.
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -469,7 +484,7 @@ methods:
   - name: >-
       getPropertiesFromTask(string, string, string,
       FileGetPropertiesFromTaskOptionalParams, ServiceCallback<void>)
-    uid: '@azure/batch.File.getPropertiesFromTask_2'
+    uid: '@azure/batch.operations.file.d.File.getPropertiesFromTask_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -483,15 +498,18 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to get the properties of.
+          description: The ID of the Task whose file you want to get the properties of.
         - id: filePath
           type: string
-          description: The path to the task file that you want to get the properties of.
+          description: The path to the Task file that you want to get the properties of.
         - id: options
-          type: <xref uid="@azure/batch.FileGetPropertiesFromTaskOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileGetPropertiesFromTaskOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -500,9 +518,9 @@ methods:
   - name: >-
       getPropertiesFromTask(string, string, string,
       Models.FileGetPropertiesFromTaskOptionalParams)
-    uid: '@azure/batch.File.getPropertiesFromTask'
+    uid: '@azure/batch.operations.file.d.File.getPropertiesFromTask'
     package: '@azure/batch'
-    summary: Gets the properties of the specified task file.
+    summary: Gets the properties of the specified Task file.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -513,13 +531,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to get the properties of.
+          description: The ID of the Task whose file you want to get the properties of.
         - id: filePath
           type: string
-          description: The path to the task file that you want to get the properties of.
+          description: The path to the Task file that you want to get the properties of.
         - id: options
           type: <xref uid="Models.FileGetPropertiesFromTaskOptionalParams" />
           description: ''
@@ -527,7 +545,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileGetPropertiesFromTaskResponse" />&gt;
         description: Promise<Models.FileGetPropertiesFromTaskResponse>
   - name: 'getPropertiesFromTask(string, string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.File.getPropertiesFromTask_1'
+    uid: '@azure/batch.operations.file.d.File.getPropertiesFromTask_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -540,13 +558,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose file you want to get the properties of.
+          description: The ID of the Task whose file you want to get the properties of.
         - id: filePath
           type: string
-          description: The path to the task file that you want to get the properties of.
+          description: The path to the Task file that you want to get the properties of.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -554,7 +572,7 @@ methods:
   - name: >-
       listFromComputeNode(string, string, FileListFromComputeNodeOptionalParams,
       ServiceCallback<NodeFileListResult>)
-    uid: '@azure/batch.File.listFromComputeNode_2'
+    uid: '@azure/batch.operations.file.d.File.listFromComputeNode_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -568,23 +586,26 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node whose files you want to list.
+          description: The ID of the Compute Node whose files you want to list.
         - id: options
-          type: <xref uid="@azure/batch.FileListFromComputeNodeOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileListFromComputeNodeOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromComputeNode(string, string,
       Models.FileListFromComputeNodeOptionalParams)
-    uid: '@azure/batch.File.listFromComputeNode'
+    uid: '@azure/batch.operations.file.d.File.listFromComputeNode'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -597,10 +618,10 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node whose files you want to list.
+          description: The ID of the Compute Node whose files you want to list.
         - id: options
           type: <xref uid="Models.FileListFromComputeNodeOptionalParams" />
           description: ''
@@ -608,7 +629,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileListFromComputeNodeResponse" />&gt;
         description: Promise<Models.FileListFromComputeNodeResponse>
   - name: 'listFromComputeNode(string, string, ServiceCallback<NodeFileListResult>)'
-    uid: '@azure/batch.File.listFromComputeNode_1'
+    uid: '@azure/batch.operations.file.d.File.listFromComputeNode_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -621,20 +642,20 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool that contains the compute node.
+          description: The ID of the Pool that contains the Compute Node.
         - id: nodeId
           type: string
-          description: The ID of the compute node whose files you want to list.
+          description: The ID of the Compute Node whose files you want to list.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromComputeNodeNext(string, FileListFromComputeNodeNextOptionalParams,
       ServiceCallback<NodeFileListResult>)
-    uid: '@azure/batch.File.listFromComputeNodeNext_2'
+    uid: '@azure/batch.operations.file.d.File.listFromComputeNodeNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -651,19 +672,20 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: options
           type: >-
-            <xref uid="@azure/batch.FileListFromComputeNodeNextOptionalParams"
+            <xref
+            uid="@azure/batch.models.index.d.FileListFromComputeNodeNextOptionalParams"
             />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromComputeNodeNext(string,
       Models.FileListFromComputeNodeNextOptionalParams)
-    uid: '@azure/batch.File.listFromComputeNodeNext'
+    uid: '@azure/batch.operations.file.d.File.listFromComputeNodeNext'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -684,7 +706,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileListFromComputeNodeResponse" />&gt;
         description: Promise<Models.FileListFromComputeNodeResponse>
   - name: 'listFromComputeNodeNext(string, ServiceCallback<NodeFileListResult>)'
-    uid: '@azure/batch.File.listFromComputeNodeNext_1'
+    uid: '@azure/batch.operations.file.d.File.listFromComputeNodeNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -700,14 +722,14 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromTask(string, string, FileListFromTaskOptionalParams,
       ServiceCallback<NodeFileListResult>)
-    uid: '@azure/batch.File.listFromTask_2'
+    uid: '@azure/batch.operations.file.d.File.listFromTask_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -721,21 +743,23 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose files you want to list.
+          description: The ID of the Task whose files you want to list.
         - id: options
-          type: <xref uid="@azure/batch.FileListFromTaskOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileListFromTaskOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: 'listFromTask(string, string, Models.FileListFromTaskOptionalParams)'
-    uid: '@azure/batch.File.listFromTask'
+    uid: '@azure/batch.operations.file.d.File.listFromTask'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -748,10 +772,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose files you want to list.
+          description: The ID of the Task whose files you want to list.
         - id: options
           type: <xref uid="Models.FileListFromTaskOptionalParams" />
           description: ''
@@ -759,7 +783,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileListFromTaskResponse" />&gt;
         description: Promise<Models.FileListFromTaskResponse>
   - name: 'listFromTask(string, string, ServiceCallback<NodeFileListResult>)'
-    uid: '@azure/batch.File.listFromTask_1'
+    uid: '@azure/batch.operations.file.d.File.listFromTask_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -772,20 +796,20 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task whose files you want to list.
+          description: The ID of the Task whose files you want to list.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromTaskNext(string, FileListFromTaskNextOptionalParams,
       ServiceCallback<NodeFileListResult>)
-    uid: '@azure/batch.File.listFromTaskNext_2'
+    uid: '@azure/batch.operations.file.d.File.listFromTaskNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -801,16 +825,19 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.FileListFromTaskNextOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.FileListFromTaskNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback
   - name: 'listFromTaskNext(string, Models.FileListFromTaskNextOptionalParams)'
-    uid: '@azure/batch.File.listFromTaskNext'
+    uid: '@azure/batch.operations.file.d.File.listFromTaskNext'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -831,7 +858,7 @@ methods:
         type: Promise&lt;<xref uid="Models.FileListFromTaskResponse" />&gt;
         description: Promise<Models.FileListFromTaskResponse>
   - name: 'listFromTaskNext(string, ServiceCallback<NodeFileListResult>)'
-    uid: '@azure/batch.File.listFromTaskNext_1'
+    uid: '@azure/batch.operations.file.d.File.listFromTaskNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -847,7 +874,7 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.NodeFileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.NodeFileListResult" />&gt;
           description: |
             The callback

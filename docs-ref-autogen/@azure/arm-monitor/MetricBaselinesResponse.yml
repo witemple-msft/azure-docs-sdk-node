@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: MetricBaselinesResponse
-uid: '@azure/arm-monitor.MetricBaselinesResponse'
+uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse'
 package: '@azure/arm-monitor'
 summary: ''
 fullName: MetricBaselinesResponse
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.Array'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.Array'
     package: '@azure/arm-monitor'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.length'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.length'
     package: '@azure/arm-monitor'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SingleMetricBaseline>[])'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.concat'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.concat'
     package: '@azure/arm-monitor'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +50,43 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-monitor.SingleMetricBaseline"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.concat_1'
+  - name: 'concat(SingleMetricBaseline | ConcatArray<SingleMetricBaseline>[])'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.concat_1'
     package: '@azure/arm-monitor'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SingleMetricBaseline |
+        ConcatArray<SingleMetricBaseline>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.copyWithin'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.copyWithin'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +124,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.entries'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.entries'
     package: '@azure/arm-monitor'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +138,7 @@ methods:
   - name: >-
       every((value: SingleMetricBaseline, index: number, array:
       SingleMetricBaseline[]) => unknown, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.every'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.every_1'
     package: '@azure/arm-monitor'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +146,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SingleMetricBaseline, index: number,
+        function every(predicate: (value: SingleMetricBaseline, index: number,
         array: SingleMetricBaseline[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SingleMetricBaseline, index: number, array:
             SingleMetricBaseline[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SingleMetricBaseline, index: number, array:
+      SingleMetricBaseline[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.every'
+    package: '@azure/arm-monitor'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SingleMetricBaseline, index:
+        number, array: SingleMetricBaseline[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SingleMetricBaseline, index: number, array:
+            SingleMetricBaseline[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SingleMetricBaseline, undefined | number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.fill'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.fill'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +224,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +248,7 @@ methods:
   - name: >-
       filter((value: SingleMetricBaseline, index: number, array:
       SingleMetricBaseline[]) => unknown, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.filter_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.filter_1'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +258,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SingleMetricBaseline, index: number,
+        function filter(predicate: (value: SingleMetricBaseline, index: number,
         array: SingleMetricBaseline[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SingleMetricBaseline, index: number, array:
             SingleMetricBaseline[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SingleMetricBaseline, index: number, array:
-      SingleMetricBaseline[]) => boolean, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.filter'
+      SingleMetricBaseline[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.filter'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +292,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SingleMetricBaseline, index:
-        number, array: SingleMetricBaseline[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SingleMetricBaseline, index:
+        number, array: SingleMetricBaseline[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SingleMetricBaseline, index: number, array:
-            SingleMetricBaseline[]) =&gt; boolean
+            SingleMetricBaseline[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +314,7 @@ methods:
   - name: >-
       find((value: SingleMetricBaseline, index: number, obj:
       SingleMetricBaseline[]) => unknown, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.find_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.find_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -278,12 +334,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SingleMetricBaseline, index: number, obj:
-      SingleMetricBaseline[]) => boolean, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.find'
+      SingleMetricBaseline[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.find'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +354,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SingleMetricBaseline,
-        index: number, obj: SingleMetricBaseline[]) => boolean, thisArg?: any)
+        index: number, obj: SingleMetricBaseline[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SingleMetricBaseline, index: number, obj:
-            SingleMetricBaseline[]) =&gt; boolean
+            SingleMetricBaseline[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +382,7 @@ methods:
   - name: >-
       findIndex((value: SingleMetricBaseline, index: number, obj:
       SingleMetricBaseline[]) => unknown, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.findIndex'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.findIndex'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +423,7 @@ methods:
   - name: >-
       forEach((value: SingleMetricBaseline, index: number, array:
       SingleMetricBaseline[]) => void, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.forEach'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.forEach'
     package: '@azure/arm-monitor'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +448,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SingleMetricBaseline, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.includes'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.includes'
     package: '@azure/arm-monitor'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +462,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +475,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SingleMetricBaseline, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.indexOf'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.indexOf'
     package: '@azure/arm-monitor'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +487,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +500,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.join'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.join'
     package: '@azure/arm-monitor'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +521,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.keys'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.keys'
     package: '@azure/arm-monitor'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +533,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SingleMetricBaseline, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.lastIndexOf'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.lastIndexOf'
     package: '@azure/arm-monitor'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +545,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +560,7 @@ methods:
   - name: >-
       map<U>((value: SingleMetricBaseline, index: number, array:
       SingleMetricBaseline[]) => U, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.map'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.map'
     package: '@azure/arm-monitor'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +590,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.pop'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.pop'
     package: '@azure/arm-monitor'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +599,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
+          | undefined
         description: ''
   - name: 'push(SingleMetricBaseline[])'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.push'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.push'
     package: '@azure/arm-monitor'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +614,9 @@ methods:
       content: 'function push(items: SingleMetricBaseline[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -558,7 +626,7 @@ methods:
       reduce((previousValue: SingleMetricBaseline, currentValue:
       SingleMetricBaseline, currentIndex: number, array: SingleMetricBaseline[])
       => SingleMetricBaseline)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reduce'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reduce'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,13 +651,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
         description: ''
   - name: >-
       reduce((previousValue: SingleMetricBaseline, currentValue:
       SingleMetricBaseline, currentIndex: number, array: SingleMetricBaseline[])
       => SingleMetricBaseline, SingleMetricBaseline)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reduce_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reduce_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -609,15 +677,17 @@ methods:
             SingleMetricBaseline[]) =&gt; SingleMetricBaseline
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SingleMetricBaseline,
       currentIndex: number, array: SingleMetricBaseline[]) => U, U)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reduce_2'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reduce_2'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -653,7 +723,7 @@ methods:
       reduceRight((previousValue: SingleMetricBaseline, currentValue:
       SingleMetricBaseline, currentIndex: number, array: SingleMetricBaseline[])
       => SingleMetricBaseline)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reduceRight'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reduceRight'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -679,13 +749,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
         description: ''
   - name: >-
       reduceRight((previousValue: SingleMetricBaseline, currentValue:
       SingleMetricBaseline, currentIndex: number, array: SingleMetricBaseline[])
       => SingleMetricBaseline, SingleMetricBaseline)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reduceRight_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reduceRight_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -705,15 +775,17 @@ methods:
             SingleMetricBaseline[]) =&gt; SingleMetricBaseline
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SingleMetricBaseline,
       currentIndex: number, array: SingleMetricBaseline[]) => U, U)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reduceRight_2'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reduceRight_2'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -747,7 +819,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.reverse'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.reverse'
     package: '@azure/arm-monitor'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -756,10 +828,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.shift'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.shift'
     package: '@azure/arm-monitor'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -768,10 +842,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-monitor.SingleMetricBaseline" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.slice'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.slice'
     package: '@azure/arm-monitor'
     summary: Returns a section of an array.
     remarks: ''
@@ -785,15 +861,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
   - name: >-
       some((value: SingleMetricBaseline, index: number, array:
       SingleMetricBaseline[]) => unknown, any)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.some'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.some'
     package: '@azure/arm-monitor'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -803,30 +882,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SingleMetricBaseline, index: number,
+        function some(predicate: (value: SingleMetricBaseline, index: number,
         array: SingleMetricBaseline[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SingleMetricBaseline, index: number, array:
             SingleMetricBaseline[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: SingleMetricBaseline, b: SingleMetricBaseline) =>
       number)
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.sort'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.sort'
     package: '@azure/arm-monitor'
     summary: Sorts an array.
     remarks: ''
@@ -842,14 +926,25 @@ methods:
             undefined | (a: SingleMetricBaseline, b: SingleMetricBaseline) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SingleMetricBaseline[])'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.splice_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.splice_1'
     package: '@azure/arm-monitor'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -871,14 +966,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.splice'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.splice'
     package: '@azure/arm-monitor'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -899,10 +998,12 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.toLocaleString'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.toLocaleString'
     package: '@azure/arm-monitor'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -916,7 +1017,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.toString'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.toString'
     package: '@azure/arm-monitor'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -928,7 +1029,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SingleMetricBaseline[])'
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.unshift'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.unshift'
     package: '@azure/arm-monitor'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -938,14 +1039,16 @@ methods:
       content: 'function unshift(items: SingleMetricBaseline[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-monitor.SingleMetricBaseline" />[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-monitor.MetricBaselinesResponse.values'
+    uid: '@azure/arm-monitor.models.index.d.MetricBaselinesResponse.values'
     package: '@azure/arm-monitor'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -956,6 +1059,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-monitor.SingleMetricBaseline" />&gt;
+          uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-monitor.SingleMetricBaseline" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-monitor.models.index.d.MetricBaselinesResponse.[Symbol.iterator]
+    package: '@azure/arm-monitor'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-monitor.models.index.d.MetricBaselinesResponse.[Symbol.unscopables]
+    package: '@azure/arm-monitor'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-monitor.models.index.d.AutoscaleSettingResourceCollection.Array"
+  />&lt;<xref uid="@azure/arm-monitor.models.index.d.SingleMetricBaseline"
+  />&gt;

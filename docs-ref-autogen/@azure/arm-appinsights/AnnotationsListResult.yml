@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AnnotationsListResult
-uid: '@azure/arm-appinsights.AnnotationsListResult'
+uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult'
 package: '@azure/arm-appinsights'
 summary: ''
 fullName: AnnotationsListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appinsights.AnnotationsListResult.Array'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.Array'
     package: '@azure/arm-appinsights'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appinsights.AnnotationsListResult.length'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.length'
     package: '@azure/arm-appinsights'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,8 +38,28 @@ properties:
         type: number
         description: ''
 methods:
+  - name: 'concat(Annotation | ConcatArray<Annotation>[])'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.concat_1'
+    package: '@azure/arm-appinsights'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: Annotation | ConcatArray<Annotation>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-appinsights.models.index.d.Annotation" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.Annotation" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
+        description: ''
   - name: 'concat(ConcatArray<Annotation>[])'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.concat'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.concat'
     package: '@azure/arm-appinsights'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +70,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appinsights.Annotation"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.Annotation" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.concat_1'
-    package: '@azure/arm-appinsights'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.copyWithin'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.copyWithin'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.entries'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.entries'
     package: '@azure/arm-appinsights'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +130,7 @@ methods:
   - name: >-
       every((value: Annotation, index: number, array: Annotation[]) => unknown,
       any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.every'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.every_1'
     package: '@azure/arm-appinsights'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +138,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Annotation, index: number, array:
+        function every(predicate: (value: Annotation, index: number, array:
         Annotation[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Annotation, index: number, array: Annotation[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Annotation, index: number, array: Annotation[]) => value,
+      any)
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.every'
+    package: '@azure/arm-appinsights'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Annotation, index: number, array:
+        Annotation[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Annotation, index: number, array: Annotation[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Annotation, undefined | number, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.fill'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.fill'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +214,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +236,7 @@ methods:
   - name: >-
       filter((value: Annotation, index: number, array: Annotation[]) => unknown,
       any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.filter_1'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.filter_1'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +246,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Annotation, index: number, array:
+        function filter(predicate: (value: Annotation, index: number, array:
         Annotation[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Annotation, index: number, array: Annotation[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
         description: ''
   - name: >-
       filter<S>((value: Annotation, index: number, array: Annotation[]) =>
-      boolean, any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.filter'
+      value, any)
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.filter'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +278,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Annotation, index: number, array:
-        Annotation[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Annotation, index: number, array:
+        Annotation[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: Annotation, index: number, array: Annotation[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: Annotation, index: number, array: Annotation[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +298,7 @@ methods:
   - name: >-
       find((value: Annotation, index: number, obj: Annotation[]) => unknown,
       any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.find_1'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.find_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -276,12 +316,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appinsights.models.index.d.Annotation" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Annotation, index: number, obj: Annotation[])
-      => boolean, any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.find'
+      => value, any)
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.find'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -294,12 +336,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Annotation, index:
-        number, obj: Annotation[]) => boolean, thisArg?: any)
+        number, obj: Annotation[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Annotation, index: number, obj: Annotation[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -322,7 +364,7 @@ methods:
   - name: >-
       findIndex((value: Annotation, index: number, obj: Annotation[]) =>
       unknown, any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.findIndex'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.findIndex'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -361,7 +403,7 @@ methods:
   - name: >-
       forEach((value: Annotation, index: number, array: Annotation[]) => void,
       any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.forEach'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.forEach'
     package: '@azure/arm-appinsights'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -384,7 +426,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Annotation, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.includes'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.includes'
     package: '@azure/arm-appinsights'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -398,7 +440,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -409,7 +451,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Annotation, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.indexOf'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.indexOf'
     package: '@azure/arm-appinsights'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -421,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +474,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.join'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.join'
     package: '@azure/arm-appinsights'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -453,7 +495,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.keys'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.keys'
     package: '@azure/arm-appinsights'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -465,7 +507,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Annotation, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.lastIndexOf'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.lastIndexOf'
     package: '@azure/arm-appinsights'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -477,7 +519,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -488,7 +530,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Annotation, index: number, array: Annotation[]) => U, any)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.map'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.map'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -516,7 +558,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.pop'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.pop'
     package: '@azure/arm-appinsights'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -525,10 +567,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appinsights.models.index.d.Annotation" /> |
+          undefined
         description: ''
   - name: 'push(Annotation[])'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.push'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.push'
     package: '@azure/arm-appinsights'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -538,7 +582,7 @@ methods:
       content: 'function push(items: Annotation[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+          type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
           description: |
             New elements of the Array.
       return:
@@ -547,7 +591,7 @@ methods:
   - name: >-
       reduce((previousValue: Annotation, currentValue: Annotation, currentIndex:
       number, array: Annotation[]) => Annotation)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reduce'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reduce'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -570,12 +614,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
         description: ''
   - name: >-
       reduce((previousValue: Annotation, currentValue: Annotation, currentIndex:
       number, array: Annotation[]) => Annotation, Annotation)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reduce_1'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reduce_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -593,15 +637,15 @@ methods:
             number, array: Annotation[]) =&gt; Annotation
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Annotation, currentIndex:
       number, array: Annotation[]) => U, U)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reduce_2'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reduce_2'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -636,7 +680,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Annotation, currentValue: Annotation,
       currentIndex: number, array: Annotation[]) => Annotation)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reduceRight'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reduceRight'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -661,12 +705,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
         description: ''
   - name: >-
       reduceRight((previousValue: Annotation, currentValue: Annotation,
       currentIndex: number, array: Annotation[]) => Annotation, Annotation)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reduceRight_1'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reduceRight_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -684,15 +728,15 @@ methods:
             number, array: Annotation[]) =&gt; Annotation
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" />
+        type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Annotation, currentIndex:
       number, array: Annotation[]) => U, U)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reduceRight_2'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reduceRight_2'
     package: '@azure/arm-appinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -726,7 +770,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.reverse'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.reverse'
     package: '@azure/arm-appinsights'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -735,10 +779,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.shift'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.shift'
     package: '@azure/arm-appinsights'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -747,10 +791,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appinsights.Annotation" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appinsights.models.index.d.Annotation" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.slice'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.slice'
     package: '@azure/arm-appinsights'
     summary: Returns a section of an array.
     remarks: ''
@@ -764,15 +810,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
         description: ''
   - name: >-
       some((value: Annotation, index: number, array: Annotation[]) => unknown,
       any)
-    uid: '@azure/arm-appinsights.AnnotationsListResult.some'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.some'
     package: '@azure/arm-appinsights'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -782,28 +829,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Annotation, index: number, array:
+        function some(predicate: (value: Annotation, index: number, array:
         Annotation[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Annotation, index: number, array: Annotation[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Annotation, b: Annotation) => number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.sort'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.sort'
     package: '@azure/arm-appinsights'
     summary: Sorts an array.
     remarks: ''
@@ -817,14 +869,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Annotation, b: Annotation) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Annotation[])'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.splice_1'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.splice_1'
     package: '@azure/arm-appinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -844,14 +907,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+          type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.splice'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.splice'
     package: '@azure/arm-appinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,10 +935,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+        type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.toLocaleString'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.toLocaleString'
     package: '@azure/arm-appinsights'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -889,7 +952,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.toString'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.toString'
     package: '@azure/arm-appinsights'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -901,7 +964,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Annotation[])'
-    uid: '@azure/arm-appinsights.AnnotationsListResult.unshift'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.unshift'
     package: '@azure/arm-appinsights'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -911,14 +974,14 @@ methods:
       content: 'function unshift(items: Annotation[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appinsights.Annotation" />[]'
+          type: '<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appinsights.AnnotationsListResult.values'
+    uid: '@azure/arm-appinsights.models.index.d.AnnotationsListResult.values'
     package: '@azure/arm-appinsights'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -928,7 +991,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-appinsights.Annotation"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appinsights.models.index.d.Annotation" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appinsights.Annotation" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appinsights.models.index.d.AnnotationsListResult.[Symbol.iterator]
+    package: '@azure/arm-appinsights'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appinsights.models.index.d.Annotation" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appinsights.models.index.d.AnnotationsListResult.[Symbol.unscopables]
+    package: '@azure/arm-appinsights'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-appinsights.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-appinsights.models.index.d.Annotation" />&gt;

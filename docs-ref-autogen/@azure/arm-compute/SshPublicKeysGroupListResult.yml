@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SshPublicKeysGroupListResult
-uid: '@azure/arm-compute.SshPublicKeysGroupListResult'
+uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult'
 package: '@azure/arm-compute'
 summary: ''
 fullName: SshPublicKeysGroupListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.Array'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.Array'
     package: '@azure/arm-compute'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.length'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.length'
     package: '@azure/arm-compute'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.nextLink'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.nextLink'
     package: '@azure/arm-compute'
     summary: >-
       The URI to fetch the next page of SSH public keys. Call ListNext() with
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SshPublicKeyResource>[])'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.concat'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.concat'
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,43 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-compute.SshPublicKeyResource"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.concat_1'
+  - name: 'concat(SshPublicKeyResource | ConcatArray<SshPublicKeyResource>[])'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.concat_1'
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SshPublicKeyResource |
+        ConcatArray<SshPublicKeyResource>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.copyWithin'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.copyWithin'
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +141,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.entries'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.entries'
     package: '@azure/arm-compute'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +155,7 @@ methods:
   - name: >-
       every((value: SshPublicKeyResource, index: number, array:
       SshPublicKeyResource[]) => unknown, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.every'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.every_1'
     package: '@azure/arm-compute'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +163,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SshPublicKeyResource, index: number,
+        function every(predicate: (value: SshPublicKeyResource, index: number,
         array: SshPublicKeyResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SshPublicKeyResource, index: number, array:
             SshPublicKeyResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SshPublicKeyResource, index: number, array:
+      SshPublicKeyResource[]) => value, any)
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.every'
+    package: '@azure/arm-compute'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SshPublicKeyResource, index:
+        number, array: SshPublicKeyResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SshPublicKeyResource, index: number, array:
+            SshPublicKeyResource[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SshPublicKeyResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.fill'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.fill'
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +241,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +265,7 @@ methods:
   - name: >-
       filter((value: SshPublicKeyResource, index: number, array:
       SshPublicKeyResource[]) => unknown, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.filter_1'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.filter_1'
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +275,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SshPublicKeyResource, index: number,
+        function filter(predicate: (value: SshPublicKeyResource, index: number,
         array: SshPublicKeyResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SshPublicKeyResource, index: number, array:
             SshPublicKeyResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SshPublicKeyResource, index: number, array:
-      SshPublicKeyResource[]) => boolean, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.filter'
+      SshPublicKeyResource[]) => value, any)
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.filter'
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +309,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SshPublicKeyResource, index:
-        number, array: SshPublicKeyResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SshPublicKeyResource, index:
+        number, array: SshPublicKeyResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SshPublicKeyResource, index: number, array:
-            SshPublicKeyResource[]) =&gt; boolean
+            SshPublicKeyResource[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +331,7 @@ methods:
   - name: >-
       find((value: SshPublicKeyResource, index: number, obj:
       SshPublicKeyResource[]) => unknown, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.find_1'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.find_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -295,12 +351,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SshPublicKeyResource, index: number, obj:
-      SshPublicKeyResource[]) => boolean, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.find'
+      SshPublicKeyResource[]) => value, any)
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.find'
     package: '@azure/arm-compute'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +371,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SshPublicKeyResource,
-        index: number, obj: SshPublicKeyResource[]) => boolean, thisArg?: any)
+        index: number, obj: SshPublicKeyResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SshPublicKeyResource, index: number, obj:
-            SshPublicKeyResource[]) =&gt; boolean
+            SshPublicKeyResource[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +399,7 @@ methods:
   - name: >-
       findIndex((value: SshPublicKeyResource, index: number, obj:
       SshPublicKeyResource[]) => unknown, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.findIndex'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.findIndex'
     package: '@azure/arm-compute'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +440,7 @@ methods:
   - name: >-
       forEach((value: SshPublicKeyResource, index: number, array:
       SshPublicKeyResource[]) => void, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.forEach'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.forEach'
     package: '@azure/arm-compute'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +465,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SshPublicKeyResource, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.includes'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.includes'
     package: '@azure/arm-compute'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +479,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +492,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SshPublicKeyResource, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.indexOf'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.indexOf'
     package: '@azure/arm-compute'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +504,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +517,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.join'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.join'
     package: '@azure/arm-compute'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +538,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.keys'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.keys'
     package: '@azure/arm-compute'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +550,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SshPublicKeyResource, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.lastIndexOf'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.lastIndexOf'
     package: '@azure/arm-compute'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +562,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +577,7 @@ methods:
   - name: >-
       map<U>((value: SshPublicKeyResource, index: number, array:
       SshPublicKeyResource[]) => U, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.map'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.map'
     package: '@azure/arm-compute'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +607,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.pop'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.pop'
     package: '@azure/arm-compute'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +616,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
+          | undefined
         description: ''
   - name: 'push(SshPublicKeyResource[])'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.push'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.push'
     package: '@azure/arm-compute'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +631,9 @@ methods:
       content: 'function push(items: SshPublicKeyResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +643,7 @@ methods:
       reduce((previousValue: SshPublicKeyResource, currentValue:
       SshPublicKeyResource, currentIndex: number, array: SshPublicKeyResource[])
       => SshPublicKeyResource)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reduce'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reduce'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +668,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+        type: <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
         description: ''
   - name: >-
       reduce((previousValue: SshPublicKeyResource, currentValue:
       SshPublicKeyResource, currentIndex: number, array: SshPublicKeyResource[])
       => SshPublicKeyResource, SshPublicKeyResource)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reduce_1'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reduce_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -626,15 +694,17 @@ methods:
             SshPublicKeyResource[]) =&gt; SshPublicKeyResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+        type: <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SshPublicKeyResource,
       currentIndex: number, array: SshPublicKeyResource[]) => U, U)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reduce_2'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reduce_2'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +740,7 @@ methods:
       reduceRight((previousValue: SshPublicKeyResource, currentValue:
       SshPublicKeyResource, currentIndex: number, array: SshPublicKeyResource[])
       => SshPublicKeyResource)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reduceRight'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reduceRight'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +766,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+        type: <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
         description: ''
   - name: >-
       reduceRight((previousValue: SshPublicKeyResource, currentValue:
       SshPublicKeyResource, currentIndex: number, array: SshPublicKeyResource[])
       => SshPublicKeyResource, SshPublicKeyResource)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reduceRight_1
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -722,15 +793,18 @@ methods:
             SshPublicKeyResource[]) =&gt; SshPublicKeyResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" />
+        type: <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SshPublicKeyResource,
       currentIndex: number, array: SshPublicKeyResource[]) => U, U)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reduceRight_2
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +838,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.reverse'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.reverse'
     package: '@azure/arm-compute'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +847,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.shift'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.shift'
     package: '@azure/arm-compute'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +861,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-compute.SshPublicKeyResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.slice'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.slice'
     package: '@azure/arm-compute'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +880,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
   - name: >-
       some((value: SshPublicKeyResource, index: number, array:
       SshPublicKeyResource[]) => unknown, any)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.some'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.some'
     package: '@azure/arm-compute'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,30 +901,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SshPublicKeyResource, index: number,
+        function some(predicate: (value: SshPublicKeyResource, index: number,
         array: SshPublicKeyResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SshPublicKeyResource, index: number, array:
             SshPublicKeyResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: SshPublicKeyResource, b: SshPublicKeyResource) =>
       number)
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.sort'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.sort'
     package: '@azure/arm-compute'
     summary: Sorts an array.
     remarks: ''
@@ -859,14 +945,25 @@ methods:
             undefined | (a: SshPublicKeyResource, b: SshPublicKeyResource) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SshPublicKeyResource[])'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.splice_1'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.splice_1'
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -888,14 +985,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.splice'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.splice'
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -916,10 +1017,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.toLocaleString'
+    uid: >-
+      @azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.toLocaleString
     package: '@azure/arm-compute'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -933,7 +1037,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.toString'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.toString'
     package: '@azure/arm-compute'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -945,7 +1049,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SshPublicKeyResource[])'
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.unshift'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.unshift'
     package: '@azure/arm-compute'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -955,14 +1059,16 @@ methods:
       content: 'function unshift(items: SshPublicKeyResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.SshPublicKeyResource" />[]'
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-compute.SshPublicKeysGroupListResult.values'
+    uid: '@azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.values'
     package: '@azure/arm-compute'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -973,6 +1079,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-compute.SshPublicKeyResource" />&gt;
+          uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-compute.SshPublicKeyResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.[Symbol.iterator]
+    package: '@azure/arm-compute'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-compute.models.index.d.SshPublicKeyResource" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-compute.models.index.d.SshPublicKeysGroupListResult.[Symbol.unscopables]
+    package: '@azure/arm-compute'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-compute.models.index.d.ComputeOperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-compute.models.index.d.SshPublicKeyResource"
+  />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: EventHubProducerClient
-uid: '@azure/event-hubs.EventHubProducerClient'
+uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient'
 package: '@azure/event-hubs'
 summary: >+
   The `EventHubProducerClient` class is used to send events to an Event Hub.
@@ -29,7 +29,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'EventHubProducerClient(string, EventHubClientOptions)'
-    uid: '@azure/event-hubs.EventHubProducerClient.constructor'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.constructor'
     package: '@azure/event-hubs'
     summary: ''
     remarks: ''
@@ -52,7 +52,7 @@ constructors:
             e.g.
             'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key;EntityPath=my-event-hub-name'.
         - id: options
-          type: <xref uid="@azure/event-hubs.EventHubClientOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.EventHubClientOptions" />
           description: >
             A set of options to apply when configuring the client.
 
@@ -68,7 +68,7 @@ constructors:
             - `userAgent`      : A string to append to the built in user agent
             string that is passed to the service.
   - name: 'EventHubProducerClient(string, string, EventHubClientOptions)'
-    uid: '@azure/event-hubs.EventHubProducerClient.constructor_1'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.constructor_1'
     package: '@azure/event-hubs'
     summary: ''
     remarks: ''
@@ -94,7 +94,7 @@ constructors:
           type: string
           description: The name of the specific Event Hub to connect the client to.
         - id: options
-          type: <xref uid="@azure/event-hubs.EventHubClientOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.EventHubClientOptions" />
           description: >
             A set of options to apply when configuring the client.
 
@@ -112,7 +112,7 @@ constructors:
   - name: >-
       EventHubProducerClient(string, string, TokenCredential,
       EventHubClientOptions)
-    uid: '@azure/event-hubs.EventHubProducerClient.constructor_2'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.constructor_2'
     package: '@azure/event-hubs'
     summary: ''
     remarks: ''
@@ -141,7 +141,7 @@ constructors:
             with the Azure Event Hubs service. See &commat;azure/identity for
             creating the credentials.
         - id: options
-          type: <xref uid="@azure/event-hubs.EventHubClientOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.EventHubClientOptions" />
           description: >
             A set of options to apply when configuring the client.
 
@@ -158,7 +158,7 @@ constructors:
             string that is passed to the service.
 properties:
   - name: eventHubName
-    uid: '@azure/event-hubs.EventHubProducerClient.eventHubName'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.eventHubName'
     package: '@azure/event-hubs'
     summary: ''
     fullName: eventHubName
@@ -171,7 +171,8 @@ properties:
         type: string
         description: ''
   - name: fullyQualifiedNamespace
-    uid: '@azure/event-hubs.EventHubProducerClient.fullyQualifiedNamespace'
+    uid: >-
+      @azure/event-hubs.event-hubs.d.EventHubProducerClient.fullyQualifiedNamespace
     package: '@azure/event-hubs'
     summary: ''
     fullName: fullyQualifiedNamespace
@@ -185,7 +186,7 @@ properties:
         description: ''
 methods:
   - name: close()
-    uid: '@azure/event-hubs.EventHubProducerClient.close'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.close'
     package: '@azure/event-hubs'
     summary: |-
       Closes the AMQP connection to the Event Hub instance,
@@ -199,7 +200,7 @@ methods:
         type: Promise&lt;void&gt;
         description: Promise<void>
   - name: createBatch(CreateBatchOptions)
-    uid: '@azure/event-hubs.EventHubProducerClient.createBatch'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.createBatch'
     package: '@azure/event-hubs'
     summary: >
       Creates an instance of `EventDataBatch` to which one can add events until
@@ -237,7 +238,7 @@ methods:
       content: 'function createBatch(options?: CreateBatchOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/event-hubs.CreateBatchOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.CreateBatchOptions" />
           description: >-
             Configures the behavior of the batch.
 
@@ -254,10 +255,13 @@ methods:
 
             - `abortSignal`   : A signal the request to cancel the operation.
       return:
-        type: Promise&lt;<xref uid="@azure/event-hubs.EventDataBatch" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/event-hubs.event-hubs.d.EventDataBatch"
+          />&gt;
         description: Promise<EventDataBatch>
   - name: getEventHubProperties(GetEventHubPropertiesOptions)
-    uid: '@azure/event-hubs.EventHubProducerClient.getEventHubProperties'
+    uid: >-
+      @azure/event-hubs.event-hubs.d.EventHubProducerClient.getEventHubProperties
     package: '@azure/event-hubs'
     summary: Provides the Event Hub runtime information.
     remarks: ''
@@ -267,13 +271,17 @@ methods:
       content: 'function getEventHubProperties(options?: GetEventHubPropertiesOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/event-hubs.GetEventHubPropertiesOptions" />
+          type: >-
+            <xref
+            uid="@azure/event-hubs.event-hubs.d.GetEventHubPropertiesOptions" />
           description: The set of options to apply to the operation call.
       return:
-        type: Promise&lt;<xref uid="@azure/event-hubs.EventHubProperties" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/event-hubs.event-hubs.d.EventHubProperties" />&gt;
         description: A promise that resolves with information about the Event Hub instance.
   - name: getPartitionIds(GetPartitionIdsOptions)
-    uid: '@azure/event-hubs.EventHubProducerClient.getPartitionIds'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.getPartitionIds'
     package: '@azure/event-hubs'
     summary: Provides the id for each partition associated with the Event Hub.
     remarks: ''
@@ -283,7 +291,7 @@ methods:
       content: 'function getPartitionIds(options?: GetPartitionIdsOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/event-hubs.GetPartitionIdsOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.GetPartitionIdsOptions" />
           description: The set of options to apply to the operation call.
       return:
         type: Promise&lt;Array&lt;string&gt;&gt;
@@ -293,7 +301,8 @@ methods:
 
           each partition associated with the Event Hub.
   - name: 'getPartitionProperties(string, GetPartitionPropertiesOptions)'
-    uid: '@azure/event-hubs.EventHubProducerClient.getPartitionProperties'
+    uid: >-
+      @azure/event-hubs.event-hubs.d.EventHubProducerClient.getPartitionProperties
     package: '@azure/event-hubs'
     summary: Provides information about the state of the specified partition.
     remarks: ''
@@ -308,15 +317,20 @@ methods:
           type: string
           description: The id of the partition for which information is required.
         - id: options
-          type: <xref uid="@azure/event-hubs.GetPartitionPropertiesOptions" />
+          type: >-
+            <xref
+            uid="@azure/event-hubs.event-hubs.d.GetPartitionPropertiesOptions"
+            />
           description: The set of options to apply to the operation call.
       return:
-        type: Promise&lt;<xref uid="@azure/event-hubs.PartitionProperties" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/event-hubs.event-hubs.d.PartitionProperties" />&gt;
         description: >-
           A promise that resolves with information about the state of the
           partition .
   - name: 'sendBatch(EventDataBatch, OperationOptions)'
-    uid: '@azure/event-hubs.EventHubProducerClient.sendBatch_1'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.sendBatch_1'
     package: '@azure/event-hubs'
     summary: |-
       Sends a batch of events to the associated Event Hub.
@@ -344,12 +358,12 @@ methods:
       content: 'function sendBatch(batch: EventDataBatch, options?: OperationOptions)'
       parameters:
         - id: batch
-          type: <xref uid="@azure/event-hubs.EventDataBatch" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.EventDataBatch" />
           description: >-
             A batch of events that you can create using the <xref:createBatch>
             method.
         - id: options
-          type: <xref uid="@azure/event-hubs.OperationOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.OperationOptions" />
           description: >
             A set of options that can be specified to influence the way in which
 
@@ -361,7 +375,7 @@ methods:
         type: Promise&lt;void&gt;
         description: Promise<void>
   - name: 'sendBatch(EventData[], SendBatchOptions)'
-    uid: '@azure/event-hubs.EventHubProducerClient.sendBatch'
+    uid: '@azure/event-hubs.event-hubs.d.EventHubProducerClient.sendBatch'
     package: '@azure/event-hubs'
     summary: |
       Sends an array of events to the associated Event Hub.
@@ -377,10 +391,10 @@ methods:
       content: 'function sendBatch(batch: EventData[], options?: SendBatchOptions)'
       parameters:
         - id: batch
-          type: '<xref uid="@azure/event-hubs.EventData" />[]'
+          type: '<xref uid="@azure/event-hubs.event-hubs.d.EventData" />[]'
           description: 'An array of <xref:EventData>.'
         - id: options
-          type: <xref uid="@azure/event-hubs.SendBatchOptions" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.SendBatchOptions" />
           description: >
             A set of options that can be specified to influence the way in which
 

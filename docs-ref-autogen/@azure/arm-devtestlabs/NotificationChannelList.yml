@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: NotificationChannelList
-uid: '@azure/arm-devtestlabs.NotificationChannelList'
+uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList'
 package: '@azure/arm-devtestlabs'
 summary: ''
 fullName: NotificationChannelList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.Array'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.Array'
     package: '@azure/arm-devtestlabs'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.length'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.length'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.nextLink'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.nextLink'
     package: '@azure/arm-devtestlabs'
     summary: Link for next set of results.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<NotificationChannel>[])'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.concat'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.concat'
     package: '@azure/arm-devtestlabs'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +64,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-devtestlabs.NotificationChannel" />&gt;[]
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.concat_1'
+  - name: 'concat(NotificationChannel | ConcatArray<NotificationChannel>[])'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.concat_1'
     package: '@azure/arm-devtestlabs'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: NotificationChannel |
+        ConcatArray<NotificationChannel>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.copyWithin'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.copyWithin'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.entries'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.entries'
     package: '@azure/arm-devtestlabs'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: NotificationChannel, index: number, array:
       NotificationChannel[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.every'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.every_1'
     package: '@azure/arm-devtestlabs'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: NotificationChannel, index: number,
+        function every(predicate: (value: NotificationChannel, index: number,
         array: NotificationChannel[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationChannel, index: number, array:
             NotificationChannel[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: NotificationChannel, index: number, array:
+      NotificationChannel[]) => value, any)
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.every'
+    package: '@azure/arm-devtestlabs'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: NotificationChannel, index: number,
+        array: NotificationChannel[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: NotificationChannel, index: number, array:
+            NotificationChannel[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(NotificationChannel, undefined | number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.fill'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.fill'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: NotificationChannel, index: number, array:
       NotificationChannel[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.filter_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.filter_1'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: NotificationChannel, index: number,
+        function filter(predicate: (value: NotificationChannel, index: number,
         array: NotificationChannel[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationChannel, index: number, array:
             NotificationChannel[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: NotificationChannel, index: number, array:
-      NotificationChannel[]) => boolean, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.filter'
+      NotificationChannel[]) => value, any)
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.filter'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: NotificationChannel, index:
-        number, array: NotificationChannel[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: NotificationChannel, index:
+        number, array: NotificationChannel[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationChannel, index: number, array:
-            NotificationChannel[]) =&gt; boolean
+            NotificationChannel[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: NotificationChannel, index: number, obj:
       NotificationChannel[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.find_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.find_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -291,12 +348,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: NotificationChannel, index: number, obj:
-      NotificationChannel[]) => boolean, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.find'
+      NotificationChannel[]) => value, any)
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.find'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +368,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: NotificationChannel,
-        index: number, obj: NotificationChannel[]) => boolean, thisArg?: any)
+        index: number, obj: NotificationChannel[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: NotificationChannel, index: number, obj:
-            NotificationChannel[]) =&gt; boolean
+            NotificationChannel[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +396,7 @@ methods:
   - name: >-
       findIndex((value: NotificationChannel, index: number, obj:
       NotificationChannel[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.findIndex'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.findIndex'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +437,7 @@ methods:
   - name: >-
       forEach((value: NotificationChannel, index: number, array:
       NotificationChannel[]) => void, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.forEach'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.forEach'
     package: '@azure/arm-devtestlabs'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +462,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(NotificationChannel, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.includes'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.includes'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +476,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +489,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(NotificationChannel, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.indexOf'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.indexOf'
     package: '@azure/arm-devtestlabs'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +501,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +514,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.join'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.join'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +535,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.keys'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.keys'
     package: '@azure/arm-devtestlabs'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +547,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(NotificationChannel, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.lastIndexOf'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.lastIndexOf'
     package: '@azure/arm-devtestlabs'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +559,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +574,7 @@ methods:
   - name: >-
       map<U>((value: NotificationChannel, index: number, array:
       NotificationChannel[]) => U, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.map'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.map'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +604,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.pop'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.pop'
     package: '@azure/arm-devtestlabs'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +613,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          /> | undefined
         description: ''
   - name: 'push(NotificationChannel[])'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.push'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.push'
     package: '@azure/arm-devtestlabs'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +628,9 @@ methods:
       content: 'function push(items: NotificationChannel[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />[]
           description: |
             New elements of the Array.
       return:
@@ -571,7 +640,7 @@ methods:
       reduce((previousValue: NotificationChannel, currentValue:
       NotificationChannel, currentIndex: number, array: NotificationChannel[])
       => NotificationChannel)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reduce'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.reduce'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -596,13 +665,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />
         description: ''
   - name: >-
       reduce((previousValue: NotificationChannel, currentValue:
       NotificationChannel, currentIndex: number, array: NotificationChannel[])
       => NotificationChannel, NotificationChannel)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reduce_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.reduce_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -622,15 +693,19 @@ methods:
             NotificationChannel[]) =&gt; NotificationChannel
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: NotificationChannel,
       currentIndex: number, array: NotificationChannel[]) => U, U)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reduce_2'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.reduce_2'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -666,7 +741,7 @@ methods:
       reduceRight((previousValue: NotificationChannel, currentValue:
       NotificationChannel, currentIndex: number, array: NotificationChannel[])
       => NotificationChannel)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reduceRight'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.reduceRight'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -692,13 +767,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: NotificationChannel, currentValue:
       NotificationChannel, currentIndex: number, array: NotificationChannel[])
       => NotificationChannel, NotificationChannel)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reduceRight_1'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.NotificationChannelList.reduceRight_1
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -718,15 +796,20 @@ methods:
             NotificationChannel[]) =&gt; NotificationChannel
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" />
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: NotificationChannel,
       currentIndex: number, array: NotificationChannel[]) => U, U)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reduceRight_2'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.NotificationChannelList.reduceRight_2
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -760,7 +843,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.reverse'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.reverse'
     package: '@azure/arm-devtestlabs'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -769,10 +852,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.shift'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.shift'
     package: '@azure/arm-devtestlabs'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -781,10 +866,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-devtestlabs.NotificationChannel" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.slice'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.slice'
     package: '@azure/arm-devtestlabs'
     summary: Returns a section of an array.
     remarks: ''
@@ -798,15 +885,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
   - name: >-
       some((value: NotificationChannel, index: number, array:
       NotificationChannel[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.some'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.some'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -816,30 +906,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: NotificationChannel, index: number,
+        function some(predicate: (value: NotificationChannel, index: number,
         array: NotificationChannel[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationChannel, index: number, array:
             NotificationChannel[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: NotificationChannel, b: NotificationChannel) =>
       number)
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.sort'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.sort'
     package: '@azure/arm-devtestlabs'
     summary: Sorts an array.
     remarks: ''
@@ -855,14 +950,25 @@ methods:
             undefined | (a: NotificationChannel, b: NotificationChannel) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, NotificationChannel[])'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.splice_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.splice_1'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -884,14 +990,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.splice'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.splice'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -912,10 +1022,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.toLocaleString'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.NotificationChannelList.toLocaleString
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -929,7 +1042,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.toString'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.toString'
     package: '@azure/arm-devtestlabs'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -941,7 +1054,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(NotificationChannel[])'
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.unshift'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.unshift'
     package: '@azure/arm-devtestlabs'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -951,14 +1064,16 @@ methods:
       content: 'function unshift(items: NotificationChannel[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.NotificationChannel" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-devtestlabs.NotificationChannelList.values'
+    uid: '@azure/arm-devtestlabs.models.index.d.NotificationChannelList.values'
     package: '@azure/arm-devtestlabs'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -969,6 +1084,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-devtestlabs.NotificationChannel" />&gt;
+          uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-devtestlabs.NotificationChannel" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.NotificationChannelList.[Symbol.iterator]
+    package: '@azure/arm-devtestlabs'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.NotificationChannelList.[Symbol.unscopables]
+    package: '@azure/arm-devtestlabs'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.Array"
+  />&lt;<xref uid="@azure/arm-devtestlabs.models.index.d.NotificationChannel"
+  />&gt;

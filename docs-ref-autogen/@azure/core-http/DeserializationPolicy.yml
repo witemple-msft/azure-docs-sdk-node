@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DeserializationPolicy
-uid: '@azure/core-http.DeserializationPolicy'
+uid: '@azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy'
 package: '@azure/core-http'
 summary: >-
   A RequestPolicy that will deserialize HTTP response bodies and headers as they
@@ -16,7 +16,8 @@ constructors:
   - name: >-
       DeserializationPolicy(RequestPolicy, DeserializationContentTypes |
       undefined, RequestPolicyOptions)
-    uid: '@azure/core-http.DeserializationPolicy.constructor'
+    uid: >-
+      @azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy.constructor
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -29,19 +30,26 @@ constructors:
         options: RequestPolicyOptions)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: deserializationContentTypes
           type: >-
-            <xref uid="@azure/core-http.DeserializationContentTypes" /> |
-            undefined
+            <xref
+            uid="@azure/core-http.policies.deserializationPolicy.d.DeserializationContentTypes"
+            /> | undefined
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
 properties:
   - name: jsonContentTypes
-    uid: '@azure/core-http.DeserializationPolicy.jsonContentTypes'
+    uid: >-
+      @azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy.jsonContentTypes
     package: '@azure/core-http'
     summary: ''
     fullName: jsonContentTypes
@@ -54,7 +62,8 @@ properties:
         type: 'string[]'
         description: ''
   - name: xmlContentTypes
-    uid: '@azure/core-http.DeserializationPolicy.xmlContentTypes'
+    uid: >-
+      @azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy.xmlContentTypes
     package: '@azure/core-http'
     summary: ''
     fullName: xmlContentTypes
@@ -68,7 +77,8 @@ properties:
         description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.DeserializationPolicy.log'
+    uid: >-
+      @azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy.log
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -83,14 +93,18 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.DeserializationPolicy.sendRequest'
+    uid: >-
+      @azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy.sendRequest
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -100,13 +114,17 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.DeserializationPolicy.shouldLog'
+    uid: >-
+      @azure/core-http.policies.deserializationPolicy.d.DeserializationPolicy.shouldLog
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -116,9 +134,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

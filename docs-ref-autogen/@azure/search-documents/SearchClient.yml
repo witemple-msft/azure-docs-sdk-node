@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SearchClient
-uid: '@azure/search-documents.SearchClient'
+uid: '@azure/search-documents.search-documents.d.SearchClient'
 package: '@azure/search-documents'
 summary: |-
   Class used to perform operations against a search index,
@@ -13,7 +13,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'SearchClient(string, string, KeyCredential, SearchClientOptions)'
-    uid: '@azure/search-documents.SearchClient.constructor'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.constructor'
     package: '@azure/search-documents'
     summary: >-
       Creates an instance of SearchClient.
@@ -51,11 +51,14 @@ constructors:
           type: KeyCredential
           description: Used to authenticate requests to the service.
         - id: options
-          type: <xref uid="@azure/search-documents.SearchClientOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.SearchClientOptions"
+            />
           description: ''
 properties:
   - name: apiVersion
-    uid: '@azure/search-documents.SearchClient.apiVersion'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.apiVersion'
     package: '@azure/search-documents'
     summary: The API version to use when communicating with the service.
     fullName: apiVersion
@@ -68,7 +71,7 @@ properties:
         type: string
         description: ''
   - name: endpoint
-    uid: '@azure/search-documents.SearchClient.endpoint'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.endpoint'
     package: '@azure/search-documents'
     summary: The endpoint of the search service
     fullName: endpoint
@@ -81,7 +84,7 @@ properties:
         type: string
         description: ''
   - name: indexName
-    uid: '@azure/search-documents.SearchClient.indexName'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.indexName'
     package: '@azure/search-documents'
     summary: The name of the index
     fullName: indexName
@@ -95,7 +98,7 @@ properties:
         description: ''
 methods:
   - name: 'autocomplete<Fields>(string, string, AutocompleteOptions<Fields>)'
-    uid: '@azure/search-documents.SearchClient.autocomplete'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.autocomplete'
     package: '@azure/search-documents'
     summary: |-
       Based on a partial searchText from the user, return a list
@@ -118,17 +121,19 @@ methods:
             that's part of the index definition.
         - id: options
           type: >-
-            <xref uid="@azure/search-documents.AutocompleteOptions"
+            <xref
+            uid="@azure/search-documents.search-documents.d.AutocompleteOptions"
             />&lt;Fields&gt;
           description: |
             Options to the autocomplete operation.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.AutocompleteResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.AutocompleteResult"
           />&gt;
         description: ''
   - name: 'deleteDocuments(Object, string[], DeleteDocumentsOptions)'
-    uid: '@azure/search-documents.SearchClient.deleteDocuments_1'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.deleteDocuments_1'
     package: '@azure/search-documents'
     summary: Delete a set of documents.
     remarks: ''
@@ -146,16 +151,20 @@ methods:
           type: 'string[]'
           description: The primary key values of documents to delete.
         - id: options
-          type: <xref uid="@azure/search-documents.DeleteDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.DeleteDocumentsOptions"
+            />
           description: |
             Additional options.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.IndexDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.IndexDocumentsResult"
           />&gt;
         description: ''
   - name: 'deleteDocuments(T[], DeleteDocumentsOptions)'
-    uid: '@azure/search-documents.SearchClient.deleteDocuments'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.deleteDocuments'
     package: '@azure/search-documents'
     summary: Delete a set of documents.
     remarks: ''
@@ -170,16 +179,20 @@ methods:
           type: 'T[]'
           description: Documents to be deleted.
         - id: options
-          type: <xref uid="@azure/search-documents.DeleteDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.DeleteDocumentsOptions"
+            />
           description: |
             Additional options.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.IndexDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.IndexDocumentsResult"
           />&gt;
         description: ''
   - name: 'getDocument<Fields>(string, GetDocumentOptions<Fields>)'
-    uid: '@azure/search-documents.SearchClient.getDocument'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.getDocument'
     package: '@azure/search-documents'
     summary: Retrieve a particular document from the index by key.
     remarks: ''
@@ -195,7 +208,8 @@ methods:
           description: The primary key value of the document
         - id: options
           type: >-
-            <xref uid="@azure/search-documents.GetDocumentOptions"
+            <xref
+            uid="@azure/search-documents.search-documents.d.GetDocumentOptions"
             />&lt;Fields&gt;
           description: |
             Additional options
@@ -203,7 +217,7 @@ methods:
         type: Promise&lt;T&gt;
         description: ''
   - name: getDocumentsCount(CountDocumentsOptions)
-    uid: '@azure/search-documents.SearchClient.getDocumentsCount'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.getDocumentsCount'
     package: '@azure/search-documents'
     summary: Retrieves the number of documents in the index.
     remarks: ''
@@ -213,14 +227,17 @@ methods:
       content: 'function getDocumentsCount(options?: CountDocumentsOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/search-documents.CountDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.CountDocumentsOptions"
+            />
           description: |
             Options to the count operation.
       return:
         type: Promise&lt;number&gt;
         description: ''
   - name: 'indexDocuments(IndexDocumentsBatch<T>, IndexDocumentsOptions)'
-    uid: '@azure/search-documents.SearchClient.indexDocuments'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.indexDocuments'
     package: '@azure/search-documents'
     summary: >-
       Perform a set of index modifications (upload, merge, mergeOrUpload,
@@ -246,19 +263,26 @@ methods:
         IndexDocumentsOptions)
       parameters:
         - id: batch
-          type: <xref uid="@azure/search-documents.IndexDocumentsBatch" />&lt;T&gt;
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.IndexDocumentsBatch"
+            />&lt;T&gt;
           description: An array of actions to perform on the index.
         - id: options
-          type: <xref uid="@azure/search-documents.IndexDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.IndexDocumentsOptions"
+            />
           description: |
             Additional options.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.IndexDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.IndexDocumentsResult"
           />&gt;
         description: ''
   - name: 'mergeDocuments(T[], MergeDocumentsOptions)'
-    uid: '@azure/search-documents.SearchClient.mergeDocuments'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.mergeDocuments'
     package: '@azure/search-documents'
     summary: >-
       Update a set of documents in the index.
@@ -275,16 +299,21 @@ methods:
           type: 'T[]'
           description: The updated documents.
         - id: options
-          type: <xref uid="@azure/search-documents.MergeDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.MergeDocumentsOptions"
+            />
           description: |
             Additional options.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.IndexDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.IndexDocumentsResult"
           />&gt;
         description: ''
   - name: 'mergeOrUploadDocuments(T[], MergeOrUploadDocumentsOptions)'
-    uid: '@azure/search-documents.SearchClient.mergeOrUploadDocuments'
+    uid: >-
+      @azure/search-documents.search-documents.d.SearchClient.mergeOrUploadDocuments
     package: '@azure/search-documents'
     summary: >-
       Update a set of documents in the index or upload them if they don't exist.
@@ -303,16 +332,20 @@ methods:
           type: 'T[]'
           description: The updated documents.
         - id: options
-          type: <xref uid="@azure/search-documents.MergeOrUploadDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.MergeOrUploadDocumentsOptions"
+            />
           description: |
             Additional options.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.IndexDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.IndexDocumentsResult"
           />&gt;
         description: ''
   - name: 'search<Fields>(string, SearchOptions<Fields>)'
-    uid: '@azure/search-documents.SearchClient.search'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.search'
     package: '@azure/search-documents'
     summary: |-
       Performs a search on the current index given
@@ -329,16 +362,19 @@ methods:
           type: string
           description: Text to search
         - id: options
-          type: <xref uid="@azure/search-documents.SearchOptions" />&lt;Fields&gt;
+          type: >-
+            <xref uid="@azure/search-documents.search-documents.d.SearchOptions"
+            />&lt;Fields&gt;
           description: |
             Options for the search operation.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.SearchDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.SearchDocumentsResult"
           />&lt;Pick&lt;T, Fields&gt;&gt;&gt;
         description: ''
   - name: 'suggest<Fields>(string, string, SuggestOptions<Fields>)'
-    uid: '@azure/search-documents.SearchClient.suggest'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.suggest'
     package: '@azure/search-documents'
     summary: |-
       Returns a short list of suggestions based on the searchText
@@ -362,16 +398,20 @@ methods:
             The name of the suggester as specified in the suggesters collection
             that's part of the index definition.
         - id: options
-          type: <xref uid="@azure/search-documents.SuggestOptions" />&lt;Fields&gt;
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.SuggestOptions"
+            />&lt;Fields&gt;
           description: |
             Options for the suggest operation
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.SuggestDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.SuggestDocumentsResult"
           />&lt;Pick&lt;T, Fields&gt;&gt;&gt;
         description: ''
   - name: 'uploadDocuments(T[], UploadDocumentsOptions)'
-    uid: '@azure/search-documents.SearchClient.uploadDocuments'
+    uid: '@azure/search-documents.search-documents.d.SearchClient.uploadDocuments'
     package: '@azure/search-documents'
     summary: Upload an array of documents to the index.
     remarks: ''
@@ -386,11 +426,15 @@ methods:
           type: 'T[]'
           description: The documents to upload.
         - id: options
-          type: <xref uid="@azure/search-documents.UploadDocumentsOptions" />
+          type: >-
+            <xref
+            uid="@azure/search-documents.search-documents.d.UploadDocumentsOptions"
+            />
           description: |
             Additional options.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/search-documents.IndexDocumentsResult"
+          Promise&lt;<xref
+          uid="@azure/search-documents.search-documents.d.IndexDocumentsResult"
           />&gt;
         description: ''

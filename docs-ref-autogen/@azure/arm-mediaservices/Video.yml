@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Video
-uid: '@azure/arm-mediaservices.Video'
+uid: '@azure/arm-mediaservices.models.index.d.Video'
 package: '@azure/arm-mediaservices'
 summary: Describes the basic properties for encoding the input video.
 fullName: Video
@@ -10,16 +10,19 @@ isDeprecated: false
 type: interface
 properties:
   - name: keyFrameInterval
-    uid: '@azure/arm-mediaservices.Video.keyFrameInterval'
+    uid: '@azure/arm-mediaservices.models.index.d.Video.keyFrameInterval'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The distance between two key frames, thereby defining a group of pictures
-      (GOP). The value
+      The distance between two key frames. The value should be non-zero in the
+      range [0.5, 20]
 
-      should be a non-zero integer in the range [1, 30] seconds, specified in
-      ISO 8601 format. The
+      seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S).
+      Note that this setting
 
-      default is 2 seconds (PT2S).
+      is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval
+      value will follow
+
+      the input source setting.
     fullName: keyFrameInterval
     remarks: ''
     isPreview: false
@@ -30,7 +33,7 @@ properties:
         type: undefined | string
         description: ''
   - name: label
-    uid: '@azure/arm-mediaservices.Video.label'
+    uid: '@azure/arm-mediaservices.models.index.d.Video.label'
     package: '@azure/arm-mediaservices'
     summary: >-
       An optional label for the codec. The label can be used to control muxing
@@ -45,7 +48,7 @@ properties:
         type: undefined | string
         description: ''
   - name: odatatype
-    uid: '@azure/arm-mediaservices.Video.odatatype'
+    uid: '@azure/arm-mediaservices.models.index.d.Video.odatatype'
     package: '@azure/arm-mediaservices'
     summary: Polymorphic Discriminator
     fullName: odatatype
@@ -58,7 +61,7 @@ properties:
         type: '"#<xref uid="Microsoft.Media.Video" />"'
         description: ''
   - name: stretchMode
-    uid: '@azure/arm-mediaservices.Video.stretchMode'
+    uid: '@azure/arm-mediaservices.models.index.d.Video.stretchMode'
     package: '@azure/arm-mediaservices'
     summary: >-
       The resizing mode - how the input video will be resized to fit the desired
@@ -73,5 +76,20 @@ properties:
     syntax:
       content: 'stretchMode?: StretchMode'
       return:
-        type: <xref uid="@azure/arm-mediaservices.StretchMode" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.StretchMode" />
+        description: ''
+  - name: syncMode
+    uid: '@azure/arm-mediaservices.models.index.d.Video.syncMode'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      The Video Sync Mode. Possible values include: 'Auto', 'Passthrough',
+      'Cfr', 'Vfr'
+    fullName: syncMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'syncMode?: VideoSyncMode'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.VideoSyncMode" />
         description: ''

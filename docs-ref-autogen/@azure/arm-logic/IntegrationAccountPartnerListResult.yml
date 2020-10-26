@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: IntegrationAccountPartnerListResult
-uid: '@azure/arm-logic.IntegrationAccountPartnerListResult'
+uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult'
 package: '@azure/arm-logic'
 summary: ''
 fullName: IntegrationAccountPartnerListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.Array'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.Array'
     package: '@azure/arm-logic'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.length'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.length'
     package: '@azure/arm-logic'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.nextLink'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.nextLink
     package: '@azure/arm-logic'
     summary: The URL to get the next set of results.
     fullName: nextLink
@@ -52,7 +53,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<IntegrationAccountPartner>[])'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.concat'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.concat'
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +65,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-logic.IntegrationAccountPartner" />&gt;[]
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.concat_1'
+  - name: >-
+      concat(IntegrationAccountPartner |
+      ConcatArray<IntegrationAccountPartner>[])
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.concat_1
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: IntegrationAccountPartner |
+        ConcatArray<IntegrationAccountPartner>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.copyWithin'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.copyWithin
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +143,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.entries'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.entries
     package: '@azure/arm-logic'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +158,8 @@ methods:
   - name: >-
       every((value: IntegrationAccountPartner, index: number, array:
       IntegrationAccountPartner[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.every'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.every_1
     package: '@azure/arm-logic'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +167,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: IntegrationAccountPartner, index:
+        function every(predicate: (value: IntegrationAccountPartner, index:
         number, array: IntegrationAccountPartner[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationAccountPartner, index: number, array:
             IntegrationAccountPartner[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: IntegrationAccountPartner, index: number, array:
+      IntegrationAccountPartner[]) => value, any)
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.every'
+    package: '@azure/arm-logic'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: IntegrationAccountPartner, index:
+        number, array: IntegrationAccountPartner[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: IntegrationAccountPartner, index: number, array:
+            IntegrationAccountPartner[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(IntegrationAccountPartner, undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.fill'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.fill'
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +245,9 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +269,8 @@ methods:
   - name: >-
       filter((value: IntegrationAccountPartner, index: number, array:
       IntegrationAccountPartner[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.filter_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.filter_1
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +280,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: IntegrationAccountPartner, index:
+        function filter(predicate: (value: IntegrationAccountPartner, index:
         number, array: IntegrationAccountPartner[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationAccountPartner, index: number, array:
             IntegrationAccountPartner[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: IntegrationAccountPartner, index: number, array:
-      IntegrationAccountPartner[]) => boolean, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.filter'
+      IntegrationAccountPartner[]) => value, any)
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.filter'
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +314,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: IntegrationAccountPartner, index:
-        number, array: IntegrationAccountPartner[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: IntegrationAccountPartner, index:
+        number, array: IntegrationAccountPartner[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationAccountPartner, index: number, array:
-            IntegrationAccountPartner[]) =&gt; boolean
+            IntegrationAccountPartner[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +336,7 @@ methods:
   - name: >-
       find((value: IntegrationAccountPartner, index: number, obj:
       IntegrationAccountPartner[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.find_1'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.find_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -291,12 +356,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: IntegrationAccountPartner, index: number, obj:
-      IntegrationAccountPartner[]) => boolean, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.find'
+      IntegrationAccountPartner[]) => value, any)
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.find'
     package: '@azure/arm-logic'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -310,12 +377,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         IntegrationAccountPartner, index: number, obj:
-        IntegrationAccountPartner[]) => boolean, thisArg?: any)
+        IntegrationAccountPartner[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: IntegrationAccountPartner, index: number, obj:
-            IntegrationAccountPartner[]) =&gt; boolean
+            IntegrationAccountPartner[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -338,7 +405,8 @@ methods:
   - name: >-
       findIndex((value: IntegrationAccountPartner, index: number, obj:
       IntegrationAccountPartner[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.findIndex'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.findIndex
     package: '@azure/arm-logic'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -379,7 +447,8 @@ methods:
   - name: >-
       forEach((value: IntegrationAccountPartner, index: number, array:
       IntegrationAccountPartner[]) => void, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.forEach'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.forEach
     package: '@azure/arm-logic'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -404,7 +473,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(IntegrationAccountPartner, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.includes'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.includes
     package: '@azure/arm-logic'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -418,7 +488,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -429,7 +501,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(IntegrationAccountPartner, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.indexOf'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.indexOf
     package: '@azure/arm-logic'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -441,7 +514,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -452,7 +527,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.join'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.join'
     package: '@azure/arm-logic'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -473,7 +548,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.keys'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.keys'
     package: '@azure/arm-logic'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -485,7 +560,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(IntegrationAccountPartner, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.lastIndexOf
     package: '@azure/arm-logic'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -497,7 +573,9 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -510,7 +588,7 @@ methods:
   - name: >-
       map<U>((value: IntegrationAccountPartner, index: number, array:
       IntegrationAccountPartner[]) => U, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.map'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.map'
     package: '@azure/arm-logic'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -540,7 +618,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.pop'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.pop'
     package: '@azure/arm-logic'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -549,10 +627,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          /> | undefined
         description: ''
   - name: 'push(IntegrationAccountPartner[])'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.push'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.push'
     package: '@azure/arm-logic'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -562,7 +642,9 @@ methods:
       content: 'function push(items: IntegrationAccountPartner[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />[]
           description: |
             New elements of the Array.
       return:
@@ -572,7 +654,7 @@ methods:
       reduce((previousValue: IntegrationAccountPartner, currentValue:
       IntegrationAccountPartner, currentIndex: number, array:
       IntegrationAccountPartner[]) => IntegrationAccountPartner)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reduce'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reduce'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -597,14 +679,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />
         description: ''
   - name: >-
       reduce((previousValue: IntegrationAccountPartner, currentValue:
       IntegrationAccountPartner, currentIndex: number, array:
       IntegrationAccountPartner[]) => IntegrationAccountPartner,
       IntegrationAccountPartner)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reduce_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reduce_1
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -624,15 +709,20 @@ methods:
             IntegrationAccountPartner[]) =&gt; IntegrationAccountPartner
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: IntegrationAccountPartner,
       currentIndex: number, array: IntegrationAccountPartner[]) => U, U)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reduce_2'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reduce_2
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -668,7 +758,8 @@ methods:
       reduceRight((previousValue: IntegrationAccountPartner, currentValue:
       IntegrationAccountPartner, currentIndex: number, array:
       IntegrationAccountPartner[]) => IntegrationAccountPartner)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reduceRight'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reduceRight
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -695,14 +786,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: IntegrationAccountPartner, currentValue:
       IntegrationAccountPartner, currentIndex: number, array:
       IntegrationAccountPartner[]) => IntegrationAccountPartner,
       IntegrationAccountPartner)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reduceRight_1
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -722,15 +816,20 @@ methods:
             IntegrationAccountPartner[]) =&gt; IntegrationAccountPartner
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" />
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: IntegrationAccountPartner,
       currentIndex: number, array: IntegrationAccountPartner[]) => U, U)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reduceRight_2
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +863,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.reverse'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.reverse
     package: '@azure/arm-logic'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +873,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.shift'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.shift'
     package: '@azure/arm-logic'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +887,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-logic.IntegrationAccountPartner" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.slice'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.slice'
     package: '@azure/arm-logic'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +906,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
   - name: >-
       some((value: IntegrationAccountPartner, index: number, array:
       IntegrationAccountPartner[]) => unknown, any)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.some'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.some'
     package: '@azure/arm-logic'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,30 +927,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: IntegrationAccountPartner, index:
+        function some(predicate: (value: IntegrationAccountPartner, index:
         number, array: IntegrationAccountPartner[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: IntegrationAccountPartner, index: number, array:
             IntegrationAccountPartner[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: IntegrationAccountPartner, b:
       IntegrationAccountPartner) => number)
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.sort'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.sort'
     package: '@azure/arm-logic'
     summary: Sorts an array.
     remarks: ''
@@ -859,14 +971,26 @@ methods:
             undefined | (a: IntegrationAccountPartner, b:
             IntegrationAccountPartner) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, IntegrationAccountPartner[])'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.splice_1'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.splice_1
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -888,14 +1012,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.splice'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.splice'
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -916,10 +1044,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.toLocaleString'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.toLocaleString
     package: '@azure/arm-logic'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -933,7 +1064,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.toString'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.toString
     package: '@azure/arm-logic'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -945,7 +1077,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(IntegrationAccountPartner[])'
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.unshift'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.unshift
     package: '@azure/arm-logic'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -955,14 +1088,16 @@ methods:
       content: 'function unshift(items: IntegrationAccountPartner[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-logic.IntegrationAccountPartner" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-logic.IntegrationAccountPartnerListResult.values'
+    uid: '@azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.values'
     package: '@azure/arm-logic'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -973,6 +1108,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-logic.IntegrationAccountPartner" />&gt;
+          uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-logic.IntegrationAccountPartner" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.[Symbol.iterator]
+    package: '@azure/arm-logic'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-logic.models.index.d.IntegrationAccountPartnerListResult.[Symbol.unscopables]
+    package: '@azure/arm-logic'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-logic.models.index.d.WorkflowListResult.Array"
+  />&lt;<xref uid="@azure/arm-logic.models.index.d.IntegrationAccountPartner"
+  />&gt;

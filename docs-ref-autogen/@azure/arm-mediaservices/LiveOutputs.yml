@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LiveOutputs
-uid: '@azure/arm-mediaservices.LiveOutputs'
+uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs'
 package: '@azure/arm-mediaservices'
 summary: Class representing a LiveOutputs.
 fullName: LiveOutputs
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: LiveOutputs(AzureMediaServicesContext)
-    uid: '@azure/arm-mediaservices.LiveOutputs.constructor'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.constructor'
     package: '@azure/arm-mediaservices'
     summary: Create a LiveOutputs.
     remarks: ''
@@ -20,16 +20,19 @@ constructors:
       content: 'new LiveOutputs(client: AzureMediaServicesContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-mediaservices.AzureMediaServicesContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-mediaservices.azureMediaServicesContext.d.AzureMediaServicesContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       beginCreate(string, string, string, string, LiveOutput,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-mediaservices.LiveOutputs.beginCreate'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.beginCreate'
     package: '@azure/arm-mediaservices'
-    summary: Creates a Live Output.
+    summary: Creates a new live output.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -47,12 +50,12 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveOutput" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.LiveOutput" />
           description: Live Output properties needed for creation.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -63,9 +66,14 @@ methods:
   - name: >-
       beginDeleteMethod(string, string, string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-mediaservices.LiveOutputs.beginDeleteMethod'
+    uid: >-
+      @azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.beginDeleteMethod
     package: '@azure/arm-mediaservices'
-    summary: Deletes a Live Output.
+    summary: >-
+      Deletes a live output. Deleting a live output does not delete the asset
+      the live output is
+
+      writing to.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -83,10 +91,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -96,9 +104,9 @@ methods:
   - name: >-
       create(string, string, string, string, LiveOutput,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-mediaservices.LiveOutputs.create'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.create'
     package: '@azure/arm-mediaservices'
-    summary: Creates a Live Output.
+    summary: Creates a new live output.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -116,12 +124,12 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveOutput" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.LiveOutput" />
           description: Live Output properties needed for creation.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -130,9 +138,13 @@ methods:
         type: Promise&lt;<xref uid="Models.LiveOutputsCreateResponse" />&gt;
         description: Promise<Models.LiveOutputsCreateResponse>
   - name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.deleteMethod'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.deleteMethod'
     package: '@azure/arm-mediaservices'
-    summary: Deletes a Live Output.
+    summary: >-
+      Deletes a live output. Deleting a live output does not delete the asset
+      the live output is
+
+      writing to.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -150,10 +162,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -161,9 +173,9 @@ methods:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
   - name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.get'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.get'
     package: '@azure/arm-mediaservices'
-    summary: Gets a Live Output.
+    summary: Gets a live output.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -181,10 +193,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -194,7 +206,7 @@ methods:
   - name: >-
       get(string, string, string, string, RequestOptionsBase,
       ServiceCallback<LiveOutput>)
-    uid: '@azure/arm-mediaservices.LiveOutputs.get_2'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.get_2'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -214,21 +226,21 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: options
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-mediaservices.LiveOutput"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.LiveOutput" />&gt;
           description: |
             The callback
   - name: 'get(string, string, string, string, ServiceCallback<LiveOutput>)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.get_1'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.get_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -248,20 +260,20 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: liveOutputName
           type: string
-          description: The name of the Live Output.
+          description: The name of the live output.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-mediaservices.LiveOutput"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.LiveOutput" />&gt;
           description: |
             The callback
   - name: 'list(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.list'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.list'
     package: '@azure/arm-mediaservices'
-    summary: Lists the Live Outputs in the Live Event.
+    summary: Lists the live outputs of a live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -278,7 +290,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -288,7 +300,7 @@ methods:
   - name: >-
       list(string, string, string, RequestOptionsBase,
       ServiceCallback<LiveOutputListResult>)
-    uid: '@azure/arm-mediaservices.LiveOutputs.list_2'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.list_2'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -308,18 +320,19 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveOutputListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveOutputListResult"
+            />&gt;
           description: |
             The callback
   - name: 'list(string, string, string, ServiceCallback<LiveOutputListResult>)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.list_1'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.list_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -338,17 +351,18 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveOutputListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveOutputListResult"
+            />&gt;
           description: |
             The callback
   - name: 'listNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.listNext'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.listNext'
     package: '@azure/arm-mediaservices'
-    summary: Lists the Live Outputs in the Live Event.
+    summary: Lists the live outputs of a live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -369,7 +383,7 @@ methods:
   - name: >-
       listNext(string, RequestOptionsBase,
       ServiceCallback<LiveOutputListResult>)
-    uid: '@azure/arm-mediaservices.LiveOutputs.listNext_2'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.listNext_2'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -389,11 +403,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveOutputListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveOutputListResult"
+            />&gt;
           description: |
             The callback
   - name: 'listNext(string, ServiceCallback<LiveOutputListResult>)'
-    uid: '@azure/arm-mediaservices.LiveOutputs.listNext_1'
+    uid: '@azure/arm-mediaservices.operations.liveOutputs.d.LiveOutputs.listNext_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -410,6 +425,7 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveOutputListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveOutputListResult"
+            />&gt;
           description: |
             The callback

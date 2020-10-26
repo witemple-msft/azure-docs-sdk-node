@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: FactoryListResponse
-uid: '@azure/arm-datafactory.FactoryListResponse'
+uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse'
 package: '@azure/arm-datafactory'
 summary: ''
 fullName: FactoryListResponse
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-datafactory.FactoryListResponse.Array'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.Array'
     package: '@azure/arm-datafactory'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-datafactory.FactoryListResponse.length'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.length'
     package: '@azure/arm-datafactory'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-datafactory.FactoryListResponse.nextLink'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.nextLink'
     package: '@azure/arm-datafactory'
     summary: 'The link to the next page of results, if any remaining results exist.'
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Factory>[])'
-    uid: '@azure/arm-datafactory.FactoryListResponse.concat'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.concat'
     package: '@azure/arm-datafactory'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<Factory>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-datafactory.Factory" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-datafactory.models.index.d.Factory" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-datafactory.FactoryListResponse.concat_1'
+  - name: 'concat(Factory | ConcatArray<Factory>[])'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.concat_1'
     package: '@azure/arm-datafactory'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Factory | ConcatArray<Factory>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-datafactory.models.index.d.Factory" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-datafactory.models.index.d.Factory" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.copyWithin'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.copyWithin'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-datafactory.FactoryListResponse.entries'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.entries'
     package: '@azure/arm-datafactory'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Factory, index: number, array: Factory[]) => unknown, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.every'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.every_1'
     package: '@azure/arm-datafactory'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Factory, index: number, array:
+        function every(predicate: (value: Factory, index: number, array:
         Factory[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Factory, index: number, array: Factory[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Factory, index: number, array: Factory[]) => value, any)'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.every'
+    package: '@azure/arm-datafactory'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Factory, index: number, array:
+        Factory[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Factory, index: number, array: Factory[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Factory, undefined | number, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.fill'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.fill'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +221,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-datafactory.Factory" />
+          type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -197,7 +241,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Factory, index: number, array: Factory[]) => unknown, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.filter_1'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.filter_1'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -207,28 +251,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Factory, index: number, array:
+        function filter(predicate: (value: Factory, index: number, array:
         Factory[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Factory, index: number, array: Factory[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
-  - name: >-
-      filter<S>((value: Factory, index: number, array: Factory[]) => boolean,
-      any)
-    uid: '@azure/arm-datafactory.FactoryListResponse.filter'
+  - name: 'filter<S>((value: Factory, index: number, array: Factory[]) => value, any)'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.filter'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +279,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Factory, index: number, array:
-        Factory[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Factory, index: number, array:
+        Factory[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Factory, index: number, array: Factory[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Factory, index: number, array: Factory[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Factory, index: number, obj: Factory[]) => unknown, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.find_1'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.find_1'
     package: '@azure/arm-datafactory'
     summary: ''
     remarks: ''
@@ -275,12 +315,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-datafactory.models.index.d.Factory" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Factory, index: number, obj: Factory[]) =>
-      boolean, any)
-    uid: '@azure/arm-datafactory.FactoryListResponse.find'
+      value, any)
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.find'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -293,12 +335,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Factory, index: number,
-        obj: Factory[]) => boolean, thisArg?: any)
+        obj: Factory[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Factory, index: number, obj: Factory[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -319,7 +361,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Factory, index: number, obj: Factory[]) => unknown, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.findIndex'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.findIndex'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -356,7 +398,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Factory, index: number, array: Factory[]) => void, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.forEach'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.forEach'
     package: '@azure/arm-datafactory'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -379,7 +421,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Factory, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.includes'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.includes'
     package: '@azure/arm-datafactory'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -393,7 +435,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-datafactory.Factory" />
+          type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -404,7 +446,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Factory, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.indexOf'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.indexOf'
     package: '@azure/arm-datafactory'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -414,7 +456,7 @@ methods:
       content: 'function indexOf(searchElement: Factory, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-datafactory.Factory" />
+          type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +467,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-datafactory.FactoryListResponse.join'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.join'
     package: '@azure/arm-datafactory'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -446,7 +488,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-datafactory.FactoryListResponse.keys'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.keys'
     package: '@azure/arm-datafactory'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -458,7 +500,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Factory, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.lastIndexOf'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.lastIndexOf'
     package: '@azure/arm-datafactory'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -470,7 +512,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-datafactory.Factory" />
+          type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -481,7 +523,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Factory, index: number, array: Factory[]) => U, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.map'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.map'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -509,7 +551,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-datafactory.FactoryListResponse.pop'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.pop'
     package: '@azure/arm-datafactory'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -518,10 +560,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-datafactory.models.index.d.Factory" /> |
+          undefined
         description: ''
   - name: 'push(Factory[])'
-    uid: '@azure/arm-datafactory.FactoryListResponse.push'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.push'
     package: '@azure/arm-datafactory'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -531,7 +575,7 @@ methods:
       content: 'function push(items: Factory[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+          type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
           description: |
             New elements of the Array.
       return:
@@ -540,7 +584,7 @@ methods:
   - name: >-
       reduce((previousValue: Factory, currentValue: Factory, currentIndex:
       number, array: Factory[]) => Factory)
-    uid: '@azure/arm-datafactory.FactoryListResponse.reduce'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reduce'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -563,12 +607,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" />
+        type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
         description: ''
   - name: >-
       reduce((previousValue: Factory, currentValue: Factory, currentIndex:
       number, array: Factory[]) => Factory, Factory)
-    uid: '@azure/arm-datafactory.FactoryListResponse.reduce_1'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reduce_1'
     package: '@azure/arm-datafactory'
     summary: ''
     remarks: ''
@@ -586,15 +630,15 @@ methods:
             number, array: Factory[]) =&gt; Factory
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-datafactory.Factory" />
+          type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" />
+        type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Factory, currentIndex: number,
       array: Factory[]) => U, U)
-    uid: '@azure/arm-datafactory.FactoryListResponse.reduce_2'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reduce_2'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -628,7 +672,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Factory, currentValue: Factory, currentIndex:
       number, array: Factory[]) => Factory)
-    uid: '@azure/arm-datafactory.FactoryListResponse.reduceRight'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reduceRight'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -652,12 +696,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" />
+        type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
         description: ''
   - name: >-
       reduceRight((previousValue: Factory, currentValue: Factory, currentIndex:
       number, array: Factory[]) => Factory, Factory)
-    uid: '@azure/arm-datafactory.FactoryListResponse.reduceRight_1'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reduceRight_1'
     package: '@azure/arm-datafactory'
     summary: ''
     remarks: ''
@@ -675,15 +719,15 @@ methods:
             number, array: Factory[]) =&gt; Factory
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-datafactory.Factory" />
+          type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" />
+        type: <xref uid="@azure/arm-datafactory.models.index.d.Factory" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Factory, currentIndex:
       number, array: Factory[]) => U, U)
-    uid: '@azure/arm-datafactory.FactoryListResponse.reduceRight_2'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reduceRight_2'
     package: '@azure/arm-datafactory'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -716,7 +760,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-datafactory.FactoryListResponse.reverse'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.reverse'
     package: '@azure/arm-datafactory'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -725,10 +769,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-datafactory.FactoryListResponse.shift'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.shift'
     package: '@azure/arm-datafactory'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -737,10 +781,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-datafactory.Factory" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-datafactory.models.index.d.Factory" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.slice'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.slice'
     package: '@azure/arm-datafactory'
     summary: Returns a section of an array.
     remarks: ''
@@ -754,13 +800,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
   - name: 'some((value: Factory, index: number, array: Factory[]) => unknown, any)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.some'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.some'
     package: '@azure/arm-datafactory'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -770,26 +817,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Factory, index: number, array:
+        function some(predicate: (value: Factory, index: number, array:
         Factory[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Factory, index: number, array: Factory[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Factory, b: Factory) => number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.sort'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.sort'
     package: '@azure/arm-datafactory'
     summary: Sorts an array.
     remarks: ''
@@ -803,14 +855,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Factory, b: Factory) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Factory[])'
-    uid: '@azure/arm-datafactory.FactoryListResponse.splice_1'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.splice_1'
     package: '@azure/arm-datafactory'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -830,14 +893,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+          type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-datafactory.FactoryListResponse.splice'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.splice'
     package: '@azure/arm-datafactory'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -858,10 +921,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+        type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-datafactory.FactoryListResponse.toLocaleString'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.toLocaleString'
     package: '@azure/arm-datafactory'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -875,7 +938,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-datafactory.FactoryListResponse.toString'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.toString'
     package: '@azure/arm-datafactory'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -887,7 +950,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Factory[])'
-    uid: '@azure/arm-datafactory.FactoryListResponse.unshift'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.unshift'
     package: '@azure/arm-datafactory'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -897,14 +960,14 @@ methods:
       content: 'function unshift(items: Factory[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-datafactory.Factory" />[]'
+          type: '<xref uid="@azure/arm-datafactory.models.index.d.Factory" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-datafactory.FactoryListResponse.values'
+    uid: '@azure/arm-datafactory.models.index.d.FactoryListResponse.values'
     package: '@azure/arm-datafactory'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -913,6 +976,40 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-datafactory.Factory" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-datafactory.models.index.d.Factory" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-datafactory.Factory" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.FactoryListResponse.[Symbol.iterator]
+    package: '@azure/arm-datafactory'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-datafactory.models.index.d.Factory" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-datafactory.models.index.d.FactoryListResponse.[Symbol.unscopables]
+    package: '@azure/arm-datafactory'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-datafactory.models.index.d.OperationListResponse.Array"
+  />&lt;<xref uid="@azure/arm-datafactory.models.index.d.Factory" />&gt;

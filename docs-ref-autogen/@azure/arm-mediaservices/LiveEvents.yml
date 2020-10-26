@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LiveEvents
-uid: '@azure/arm-mediaservices.LiveEvents'
+uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents'
 package: '@azure/arm-mediaservices'
 summary: Class representing a LiveEvents.
 fullName: LiveEvents
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: LiveEvents(AzureMediaServicesContext)
-    uid: '@azure/arm-mediaservices.LiveEvents.constructor'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.constructor'
     package: '@azure/arm-mediaservices'
     summary: Create a LiveEvents.
     remarks: ''
@@ -20,16 +20,77 @@ constructors:
       content: 'new LiveEvents(client: AzureMediaServicesContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-mediaservices.AzureMediaServicesContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-mediaservices.azureMediaServicesContext.d.AzureMediaServicesContext"
+            />
           description: |
             Reference to the service client.
 methods:
+  - name: 'allocate(string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.allocate'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      A live event is in StandBy state after allocation completes, and is ready
+      to start.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function allocate(resourceGroupName: string, accountName: string,
+        liveEventName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group within the Azure subscription.
+        - id: accountName
+          type: string
+          description: The Media Services account name.
+        - id: liveEventName
+          type: string
+          description: 'The name of the live event, maximum length is 32.'
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>
+  - name: 'beginAllocate(string, string, string, msRest.RequestOptionsBase)'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginAllocate'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      A live event is in StandBy state after allocation completes, and is ready
+      to start.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginAllocate(resourceGroupName: string, accountName: string,
+        liveEventName: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group within the Azure subscription.
+        - id: accountName
+          type: string
+          description: The Media Services account name.
+        - id: liveEventName
+          type: string
+          description: 'The name of the live event, maximum length is 32.'
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: Promise&lt;LROPoller&gt;
+        description: Promise<msRestAzure.LROPoller>
   - name: >-
       beginCreate(string, string, string, LiveEvent,
       Models.LiveEventsBeginCreateOptionalParams)
-    uid: '@azure/arm-mediaservices.LiveEvents.beginCreate'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginCreate'
     package: '@azure/arm-mediaservices'
-    summary: Creates a Live Event.
+    summary: Creates a new live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -47,10 +108,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveEvent" />
-          description: Live Event properties needed for creation.
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.LiveEvent" />
+          description: Live event properties needed for creation.
         - id: options
           type: <xref uid="Models.LiveEventsBeginCreateOptionalParams" />
           description: ''
@@ -58,9 +119,10 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.beginDeleteMethod'
+    uid: >-
+      @azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginDeleteMethod
     package: '@azure/arm-mediaservices'
-    summary: Deletes a Live Event.
+    summary: Deletes a live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -77,7 +139,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -85,9 +147,16 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginReset(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.beginReset'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginReset'
     package: '@azure/arm-mediaservices'
-    summary: Resets an existing Live Event.
+    summary: >-
+      Resets an existing live event. All live outputs for the live event are
+      deleted and the live
+
+      event is stopped and will be started again. All assets used by the live
+      outputs and streaming
+
+      locators created on these assets are unaffected.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -104,7 +173,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -112,9 +181,13 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.beginStart'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginStart'
     package: '@azure/arm-mediaservices'
-    summary: Starts an existing Live Event.
+    summary: >-
+      A live event in Stopped or StandBy state will be in Running state after
+      the start operation
+
+      completes.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -131,7 +204,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -141,9 +214,9 @@ methods:
   - name: >-
       beginStop(string, string, string, LiveEventActionInput,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-mediaservices.LiveEvents.beginStop'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginStop'
     package: '@azure/arm-mediaservices'
-    summary: Stops an existing Live Event.
+    summary: Stops a running live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -161,9 +234,12 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveEventActionInput" />
+          type: >-
+            <xref
+            uid="@azure/arm-mediaservices.models.index.d.LiveEventActionInput"
+            />
           description: LiveEvent stop parameters
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -172,9 +248,9 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginUpdate(string, string, string, LiveEvent, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.beginUpdate'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.beginUpdate'
     package: '@azure/arm-mediaservices'
-    summary: Updates a existing Live Event.
+    summary: Updates settings on an existing live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -192,10 +268,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveEvent" />
-          description: Live Event properties needed for creation.
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.LiveEvent" />
+          description: Live event properties needed for patch.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -205,9 +281,9 @@ methods:
   - name: >-
       create(string, string, string, LiveEvent,
       Models.LiveEventsCreateOptionalParams)
-    uid: '@azure/arm-mediaservices.LiveEvents.create'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.create'
     package: '@azure/arm-mediaservices'
-    summary: Creates a Live Event.
+    summary: Creates a new live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -225,10 +301,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveEvent" />
-          description: Live Event properties needed for creation.
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.LiveEvent" />
+          description: Live event properties needed for creation.
         - id: options
           type: <xref uid="Models.LiveEventsCreateOptionalParams" />
           description: ''
@@ -236,9 +312,9 @@ methods:
         type: Promise&lt;<xref uid="Models.LiveEventsCreateResponse" />&gt;
         description: Promise<Models.LiveEventsCreateResponse>
   - name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.deleteMethod'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.deleteMethod'
     package: '@azure/arm-mediaservices'
-    summary: Deletes a Live Event.
+    summary: Deletes a live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -255,7 +331,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -263,9 +339,9 @@ methods:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
   - name: 'get(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.get'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.get'
     package: '@azure/arm-mediaservices'
-    summary: Gets a Live Event.
+    summary: Gets properties of a live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -282,7 +358,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -292,7 +368,7 @@ methods:
   - name: >-
       get(string, string, string, RequestOptionsBase,
       ServiceCallback<LiveEvent>)
-    uid: '@azure/arm-mediaservices.LiveEvents.get_2'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.get_2'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -312,18 +388,18 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-mediaservices.LiveEvent"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.LiveEvent" />&gt;
           description: |
             The callback
   - name: 'get(string, string, string, ServiceCallback<LiveEvent>)'
-    uid: '@azure/arm-mediaservices.LiveEvents.get_1'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.get_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -342,17 +418,17 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-mediaservices.LiveEvent"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.LiveEvent" />&gt;
           description: |
             The callback
   - name: 'list(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.list'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.list'
     package: '@azure/arm-mediaservices'
-    summary: Lists the Live Events in the account.
+    summary: Lists all the live events in the account.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -376,7 +452,7 @@ methods:
   - name: >-
       list(string, string, RequestOptionsBase,
       ServiceCallback<LiveEventListResult>)
-    uid: '@azure/arm-mediaservices.LiveEvents.list_2'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.list_2'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -399,11 +475,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveEventListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveEventListResult"
+            />&gt;
           description: |
             The callback
   - name: 'list(string, string, ServiceCallback<LiveEventListResult>)'
-    uid: '@azure/arm-mediaservices.LiveEvents.list_1'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.list_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -423,13 +500,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveEventListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveEventListResult"
+            />&gt;
           description: |
             The callback
   - name: 'listNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.listNext'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.listNext'
     package: '@azure/arm-mediaservices'
-    summary: Lists the Live Events in the account.
+    summary: Lists all the live events in the account.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -448,7 +526,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LiveEventsListNextResponse" />&gt;
         description: Promise<Models.LiveEventsListNextResponse>
   - name: 'listNext(string, RequestOptionsBase, ServiceCallback<LiveEventListResult>)'
-    uid: '@azure/arm-mediaservices.LiveEvents.listNext_2'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.listNext_2'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -468,11 +546,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveEventListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveEventListResult"
+            />&gt;
           description: |
             The callback
   - name: 'listNext(string, ServiceCallback<LiveEventListResult>)'
-    uid: '@azure/arm-mediaservices.LiveEvents.listNext_1'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.listNext_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -489,13 +568,21 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-mediaservices.LiveEventListResult" />&gt;
+            uid="@azure/arm-mediaservices.models.index.d.LiveEventListResult"
+            />&gt;
           description: |
             The callback
   - name: 'reset(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.reset'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.reset'
     package: '@azure/arm-mediaservices'
-    summary: Resets an existing Live Event.
+    summary: >-
+      Resets an existing live event. All live outputs for the live event are
+      deleted and the live
+
+      event is stopped and will be started again. All assets used by the live
+      outputs and streaming
+
+      locators created on these assets are unaffected.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -512,7 +599,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -520,9 +607,13 @@ methods:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
   - name: 'start(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.start'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.start'
     package: '@azure/arm-mediaservices'
-    summary: Starts an existing Live Event.
+    summary: >-
+      A live event in Stopped or StandBy state will be in Running state after
+      the start operation
+
+      completes.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -539,7 +630,7 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -549,9 +640,9 @@ methods:
   - name: >-
       stop(string, string, string, LiveEventActionInput,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-mediaservices.LiveEvents.stop'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.stop'
     package: '@azure/arm-mediaservices'
-    summary: Stops an existing Live Event.
+    summary: Stops a running live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -569,9 +660,12 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveEventActionInput" />
+          type: >-
+            <xref
+            uid="@azure/arm-mediaservices.models.index.d.LiveEventActionInput"
+            />
           description: LiveEvent stop parameters
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -580,9 +674,9 @@ methods:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
   - name: 'update(string, string, string, LiveEvent, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-mediaservices.LiveEvents.update'
+    uid: '@azure/arm-mediaservices.operations.liveEvents.d.LiveEvents.update'
     package: '@azure/arm-mediaservices'
-    summary: Updates a existing Live Event.
+    summary: Updates settings on an existing live event.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -600,10 +694,10 @@ methods:
           description: The Media Services account name.
         - id: liveEventName
           type: string
-          description: The name of the Live Event.
+          description: 'The name of the live event, maximum length is 32.'
         - id: parameters
-          type: <xref uid="@azure/arm-mediaservices.LiveEvent" />
-          description: Live Event properties needed for creation.
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.LiveEvent" />
+          description: Live event properties needed for patch.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''

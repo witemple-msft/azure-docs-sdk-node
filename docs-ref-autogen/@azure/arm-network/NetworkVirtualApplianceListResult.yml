@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: NetworkVirtualApplianceListResult
-uid: '@azure/arm-network.NetworkVirtualApplianceListResult'
+uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult'
 package: '@azure/arm-network'
 summary: ''
 fullName: NetworkVirtualApplianceListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.Array'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.Array'
     package: '@azure/arm-network'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.length'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.length'
     package: '@azure/arm-network'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.nextLink'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.nextLink
     package: '@azure/arm-network'
     summary: URL to get the next set of results.
     fullName: nextLink
@@ -52,7 +53,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<NetworkVirtualAppliance>[])'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.concat'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.concat'
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +65,45 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-network.NetworkVirtualAppliance" />&gt;[]
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.concat_1'
+  - name: 'concat(NetworkVirtualAppliance | ConcatArray<NetworkVirtualAppliance>[])'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.concat_1
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: NetworkVirtualAppliance |
+        ConcatArray<NetworkVirtualAppliance>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.copyWithin'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.copyWithin
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +141,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.entries'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.entries
     package: '@azure/arm-network'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +156,8 @@ methods:
   - name: >-
       every((value: NetworkVirtualAppliance, index: number, array:
       NetworkVirtualAppliance[]) => unknown, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.every'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.every_1
     package: '@azure/arm-network'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +165,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: NetworkVirtualAppliance, index:
+        function every(predicate: (value: NetworkVirtualAppliance, index:
         number, array: NetworkVirtualAppliance[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NetworkVirtualAppliance, index: number, array:
             NetworkVirtualAppliance[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: NetworkVirtualAppliance, index: number, array:
+      NetworkVirtualAppliance[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.every'
+    package: '@azure/arm-network'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: NetworkVirtualAppliance, index:
+        number, array: NetworkVirtualAppliance[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: NetworkVirtualAppliance, index: number, array:
+            NetworkVirtualAppliance[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(NetworkVirtualAppliance, undefined | number, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.fill'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.fill'
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +243,9 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +267,8 @@ methods:
   - name: >-
       filter((value: NetworkVirtualAppliance, index: number, array:
       NetworkVirtualAppliance[]) => unknown, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.filter_1'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.filter_1
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +278,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: NetworkVirtualAppliance, index:
+        function filter(predicate: (value: NetworkVirtualAppliance, index:
         number, array: NetworkVirtualAppliance[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NetworkVirtualAppliance, index: number, array:
             NetworkVirtualAppliance[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: NetworkVirtualAppliance, index: number, array:
-      NetworkVirtualAppliance[]) => boolean, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.filter'
+      NetworkVirtualAppliance[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.filter'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +312,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: NetworkVirtualAppliance, index:
-        number, array: NetworkVirtualAppliance[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: NetworkVirtualAppliance, index:
+        number, array: NetworkVirtualAppliance[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NetworkVirtualAppliance, index: number, array:
-            NetworkVirtualAppliance[]) =&gt; boolean
+            NetworkVirtualAppliance[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +334,7 @@ methods:
   - name: >-
       find((value: NetworkVirtualAppliance, index: number, obj:
       NetworkVirtualAppliance[]) => unknown, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.find_1'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.find_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -291,12 +354,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: NetworkVirtualAppliance, index: number, obj:
-      NetworkVirtualAppliance[]) => boolean, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.find'
+      NetworkVirtualAppliance[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.find'
     package: '@azure/arm-network'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,13 +374,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: NetworkVirtualAppliance,
-        index: number, obj: NetworkVirtualAppliance[]) => boolean, thisArg?:
-        any)
+        index: number, obj: NetworkVirtualAppliance[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: NetworkVirtualAppliance, index: number, obj:
-            NetworkVirtualAppliance[]) =&gt; boolean
+            NetworkVirtualAppliance[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -338,7 +402,8 @@ methods:
   - name: >-
       findIndex((value: NetworkVirtualAppliance, index: number, obj:
       NetworkVirtualAppliance[]) => unknown, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.findIndex'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.findIndex
     package: '@azure/arm-network'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -379,7 +444,8 @@ methods:
   - name: >-
       forEach((value: NetworkVirtualAppliance, index: number, array:
       NetworkVirtualAppliance[]) => void, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.forEach'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.forEach
     package: '@azure/arm-network'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -404,7 +470,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(NetworkVirtualAppliance, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.includes'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.includes
     package: '@azure/arm-network'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -418,7 +485,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -429,7 +498,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(NetworkVirtualAppliance, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.indexOf'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.indexOf
     package: '@azure/arm-network'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -441,7 +511,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -452,7 +524,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.join'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.join'
     package: '@azure/arm-network'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -473,7 +545,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.keys'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.keys'
     package: '@azure/arm-network'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -485,7 +557,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(NetworkVirtualAppliance, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.lastIndexOf
     package: '@azure/arm-network'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -497,7 +570,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -510,7 +585,7 @@ methods:
   - name: >-
       map<U>((value: NetworkVirtualAppliance, index: number, array:
       NetworkVirtualAppliance[]) => U, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.map'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.map'
     package: '@azure/arm-network'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -540,7 +615,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.pop'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.pop'
     package: '@azure/arm-network'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -549,10 +624,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          /> | undefined
         description: ''
   - name: 'push(NetworkVirtualAppliance[])'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.push'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.push'
     package: '@azure/arm-network'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -562,7 +639,9 @@ methods:
       content: 'function push(items: NetworkVirtualAppliance[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />[]
           description: |
             New elements of the Array.
       return:
@@ -572,7 +651,7 @@ methods:
       reduce((previousValue: NetworkVirtualAppliance, currentValue:
       NetworkVirtualAppliance, currentIndex: number, array:
       NetworkVirtualAppliance[]) => NetworkVirtualAppliance)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reduce'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reduce'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -597,14 +676,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />
         description: ''
   - name: >-
       reduce((previousValue: NetworkVirtualAppliance, currentValue:
       NetworkVirtualAppliance, currentIndex: number, array:
       NetworkVirtualAppliance[]) => NetworkVirtualAppliance,
       NetworkVirtualAppliance)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reduce_1'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reduce_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -624,15 +706,20 @@ methods:
             NetworkVirtualAppliance[]) =&gt; NetworkVirtualAppliance
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: NetworkVirtualAppliance,
       currentIndex: number, array: NetworkVirtualAppliance[]) => U, U)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reduce_2'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reduce_2
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -668,7 +755,8 @@ methods:
       reduceRight((previousValue: NetworkVirtualAppliance, currentValue:
       NetworkVirtualAppliance, currentIndex: number, array:
       NetworkVirtualAppliance[]) => NetworkVirtualAppliance)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reduceRight'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reduceRight
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -695,14 +783,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: NetworkVirtualAppliance, currentValue:
       NetworkVirtualAppliance, currentIndex: number, array:
       NetworkVirtualAppliance[]) => NetworkVirtualAppliance,
       NetworkVirtualAppliance)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reduceRight_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -722,15 +813,20 @@ methods:
             NetworkVirtualAppliance[]) =&gt; NetworkVirtualAppliance
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: NetworkVirtualAppliance,
       currentIndex: number, array: NetworkVirtualAppliance[]) => U, U)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reduceRight_2
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +860,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.reverse'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.reverse
     package: '@azure/arm-network'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +870,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.shift'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.shift'
     package: '@azure/arm-network'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +884,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-network.NetworkVirtualAppliance" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.slice'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.slice'
     package: '@azure/arm-network'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +903,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
   - name: >-
       some((value: NetworkVirtualAppliance, index: number, array:
       NetworkVirtualAppliance[]) => unknown, any)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.some'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.some'
     package: '@azure/arm-network'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,30 +924,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: NetworkVirtualAppliance, index:
-        number, array: NetworkVirtualAppliance[]) => unknown, thisArg?: any)
+        function some(predicate: (value: NetworkVirtualAppliance, index: number,
+        array: NetworkVirtualAppliance[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NetworkVirtualAppliance, index: number, array:
             NetworkVirtualAppliance[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: NetworkVirtualAppliance, b: NetworkVirtualAppliance)
       => number)
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.sort'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.sort'
     package: '@azure/arm-network'
     summary: Sorts an array.
     remarks: ''
@@ -859,14 +968,26 @@ methods:
             undefined | (a: NetworkVirtualAppliance, b: NetworkVirtualAppliance)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, NetworkVirtualAppliance[])'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.splice_1'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.splice_1
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -888,14 +1009,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.splice'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.splice'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -916,10 +1041,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.toLocaleString'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.toLocaleString
     package: '@azure/arm-network'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -933,7 +1061,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.toString'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.toString
     package: '@azure/arm-network'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -945,7 +1074,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(NetworkVirtualAppliance[])'
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.unshift'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.unshift
     package: '@azure/arm-network'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -955,14 +1085,16 @@ methods:
       content: 'function unshift(items: NetworkVirtualAppliance[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.NetworkVirtualAppliance" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-network.NetworkVirtualApplianceListResult.values'
+    uid: '@azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.values'
     package: '@azure/arm-network'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -973,6 +1105,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-network.NetworkVirtualAppliance" />&gt;
+          uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-network.NetworkVirtualAppliance" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.[Symbol.iterator]
+    package: '@azure/arm-network'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-network.models.index.d.NetworkVirtualApplianceListResult.[Symbol.unscopables]
+    package: '@azure/arm-network'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-network.models.index.d.ApplicationGatewayListResult.Array"
+  />&lt;<xref uid="@azure/arm-network.models.index.d.NetworkVirtualAppliance"
+  />&gt;

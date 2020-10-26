@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Jobs
-uid: '@azure/arm-batchai.Jobs'
+uid: '@azure/arm-batchai.operations.jobs.d.Jobs'
 package: '@azure/arm-batchai'
 summary: Class representing a Jobs.
 fullName: Jobs
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Jobs(BatchAIManagementClientContext)
-    uid: '@azure/arm-batchai.Jobs.constructor'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.constructor'
     package: '@azure/arm-batchai'
     summary: Create a Jobs.
     remarks: ''
@@ -20,14 +20,17 @@ constructors:
       content: 'new Jobs(client: BatchAIManagementClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-batchai.BatchAIManagementClientContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-batchai.batchAIManagementClientContext.d.BatchAIManagementClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       beginCreate(string, string, string, string, JobCreateParameters,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-batchai.Jobs.beginCreate'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.beginCreate'
     package: '@azure/arm-batchai'
     summary: Creates a Job in the given Experiment.
     remarks: ''
@@ -72,7 +75,7 @@ methods:
 
             name must be from 1 through 64 characters long.
         - id: parameters
-          type: <xref uid="@azure/arm-batchai.JobCreateParameters" />
+          type: <xref uid="@azure/arm-batchai.models.index.d.JobCreateParameters" />
           description: The parameters to provide for job creation.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -83,7 +86,7 @@ methods:
   - name: >-
       beginDeleteMethod(string, string, string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-batchai.Jobs.beginDeleteMethod'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.beginDeleteMethod'
     package: '@azure/arm-batchai'
     summary: Deletes a Job.
     remarks: ''
@@ -134,7 +137,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginTerminate(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.beginTerminate'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.beginTerminate'
     package: '@azure/arm-batchai'
     summary: Terminates a job.
     remarks: ''
@@ -187,7 +190,7 @@ methods:
   - name: >-
       create(string, string, string, string, JobCreateParameters,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-batchai.Jobs.create'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.create'
     package: '@azure/arm-batchai'
     summary: Creates a Job in the given Experiment.
     remarks: ''
@@ -232,7 +235,7 @@ methods:
 
             name must be from 1 through 64 characters long.
         - id: parameters
-          type: <xref uid="@azure/arm-batchai.JobCreateParameters" />
+          type: <xref uid="@azure/arm-batchai.models.index.d.JobCreateParameters" />
           description: The parameters to provide for job creation.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -241,7 +244,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobsCreateResponse" />&gt;
         description: Promise<Models.JobsCreateResponse>
   - name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.deleteMethod'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.deleteMethod'
     package: '@azure/arm-batchai'
     summary: Deletes a Job.
     remarks: ''
@@ -292,7 +295,7 @@ methods:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
   - name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.get'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.get'
     package: '@azure/arm-batchai'
     summary: Gets information about a Job.
     remarks: ''
@@ -345,7 +348,7 @@ methods:
   - name: >-
       get(string, string, string, string, RequestOptionsBase,
       ServiceCallback<Job>)
-    uid: '@azure/arm-batchai.Jobs.get_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.get_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -393,11 +396,13 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-batchai.Job" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.models.index.d.Job"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, string, string, string, ServiceCallback<Job>)'
-    uid: '@azure/arm-batchai.Jobs.get_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.get_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -441,13 +446,15 @@ methods:
 
             name must be from 1 through 64 characters long.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-batchai.Job" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/arm-batchai.models.index.d.Job"
+            />&gt;
           description: |
             The callback
   - name: >-
       listByExperiment(string, string, string,
       JobsListByExperimentOptionalParams, ServiceCallback<JobListResult>)
-    uid: '@azure/arm-batchai.Jobs.listByExperiment_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listByExperiment_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -483,18 +490,21 @@ methods:
 
             from 1 through 64 characters long.
         - id: options
-          type: <xref uid="@azure/arm-batchai.JobsListByExperimentOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/arm-batchai.models.index.d.JobsListByExperimentOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.JobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listByExperiment(string, string, string,
       Models.JobsListByExperimentOptionalParams)
-    uid: '@azure/arm-batchai.Jobs.listByExperiment'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listByExperiment'
     package: '@azure/arm-batchai'
     summary: Gets a list of Jobs within the specified Experiment.
     remarks: ''
@@ -535,7 +545,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobsListByExperimentResponse" />&gt;
         description: Promise<Models.JobsListByExperimentResponse>
   - name: 'listByExperiment(string, string, string, ServiceCallback<JobListResult>)'
-    uid: '@azure/arm-batchai.Jobs.listByExperiment_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listByExperiment_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -571,12 +581,12 @@ methods:
             from 1 through 64 characters long.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.JobListResult" />&gt;
           description: |
             The callback
   - name: 'listByExperimentNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.listByExperimentNext'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listByExperimentNext'
     package: '@azure/arm-batchai'
     summary: Gets a list of Jobs within the specified Experiment.
     remarks: ''
@@ -599,7 +609,7 @@ methods:
   - name: >-
       listByExperimentNext(string, RequestOptionsBase,
       ServiceCallback<JobListResult>)
-    uid: '@azure/arm-batchai.Jobs.listByExperimentNext_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listByExperimentNext_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -618,12 +628,12 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.JobListResult" />&gt;
           description: |
             The callback
   - name: 'listByExperimentNext(string, ServiceCallback<JobListResult>)'
-    uid: '@azure/arm-batchai.Jobs.listByExperimentNext_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listByExperimentNext_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -639,14 +649,14 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.JobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.JobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listOutputFiles(string, string, string, string,
       JobsListOutputFilesOptions, msRest.RequestOptionsBase)
-    uid: '@azure/arm-batchai.Jobs.listOutputFiles'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listOutputFiles'
     package: '@azure/arm-batchai'
     summary: >-
       List all directories and files inside the given directory of the Job's
@@ -696,7 +706,10 @@ methods:
 
             name must be from 1 through 64 characters long.
         - id: jobsListOutputFilesOptions
-          type: <xref uid="@azure/arm-batchai.JobsListOutputFilesOptions" />
+          type: >-
+            <xref
+            uid="@azure/arm-batchai.models.index.d.JobsListOutputFilesOptions"
+            />
           description: Additional parameters for the operation
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -708,7 +721,7 @@ methods:
       listOutputFiles(string, string, string, string,
       JobsListOutputFilesOptions, RequestOptionsBase,
       ServiceCallback<FileListResult>)
-    uid: '@azure/arm-batchai.Jobs.listOutputFiles_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listOutputFiles_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -754,21 +767,24 @@ methods:
 
             name must be from 1 through 64 characters long.
         - id: jobsListOutputFilesOptions
-          type: <xref uid="@azure/arm-batchai.JobsListOutputFilesOptions" />
+          type: >-
+            <xref
+            uid="@azure/arm-batchai.models.index.d.JobsListOutputFilesOptions"
+            />
           description: Additional parameters for the operation
         - id: options
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.FileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listOutputFiles(string, string, string, string,
       JobsListOutputFilesOptions, ServiceCallback<FileListResult>)
-    uid: '@azure/arm-batchai.Jobs.listOutputFiles_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listOutputFiles_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -814,16 +830,19 @@ methods:
 
             name must be from 1 through 64 characters long.
         - id: jobsListOutputFilesOptions
-          type: <xref uid="@azure/arm-batchai.JobsListOutputFilesOptions" />
+          type: >-
+            <xref
+            uid="@azure/arm-batchai.models.index.d.JobsListOutputFilesOptions"
+            />
           description: Additional parameters for the operation
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.FileListResult" />&gt;
           description: |
             The callback
   - name: 'listOutputFilesNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.listOutputFilesNext'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listOutputFilesNext'
     package: '@azure/arm-batchai'
     summary: >-
       List all directories and files inside the given directory of the Job's
@@ -850,7 +869,7 @@ methods:
   - name: >-
       listOutputFilesNext(string, RequestOptionsBase,
       ServiceCallback<FileListResult>)
-    uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listOutputFilesNext_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -869,12 +888,12 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.FileListResult" />&gt;
           description: |
             The callback
   - name: 'listOutputFilesNext(string, ServiceCallback<FileListResult>)'
-    uid: '@azure/arm-batchai.Jobs.listOutputFilesNext_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listOutputFilesNext_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -890,14 +909,14 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batchai.FileListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batchai.models.index.d.FileListResult" />&gt;
           description: |
             The callback
   - name: >-
       listRemoteLoginInformation(string, string, string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listRemoteLoginInformation'
     package: '@azure/arm-batchai'
     summary: >-
       Gets a list of currently existing nodes which were used for the Job
@@ -956,7 +975,7 @@ methods:
   - name: >-
       listRemoteLoginInformation(string, string, string, string,
       RequestOptionsBase, ServiceCallback<RemoteLoginInformationListResult>)
-    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listRemoteLoginInformation_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -1007,13 +1026,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
+            uid="@azure/arm-batchai.models.index.d.RemoteLoginInformationListResult"
+            />&gt;
           description: |
             The callback
   - name: >-
       listRemoteLoginInformation(string, string, string, string,
       ServiceCallback<RemoteLoginInformationListResult>)
-    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformation_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listRemoteLoginInformation_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -1060,11 +1080,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
+            uid="@azure/arm-batchai.models.index.d.RemoteLoginInformationListResult"
+            />&gt;
           description: |
             The callback
   - name: 'listRemoteLoginInformationNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listRemoteLoginInformationNext'
     package: '@azure/arm-batchai'
     summary: >-
       Gets a list of currently existing nodes which were used for the Job
@@ -1093,7 +1114,7 @@ methods:
   - name: >-
       listRemoteLoginInformationNext(string, RequestOptionsBase,
       ServiceCallback<RemoteLoginInformationListResult>)
-    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_2'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listRemoteLoginInformationNext_2'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -1114,13 +1135,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
+            uid="@azure/arm-batchai.models.index.d.RemoteLoginInformationListResult"
+            />&gt;
           description: |
             The callback
   - name: >-
       listRemoteLoginInformationNext(string,
       ServiceCallback<RemoteLoginInformationListResult>)
-    uid: '@azure/arm-batchai.Jobs.listRemoteLoginInformationNext_1'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.listRemoteLoginInformationNext_1'
     package: '@azure/arm-batchai'
     summary: ''
     remarks: ''
@@ -1137,11 +1159,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-batchai.RemoteLoginInformationListResult" />&gt;
+            uid="@azure/arm-batchai.models.index.d.RemoteLoginInformationListResult"
+            />&gt;
           description: |
             The callback
   - name: 'terminate(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batchai.Jobs.terminate'
+    uid: '@azure/arm-batchai.operations.jobs.d.Jobs.terminate'
     package: '@azure/arm-batchai'
     summary: Terminates a job.
     remarks: ''

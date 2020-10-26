@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ProviderOperationResult
-uid: '@azure/arm-devtestlabs.ProviderOperationResult'
+uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult'
 package: '@azure/arm-devtestlabs'
 summary: ''
 fullName: ProviderOperationResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.Array'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.Array'
     package: '@azure/arm-devtestlabs'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.length'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.length'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.nextLink'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.nextLink'
     package: '@azure/arm-devtestlabs'
     summary: >-
       URL to get the next set of operation list results if there are any.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<OperationMetadata>[])'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.concat'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.concat'
     package: '@azure/arm-devtestlabs'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,43 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-devtestlabs.OperationMetadata"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.concat_1'
+  - name: 'concat(OperationMetadata | ConcatArray<OperationMetadata>[])'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.concat_1'
     package: '@azure/arm-devtestlabs'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: OperationMetadata |
+        ConcatArray<OperationMetadata>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.copyWithin'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.copyWithin'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +141,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.entries'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.entries'
     package: '@azure/arm-devtestlabs'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +155,7 @@ methods:
   - name: >-
       every((value: OperationMetadata, index: number, array:
       OperationMetadata[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.every'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.every_1'
     package: '@azure/arm-devtestlabs'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +163,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: OperationMetadata, index: number,
+        function every(predicate: (value: OperationMetadata, index: number,
         array: OperationMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationMetadata, index: number, array:
             OperationMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: OperationMetadata, index: number, array:
+      OperationMetadata[]) => value, any)
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.every'
+    package: '@azure/arm-devtestlabs'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: OperationMetadata, index: number,
+        array: OperationMetadata[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: OperationMetadata, index: number, array:
+            OperationMetadata[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(OperationMetadata, undefined | number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.fill'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.fill'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +241,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +265,7 @@ methods:
   - name: >-
       filter((value: OperationMetadata, index: number, array:
       OperationMetadata[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.filter_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.filter_1'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +275,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: OperationMetadata, index: number,
+        function filter(predicate: (value: OperationMetadata, index: number,
         array: OperationMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationMetadata, index: number, array:
             OperationMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: OperationMetadata, index: number, array:
-      OperationMetadata[]) => boolean, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.filter'
+      OperationMetadata[]) => value, any)
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.filter'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +309,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: OperationMetadata, index: number,
-        array: OperationMetadata[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: OperationMetadata, index: number,
+        array: OperationMetadata[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationMetadata, index: number, array:
-            OperationMetadata[]) =&gt; boolean
+            OperationMetadata[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +331,7 @@ methods:
   - name: >-
       find((value: OperationMetadata, index: number, obj: OperationMetadata[])
       => unknown, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.find_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.find_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -295,12 +351,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: OperationMetadata, index: number, obj:
-      OperationMetadata[]) => boolean, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.find'
+      OperationMetadata[]) => value, any)
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.find'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +371,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: OperationMetadata,
-        index: number, obj: OperationMetadata[]) => boolean, thisArg?: any)
+        index: number, obj: OperationMetadata[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: OperationMetadata, index: number, obj:
-            OperationMetadata[]) =&gt; boolean
+            OperationMetadata[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +399,7 @@ methods:
   - name: >-
       findIndex((value: OperationMetadata, index: number, obj:
       OperationMetadata[]) => unknown, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.findIndex'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.findIndex'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +440,7 @@ methods:
   - name: >-
       forEach((value: OperationMetadata, index: number, array:
       OperationMetadata[]) => void, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.forEach'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.forEach'
     package: '@azure/arm-devtestlabs'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +465,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(OperationMetadata, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.includes'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.includes'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +479,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +492,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(OperationMetadata, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.indexOf'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.indexOf'
     package: '@azure/arm-devtestlabs'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +504,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +517,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.join'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.join'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +538,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.keys'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.keys'
     package: '@azure/arm-devtestlabs'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +550,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(OperationMetadata, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.lastIndexOf'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.lastIndexOf'
     package: '@azure/arm-devtestlabs'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +562,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +577,7 @@ methods:
   - name: >-
       map<U>((value: OperationMetadata, index: number, array:
       OperationMetadata[]) => U, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.map'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.map'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +607,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.pop'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.pop'
     package: '@azure/arm-devtestlabs'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +616,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
+          | undefined
         description: ''
   - name: 'push(OperationMetadata[])'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.push'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.push'
     package: '@azure/arm-devtestlabs'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +631,9 @@ methods:
       content: 'function push(items: OperationMetadata[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -574,7 +642,7 @@ methods:
   - name: >-
       reduce((previousValue: OperationMetadata, currentValue: OperationMetadata,
       currentIndex: number, array: OperationMetadata[]) => OperationMetadata)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reduce'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reduce'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +667,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
         description: ''
   - name: >-
       reduce((previousValue: OperationMetadata, currentValue: OperationMetadata,
       currentIndex: number, array: OperationMetadata[]) => OperationMetadata,
       OperationMetadata)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reduce_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reduce_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -625,15 +693,17 @@ methods:
             OperationMetadata
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: OperationMetadata,
       currentIndex: number, array: OperationMetadata[]) => U, U)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reduce_2'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reduce_2'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -669,7 +739,7 @@ methods:
       reduceRight((previousValue: OperationMetadata, currentValue:
       OperationMetadata, currentIndex: number, array: OperationMetadata[]) =>
       OperationMetadata)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reduceRight'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reduceRight'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -695,13 +765,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
         description: ''
   - name: >-
       reduceRight((previousValue: OperationMetadata, currentValue:
       OperationMetadata, currentIndex: number, array: OperationMetadata[]) =>
       OperationMetadata, OperationMetadata)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reduceRight_1'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reduceRight_1
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -721,15 +792,18 @@ methods:
             OperationMetadata
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: OperationMetadata,
       currentIndex: number, array: OperationMetadata[]) => U, U)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reduceRight_2'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reduceRight_2
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -763,7 +837,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.reverse'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.reverse'
     package: '@azure/arm-devtestlabs'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -772,10 +846,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.shift'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.shift'
     package: '@azure/arm-devtestlabs'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -784,10 +860,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-devtestlabs.OperationMetadata" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.slice'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.slice'
     package: '@azure/arm-devtestlabs'
     summary: Returns a section of an array.
     remarks: ''
@@ -801,15 +879,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
   - name: >-
       some((value: OperationMetadata, index: number, array: OperationMetadata[])
       => unknown, any)
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.some'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.some'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -819,28 +900,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: OperationMetadata, index: number,
+        function some(predicate: (value: OperationMetadata, index: number,
         array: OperationMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationMetadata, index: number, array:
             OperationMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: OperationMetadata, b: OperationMetadata) => number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.sort'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.sort'
     package: '@azure/arm-devtestlabs'
     summary: Sorts an array.
     remarks: ''
@@ -856,14 +942,25 @@ methods:
             undefined | (a: OperationMetadata, b: OperationMetadata) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, OperationMetadata[])'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.splice_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.splice_1'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -885,14 +982,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.splice'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.splice'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -913,10 +1014,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+        type: >-
+          <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.toLocaleString'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.ProviderOperationResult.toLocaleString
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -930,7 +1034,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.toString'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.toString'
     package: '@azure/arm-devtestlabs'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -942,7 +1046,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(OperationMetadata[])'
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.unshift'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.unshift'
     package: '@azure/arm-devtestlabs'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -952,14 +1056,16 @@ methods:
       content: 'function unshift(items: OperationMetadata[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.OperationMetadata" />[]'
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-devtestlabs.ProviderOperationResult.values'
+    uid: '@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.values'
     package: '@azure/arm-devtestlabs'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -970,6 +1076,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-devtestlabs.OperationMetadata" />&gt;
+          uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-devtestlabs.OperationMetadata" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.ProviderOperationResult.[Symbol.iterator]
+    package: '@azure/arm-devtestlabs'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-devtestlabs.models.index.d.ProviderOperationResult.[Symbol.unscopables]
+    package: '@azure/arm-devtestlabs'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.Array"
+  />&lt;<xref uid="@azure/arm-devtestlabs.models.index.d.OperationMetadata"
+  />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ConnectionMonitorListResult
-uid: '@azure/arm-network.ConnectionMonitorListResult'
+uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult'
 package: '@azure/arm-network'
 summary: ''
 fullName: ConnectionMonitorListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-network.ConnectionMonitorListResult.Array'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.Array'
     package: '@azure/arm-network'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-network.ConnectionMonitorListResult.length'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.length'
     package: '@azure/arm-network'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<ConnectionMonitorResult>[])'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.concat'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.concat'
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
@@ -51,31 +51,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-network.ConnectionMonitorResult" />&gt;[]
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.concat_1'
+  - name: 'concat(ConnectionMonitorResult | ConcatArray<ConnectionMonitorResult>[])'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.concat_1'
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: ConnectionMonitorResult |
+        ConcatArray<ConnectionMonitorResult>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.copyWithin'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.copyWithin'
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +125,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.entries'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.entries'
     package: '@azure/arm-network'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +139,7 @@ methods:
   - name: >-
       every((value: ConnectionMonitorResult, index: number, array:
       ConnectionMonitorResult[]) => unknown, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.every'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.every_1'
     package: '@azure/arm-network'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +147,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ConnectionMonitorResult, index:
+        function every(predicate: (value: ConnectionMonitorResult, index:
         number, array: ConnectionMonitorResult[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ConnectionMonitorResult, index: number, array:
             ConnectionMonitorResult[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ConnectionMonitorResult, index: number, array:
+      ConnectionMonitorResult[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.every'
+    package: '@azure/arm-network'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ConnectionMonitorResult, index:
+        number, array: ConnectionMonitorResult[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ConnectionMonitorResult, index: number, array:
+            ConnectionMonitorResult[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ConnectionMonitorResult, undefined | number, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.fill'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.fill'
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +225,9 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +249,7 @@ methods:
   - name: >-
       filter((value: ConnectionMonitorResult, index: number, array:
       ConnectionMonitorResult[]) => unknown, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.filter_1'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.filter_1'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +259,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ConnectionMonitorResult, index:
+        function filter(predicate: (value: ConnectionMonitorResult, index:
         number, array: ConnectionMonitorResult[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ConnectionMonitorResult, index: number, array:
             ConnectionMonitorResult[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: ConnectionMonitorResult, index: number, array:
-      ConnectionMonitorResult[]) => boolean, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.filter'
+      ConnectionMonitorResult[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.filter'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ConnectionMonitorResult, index:
-        number, array: ConnectionMonitorResult[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ConnectionMonitorResult, index:
+        number, array: ConnectionMonitorResult[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ConnectionMonitorResult, index: number, array:
-            ConnectionMonitorResult[]) =&gt; boolean
+            ConnectionMonitorResult[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +315,7 @@ methods:
   - name: >-
       find((value: ConnectionMonitorResult, index: number, obj:
       ConnectionMonitorResult[]) => unknown, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.find_1'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.find_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -278,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ConnectionMonitorResult, index: number, obj:
-      ConnectionMonitorResult[]) => boolean, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.find'
+      ConnectionMonitorResult[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.find'
     package: '@azure/arm-network'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,13 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: ConnectionMonitorResult,
-        index: number, obj: ConnectionMonitorResult[]) => boolean, thisArg?:
-        any)
+        index: number, obj: ConnectionMonitorResult[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ConnectionMonitorResult, index: number, obj:
-            ConnectionMonitorResult[]) =&gt; boolean
+            ConnectionMonitorResult[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -325,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: ConnectionMonitorResult, index: number, obj:
       ConnectionMonitorResult[]) => unknown, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.findIndex'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.findIndex'
     package: '@azure/arm-network'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -366,7 +424,7 @@ methods:
   - name: >-
       forEach((value: ConnectionMonitorResult, index: number, array:
       ConnectionMonitorResult[]) => void, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.forEach'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.forEach'
     package: '@azure/arm-network'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -391,7 +449,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ConnectionMonitorResult, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.includes'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.includes'
     package: '@azure/arm-network'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -405,7 +463,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -416,7 +476,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ConnectionMonitorResult, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.indexOf'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.indexOf'
     package: '@azure/arm-network'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -428,7 +488,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -439,7 +501,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.join'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.join'
     package: '@azure/arm-network'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -460,7 +522,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.keys'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.keys'
     package: '@azure/arm-network'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -472,7 +534,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ConnectionMonitorResult, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.lastIndexOf'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.lastIndexOf'
     package: '@azure/arm-network'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -484,7 +546,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -497,7 +561,7 @@ methods:
   - name: >-
       map<U>((value: ConnectionMonitorResult, index: number, array:
       ConnectionMonitorResult[]) => U, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.map'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.map'
     package: '@azure/arm-network'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -527,7 +591,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.pop'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.pop'
     package: '@azure/arm-network'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -536,10 +600,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          /> | undefined
         description: ''
   - name: 'push(ConnectionMonitorResult[])'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.push'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.push'
     package: '@azure/arm-network'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -549,7 +615,9 @@ methods:
       content: 'function push(items: ConnectionMonitorResult[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />[]
           description: |
             New elements of the Array.
       return:
@@ -559,7 +627,7 @@ methods:
       reduce((previousValue: ConnectionMonitorResult, currentValue:
       ConnectionMonitorResult, currentIndex: number, array:
       ConnectionMonitorResult[]) => ConnectionMonitorResult)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reduce'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.reduce'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -584,14 +652,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />
         description: ''
   - name: >-
       reduce((previousValue: ConnectionMonitorResult, currentValue:
       ConnectionMonitorResult, currentIndex: number, array:
       ConnectionMonitorResult[]) => ConnectionMonitorResult,
       ConnectionMonitorResult)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reduce_1'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.reduce_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -611,15 +681,19 @@ methods:
             ConnectionMonitorResult[]) =&gt; ConnectionMonitorResult
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ConnectionMonitorResult,
       currentIndex: number, array: ConnectionMonitorResult[]) => U, U)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reduce_2'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.reduce_2'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -655,7 +729,7 @@ methods:
       reduceRight((previousValue: ConnectionMonitorResult, currentValue:
       ConnectionMonitorResult, currentIndex: number, array:
       ConnectionMonitorResult[]) => ConnectionMonitorResult)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reduceRight'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.reduceRight'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -682,14 +756,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: ConnectionMonitorResult, currentValue:
       ConnectionMonitorResult, currentIndex: number, array:
       ConnectionMonitorResult[]) => ConnectionMonitorResult,
       ConnectionMonitorResult)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-network.models.index.d.ConnectionMonitorListResult.reduceRight_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -709,15 +786,20 @@ methods:
             ConnectionMonitorResult[]) =&gt; ConnectionMonitorResult
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" />
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ConnectionMonitorResult,
       currentIndex: number, array: ConnectionMonitorResult[]) => U, U)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-network.models.index.d.ConnectionMonitorListResult.reduceRight_2
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -751,7 +833,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.reverse'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.reverse'
     package: '@azure/arm-network'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -760,10 +842,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.shift'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.shift'
     package: '@azure/arm-network'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -772,10 +856,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-network.ConnectionMonitorResult" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.slice'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.slice'
     package: '@azure/arm-network'
     summary: Returns a section of an array.
     remarks: ''
@@ -789,15 +875,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
   - name: >-
       some((value: ConnectionMonitorResult, index: number, array:
       ConnectionMonitorResult[]) => unknown, any)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.some'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.some'
     package: '@azure/arm-network'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -807,30 +896,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ConnectionMonitorResult, index:
-        number, array: ConnectionMonitorResult[]) => unknown, thisArg?: any)
+        function some(predicate: (value: ConnectionMonitorResult, index: number,
+        array: ConnectionMonitorResult[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ConnectionMonitorResult, index: number, array:
             ConnectionMonitorResult[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: ConnectionMonitorResult, b: ConnectionMonitorResult)
       => number)
-    uid: '@azure/arm-network.ConnectionMonitorListResult.sort'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.sort'
     package: '@azure/arm-network'
     summary: Sorts an array.
     remarks: ''
@@ -846,14 +940,25 @@ methods:
             undefined | (a: ConnectionMonitorResult, b: ConnectionMonitorResult)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ConnectionMonitorResult[])'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.splice_1'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.splice_1'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -875,14 +980,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.splice'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.splice'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -903,10 +1012,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.toLocaleString'
+    uid: >-
+      @azure/arm-network.models.index.d.ConnectionMonitorListResult.toLocaleString
     package: '@azure/arm-network'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -920,7 +1032,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.toString'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.toString'
     package: '@azure/arm-network'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -932,7 +1044,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ConnectionMonitorResult[])'
-    uid: '@azure/arm-network.ConnectionMonitorListResult.unshift'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.unshift'
     package: '@azure/arm-network'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -942,14 +1054,16 @@ methods:
       content: 'function unshift(items: ConnectionMonitorResult[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.ConnectionMonitorResult" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-network.ConnectionMonitorListResult.values'
+    uid: '@azure/arm-network.models.index.d.ConnectionMonitorListResult.values'
     package: '@azure/arm-network'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -960,6 +1074,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-network.ConnectionMonitorResult" />&gt;
+          uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-network.ConnectionMonitorResult" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-network.models.index.d.ConnectionMonitorListResult.[Symbol.iterator]
+    package: '@azure/arm-network'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-network.models.index.d.ConnectionMonitorResult" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-network.models.index.d.ConnectionMonitorListResult.[Symbol.unscopables]
+    package: '@azure/arm-network'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-network.models.index.d.ApplicationGatewayListResult.Array"
+  />&lt;<xref uid="@azure/arm-network.models.index.d.ConnectionMonitorResult"
+  />&gt;

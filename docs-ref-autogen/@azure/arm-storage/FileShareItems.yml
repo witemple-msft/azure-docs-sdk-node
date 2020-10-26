@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: FileShareItems
-uid: '@azure/arm-storage.FileShareItems'
+uid: '@azure/arm-storage.models.index.d.FileShareItems'
 package: '@azure/arm-storage'
 summary: ''
 fullName: FileShareItems
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storage.FileShareItems.Array'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.Array'
     package: '@azure/arm-storage'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storage.FileShareItems.length'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.length'
     package: '@azure/arm-storage'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-storage.FileShareItems.nextLink'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.nextLink'
     package: '@azure/arm-storage'
     summary: >-
       Request URL that can be used to query next page of shares. Returned when
@@ -59,7 +59,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<FileShareItem>[])'
-    uid: '@azure/arm-storage.FileShareItems.concat'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.concat'
     package: '@azure/arm-storage'
     summary: Combines two or more arrays.
     remarks: ''
@@ -69,31 +69,36 @@ methods:
       content: 'function concat(items: ConcatArray<FileShareItem>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-storage.FileShareItem" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storage.models.index.d.FileShareItem" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storage.FileShareItems.concat_1'
+  - name: 'concat(FileShareItem | ConcatArray<FileShareItem>[])'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.concat_1'
     package: '@azure/arm-storage'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: FileShareItem | ConcatArray<FileShareItem>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.FileShareItem" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storage.models.index.d.FileShareItem" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.copyWithin'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.copyWithin'
     package: '@azure/arm-storage'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -131,7 +136,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storage.FileShareItems.entries'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.entries'
     package: '@azure/arm-storage'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -145,7 +150,7 @@ methods:
   - name: >-
       every((value: FileShareItem, index: number, array: FileShareItem[]) =>
       unknown, any)
-    uid: '@azure/arm-storage.FileShareItems.every'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.every_1'
     package: '@azure/arm-storage'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -153,28 +158,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: FileShareItem, index: number, array:
+        function every(predicate: (value: FileShareItem, index: number, array:
         FileShareItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FileShareItem, index: number, array: FileShareItem[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: FileShareItem, index: number, array: FileShareItem[]) =>
+      value, any)
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.every'
+    package: '@azure/arm-storage'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: FileShareItem, index: number,
+        array: FileShareItem[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: FileShareItem, index: number, array: FileShareItem[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(FileShareItem, undefined | number, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.fill'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.fill'
     package: '@azure/arm-storage'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -188,7 +236,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storage.FileShareItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -210,7 +258,7 @@ methods:
   - name: >-
       filter((value: FileShareItem, index: number, array: FileShareItem[]) =>
       unknown, any)
-    uid: '@azure/arm-storage.FileShareItems.filter_1'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.filter_1'
     package: '@azure/arm-storage'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -220,30 +268,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: FileShareItem, index: number, array:
+        function filter(predicate: (value: FileShareItem, index: number, array:
         FileShareItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FileShareItem, index: number, array: FileShareItem[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
   - name: >-
       filter<S>((value: FileShareItem, index: number, array: FileShareItem[]) =>
-      boolean, any)
-    uid: '@azure/arm-storage.FileShareItems.filter'
+      value, any)
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.filter'
     package: '@azure/arm-storage'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -253,21 +300,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: FileShareItem, index: number,
-        array: FileShareItem[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: FileShareItem, index: number,
+        array: FileShareItem[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FileShareItem, index: number, array: FileShareItem[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -276,7 +322,7 @@ methods:
   - name: >-
       find((value: FileShareItem, index: number, obj: FileShareItem[]) =>
       unknown, any)
-    uid: '@azure/arm-storage.FileShareItems.find_1'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.find_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -296,12 +342,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.FileShareItem" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: FileShareItem, index: number, obj:
-      FileShareItem[]) => boolean, any)
-    uid: '@azure/arm-storage.FileShareItems.find'
+      FileShareItem[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.find'
     package: '@azure/arm-storage'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -314,12 +362,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: FileShareItem, index:
-        number, obj: FileShareItem[]) => boolean, thisArg?: any)
+        number, obj: FileShareItem[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: FileShareItem, index: number, obj:
-            FileShareItem[]) =&gt; boolean
+            FileShareItem[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -342,7 +390,7 @@ methods:
   - name: >-
       findIndex((value: FileShareItem, index: number, obj: FileShareItem[]) =>
       unknown, any)
-    uid: '@azure/arm-storage.FileShareItems.findIndex'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.findIndex'
     package: '@azure/arm-storage'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -383,7 +431,7 @@ methods:
   - name: >-
       forEach((value: FileShareItem, index: number, array: FileShareItem[]) =>
       void, any)
-    uid: '@azure/arm-storage.FileShareItems.forEach'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.forEach'
     package: '@azure/arm-storage'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -408,7 +456,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(FileShareItem, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.includes'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.includes'
     package: '@azure/arm-storage'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -422,7 +470,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.FileShareItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -433,7 +481,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(FileShareItem, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.indexOf'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.indexOf'
     package: '@azure/arm-storage'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -445,7 +493,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.FileShareItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -456,7 +504,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storage.FileShareItems.join'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.join'
     package: '@azure/arm-storage'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -477,7 +525,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storage.FileShareItems.keys'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.keys'
     package: '@azure/arm-storage'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -489,7 +537,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(FileShareItem, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.lastIndexOf'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.lastIndexOf'
     package: '@azure/arm-storage'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -501,7 +549,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.FileShareItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -514,7 +562,7 @@ methods:
   - name: >-
       map<U>((value: FileShareItem, index: number, array: FileShareItem[]) => U,
       any)
-    uid: '@azure/arm-storage.FileShareItems.map'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.map'
     package: '@azure/arm-storage'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -544,7 +592,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storage.FileShareItems.pop'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.pop'
     package: '@azure/arm-storage'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -553,10 +601,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.FileShareItem" /> |
+          undefined
         description: ''
   - name: 'push(FileShareItem[])'
-    uid: '@azure/arm-storage.FileShareItems.push'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.push'
     package: '@azure/arm-storage'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -566,7 +616,7 @@ methods:
       content: 'function push(items: FileShareItem[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+          type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
           description: |
             New elements of the Array.
       return:
@@ -575,7 +625,7 @@ methods:
   - name: >-
       reduce((previousValue: FileShareItem, currentValue: FileShareItem,
       currentIndex: number, array: FileShareItem[]) => FileShareItem)
-    uid: '@azure/arm-storage.FileShareItems.reduce'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reduce'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +649,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
         description: ''
   - name: >-
       reduce((previousValue: FileShareItem, currentValue: FileShareItem,
       currentIndex: number, array: FileShareItem[]) => FileShareItem,
       FileShareItem)
-    uid: '@azure/arm-storage.FileShareItems.reduce_1'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reduce_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -623,15 +673,15 @@ methods:
             currentIndex: number, array: FileShareItem[]) =&gt; FileShareItem
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storage.FileShareItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: FileShareItem, currentIndex:
       number, array: FileShareItem[]) => U, U)
-    uid: '@azure/arm-storage.FileShareItems.reduce_2'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reduce_2'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -666,7 +716,7 @@ methods:
   - name: >-
       reduceRight((previousValue: FileShareItem, currentValue: FileShareItem,
       currentIndex: number, array: FileShareItem[]) => FileShareItem)
-    uid: '@azure/arm-storage.FileShareItems.reduceRight'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reduceRight'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -691,13 +741,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
         description: ''
   - name: >-
       reduceRight((previousValue: FileShareItem, currentValue: FileShareItem,
       currentIndex: number, array: FileShareItem[]) => FileShareItem,
       FileShareItem)
-    uid: '@azure/arm-storage.FileShareItems.reduceRight_1'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reduceRight_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -715,15 +765,15 @@ methods:
             currentIndex: number, array: FileShareItem[]) =&gt; FileShareItem
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storage.FileShareItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.FileShareItem" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: FileShareItem,
       currentIndex: number, array: FileShareItem[]) => U, U)
-    uid: '@azure/arm-storage.FileShareItems.reduceRight_2'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reduceRight_2'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -757,7 +807,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storage.FileShareItems.reverse'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.reverse'
     package: '@azure/arm-storage'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -766,10 +816,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-storage.FileShareItems.shift'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.shift'
     package: '@azure/arm-storage'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -778,10 +828,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-storage.FileShareItem" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.FileShareItem" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.slice'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.slice'
     package: '@azure/arm-storage'
     summary: Returns a section of an array.
     remarks: ''
@@ -795,15 +847,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
   - name: >-
       some((value: FileShareItem, index: number, array: FileShareItem[]) =>
       unknown, any)
-    uid: '@azure/arm-storage.FileShareItems.some'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.some'
     package: '@azure/arm-storage'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -813,28 +866,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: FileShareItem, index: number, array:
+        function some(predicate: (value: FileShareItem, index: number, array:
         FileShareItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FileShareItem, index: number, array: FileShareItem[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: FileShareItem, b: FileShareItem) => number)'
-    uid: '@azure/arm-storage.FileShareItems.sort'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.sort'
     package: '@azure/arm-storage'
     summary: Sorts an array.
     remarks: ''
@@ -848,14 +906,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: FileShareItem, b: FileShareItem) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, FileShareItem[])'
-    uid: '@azure/arm-storage.FileShareItems.splice_1'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.splice_1'
     package: '@azure/arm-storage'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -877,14 +946,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+          type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storage.FileShareItems.splice'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.splice'
     package: '@azure/arm-storage'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -905,10 +974,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storage.FileShareItems.toLocaleString'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.toLocaleString'
     package: '@azure/arm-storage'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -922,7 +991,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storage.FileShareItems.toString'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.toString'
     package: '@azure/arm-storage'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -934,7 +1003,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(FileShareItem[])'
-    uid: '@azure/arm-storage.FileShareItems.unshift'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.unshift'
     package: '@azure/arm-storage'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -944,14 +1013,14 @@ methods:
       content: 'function unshift(items: FileShareItem[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storage.FileShareItem" />[]'
+          type: '<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storage.FileShareItems.values'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.values'
     package: '@azure/arm-storage'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -961,7 +1030,37 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-storage.FileShareItem"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storage.models.index.d.FileShareItem" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storage.FileShareItem" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.[Symbol.iterator]'
+    package: '@azure/arm-storage'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storage.models.index.d.FileShareItem" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-storage.models.index.d.FileShareItems.[Symbol.unscopables]'
+    package: '@azure/arm-storage'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-storage.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-storage.models.index.d.FileShareItem" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: StorageDomainList
-uid: '@azure/arm-storsimple1200series.StorageDomainList'
+uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList'
 package: '@azure/arm-storsimple1200series'
 summary: ''
 fullName: StorageDomainList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.Array'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.Array'
     package: '@azure/arm-storsimple1200series'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.length'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.length'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<StorageDomain>[])'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.concat'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.concat'
     package: '@azure/arm-storsimple1200series'
     summary: Combines two or more arrays.
     remarks: ''
@@ -51,31 +51,44 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-storsimple1200series.StorageDomain" />&gt;[]
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.concat_1'
+  - name: 'concat(StorageDomain | ConcatArray<StorageDomain>[])'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.concat_1'
     package: '@azure/arm-storsimple1200series'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: StorageDomain | ConcatArray<StorageDomain>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.copyWithin'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.copyWithin
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +126,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.entries'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.entries'
     package: '@azure/arm-storsimple1200series'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +140,7 @@ methods:
   - name: >-
       every((value: StorageDomain, index: number, array: StorageDomain[]) =>
       unknown, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.every'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.every_1'
     package: '@azure/arm-storsimple1200series'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +148,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: StorageDomain, index: number, array:
+        function every(predicate: (value: StorageDomain, index: number, array:
         StorageDomain[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageDomain, index: number, array: StorageDomain[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: StorageDomain, index: number, array: StorageDomain[]) =>
+      value, any)
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.every'
+    package: '@azure/arm-storsimple1200series'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: StorageDomain, index: number,
+        array: StorageDomain[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: StorageDomain, index: number, array: StorageDomain[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(StorageDomain, undefined | number, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.fill'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.fill'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +226,10 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +251,7 @@ methods:
   - name: >-
       filter((value: StorageDomain, index: number, array: StorageDomain[]) =>
       unknown, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.filter_1'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.filter_1'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +261,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: StorageDomain, index: number, array:
+        function filter(predicate: (value: StorageDomain, index: number, array:
         StorageDomain[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageDomain, index: number, array: StorageDomain[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: StorageDomain, index: number, array: StorageDomain[]) =>
-      boolean, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.filter'
+      value, any)
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.filter'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +296,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: StorageDomain, index: number,
-        array: StorageDomain[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: StorageDomain, index: number,
+        array: StorageDomain[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageDomain, index: number, array: StorageDomain[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +318,7 @@ methods:
   - name: >-
       find((value: StorageDomain, index: number, obj: StorageDomain[]) =>
       unknown, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.find_1'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.find_1'
     package: '@azure/arm-storsimple1200series'
     summary: ''
     remarks: ''
@@ -279,13 +339,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-storsimple1200series.StorageDomain" /> |
-          undefined
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: StorageDomain, index: number, obj:
-      StorageDomain[]) => boolean, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.find'
+      StorageDomain[]) => value, any)
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.find'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -298,12 +359,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: StorageDomain, index:
-        number, obj: StorageDomain[]) => boolean, thisArg?: any)
+        number, obj: StorageDomain[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: StorageDomain, index: number, obj:
-            StorageDomain[]) =&gt; boolean
+            StorageDomain[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -326,7 +387,7 @@ methods:
   - name: >-
       findIndex((value: StorageDomain, index: number, obj: StorageDomain[]) =>
       unknown, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.findIndex'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.findIndex'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -367,7 +428,7 @@ methods:
   - name: >-
       forEach((value: StorageDomain, index: number, array: StorageDomain[]) =>
       void, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.forEach'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.forEach'
     package: '@azure/arm-storsimple1200series'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -392,7 +453,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(StorageDomain, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.includes'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.includes'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -406,7 +467,10 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -417,7 +481,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(StorageDomain, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.indexOf'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.indexOf'
     package: '@azure/arm-storsimple1200series'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -429,7 +493,10 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -440,7 +507,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.join'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.join'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -461,7 +528,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.keys'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.keys'
     package: '@azure/arm-storsimple1200series'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -473,7 +540,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(StorageDomain, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.lastIndexOf'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.lastIndexOf
     package: '@azure/arm-storsimple1200series'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -485,7 +553,10 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -498,7 +569,7 @@ methods:
   - name: >-
       map<U>((value: StorageDomain, index: number, array: StorageDomain[]) => U,
       any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.map'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.map'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -528,7 +599,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.pop'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.pop'
     package: '@azure/arm-storsimple1200series'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -538,11 +609,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-storsimple1200series.StorageDomain" /> |
-          undefined
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
+          | undefined
         description: ''
   - name: 'push(StorageDomain[])'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.push'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.push'
     package: '@azure/arm-storsimple1200series'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -552,7 +624,10 @@ methods:
       content: 'function push(items: StorageDomain[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -561,7 +636,7 @@ methods:
   - name: >-
       reduce((previousValue: StorageDomain, currentValue: StorageDomain,
       currentIndex: number, array: StorageDomain[]) => StorageDomain)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reduce'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.reduce'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -585,13 +660,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
         description: ''
   - name: >-
       reduce((previousValue: StorageDomain, currentValue: StorageDomain,
       currentIndex: number, array: StorageDomain[]) => StorageDomain,
       StorageDomain)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reduce_1'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.reduce_1'
     package: '@azure/arm-storsimple1200series'
     summary: ''
     remarks: ''
@@ -609,15 +686,20 @@ methods:
             currentIndex: number, array: StorageDomain[]) =&gt; StorageDomain
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: StorageDomain, currentIndex:
       number, array: StorageDomain[]) => U, U)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reduce_2'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.reduce_2'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -652,7 +734,8 @@ methods:
   - name: >-
       reduceRight((previousValue: StorageDomain, currentValue: StorageDomain,
       currentIndex: number, array: StorageDomain[]) => StorageDomain)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reduceRight'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.reduceRight
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -677,13 +760,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
         description: ''
   - name: >-
       reduceRight((previousValue: StorageDomain, currentValue: StorageDomain,
       currentIndex: number, array: StorageDomain[]) => StorageDomain,
       StorageDomain)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reduceRight_1'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.reduceRight_1
     package: '@azure/arm-storsimple1200series'
     summary: ''
     remarks: ''
@@ -701,15 +787,21 @@ methods:
             currentIndex: number, array: StorageDomain[]) =&gt; StorageDomain
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple1200series.StorageDomain" />
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: StorageDomain,
       currentIndex: number, array: StorageDomain[]) => U, U)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reduceRight_2'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.reduceRight_2
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -743,7 +835,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.reverse'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.reverse'
     package: '@azure/arm-storsimple1200series'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -752,10 +844,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.shift'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.shift'
     package: '@azure/arm-storsimple1200series'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -765,11 +860,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-storsimple1200series.StorageDomain" /> |
-          undefined
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.slice'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.slice'
     package: '@azure/arm-storsimple1200series'
     summary: Returns a section of an array.
     remarks: ''
@@ -783,15 +879,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
   - name: >-
       some((value: StorageDomain, index: number, array: StorageDomain[]) =>
       unknown, any)
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.some'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.some'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -801,28 +901,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: StorageDomain, index: number, array:
+        function some(predicate: (value: StorageDomain, index: number, array:
         StorageDomain[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StorageDomain, index: number, array: StorageDomain[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: StorageDomain, b: StorageDomain) => number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.sort'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.sort'
     package: '@azure/arm-storsimple1200series'
     summary: Sorts an array.
     remarks: ''
@@ -836,14 +941,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: StorageDomain, b: StorageDomain) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, StorageDomain[])'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.splice_1'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.splice_1'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -865,14 +981,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.splice'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.splice'
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -893,10 +1015,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.toLocaleString'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.toLocaleString
     package: '@azure/arm-storsimple1200series'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -910,7 +1036,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.toString'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.toString'
     package: '@azure/arm-storsimple1200series'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -922,7 +1048,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(StorageDomain[])'
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.unshift'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.unshift'
     package: '@azure/arm-storsimple1200series'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -932,14 +1058,17 @@ methods:
       content: 'function unshift(items: StorageDomain[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storsimple1200series.StorageDomain" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storsimple1200series.StorageDomainList.values'
+    uid: '@azure/arm-storsimple1200series.models.index.d.StorageDomainList.values'
     package: '@azure/arm-storsimple1200series'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -950,6 +1079,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-storsimple1200series.StorageDomain" />&gt;
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storsimple1200series.StorageDomain" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.[Symbol.iterator]
+    package: '@azure/arm-storsimple1200series'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-storsimple1200series.models.index.d.StorageDomainList.[Symbol.unscopables]
+    package: '@azure/arm-storsimple1200series'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-storsimple1200series.models.index.d.ManagerList.Array"
+  />&lt;<xref uid="@azure/arm-storsimple1200series.models.index.d.StorageDomain"
+  />&gt;

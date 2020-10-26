@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RPRegistrationPolicy
-uid: '@azure/core-http.RPRegistrationPolicy'
+uid: '@azure/core-http.policies.rpRegistrationPolicy.d.RPRegistrationPolicy'
 package: '@azure/core-http'
 summary: ''
 fullName: RPRegistrationPolicy
@@ -10,7 +10,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'RPRegistrationPolicy(RequestPolicy, RequestPolicyOptions, number)'
-    uid: '@azure/core-http.RPRegistrationPolicy.constructor'
+    uid: >-
+      @azure/core-http.policies.rpRegistrationPolicy.d.RPRegistrationPolicy.constructor
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -22,17 +23,22 @@ constructors:
         RequestPolicyOptions, _retryTimeout?: number)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: _retryTimeout
           type: number
           description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.RPRegistrationPolicy.log'
+    uid: '@azure/core-http.policies.rpRegistrationPolicy.d.RPRegistrationPolicy.log'
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -47,14 +53,18 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.RPRegistrationPolicy.sendRequest'
+    uid: >-
+      @azure/core-http.policies.rpRegistrationPolicy.d.RPRegistrationPolicy.sendRequest
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -64,13 +74,17 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.RPRegistrationPolicy.shouldLog'
+    uid: >-
+      @azure/core-http.policies.rpRegistrationPolicy.d.RPRegistrationPolicy.shouldLog
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -80,9 +94,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

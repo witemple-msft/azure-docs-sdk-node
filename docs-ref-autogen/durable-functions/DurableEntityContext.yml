@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DurableEntityContext
-uid: durable-functions.DurableEntityContext
+uid: durable-functions.durableentitycontext.d.DurableEntityContext
 package: durable-functions
 summary: |-
   Provides functionality for application code implementing an entity
@@ -12,7 +12,7 @@ isDeprecated: false
 type: class
 properties:
   - name: entityId
-    uid: durable-functions.DurableEntityContext.entityId
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.entityId
     package: durable-functions
     summary: Gets the id of the currently executing entity.
     fullName: entityId
@@ -22,10 +22,10 @@ properties:
     syntax:
       content: 'entityId: EntityId'
       return:
-        type: <xref uid="durable-functions.EntityId" />
+        type: <xref uid="durable-functions.entities.entityid.d.EntityId" />
         description: ''
   - name: entityKey
-    uid: durable-functions.DurableEntityContext.entityKey
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.entityKey
     package: durable-functions
     summary: Gets the key of the currently executing entity.
     fullName: entityKey
@@ -38,7 +38,7 @@ properties:
         type: string
         description: ''
   - name: entityName
-    uid: durable-functions.DurableEntityContext.entityName
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.entityName
     package: durable-functions
     summary: Gets the name of the currently executing entity.
     fullName: entityName
@@ -51,7 +51,8 @@ properties:
         type: string
         description: ''
   - name: isNewlyConstructed
-    uid: durable-functions.DurableEntityContext.isNewlyConstructed
+    uid: >-
+      durable-functions.durableentitycontext.d.DurableEntityContext.isNewlyConstructed
     package: durable-functions
     summary: |-
       Whether this entity is freshly constructed, i.e. did not exist prior to
@@ -66,7 +67,8 @@ properties:
         type: boolean
         description: ''
   - name: operationName
-    uid: durable-functions.DurableEntityContext.operationName
+    uid: >-
+      durable-functions.durableentitycontext.d.DurableEntityContext.operationName
     package: durable-functions
     summary: |
       Gets the name of the operation that was called.
@@ -83,7 +85,8 @@ properties:
         description: ''
 methods:
   - name: destructOnExit()
-    uid: durable-functions.DurableEntityContext.destructOnExit
+    uid: >-
+      durable-functions.durableentitycontext.d.DurableEntityContext.destructOnExit
     package: durable-functions
     summary: Deletes this entity after this operation completes.
     remarks: ''
@@ -92,7 +95,7 @@ methods:
     syntax:
       content: function destructOnExit()
   - name: getInput()
-    uid: durable-functions.DurableEntityContext.getInput
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.getInput
     package: durable-functions
     summary: |
       Gets the input for this operation.
@@ -107,7 +110,7 @@ methods:
         type: unknown | undefined
         description: 'The operation input, or undefined if none.'
   - name: getState(() => unknown)
-    uid: durable-functions.DurableEntityContext.getState
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.getState
     package: durable-functions
     summary: 'Gets the current state of this entity, for reading and/or writing.'
     remarks: ''
@@ -127,7 +130,7 @@ methods:
           The current state of this entity, or undefined if none has been set
           yet.
   - name: return(unknown)
-    uid: durable-functions.DurableEntityContext.return
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.return
     package: durable-functions
     summary: Returns the given result to the caller of this operation.
     remarks: ''
@@ -141,7 +144,7 @@ methods:
           description: |
             The result to return.
   - name: setState(unknown)
-    uid: durable-functions.DurableEntityContext.setState
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.setState
     package: durable-functions
     summary: Sets the current state of this entity.
     remarks: ''
@@ -155,7 +158,7 @@ methods:
           description: |
             The state of the entity.
   - name: 'signalEntity(EntityId, string, unknown)'
-    uid: durable-functions.DurableEntityContext.signalEntity
+    uid: durable-functions.durableentitycontext.d.DurableEntityContext.signalEntity
     package: durable-functions
     summary: |-
       Signals an entity to perform an operation, without waiting for a
@@ -169,7 +172,7 @@ methods:
         operationInput?: unknown)
       parameters:
         - id: entity
-          type: <xref uid="durable-functions.EntityId" />
+          type: <xref uid="durable-functions.entities.entityid.d.EntityId" />
           description: The target entity.
         - id: operationName
           type: string

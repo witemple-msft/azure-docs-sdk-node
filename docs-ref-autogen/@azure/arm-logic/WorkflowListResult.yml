@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: WorkflowListResult
-uid: '@azure/arm-logic.WorkflowListResult'
+uid: '@azure/arm-logic.models.index.d.WorkflowListResult'
 package: '@azure/arm-logic'
 summary: ''
 fullName: WorkflowListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-logic.WorkflowListResult.Array'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.Array'
     package: '@azure/arm-logic'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-logic.WorkflowListResult.length'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.length'
     package: '@azure/arm-logic'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-logic.WorkflowListResult.nextLink'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.nextLink'
     package: '@azure/arm-logic'
     summary: The URL to get the next set of results.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Workflow>[])'
-    uid: '@azure/arm-logic.WorkflowListResult.concat'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.concat'
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<Workflow>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-logic.Workflow" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-logic.models.index.d.Workflow"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-logic.WorkflowListResult.concat_1'
+  - name: 'concat(Workflow | ConcatArray<Workflow>[])'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.concat_1'
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Workflow | ConcatArray<Workflow>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-logic.models.index.d.Workflow" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-logic.models.index.d.Workflow"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.copyWithin'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.copyWithin'
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-logic.WorkflowListResult.entries'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.entries'
     package: '@azure/arm-logic'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Workflow, index: number, array: Workflow[]) => unknown, any)'
-    uid: '@azure/arm-logic.WorkflowListResult.every'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.every_1'
     package: '@azure/arm-logic'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Workflow, index: number, array:
+        function every(predicate: (value: Workflow, index: number, array:
         Workflow[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Workflow, index: number, array: Workflow[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Workflow, index: number, array: Workflow[]) => value,
+      any)
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.every'
+    package: '@azure/arm-logic'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Workflow, index: number, array:
+        Workflow[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Workflow, index: number, array: Workflow[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Workflow, undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.fill'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.fill'
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +223,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-logic.Workflow" />
+          type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +245,7 @@ methods:
   - name: >-
       filter((value: Workflow, index: number, array: Workflow[]) => unknown,
       any)
-    uid: '@azure/arm-logic.WorkflowListResult.filter_1'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.filter_1'
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,28 +255,27 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Workflow, index: number, array:
+        function filter(predicate: (value: Workflow, index: number, array:
         Workflow[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Workflow, index: number, array: Workflow[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
   - name: >-
-      filter<S>((value: Workflow, index: number, array: Workflow[]) => boolean,
+      filter<S>((value: Workflow, index: number, array: Workflow[]) => value,
       any)
-    uid: '@azure/arm-logic.WorkflowListResult.filter'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.filter'
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +285,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Workflow, index: number, array:
-        Workflow[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Workflow, index: number, array:
+        Workflow[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Workflow, index: number, array: Workflow[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Workflow, index: number, array: Workflow[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Workflow, index: number, obj: Workflow[]) => unknown, any)'
-    uid: '@azure/arm-logic.WorkflowListResult.find_1'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.find_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -277,12 +321,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" /> | undefined
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Workflow, index: number, obj: Workflow[]) =>
-      boolean, any)
-    uid: '@azure/arm-logic.WorkflowListResult.find'
+      value, any)
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.find'
     package: '@azure/arm-logic'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +339,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Workflow, index: number,
-        obj: Workflow[]) => boolean, thisArg?: any)
+        obj: Workflow[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Workflow, index: number, obj: Workflow[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -323,7 +367,7 @@ methods:
   - name: >-
       findIndex((value: Workflow, index: number, obj: Workflow[]) => unknown,
       any)
-    uid: '@azure/arm-logic.WorkflowListResult.findIndex'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.findIndex'
     package: '@azure/arm-logic'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -360,7 +404,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Workflow, index: number, array: Workflow[]) => void, any)'
-    uid: '@azure/arm-logic.WorkflowListResult.forEach'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.forEach'
     package: '@azure/arm-logic'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -383,7 +427,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Workflow, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.includes'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.includes'
     package: '@azure/arm-logic'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -397,7 +441,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.Workflow" />
+          type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -408,7 +452,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Workflow, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.indexOf'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.indexOf'
     package: '@azure/arm-logic'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -420,7 +464,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.Workflow" />
+          type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -431,7 +475,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-logic.WorkflowListResult.join'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.join'
     package: '@azure/arm-logic'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -452,7 +496,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-logic.WorkflowListResult.keys'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.keys'
     package: '@azure/arm-logic'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -464,7 +508,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Workflow, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.lastIndexOf'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.lastIndexOf'
     package: '@azure/arm-logic'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -476,7 +520,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.Workflow" />
+          type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -487,7 +531,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Workflow, index: number, array: Workflow[]) => U, any)'
-    uid: '@azure/arm-logic.WorkflowListResult.map'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.map'
     package: '@azure/arm-logic'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -515,7 +559,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-logic.WorkflowListResult.pop'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.pop'
     package: '@azure/arm-logic'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -524,10 +568,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" /> | undefined
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" /> | undefined
         description: ''
   - name: 'push(Workflow[])'
-    uid: '@azure/arm-logic.WorkflowListResult.push'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.push'
     package: '@azure/arm-logic'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -537,7 +581,7 @@ methods:
       content: 'function push(items: Workflow[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+          type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
           description: |
             New elements of the Array.
       return:
@@ -546,7 +590,7 @@ methods:
   - name: >-
       reduce((previousValue: Workflow, currentValue: Workflow, currentIndex:
       number, array: Workflow[]) => Workflow)
-    uid: '@azure/arm-logic.WorkflowListResult.reduce'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reduce'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -569,12 +613,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" />
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
         description: ''
   - name: >-
       reduce((previousValue: Workflow, currentValue: Workflow, currentIndex:
       number, array: Workflow[]) => Workflow, Workflow)
-    uid: '@azure/arm-logic.WorkflowListResult.reduce_1'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reduce_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -592,15 +636,15 @@ methods:
             number, array: Workflow[]) =&gt; Workflow
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-logic.Workflow" />
+          type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" />
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Workflow, currentIndex: number,
       array: Workflow[]) => U, U)
-    uid: '@azure/arm-logic.WorkflowListResult.reduce_2'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reduce_2'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -635,7 +679,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Workflow, currentValue: Workflow,
       currentIndex: number, array: Workflow[]) => Workflow)
-    uid: '@azure/arm-logic.WorkflowListResult.reduceRight'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reduceRight'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -659,12 +703,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" />
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
         description: ''
   - name: >-
       reduceRight((previousValue: Workflow, currentValue: Workflow,
       currentIndex: number, array: Workflow[]) => Workflow, Workflow)
-    uid: '@azure/arm-logic.WorkflowListResult.reduceRight_1'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reduceRight_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -682,15 +726,15 @@ methods:
             number, array: Workflow[]) =&gt; Workflow
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-logic.Workflow" />
+          type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" />
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Workflow, currentIndex:
       number, array: Workflow[]) => U, U)
-    uid: '@azure/arm-logic.WorkflowListResult.reduceRight_2'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reduceRight_2'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -724,7 +768,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-logic.WorkflowListResult.reverse'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.reverse'
     package: '@azure/arm-logic'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -733,10 +777,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-logic.WorkflowListResult.shift'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.shift'
     package: '@azure/arm-logic'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -745,10 +789,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-logic.Workflow" /> | undefined
+        type: <xref uid="@azure/arm-logic.models.index.d.Workflow" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.slice'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.slice'
     package: '@azure/arm-logic'
     summary: Returns a section of an array.
     remarks: ''
@@ -762,13 +806,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
   - name: 'some((value: Workflow, index: number, array: Workflow[]) => unknown, any)'
-    uid: '@azure/arm-logic.WorkflowListResult.some'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.some'
     package: '@azure/arm-logic'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -778,26 +823,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Workflow, index: number, array:
+        function some(predicate: (value: Workflow, index: number, array:
         Workflow[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Workflow, index: number, array: Workflow[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Workflow, b: Workflow) => number)'
-    uid: '@azure/arm-logic.WorkflowListResult.sort'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.sort'
     package: '@azure/arm-logic'
     summary: Sorts an array.
     remarks: ''
@@ -811,14 +861,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Workflow, b: Workflow) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Workflow[])'
-    uid: '@azure/arm-logic.WorkflowListResult.splice_1'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.splice_1'
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -838,14 +899,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+          type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-logic.WorkflowListResult.splice'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.splice'
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -866,10 +927,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-logic.WorkflowListResult.toLocaleString'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.toLocaleString'
     package: '@azure/arm-logic'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -883,7 +944,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-logic.WorkflowListResult.toString'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.toString'
     package: '@azure/arm-logic'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -895,7 +956,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Workflow[])'
-    uid: '@azure/arm-logic.WorkflowListResult.unshift'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.unshift'
     package: '@azure/arm-logic'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -905,14 +966,14 @@ methods:
       content: 'function unshift(items: Workflow[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-logic.Workflow" />[]'
+          type: '<xref uid="@azure/arm-logic.models.index.d.Workflow" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-logic.WorkflowListResult.values'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.values'
     package: '@azure/arm-logic'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -921,6 +982,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-logic.Workflow" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-logic.models.index.d.Workflow" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-logic.Workflow" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.[Symbol.iterator]'
+    package: '@azure/arm-logic'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-logic.models.index.d.Workflow" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-logic.models.index.d.WorkflowListResult.[Symbol.unscopables]'
+    package: '@azure/arm-logic'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-logic.models.index.d.WorkflowListResult.Array"
+  />&lt;<xref uid="@azure/arm-logic.models.index.d.Workflow" />&gt;

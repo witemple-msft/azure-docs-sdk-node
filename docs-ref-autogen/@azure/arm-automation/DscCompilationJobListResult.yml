@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DscCompilationJobListResult
-uid: '@azure/arm-automation.DscCompilationJobListResult'
+uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult'
 package: '@azure/arm-automation'
 summary: ''
 fullName: DscCompilationJobListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-automation.DscCompilationJobListResult.Array'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.Array'
     package: '@azure/arm-automation'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-automation.DscCompilationJobListResult.length'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.length'
     package: '@azure/arm-automation'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-automation.DscCompilationJobListResult.nextLink'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.nextLink'
     package: '@azure/arm-automation'
     summary: Gets or sets the next link.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<DscCompilationJob>[])'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.concat'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.concat'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,44 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-automation.DscCompilationJob"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.DscCompilationJob"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.concat_1'
+  - name: 'concat(DscCompilationJob | ConcatArray<DscCompilationJob>[])'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.concat_1'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: DscCompilationJob |
+        ConcatArray<DscCompilationJob>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.copyWithin'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.copyWithin
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.entries'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.entries'
     package: '@azure/arm-automation'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: DscCompilationJob, index: number, array:
       DscCompilationJob[]) => unknown, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.every'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.every_1'
     package: '@azure/arm-automation'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: DscCompilationJob, index: number,
+        function every(predicate: (value: DscCompilationJob, index: number,
         array: DscCompilationJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscCompilationJob, index: number, array:
             DscCompilationJob[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: DscCompilationJob, index: number, array:
+      DscCompilationJob[]) => value, any)
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.every'
+    package: '@azure/arm-automation'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: DscCompilationJob, index: number,
+        array: DscCompilationJob[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: DscCompilationJob, index: number, array:
+            DscCompilationJob[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(DscCompilationJob, undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.fill'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.fill'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: DscCompilationJob, index: number, array:
       DscCompilationJob[]) => unknown, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.filter_1'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.filter_1'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: DscCompilationJob, index: number,
+        function filter(predicate: (value: DscCompilationJob, index: number,
         array: DscCompilationJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscCompilationJob, index: number, array:
             DscCompilationJob[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: DscCompilationJob, index: number, array:
-      DscCompilationJob[]) => boolean, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.filter'
+      DscCompilationJob[]) => value, any)
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.filter'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: DscCompilationJob, index: number,
-        array: DscCompilationJob[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: DscCompilationJob, index: number,
+        array: DscCompilationJob[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscCompilationJob, index: number, array:
-            DscCompilationJob[]) =&gt; boolean
+            DscCompilationJob[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: DscCompilationJob, index: number, obj: DscCompilationJob[])
       => unknown, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.find_1'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.find_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -291,12 +348,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: DscCompilationJob, index: number, obj:
-      DscCompilationJob[]) => boolean, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.find'
+      DscCompilationJob[]) => value, any)
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.find'
     package: '@azure/arm-automation'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +368,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: DscCompilationJob,
-        index: number, obj: DscCompilationJob[]) => boolean, thisArg?: any)
+        index: number, obj: DscCompilationJob[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: DscCompilationJob, index: number, obj:
-            DscCompilationJob[]) =&gt; boolean
+            DscCompilationJob[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +396,7 @@ methods:
   - name: >-
       findIndex((value: DscCompilationJob, index: number, obj:
       DscCompilationJob[]) => unknown, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.findIndex'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.findIndex'
     package: '@azure/arm-automation'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +437,7 @@ methods:
   - name: >-
       forEach((value: DscCompilationJob, index: number, array:
       DscCompilationJob[]) => void, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.forEach'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.forEach'
     package: '@azure/arm-automation'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +462,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(DscCompilationJob, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.includes'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.includes'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +476,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +489,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(DscCompilationJob, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.indexOf'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.indexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +501,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +514,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.join'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.join'
     package: '@azure/arm-automation'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +535,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.keys'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.keys'
     package: '@azure/arm-automation'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +547,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(DscCompilationJob, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.lastIndexOf
     package: '@azure/arm-automation'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +560,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +575,7 @@ methods:
   - name: >-
       map<U>((value: DscCompilationJob, index: number, array:
       DscCompilationJob[]) => U, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.map'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.map'
     package: '@azure/arm-automation'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +605,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.pop'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.pop'
     package: '@azure/arm-automation'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +614,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
+          | undefined
         description: ''
   - name: 'push(DscCompilationJob[])'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.push'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.push'
     package: '@azure/arm-automation'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +629,9 @@ methods:
       content: 'function push(items: DscCompilationJob[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -570,7 +640,7 @@ methods:
   - name: >-
       reduce((previousValue: DscCompilationJob, currentValue: DscCompilationJob,
       currentIndex: number, array: DscCompilationJob[]) => DscCompilationJob)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reduce'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.reduce'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -595,13 +665,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+        type: <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
         description: ''
   - name: >-
       reduce((previousValue: DscCompilationJob, currentValue: DscCompilationJob,
       currentIndex: number, array: DscCompilationJob[]) => DscCompilationJob,
       DscCompilationJob)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reduce_1'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.reduce_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -621,15 +691,17 @@ methods:
             DscCompilationJob
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+        type: <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: DscCompilationJob,
       currentIndex: number, array: DscCompilationJob[]) => U, U)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reduce_2'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.reduce_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -665,7 +737,8 @@ methods:
       reduceRight((previousValue: DscCompilationJob, currentValue:
       DscCompilationJob, currentIndex: number, array: DscCompilationJob[]) =>
       DscCompilationJob)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reduceRight'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.reduceRight
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -691,13 +764,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+        type: <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
         description: ''
   - name: >-
       reduceRight((previousValue: DscCompilationJob, currentValue:
       DscCompilationJob, currentIndex: number, array: DscCompilationJob[]) =>
       DscCompilationJob, DscCompilationJob)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.reduceRight_1
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -717,15 +791,18 @@ methods:
             DscCompilationJob
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" />
+        type: <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: DscCompilationJob,
       currentIndex: number, array: DscCompilationJob[]) => U, U)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.reduceRight_2
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -759,7 +836,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.reverse'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.reverse'
     package: '@azure/arm-automation'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -768,10 +845,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.shift'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.shift'
     package: '@azure/arm-automation'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -780,10 +859,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-automation.DscCompilationJob" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.slice'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.slice'
     package: '@azure/arm-automation'
     summary: Returns a section of an array.
     remarks: ''
@@ -797,15 +878,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
   - name: >-
       some((value: DscCompilationJob, index: number, array: DscCompilationJob[])
       => unknown, any)
-    uid: '@azure/arm-automation.DscCompilationJobListResult.some'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.some'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -815,28 +899,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: DscCompilationJob, index: number,
+        function some(predicate: (value: DscCompilationJob, index: number,
         array: DscCompilationJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DscCompilationJob, index: number, array:
             DscCompilationJob[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: DscCompilationJob, b: DscCompilationJob) => number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.sort'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.sort'
     package: '@azure/arm-automation'
     summary: Sorts an array.
     remarks: ''
@@ -852,14 +941,25 @@ methods:
             undefined | (a: DscCompilationJob, b: DscCompilationJob) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, DscCompilationJob[])'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.splice_1'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.splice_1'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -881,14 +981,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.splice'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.splice'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -909,10 +1013,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.toLocaleString'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.toLocaleString
     package: '@azure/arm-automation'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -926,7 +1033,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.toString'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.toString'
     package: '@azure/arm-automation'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -938,7 +1045,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(DscCompilationJob[])'
-    uid: '@azure/arm-automation.DscCompilationJobListResult.unshift'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.unshift'
     package: '@azure/arm-automation'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -948,14 +1055,16 @@ methods:
       content: 'function unshift(items: DscCompilationJob[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.DscCompilationJob" />[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-automation.DscCompilationJobListResult.values'
+    uid: '@azure/arm-automation.models.index.d.DscCompilationJobListResult.values'
     package: '@azure/arm-automation'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -966,6 +1075,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-automation.DscCompilationJob" />&gt;
+          uid="@azure/arm-automation.models.index.d.DscCompilationJob" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-automation.DscCompilationJob" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.[Symbol.iterator]
+    package: '@azure/arm-automation'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.DscCompilationJob" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.DscCompilationJobListResult.[Symbol.unscopables]
+    package: '@azure/arm-automation'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-automation.models.index.d.AutomationAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-automation.models.index.d.DscCompilationJob"
+  />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AlertList
-uid: '@azure/arm-storsimple8000series.AlertList'
+uid: '@azure/arm-storsimple8000series.models.index.d.AlertList'
 package: '@azure/arm-storsimple8000series'
 summary: ''
 fullName: AlertList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storsimple8000series.AlertList.Array'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.Array'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storsimple8000series.AlertList.length'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.length'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-storsimple8000series.AlertList.nextLink'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.nextLink'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     fullName: nextLink
@@ -51,8 +51,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(Alert | ConcatArray<Alert>[])'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.concat_1'
+    package: '@azure/arm-storsimple8000series'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: Alert | ConcatArray<Alert>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-storsimple8000series.models.index.d.Alert" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
+        description: ''
   - name: 'concat(ConcatArray<Alert>[])'
-    uid: '@azure/arm-storsimple8000series.AlertList.concat'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.concat'
     package: '@azure/arm-storsimple8000series'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +83,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-storsimple8000series.Alert"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storsimple8000series.models.index.d.Alert" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storsimple8000series.AlertList.concat_1'
-    package: '@azure/arm-storsimple8000series'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.copyWithin'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.copyWithin'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storsimple8000series.AlertList.entries'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.entries'
     package: '@azure/arm-storsimple8000series'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Alert, index: number, array: Alert[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.every'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.every_1'
     package: '@azure/arm-storsimple8000series'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,26 +149,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Alert, index: number, array: Alert[])
+        function every(predicate: (value: Alert, index: number, array: Alert[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Alert, index: number, array: Alert[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Alert, index: number, array: Alert[]) => value, any)'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.every'
+    package: '@azure/arm-storsimple8000series'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Alert, index: number, array:
+        Alert[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Alert, index: number, array: Alert[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Alert, undefined | number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.fill'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.fill'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -179,7 +221,7 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +241,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Alert, index: number, array: Alert[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.filter_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.filter_1'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,26 +251,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Alert, index: number, array:
-        Alert[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: Alert, index: number, array: Alert[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Alert, index: number, array: Alert[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
         description: ''
-  - name: 'filter<S>((value: Alert, index: number, array: Alert[]) => boolean, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.filter'
+  - name: 'filter<S>((value: Alert, index: number, array: Alert[]) => value, any)'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.filter'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +279,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Alert, index: number, array:
-        Alert[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Alert, index: number, array:
+        Alert[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Alert, index: number, array: Alert[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Alert, index: number, array: Alert[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Alert, index: number, obj: Alert[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.find_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.find_1'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     remarks: ''
@@ -275,12 +315,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" /> |
+          undefined
         description: ''
   - name: >-
-      find<S>((this: void, value: Alert, index: number, obj: Alert[]) =>
-      boolean, any)
-    uid: '@azure/arm-storsimple8000series.AlertList.find'
+      find<S>((this: void, value: Alert, index: number, obj: Alert[]) => value,
+      any)
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.find'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -293,12 +335,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Alert, index: number,
-        obj: Alert[]) => boolean, thisArg?: any)
+        obj: Alert[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: >-
-            (this: void, value: Alert, index: number, obj: Alert[]) =&gt;
-            boolean
+          type: '(this: void, value: Alert, index: number, obj: Alert[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -319,7 +359,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Alert, index: number, obj: Alert[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.findIndex'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.findIndex'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -356,7 +396,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Alert, index: number, array: Alert[]) => void, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.forEach'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.forEach'
     package: '@azure/arm-storsimple8000series'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -379,7 +419,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Alert, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.includes'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.includes'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -391,7 +431,7 @@ methods:
       content: 'function includes(searchElement: Alert, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -402,7 +442,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Alert, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.indexOf'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.indexOf'
     package: '@azure/arm-storsimple8000series'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -412,7 +452,7 @@ methods:
       content: 'function indexOf(searchElement: Alert, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -423,7 +463,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storsimple8000series.AlertList.join'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.join'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -444,7 +484,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storsimple8000series.AlertList.keys'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.keys'
     package: '@azure/arm-storsimple8000series'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -456,7 +496,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Alert, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.lastIndexOf'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.lastIndexOf'
     package: '@azure/arm-storsimple8000series'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -468,7 +508,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -479,7 +519,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Alert, index: number, array: Alert[]) => U, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.map'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.map'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -507,7 +547,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storsimple8000series.AlertList.pop'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.pop'
     package: '@azure/arm-storsimple8000series'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -516,10 +556,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" /> |
+          undefined
         description: ''
   - name: 'push(Alert[])'
-    uid: '@azure/arm-storsimple8000series.AlertList.push'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.push'
     package: '@azure/arm-storsimple8000series'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -529,7 +571,9 @@ methods:
       content: 'function push(items: Alert[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -538,7 +582,7 @@ methods:
   - name: >-
       reduce((previousValue: Alert, currentValue: Alert, currentIndex: number,
       array: Alert[]) => Alert)
-    uid: '@azure/arm-storsimple8000series.AlertList.reduce'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reduce'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -561,12 +605,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
         description: ''
   - name: >-
       reduce((previousValue: Alert, currentValue: Alert, currentIndex: number,
       array: Alert[]) => Alert, Alert)
-    uid: '@azure/arm-storsimple8000series.AlertList.reduce_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reduce_1'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     remarks: ''
@@ -583,15 +627,15 @@ methods:
             array: Alert[]) =&gt; Alert
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Alert, currentIndex: number,
       array: Alert[]) => U, U)
-    uid: '@azure/arm-storsimple8000series.AlertList.reduce_2'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reduce_2'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -625,7 +669,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Alert, currentValue: Alert, currentIndex:
       number, array: Alert[]) => Alert)
-    uid: '@azure/arm-storsimple8000series.AlertList.reduceRight'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reduceRight'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -649,12 +693,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
         description: ''
   - name: >-
       reduceRight((previousValue: Alert, currentValue: Alert, currentIndex:
       number, array: Alert[]) => Alert, Alert)
-    uid: '@azure/arm-storsimple8000series.AlertList.reduceRight_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reduceRight_1'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     remarks: ''
@@ -672,15 +716,15 @@ methods:
             array: Alert[]) =&gt; Alert
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Alert, currentIndex:
       number, array: Alert[]) => U, U)
-    uid: '@azure/arm-storsimple8000series.AlertList.reduceRight_2'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reduceRight_2'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -713,7 +757,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storsimple8000series.AlertList.reverse'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.reverse'
     package: '@azure/arm-storsimple8000series'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -722,10 +766,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-storsimple8000series.AlertList.shift'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.shift'
     package: '@azure/arm-storsimple8000series'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -734,10 +778,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Alert" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.slice'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.slice'
     package: '@azure/arm-storsimple8000series'
     summary: Returns a section of an array.
     remarks: ''
@@ -751,13 +797,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
         description: ''
   - name: 'some((value: Alert, index: number, array: Alert[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.AlertList.some'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.some'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -767,26 +814,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Alert, index: number, array: Alert[])
+        function some(predicate: (value: Alert, index: number, array: Alert[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Alert, index: number, array: Alert[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Alert, b: Alert) => number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.sort'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.sort'
     package: '@azure/arm-storsimple8000series'
     summary: Sorts an array.
     remarks: ''
@@ -798,14 +850,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Alert, b: Alert) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Alert[])'
-    uid: '@azure/arm-storsimple8000series.AlertList.splice_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.splice_1'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -825,14 +888,16 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.AlertList.splice'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.splice'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -853,10 +918,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storsimple8000series.AlertList.toLocaleString'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.toLocaleString'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -870,7 +935,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storsimple8000series.AlertList.toString'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.toString'
     package: '@azure/arm-storsimple8000series'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -882,7 +947,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Alert[])'
-    uid: '@azure/arm-storsimple8000series.AlertList.unshift'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.unshift'
     package: '@azure/arm-storsimple8000series'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -892,14 +957,16 @@ methods:
       content: 'function unshift(items: Alert[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storsimple8000series.Alert" />[]'
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Alert"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storsimple8000series.AlertList.values'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.values'
     package: '@azure/arm-storsimple8000series'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -909,7 +976,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-storsimple8000series.Alert"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storsimple8000series.models.index.d.Alert" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storsimple8000series.Alert" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-storsimple8000series.models.index.d.AlertList.[Symbol.iterator]'
+    package: '@azure/arm-storsimple8000series'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storsimple8000series.models.index.d.Alert" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-storsimple8000series.models.index.d.AlertList.[Symbol.unscopables]
+    package: '@azure/arm-storsimple8000series'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-storsimple8000series.models.index.d.AvailableProviderOperationList.Array"
+  />&lt;<xref uid="@azure/arm-storsimple8000series.models.index.d.Alert" />&gt;

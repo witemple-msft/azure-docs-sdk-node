@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: InputListResult
-uid: '@azure/arm-streamanalytics.InputListResult'
+uid: '@azure/arm-streamanalytics.models.index.d.InputListResult'
 package: '@azure/arm-streamanalytics'
 summary: ''
 fullName: InputListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-streamanalytics.InputListResult.Array'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.Array'
     package: '@azure/arm-streamanalytics'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-streamanalytics.InputListResult.length'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.length'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-streamanalytics.InputListResult.nextLink'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.nextLink'
     package: '@azure/arm-streamanalytics'
     summary: >-
       The link (url) to the next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Input>[])'
-    uid: '@azure/arm-streamanalytics.InputListResult.concat'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.concat'
     package: '@azure/arm-streamanalytics'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<Input>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-streamanalytics.Input" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-streamanalytics.models.index.d.Input" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-streamanalytics.InputListResult.concat_1'
+  - name: 'concat(Input | ConcatArray<Input>[])'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.concat_1'
     package: '@azure/arm-streamanalytics'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Input | ConcatArray<Input>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.Input" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-streamanalytics.models.index.d.Input" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.copyWithin'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.copyWithin'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-streamanalytics.InputListResult.entries'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.entries'
     package: '@azure/arm-streamanalytics'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Input, index: number, array: Input[]) => unknown, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.every'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.every_1'
     package: '@azure/arm-streamanalytics'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,26 +153,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Input, index: number, array: Input[])
+        function every(predicate: (value: Input, index: number, array: Input[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Input, index: number, array: Input[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Input, index: number, array: Input[]) => value, any)'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.every'
+    package: '@azure/arm-streamanalytics'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Input, index: number, array:
+        Input[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Input, index: number, array: Input[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Input, undefined | number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.fill'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.fill'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +225,7 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-streamanalytics.Input" />
+          type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -201,7 +245,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Input, index: number, array: Input[]) => unknown, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.filter_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.filter_1'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -211,26 +255,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Input, index: number, array:
-        Input[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: Input, index: number, array: Input[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Input, index: number, array: Input[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
-  - name: 'filter<S>((value: Input, index: number, array: Input[]) => boolean, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.filter'
+  - name: 'filter<S>((value: Input, index: number, array: Input[]) => value, any)'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.filter'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +283,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Input, index: number, array:
-        Input[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Input, index: number, array:
+        Input[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Input, index: number, array: Input[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Input, index: number, array: Input[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Input, index: number, obj: Input[]) => unknown, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.find_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.find_1'
     package: '@azure/arm-streamanalytics'
     summary: ''
     remarks: ''
@@ -277,12 +319,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.Input" /> |
+          undefined
         description: ''
   - name: >-
-      find<S>((this: void, value: Input, index: number, obj: Input[]) =>
-      boolean, any)
-    uid: '@azure/arm-streamanalytics.InputListResult.find'
+      find<S>((this: void, value: Input, index: number, obj: Input[]) => value,
+      any)
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.find'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +339,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Input, index: number,
-        obj: Input[]) => boolean, thisArg?: any)
+        obj: Input[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: >-
-            (this: void, value: Input, index: number, obj: Input[]) =&gt;
-            boolean
+          type: '(this: void, value: Input, index: number, obj: Input[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -321,7 +363,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Input, index: number, obj: Input[]) => unknown, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.findIndex'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.findIndex'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -358,7 +400,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Input, index: number, array: Input[]) => void, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.forEach'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.forEach'
     package: '@azure/arm-streamanalytics'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -381,7 +423,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Input, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.includes'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.includes'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -393,7 +435,7 @@ methods:
       content: 'function includes(searchElement: Input, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-streamanalytics.Input" />
+          type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -404,7 +446,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Input, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.indexOf'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.indexOf'
     package: '@azure/arm-streamanalytics'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -414,7 +456,7 @@ methods:
       content: 'function indexOf(searchElement: Input, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-streamanalytics.Input" />
+          type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +467,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-streamanalytics.InputListResult.join'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.join'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -446,7 +488,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-streamanalytics.InputListResult.keys'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.keys'
     package: '@azure/arm-streamanalytics'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -458,7 +500,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Input, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.lastIndexOf'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.lastIndexOf'
     package: '@azure/arm-streamanalytics'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -470,7 +512,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-streamanalytics.Input" />
+          type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -481,7 +523,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Input, index: number, array: Input[]) => U, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.map'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.map'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -509,7 +551,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-streamanalytics.InputListResult.pop'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.pop'
     package: '@azure/arm-streamanalytics'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -518,10 +560,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.Input" /> |
+          undefined
         description: ''
   - name: 'push(Input[])'
-    uid: '@azure/arm-streamanalytics.InputListResult.push'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.push'
     package: '@azure/arm-streamanalytics'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -531,7 +575,7 @@ methods:
       content: 'function push(items: Input[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+          type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
           description: |
             New elements of the Array.
       return:
@@ -540,7 +584,7 @@ methods:
   - name: >-
       reduce((previousValue: Input, currentValue: Input, currentIndex: number,
       array: Input[]) => Input)
-    uid: '@azure/arm-streamanalytics.InputListResult.reduce'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reduce'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -563,12 +607,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
         description: ''
   - name: >-
       reduce((previousValue: Input, currentValue: Input, currentIndex: number,
       array: Input[]) => Input, Input)
-    uid: '@azure/arm-streamanalytics.InputListResult.reduce_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reduce_1'
     package: '@azure/arm-streamanalytics'
     summary: ''
     remarks: ''
@@ -585,15 +629,15 @@ methods:
             array: Input[]) =&gt; Input
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-streamanalytics.Input" />
+          type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Input, currentIndex: number,
       array: Input[]) => U, U)
-    uid: '@azure/arm-streamanalytics.InputListResult.reduce_2'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reduce_2'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -627,7 +671,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Input, currentValue: Input, currentIndex:
       number, array: Input[]) => Input)
-    uid: '@azure/arm-streamanalytics.InputListResult.reduceRight'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reduceRight'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -651,12 +695,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
         description: ''
   - name: >-
       reduceRight((previousValue: Input, currentValue: Input, currentIndex:
       number, array: Input[]) => Input, Input)
-    uid: '@azure/arm-streamanalytics.InputListResult.reduceRight_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reduceRight_1'
     package: '@azure/arm-streamanalytics'
     summary: ''
     remarks: ''
@@ -674,15 +718,15 @@ methods:
             array: Input[]) =&gt; Input
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-streamanalytics.Input" />
+          type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.Input" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Input, currentIndex:
       number, array: Input[]) => U, U)
-    uid: '@azure/arm-streamanalytics.InputListResult.reduceRight_2'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reduceRight_2'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -715,7 +759,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-streamanalytics.InputListResult.reverse'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.reverse'
     package: '@azure/arm-streamanalytics'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -724,10 +768,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-streamanalytics.InputListResult.shift'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.shift'
     package: '@azure/arm-streamanalytics'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -736,10 +780,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-streamanalytics.Input" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.Input" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.slice'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.slice'
     package: '@azure/arm-streamanalytics'
     summary: Returns a section of an array.
     remarks: ''
@@ -753,13 +799,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
   - name: 'some((value: Input, index: number, array: Input[]) => unknown, any)'
-    uid: '@azure/arm-streamanalytics.InputListResult.some'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.some'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -769,26 +816,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Input, index: number, array: Input[])
+        function some(predicate: (value: Input, index: number, array: Input[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Input, index: number, array: Input[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Input, b: Input) => number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.sort'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.sort'
     package: '@azure/arm-streamanalytics'
     summary: Sorts an array.
     remarks: ''
@@ -800,14 +852,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Input, b: Input) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Input[])'
-    uid: '@azure/arm-streamanalytics.InputListResult.splice_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.splice_1'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -827,14 +890,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+          type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.InputListResult.splice'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.splice'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -855,10 +918,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+        type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-streamanalytics.InputListResult.toLocaleString'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.toLocaleString'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -872,7 +935,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-streamanalytics.InputListResult.toString'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.toString'
     package: '@azure/arm-streamanalytics'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -884,7 +947,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Input[])'
-    uid: '@azure/arm-streamanalytics.InputListResult.unshift'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.unshift'
     package: '@azure/arm-streamanalytics'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -894,14 +957,14 @@ methods:
       content: 'function unshift(items: Input[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-streamanalytics.Input" />[]'
+          type: '<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-streamanalytics.InputListResult.values'
+    uid: '@azure/arm-streamanalytics.models.index.d.InputListResult.values'
     package: '@azure/arm-streamanalytics'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -911,7 +974,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-streamanalytics.Input"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-streamanalytics.models.index.d.Input" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-streamanalytics.Input" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.InputListResult.[Symbol.iterator]
+    package: '@azure/arm-streamanalytics'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-streamanalytics.models.index.d.Input" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.InputListResult.[Symbol.unscopables]
+    package: '@azure/arm-streamanalytics'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-streamanalytics.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-streamanalytics.models.index.d.Input" />&gt;

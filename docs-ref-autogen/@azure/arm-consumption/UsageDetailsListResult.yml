@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: UsageDetailsListResult
-uid: '@azure/arm-consumption.UsageDetailsListResult'
+uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult'
 package: '@azure/arm-consumption'
 summary: ''
 fullName: UsageDetailsListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-consumption.UsageDetailsListResult.Array'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.Array'
     package: '@azure/arm-consumption'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-consumption.UsageDetailsListResult.length'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.length'
     package: '@azure/arm-consumption'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-consumption.UsageDetailsListResult.nextLink'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.nextLink'
     package: '@azure/arm-consumption'
     summary: ''
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<UsageDetail>[])'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.concat'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.concat'
     package: '@azure/arm-consumption'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-consumption.UsageDetail"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-consumption.models.index.d.UsageDetail" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.concat_1'
+  - name: 'concat(UsageDetail | ConcatArray<UsageDetail>[])'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.concat_1'
     package: '@azure/arm-consumption'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: UsageDetail | ConcatArray<UsageDetail>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-consumption.models.index.d.UsageDetail" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.copyWithin'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.copyWithin'
     package: '@azure/arm-consumption'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.entries'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.entries'
     package: '@azure/arm-consumption'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +143,7 @@ methods:
   - name: >-
       every((value: UsageDetail, index: number, array: UsageDetail[]) =>
       unknown, any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.every'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.every_1'
     package: '@azure/arm-consumption'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: UsageDetail, index: number, array:
+        function every(predicate: (value: UsageDetail, index: number, array:
         UsageDetail[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageDetail, index: number, array: UsageDetail[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: UsageDetail, index: number, array: UsageDetail[]) =>
+      value, any)
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.every'
+    package: '@azure/arm-consumption'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: UsageDetail, index: number, array:
+        UsageDetail[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: UsageDetail, index: number, array: UsageDetail[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(UsageDetail, undefined | number, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.fill'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.fill'
     package: '@azure/arm-consumption'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-consumption.UsageDetail" />
+          type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +251,7 @@ methods:
   - name: >-
       filter((value: UsageDetail, index: number, array: UsageDetail[]) =>
       unknown, any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.filter_1'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.filter_1'
     package: '@azure/arm-consumption'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +261,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: UsageDetail, index: number, array:
+        function filter(predicate: (value: UsageDetail, index: number, array:
         UsageDetail[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageDetail, index: number, array: UsageDetail[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
   - name: >-
       filter<S>((value: UsageDetail, index: number, array: UsageDetail[]) =>
-      boolean, any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.filter'
+      value, any)
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.filter'
     package: '@azure/arm-consumption'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: UsageDetail, index: number,
-        array: UsageDetail[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: UsageDetail, index: number, array:
+        UsageDetail[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageDetail, index: number, array: UsageDetail[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +315,7 @@ methods:
   - name: >-
       find((value: UsageDetail, index: number, obj: UsageDetail[]) => unknown,
       any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.find_1'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.find_1'
     package: '@azure/arm-consumption'
     summary: ''
     remarks: ''
@@ -291,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: UsageDetail, index: number, obj:
-      UsageDetail[]) => boolean, any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.find'
+      UsageDetail[]) => value, any)
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.find'
     package: '@azure/arm-consumption'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: UsageDetail, index:
-        number, obj: UsageDetail[]) => boolean, thisArg?: any)
+        number, obj: UsageDetail[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: UsageDetail, index: number, obj: UsageDetail[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: UsageDetail, index: number, obj: UsageDetail[]) =>
       unknown, any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.findIndex'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.findIndex'
     package: '@azure/arm-consumption'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +424,7 @@ methods:
   - name: >-
       forEach((value: UsageDetail, index: number, array: UsageDetail[]) => void,
       any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.forEach'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.forEach'
     package: '@azure/arm-consumption'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -401,7 +447,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(UsageDetail, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.includes'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.includes'
     package: '@azure/arm-consumption'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -415,7 +461,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-consumption.UsageDetail" />
+          type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -426,7 +472,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(UsageDetail, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.indexOf'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.indexOf'
     package: '@azure/arm-consumption'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -438,7 +484,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-consumption.UsageDetail" />
+          type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -449,7 +495,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.join'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.join'
     package: '@azure/arm-consumption'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -470,7 +516,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.keys'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.keys'
     package: '@azure/arm-consumption'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -482,7 +528,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(UsageDetail, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.lastIndexOf'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.lastIndexOf'
     package: '@azure/arm-consumption'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -494,7 +540,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-consumption.UsageDetail" />
+          type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -507,7 +553,7 @@ methods:
   - name: >-
       map<U>((value: UsageDetail, index: number, array: UsageDetail[]) => U,
       any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.map'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.map'
     package: '@azure/arm-consumption'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -535,7 +581,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.pop'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.pop'
     package: '@azure/arm-consumption'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -544,10 +590,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" /> |
+          undefined
         description: ''
   - name: 'push(UsageDetail[])'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.push'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.push'
     package: '@azure/arm-consumption'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -557,7 +605,7 @@ methods:
       content: 'function push(items: UsageDetail[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+          type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
           description: |
             New elements of the Array.
       return:
@@ -566,7 +614,7 @@ methods:
   - name: >-
       reduce((previousValue: UsageDetail, currentValue: UsageDetail,
       currentIndex: number, array: UsageDetail[]) => UsageDetail)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reduce'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reduce'
     package: '@azure/arm-consumption'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -589,12 +637,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" />
+        type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
         description: ''
   - name: >-
       reduce((previousValue: UsageDetail, currentValue: UsageDetail,
       currentIndex: number, array: UsageDetail[]) => UsageDetail, UsageDetail)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reduce_1'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reduce_1'
     package: '@azure/arm-consumption'
     summary: ''
     remarks: ''
@@ -612,15 +660,15 @@ methods:
             currentIndex: number, array: UsageDetail[]) =&gt; UsageDetail
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-consumption.UsageDetail" />
+          type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" />
+        type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: UsageDetail, currentIndex:
       number, array: UsageDetail[]) => U, U)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reduce_2'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reduce_2'
     package: '@azure/arm-consumption'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -655,7 +703,7 @@ methods:
   - name: >-
       reduceRight((previousValue: UsageDetail, currentValue: UsageDetail,
       currentIndex: number, array: UsageDetail[]) => UsageDetail)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reduceRight'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reduceRight'
     package: '@azure/arm-consumption'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -680,12 +728,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" />
+        type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
         description: ''
   - name: >-
       reduceRight((previousValue: UsageDetail, currentValue: UsageDetail,
       currentIndex: number, array: UsageDetail[]) => UsageDetail, UsageDetail)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reduceRight_1'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reduceRight_1'
     package: '@azure/arm-consumption'
     summary: ''
     remarks: ''
@@ -703,15 +751,15 @@ methods:
             currentIndex: number, array: UsageDetail[]) =&gt; UsageDetail
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-consumption.UsageDetail" />
+          type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" />
+        type: <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: UsageDetail, currentIndex:
       number, array: UsageDetail[]) => U, U)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reduceRight_2'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reduceRight_2'
     package: '@azure/arm-consumption'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -745,7 +793,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.reverse'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.reverse'
     package: '@azure/arm-consumption'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -754,10 +802,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.shift'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.shift'
     package: '@azure/arm-consumption'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -766,10 +814,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-consumption.UsageDetail" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-consumption.models.index.d.UsageDetail" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.slice'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.slice'
     package: '@azure/arm-consumption'
     summary: Returns a section of an array.
     remarks: ''
@@ -783,15 +833,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
   - name: >-
       some((value: UsageDetail, index: number, array: UsageDetail[]) => unknown,
       any)
-    uid: '@azure/arm-consumption.UsageDetailsListResult.some'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.some'
     package: '@azure/arm-consumption'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -801,28 +852,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: UsageDetail, index: number, array:
+        function some(predicate: (value: UsageDetail, index: number, array:
         UsageDetail[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageDetail, index: number, array: UsageDetail[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: UsageDetail, b: UsageDetail) => number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.sort'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.sort'
     package: '@azure/arm-consumption'
     summary: Sorts an array.
     remarks: ''
@@ -836,14 +892,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: UsageDetail, b: UsageDetail) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, UsageDetail[])'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.splice_1'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.splice_1'
     package: '@azure/arm-consumption'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -865,14 +932,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+          type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.splice'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.splice'
     package: '@azure/arm-consumption'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -893,10 +960,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+        type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.toLocaleString'
+    uid: >-
+      @azure/arm-consumption.models.index.d.UsageDetailsListResult.toLocaleString
     package: '@azure/arm-consumption'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -910,7 +978,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.toString'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.toString'
     package: '@azure/arm-consumption'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -922,7 +990,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(UsageDetail[])'
-    uid: '@azure/arm-consumption.UsageDetailsListResult.unshift'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.unshift'
     package: '@azure/arm-consumption'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -932,14 +1000,14 @@ methods:
       content: 'function unshift(items: UsageDetail[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-consumption.UsageDetail" />[]'
+          type: '<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-consumption.UsageDetailsListResult.values'
+    uid: '@azure/arm-consumption.models.index.d.UsageDetailsListResult.values'
     package: '@azure/arm-consumption'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -949,7 +1017,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-consumption.UsageDetail"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-consumption.models.index.d.UsageDetail" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-consumption.UsageDetail" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-consumption.models.index.d.UsageDetailsListResult.[Symbol.iterator]
+    package: '@azure/arm-consumption'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-consumption.models.index.d.UsageDetail" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-consumption.models.index.d.UsageDetailsListResult.[Symbol.unscopables]
+    package: '@azure/arm-consumption'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-consumption.models.index.d.UsageDetailsListResult.Array"
+  />&lt;<xref uid="@azure/arm-consumption.models.index.d.UsageDetail" />&gt;

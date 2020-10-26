@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LogSearchRuleResourceCollection
-uid: '@azure/arm-monitor.LogSearchRuleResourceCollection'
+uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection'
 package: '@azure/arm-monitor'
 summary: ''
 fullName: LogSearchRuleResourceCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.Array'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.Array'
     package: '@azure/arm-monitor'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.length'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.length'
     package: '@azure/arm-monitor'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<LogSearchRuleResource>[])'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.concat'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.concat'
     package: '@azure/arm-monitor'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +50,44 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-monitor.LogSearchRuleResource"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.concat_1'
+  - name: 'concat(LogSearchRuleResource | ConcatArray<LogSearchRuleResource>[])'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.concat_1'
     package: '@azure/arm-monitor'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: LogSearchRuleResource |
+        ConcatArray<LogSearchRuleResource>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.copyWithin'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.copyWithin
     package: '@azure/arm-monitor'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +125,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.entries'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.entries'
     package: '@azure/arm-monitor'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +139,7 @@ methods:
   - name: >-
       every((value: LogSearchRuleResource, index: number, array:
       LogSearchRuleResource[]) => unknown, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.every'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.every_1'
     package: '@azure/arm-monitor'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +147,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: LogSearchRuleResource, index: number,
+        function every(predicate: (value: LogSearchRuleResource, index: number,
         array: LogSearchRuleResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LogSearchRuleResource, index: number, array:
             LogSearchRuleResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: LogSearchRuleResource, index: number, array:
+      LogSearchRuleResource[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.every'
+    package: '@azure/arm-monitor'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: LogSearchRuleResource, index:
+        number, array: LogSearchRuleResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: LogSearchRuleResource, index: number, array:
+            LogSearchRuleResource[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(LogSearchRuleResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.fill'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.fill'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +225,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +249,7 @@ methods:
   - name: >-
       filter((value: LogSearchRuleResource, index: number, array:
       LogSearchRuleResource[]) => unknown, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.filter_1'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.filter_1'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +259,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: LogSearchRuleResource, index:
-        number, array: LogSearchRuleResource[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: LogSearchRuleResource, index: number,
+        array: LogSearchRuleResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LogSearchRuleResource, index: number, array:
             LogSearchRuleResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: LogSearchRuleResource, index: number, array:
-      LogSearchRuleResource[]) => boolean, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.filter'
+      LogSearchRuleResource[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.filter'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: LogSearchRuleResource, index:
-        number, array: LogSearchRuleResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: LogSearchRuleResource, index:
+        number, array: LogSearchRuleResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LogSearchRuleResource, index: number, array:
-            LogSearchRuleResource[]) =&gt; boolean
+            LogSearchRuleResource[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +315,7 @@ methods:
   - name: >-
       find((value: LogSearchRuleResource, index: number, obj:
       LogSearchRuleResource[]) => unknown, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.find_1'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.find_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -278,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: LogSearchRuleResource, index: number, obj:
-      LogSearchRuleResource[]) => boolean, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.find'
+      LogSearchRuleResource[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.find'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: LogSearchRuleResource,
-        index: number, obj: LogSearchRuleResource[]) => boolean, thisArg?: any)
+        index: number, obj: LogSearchRuleResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: LogSearchRuleResource, index: number, obj:
-            LogSearchRuleResource[]) =&gt; boolean
+            LogSearchRuleResource[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +383,8 @@ methods:
   - name: >-
       findIndex((value: LogSearchRuleResource, index: number, obj:
       LogSearchRuleResource[]) => unknown, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.findIndex'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.findIndex
     package: '@azure/arm-monitor'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +425,7 @@ methods:
   - name: >-
       forEach((value: LogSearchRuleResource, index: number, array:
       LogSearchRuleResource[]) => void, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.forEach'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.forEach'
     package: '@azure/arm-monitor'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +450,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(LogSearchRuleResource, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.includes'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.includes'
     package: '@azure/arm-monitor'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +464,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +477,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(LogSearchRuleResource, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.indexOf'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.indexOf'
     package: '@azure/arm-monitor'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +489,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +502,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.join'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.join'
     package: '@azure/arm-monitor'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +523,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.keys'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.keys'
     package: '@azure/arm-monitor'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +535,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(LogSearchRuleResource, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.lastIndexOf
     package: '@azure/arm-monitor'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +548,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +563,7 @@ methods:
   - name: >-
       map<U>((value: LogSearchRuleResource, index: number, array:
       LogSearchRuleResource[]) => U, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.map'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.map'
     package: '@azure/arm-monitor'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +593,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.pop'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.pop'
     package: '@azure/arm-monitor'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +602,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
+          | undefined
         description: ''
   - name: 'push(LogSearchRuleResource[])'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.push'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.push'
     package: '@azure/arm-monitor'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +617,9 @@ methods:
       content: 'function push(items: LogSearchRuleResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -558,7 +629,7 @@ methods:
       reduce((previousValue: LogSearchRuleResource, currentValue:
       LogSearchRuleResource, currentIndex: number, array:
       LogSearchRuleResource[]) => LogSearchRuleResource)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reduce'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reduce'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,13 +654,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
         description: ''
   - name: >-
       reduce((previousValue: LogSearchRuleResource, currentValue:
       LogSearchRuleResource, currentIndex: number, array:
       LogSearchRuleResource[]) => LogSearchRuleResource, LogSearchRuleResource)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reduce_1'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reduce_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -609,15 +680,17 @@ methods:
             LogSearchRuleResource[]) =&gt; LogSearchRuleResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: LogSearchRuleResource,
       currentIndex: number, array: LogSearchRuleResource[]) => U, U)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reduce_2'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reduce_2'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -653,7 +726,8 @@ methods:
       reduceRight((previousValue: LogSearchRuleResource, currentValue:
       LogSearchRuleResource, currentIndex: number, array:
       LogSearchRuleResource[]) => LogSearchRuleResource)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reduceRight'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reduceRight
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -679,13 +753,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
         description: ''
   - name: >-
       reduceRight((previousValue: LogSearchRuleResource, currentValue:
       LogSearchRuleResource, currentIndex: number, array:
       LogSearchRuleResource[]) => LogSearchRuleResource, LogSearchRuleResource)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reduceRight_1
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -705,15 +780,18 @@ methods:
             LogSearchRuleResource[]) =&gt; LogSearchRuleResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: LogSearchRuleResource,
       currentIndex: number, array: LogSearchRuleResource[]) => U, U)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reduceRight_2
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -747,7 +825,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.reverse'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.reverse'
     package: '@azure/arm-monitor'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -756,10 +834,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.shift'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.shift'
     package: '@azure/arm-monitor'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -768,10 +848,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-monitor.LogSearchRuleResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.slice'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.slice'
     package: '@azure/arm-monitor'
     summary: Returns a section of an array.
     remarks: ''
@@ -785,15 +867,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
   - name: >-
       some((value: LogSearchRuleResource, index: number, array:
       LogSearchRuleResource[]) => unknown, any)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.some'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.some'
     package: '@azure/arm-monitor'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -803,30 +888,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: LogSearchRuleResource, index: number,
+        function some(predicate: (value: LogSearchRuleResource, index: number,
         array: LogSearchRuleResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LogSearchRuleResource, index: number, array:
             LogSearchRuleResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: LogSearchRuleResource, b: LogSearchRuleResource) =>
       number)
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.sort'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.sort'
     package: '@azure/arm-monitor'
     summary: Sorts an array.
     remarks: ''
@@ -842,14 +932,25 @@ methods:
             undefined | (a: LogSearchRuleResource, b: LogSearchRuleResource)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, LogSearchRuleResource[])'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.splice_1'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.splice_1'
     package: '@azure/arm-monitor'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -871,14 +972,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.splice'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.splice'
     package: '@azure/arm-monitor'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -899,10 +1004,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.toLocaleString'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.toLocaleString
     package: '@azure/arm-monitor'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -916,7 +1024,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.toString'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.toString'
     package: '@azure/arm-monitor'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -928,7 +1036,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(LogSearchRuleResource[])'
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.unshift'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.unshift'
     package: '@azure/arm-monitor'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -938,14 +1046,16 @@ methods:
       content: 'function unshift(items: LogSearchRuleResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-monitor.LogSearchRuleResource" />[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-monitor.LogSearchRuleResourceCollection.values'
+    uid: '@azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.values'
     package: '@azure/arm-monitor'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -956,6 +1066,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-monitor.LogSearchRuleResource" />&gt;
+          uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-monitor.LogSearchRuleResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.[Symbol.iterator]
+    package: '@azure/arm-monitor'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-monitor.models.index.d.LogSearchRuleResourceCollection.[Symbol.unscopables]
+    package: '@azure/arm-monitor'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-monitor.models.index.d.AutoscaleSettingResourceCollection.Array"
+  />&lt;<xref uid="@azure/arm-monitor.models.index.d.LogSearchRuleResource"
+  />&gt;

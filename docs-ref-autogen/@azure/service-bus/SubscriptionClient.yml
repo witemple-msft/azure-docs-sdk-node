@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SubscriptionClient
-uid: '@azure/service-bus.SubscriptionClient'
+uid: '@azure/service-bus.service-bus.d.SubscriptionClient'
 package: '@azure/service-bus'
 summary: >-
   Describes the client that allows interacting with a Service Bus Subscription.
@@ -16,7 +16,7 @@ isDeprecated: false
 type: class
 properties:
   - name: defaultRuleName
-    uid: '@azure/service-bus.SubscriptionClient.defaultRuleName'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.defaultRuleName'
     package: '@azure/service-bus'
     summary: The name of the default rule on the subscription.
     fullName: defaultRuleName
@@ -29,7 +29,7 @@ properties:
         type: string
         description: ''
   - name: entityPath
-    uid: '@azure/service-bus.SubscriptionClient.entityPath'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.entityPath'
     package: '@azure/service-bus'
     summary: >-
       The path for the Service Bus Subscription for which this client is
@@ -44,7 +44,7 @@ properties:
         type: string
         description: ''
   - name: id
-    uid: '@azure/service-bus.SubscriptionClient.id'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.id'
     package: '@azure/service-bus'
     summary: A unique identifier for this client.
     fullName: id
@@ -57,7 +57,7 @@ properties:
         type: string
         description: ''
   - name: subscriptionName
-    uid: '@azure/service-bus.SubscriptionClient.subscriptionName'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.subscriptionName'
     package: '@azure/service-bus'
     summary: The name of the Service Bus Subscription for which this client is created.
     fullName: subscriptionName
@@ -70,7 +70,7 @@ properties:
         type: string
         description: ''
   - name: topicName
-    uid: '@azure/service-bus.SubscriptionClient.topicName'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.topicName'
     package: '@azure/service-bus'
     summary: >-
       The name of the Service Bus Topic for whose Subscription, this client is
@@ -86,7 +86,7 @@ properties:
         description: ''
 methods:
   - name: 'addRule(string, boolean | string | CorrelationFilter, undefined | string)'
-    uid: '@azure/service-bus.SubscriptionClient.addRule'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.addRule'
     package: '@azure/service-bus'
     summary: >-
       Adds a rule on the subscription as defined by the given rule name, filter
@@ -112,8 +112,8 @@ methods:
           description: Name of the rule
         - id: filter
           type: >-
-            boolean | string | <xref uid="@azure/service-bus.CorrelationFilter"
-            />
+            boolean | string | <xref
+            uid="@azure/service-bus.service-bus.d.CorrelationFilter" />
           description: >-
             A Boolean, SQL expression or a Correlation filter. For SQL Filter
             syntax, see
@@ -132,7 +132,7 @@ methods:
         type: Promise&lt;void&gt;
         description: ''
   - name: close()
-    uid: '@azure/service-bus.SubscriptionClient.close'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.close'
     package: '@azure/service-bus'
     summary: >-
       Closes the AMQP link for the receivers created by this client.
@@ -150,7 +150,7 @@ methods:
         type: Promise&lt;void&gt;
         description: ''
   - name: createReceiver(ReceiveMode)
-    uid: '@azure/service-bus.SubscriptionClient.createReceiver'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.createReceiver'
     package: '@azure/service-bus'
     summary: >-
       Creates a Receiver for receiving messages from a Subscription which does
@@ -162,7 +162,7 @@ methods:
       content: 'function createReceiver(receiveMode: ReceiveMode)'
       parameters:
         - id: receiveMode
-          type: <xref uid="@azure/service-bus.ReceiveMode" />
+          type: <xref uid="@azure/service-bus.service-bus.d.ReceiveMode" />
           description: >
             An enum indicating the mode in which messages should be received.
             Possible
@@ -182,14 +182,14 @@ methods:
 
             Service Bus.
       return:
-        type: <xref uid="@azure/service-bus.Receiver" />
+        type: <xref uid="@azure/service-bus.service-bus.d.Receiver" />
         description: >-
           Receiver A receiver to receive messages from a Subscription which does
           not have
 
           sessions enabled.
   - name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
-    uid: '@azure/service-bus.SubscriptionClient.createReceiver_1'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.createReceiver_1'
     package: '@azure/service-bus'
     summary: >-
       Creates a Receiver for receiving messages from a session enabled
@@ -205,7 +205,7 @@ methods:
         SessionReceiverOptions)
       parameters:
         - id: receiveMode
-          type: <xref uid="@azure/service-bus.ReceiveMode" />
+          type: <xref uid="@azure/service-bus.service-bus.d.ReceiveMode" />
           description: >-
             An enum indicating the mode in which messages should be received.
             Possible
@@ -225,19 +225,21 @@ methods:
 
             Service Bus.
         - id: sessionOptions
-          type: <xref uid="@azure/service-bus.SessionReceiverOptions" />
+          type: >-
+            <xref uid="@azure/service-bus.service-bus.d.SessionReceiverOptions"
+            />
           description: >
             Options to provide sessionId and duration of automatic lock renewal
             for
 
             the session receiver.
       return:
-        type: <xref uid="@azure/service-bus.SessionReceiver" />
+        type: <xref uid="@azure/service-bus.service-bus.d.SessionReceiver" />
         description: >-
           SessionReceiver A receiver to receive from a session in the
           Subscription.
   - name: getRules()
-    uid: '@azure/service-bus.SubscriptionClient.getRules'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.getRules'
     package: '@azure/service-bus'
     summary: Gets all rules associated with the subscription
     remarks: ''
@@ -246,10 +248,12 @@ methods:
     syntax:
       content: function getRules()
       return:
-        type: 'Promise&lt;<xref uid="@azure/service-bus.RuleDescription" />[]&gt;'
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/service-bus.service-bus.d.RuleDescription" />[]&gt;
         description: ''
   - name: peek(undefined | number)
-    uid: '@azure/service-bus.SubscriptionClient.peek'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.peek'
     package: '@azure/service-bus'
     summary: >-
       Fetches the next batch of active messages (including deferred but not
@@ -275,10 +279,12 @@ methods:
           type: undefined | number
           description: ''
       return:
-        type: 'Promise&lt;<xref uid="@azure/service-bus.ReceivedMessageInfo" />[]&gt;'
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/service-bus.service-bus.d.ReceivedMessageInfo" />[]&gt;
         description: 'Promise<ReceivedSBMessage[]>'
   - name: 'peekBySequenceNumber(Long, undefined | number)'
-    uid: '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.peekBySequenceNumber'
     package: '@azure/service-bus'
     summary: >-
       Peeks the desired number of active messages (including deferred but not
@@ -306,10 +312,12 @@ methods:
           type: undefined | number
           description: ''
       return:
-        type: 'Promise&lt;<xref uid="@azure/service-bus.ReceivedMessageInfo" />[]&gt;'
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/service-bus.service-bus.d.ReceivedMessageInfo" />[]&gt;
         description: 'Promise<ReceivedSBMessage[]>'
   - name: removeRule(string)
-    uid: '@azure/service-bus.SubscriptionClient.removeRule'
+    uid: '@azure/service-bus.service-bus.d.SubscriptionClient.removeRule'
     package: '@azure/service-bus'
     summary: >-
       Removes the rule on the subscription identified by the given rule name.

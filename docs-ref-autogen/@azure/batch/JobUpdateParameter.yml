@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: JobUpdateParameter
-uid: '@azure/batch.JobUpdateParameter'
+uid: '@azure/batch.models.index.d.JobUpdateParameter'
 package: '@azure/batch'
 summary: An interface representing JobUpdateParameter.
 fullName: JobUpdateParameter
@@ -10,10 +10,10 @@ isDeprecated: false
 type: interface
 properties:
   - name: constraints
-    uid: '@azure/batch.JobUpdateParameter.constraints'
+    uid: '@azure/batch.models.index.d.JobUpdateParameter.constraints'
     package: '@azure/batch'
     summary: >-
-      The execution constraints for the job. If omitted, the constraints are
+      The execution constraints for the Job. If omitted, the constraints are
       cleared.
     fullName: constraints
     remarks: ''
@@ -22,13 +22,13 @@ properties:
     syntax:
       content: 'constraints?: JobConstraints'
       return:
-        type: <xref uid="@azure/batch.JobConstraints" />
+        type: <xref uid="@azure/batch.models.index.d.JobConstraints" />
         description: ''
   - name: metadata
-    uid: '@azure/batch.JobUpdateParameter.metadata'
+    uid: '@azure/batch.models.index.d.JobUpdateParameter.metadata'
     package: '@azure/batch'
     summary: >-
-      A list of name-value pairs associated with the job as metadata. If
+      A list of name-value pairs associated with the Job as metadata. If
       omitted, it takes the
 
       default value of an empty list; in effect, any existing metadata is
@@ -40,25 +40,25 @@ properties:
     syntax:
       content: 'metadata?: MetadataItem[]'
       return:
-        type: '<xref uid="@azure/batch.MetadataItem" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.MetadataItem" />[]'
         description: ''
   - name: onAllTasksComplete
-    uid: '@azure/batch.JobUpdateParameter.onAllTasksComplete'
+    uid: '@azure/batch.models.index.d.JobUpdateParameter.onAllTasksComplete'
     package: '@azure/batch'
     summary: >-
-      The action the Batch service should take when all tasks in the job are in
+      The action the Batch service should take when all Tasks in the Job are in
       the completed state.
 
       If omitted, the completion behavior is set to noaction. If the current
       value is terminatejob,
 
-      this is an error because a job's completion behavior may not be changed
+      this is an error because a Job's completion behavior may not be changed
       from terminatejob to
 
       noaction. You may not change the value from terminatejob to noaction -
       that is, once you have
 
-      engaged automatic job termination, you cannot turn it off again. If you
+      engaged automatic Job termination, you cannot turn it off again. If you
       try to do this, the
 
       request fails and Batch returns status code 400 (Bad Request) and an
@@ -78,25 +78,28 @@ properties:
     syntax:
       content: 'onAllTasksComplete?: OnAllTasksComplete'
       return:
-        type: <xref uid="@azure/batch.OnAllTasksComplete" />
+        type: <xref uid="@azure/batch.models.index.d.OnAllTasksComplete" />
         description: ''
   - name: poolInfo
-    uid: '@azure/batch.JobUpdateParameter.poolInfo'
+    uid: '@azure/batch.models.index.d.JobUpdateParameter.poolInfo'
     package: '@azure/batch'
     summary: >-
-      The pool on which the Batch service runs the job's tasks. You may change
-      the pool for a job
+      The Pool on which the Batch service runs the Job's Tasks. You may change
+      the Pool for a Job
 
-      only when the job is disabled. The Update Job call will fail if you
+      only when the Job is disabled. The Update Job call will fail if you
       include the poolInfo
 
-      element and the job is not disabled. If you specify an
-      autoPoolSpecification specification in
+      element and the Job is not disabled. If you specify an
+      autoPoolSpecification in the poolInfo,
 
-      the poolInfo, only the keepAlive property can be updated, and then only if
-      the auto pool has a
+      only the keepAlive property of the autoPoolSpecification can be updated,
+      and then only if the
 
-      poolLifetimeOption of job.
+      autoPoolSpecification has a poolLifetimeOption of Job (other job
+      properties can be updated as
+
+      normal).
     fullName: poolInfo
     remarks: ''
     isPreview: false
@@ -104,13 +107,13 @@ properties:
     syntax:
       content: 'poolInfo: PoolInformation'
       return:
-        type: <xref uid="@azure/batch.PoolInformation" />
+        type: <xref uid="@azure/batch.models.index.d.PoolInformation" />
         description: ''
   - name: priority
-    uid: '@azure/batch.JobUpdateParameter.priority'
+    uid: '@azure/batch.models.index.d.JobUpdateParameter.priority'
     package: '@azure/batch'
     summary: >-
-      The priority of the job. Priority values can range from -1000 to 1000,
+      The priority of the Job. Priority values can range from -1000 to 1000,
       with -1000 being the
 
       lowest priority and 1000 being the highest priority. If omitted, it is set

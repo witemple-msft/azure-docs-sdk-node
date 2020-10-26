@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SiteExtensionInfoCollection
-uid: '@azure/arm-appservice.SiteExtensionInfoCollection'
+uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: SiteExtensionInfoCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SiteExtensionInfo>[])'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,44 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appservice.SiteExtensionInfo"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.concat_1'
+  - name: 'concat(SiteExtensionInfo | ConcatArray<SiteExtensionInfo>[])'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SiteExtensionInfo |
+        ConcatArray<SiteExtensionInfo>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.copyWithin'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.copyWithin
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +156,7 @@ methods:
   - name: >-
       every((value: SiteExtensionInfo, index: number, array:
       SiteExtensionInfo[]) => unknown, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +164,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SiteExtensionInfo, index: number,
+        function every(predicate: (value: SiteExtensionInfo, index: number,
         array: SiteExtensionInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SiteExtensionInfo, index: number, array:
             SiteExtensionInfo[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SiteExtensionInfo, index: number, array:
+      SiteExtensionInfo[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SiteExtensionInfo, index: number,
+        array: SiteExtensionInfo[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SiteExtensionInfo, index: number, array:
+            SiteExtensionInfo[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SiteExtensionInfo, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +242,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +266,7 @@ methods:
   - name: >-
       filter((value: SiteExtensionInfo, index: number, array:
       SiteExtensionInfo[]) => unknown, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +276,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SiteExtensionInfo, index: number,
+        function filter(predicate: (value: SiteExtensionInfo, index: number,
         array: SiteExtensionInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SiteExtensionInfo, index: number, array:
             SiteExtensionInfo[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SiteExtensionInfo, index: number, array:
-      SiteExtensionInfo[]) => boolean, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.filter'
+      SiteExtensionInfo[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +310,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SiteExtensionInfo, index: number,
-        array: SiteExtensionInfo[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SiteExtensionInfo, index: number,
+        array: SiteExtensionInfo[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SiteExtensionInfo, index: number, array:
-            SiteExtensionInfo[]) =&gt; boolean
+            SiteExtensionInfo[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +332,7 @@ methods:
   - name: >-
       find((value: SiteExtensionInfo, index: number, obj: SiteExtensionInfo[])
       => unknown, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -295,12 +352,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SiteExtensionInfo, index: number, obj:
-      SiteExtensionInfo[]) => boolean, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.find'
+      SiteExtensionInfo[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +372,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SiteExtensionInfo,
-        index: number, obj: SiteExtensionInfo[]) => boolean, thisArg?: any)
+        index: number, obj: SiteExtensionInfo[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SiteExtensionInfo, index: number, obj:
-            SiteExtensionInfo[]) =&gt; boolean
+            SiteExtensionInfo[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +400,7 @@ methods:
   - name: >-
       findIndex((value: SiteExtensionInfo, index: number, obj:
       SiteExtensionInfo[]) => unknown, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +441,7 @@ methods:
   - name: >-
       forEach((value: SiteExtensionInfo, index: number, array:
       SiteExtensionInfo[]) => void, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +466,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SiteExtensionInfo, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +480,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +493,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SiteExtensionInfo, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +505,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +518,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +539,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +551,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SiteExtensionInfo, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.lastIndexOf
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +564,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +579,7 @@ methods:
   - name: >-
       map<U>((value: SiteExtensionInfo, index: number, array:
       SiteExtensionInfo[]) => U, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +609,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +618,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
+          | undefined
         description: ''
   - name: 'push(SiteExtensionInfo[])'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +633,9 @@ methods:
       content: 'function push(items: SiteExtensionInfo[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -574,7 +644,7 @@ methods:
   - name: >-
       reduce((previousValue: SiteExtensionInfo, currentValue: SiteExtensionInfo,
       currentIndex: number, array: SiteExtensionInfo[]) => SiteExtensionInfo)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +669,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
         description: ''
   - name: >-
       reduce((previousValue: SiteExtensionInfo, currentValue: SiteExtensionInfo,
       currentIndex: number, array: SiteExtensionInfo[]) => SiteExtensionInfo,
       SiteExtensionInfo)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -625,15 +695,17 @@ methods:
             SiteExtensionInfo
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SiteExtensionInfo,
       currentIndex: number, array: SiteExtensionInfo[]) => U, U)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -669,7 +741,8 @@ methods:
       reduceRight((previousValue: SiteExtensionInfo, currentValue:
       SiteExtensionInfo, currentIndex: number, array: SiteExtensionInfo[]) =>
       SiteExtensionInfo)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reduceRight'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reduceRight
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -695,13 +768,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
         description: ''
   - name: >-
       reduceRight((previousValue: SiteExtensionInfo, currentValue:
       SiteExtensionInfo, currentIndex: number, array: SiteExtensionInfo[]) =>
       SiteExtensionInfo, SiteExtensionInfo)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reduceRight_1
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -721,15 +795,18 @@ methods:
             SiteExtensionInfo
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SiteExtensionInfo,
       currentIndex: number, array: SiteExtensionInfo[]) => U, U)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reduceRight_2
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -763,7 +840,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -772,10 +849,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -784,10 +863,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.SiteExtensionInfo" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -801,15 +882,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
   - name: >-
       some((value: SiteExtensionInfo, index: number, array: SiteExtensionInfo[])
       => unknown, any)
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -819,28 +903,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SiteExtensionInfo, index: number,
+        function some(predicate: (value: SiteExtensionInfo, index: number,
         array: SiteExtensionInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SiteExtensionInfo, index: number, array:
             SiteExtensionInfo[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: SiteExtensionInfo, b: SiteExtensionInfo) => number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -856,14 +945,25 @@ methods:
             undefined | (a: SiteExtensionInfo, b: SiteExtensionInfo) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SiteExtensionInfo[])'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -885,14 +985,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -913,10 +1017,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.toLocaleString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.toLocaleString
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -930,7 +1037,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -942,7 +1049,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SiteExtensionInfo[])'
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -952,14 +1059,16 @@ methods:
       content: 'function unshift(items: SiteExtensionInfo[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.SiteExtensionInfo" />[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.SiteExtensionInfoCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -970,6 +1079,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-appservice.SiteExtensionInfo" />&gt;
+          uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.SiteExtensionInfo" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SiteExtensionInfoCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.SiteExtensionInfo"
+  />&gt;

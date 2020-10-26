@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ImageReference
-uid: '@azure/batch.ImageReference'
+uid: '@azure/batch.models.index.d.ImageReference'
 package: '@azure/batch'
 summary: An interface representing ImageReference.
 fullName: ImageReference
@@ -10,10 +10,10 @@ isDeprecated: false
 type: interface
 properties:
   - name: offer
-    uid: '@azure/batch.ImageReference.offer'
+    uid: '@azure/batch.models.index.d.ImageReference.offer'
     package: '@azure/batch'
     summary: >-
-      The offer type of the Azure Virtual Machines Marketplace image. For
+      The offer type of the Azure Virtual Machines Marketplace Image. For
       example, UbuntuServer or
 
       WindowsServer.
@@ -27,10 +27,10 @@ properties:
         type: undefined | string
         description: ''
   - name: publisher
-    uid: '@azure/batch.ImageReference.publisher'
+    uid: '@azure/batch.models.index.d.ImageReference.publisher'
     package: '@azure/batch'
     summary: >-
-      The publisher of the Azure Virtual Machines Marketplace image. For
+      The publisher of the Azure Virtual Machines Marketplace Image. For
       example, Canonical or
 
       MicrosoftWindowsServer.
@@ -44,13 +44,13 @@ properties:
         type: undefined | string
         description: ''
   - name: sku
-    uid: '@azure/batch.ImageReference.sku'
+    uid: '@azure/batch.models.index.d.ImageReference.sku'
     package: '@azure/batch'
     summary: >-
-      The SKU of the Azure Virtual Machines Marketplace image. For example,
-      14.04.0-LTS or
+      The SKU of the Azure Virtual Machines Marketplace Image. For example,
+      18.04-LTS or
 
-      2012-R2-Datacenter.
+      2019-Datacenter.
     fullName: sku
     remarks: ''
     isPreview: false
@@ -61,13 +61,13 @@ properties:
         type: undefined | string
         description: ''
   - name: version
-    uid: '@azure/batch.ImageReference.version'
+    uid: '@azure/batch.models.index.d.ImageReference.version'
     package: '@azure/batch'
     summary: >-
-      The version of the Azure Virtual Machines Marketplace image. A value of
+      The version of the Azure Virtual Machines Marketplace Image. A value of
       'latest' can be
 
-      specified to select the latest version of an image. If omitted, the
+      specified to select the latest version of an Image. If omitted, the
       default is 'latest'.
     fullName: version
     remarks: ''
@@ -79,23 +79,36 @@ properties:
         type: undefined | string
         description: ''
   - name: virtualMachineImageId
-    uid: '@azure/batch.ImageReference.virtualMachineImageId'
+    uid: '@azure/batch.models.index.d.ImageReference.virtualMachineImageId'
     package: '@azure/batch'
     summary: >-
-      The ARM resource identifier of the virtual machine image. Computes nodes
-      of the pool will be
+      The ARM resource identifier of the Shared Image Gallery Image. Compute
+      Nodes in the Pool will
 
-      created using this custom image. This is of the form
+      be created using this Image Id. This is of the form
 
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/images/{imageName}.
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}/versions/{VersionId}
 
-      This property is mutually exclusive with other ImageReference properties.
-      The virtual machine
+      or
 
-      image must be in the same region and subscription as the Azure Batch
-      account. For more
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Compute/galleries/{galleryName}/images/{imageDefinitionName}
 
-      details, see https://docs.microsoft.com/azure/batch/batch-custom-images.
+      for always defaulting to the latest image version. This property is
+      mutually exclusive with
+
+      other ImageReference properties. The Shared Image Gallery Image must have
+      replicas in the same
+
+      region and must be in the same subscription as the Azure Batch account. If
+      the image version
+
+      is not specified in the imageId, the latest version will be used. For
+      information about the
+
+      firewall settings for the Batch Compute Node agent to communicate with the
+      Batch service see
+
+      https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
     fullName: virtualMachineImageId
     remarks: ''
     isPreview: false

@@ -1,8 +1,18 @@
 ### YamlMime:TSType
 name: ScaleSettings
-uid: '@azure/arm-batch.ScaleSettings'
+uid: '@azure/arm-batch.models.index.d.ScaleSettings'
 package: '@azure/arm-batch'
-summary: ''
+summary: >-
+  Defines the desired size of the pool. This can either be 'fixedScale' where
+  the requested
+
+  targetDedicatedNodes is specified, or 'autoScale' which defines a formula
+  which is periodically
+
+  reevaluated. If this property is not specified, the pool will have a fixed
+  scale with 0
+
+  targetDedicatedNodes.
 fullName: ScaleSettings
 remarks: ''
 isPreview: false
@@ -10,9 +20,13 @@ isDeprecated: false
 type: interface
 properties:
   - name: autoScale
-    uid: '@azure/arm-batch.ScaleSettings.autoScale'
+    uid: '@azure/arm-batch.models.index.d.ScaleSettings.autoScale'
     package: '@azure/arm-batch'
-    summary: ''
+    summary: >-
+      AutoScale settings for the pool. This property and fixedScale are mutually
+      exclusive and one
+
+      of the properties must be specified.
     fullName: autoScale
     remarks: ''
     isPreview: false
@@ -20,12 +34,16 @@ properties:
     syntax:
       content: 'autoScale?: AutoScaleSettings'
       return:
-        type: <xref uid="@azure/arm-batch.AutoScaleSettings" />
+        type: <xref uid="@azure/arm-batch.models.index.d.AutoScaleSettings" />
         description: ''
   - name: fixedScale
-    uid: '@azure/arm-batch.ScaleSettings.fixedScale'
+    uid: '@azure/arm-batch.models.index.d.ScaleSettings.fixedScale'
     package: '@azure/arm-batch'
-    summary: ''
+    summary: >-
+      Fixed scale settings for the pool. This property and autoScale are
+      mutually exclusive and one
+
+      of the properties must be specified.
     fullName: fixedScale
     remarks: ''
     isPreview: false
@@ -33,5 +51,5 @@ properties:
     syntax:
       content: 'fixedScale?: FixedScaleSettings'
       return:
-        type: <xref uid="@azure/arm-batch.FixedScaleSettings" />
+        type: <xref uid="@azure/arm-batch.models.index.d.FixedScaleSettings" />
         description: ''

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: NodeFileListResult
-uid: '@azure/batch.NodeFileListResult'
+uid: '@azure/batch.models.index.d.NodeFileListResult'
 package: '@azure/batch'
 summary: ''
 fullName: NodeFileListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/batch.NodeFileListResult.Array'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.Array'
     package: '@azure/batch'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/batch.NodeFileListResult.length'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.length'
     package: '@azure/batch'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: odatanextLink
-    uid: '@azure/batch.NodeFileListResult.odatanextLink'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.odatanextLink'
     package: '@azure/batch'
     summary: ''
     fullName: odatanextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<NodeFile>[])'
-    uid: '@azure/batch.NodeFileListResult.concat'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.concat'
     package: '@azure/batch'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<NodeFile>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/batch.NodeFile" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/batch.models.index.d.NodeFile"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/batch.NodeFileListResult.concat_1'
+  - name: 'concat(NodeFile | ConcatArray<NodeFile>[])'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.concat_1'
     package: '@azure/batch'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: NodeFile | ConcatArray<NodeFile>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/batch.models.index.d.NodeFile" /> |
+            ConcatArray&lt;<xref uid="@azure/batch.models.index.d.NodeFile"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.copyWithin'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.copyWithin'
     package: '@azure/batch'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/batch.NodeFileListResult.entries'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.entries'
     package: '@azure/batch'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: NodeFile, index: number, array: NodeFile[]) => unknown, any)'
-    uid: '@azure/batch.NodeFileListResult.every'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.every_1'
     package: '@azure/batch'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: NodeFile, index: number, array:
+        function every(predicate: (value: NodeFile, index: number, array:
         NodeFile[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: NodeFile, index: number, array: NodeFile[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: NodeFile, index: number, array: NodeFile[]) => value,
+      any)
+    uid: '@azure/batch.models.index.d.NodeFileListResult.every'
+    package: '@azure/batch'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: NodeFile, index: number, array:
+        NodeFile[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: NodeFile, index: number, array: NodeFile[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(NodeFile, undefined | number, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.fill'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.fill'
     package: '@azure/batch'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +223,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/batch.NodeFile" />
+          type: <xref uid="@azure/batch.models.index.d.NodeFile" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +245,7 @@ methods:
   - name: >-
       filter((value: NodeFile, index: number, array: NodeFile[]) => unknown,
       any)
-    uid: '@azure/batch.NodeFileListResult.filter_1'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.filter_1'
     package: '@azure/batch'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,28 +255,27 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: NodeFile, index: number, array:
+        function filter(predicate: (value: NodeFile, index: number, array:
         NodeFile[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: NodeFile, index: number, array: NodeFile[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
   - name: >-
-      filter<S>((value: NodeFile, index: number, array: NodeFile[]) => boolean,
+      filter<S>((value: NodeFile, index: number, array: NodeFile[]) => value,
       any)
-    uid: '@azure/batch.NodeFileListResult.filter'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.filter'
     package: '@azure/batch'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +285,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: NodeFile, index: number, array:
-        NodeFile[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: NodeFile, index: number, array:
+        NodeFile[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: NodeFile, index: number, array: NodeFile[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: NodeFile, index: number, array: NodeFile[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: NodeFile, index: number, obj: NodeFile[]) => unknown, any)'
-    uid: '@azure/batch.NodeFileListResult.find_1'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.find_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -277,12 +321,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/batch.NodeFile" /> | undefined
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: NodeFile, index: number, obj: NodeFile[]) =>
-      boolean, any)
-    uid: '@azure/batch.NodeFileListResult.find'
+      value, any)
+    uid: '@azure/batch.models.index.d.NodeFileListResult.find'
     package: '@azure/batch'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +339,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: NodeFile, index: number,
-        obj: NodeFile[]) => boolean, thisArg?: any)
+        obj: NodeFile[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: NodeFile, index: number, obj: NodeFile[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -323,7 +367,7 @@ methods:
   - name: >-
       findIndex((value: NodeFile, index: number, obj: NodeFile[]) => unknown,
       any)
-    uid: '@azure/batch.NodeFileListResult.findIndex'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.findIndex'
     package: '@azure/batch'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -360,7 +404,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: NodeFile, index: number, array: NodeFile[]) => void, any)'
-    uid: '@azure/batch.NodeFileListResult.forEach'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.forEach'
     package: '@azure/batch'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -383,7 +427,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(NodeFile, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.includes'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.includes'
     package: '@azure/batch'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -397,7 +441,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/batch.NodeFile" />
+          type: <xref uid="@azure/batch.models.index.d.NodeFile" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -408,7 +452,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(NodeFile, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.indexOf'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.indexOf'
     package: '@azure/batch'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -420,7 +464,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/batch.NodeFile" />
+          type: <xref uid="@azure/batch.models.index.d.NodeFile" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -431,7 +475,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/batch.NodeFileListResult.join'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.join'
     package: '@azure/batch'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -452,7 +496,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/batch.NodeFileListResult.keys'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.keys'
     package: '@azure/batch'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -464,7 +508,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(NodeFile, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.lastIndexOf'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.lastIndexOf'
     package: '@azure/batch'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -476,7 +520,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/batch.NodeFile" />
+          type: <xref uid="@azure/batch.models.index.d.NodeFile" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -487,7 +531,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: NodeFile, index: number, array: NodeFile[]) => U, any)'
-    uid: '@azure/batch.NodeFileListResult.map'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.map'
     package: '@azure/batch'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -515,7 +559,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/batch.NodeFileListResult.pop'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.pop'
     package: '@azure/batch'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -524,10 +568,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/batch.NodeFile" /> | undefined
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" /> | undefined
         description: ''
   - name: 'push(NodeFile[])'
-    uid: '@azure/batch.NodeFileListResult.push'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.push'
     package: '@azure/batch'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -537,7 +581,7 @@ methods:
       content: 'function push(items: NodeFile[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/batch.NodeFile" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
           description: |
             New elements of the Array.
       return:
@@ -546,7 +590,7 @@ methods:
   - name: >-
       reduce((previousValue: NodeFile, currentValue: NodeFile, currentIndex:
       number, array: NodeFile[]) => NodeFile)
-    uid: '@azure/batch.NodeFileListResult.reduce'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reduce'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -569,12 +613,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/batch.NodeFile" />
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" />
         description: ''
   - name: >-
       reduce((previousValue: NodeFile, currentValue: NodeFile, currentIndex:
       number, array: NodeFile[]) => NodeFile, NodeFile)
-    uid: '@azure/batch.NodeFileListResult.reduce_1'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reduce_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -592,15 +636,15 @@ methods:
             number, array: NodeFile[]) =&gt; NodeFile
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/batch.NodeFile" />
+          type: <xref uid="@azure/batch.models.index.d.NodeFile" />
           description: ''
       return:
-        type: <xref uid="@azure/batch.NodeFile" />
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: NodeFile, currentIndex: number,
       array: NodeFile[]) => U, U)
-    uid: '@azure/batch.NodeFileListResult.reduce_2'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reduce_2'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -635,7 +679,7 @@ methods:
   - name: >-
       reduceRight((previousValue: NodeFile, currentValue: NodeFile,
       currentIndex: number, array: NodeFile[]) => NodeFile)
-    uid: '@azure/batch.NodeFileListResult.reduceRight'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reduceRight'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -659,12 +703,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/batch.NodeFile" />
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" />
         description: ''
   - name: >-
       reduceRight((previousValue: NodeFile, currentValue: NodeFile,
       currentIndex: number, array: NodeFile[]) => NodeFile, NodeFile)
-    uid: '@azure/batch.NodeFileListResult.reduceRight_1'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reduceRight_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -682,15 +726,15 @@ methods:
             number, array: NodeFile[]) =&gt; NodeFile
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/batch.NodeFile" />
+          type: <xref uid="@azure/batch.models.index.d.NodeFile" />
           description: ''
       return:
-        type: <xref uid="@azure/batch.NodeFile" />
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: NodeFile, currentIndex:
       number, array: NodeFile[]) => U, U)
-    uid: '@azure/batch.NodeFileListResult.reduceRight_2'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reduceRight_2'
     package: '@azure/batch'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -724,7 +768,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/batch.NodeFileListResult.reverse'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.reverse'
     package: '@azure/batch'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -733,10 +777,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/batch.NodeFileListResult.shift'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.shift'
     package: '@azure/batch'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -745,10 +789,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/batch.NodeFile" /> | undefined
+        type: <xref uid="@azure/batch.models.index.d.NodeFile" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.slice'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.slice'
     package: '@azure/batch'
     summary: Returns a section of an array.
     remarks: ''
@@ -762,13 +806,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
   - name: 'some((value: NodeFile, index: number, array: NodeFile[]) => unknown, any)'
-    uid: '@azure/batch.NodeFileListResult.some'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.some'
     package: '@azure/batch'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -778,26 +823,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: NodeFile, index: number, array:
+        function some(predicate: (value: NodeFile, index: number, array:
         NodeFile[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: NodeFile, index: number, array: NodeFile[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: NodeFile, b: NodeFile) => number)'
-    uid: '@azure/batch.NodeFileListResult.sort'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.sort'
     package: '@azure/batch'
     summary: Sorts an array.
     remarks: ''
@@ -811,14 +861,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: NodeFile, b: NodeFile) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, NodeFile[])'
-    uid: '@azure/batch.NodeFileListResult.splice_1'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.splice_1'
     package: '@azure/batch'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -838,14 +899,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/batch.NodeFile" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/batch.NodeFileListResult.splice'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.splice'
     package: '@azure/batch'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -866,10 +927,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/batch.NodeFile" />[]'
+        type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/batch.NodeFileListResult.toLocaleString'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.toLocaleString'
     package: '@azure/batch'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -883,7 +944,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/batch.NodeFileListResult.toString'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.toString'
     package: '@azure/batch'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -895,7 +956,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(NodeFile[])'
-    uid: '@azure/batch.NodeFileListResult.unshift'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.unshift'
     package: '@azure/batch'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -905,14 +966,14 @@ methods:
       content: 'function unshift(items: NodeFile[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/batch.NodeFile" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.NodeFile" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/batch.NodeFileListResult.values'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.values'
     package: '@azure/batch'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -921,6 +982,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/batch.NodeFile" />&gt;
+        type: >-
+          IterableIterator&lt;<xref uid="@azure/batch.models.index.d.NodeFile"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/batch.NodeFile" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.[Symbol.iterator]'
+    package: '@azure/batch'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref uid="@azure/batch.models.index.d.NodeFile"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/batch.models.index.d.NodeFileListResult.[Symbol.unscopables]'
+    package: '@azure/batch'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/batch.models.index.d.ApplicationListResult.Array"
+  />&lt;<xref uid="@azure/batch.models.index.d.NodeFile" />&gt;

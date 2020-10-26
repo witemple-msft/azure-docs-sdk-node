@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: CheckpointStore
-uid: '@azure/event-hubs.CheckpointStore'
+uid: '@azure/event-hubs.event-hubs.d.CheckpointStore'
 package: '@azure/event-hubs'
 summary: >
   A checkpoint store stores and retrieves partition ownership information and
@@ -31,7 +31,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: 'claimOwnership(PartitionOwnership[])'
-    uid: '@azure/event-hubs.CheckpointStore.claimOwnership'
+    uid: '@azure/event-hubs.event-hubs.d.CheckpointStore.claimOwnership'
     package: '@azure/event-hubs'
     summary: >-
       Called to claim ownership of a list of partitions. This will return the
@@ -45,13 +45,15 @@ methods:
       content: 'function claimOwnership(partitionOwnership: PartitionOwnership[])'
       parameters:
         - id: partitionOwnership
-          type: '<xref uid="@azure/event-hubs.PartitionOwnership" />[]'
+          type: '<xref uid="@azure/event-hubs.event-hubs.d.PartitionOwnership" />[]'
           description: The list of partition ownership this instance is claiming to own.
       return:
-        type: 'Promise&lt;<xref uid="@azure/event-hubs.PartitionOwnership" />[]&gt;'
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/event-hubs.event-hubs.d.PartitionOwnership" />[]&gt;
         description: A list of partitions this instance successfully claimed ownership.
   - name: 'listCheckpoints(string, string, string)'
-    uid: '@azure/event-hubs.CheckpointStore.listCheckpoints'
+    uid: '@azure/event-hubs.event-hubs.d.CheckpointStore.listCheckpoints'
     package: '@azure/event-hubs'
     summary: >-
       Lists all the checkpoints in a data store for a given namespace, eventhub
@@ -79,10 +81,12 @@ methods:
           description: |
             The consumer group name.
       return:
-        type: 'Promise&lt;<xref uid="@azure/event-hubs.Checkpoint" />[]&gt;'
+        type: >-
+          Promise&lt;<xref uid="@azure/event-hubs.event-hubs.d.Checkpoint"
+          />[]&gt;
         description: ''
   - name: 'listOwnership(string, string, string)'
-    uid: '@azure/event-hubs.CheckpointStore.listOwnership'
+    uid: '@azure/event-hubs.event-hubs.d.CheckpointStore.listOwnership'
     package: '@azure/event-hubs'
     summary: >-
       Called to get the list of all existing partition ownership from the
@@ -111,12 +115,14 @@ methods:
           type: string
           description: The consumer group name.
       return:
-        type: 'Promise&lt;<xref uid="@azure/event-hubs.PartitionOwnership" />[]&gt;'
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/event-hubs.event-hubs.d.PartitionOwnership" />[]&gt;
         description: >-
           A list of partition ownership details of all the partitions that
           have/had an owner.
   - name: updateCheckpoint(Checkpoint)
-    uid: '@azure/event-hubs.CheckpointStore.updateCheckpoint'
+    uid: '@azure/event-hubs.event-hubs.d.CheckpointStore.updateCheckpoint'
     package: '@azure/event-hubs'
     summary: Updates the checkpoint in the data store for a partition.
     remarks: ''
@@ -126,7 +132,7 @@ methods:
       content: 'function updateCheckpoint(checkpoint: Checkpoint)'
       parameters:
         - id: checkpoint
-          type: <xref uid="@azure/event-hubs.Checkpoint" />
+          type: <xref uid="@azure/event-hubs.event-hubs.d.Checkpoint" />
           description: |
             The checkpoint.
       return:

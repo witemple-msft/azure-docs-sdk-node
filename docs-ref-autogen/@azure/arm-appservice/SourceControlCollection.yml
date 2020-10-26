@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SourceControlCollection
-uid: '@azure/arm-appservice.SourceControlCollection'
+uid: '@azure/arm-appservice.models.index.d.SourceControlCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: SourceControlCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.SourceControlCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.SourceControlCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.SourceControlCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SourceControl>[])'
-    uid: '@azure/arm-appservice.SourceControlCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appservice.SourceControl"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.SourceControl" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.SourceControlCollection.concat_1'
+  - name: 'concat(SourceControl | ConcatArray<SourceControl>[])'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: SourceControl | ConcatArray<SourceControl>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.SourceControl" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.SourceControl" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.SourceControlCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +147,7 @@ methods:
   - name: >-
       every((value: SourceControl, index: number, array: SourceControl[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +155,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SourceControl, index: number, array:
+        function every(predicate: (value: SourceControl, index: number, array:
         SourceControl[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SourceControl, index: number, array: SourceControl[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SourceControl, index: number, array: SourceControl[]) =>
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SourceControl, index: number,
+        array: SourceControl[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SourceControl, index: number, array: SourceControl[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SourceControl, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +233,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.SourceControl" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +255,7 @@ methods:
   - name: >-
       filter((value: SourceControl, index: number, array: SourceControl[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +265,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SourceControl, index: number, array:
+        function filter(predicate: (value: SourceControl, index: number, array:
         SourceControl[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SourceControl, index: number, array: SourceControl[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
   - name: >-
       filter<S>((value: SourceControl, index: number, array: SourceControl[]) =>
-      boolean, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.filter'
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +297,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SourceControl, index: number,
-        array: SourceControl[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SourceControl, index: number,
+        array: SourceControl[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SourceControl, index: number, array: SourceControl[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +319,7 @@ methods:
   - name: >-
       find((value: SourceControl, index: number, obj: SourceControl[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -295,12 +339,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SourceControl" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SourceControl, index: number, obj:
-      SourceControl[]) => boolean, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.find'
+      SourceControl[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +359,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SourceControl, index:
-        number, obj: SourceControl[]) => boolean, thisArg?: any)
+        number, obj: SourceControl[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SourceControl, index: number, obj:
-            SourceControl[]) =&gt; boolean
+            SourceControl[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +387,7 @@ methods:
   - name: >-
       findIndex((value: SourceControl, index: number, obj: SourceControl[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +428,7 @@ methods:
   - name: >-
       forEach((value: SourceControl, index: number, array: SourceControl[]) =>
       void, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +453,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SourceControl, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +467,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.SourceControl" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +478,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SourceControl, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +490,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.SourceControl" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +501,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.SourceControlCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +522,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.SourceControlCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +534,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SourceControl, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +546,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.SourceControl" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +559,7 @@ methods:
   - name: >-
       map<U>((value: SourceControl, index: number, array: SourceControl[]) => U,
       any)
-    uid: '@azure/arm-appservice.SourceControlCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +589,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.SourceControlCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +598,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SourceControl" /> |
+          undefined
         description: ''
   - name: 'push(SourceControl[])'
-    uid: '@azure/arm-appservice.SourceControlCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +613,7 @@ methods:
       content: 'function push(items: SourceControl[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
           description: |
             New elements of the Array.
       return:
@@ -574,7 +622,7 @@ methods:
   - name: >-
       reduce((previousValue: SourceControl, currentValue: SourceControl,
       currentIndex: number, array: SourceControl[]) => SourceControl)
-    uid: '@azure/arm-appservice.SourceControlCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -598,13 +646,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
         description: ''
   - name: >-
       reduce((previousValue: SourceControl, currentValue: SourceControl,
       currentIndex: number, array: SourceControl[]) => SourceControl,
       SourceControl)
-    uid: '@azure/arm-appservice.SourceControlCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -622,15 +670,15 @@ methods:
             currentIndex: number, array: SourceControl[]) =&gt; SourceControl
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.SourceControl" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SourceControl, currentIndex:
       number, array: SourceControl[]) => U, U)
-    uid: '@azure/arm-appservice.SourceControlCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -665,7 +713,7 @@ methods:
   - name: >-
       reduceRight((previousValue: SourceControl, currentValue: SourceControl,
       currentIndex: number, array: SourceControl[]) => SourceControl)
-    uid: '@azure/arm-appservice.SourceControlCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -690,13 +738,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
         description: ''
   - name: >-
       reduceRight((previousValue: SourceControl, currentValue: SourceControl,
       currentIndex: number, array: SourceControl[]) => SourceControl,
       SourceControl)
-    uid: '@azure/arm-appservice.SourceControlCollection.reduceRight_1'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reduceRight_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -714,15 +762,15 @@ methods:
             currentIndex: number, array: SourceControl[]) =&gt; SourceControl
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.SourceControl" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.SourceControl" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SourceControl,
       currentIndex: number, array: SourceControl[]) => U, U)
-    uid: '@azure/arm-appservice.SourceControlCollection.reduceRight_2'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reduceRight_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -756,7 +804,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.SourceControlCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -765,10 +813,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.SourceControlCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -777,10 +825,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.SourceControl" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.SourceControl" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -794,15 +844,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
   - name: >-
       some((value: SourceControl, index: number, array: SourceControl[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.SourceControlCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -812,28 +863,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SourceControl, index: number, array:
+        function some(predicate: (value: SourceControl, index: number, array:
         SourceControl[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SourceControl, index: number, array: SourceControl[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: SourceControl, b: SourceControl) => number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -847,14 +903,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: SourceControl, b: SourceControl) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SourceControl[])'
-    uid: '@azure/arm-appservice.SourceControlCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -876,14 +943,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.SourceControlCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -904,10 +971,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.SourceControlCollection.toLocaleString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SourceControlCollection.toLocaleString
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -921,7 +989,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.SourceControlCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -933,7 +1001,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SourceControl[])'
-    uid: '@azure/arm-appservice.SourceControlCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -943,14 +1011,14 @@ methods:
       content: 'function unshift(items: SourceControl[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.SourceControl" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.SourceControlCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.SourceControlCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -960,7 +1028,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-appservice.SourceControl"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.SourceControl" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.SourceControl" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SourceControlCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.SourceControl" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SourceControlCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.SourceControl" />&gt;

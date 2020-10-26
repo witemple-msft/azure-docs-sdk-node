@@ -3,412 +3,69 @@ uid: azure-iot-common
 name: azure-iot-common
 summary: ''
 type: package
-enums:
-  - azure-iot-common.AuthenticationType
 interfaces:
-  - azure-iot-common.AuthenticationProvider
-  - azure-iot-common.TransportConfig
-  - azure-iot-common.X509
-  - azure-iot-common.RetryPolicy
-functions:
-  - name: anHourFromNow()
-    uid: azure-iot-common.anHourFromNow
-    package: azure-iot-common
-    summary: |-
-      Returns the seconds elapsed since 1 January 1970 00:00:00 UTC until one
-      hour from now.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function anHourFromNow()
-      return:
-        type: number
-        description: ''
-  - name: encodeUriComponentStrict(string)
-    uid: azure-iot-common.encodeUriComponentStrict
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function encodeUriComponentStrict(str: string)'
-      parameters:
-        - id: str
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'hmacHash(string, string)'
-    uid: azure-iot-common.hmacHash
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function hmacHash(password: string, stringToSign: string)'
-      parameters:
-        - id: password
-          type: string
-          description: ''
-        - id: stringToSign
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'stringToSign(string, string)'
-    uid: azure-iot-common.stringToSign
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function stringToSign(resourceUri: string, expiry: string)'
-      parameters:
-        - id: resourceUri
-          type: string
-          description: ''
-        - id: expiry
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'deviceBlobUploadNotificationPath(string, string)'
-    uid: azure-iot-common.deviceBlobUploadNotificationPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function deviceBlobUploadNotificationPath(deviceId: string,
-        correlationId: string)
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: deviceBlobUploadPath(string)
-    uid: azure-iot-common.deviceBlobUploadPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function deviceBlobUploadPath(deviceId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: deviceEventPath(string)
-    uid: azure-iot-common.deviceEventPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function deviceEventPath(deviceId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'deviceFeedbackPath(string, string)'
-    uid: azure-iot-common.deviceFeedbackPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function deviceFeedbackPath(deviceId: string, lockToken: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: lockToken
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: deviceMessagePath(string)
-    uid: azure-iot-common.deviceMessagePath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function deviceMessagePath(deviceId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: deviceMethodPath(string)
-    uid: azure-iot-common.deviceMethodPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function deviceMethodPath(deviceId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: devicePath(string)
-    uid: azure-iot-common.devicePath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function devicePath(deviceId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: deviceTwinPath(string)
-    uid: azure-iot-common.deviceTwinPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function deviceTwinPath(deviceId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'moduleEventPath(string, string)'
-    uid: azure-iot-common.moduleEventPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function moduleEventPath(deviceId: string, moduleId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: moduleId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'moduleInputMessagePath(string, string)'
-    uid: azure-iot-common.moduleInputMessagePath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function moduleInputMessagePath(deviceId: string, moduleId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: moduleId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'moduleMessagePath(string, string)'
-    uid: azure-iot-common.moduleMessagePath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function moduleMessagePath(deviceId: string, moduleId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: moduleId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'moduleMethodPath(string, string)'
-    uid: azure-iot-common.moduleMethodPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function moduleMethodPath(deviceId: string, moduleId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: moduleId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'modulePath(string, string)'
-    uid: azure-iot-common.modulePath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function modulePath(deviceId: string, moduleId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: moduleId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: 'moduleTwinPath(string, string)'
-    uid: azure-iot-common.moduleTwinPath
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function moduleTwinPath(deviceId: string, moduleId: string)'
-      parameters:
-        - id: deviceId
-          type: string
-          description: ''
-        - id: moduleId
-          type: string
-          description: ''
-      return:
-        type: string
-        description: ''
-  - name: versionQueryString()
-    uid: azure-iot-common.versionQueryString
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function versionQueryString()
-      return:
-        type: string
-        description: ''
-  - name: versionQueryStringLimitedAvailability()
-    uid: azure-iot-common.versionQueryStringLimitedAvailability
-    package: azure-iot-common
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function versionQueryStringLimitedAvailability()
-      return:
-        type: string
-        description: ''
+  - azure-iot-common.authentication_provider.d.AuthenticationProvider
+  - azure-iot-common.authorization.d.TransportConfig
+  - azure-iot-common.authorization.d.X509
+  - azure-iot-common.retry_policy.d.RetryPolicy
+enums:
+  - azure-iot-common.authentication_provider.d.AuthenticationType
 classes:
-  - azure-iot-common.ConnectionString
-  - azure-iot-common.ArgumentError
-  - azure-iot-common.ArgumentOutOfRangeError
-  - azure-iot-common.BadDeviceResponseError
-  - azure-iot-common.CloudToDeviceDetachedError
-  - azure-iot-common.DeviceAlreadyExistsError
-  - azure-iot-common.DeviceMaximumQueueDepthExceededError
-  - azure-iot-common.DeviceMessageLockLostError
-  - azure-iot-common.DeviceMethodsDetachedError
-  - azure-iot-common.DeviceNotFoundError
-  - azure-iot-common.DeviceRegistrationFailedError
-  - azure-iot-common.DeviceTimeoutError
-  - azure-iot-common.FormatError
-  - azure-iot-common.GatewayTimeoutError
-  - azure-iot-common.InternalServerError
-  - azure-iot-common.InvalidEtagError
-  - azure-iot-common.InvalidOperationError
-  - azure-iot-common.IoTHubSuspendedError
-  - azure-iot-common.IotHubNotFoundError
-  - azure-iot-common.IotHubQuotaExceededError
-  - azure-iot-common.JobNotFoundError
-  - azure-iot-common.MessageTooLargeError
-  - azure-iot-common.NotConnectedError
-  - azure-iot-common.NotImplementedError
-  - azure-iot-common.OperationCancelledError
-  - azure-iot-common.PreconditionFailedError
-  - azure-iot-common.SecurityDeviceError
-  - azure-iot-common.ServiceUnavailableError
-  - azure-iot-common.ThrottlingError
-  - azure-iot-common.TimeoutError
-  - azure-iot-common.TooManyDevicesError
-  - azure-iot-common.TwinDetachedError
-  - azure-iot-common.TwinRequestError
-  - azure-iot-common.UnauthorizedError
-  - azure-iot-common.Message
-  - azure-iot-common.Properties
-  - azure-iot-common.Connected
-  - azure-iot-common.Disconnected
-  - azure-iot-common.MessageAbandoned
-  - azure-iot-common.MessageCompleted
-  - azure-iot-common.MessageEnqueued
-  - azure-iot-common.MessageRejected
-  - azure-iot-common.SharedAccessSignatureUpdated
-  - azure-iot-common.TransportConfigured
-  - azure-iot-common.RetryOperation
-  - azure-iot-common.ExponentialBackOffWithJitter
-  - azure-iot-common.ExponentialBackoffWithJitterParameters
-  - azure-iot-common.NoRetry
-  - azure-iot-common.SharedAccessSignature
+  - azure-iot-common.connection_string.d.ConnectionString
+  - azure-iot-common.errors.d.ArgumentError
+  - azure-iot-common.errors.d.ArgumentOutOfRangeError
+  - azure-iot-common.errors.d.BadDeviceResponseError
+  - azure-iot-common.errors.d.CloudToDeviceDetachedError
+  - azure-iot-common.errors.d.DeviceAlreadyExistsError
+  - azure-iot-common.errors.d.DeviceMaximumQueueDepthExceededError
+  - azure-iot-common.errors.d.DeviceMessageLockLostError
+  - azure-iot-common.errors.d.DeviceMethodsDetachedError
+  - azure-iot-common.errors.d.DeviceNotFoundError
+  - azure-iot-common.errors.d.DeviceRegistrationFailedError
+  - azure-iot-common.errors.d.DeviceTimeoutError
+  - azure-iot-common.errors.d.FormatError
+  - azure-iot-common.errors.d.GatewayTimeoutError
+  - azure-iot-common.errors.d.InternalServerError
+  - azure-iot-common.errors.d.InvalidEtagError
+  - azure-iot-common.errors.d.InvalidOperationError
+  - azure-iot-common.errors.d.IotHubNotFoundError
+  - azure-iot-common.errors.d.IotHubQuotaExceededError
+  - azure-iot-common.errors.d.IoTHubSuspendedError
+  - azure-iot-common.errors.d.JobNotFoundError
+  - azure-iot-common.errors.d.MessageTooLargeError
+  - azure-iot-common.errors.d.NotConnectedError
+  - azure-iot-common.errors.d.NotImplementedError
+  - azure-iot-common.errors.d.OperationCancelledError
+  - azure-iot-common.errors.d.PreconditionFailedError
+  - azure-iot-common.errors.d.SecurityDeviceError
+  - azure-iot-common.errors.d.ServiceUnavailableError
+  - azure-iot-common.errors.d.ThrottlingError
+  - azure-iot-common.errors.d.TimeoutError
+  - azure-iot-common.errors.d.TooManyDevicesError
+  - azure-iot-common.errors.d.TwinDetachedError
+  - azure-iot-common.errors.d.TwinRequestError
+  - azure-iot-common.errors.d.UnauthorizedError
+  - azure-iot-common.message.d.Message
+  - azure-iot-common.properties.d.Properties
+  - azure-iot-common.results.d.Connected
+  - azure-iot-common.results.d.Disconnected
+  - azure-iot-common.results.d.MessageAbandoned
+  - azure-iot-common.results.d.MessageCompleted
+  - azure-iot-common.results.d.MessageEnqueued
+  - azure-iot-common.results.d.MessageRejected
+  - azure-iot-common.results.d.SharedAccessSignatureUpdated
+  - azure-iot-common.results.d.TransportConfigured
+  - azure-iot-common.retry_operation.d.RetryOperation
+  - azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter
+  - azure-iot-common.retry_policy.d.ExponentialBackoffWithJitterParameters
+  - azure-iot-common.retry_policy.d.NoRetry
+  - azure-iot-common.shared_access_signature.d.SharedAccessSignature
 typeAliases:
-  - azure-iot-common.Message.BufferConvertible
-  - azure-iot-common.Callback
-  - azure-iot-common.DoubleValueCallback
-  - azure-iot-common.ErrorCallback
-  - azure-iot-common.HttpResponseCallback
-  - azure-iot-common.NoErrorCallback
-  - azure-iot-common.TripleValueCallback
-  - azure-iot-common.ResultWithHttpResponse
+  - azure-iot-common.message.d.Message.BufferConvertible
+  - azure-iot-common.promise_utils.d.Callback
+  - azure-iot-common.promise_utils.d.DoubleValueCallback
+  - azure-iot-common.promise_utils.d.ErrorCallback
+  - azure-iot-common.promise_utils.d.HttpResponseCallback
+  - azure-iot-common.promise_utils.d.NoErrorCallback
+  - azure-iot-common.promise_utils.d.TripleValueCallback
+  - azure-iot-common.results.d.ResultWithHttpResponse

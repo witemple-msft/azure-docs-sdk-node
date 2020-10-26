@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: InteractionListResult
-uid: '@azure/arm-customerinsights.InteractionListResult'
+uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult'
 package: '@azure/arm-customerinsights'
 summary: ''
 fullName: InteractionListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-customerinsights.InteractionListResult.Array'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.Array'
     package: '@azure/arm-customerinsights'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-customerinsights.InteractionListResult.length'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.length'
     package: '@azure/arm-customerinsights'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-customerinsights.InteractionListResult.nextLink'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.nextLink'
     package: '@azure/arm-customerinsights'
     summary: ''
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<InteractionResourceFormat>[])'
-    uid: '@azure/arm-customerinsights.InteractionListResult.concat'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.concat'
     package: '@azure/arm-customerinsights'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +64,48 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-customerinsights.InteractionResourceFormat" />&gt;[]
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-customerinsights.InteractionListResult.concat_1'
+  - name: >-
+      concat(InteractionResourceFormat |
+      ConcatArray<InteractionResourceFormat>[])
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.concat_1'
     package: '@azure/arm-customerinsights'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: InteractionResourceFormat |
+        ConcatArray<InteractionResourceFormat>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.copyWithin'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.copyWithin
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +143,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-customerinsights.InteractionListResult.entries'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.entries'
     package: '@azure/arm-customerinsights'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +157,7 @@ methods:
   - name: >-
       every((value: InteractionResourceFormat, index: number, array:
       InteractionResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.every'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.every_1'
     package: '@azure/arm-customerinsights'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +165,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: InteractionResourceFormat, index:
+        function every(predicate: (value: InteractionResourceFormat, index:
         number, array: InteractionResourceFormat[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: InteractionResourceFormat, index: number, array:
             InteractionResourceFormat[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: InteractionResourceFormat, index: number, array:
+      InteractionResourceFormat[]) => value, any)
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.every'
+    package: '@azure/arm-customerinsights'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: InteractionResourceFormat, index:
+        number, array: InteractionResourceFormat[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: InteractionResourceFormat, index: number, array:
+            InteractionResourceFormat[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(InteractionResourceFormat, undefined | number, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.fill'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.fill'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +243,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +268,7 @@ methods:
   - name: >-
       filter((value: InteractionResourceFormat, index: number, array:
       InteractionResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.filter_1'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.filter_1'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +278,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: InteractionResourceFormat, index:
+        function filter(predicate: (value: InteractionResourceFormat, index:
         number, array: InteractionResourceFormat[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: InteractionResourceFormat, index: number, array:
             InteractionResourceFormat[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: InteractionResourceFormat, index: number, array:
-      InteractionResourceFormat[]) => boolean, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.filter'
+      InteractionResourceFormat[]) => value, any)
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.filter'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +313,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: InteractionResourceFormat, index:
-        number, array: InteractionResourceFormat[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: InteractionResourceFormat, index:
+        number, array: InteractionResourceFormat[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: InteractionResourceFormat, index: number, array:
-            InteractionResourceFormat[]) =&gt; boolean
+            InteractionResourceFormat[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +335,7 @@ methods:
   - name: >-
       find((value: InteractionResourceFormat, index: number, obj:
       InteractionResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.find_1'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.find_1'
     package: '@azure/arm-customerinsights'
     summary: ''
     remarks: ''
@@ -292,13 +356,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" /> |
-          undefined
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: InteractionResourceFormat, index: number, obj:
-      InteractionResourceFormat[]) => boolean, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.find'
+      InteractionResourceFormat[]) => value, any)
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.find'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -312,12 +377,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         InteractionResourceFormat, index: number, obj:
-        InteractionResourceFormat[]) => boolean, thisArg?: any)
+        InteractionResourceFormat[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: InteractionResourceFormat, index: number, obj:
-            InteractionResourceFormat[]) =&gt; boolean
+            InteractionResourceFormat[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -340,7 +405,7 @@ methods:
   - name: >-
       findIndex((value: InteractionResourceFormat, index: number, obj:
       InteractionResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.findIndex'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.findIndex'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -381,7 +446,7 @@ methods:
   - name: >-
       forEach((value: InteractionResourceFormat, index: number, array:
       InteractionResourceFormat[]) => void, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.forEach'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.forEach'
     package: '@azure/arm-customerinsights'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -406,7 +471,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(InteractionResourceFormat, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.includes'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.includes'
     package: '@azure/arm-customerinsights'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -420,7 +485,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -431,7 +499,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(InteractionResourceFormat, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.indexOf'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.indexOf'
     package: '@azure/arm-customerinsights'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -443,7 +511,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -454,7 +525,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-customerinsights.InteractionListResult.join'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.join'
     package: '@azure/arm-customerinsights'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -475,7 +546,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-customerinsights.InteractionListResult.keys'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.keys'
     package: '@azure/arm-customerinsights'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -487,7 +558,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(InteractionResourceFormat, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.lastIndexOf
     package: '@azure/arm-customerinsights'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -499,7 +571,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -512,7 +587,7 @@ methods:
   - name: >-
       map<U>((value: InteractionResourceFormat, index: number, array:
       InteractionResourceFormat[]) => U, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.map'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.map'
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -542,7 +617,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-customerinsights.InteractionListResult.pop'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.pop'
     package: '@azure/arm-customerinsights'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,11 +627,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" /> |
-          undefined
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          /> | undefined
         description: ''
   - name: 'push(InteractionResourceFormat[])'
-    uid: '@azure/arm-customerinsights.InteractionListResult.push'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.push'
     package: '@azure/arm-customerinsights'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -567,7 +643,8 @@ methods:
       parameters:
         - id: items
           type: >-
-            <xref uid="@azure/arm-customerinsights.InteractionResourceFormat"
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
             />[]
           description: |
             New elements of the Array.
@@ -578,7 +655,7 @@ methods:
       reduce((previousValue: InteractionResourceFormat, currentValue:
       InteractionResourceFormat, currentIndex: number, array:
       InteractionResourceFormat[]) => InteractionResourceFormat)
-    uid: '@azure/arm-customerinsights.InteractionListResult.reduce'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.reduce'
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -603,14 +680,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />
         description: ''
   - name: >-
       reduce((previousValue: InteractionResourceFormat, currentValue:
       InteractionResourceFormat, currentIndex: number, array:
       InteractionResourceFormat[]) => InteractionResourceFormat,
       InteractionResourceFormat)
-    uid: '@azure/arm-customerinsights.InteractionListResult.reduce_1'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.reduce_1'
     package: '@azure/arm-customerinsights'
     summary: ''
     remarks: ''
@@ -630,15 +710,21 @@ methods:
             InteractionResourceFormat[]) =&gt; InteractionResourceFormat
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: InteractionResourceFormat,
       currentIndex: number, array: InteractionResourceFormat[]) => U, U)
-    uid: '@azure/arm-customerinsights.InteractionListResult.reduce_2'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.reduce_2'
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -674,7 +760,8 @@ methods:
       reduceRight((previousValue: InteractionResourceFormat, currentValue:
       InteractionResourceFormat, currentIndex: number, array:
       InteractionResourceFormat[]) => InteractionResourceFormat)
-    uid: '@azure/arm-customerinsights.InteractionListResult.reduceRight'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.reduceRight
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -701,14 +788,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: InteractionResourceFormat, currentValue:
       InteractionResourceFormat, currentIndex: number, array:
       InteractionResourceFormat[]) => InteractionResourceFormat,
       InteractionResourceFormat)
-    uid: '@azure/arm-customerinsights.InteractionListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.reduceRight_1
     package: '@azure/arm-customerinsights'
     summary: ''
     remarks: ''
@@ -728,15 +819,22 @@ methods:
             InteractionResourceFormat[]) =&gt; InteractionResourceFormat
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: InteractionResourceFormat,
       currentIndex: number, array: InteractionResourceFormat[]) => U, U)
-    uid: '@azure/arm-customerinsights.InteractionListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.reduceRight_2
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -770,7 +868,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-customerinsights.InteractionListResult.reverse'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.reverse'
     package: '@azure/arm-customerinsights'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -779,10 +877,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-customerinsights.InteractionListResult.shift'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.shift'
     package: '@azure/arm-customerinsights'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -792,11 +893,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.InteractionResourceFormat" /> |
-          undefined
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.slice'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.slice'
     package: '@azure/arm-customerinsights'
     summary: Returns a section of an array.
     remarks: ''
@@ -810,15 +912,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
   - name: >-
       some((value: InteractionResourceFormat, index: number, array:
       InteractionResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.InteractionListResult.some'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.some'
     package: '@azure/arm-customerinsights'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -828,30 +934,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: InteractionResourceFormat, index:
+        function some(predicate: (value: InteractionResourceFormat, index:
         number, array: InteractionResourceFormat[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: InteractionResourceFormat, index: number, array:
             InteractionResourceFormat[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: InteractionResourceFormat, b:
       InteractionResourceFormat) => number)
-    uid: '@azure/arm-customerinsights.InteractionListResult.sort'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.sort'
     package: '@azure/arm-customerinsights'
     summary: Sorts an array.
     remarks: ''
@@ -867,14 +978,25 @@ methods:
             undefined | (a: InteractionResourceFormat, b:
             InteractionResourceFormat) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, InteractionResourceFormat[])'
-    uid: '@azure/arm-customerinsights.InteractionListResult.splice_1'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.splice_1'
     package: '@azure/arm-customerinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -897,15 +1019,19 @@ methods:
           description: The number of elements to remove.
         - id: items
           type: >-
-            <xref uid="@azure/arm-customerinsights.InteractionResourceFormat"
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-customerinsights.InteractionListResult.splice'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.splice'
     package: '@azure/arm-customerinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -926,10 +1052,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-customerinsights.InteractionResourceFormat" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-customerinsights.InteractionListResult.toLocaleString'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.toLocaleString
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -943,7 +1073,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-customerinsights.InteractionListResult.toString'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.toString'
     package: '@azure/arm-customerinsights'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -955,7 +1085,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(InteractionResourceFormat[])'
-    uid: '@azure/arm-customerinsights.InteractionListResult.unshift'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.unshift'
     package: '@azure/arm-customerinsights'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -966,7 +1096,8 @@ methods:
       parameters:
         - id: items
           type: >-
-            <xref uid="@azure/arm-customerinsights.InteractionResourceFormat"
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -974,7 +1105,7 @@ methods:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-customerinsights.InteractionListResult.values'
+    uid: '@azure/arm-customerinsights.models.index.d.InteractionListResult.values'
     package: '@azure/arm-customerinsights'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -985,8 +1116,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-customerinsights.InteractionResourceFormat" />&gt;
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />&gt;
+        description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.[Symbol.iterator]
+    package: '@azure/arm-customerinsights'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.InteractionListResult.[Symbol.unscopables]
+    package: '@azure/arm-customerinsights'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
         description: ''
 extends: >-
-  Array&lt;<xref uid="@azure/arm-customerinsights.InteractionResourceFormat"
+  <xref
+  uid="@azure/arm-customerinsights.models.index.d.OperationListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-customerinsights.models.index.d.InteractionResourceFormat"
   />&gt;

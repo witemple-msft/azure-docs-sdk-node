@@ -4,1118 +4,1268 @@ name: '@azure/servicefabric'
 summary: ''
 type: package
 interfaces:
-  - '@azure/servicefabric.AadMetadata'
-  - '@azure/servicefabric.AadMetadataObject'
-  - '@azure/servicefabric.AddRemoveIncrementalNamedPartitionScalingMechanism'
-  - '@azure/servicefabric.AddRemoveReplicaScalingMechanism'
-  - '@azure/servicefabric.AnalysisEventMetadata'
-  - '@azure/servicefabric.ApplicationBackupConfigurationInfo'
-  - '@azure/servicefabric.ApplicationBackupEntity'
-  - '@azure/servicefabric.ApplicationCapacityDescription'
-  - '@azure/servicefabric.ApplicationContainerInstanceExitedEvent'
-  - '@azure/servicefabric.ApplicationCreatedEvent'
-  - '@azure/servicefabric.ApplicationDeletedEvent'
-  - '@azure/servicefabric.ApplicationDescription'
-  - '@azure/servicefabric.ApplicationEvent'
-  - '@azure/servicefabric.ApplicationHealth'
-  - '@azure/servicefabric.ApplicationHealthEvaluation'
-  - '@azure/servicefabric.ApplicationHealthPolicies'
-  - '@azure/servicefabric.ApplicationHealthPolicy'
-  - '@azure/servicefabric.ApplicationHealthPolicyMapItem'
-  - '@azure/servicefabric.ApplicationHealthReportExpiredEvent'
-  - '@azure/servicefabric.ApplicationHealthState'
-  - '@azure/servicefabric.ApplicationHealthStateChunk'
-  - '@azure/servicefabric.ApplicationHealthStateChunkList'
-  - '@azure/servicefabric.ApplicationHealthStateFilter'
-  - '@azure/servicefabric.ApplicationInfo'
-  - '@azure/servicefabric.ApplicationLoadInfo'
-  - '@azure/servicefabric.ApplicationMetricDescription'
-  - '@azure/servicefabric.ApplicationNameInfo'
-  - '@azure/servicefabric.ApplicationNewHealthReportEvent'
-  - '@azure/servicefabric.ApplicationParameter'
-  - '@azure/servicefabric.ApplicationProcessExitedEvent'
-  - '@azure/servicefabric.ApplicationResourceDescription'
-  - '@azure/servicefabric.ApplicationResourceUpgradeProgressInfo'
-  - '@azure/servicefabric.ApplicationScopedVolume'
-  - '@azure/servicefabric.ApplicationScopedVolumeCreationParameters'
-  - >-
-    @azure/servicefabric.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
-  - '@azure/servicefabric.ApplicationTypeApplicationsHealthEvaluation'
-  - '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem'
-  - '@azure/servicefabric.ApplicationTypeImageStorePath'
-  - '@azure/servicefabric.ApplicationTypeInfo'
-  - '@azure/servicefabric.ApplicationTypeManifest'
-  - '@azure/servicefabric.ApplicationUpgradeCompletedEvent'
-  - '@azure/servicefabric.ApplicationUpgradeDescription'
-  - '@azure/servicefabric.ApplicationUpgradeDomainCompletedEvent'
-  - '@azure/servicefabric.ApplicationUpgradeProgressInfo'
-  - '@azure/servicefabric.ApplicationUpgradeRollbackCompletedEvent'
-  - '@azure/servicefabric.ApplicationUpgradeRollbackStartedEvent'
-  - '@azure/servicefabric.ApplicationUpgradeStartedEvent'
-  - '@azure/servicefabric.ApplicationUpgradeUpdateDescription'
-  - '@azure/servicefabric.ApplicationsHealthEvaluation'
-  - '@azure/servicefabric.AutoScalingMechanism'
-  - '@azure/servicefabric.AutoScalingMetric'
-  - '@azure/servicefabric.AutoScalingPolicy'
-  - '@azure/servicefabric.AutoScalingResourceMetric'
-  - '@azure/servicefabric.AutoScalingTrigger'
-  - '@azure/servicefabric.AverageLoadScalingTrigger'
-  - '@azure/servicefabric.AveragePartitionLoadScalingTrigger'
-  - '@azure/servicefabric.AverageServiceLoadScalingTrigger'
-  - '@azure/servicefabric.AzureBlobBackupStorageDescription'
-  - '@azure/servicefabric.AzureInternalMonitoringPipelineSinkDescription'
-  - '@azure/servicefabric.BackupConfigurationInfo'
-  - '@azure/servicefabric.BackupEntity'
-  - '@azure/servicefabric.BackupInfo'
-  - '@azure/servicefabric.BackupPartitionDescription'
-  - '@azure/servicefabric.BackupPolicyDescription'
-  - '@azure/servicefabric.BackupProgressInfo'
-  - '@azure/servicefabric.BackupScheduleDescription'
-  - '@azure/servicefabric.BackupStorageDescription'
-  - '@azure/servicefabric.BackupSuspensionInfo'
-  - '@azure/servicefabric.BasicRetentionPolicyDescription'
-  - '@azure/servicefabric.BinaryPropertyValue'
-  - '@azure/servicefabric.Chaos'
-  - '@azure/servicefabric.ChaosCodePackageRestartScheduledEvent'
-  - '@azure/servicefabric.ChaosContext'
-  - '@azure/servicefabric.ChaosEvent'
-  - '@azure/servicefabric.ChaosEventWrapper'
-  - '@azure/servicefabric.ChaosEventsSegment'
-  - '@azure/servicefabric.ChaosNodeRestartScheduledEvent'
-  - '@azure/servicefabric.ChaosParameters'
-  - '@azure/servicefabric.ChaosParametersDictionaryItem'
-  - '@azure/servicefabric.ChaosPartitionPrimaryMoveScheduledEvent'
-  - '@azure/servicefabric.ChaosPartitionSecondaryMoveScheduledEvent'
-  - '@azure/servicefabric.ChaosReplicaRemovalScheduledEvent'
-  - '@azure/servicefabric.ChaosReplicaRestartScheduledEvent'
-  - '@azure/servicefabric.ChaosSchedule'
-  - '@azure/servicefabric.ChaosScheduleDescription'
-  - '@azure/servicefabric.ChaosScheduleJob'
-  - '@azure/servicefabric.ChaosScheduleJobActiveDaysOfWeek'
-  - '@azure/servicefabric.ChaosStartedEvent'
-  - '@azure/servicefabric.ChaosStoppedEvent'
-  - '@azure/servicefabric.ChaosTargetFilter'
-  - '@azure/servicefabric.CheckExistsPropertyBatchOperation'
-  - '@azure/servicefabric.CheckSequencePropertyBatchOperation'
-  - '@azure/servicefabric.CheckValuePropertyBatchOperation'
-  - '@azure/servicefabric.ClusterConfiguration'
-  - '@azure/servicefabric.ClusterConfigurationUpgradeDescription'
-  - '@azure/servicefabric.ClusterConfigurationUpgradeStatusInfo'
-  - '@azure/servicefabric.ClusterEvent'
-  - '@azure/servicefabric.ClusterHealth'
-  - '@azure/servicefabric.ClusterHealthChunk'
-  - '@azure/servicefabric.ClusterHealthChunkQueryDescription'
-  - '@azure/servicefabric.ClusterHealthPolicies'
-  - '@azure/servicefabric.ClusterHealthPolicy'
-  - '@azure/servicefabric.ClusterHealthReportExpiredEvent'
-  - '@azure/servicefabric.ClusterLoadInfo'
-  - '@azure/servicefabric.ClusterManifest'
-  - '@azure/servicefabric.ClusterNewHealthReportEvent'
-  - '@azure/servicefabric.ClusterUpgradeCompletedEvent'
-  - '@azure/servicefabric.ClusterUpgradeDescriptionObject'
-  - '@azure/servicefabric.ClusterUpgradeDomainCompletedEvent'
-  - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
-  - '@azure/servicefabric.ClusterUpgradeProgressObject'
-  - '@azure/servicefabric.ClusterUpgradeRollbackCompletedEvent'
-  - '@azure/servicefabric.ClusterUpgradeRollbackStartedEvent'
-  - '@azure/servicefabric.ClusterUpgradeStartedEvent'
-  - '@azure/servicefabric.ClusterVersion'
-  - '@azure/servicefabric.CodePackageEntryPoint'
-  - '@azure/servicefabric.CodePackageEntryPointStatistics'
-  - '@azure/servicefabric.ComposeDeploymentStatusInfo'
-  - '@azure/servicefabric.ComposeDeploymentUpgradeDescription'
-  - '@azure/servicefabric.ComposeDeploymentUpgradeProgressInfo'
-  - '@azure/servicefabric.ConfigParameterOverride'
-  - '@azure/servicefabric.ContainerApiRequestBody'
-  - '@azure/servicefabric.ContainerApiResponse'
-  - '@azure/servicefabric.ContainerApiResult'
-  - '@azure/servicefabric.ContainerCodePackageProperties'
-  - '@azure/servicefabric.ContainerEvent'
-  - '@azure/servicefabric.ContainerInstanceEvent'
-  - '@azure/servicefabric.ContainerInstanceView'
-  - '@azure/servicefabric.ContainerLabel'
-  - '@azure/servicefabric.ContainerLogs'
-  - '@azure/servicefabric.ContainerState'
-  - '@azure/servicefabric.CreateComposeDeploymentDescription'
-  - '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
-  - '@azure/servicefabric.DeactivationIntentDescription'
-  - '@azure/servicefabric.DeletePropertyBatchOperation'
-  - '@azure/servicefabric.DeltaNodesCheckHealthEvaluation'
-  - '@azure/servicefabric.DeployServicePackageToNodeDescription'
-  - '@azure/servicefabric.DeployedApplicationHealth'
-  - '@azure/servicefabric.DeployedApplicationHealthEvaluation'
-  - '@azure/servicefabric.DeployedApplicationHealthReportExpiredEvent'
-  - '@azure/servicefabric.DeployedApplicationHealthState'
-  - '@azure/servicefabric.DeployedApplicationHealthStateChunk'
-  - '@azure/servicefabric.DeployedApplicationHealthStateChunkList'
-  - '@azure/servicefabric.DeployedApplicationHealthStateFilter'
-  - '@azure/servicefabric.DeployedApplicationInfo'
-  - '@azure/servicefabric.DeployedApplicationNewHealthReportEvent'
-  - '@azure/servicefabric.DeployedApplicationsHealthEvaluation'
-  - '@azure/servicefabric.DeployedCodePackageInfo'
-  - '@azure/servicefabric.DeployedServicePackageHealth'
-  - '@azure/servicefabric.DeployedServicePackageHealthEvaluation'
-  - '@azure/servicefabric.DeployedServicePackageHealthReportExpiredEvent'
-  - '@azure/servicefabric.DeployedServicePackageHealthState'
-  - '@azure/servicefabric.DeployedServicePackageHealthStateChunk'
-  - '@azure/servicefabric.DeployedServicePackageHealthStateChunkList'
-  - '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
-  - '@azure/servicefabric.DeployedServicePackageInfo'
-  - '@azure/servicefabric.DeployedServicePackageNewHealthReportEvent'
-  - '@azure/servicefabric.DeployedServicePackagesHealthEvaluation'
-  - '@azure/servicefabric.DeployedServiceReplicaDetailInfo'
-  - '@azure/servicefabric.DeployedServiceReplicaInfo'
-  - '@azure/servicefabric.DeployedServiceTypeInfo'
-  - '@azure/servicefabric.DeployedStatefulServiceReplicaDetailInfo'
-  - '@azure/servicefabric.DeployedStatefulServiceReplicaInfo'
-  - '@azure/servicefabric.DeployedStatelessServiceInstanceDetailInfo'
-  - '@azure/servicefabric.DeployedStatelessServiceInstanceInfo'
-  - '@azure/servicefabric.DiagnosticsDescription'
-  - '@azure/servicefabric.DiagnosticsRef'
-  - '@azure/servicefabric.DiagnosticsSinkProperties'
-  - '@azure/servicefabric.DisableBackupDescription'
-  - '@azure/servicefabric.DiskInfo'
-  - '@azure/servicefabric.DoublePropertyValue'
-  - '@azure/servicefabric.EnableBackupDescription'
-  - '@azure/servicefabric.EndpointProperties'
-  - '@azure/servicefabric.EndpointRef'
-  - '@azure/servicefabric.EnsureAvailabilitySafetyCheck'
-  - '@azure/servicefabric.EnsurePartitionQuorumSafetyCheck'
-  - '@azure/servicefabric.EntityHealth'
-  - '@azure/servicefabric.EntityHealthState'
-  - '@azure/servicefabric.EntityHealthStateChunk'
-  - '@azure/servicefabric.EntityHealthStateChunkList'
-  - '@azure/servicefabric.EntityKindHealthStateCount'
-  - '@azure/servicefabric.EnvironmentVariable'
-  - '@azure/servicefabric.Epoch'
-  - '@azure/servicefabric.EventHealthEvaluation'
-  - '@azure/servicefabric.ExecutingFaultsChaosEvent'
-  - '@azure/servicefabric.ExecutionPolicy'
-  - '@azure/servicefabric.ExternalStoreProvisionApplicationTypeDescription'
-  - '@azure/servicefabric.FabricCodeVersionInfo'
-  - '@azure/servicefabric.FabricConfigVersionInfo'
-  - '@azure/servicefabric.FabricError'
-  - '@azure/servicefabric.FabricErrorError'
-  - '@azure/servicefabric.FabricEvent'
-  - '@azure/servicefabric.FailedPropertyBatchInfo'
-  - '@azure/servicefabric.FailedUpgradeDomainProgressObject'
-  - '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
-  - '@azure/servicefabric.FileInfo'
-  - '@azure/servicefabric.FileShareBackupStorageDescription'
-  - '@azure/servicefabric.FileVersion'
-  - '@azure/servicefabric.FolderInfo'
-  - '@azure/servicefabric.FolderSizeInfo'
-  - '@azure/servicefabric.FrequencyBasedBackupScheduleDescription'
-  - '@azure/servicefabric.GatewayDestination'
-  - '@azure/servicefabric.GatewayResourceDescription'
-  - '@azure/servicefabric.GetBackupByStorageQueryDescription'
-  - '@azure/servicefabric.GetPropertyBatchOperation'
-  - '@azure/servicefabric.GuidPropertyValue'
-  - '@azure/servicefabric.HealthEvaluation'
-  - '@azure/servicefabric.HealthEvaluationWrapper'
-  - '@azure/servicefabric.HealthEvent'
-  - '@azure/servicefabric.HealthInformation'
-  - '@azure/servicefabric.HealthStateCount'
-  - '@azure/servicefabric.HealthStatistics'
-  - '@azure/servicefabric.HttpConfig'
-  - '@azure/servicefabric.HttpHostConfig'
-  - '@azure/servicefabric.HttpRouteConfig'
-  - '@azure/servicefabric.HttpRouteMatchHeader'
-  - '@azure/servicefabric.HttpRouteMatchPath'
-  - '@azure/servicefabric.HttpRouteMatchRule'
-  - '@azure/servicefabric.IdentityDescription'
-  - '@azure/servicefabric.IdentityItemDescription'
-  - '@azure/servicefabric.ImageRegistryCredential'
-  - '@azure/servicefabric.ImageStoreContent'
-  - '@azure/servicefabric.ImageStoreCopyDescription'
-  - '@azure/servicefabric.ImageStoreInfo'
-  - '@azure/servicefabric.InlinedValueSecretResourceProperties'
-  - '@azure/servicefabric.Int64PropertyValue'
-  - '@azure/servicefabric.Int64RangePartitionInformation'
-  - '@azure/servicefabric.InvokeDataLossResult'
-  - '@azure/servicefabric.InvokeQuorumLossResult'
-  - '@azure/servicefabric.KeyValueStoreReplicaStatus'
-  - '@azure/servicefabric.LoadMetricInformation'
-  - '@azure/servicefabric.LoadMetricReport'
-  - '@azure/servicefabric.LoadMetricReportInfo'
-  - '@azure/servicefabric.LocalNetworkResourceProperties'
-  - '@azure/servicefabric.ManagedApplicationIdentity'
-  - '@azure/servicefabric.ManagedApplicationIdentityDescription'
-  - '@azure/servicefabric.MeshCodePackageGetContainerLogsOptionalParams'
-  - '@azure/servicefabric.MonitoringPolicyDescription'
-  - '@azure/servicefabric.NameDescription'
-  - '@azure/servicefabric.NamedPartitionInformation'
-  - '@azure/servicefabric.NamedPartitionSchemeDescription'
-  - '@azure/servicefabric.NetworkRef'
-  - '@azure/servicefabric.NetworkResourceDescription'
-  - '@azure/servicefabric.NetworkResourceProperties'
-  - '@azure/servicefabric.NetworkResourcePropertiesBase'
-  - '@azure/servicefabric.NodeAbortedEvent'
-  - '@azure/servicefabric.NodeAddedToClusterEvent'
-  - '@azure/servicefabric.NodeClosedEvent'
-  - '@azure/servicefabric.NodeDeactivateCompletedEvent'
-  - '@azure/servicefabric.NodeDeactivateStartedEvent'
-  - '@azure/servicefabric.NodeDeactivationInfo'
-  - '@azure/servicefabric.NodeDeactivationTask'
-  - '@azure/servicefabric.NodeDeactivationTaskId'
-  - '@azure/servicefabric.NodeDownEvent'
-  - '@azure/servicefabric.NodeEvent'
-  - '@azure/servicefabric.NodeHealth'
-  - '@azure/servicefabric.NodeHealthEvaluation'
-  - '@azure/servicefabric.NodeHealthReportExpiredEvent'
-  - '@azure/servicefabric.NodeHealthState'
-  - '@azure/servicefabric.NodeHealthStateChunk'
-  - '@azure/servicefabric.NodeHealthStateChunkList'
-  - '@azure/servicefabric.NodeHealthStateFilter'
-  - '@azure/servicefabric.NodeId'
-  - '@azure/servicefabric.NodeImpact'
-  - '@azure/servicefabric.NodeInfo'
-  - '@azure/servicefabric.NodeLoadInfo'
-  - '@azure/servicefabric.NodeLoadMetricInformation'
-  - '@azure/servicefabric.NodeNewHealthReportEvent'
-  - '@azure/servicefabric.NodeOpenFailedEvent'
-  - '@azure/servicefabric.NodeOpenSucceededEvent'
-  - '@azure/servicefabric.NodeRemovedFromClusterEvent'
-  - '@azure/servicefabric.NodeRepairImpactDescription'
-  - '@azure/servicefabric.NodeRepairTargetDescription'
-  - '@azure/servicefabric.NodeResult'
-  - '@azure/servicefabric.NodeTransitionProgress'
-  - '@azure/servicefabric.NodeTransitionResult'
-  - '@azure/servicefabric.NodeUpEvent'
-  - '@azure/servicefabric.NodeUpgradeProgressInfo'
-  - '@azure/servicefabric.NodesHealthEvaluation'
-  - '@azure/servicefabric.OperationStatus'
-  - '@azure/servicefabric.PackageSharingPolicyInfo'
-  - '@azure/servicefabric.PagedApplicationInfoList'
-  - '@azure/servicefabric.PagedApplicationResourceDescriptionList'
-  - '@azure/servicefabric.PagedApplicationTypeInfoList'
-  - '@azure/servicefabric.PagedBackupConfigurationInfoList'
-  - '@azure/servicefabric.PagedBackupEntityList'
-  - '@azure/servicefabric.PagedBackupInfoList'
-  - '@azure/servicefabric.PagedBackupPolicyDescriptionList'
-  - '@azure/servicefabric.PagedComposeDeploymentStatusInfoList'
-  - '@azure/servicefabric.PagedDeployedApplicationInfoList'
-  - '@azure/servicefabric.PagedGatewayResourceDescriptionList'
-  - '@azure/servicefabric.PagedNetworkResourceDescriptionList'
-  - '@azure/servicefabric.PagedNodeInfoList'
-  - '@azure/servicefabric.PagedPropertyInfoList'
-  - '@azure/servicefabric.PagedReplicaInfoList'
-  - '@azure/servicefabric.PagedSecretResourceDescriptionList'
-  - '@azure/servicefabric.PagedSecretValueResourceDescriptionList'
-  - '@azure/servicefabric.PagedServiceInfoList'
-  - '@azure/servicefabric.PagedServicePartitionInfoList'
-  - '@azure/servicefabric.PagedServiceReplicaDescriptionList'
-  - '@azure/servicefabric.PagedServiceResourceDescriptionList'
-  - '@azure/servicefabric.PagedSubNameInfoList'
-  - '@azure/servicefabric.PagedVolumeResourceDescriptionList'
-  - '@azure/servicefabric.PartitionAnalysisEvent'
-  - '@azure/servicefabric.PartitionBackupConfigurationInfo'
-  - '@azure/servicefabric.PartitionBackupEntity'
-  - '@azure/servicefabric.PartitionDataLossProgress'
-  - '@azure/servicefabric.PartitionEvent'
-  - '@azure/servicefabric.PartitionHealth'
-  - '@azure/servicefabric.PartitionHealthEvaluation'
-  - '@azure/servicefabric.PartitionHealthReportExpiredEvent'
-  - '@azure/servicefabric.PartitionHealthState'
-  - '@azure/servicefabric.PartitionHealthStateChunk'
-  - '@azure/servicefabric.PartitionHealthStateChunkList'
-  - '@azure/servicefabric.PartitionHealthStateFilter'
-  - '@azure/servicefabric.PartitionInformation'
-  - '@azure/servicefabric.PartitionInstanceCountScaleMechanism'
-  - '@azure/servicefabric.PartitionLoadInformation'
-  - '@azure/servicefabric.PartitionNewHealthReportEvent'
-  - '@azure/servicefabric.PartitionPrimaryMoveAnalysisEvent'
-  - '@azure/servicefabric.PartitionQuorumLossProgress'
-  - '@azure/servicefabric.PartitionReconfiguredEvent'
-  - '@azure/servicefabric.PartitionRestartProgress'
-  - '@azure/servicefabric.PartitionSafetyCheck'
-  - '@azure/servicefabric.PartitionSchemeDescription'
-  - '@azure/servicefabric.PartitionsHealthEvaluation'
-  - '@azure/servicefabric.PrimaryReplicatorStatus'
-  - '@azure/servicefabric.Probe'
-  - '@azure/servicefabric.ProbeExec'
-  - '@azure/servicefabric.ProbeHttpGet'
-  - '@azure/servicefabric.ProbeHttpGetHeaders'
-  - '@azure/servicefabric.ProbeTcpSocket'
-  - '@azure/servicefabric.PropertyBatchDescriptionList'
-  - '@azure/servicefabric.PropertyBatchInfo'
-  - '@azure/servicefabric.PropertyBatchOperation'
-  - '@azure/servicefabric.PropertyDescription'
-  - '@azure/servicefabric.PropertyInfo'
-  - '@azure/servicefabric.PropertyMetadata'
-  - '@azure/servicefabric.PropertyValue'
-  - '@azure/servicefabric.ProvisionApplicationTypeDescription'
-  - '@azure/servicefabric.ProvisionApplicationTypeDescriptionBase'
-  - '@azure/servicefabric.ProvisionFabricDescription'
-  - '@azure/servicefabric.PutPropertyBatchOperation'
-  - '@azure/servicefabric.ReconfigurationInformation'
-  - '@azure/servicefabric.RegistryCredential'
-  - '@azure/servicefabric.ReliableCollectionsRef'
-  - '@azure/servicefabric.RemoteReplicatorAcknowledgementDetail'
-  - '@azure/servicefabric.RemoteReplicatorAcknowledgementStatus'
-  - '@azure/servicefabric.RemoteReplicatorStatus'
-  - '@azure/servicefabric.RepairImpactDescriptionBase'
-  - '@azure/servicefabric.RepairTargetDescriptionBase'
-  - '@azure/servicefabric.RepairTask'
-  - '@azure/servicefabric.RepairTaskApproveDescription'
-  - '@azure/servicefabric.RepairTaskCancelDescription'
-  - '@azure/servicefabric.RepairTaskDeleteDescription'
-  - '@azure/servicefabric.RepairTaskHistory'
-  - '@azure/servicefabric.RepairTaskUpdateHealthPolicyDescription'
-  - '@azure/servicefabric.RepairTaskUpdateInfo'
-  - '@azure/servicefabric.ReplicaEvent'
-  - '@azure/servicefabric.ReplicaHealth'
-  - '@azure/servicefabric.ReplicaHealthEvaluation'
-  - '@azure/servicefabric.ReplicaHealthState'
-  - '@azure/servicefabric.ReplicaHealthStateChunk'
-  - '@azure/servicefabric.ReplicaHealthStateChunkList'
-  - '@azure/servicefabric.ReplicaHealthStateFilter'
-  - '@azure/servicefabric.ReplicaInfo'
-  - '@azure/servicefabric.ReplicaStatusBase'
-  - '@azure/servicefabric.ReplicasHealthEvaluation'
-  - '@azure/servicefabric.ReplicatorQueueStatus'
-  - '@azure/servicefabric.ReplicatorStatus'
-  - '@azure/servicefabric.ResolvedServiceEndpoint'
-  - '@azure/servicefabric.ResolvedServicePartition'
-  - '@azure/servicefabric.ResourceLimits'
-  - '@azure/servicefabric.ResourceRequests'
-  - '@azure/servicefabric.ResourceRequirements'
-  - '@azure/servicefabric.RestartDeployedCodePackageDescription'
-  - '@azure/servicefabric.RestartNodeDescription'
-  - '@azure/servicefabric.RestartPartitionResult'
-  - '@azure/servicefabric.RestorePartitionDescription'
-  - '@azure/servicefabric.RestoreProgressInfo'
-  - '@azure/servicefabric.ResumeApplicationUpgradeDescription'
-  - '@azure/servicefabric.ResumeClusterUpgradeDescription'
-  - '@azure/servicefabric.RetentionPolicyDescription'
-  - '@azure/servicefabric.RollingUpgradeUpdateDescription'
-  - '@azure/servicefabric.RunToCompletionExecutionPolicy'
-  - '@azure/servicefabric.SafetyCheck'
-  - '@azure/servicefabric.SafetyCheckWrapper'
-  - '@azure/servicefabric.ScalingMechanismDescription'
-  - '@azure/servicefabric.ScalingPolicyDescription'
-  - '@azure/servicefabric.ScalingTriggerDescription'
-  - '@azure/servicefabric.SecondaryActiveReplicatorStatus'
-  - '@azure/servicefabric.SecondaryIdleReplicatorStatus'
-  - '@azure/servicefabric.SecondaryReplicatorStatus'
-  - '@azure/servicefabric.SecretResourceDescription'
-  - '@azure/servicefabric.SecretResourceProperties'
-  - '@azure/servicefabric.SecretResourcePropertiesBase'
-  - '@azure/servicefabric.SecretValue'
-  - '@azure/servicefabric.SecretValueProperties'
-  - '@azure/servicefabric.SecretValueResourceDescription'
-  - '@azure/servicefabric.SeedNodeSafetyCheck'
-  - '@azure/servicefabric.SelectedPartition'
-  - '@azure/servicefabric.ServiceBackupConfigurationInfo'
-  - '@azure/servicefabric.ServiceBackupEntity'
-  - '@azure/servicefabric.ServiceCorrelationDescription'
-  - '@azure/servicefabric.ServiceCreatedEvent'
-  - '@azure/servicefabric.ServiceDeletedEvent'
-  - '@azure/servicefabric.ServiceDescription'
-  - '@azure/servicefabric.ServiceEvent'
-  - >-
-    @azure/servicefabric.ServiceFabricClientAddConfigurationParameterOverridesOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientBackupPartitionOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientCancelOperationOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientCommitImageStoreUploadSessionOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientCopyImageStoreContentOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientCreateApplicationOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientCreateBackupPolicyOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientCreateComposeDeploymentOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientCreateNameOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientCreateServiceFromTemplateOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientCreateServiceOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientDeleteApplicationOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientDeleteBackupPolicyOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientDeleteImageStoreContentOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientDeleteImageStoreUploadSessionOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientDeleteNameOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientDeletePropertyOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientDeleteServiceOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientDeployServicePackageToNodeOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientDisableApplicationBackupOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientDisableNodeOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientDisablePartitionBackupOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientDisableServiceBackupOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientEnableApplicationBackupOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientEnableNodeOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientEnablePartitionBackupOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientEnableServiceBackupOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetAadMetadataOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetAllEntitiesBackedUpByPolicyOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationBackupConfigurationInfoOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationBackupListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationEventListOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationHealthUsingPolicyOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationInfoOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationLoadInfoOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationManifestOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationNameInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationTypeInfoListByNameOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationTypeInfoListOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetApplicationUpgradeOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetApplicationsEventListOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetBackupPolicyByNameOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetBackupPolicyListOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetBackupsFromBackupLocationOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetChaosEventsOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetChaosOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetChaosScheduleOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetClusterConfigurationOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetClusterConfigurationUpgradeStatusOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetClusterEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetClusterHealthChunkOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetClusterHealthChunkUsingPolicyAndAdvancedFiltersOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetClusterHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetClusterManifestOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetClusterUpgradeProgressOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetClusterVersionOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetComposeDeploymentStatusListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetComposeDeploymentStatusOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetComposeDeploymentUpgradeProgressOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetConfigurationOverridesOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetContainerLogsDeployedOnNodeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetContainersEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetCorrelatedEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetDataLossProgressOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedApplicationHealthOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedApplicationHealthUsingPolicyOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedApplicationInfoListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedApplicationInfoOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedCodePackageInfoListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServicePackageHealthOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServicePackageHealthUsingPolicyOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServicePackageInfoListByNameOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServicePackageInfoListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServiceReplicaDetailInfoByPartitionIdOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServiceReplicaDetailInfoOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServiceReplicaInfoListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServiceTypeInfoByNameOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetDeployedServiceTypeInfoListOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetFaultOperationListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetImageStoreContentOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetImageStoreInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetImageStoreRootContentOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetImageStoreUploadSessionByIdOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetImageStoreUploadSessionByPathOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetNameExistsInfoOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetNodeEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetNodeHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetNodeHealthUsingPolicyOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetNodeInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetNodeInfoOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetNodeLoadInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetNodeTransitionProgressOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetNodesEventListOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionBackupConfigurationInfoOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetPartitionBackupListOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionBackupProgressOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetPartitionEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetPartitionHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionHealthUsingPolicyOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetPartitionInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetPartitionInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionLoadInformationOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionReplicaEventListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionReplicasEventListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionRestartProgressOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetPartitionRestoreProgressOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetPartitionsEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetPropertyInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetPropertyInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetProvisionedFabricCodeVersionInfoListOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetProvisionedFabricConfigVersionInfoListOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetQuorumLossProgressOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetRepairTaskListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetReplicaHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetReplicaHealthUsingPolicyOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetReplicaInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetReplicaInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetServiceBackupConfigurationInfoOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetServiceBackupListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServiceDescriptionOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServiceEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServiceHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetServiceHealthUsingPolicyOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetServiceInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServiceInfoOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServiceManifestOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServiceNameInfoOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetServiceTypeInfoByNameOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientGetServiceTypeInfoListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetServicesEventListOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientGetSubNameInfoListOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientGetUpgradeOrchestrationServiceStateOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientInvokeContainerApiOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientInvokeInfrastructureCommandOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientInvokeInfrastructureQueryOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientOptions'
-  - '@azure/servicefabric.ServiceFabricClientPostChaosScheduleOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientProvisionApplicationTypeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientProvisionClusterOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientPutPropertyOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientRecoverAllPartitionsOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientRecoverPartitionOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientRecoverServicePartitionsOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientRecoverSystemPartitionsOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientRemoveComposeDeploymentOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientRemoveConfigurationOverridesOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientRemoveNodeStateOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientRemoveReplicaOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientReportApplicationHealthOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientReportClusterHealthOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientReportDeployedApplicationHealthOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientReportDeployedServicePackageHealthOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientReportNodeHealthOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientReportPartitionHealthOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientReportReplicaHealthOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientReportServiceHealthOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientResetPartitionLoadOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientResolveServiceOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientRestartDeployedCodePackageOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientRestartNodeOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientRestartReplicaOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientRestorePartitionOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientResumeApplicationBackupOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientResumeApplicationUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientResumeClusterUpgradeOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientResumePartitionBackupOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientResumeServiceBackupOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientRollbackApplicationUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientRollbackClusterUpgradeOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientSetUpgradeOrchestrationServiceStateOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientStartApplicationUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientStartChaosOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientStartClusterConfigurationUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientStartClusterUpgradeOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientStartComposeDeploymentUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientStartDataLossOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientStartNodeTransitionOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientStartPartitionRestartOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientStartQuorumLossOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientStartRollbackComposeDeploymentUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientStopChaosOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientSubmitPropertyBatchOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientSuspendApplicationBackupOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientSuspendPartitionBackupOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientSuspendServiceBackupOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
-  - >-
-    @azure/servicefabric.ServiceFabricClientUnprovisionApplicationTypeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientUnprovisionClusterOptionalParams'
-  - >-
-    @azure/servicefabric.ServiceFabricClientUpdateApplicationUpgradeOptionalParams
-  - '@azure/servicefabric.ServiceFabricClientUpdateBackupPolicyOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientUpdateClusterUpgradeOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientUpdateServiceOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientUploadFileChunkOptionalParams'
-  - '@azure/servicefabric.ServiceFabricClientUploadFileOptionalParams'
-  - '@azure/servicefabric.ServiceFromTemplateDescription'
-  - '@azure/servicefabric.ServiceHealth'
-  - '@azure/servicefabric.ServiceHealthEvaluation'
-  - '@azure/servicefabric.ServiceHealthReportExpiredEvent'
-  - '@azure/servicefabric.ServiceHealthState'
-  - '@azure/servicefabric.ServiceHealthStateChunk'
-  - '@azure/servicefabric.ServiceHealthStateChunkList'
-  - '@azure/servicefabric.ServiceHealthStateFilter'
-  - '@azure/servicefabric.ServiceIdentity'
-  - '@azure/servicefabric.ServiceInfo'
-  - '@azure/servicefabric.ServiceLoadMetricDescription'
-  - '@azure/servicefabric.ServiceNameInfo'
-  - '@azure/servicefabric.ServiceNewHealthReportEvent'
-  - '@azure/servicefabric.ServicePartitionInfo'
-  - '@azure/servicefabric.ServicePlacementInvalidDomainPolicyDescription'
-  - >-
-    @azure/servicefabric.ServicePlacementNonPartiallyPlaceServicePolicyDescription
-  - '@azure/servicefabric.ServicePlacementPolicyDescription'
-  - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription'
-  - >-
-    @azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription
-  - '@azure/servicefabric.ServicePlacementRequiredDomainPolicyDescription'
-  - '@azure/servicefabric.ServiceProperties'
-  - '@azure/servicefabric.ServiceReplicaDescription'
-  - '@azure/servicefabric.ServiceReplicaProperties'
-  - '@azure/servicefabric.ServiceResourceDescription'
-  - '@azure/servicefabric.ServiceTypeDescription'
-  - '@azure/servicefabric.ServiceTypeExtensionDescription'
-  - '@azure/servicefabric.ServiceTypeHealthPolicy'
-  - '@azure/servicefabric.ServiceTypeHealthPolicyMapItem'
-  - '@azure/servicefabric.ServiceTypeInfo'
-  - '@azure/servicefabric.ServiceTypeManifest'
-  - '@azure/servicefabric.ServiceUpdateDescription'
-  - '@azure/servicefabric.ServiceUpgradeProgress'
-  - '@azure/servicefabric.ServicesHealthEvaluation'
-  - '@azure/servicefabric.Setting'
-  - '@azure/servicefabric.SingletonPartitionInformation'
-  - '@azure/servicefabric.SingletonPartitionSchemeDescription'
-  - '@azure/servicefabric.StartClusterUpgradeDescription'
-  - '@azure/servicefabric.StartedChaosEvent'
-  - '@azure/servicefabric.StatefulReplicaHealthReportExpiredEvent'
-  - '@azure/servicefabric.StatefulReplicaNewHealthReportEvent'
-  - '@azure/servicefabric.StatefulServiceDescription'
-  - '@azure/servicefabric.StatefulServiceInfo'
-  - '@azure/servicefabric.StatefulServicePartitionInfo'
-  - '@azure/servicefabric.StatefulServiceReplicaHealth'
-  - '@azure/servicefabric.StatefulServiceReplicaHealthState'
-  - '@azure/servicefabric.StatefulServiceReplicaInfo'
-  - '@azure/servicefabric.StatefulServiceTypeDescription'
-  - '@azure/servicefabric.StatefulServiceUpdateDescription'
-  - '@azure/servicefabric.StatelessReplicaHealthReportExpiredEvent'
-  - '@azure/servicefabric.StatelessReplicaNewHealthReportEvent'
-  - '@azure/servicefabric.StatelessServiceDescription'
-  - '@azure/servicefabric.StatelessServiceInfo'
-  - '@azure/servicefabric.StatelessServiceInstanceHealth'
-  - '@azure/servicefabric.StatelessServiceInstanceHealthState'
-  - '@azure/servicefabric.StatelessServiceInstanceInfo'
-  - '@azure/servicefabric.StatelessServicePartitionInfo'
-  - '@azure/servicefabric.StatelessServiceTypeDescription'
-  - '@azure/servicefabric.StatelessServiceUpdateDescription'
-  - '@azure/servicefabric.StoppedChaosEvent'
-  - '@azure/servicefabric.StringPropertyValue'
-  - '@azure/servicefabric.SuccessfulPropertyBatchInfo'
-  - '@azure/servicefabric.SystemApplicationHealthEvaluation'
-  - '@azure/servicefabric.TcpConfig'
-  - '@azure/servicefabric.TestErrorChaosEvent'
-  - '@azure/servicefabric.TimeBasedBackupScheduleDescription'
-  - '@azure/servicefabric.TimeOfDay'
-  - '@azure/servicefabric.TimeRange'
-  - '@azure/servicefabric.UniformInt64RangePartitionSchemeDescription'
-  - '@azure/servicefabric.UnplacedReplicaInformation'
-  - '@azure/servicefabric.UnprovisionApplicationTypeDescriptionInfo'
-  - '@azure/servicefabric.UnprovisionFabricDescription'
-  - '@azure/servicefabric.UpdateClusterUpgradeDescription'
-  - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation'
-  - '@azure/servicefabric.UpgradeDomainInfo'
-  - '@azure/servicefabric.UpgradeDomainNodesHealthEvaluation'
-  - '@azure/servicefabric.UpgradeOrchestrationServiceState'
-  - '@azure/servicefabric.UpgradeOrchestrationServiceStateSummary'
-  - '@azure/servicefabric.UploadChunkRange'
-  - '@azure/servicefabric.UploadSession'
-  - '@azure/servicefabric.UploadSessionInfo'
-  - '@azure/servicefabric.UsageInfo'
-  - '@azure/servicefabric.ValidationFailedChaosEvent'
-  - '@azure/servicefabric.VolumeProviderParametersAzureFile'
-  - '@azure/servicefabric.VolumeReference'
-  - '@azure/servicefabric.VolumeResourceDescription'
-  - '@azure/servicefabric.WaitForInbuildReplicaSafetyCheck'
-  - '@azure/servicefabric.WaitForPrimaryPlacementSafetyCheck'
-  - '@azure/servicefabric.WaitForPrimarySwapSafetyCheck'
-  - '@azure/servicefabric.WaitForReconfigurationSafetyCheck'
-  - '@azure/servicefabric.WaitingChaosEvent'
+  - '@azure/servicefabric.models.index.d.AadMetadata'
+  - '@azure/servicefabric.models.index.d.AadMetadataObject'
+  - >-
+    @azure/servicefabric.models.index.d.AddRemoveIncrementalNamedPartitionScalingMechanism
+  - '@azure/servicefabric.models.index.d.AddRemoveReplicaScalingMechanism'
+  - '@azure/servicefabric.models.index.d.AnalysisEventMetadata'
+  - '@azure/servicefabric.models.index.d.ApplicationBackupConfigurationInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationBackupEntity'
+  - '@azure/servicefabric.models.index.d.ApplicationCapacityDescription'
+  - '@azure/servicefabric.models.index.d.ApplicationContainerInstanceExitedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationCreatedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationDeletedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationDescription'
+  - '@azure/servicefabric.models.index.d.ApplicationEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationHealth'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthPolicies'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthPolicy'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthPolicyMapItem'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthState'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.ApplicationHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.ApplicationInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationLoadInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationMetricDescription'
+  - '@azure/servicefabric.models.index.d.ApplicationNameInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationParameter'
+  - '@azure/servicefabric.models.index.d.ApplicationProcessExitedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationResourceDescription'
+  - '@azure/servicefabric.models.index.d.ApplicationResourceUpgradeProgressInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationScopedVolume'
+  - >-
+    @azure/servicefabric.models.index.d.ApplicationScopedVolumeCreationParameters
+  - >-
+    @azure/servicefabric.models.index.d.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDisk
+  - '@azure/servicefabric.models.index.d.ApplicationsHealthEvaluation'
+  - >-
+    @azure/servicefabric.models.index.d.ApplicationTypeApplicationsHealthEvaluation
+  - '@azure/servicefabric.models.index.d.ApplicationTypeHealthPolicyMapItem'
+  - '@azure/servicefabric.models.index.d.ApplicationTypeImageStorePath'
+  - '@azure/servicefabric.models.index.d.ApplicationTypeInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationTypeManifest'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeCompletedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeDescription'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeDomainCompletedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeProgressInfo'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeRollbackCompletedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeRollbackStartedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeStartedEvent'
+  - '@azure/servicefabric.models.index.d.ApplicationUpgradeUpdateDescription'
+  - '@azure/servicefabric.models.index.d.AutoScalingMechanism'
+  - '@azure/servicefabric.models.index.d.AutoScalingMetric'
+  - '@azure/servicefabric.models.index.d.AutoScalingPolicy'
+  - '@azure/servicefabric.models.index.d.AutoScalingResourceMetric'
+  - '@azure/servicefabric.models.index.d.AutoScalingTrigger'
+  - '@azure/servicefabric.models.index.d.AverageLoadScalingTrigger'
+  - '@azure/servicefabric.models.index.d.AveragePartitionLoadScalingTrigger'
+  - '@azure/servicefabric.models.index.d.AverageServiceLoadScalingTrigger'
+  - '@azure/servicefabric.models.index.d.AzureBlobBackupStorageDescription'
+  - >-
+    @azure/servicefabric.models.index.d.AzureInternalMonitoringPipelineSinkDescription
+  - '@azure/servicefabric.models.index.d.BackupConfigurationInfo'
+  - '@azure/servicefabric.models.index.d.BackupEntity'
+  - '@azure/servicefabric.models.index.d.BackupInfo'
+  - '@azure/servicefabric.models.index.d.BackupPartitionDescription'
+  - '@azure/servicefabric.models.index.d.BackupPolicyDescription'
+  - '@azure/servicefabric.models.index.d.BackupProgressInfo'
+  - '@azure/servicefabric.models.index.d.BackupScheduleDescription'
+  - '@azure/servicefabric.models.index.d.BackupStorageDescription'
+  - '@azure/servicefabric.models.index.d.BackupSuspensionInfo'
+  - '@azure/servicefabric.models.index.d.BasicRetentionPolicyDescription'
+  - '@azure/servicefabric.models.index.d.BinaryPropertyValue'
+  - '@azure/servicefabric.models.index.d.Chaos'
+  - '@azure/servicefabric.models.index.d.ChaosCodePackageRestartScheduledEvent'
+  - '@azure/servicefabric.models.index.d.ChaosContext'
+  - '@azure/servicefabric.models.index.d.ChaosEvent'
+  - '@azure/servicefabric.models.index.d.ChaosEventsSegment'
+  - '@azure/servicefabric.models.index.d.ChaosEventWrapper'
+  - '@azure/servicefabric.models.index.d.ChaosNodeRestartScheduledEvent'
+  - '@azure/servicefabric.models.index.d.ChaosParameters'
+  - '@azure/servicefabric.models.index.d.ChaosParametersDictionaryItem'
+  - '@azure/servicefabric.models.index.d.ChaosPartitionPrimaryMoveScheduledEvent'
+  - >-
+    @azure/servicefabric.models.index.d.ChaosPartitionSecondaryMoveScheduledEvent
+  - '@azure/servicefabric.models.index.d.ChaosReplicaRemovalScheduledEvent'
+  - '@azure/servicefabric.models.index.d.ChaosReplicaRestartScheduledEvent'
+  - '@azure/servicefabric.models.index.d.ChaosSchedule'
+  - '@azure/servicefabric.models.index.d.ChaosScheduleDescription'
+  - '@azure/servicefabric.models.index.d.ChaosScheduleJob'
+  - '@azure/servicefabric.models.index.d.ChaosScheduleJobActiveDaysOfWeek'
+  - '@azure/servicefabric.models.index.d.ChaosStartedEvent'
+  - '@azure/servicefabric.models.index.d.ChaosStoppedEvent'
+  - '@azure/servicefabric.models.index.d.ChaosTargetFilter'
+  - '@azure/servicefabric.models.index.d.CheckExistsPropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.CheckSequencePropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.CheckValuePropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.ClusterConfiguration'
+  - '@azure/servicefabric.models.index.d.ClusterConfigurationUpgradeDescription'
+  - '@azure/servicefabric.models.index.d.ClusterConfigurationUpgradeStatusInfo'
+  - '@azure/servicefabric.models.index.d.ClusterEvent'
+  - '@azure/servicefabric.models.index.d.ClusterHealth'
+  - '@azure/servicefabric.models.index.d.ClusterHealthChunk'
+  - '@azure/servicefabric.models.index.d.ClusterHealthChunkQueryDescription'
+  - '@azure/servicefabric.models.index.d.ClusterHealthPolicies'
+  - '@azure/servicefabric.models.index.d.ClusterHealthPolicy'
+  - '@azure/servicefabric.models.index.d.ClusterHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.ClusterLoadInfo'
+  - '@azure/servicefabric.models.index.d.ClusterManifest'
+  - '@azure/servicefabric.models.index.d.ClusterNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeCompletedEvent'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeDescriptionObject'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeDomainCompletedEvent'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeHealthPolicyObject'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeProgressObject'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeRollbackCompletedEvent'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeRollbackStartedEvent'
+  - '@azure/servicefabric.models.index.d.ClusterUpgradeStartedEvent'
+  - '@azure/servicefabric.models.index.d.ClusterVersion'
+  - '@azure/servicefabric.models.index.d.CodePackageEntryPoint'
+  - '@azure/servicefabric.models.index.d.CodePackageEntryPointStatistics'
+  - '@azure/servicefabric.models.index.d.ComposeDeploymentStatusInfo'
+  - '@azure/servicefabric.models.index.d.ComposeDeploymentUpgradeDescription'
+  - '@azure/servicefabric.models.index.d.ComposeDeploymentUpgradeProgressInfo'
+  - '@azure/servicefabric.models.index.d.ConfigParameterOverride'
+  - '@azure/servicefabric.models.index.d.ContainerApiRequestBody'
+  - '@azure/servicefabric.models.index.d.ContainerApiResponse'
+  - '@azure/servicefabric.models.index.d.ContainerApiResult'
+  - '@azure/servicefabric.models.index.d.ContainerCodePackageProperties'
+  - '@azure/servicefabric.models.index.d.ContainerEvent'
+  - '@azure/servicefabric.models.index.d.ContainerInstanceEvent'
+  - '@azure/servicefabric.models.index.d.ContainerInstanceView'
+  - '@azure/servicefabric.models.index.d.ContainerLabel'
+  - '@azure/servicefabric.models.index.d.ContainerLogs'
+  - '@azure/servicefabric.models.index.d.ContainerState'
+  - '@azure/servicefabric.models.index.d.CreateComposeDeploymentDescription'
+  - '@azure/servicefabric.models.index.d.CurrentUpgradeDomainProgressInfo'
+  - '@azure/servicefabric.models.index.d.DeactivationIntentDescription'
+  - '@azure/servicefabric.models.index.d.DeletePropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.DeltaNodesCheckHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationHealth'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationHealthEvaluation'
+  - >-
+    @azure/servicefabric.models.index.d.DeployedApplicationHealthReportExpiredEvent
+  - '@azure/servicefabric.models.index.d.DeployedApplicationHealthState'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationInfo'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationsHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.DeployedCodePackageInfo'
+  - '@azure/servicefabric.models.index.d.DeployedServicePackageHealth'
+  - '@azure/servicefabric.models.index.d.DeployedServicePackageHealthEvaluation'
+  - >-
+    @azure/servicefabric.models.index.d.DeployedServicePackageHealthReportExpiredEvent
+  - '@azure/servicefabric.models.index.d.DeployedServicePackageHealthState'
+  - '@azure/servicefabric.models.index.d.DeployedServicePackageHealthStateChunk'
+  - >-
+    @azure/servicefabric.models.index.d.DeployedServicePackageHealthStateChunkList
+  - '@azure/servicefabric.models.index.d.DeployedServicePackageHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.DeployedServicePackageInfo'
+  - >-
+    @azure/servicefabric.models.index.d.DeployedServicePackageNewHealthReportEvent
+  - '@azure/servicefabric.models.index.d.DeployedServicePackagesHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.DeployedServiceReplicaDetailInfo'
+  - '@azure/servicefabric.models.index.d.DeployedServiceReplicaInfo'
+  - '@azure/servicefabric.models.index.d.DeployedServiceTypeInfo'
+  - '@azure/servicefabric.models.index.d.DeployedStatefulServiceReplicaDetailInfo'
+  - '@azure/servicefabric.models.index.d.DeployedStatefulServiceReplicaInfo'
+  - >-
+    @azure/servicefabric.models.index.d.DeployedStatelessServiceInstanceDetailInfo
+  - '@azure/servicefabric.models.index.d.DeployedStatelessServiceInstanceInfo'
+  - '@azure/servicefabric.models.index.d.DeployServicePackageToNodeDescription'
+  - '@azure/servicefabric.models.index.d.DiagnosticsDescription'
+  - '@azure/servicefabric.models.index.d.DiagnosticsRef'
+  - '@azure/servicefabric.models.index.d.DiagnosticsSinkProperties'
+  - '@azure/servicefabric.models.index.d.DisableBackupDescription'
+  - '@azure/servicefabric.models.index.d.DiskInfo'
+  - '@azure/servicefabric.models.index.d.DoublePropertyValue'
+  - '@azure/servicefabric.models.index.d.EnableBackupDescription'
+  - '@azure/servicefabric.models.index.d.EndpointProperties'
+  - '@azure/servicefabric.models.index.d.EndpointRef'
+  - '@azure/servicefabric.models.index.d.EnsureAvailabilitySafetyCheck'
+  - '@azure/servicefabric.models.index.d.EnsurePartitionQuorumSafetyCheck'
+  - '@azure/servicefabric.models.index.d.EntityHealth'
+  - '@azure/servicefabric.models.index.d.EntityHealthState'
+  - '@azure/servicefabric.models.index.d.EntityHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.EntityHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.EntityKindHealthStateCount'
+  - '@azure/servicefabric.models.index.d.EnvironmentVariable'
+  - '@azure/servicefabric.models.index.d.Epoch'
+  - '@azure/servicefabric.models.index.d.EventHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.ExecutingFaultsChaosEvent'
+  - '@azure/servicefabric.models.index.d.ExecutionPolicy'
+  - >-
+    @azure/servicefabric.models.index.d.ExternalStoreProvisionApplicationTypeDescription
+  - '@azure/servicefabric.models.index.d.FabricCodeVersionInfo'
+  - '@azure/servicefabric.models.index.d.FabricConfigVersionInfo'
+  - '@azure/servicefabric.models.index.d.FabricError'
+  - '@azure/servicefabric.models.index.d.FabricErrorError'
+  - '@azure/servicefabric.models.index.d.FabricEvent'
+  - '@azure/servicefabric.models.index.d.FailedPropertyBatchInfo'
+  - '@azure/servicefabric.models.index.d.FailedUpgradeDomainProgressObject'
+  - '@azure/servicefabric.models.index.d.FailureUpgradeDomainProgressInfo'
+  - '@azure/servicefabric.models.index.d.FileInfo'
+  - '@azure/servicefabric.models.index.d.FileShareBackupStorageDescription'
+  - '@azure/servicefabric.models.index.d.FileVersion'
+  - '@azure/servicefabric.models.index.d.FolderInfo'
+  - '@azure/servicefabric.models.index.d.FolderSizeInfo'
+  - '@azure/servicefabric.models.index.d.FrequencyBasedBackupScheduleDescription'
+  - '@azure/servicefabric.models.index.d.GatewayDestination'
+  - '@azure/servicefabric.models.index.d.GatewayResourceDescription'
+  - '@azure/servicefabric.models.index.d.GetBackupByStorageQueryDescription'
+  - '@azure/servicefabric.models.index.d.GetPropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.GuidPropertyValue'
+  - '@azure/servicefabric.models.index.d.HealthEvaluation'
+  - '@azure/servicefabric.models.index.d.HealthEvaluationWrapper'
+  - '@azure/servicefabric.models.index.d.HealthEvent'
+  - '@azure/servicefabric.models.index.d.HealthInformation'
+  - '@azure/servicefabric.models.index.d.HealthStateCount'
+  - '@azure/servicefabric.models.index.d.HealthStatistics'
+  - '@azure/servicefabric.models.index.d.HttpConfig'
+  - '@azure/servicefabric.models.index.d.HttpHostConfig'
+  - '@azure/servicefabric.models.index.d.HttpRouteConfig'
+  - '@azure/servicefabric.models.index.d.HttpRouteMatchHeader'
+  - '@azure/servicefabric.models.index.d.HttpRouteMatchPath'
+  - '@azure/servicefabric.models.index.d.HttpRouteMatchRule'
+  - '@azure/servicefabric.models.index.d.IdentityDescription'
+  - '@azure/servicefabric.models.index.d.IdentityItemDescription'
+  - '@azure/servicefabric.models.index.d.ImageRegistryCredential'
+  - '@azure/servicefabric.models.index.d.ImageStoreContent'
+  - '@azure/servicefabric.models.index.d.ImageStoreCopyDescription'
+  - '@azure/servicefabric.models.index.d.ImageStoreInfo'
+  - '@azure/servicefabric.models.index.d.InlinedValueSecretResourceProperties'
+  - '@azure/servicefabric.models.index.d.Int64PropertyValue'
+  - '@azure/servicefabric.models.index.d.Int64RangePartitionInformation'
+  - '@azure/servicefabric.models.index.d.InvokeDataLossResult'
+  - '@azure/servicefabric.models.index.d.InvokeQuorumLossResult'
+  - '@azure/servicefabric.models.index.d.KeyValueStoreReplicaStatus'
+  - '@azure/servicefabric.models.index.d.LoadMetricInformation'
+  - '@azure/servicefabric.models.index.d.LoadMetricReport'
+  - '@azure/servicefabric.models.index.d.LoadMetricReportInfo'
+  - '@azure/servicefabric.models.index.d.LocalNetworkResourceProperties'
+  - '@azure/servicefabric.models.index.d.ManagedApplicationIdentity'
+  - '@azure/servicefabric.models.index.d.ManagedApplicationIdentityDescription'
+  - >-
+    @azure/servicefabric.models.index.d.MeshCodePackageGetContainerLogsOptionalParams
+  - '@azure/servicefabric.models.index.d.MonitoringPolicyDescription'
+  - '@azure/servicefabric.models.index.d.NameDescription'
+  - '@azure/servicefabric.models.index.d.NamedPartitionInformation'
+  - '@azure/servicefabric.models.index.d.NamedPartitionSchemeDescription'
+  - '@azure/servicefabric.models.index.d.NetworkRef'
+  - '@azure/servicefabric.models.index.d.NetworkResourceDescription'
+  - '@azure/servicefabric.models.index.d.NetworkResourceProperties'
+  - '@azure/servicefabric.models.index.d.NetworkResourcePropertiesBase'
+  - '@azure/servicefabric.models.index.d.NodeAbortedEvent'
+  - '@azure/servicefabric.models.index.d.NodeAddedToClusterEvent'
+  - '@azure/servicefabric.models.index.d.NodeClosedEvent'
+  - '@azure/servicefabric.models.index.d.NodeDeactivateCompletedEvent'
+  - '@azure/servicefabric.models.index.d.NodeDeactivateStartedEvent'
+  - '@azure/servicefabric.models.index.d.NodeDeactivationInfo'
+  - '@azure/servicefabric.models.index.d.NodeDeactivationTask'
+  - '@azure/servicefabric.models.index.d.NodeDeactivationTaskId'
+  - '@azure/servicefabric.models.index.d.NodeDownEvent'
+  - '@azure/servicefabric.models.index.d.NodeEvent'
+  - '@azure/servicefabric.models.index.d.NodeHealth'
+  - '@azure/servicefabric.models.index.d.NodeHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.NodeHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.NodeHealthState'
+  - '@azure/servicefabric.models.index.d.NodeHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.NodeHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.NodeHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.NodeId'
+  - '@azure/servicefabric.models.index.d.NodeImpact'
+  - '@azure/servicefabric.models.index.d.NodeInfo'
+  - '@azure/servicefabric.models.index.d.NodeLoadInfo'
+  - '@azure/servicefabric.models.index.d.NodeLoadMetricInformation'
+  - '@azure/servicefabric.models.index.d.NodeNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.NodeOpenFailedEvent'
+  - '@azure/servicefabric.models.index.d.NodeOpenSucceededEvent'
+  - '@azure/servicefabric.models.index.d.NodeRemovedFromClusterEvent'
+  - '@azure/servicefabric.models.index.d.NodeRepairImpactDescription'
+  - '@azure/servicefabric.models.index.d.NodeRepairTargetDescription'
+  - '@azure/servicefabric.models.index.d.NodeResult'
+  - '@azure/servicefabric.models.index.d.NodesHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.NodeTransitionProgress'
+  - '@azure/servicefabric.models.index.d.NodeTransitionResult'
+  - '@azure/servicefabric.models.index.d.NodeUpEvent'
+  - '@azure/servicefabric.models.index.d.NodeUpgradeProgressInfo'
+  - '@azure/servicefabric.models.index.d.OperationStatus'
+  - '@azure/servicefabric.models.index.d.PackageSharingPolicyInfo'
+  - '@azure/servicefabric.models.index.d.PagedApplicationInfoList'
+  - '@azure/servicefabric.models.index.d.PagedApplicationResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedApplicationTypeInfoList'
+  - '@azure/servicefabric.models.index.d.PagedBackupConfigurationInfoList'
+  - '@azure/servicefabric.models.index.d.PagedBackupEntityList'
+  - '@azure/servicefabric.models.index.d.PagedBackupInfoList'
+  - '@azure/servicefabric.models.index.d.PagedBackupPolicyDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedComposeDeploymentStatusInfoList'
+  - '@azure/servicefabric.models.index.d.PagedDeployedApplicationInfoList'
+  - '@azure/servicefabric.models.index.d.PagedGatewayResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedNetworkResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedNodeInfoList'
+  - '@azure/servicefabric.models.index.d.PagedPropertyInfoList'
+  - '@azure/servicefabric.models.index.d.PagedReplicaInfoList'
+  - '@azure/servicefabric.models.index.d.PagedSecretResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedSecretValueResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedServiceInfoList'
+  - '@azure/servicefabric.models.index.d.PagedServicePartitionInfoList'
+  - '@azure/servicefabric.models.index.d.PagedServiceReplicaDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedServiceResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PagedSubNameInfoList'
+  - '@azure/servicefabric.models.index.d.PagedVolumeResourceDescriptionList'
+  - '@azure/servicefabric.models.index.d.PartitionAnalysisEvent'
+  - '@azure/servicefabric.models.index.d.PartitionBackupConfigurationInfo'
+  - '@azure/servicefabric.models.index.d.PartitionBackupEntity'
+  - '@azure/servicefabric.models.index.d.PartitionDataLossProgress'
+  - '@azure/servicefabric.models.index.d.PartitionEvent'
+  - '@azure/servicefabric.models.index.d.PartitionHealth'
+  - '@azure/servicefabric.models.index.d.PartitionHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.PartitionHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.PartitionHealthState'
+  - '@azure/servicefabric.models.index.d.PartitionHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.PartitionHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.PartitionHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.PartitionInformation'
+  - '@azure/servicefabric.models.index.d.PartitionInstanceCountScaleMechanism'
+  - '@azure/servicefabric.models.index.d.PartitionLoadInformation'
+  - '@azure/servicefabric.models.index.d.PartitionNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.PartitionPrimaryMoveAnalysisEvent'
+  - '@azure/servicefabric.models.index.d.PartitionQuorumLossProgress'
+  - '@azure/servicefabric.models.index.d.PartitionReconfiguredEvent'
+  - '@azure/servicefabric.models.index.d.PartitionRestartProgress'
+  - '@azure/servicefabric.models.index.d.PartitionSafetyCheck'
+  - '@azure/servicefabric.models.index.d.PartitionSchemeDescription'
+  - '@azure/servicefabric.models.index.d.PartitionsHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.PrimaryReplicatorStatus'
+  - '@azure/servicefabric.models.index.d.Probe'
+  - '@azure/servicefabric.models.index.d.ProbeExec'
+  - '@azure/servicefabric.models.index.d.ProbeHttpGet'
+  - '@azure/servicefabric.models.index.d.ProbeHttpGetHeaders'
+  - '@azure/servicefabric.models.index.d.ProbeTcpSocket'
+  - '@azure/servicefabric.models.index.d.PropertyBatchDescriptionList'
+  - '@azure/servicefabric.models.index.d.PropertyBatchInfo'
+  - '@azure/servicefabric.models.index.d.PropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.PropertyDescription'
+  - '@azure/servicefabric.models.index.d.PropertyInfo'
+  - '@azure/servicefabric.models.index.d.PropertyMetadata'
+  - '@azure/servicefabric.models.index.d.PropertyValue'
+  - '@azure/servicefabric.models.index.d.ProvisionApplicationTypeDescription'
+  - '@azure/servicefabric.models.index.d.ProvisionApplicationTypeDescriptionBase'
+  - '@azure/servicefabric.models.index.d.ProvisionFabricDescription'
+  - '@azure/servicefabric.models.index.d.PutPropertyBatchOperation'
+  - '@azure/servicefabric.models.index.d.ReconfigurationInformation'
+  - '@azure/servicefabric.models.index.d.RegistryCredential'
+  - '@azure/servicefabric.models.index.d.ReliableCollectionsRef'
+  - '@azure/servicefabric.models.index.d.RemoteReplicatorAcknowledgementDetail'
+  - '@azure/servicefabric.models.index.d.RemoteReplicatorAcknowledgementStatus'
+  - '@azure/servicefabric.models.index.d.RemoteReplicatorStatus'
+  - '@azure/servicefabric.models.index.d.RepairImpactDescriptionBase'
+  - '@azure/servicefabric.models.index.d.RepairTargetDescriptionBase'
+  - '@azure/servicefabric.models.index.d.RepairTask'
+  - '@azure/servicefabric.models.index.d.RepairTaskApproveDescription'
+  - '@azure/servicefabric.models.index.d.RepairTaskCancelDescription'
+  - '@azure/servicefabric.models.index.d.RepairTaskDeleteDescription'
+  - '@azure/servicefabric.models.index.d.RepairTaskHistory'
+  - '@azure/servicefabric.models.index.d.RepairTaskUpdateHealthPolicyDescription'
+  - '@azure/servicefabric.models.index.d.RepairTaskUpdateInfo'
+  - '@azure/servicefabric.models.index.d.ReplicaEvent'
+  - '@azure/servicefabric.models.index.d.ReplicaHealth'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthState'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.ReplicaInfo'
+  - '@azure/servicefabric.models.index.d.ReplicasHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.ReplicaStatusBase'
+  - '@azure/servicefabric.models.index.d.ReplicatorQueueStatus'
+  - '@azure/servicefabric.models.index.d.ReplicatorStatus'
+  - '@azure/servicefabric.models.index.d.ResolvedServiceEndpoint'
+  - '@azure/servicefabric.models.index.d.ResolvedServicePartition'
+  - '@azure/servicefabric.models.index.d.ResourceLimits'
+  - '@azure/servicefabric.models.index.d.ResourceRequests'
+  - '@azure/servicefabric.models.index.d.ResourceRequirements'
+  - '@azure/servicefabric.models.index.d.RestartDeployedCodePackageDescription'
+  - '@azure/servicefabric.models.index.d.RestartNodeDescription'
+  - '@azure/servicefabric.models.index.d.RestartPartitionResult'
+  - '@azure/servicefabric.models.index.d.RestorePartitionDescription'
+  - '@azure/servicefabric.models.index.d.RestoreProgressInfo'
+  - '@azure/servicefabric.models.index.d.ResumeApplicationUpgradeDescription'
+  - '@azure/servicefabric.models.index.d.ResumeClusterUpgradeDescription'
+  - '@azure/servicefabric.models.index.d.RetentionPolicyDescription'
+  - '@azure/servicefabric.models.index.d.RollingUpgradeUpdateDescription'
+  - '@azure/servicefabric.models.index.d.RunToCompletionExecutionPolicy'
+  - '@azure/servicefabric.models.index.d.SafetyCheck'
+  - '@azure/servicefabric.models.index.d.SafetyCheckWrapper'
+  - '@azure/servicefabric.models.index.d.ScalingMechanismDescription'
+  - '@azure/servicefabric.models.index.d.ScalingPolicyDescription'
+  - '@azure/servicefabric.models.index.d.ScalingTriggerDescription'
+  - '@azure/servicefabric.models.index.d.SecondaryActiveReplicatorStatus'
+  - '@azure/servicefabric.models.index.d.SecondaryIdleReplicatorStatus'
+  - '@azure/servicefabric.models.index.d.SecondaryReplicatorStatus'
+  - '@azure/servicefabric.models.index.d.SecretResourceDescription'
+  - '@azure/servicefabric.models.index.d.SecretResourceProperties'
+  - '@azure/servicefabric.models.index.d.SecretResourcePropertiesBase'
+  - '@azure/servicefabric.models.index.d.SecretValue'
+  - '@azure/servicefabric.models.index.d.SecretValueProperties'
+  - '@azure/servicefabric.models.index.d.SecretValueResourceDescription'
+  - '@azure/servicefabric.models.index.d.SeedNodeSafetyCheck'
+  - '@azure/servicefabric.models.index.d.SelectedPartition'
+  - '@azure/servicefabric.models.index.d.ServiceBackupConfigurationInfo'
+  - '@azure/servicefabric.models.index.d.ServiceBackupEntity'
+  - '@azure/servicefabric.models.index.d.ServiceCorrelationDescription'
+  - '@azure/servicefabric.models.index.d.ServiceCreatedEvent'
+  - '@azure/servicefabric.models.index.d.ServiceDeletedEvent'
+  - '@azure/servicefabric.models.index.d.ServiceDescription'
+  - '@azure/servicefabric.models.index.d.ServiceEvent'
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientAddConfigurationParameterOverridesOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientBackupPartitionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCancelOperationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCommitImageStoreUploadSessionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCopyImageStoreContentOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCreateApplicationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCreateBackupPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCreateComposeDeploymentOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCreateNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCreateServiceFromTemplateOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientCreateServiceOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeleteApplicationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeleteBackupPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeleteImageStoreContentOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeleteImageStoreUploadSessionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeleteNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeletePropertyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeleteServiceOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDeployServicePackageToNodeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDisableApplicationBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDisableNodeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDisablePartitionBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientDisableServiceBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientEnableApplicationBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientEnableNodeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientEnablePartitionBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientEnableServiceBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetAadMetadataOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetAllEntitiesBackedUpByPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationBackupConfigurationInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationBackupListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationLoadInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationManifestOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationNameInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationsEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationTypeInfoListByNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationTypeInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetApplicationUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetBackupPolicyByNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetBackupPolicyListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetBackupsFromBackupLocationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetChaosEventsOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetChaosOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetChaosScheduleOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterConfigurationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterConfigurationUpgradeStatusOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterHealthChunkOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterHealthChunkUsingPolicyAndAdvancedFiltersOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterLoadOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterManifestOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterUpgradeProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetClusterVersionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetComposeDeploymentStatusListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetComposeDeploymentStatusOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetComposeDeploymentUpgradeProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetConfigurationOverridesOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetContainerLogsDeployedOnNodeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetContainersEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetCorrelatedEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDataLossProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedApplicationHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedApplicationHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedApplicationInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedApplicationInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedCodePackageInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServicePackageHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServicePackageHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServicePackageInfoListByNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServicePackageInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServiceReplicaDetailInfoByPartitionIdOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServiceReplicaDetailInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServiceReplicaInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServiceTypeInfoByNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetDeployedServiceTypeInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetFaultOperationListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreContentOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreRootContentOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreUploadSessionByIdOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetImageStoreUploadSessionByPathOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNameExistsInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeLoadInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodesEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetNodeTransitionProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionBackupConfigurationInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionBackupListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionBackupProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionLoadInformationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionReplicaEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionReplicasEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionRestartProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionRestoreProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPartitionsEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPropertyInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetPropertyInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetProvisionedFabricCodeVersionInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetProvisionedFabricConfigVersionInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetQuorumLossProgressOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetRepairTaskListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetReplicaHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetReplicaHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetReplicaInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetReplicaInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceBackupConfigurationInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceBackupListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceDescriptionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceHealthUsingPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceManifestOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceNameInfoOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServicesEventListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceTypeInfoByNameOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetServiceTypeInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetSubNameInfoListOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientGetUpgradeOrchestrationServiceStateOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientInvokeContainerApiOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientInvokeInfrastructureCommandOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientInvokeInfrastructureQueryOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientMovePrimaryReplicaOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientMoveSecondaryReplicaOptionalParams
+  - '@azure/servicefabric.models.index.d.ServiceFabricClientOptions'
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientPostChaosScheduleOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientProvisionApplicationTypeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientProvisionClusterOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientPutPropertyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRecoverAllPartitionsOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRecoverPartitionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRecoverServicePartitionsOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRecoverSystemPartitionsOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRemoveComposeDeploymentOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRemoveConfigurationOverridesOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRemoveNodeStateOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRemoveReplicaOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportApplicationHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportClusterHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportDeployedApplicationHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportDeployedServicePackageHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportNodeHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportPartitionHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportReplicaHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientReportServiceHealthOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResetPartitionLoadOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResolveServiceOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRestartDeployedCodePackageOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRestartNodeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRestartReplicaOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRestorePartitionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResumeApplicationBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResumeApplicationUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResumeClusterUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResumePartitionBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientResumeServiceBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRollbackApplicationUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientRollbackClusterUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientSetUpgradeOrchestrationServiceStateOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartApplicationUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartChaosOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartClusterConfigurationUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartClusterUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartComposeDeploymentUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartDataLossOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartNodeTransitionOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartPartitionRestartOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartQuorumLossOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStartRollbackComposeDeploymentUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientStopChaosOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientSubmitPropertyBatchOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientSuspendApplicationBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientSuspendPartitionBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientSuspendServiceBackupOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUnprovisionApplicationTypeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUnprovisionClusterOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUpdateApplicationUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUpdateBackupPolicyOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUpdateClusterUpgradeOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUpdateServiceOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUploadFileChunkOptionalParams
+  - >-
+    @azure/servicefabric.models.index.d.ServiceFabricClientUploadFileOptionalParams
+  - '@azure/servicefabric.models.index.d.ServiceFromTemplateDescription'
+  - '@azure/servicefabric.models.index.d.ServiceHealth'
+  - '@azure/servicefabric.models.index.d.ServiceHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.ServiceHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.ServiceHealthState'
+  - '@azure/servicefabric.models.index.d.ServiceHealthStateChunk'
+  - '@azure/servicefabric.models.index.d.ServiceHealthStateChunkList'
+  - '@azure/servicefabric.models.index.d.ServiceHealthStateFilter'
+  - '@azure/servicefabric.models.index.d.ServiceIdentity'
+  - '@azure/servicefabric.models.index.d.ServiceInfo'
+  - '@azure/servicefabric.models.index.d.ServiceLoadMetricDescription'
+  - '@azure/servicefabric.models.index.d.ServiceNameInfo'
+  - '@azure/servicefabric.models.index.d.ServiceNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.ServicePartitionInfo'
+  - >-
+    @azure/servicefabric.models.index.d.ServicePlacementInvalidDomainPolicyDescription
+  - >-
+    @azure/servicefabric.models.index.d.ServicePlacementNonPartiallyPlaceServicePolicyDescription
+  - '@azure/servicefabric.models.index.d.ServicePlacementPolicyDescription'
+  - >-
+    @azure/servicefabric.models.index.d.ServicePlacementPreferPrimaryDomainPolicyDescription
+  - >-
+    @azure/servicefabric.models.index.d.ServicePlacementRequiredDomainPolicyDescription
+  - >-
+    @azure/servicefabric.models.index.d.ServicePlacementRequireDomainDistributionPolicyDescription
+  - '@azure/servicefabric.models.index.d.ServiceProperties'
+  - '@azure/servicefabric.models.index.d.ServiceReplicaDescription'
+  - '@azure/servicefabric.models.index.d.ServiceReplicaProperties'
+  - '@azure/servicefabric.models.index.d.ServiceResourceDescription'
+  - '@azure/servicefabric.models.index.d.ServicesHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.ServiceTypeDescription'
+  - '@azure/servicefabric.models.index.d.ServiceTypeExtensionDescription'
+  - '@azure/servicefabric.models.index.d.ServiceTypeHealthPolicy'
+  - '@azure/servicefabric.models.index.d.ServiceTypeHealthPolicyMapItem'
+  - '@azure/servicefabric.models.index.d.ServiceTypeInfo'
+  - '@azure/servicefabric.models.index.d.ServiceTypeManifest'
+  - '@azure/servicefabric.models.index.d.ServiceUpdateDescription'
+  - '@azure/servicefabric.models.index.d.ServiceUpgradeProgress'
+  - '@azure/servicefabric.models.index.d.Setting'
+  - '@azure/servicefabric.models.index.d.SingletonPartitionInformation'
+  - '@azure/servicefabric.models.index.d.SingletonPartitionSchemeDescription'
+  - '@azure/servicefabric.models.index.d.StartClusterUpgradeDescription'
+  - '@azure/servicefabric.models.index.d.StartedChaosEvent'
+  - '@azure/servicefabric.models.index.d.StatefulReplicaHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.StatefulReplicaNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.StatefulServiceDescription'
+  - '@azure/servicefabric.models.index.d.StatefulServiceInfo'
+  - '@azure/servicefabric.models.index.d.StatefulServicePartitionInfo'
+  - '@azure/servicefabric.models.index.d.StatefulServiceReplicaHealth'
+  - '@azure/servicefabric.models.index.d.StatefulServiceReplicaHealthState'
+  - '@azure/servicefabric.models.index.d.StatefulServiceReplicaInfo'
+  - '@azure/servicefabric.models.index.d.StatefulServiceTypeDescription'
+  - '@azure/servicefabric.models.index.d.StatefulServiceUpdateDescription'
+  - '@azure/servicefabric.models.index.d.StatelessReplicaHealthReportExpiredEvent'
+  - '@azure/servicefabric.models.index.d.StatelessReplicaNewHealthReportEvent'
+  - '@azure/servicefabric.models.index.d.StatelessServiceDescription'
+  - '@azure/servicefabric.models.index.d.StatelessServiceInfo'
+  - '@azure/servicefabric.models.index.d.StatelessServiceInstanceHealth'
+  - '@azure/servicefabric.models.index.d.StatelessServiceInstanceHealthState'
+  - '@azure/servicefabric.models.index.d.StatelessServiceInstanceInfo'
+  - '@azure/servicefabric.models.index.d.StatelessServicePartitionInfo'
+  - '@azure/servicefabric.models.index.d.StatelessServiceTypeDescription'
+  - '@azure/servicefabric.models.index.d.StatelessServiceUpdateDescription'
+  - '@azure/servicefabric.models.index.d.StoppedChaosEvent'
+  - '@azure/servicefabric.models.index.d.StringPropertyValue'
+  - '@azure/servicefabric.models.index.d.SuccessfulPropertyBatchInfo'
+  - '@azure/servicefabric.models.index.d.SystemApplicationHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.TcpConfig'
+  - '@azure/servicefabric.models.index.d.TestErrorChaosEvent'
+  - '@azure/servicefabric.models.index.d.TimeBasedBackupScheduleDescription'
+  - '@azure/servicefabric.models.index.d.TimeOfDay'
+  - '@azure/servicefabric.models.index.d.TimeRange'
+  - >-
+    @azure/servicefabric.models.index.d.UniformInt64RangePartitionSchemeDescription
+  - '@azure/servicefabric.models.index.d.UnplacedReplicaInformation'
+  - >-
+    @azure/servicefabric.models.index.d.UnprovisionApplicationTypeDescriptionInfo
+  - '@azure/servicefabric.models.index.d.UnprovisionFabricDescription'
+  - '@azure/servicefabric.models.index.d.UpdateClusterUpgradeDescription'
+  - >-
+    @azure/servicefabric.models.index.d.UpgradeDomainDeltaNodesCheckHealthEvaluation
+  - '@azure/servicefabric.models.index.d.UpgradeDomainInfo'
+  - '@azure/servicefabric.models.index.d.UpgradeDomainNodesHealthEvaluation'
+  - '@azure/servicefabric.models.index.d.UpgradeOrchestrationServiceState'
+  - '@azure/servicefabric.models.index.d.UpgradeOrchestrationServiceStateSummary'
+  - '@azure/servicefabric.models.index.d.UploadChunkRange'
+  - '@azure/servicefabric.models.index.d.UploadSession'
+  - '@azure/servicefabric.models.index.d.UploadSessionInfo'
+  - '@azure/servicefabric.models.index.d.UsageInfo'
+  - '@azure/servicefabric.models.index.d.ValidationFailedChaosEvent'
+  - '@azure/servicefabric.models.index.d.VolumeProviderParametersAzureFile'
+  - '@azure/servicefabric.models.index.d.VolumeReference'
+  - '@azure/servicefabric.models.index.d.VolumeResourceDescription'
+  - '@azure/servicefabric.models.index.d.WaitForInbuildReplicaSafetyCheck'
+  - '@azure/servicefabric.models.index.d.WaitForPrimaryPlacementSafetyCheck'
+  - '@azure/servicefabric.models.index.d.WaitForPrimarySwapSafetyCheck'
+  - '@azure/servicefabric.models.index.d.WaitForReconfigurationSafetyCheck'
+  - '@azure/servicefabric.models.index.d.WaitingChaosEvent'
 typeAliases:
-  - '@azure/servicefabric.ApplicationDefinitionKind'
-  - '@azure/servicefabric.ApplicationEventUnion'
-  - '@azure/servicefabric.ApplicationPackageCleanupPolicy'
-  - '@azure/servicefabric.ApplicationResourceUpgradeState'
-  - '@azure/servicefabric.ApplicationScopedVolumeCreationParametersUnion'
-  - '@azure/servicefabric.ApplicationScopedVolumeKind'
-  - '@azure/servicefabric.ApplicationStatus'
-  - '@azure/servicefabric.ApplicationTypeDefinitionKind'
-  - '@azure/servicefabric.ApplicationTypeStatus'
-  - '@azure/servicefabric.AutoScalingMechanismKind'
-  - '@azure/servicefabric.AutoScalingMechanismUnion'
-  - '@azure/servicefabric.AutoScalingMetricKind'
-  - '@azure/servicefabric.AutoScalingMetricUnion'
-  - '@azure/servicefabric.AutoScalingResourceMetricName'
-  - '@azure/servicefabric.AutoScalingTriggerKind'
-  - '@azure/servicefabric.AutoScalingTriggerUnion'
-  - '@azure/servicefabric.BackupConfigurationInfoUnion'
-  - '@azure/servicefabric.BackupEntityKind'
-  - '@azure/servicefabric.BackupEntityUnion'
-  - '@azure/servicefabric.BackupPolicyScope'
-  - '@azure/servicefabric.BackupScheduleDescriptionUnion'
-  - '@azure/servicefabric.BackupScheduleFrequencyType'
-  - '@azure/servicefabric.BackupScheduleKind'
-  - '@azure/servicefabric.BackupState'
-  - '@azure/servicefabric.BackupStorageDescriptionUnion'
-  - '@azure/servicefabric.BackupStorageKind'
-  - '@azure/servicefabric.BackupSuspensionScope'
-  - '@azure/servicefabric.BackupType'
-  - '@azure/servicefabric.CancelRepairTaskResponse'
-  - '@azure/servicefabric.ChaosEventKind'
-  - '@azure/servicefabric.ChaosEventUnion'
-  - '@azure/servicefabric.ChaosScheduleStatus'
-  - '@azure/servicefabric.ChaosStatus'
-  - '@azure/servicefabric.ClusterEventUnion'
-  - '@azure/servicefabric.ComposeDeploymentStatus'
-  - '@azure/servicefabric.ComposeDeploymentUpgradeState'
-  - '@azure/servicefabric.CreateFabricDump'
-  - '@azure/servicefabric.CreateRepairTaskResponse'
-  - '@azure/servicefabric.DataLossMode'
-  - '@azure/servicefabric.DayOfWeek'
-  - '@azure/servicefabric.DeactivationIntent'
-  - '@azure/servicefabric.DeployedApplicationStatus'
-  - '@azure/servicefabric.DeployedServiceReplicaDetailInfoUnion'
-  - '@azure/servicefabric.DeployedServiceReplicaInfoUnion'
-  - '@azure/servicefabric.DeploymentStatus'
-  - '@azure/servicefabric.DiagnosticsSinkKind'
-  - '@azure/servicefabric.DiagnosticsSinkPropertiesUnion'
-  - '@azure/servicefabric.EntityKind'
-  - '@azure/servicefabric.EntryPointStatus'
-  - '@azure/servicefabric.EnvironmentVariableType'
-  - '@azure/servicefabric.ExecutionPolicyType'
-  - '@azure/servicefabric.ExecutionPolicyUnion'
-  - '@azure/servicefabric.FabricErrorCodes'
-  - '@azure/servicefabric.FabricEventKind'
-  - '@azure/servicefabric.FabricEventUnion'
-  - '@azure/servicefabric.FabricReplicaStatus'
-  - '@azure/servicefabric.FailureAction'
-  - '@azure/servicefabric.FailureReason'
-  - '@azure/servicefabric.ForceApproveRepairTaskResponse'
-  - '@azure/servicefabric.GetAadMetadataResponse'
-  - '@azure/servicefabric.GetAllEntitiesBackedUpByPolicyResponse'
-  - '@azure/servicefabric.GetApplicationBackupConfigurationInfoResponse'
-  - '@azure/servicefabric.GetApplicationBackupListResponse'
-  - '@azure/servicefabric.GetApplicationEventListResponse'
-  - '@azure/servicefabric.GetApplicationHealthResponse'
-  - '@azure/servicefabric.GetApplicationHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetApplicationInfoListResponse'
-  - '@azure/servicefabric.GetApplicationInfoResponse'
-  - '@azure/servicefabric.GetApplicationLoadInfoResponse'
-  - '@azure/servicefabric.GetApplicationManifestResponse'
-  - '@azure/servicefabric.GetApplicationNameInfoResponse'
-  - '@azure/servicefabric.GetApplicationTypeInfoListByNameResponse'
-  - '@azure/servicefabric.GetApplicationTypeInfoListResponse'
-  - '@azure/servicefabric.GetApplicationUpgradeResponse'
-  - '@azure/servicefabric.GetApplicationsEventListResponse'
-  - '@azure/servicefabric.GetBackupPolicyByNameResponse'
-  - '@azure/servicefabric.GetBackupPolicyListResponse'
-  - '@azure/servicefabric.GetBackupsFromBackupLocationResponse'
-  - '@azure/servicefabric.GetChaosEventsResponse'
-  - '@azure/servicefabric.GetChaosResponse'
-  - '@azure/servicefabric.GetChaosScheduleResponse'
-  - '@azure/servicefabric.GetClusterConfigurationResponse'
-  - '@azure/servicefabric.GetClusterConfigurationUpgradeStatusResponse'
-  - '@azure/servicefabric.GetClusterEventListResponse'
-  - '@azure/servicefabric.GetClusterHealthChunkResponse'
+  - '@azure/servicefabric.models.index.d.ApplicationDefinitionKind'
+  - '@azure/servicefabric.models.index.d.ApplicationEventUnion'
+  - '@azure/servicefabric.models.index.d.ApplicationPackageCleanupPolicy'
+  - '@azure/servicefabric.models.index.d.ApplicationResourceUpgradeState'
   - >-
-    @azure/servicefabric.GetClusterHealthChunkUsingPolicyAndAdvancedFiltersResponse
-  - '@azure/servicefabric.GetClusterHealthResponse'
-  - '@azure/servicefabric.GetClusterHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetClusterLoadResponse'
-  - '@azure/servicefabric.GetClusterManifestResponse'
-  - '@azure/servicefabric.GetClusterUpgradeProgressResponse'
-  - '@azure/servicefabric.GetClusterVersionResponse'
-  - '@azure/servicefabric.GetComposeDeploymentStatusListResponse'
-  - '@azure/servicefabric.GetComposeDeploymentStatusResponse'
-  - '@azure/servicefabric.GetComposeDeploymentUpgradeProgressResponse'
-  - '@azure/servicefabric.GetConfigurationOverridesResponse'
-  - '@azure/servicefabric.GetContainerLogsDeployedOnNodeResponse'
-  - '@azure/servicefabric.GetContainersEventListResponse'
-  - '@azure/servicefabric.GetCorrelatedEventListResponse'
-  - '@azure/servicefabric.GetDataLossProgressResponse'
-  - '@azure/servicefabric.GetDeployedApplicationHealthResponse'
-  - '@azure/servicefabric.GetDeployedApplicationHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetDeployedApplicationInfoListResponse'
-  - '@azure/servicefabric.GetDeployedApplicationInfoResponse'
-  - '@azure/servicefabric.GetDeployedCodePackageInfoListResponse'
-  - '@azure/servicefabric.GetDeployedServicePackageHealthResponse'
-  - '@azure/servicefabric.GetDeployedServicePackageHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetDeployedServicePackageInfoListByNameResponse'
-  - '@azure/servicefabric.GetDeployedServicePackageInfoListResponse'
+    @azure/servicefabric.models.index.d.ApplicationScopedVolumeCreationParametersUnion
+  - '@azure/servicefabric.models.index.d.ApplicationScopedVolumeKind'
+  - '@azure/servicefabric.models.index.d.ApplicationStatus'
+  - '@azure/servicefabric.models.index.d.ApplicationTypeDefinitionKind'
+  - '@azure/servicefabric.models.index.d.ApplicationTypeStatus'
+  - '@azure/servicefabric.models.index.d.AutoScalingMechanismKind'
+  - '@azure/servicefabric.models.index.d.AutoScalingMechanismUnion'
+  - '@azure/servicefabric.models.index.d.AutoScalingMetricKind'
+  - '@azure/servicefabric.models.index.d.AutoScalingMetricUnion'
+  - '@azure/servicefabric.models.index.d.AutoScalingResourceMetricName'
+  - '@azure/servicefabric.models.index.d.AutoScalingTriggerKind'
+  - '@azure/servicefabric.models.index.d.AutoScalingTriggerUnion'
+  - '@azure/servicefabric.models.index.d.BackupConfigurationInfoUnion'
+  - '@azure/servicefabric.models.index.d.BackupEntityKind'
+  - '@azure/servicefabric.models.index.d.BackupEntityUnion'
+  - '@azure/servicefabric.models.index.d.BackupPolicyScope'
+  - '@azure/servicefabric.models.index.d.BackupScheduleDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.BackupScheduleFrequencyType'
+  - '@azure/servicefabric.models.index.d.BackupScheduleKind'
+  - '@azure/servicefabric.models.index.d.BackupState'
+  - '@azure/servicefabric.models.index.d.BackupStorageDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.BackupStorageKind'
+  - '@azure/servicefabric.models.index.d.BackupSuspensionScope'
+  - '@azure/servicefabric.models.index.d.BackupType'
+  - '@azure/servicefabric.models.index.d.CancelRepairTaskResponse'
+  - '@azure/servicefabric.models.index.d.ChaosEventKind'
+  - '@azure/servicefabric.models.index.d.ChaosEventUnion'
+  - '@azure/servicefabric.models.index.d.ChaosScheduleStatus'
+  - '@azure/servicefabric.models.index.d.ChaosStatus'
+  - '@azure/servicefabric.models.index.d.ClusterEventUnion'
+  - '@azure/servicefabric.models.index.d.ComposeDeploymentStatus'
+  - '@azure/servicefabric.models.index.d.ComposeDeploymentUpgradeState'
+  - '@azure/servicefabric.models.index.d.CreateFabricDump'
+  - '@azure/servicefabric.models.index.d.CreateRepairTaskResponse'
+  - '@azure/servicefabric.models.index.d.DataLossMode'
+  - '@azure/servicefabric.models.index.d.DayOfWeek'
+  - '@azure/servicefabric.models.index.d.DeactivationIntent'
+  - '@azure/servicefabric.models.index.d.DeployedApplicationStatus'
+  - '@azure/servicefabric.models.index.d.DeployedServiceReplicaDetailInfoUnion'
+  - '@azure/servicefabric.models.index.d.DeployedServiceReplicaInfoUnion'
+  - '@azure/servicefabric.models.index.d.DeploymentStatus'
+  - '@azure/servicefabric.models.index.d.DiagnosticsSinkKind'
+  - '@azure/servicefabric.models.index.d.DiagnosticsSinkPropertiesUnion'
+  - '@azure/servicefabric.models.index.d.EntityKind'
+  - '@azure/servicefabric.models.index.d.EntryPointStatus'
+  - '@azure/servicefabric.models.index.d.EnvironmentVariableType'
+  - '@azure/servicefabric.models.index.d.ExecutionPolicyType'
+  - '@azure/servicefabric.models.index.d.ExecutionPolicyUnion'
+  - '@azure/servicefabric.models.index.d.FabricErrorCodes'
+  - '@azure/servicefabric.models.index.d.FabricEventKind'
+  - '@azure/servicefabric.models.index.d.FabricEventUnion'
+  - '@azure/servicefabric.models.index.d.FabricReplicaStatus'
+  - '@azure/servicefabric.models.index.d.FailureAction'
+  - '@azure/servicefabric.models.index.d.FailureReason'
+  - '@azure/servicefabric.models.index.d.ForceApproveRepairTaskResponse'
+  - '@azure/servicefabric.models.index.d.GetAadMetadataResponse'
+  - '@azure/servicefabric.models.index.d.GetAllEntitiesBackedUpByPolicyResponse'
   - >-
-    @azure/servicefabric.GetDeployedServiceReplicaDetailInfoByPartitionIdResponse
-  - '@azure/servicefabric.GetDeployedServiceReplicaDetailInfoResponse'
-  - '@azure/servicefabric.GetDeployedServiceReplicaInfoListResponse'
-  - '@azure/servicefabric.GetDeployedServiceTypeInfoByNameResponse'
-  - '@azure/servicefabric.GetDeployedServiceTypeInfoListResponse'
-  - '@azure/servicefabric.GetFaultOperationListResponse'
-  - '@azure/servicefabric.GetImageStoreContentResponse'
-  - '@azure/servicefabric.GetImageStoreFolderSizeResponse'
-  - '@azure/servicefabric.GetImageStoreInfoResponse'
-  - '@azure/servicefabric.GetImageStoreRootContentResponse'
-  - '@azure/servicefabric.GetImageStoreRootFolderSizeResponse'
-  - '@azure/servicefabric.GetImageStoreUploadSessionByIdResponse'
-  - '@azure/servicefabric.GetImageStoreUploadSessionByPathResponse'
-  - '@azure/servicefabric.GetNodeEventListResponse'
-  - '@azure/servicefabric.GetNodeHealthResponse'
-  - '@azure/servicefabric.GetNodeHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetNodeInfoListResponse'
-  - '@azure/servicefabric.GetNodeInfoResponse'
-  - '@azure/servicefabric.GetNodeLoadInfoResponse'
-  - '@azure/servicefabric.GetNodeTransitionProgressResponse'
-  - '@azure/servicefabric.GetNodesEventListResponse'
-  - '@azure/servicefabric.GetPartitionBackupConfigurationInfoResponse'
-  - '@azure/servicefabric.GetPartitionBackupListResponse'
-  - '@azure/servicefabric.GetPartitionBackupProgressResponse'
-  - '@azure/servicefabric.GetPartitionEventListResponse'
-  - '@azure/servicefabric.GetPartitionHealthResponse'
-  - '@azure/servicefabric.GetPartitionHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetPartitionInfoListResponse'
-  - '@azure/servicefabric.GetPartitionInfoResponse'
-  - '@azure/servicefabric.GetPartitionLoadInformationResponse'
-  - '@azure/servicefabric.GetPartitionReplicaEventListResponse'
-  - '@azure/servicefabric.GetPartitionReplicasEventListResponse'
-  - '@azure/servicefabric.GetPartitionRestartProgressResponse'
-  - '@azure/servicefabric.GetPartitionRestoreProgressResponse'
-  - '@azure/servicefabric.GetPartitionsEventListResponse'
-  - '@azure/servicefabric.GetPropertyInfoListResponse'
-  - '@azure/servicefabric.GetPropertyInfoResponse'
-  - '@azure/servicefabric.GetProvisionedFabricCodeVersionInfoListResponse'
-  - '@azure/servicefabric.GetProvisionedFabricConfigVersionInfoListResponse'
-  - '@azure/servicefabric.GetQuorumLossProgressResponse'
-  - '@azure/servicefabric.GetRepairTaskListResponse'
-  - '@azure/servicefabric.GetReplicaHealthResponse'
-  - '@azure/servicefabric.GetReplicaHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetReplicaInfoListResponse'
-  - '@azure/servicefabric.GetReplicaInfoResponse'
-  - '@azure/servicefabric.GetServiceBackupConfigurationInfoResponse'
-  - '@azure/servicefabric.GetServiceBackupListResponse'
-  - '@azure/servicefabric.GetServiceDescriptionResponse'
-  - '@azure/servicefabric.GetServiceEventListResponse'
-  - '@azure/servicefabric.GetServiceHealthResponse'
-  - '@azure/servicefabric.GetServiceHealthUsingPolicyResponse'
-  - '@azure/servicefabric.GetServiceInfoListResponse'
-  - '@azure/servicefabric.GetServiceInfoResponse'
-  - '@azure/servicefabric.GetServiceManifestResponse'
-  - '@azure/servicefabric.GetServiceNameInfoResponse'
-  - '@azure/servicefabric.GetServiceTypeInfoByNameResponse'
-  - '@azure/servicefabric.GetServiceTypeInfoListResponse'
-  - '@azure/servicefabric.GetServicesEventListResponse'
-  - '@azure/servicefabric.GetSubNameInfoListResponse'
-  - '@azure/servicefabric.GetUnplacedReplicaInformationResponse'
-  - '@azure/servicefabric.GetUpgradeOrchestrationServiceStateResponse'
-  - '@azure/servicefabric.HeaderMatchType'
-  - '@azure/servicefabric.HealthEvaluationKind'
-  - '@azure/servicefabric.HealthEvaluationUnion'
-  - '@azure/servicefabric.HealthState'
-  - '@azure/servicefabric.HostIsolationMode'
-  - '@azure/servicefabric.HostType'
-  - '@azure/servicefabric.ImageRegistryPasswordType'
-  - '@azure/servicefabric.ImpactLevel'
-  - '@azure/servicefabric.InvokeContainerApiResponse'
-  - '@azure/servicefabric.InvokeInfrastructureCommandResponse'
-  - '@azure/servicefabric.InvokeInfrastructureQueryResponse'
-  - '@azure/servicefabric.MeshApplicationCreateOrUpdateResponse'
-  - '@azure/servicefabric.MeshApplicationGetResponse'
-  - '@azure/servicefabric.MeshApplicationGetUpgradeProgressResponse'
-  - '@azure/servicefabric.MeshApplicationListResponse'
-  - '@azure/servicefabric.MeshCodePackageGetContainerLogsResponse'
-  - '@azure/servicefabric.MeshGatewayCreateOrUpdateResponse'
-  - '@azure/servicefabric.MeshGatewayGetResponse'
-  - '@azure/servicefabric.MeshGatewayListResponse'
-  - '@azure/servicefabric.MeshNetworkCreateOrUpdateResponse'
-  - '@azure/servicefabric.MeshNetworkGetResponse'
-  - '@azure/servicefabric.MeshNetworkListResponse'
-  - '@azure/servicefabric.MeshSecretCreateOrUpdateResponse'
-  - '@azure/servicefabric.MeshSecretGetResponse'
-  - '@azure/servicefabric.MeshSecretListResponse'
-  - '@azure/servicefabric.MeshSecretValueAddValueResponse'
-  - '@azure/servicefabric.MeshSecretValueGetResponse'
-  - '@azure/servicefabric.MeshSecretValueListResponse'
-  - '@azure/servicefabric.MeshSecretValueShowResponse'
-  - '@azure/servicefabric.MeshServiceGetResponse'
-  - '@azure/servicefabric.MeshServiceListResponse'
-  - '@azure/servicefabric.MeshServiceReplicaGetResponse'
-  - '@azure/servicefabric.MeshServiceReplicaListResponse'
-  - '@azure/servicefabric.MeshVolumeCreateOrUpdateResponse'
-  - '@azure/servicefabric.MeshVolumeGetResponse'
-  - '@azure/servicefabric.MeshVolumeListResponse'
-  - '@azure/servicefabric.MoveCost'
-  - '@azure/servicefabric.NetworkKind'
-  - '@azure/servicefabric.NetworkResourcePropertiesBaseUnion'
-  - '@azure/servicefabric.NetworkResourcePropertiesUnion'
-  - '@azure/servicefabric.NodeDeactivationIntent'
-  - '@azure/servicefabric.NodeDeactivationStatus'
-  - '@azure/servicefabric.NodeDeactivationTaskType'
-  - '@azure/servicefabric.NodeEventUnion'
-  - '@azure/servicefabric.NodeStatus'
-  - '@azure/servicefabric.NodeStatusFilter'
-  - '@azure/servicefabric.NodeTransitionType'
-  - '@azure/servicefabric.NodeUpgradePhase'
-  - '@azure/servicefabric.OperatingSystemType'
-  - '@azure/servicefabric.OperationState'
-  - '@azure/servicefabric.OperationType'
-  - '@azure/servicefabric.PackageSharingPolicyScope'
-  - '@azure/servicefabric.PartitionAccessStatus'
-  - '@azure/servicefabric.PartitionAnalysisEventUnion'
-  - '@azure/servicefabric.PartitionEventUnion'
-  - '@azure/servicefabric.PartitionInformationUnion'
-  - '@azure/servicefabric.PartitionSafetyCheckUnion'
-  - '@azure/servicefabric.PartitionScheme'
-  - '@azure/servicefabric.PartitionSchemeDescriptionUnion'
-  - '@azure/servicefabric.PropertyBatchInfoKind'
-  - '@azure/servicefabric.PropertyBatchInfoUnion'
-  - '@azure/servicefabric.PropertyBatchOperationKind'
-  - '@azure/servicefabric.PropertyBatchOperationUnion'
-  - '@azure/servicefabric.PropertyValueKind'
-  - '@azure/servicefabric.PropertyValueUnion'
-  - '@azure/servicefabric.ProvisionApplicationTypeDescriptionBaseUnion'
-  - '@azure/servicefabric.ProvisionApplicationTypeKind'
-  - '@azure/servicefabric.QuorumLossMode'
-  - '@azure/servicefabric.ReconfigurationPhase'
-  - '@azure/servicefabric.ReconfigurationType'
-  - '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
-  - '@azure/servicefabric.RepairImpactKind'
-  - '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
-  - '@azure/servicefabric.RepairTargetKind'
-  - '@azure/servicefabric.RepairTaskHealthCheckState'
-  - '@azure/servicefabric.ReplicaEventUnion'
-  - '@azure/servicefabric.ReplicaHealthReportServiceKind'
-  - '@azure/servicefabric.ReplicaHealthStateUnion'
-  - '@azure/servicefabric.ReplicaHealthUnion'
-  - '@azure/servicefabric.ReplicaInfoUnion'
-  - '@azure/servicefabric.ReplicaKind'
-  - '@azure/servicefabric.ReplicaRole'
-  - '@azure/servicefabric.ReplicaStatus'
-  - '@azure/servicefabric.ReplicaStatusBaseUnion'
-  - '@azure/servicefabric.ReplicatorOperationName'
-  - '@azure/servicefabric.ReplicatorStatusUnion'
-  - '@azure/servicefabric.ResolveServiceResponse'
-  - '@azure/servicefabric.ResourceStatus'
-  - '@azure/servicefabric.RestartPartitionMode'
-  - '@azure/servicefabric.RestartPolicy'
-  - '@azure/servicefabric.RestoreState'
-  - '@azure/servicefabric.ResultStatus'
-  - '@azure/servicefabric.RetentionPolicyDescriptionUnion'
-  - '@azure/servicefabric.RetentionPolicyType'
-  - '@azure/servicefabric.RollingUpgradeMode'
-  - '@azure/servicefabric.SafetyCheckKind'
-  - '@azure/servicefabric.SafetyCheckUnion'
-  - '@azure/servicefabric.ScalingMechanismDescriptionUnion'
-  - '@azure/servicefabric.ScalingMechanismKind'
-  - '@azure/servicefabric.ScalingTriggerDescriptionUnion'
-  - '@azure/servicefabric.ScalingTriggerKind'
-  - '@azure/servicefabric.Scheme'
-  - '@azure/servicefabric.SecondaryReplicatorStatusUnion'
-  - '@azure/servicefabric.SecretKind'
-  - '@azure/servicefabric.SecretResourcePropertiesBaseUnion'
-  - '@azure/servicefabric.SecretResourcePropertiesUnion'
-  - '@azure/servicefabric.ServiceCorrelationScheme'
-  - '@azure/servicefabric.ServiceDescriptionUnion'
-  - '@azure/servicefabric.ServiceEndpointRole'
-  - '@azure/servicefabric.ServiceEventUnion'
-  - '@azure/servicefabric.ServiceInfoUnion'
-  - '@azure/servicefabric.ServiceKind'
-  - '@azure/servicefabric.ServiceLoadMetricWeight'
-  - '@azure/servicefabric.ServiceOperationName'
-  - '@azure/servicefabric.ServicePackageActivationMode'
-  - '@azure/servicefabric.ServicePartitionInfoUnion'
-  - '@azure/servicefabric.ServicePartitionKind'
-  - '@azure/servicefabric.ServicePartitionStatus'
-  - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion'
-  - '@azure/servicefabric.ServicePlacementPolicyType'
-  - '@azure/servicefabric.ServiceStatus'
-  - '@azure/servicefabric.ServiceTypeDescriptionUnion'
-  - '@azure/servicefabric.ServiceTypeRegistrationStatus'
-  - '@azure/servicefabric.ServiceUpdateDescriptionUnion'
-  - '@azure/servicefabric.SetUpgradeOrchestrationServiceStateResponse'
-  - '@azure/servicefabric.SettingType'
-  - '@azure/servicefabric.SizeTypes'
-  - '@azure/servicefabric.State'
-  - '@azure/servicefabric.SubmitPropertyBatchResponse'
-  - '@azure/servicefabric.UpdateRepairExecutionStateResponse'
-  - '@azure/servicefabric.UpdateRepairTaskHealthPolicyResponse'
-  - '@azure/servicefabric.UpgradeDomainState'
-  - '@azure/servicefabric.UpgradeKind'
-  - '@azure/servicefabric.UpgradeMode'
-  - '@azure/servicefabric.UpgradeSortOrder'
-  - '@azure/servicefabric.UpgradeState'
-  - '@azure/servicefabric.UpgradeType'
-  - '@azure/servicefabric.VolumeProvider'
+    @azure/servicefabric.models.index.d.GetApplicationBackupConfigurationInfoResponse
+  - '@azure/servicefabric.models.index.d.GetApplicationBackupListResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationHealthResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationHealthUsingPolicyResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationLoadInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationManifestResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationNameInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationsEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationTypeInfoListByNameResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationTypeInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetApplicationUpgradeResponse'
+  - '@azure/servicefabric.models.index.d.GetBackupPolicyByNameResponse'
+  - '@azure/servicefabric.models.index.d.GetBackupPolicyListResponse'
+  - '@azure/servicefabric.models.index.d.GetBackupsFromBackupLocationResponse'
+  - '@azure/servicefabric.models.index.d.GetChaosEventsResponse'
+  - '@azure/servicefabric.models.index.d.GetChaosResponse'
+  - '@azure/servicefabric.models.index.d.GetChaosScheduleResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterConfigurationResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetClusterConfigurationUpgradeStatusResponse
+  - '@azure/servicefabric.models.index.d.GetClusterEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterHealthChunkResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetClusterHealthChunkUsingPolicyAndAdvancedFiltersResponse
+  - '@azure/servicefabric.models.index.d.GetClusterHealthResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterHealthUsingPolicyResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterLoadResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterManifestResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterUpgradeProgressResponse'
+  - '@azure/servicefabric.models.index.d.GetClusterVersionResponse'
+  - '@azure/servicefabric.models.index.d.GetComposeDeploymentStatusListResponse'
+  - '@azure/servicefabric.models.index.d.GetComposeDeploymentStatusResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetComposeDeploymentUpgradeProgressResponse
+  - '@azure/servicefabric.models.index.d.GetConfigurationOverridesResponse'
+  - '@azure/servicefabric.models.index.d.GetContainerLogsDeployedOnNodeResponse'
+  - '@azure/servicefabric.models.index.d.GetContainersEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetCorrelatedEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetDataLossProgressResponse'
+  - '@azure/servicefabric.models.index.d.GetDeployedApplicationHealthResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedApplicationHealthUsingPolicyResponse
+  - '@azure/servicefabric.models.index.d.GetDeployedApplicationInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetDeployedApplicationInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetDeployedCodePackageInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetDeployedServicePackageHealthResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedServicePackageHealthUsingPolicyResponse
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedServicePackageInfoListByNameResponse
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedServicePackageInfoListResponse
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedServiceReplicaDetailInfoByPartitionIdResponse
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedServiceReplicaDetailInfoResponse
+  - >-
+    @azure/servicefabric.models.index.d.GetDeployedServiceReplicaInfoListResponse
+  - '@azure/servicefabric.models.index.d.GetDeployedServiceTypeInfoByNameResponse'
+  - '@azure/servicefabric.models.index.d.GetDeployedServiceTypeInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetFaultOperationListResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreContentResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreFolderSizeResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreRootContentResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreRootFolderSizeResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreUploadSessionByIdResponse'
+  - '@azure/servicefabric.models.index.d.GetImageStoreUploadSessionByPathResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeHealthResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeHealthUsingPolicyResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeLoadInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetNodesEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetNodeTransitionProgressResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetPartitionBackupConfigurationInfoResponse
+  - '@azure/servicefabric.models.index.d.GetPartitionBackupListResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionBackupProgressResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionHealthResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionHealthUsingPolicyResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionLoadInformationResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionReplicaEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionReplicasEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionRestartProgressResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionRestoreProgressResponse'
+  - '@azure/servicefabric.models.index.d.GetPartitionsEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetPropertyInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetPropertyInfoResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetProvisionedFabricCodeVersionInfoListResponse
+  - >-
+    @azure/servicefabric.models.index.d.GetProvisionedFabricConfigVersionInfoListResponse
+  - '@azure/servicefabric.models.index.d.GetQuorumLossProgressResponse'
+  - '@azure/servicefabric.models.index.d.GetRepairTaskListResponse'
+  - '@azure/servicefabric.models.index.d.GetReplicaHealthResponse'
+  - '@azure/servicefabric.models.index.d.GetReplicaHealthUsingPolicyResponse'
+  - '@azure/servicefabric.models.index.d.GetReplicaInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetReplicaInfoResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetServiceBackupConfigurationInfoResponse
+  - '@azure/servicefabric.models.index.d.GetServiceBackupListResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceDescriptionResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceHealthResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceHealthUsingPolicyResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceManifestResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceNameInfoResponse'
+  - '@azure/servicefabric.models.index.d.GetServicesEventListResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceTypeInfoByNameResponse'
+  - '@azure/servicefabric.models.index.d.GetServiceTypeInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetSubNameInfoListResponse'
+  - '@azure/servicefabric.models.index.d.GetUnplacedReplicaInformationResponse'
+  - >-
+    @azure/servicefabric.models.index.d.GetUpgradeOrchestrationServiceStateResponse
+  - '@azure/servicefabric.models.index.d.HeaderMatchType'
+  - '@azure/servicefabric.models.index.d.HealthEvaluationKind'
+  - '@azure/servicefabric.models.index.d.HealthEvaluationUnion'
+  - '@azure/servicefabric.models.index.d.HealthState'
+  - '@azure/servicefabric.models.index.d.HostIsolationMode'
+  - '@azure/servicefabric.models.index.d.HostType'
+  - '@azure/servicefabric.models.index.d.ImageRegistryPasswordType'
+  - '@azure/servicefabric.models.index.d.ImpactLevel'
+  - '@azure/servicefabric.models.index.d.InvokeContainerApiResponse'
+  - '@azure/servicefabric.models.index.d.InvokeInfrastructureCommandResponse'
+  - '@azure/servicefabric.models.index.d.InvokeInfrastructureQueryResponse'
+  - '@azure/servicefabric.models.index.d.MeshApplicationCreateOrUpdateResponse'
+  - '@azure/servicefabric.models.index.d.MeshApplicationGetResponse'
+  - >-
+    @azure/servicefabric.models.index.d.MeshApplicationGetUpgradeProgressResponse
+  - '@azure/servicefabric.models.index.d.MeshApplicationListResponse'
+  - '@azure/servicefabric.models.index.d.MeshCodePackageGetContainerLogsResponse'
+  - '@azure/servicefabric.models.index.d.MeshGatewayCreateOrUpdateResponse'
+  - '@azure/servicefabric.models.index.d.MeshGatewayGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshGatewayListResponse'
+  - '@azure/servicefabric.models.index.d.MeshNetworkCreateOrUpdateResponse'
+  - '@azure/servicefabric.models.index.d.MeshNetworkGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshNetworkListResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretCreateOrUpdateResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretListResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretValueAddValueResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretValueGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretValueListResponse'
+  - '@azure/servicefabric.models.index.d.MeshSecretValueShowResponse'
+  - '@azure/servicefabric.models.index.d.MeshServiceGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshServiceListResponse'
+  - '@azure/servicefabric.models.index.d.MeshServiceReplicaGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshServiceReplicaListResponse'
+  - '@azure/servicefabric.models.index.d.MeshVolumeCreateOrUpdateResponse'
+  - '@azure/servicefabric.models.index.d.MeshVolumeGetResponse'
+  - '@azure/servicefabric.models.index.d.MeshVolumeListResponse'
+  - '@azure/servicefabric.models.index.d.MoveCost'
+  - '@azure/servicefabric.models.index.d.NetworkKind'
+  - '@azure/servicefabric.models.index.d.NetworkResourcePropertiesBaseUnion'
+  - '@azure/servicefabric.models.index.d.NetworkResourcePropertiesUnion'
+  - '@azure/servicefabric.models.index.d.NodeDeactivationIntent'
+  - '@azure/servicefabric.models.index.d.NodeDeactivationStatus'
+  - '@azure/servicefabric.models.index.d.NodeDeactivationTaskType'
+  - '@azure/servicefabric.models.index.d.NodeEventUnion'
+  - '@azure/servicefabric.models.index.d.NodeStatus'
+  - '@azure/servicefabric.models.index.d.NodeStatusFilter'
+  - '@azure/servicefabric.models.index.d.NodeTransitionType'
+  - '@azure/servicefabric.models.index.d.NodeUpgradePhase'
+  - '@azure/servicefabric.models.index.d.OperatingSystemType'
+  - '@azure/servicefabric.models.index.d.OperationState'
+  - '@azure/servicefabric.models.index.d.OperationType'
+  - '@azure/servicefabric.models.index.d.PackageSharingPolicyScope'
+  - '@azure/servicefabric.models.index.d.PartitionAccessStatus'
+  - '@azure/servicefabric.models.index.d.PartitionAnalysisEventUnion'
+  - '@azure/servicefabric.models.index.d.PartitionEventUnion'
+  - '@azure/servicefabric.models.index.d.PartitionInformationUnion'
+  - '@azure/servicefabric.models.index.d.PartitionSafetyCheckUnion'
+  - '@azure/servicefabric.models.index.d.PartitionScheme'
+  - '@azure/servicefabric.models.index.d.PartitionSchemeDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.PropertyBatchInfoKind'
+  - '@azure/servicefabric.models.index.d.PropertyBatchInfoUnion'
+  - '@azure/servicefabric.models.index.d.PropertyBatchOperationKind'
+  - '@azure/servicefabric.models.index.d.PropertyBatchOperationUnion'
+  - '@azure/servicefabric.models.index.d.PropertyValueKind'
+  - '@azure/servicefabric.models.index.d.PropertyValueUnion'
+  - >-
+    @azure/servicefabric.models.index.d.ProvisionApplicationTypeDescriptionBaseUnion
+  - '@azure/servicefabric.models.index.d.ProvisionApplicationTypeKind'
+  - '@azure/servicefabric.models.index.d.QuorumLossMode'
+  - '@azure/servicefabric.models.index.d.ReconfigurationPhase'
+  - '@azure/servicefabric.models.index.d.ReconfigurationType'
+  - '@azure/servicefabric.models.index.d.RepairImpactDescriptionBaseUnion'
+  - '@azure/servicefabric.models.index.d.RepairImpactKind'
+  - '@azure/servicefabric.models.index.d.RepairTargetDescriptionBaseUnion'
+  - '@azure/servicefabric.models.index.d.RepairTargetKind'
+  - '@azure/servicefabric.models.index.d.RepairTaskHealthCheckState'
+  - '@azure/servicefabric.models.index.d.ReplicaEventUnion'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthReportServiceKind'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthStateUnion'
+  - '@azure/servicefabric.models.index.d.ReplicaHealthUnion'
+  - '@azure/servicefabric.models.index.d.ReplicaInfoUnion'
+  - '@azure/servicefabric.models.index.d.ReplicaKind'
+  - '@azure/servicefabric.models.index.d.ReplicaRole'
+  - '@azure/servicefabric.models.index.d.ReplicaStatus'
+  - '@azure/servicefabric.models.index.d.ReplicaStatusBaseUnion'
+  - '@azure/servicefabric.models.index.d.ReplicatorOperationName'
+  - '@azure/servicefabric.models.index.d.ReplicatorStatusUnion'
+  - '@azure/servicefabric.models.index.d.ResolveServiceResponse'
+  - '@azure/servicefabric.models.index.d.ResourceStatus'
+  - '@azure/servicefabric.models.index.d.RestartPartitionMode'
+  - '@azure/servicefabric.models.index.d.RestartPolicy'
+  - '@azure/servicefabric.models.index.d.RestoreState'
+  - '@azure/servicefabric.models.index.d.ResultStatus'
+  - '@azure/servicefabric.models.index.d.RetentionPolicyDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.RetentionPolicyType'
+  - '@azure/servicefabric.models.index.d.RollingUpgradeMode'
+  - '@azure/servicefabric.models.index.d.SafetyCheckKind'
+  - '@azure/servicefabric.models.index.d.SafetyCheckUnion'
+  - '@azure/servicefabric.models.index.d.ScalingMechanismDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.ScalingMechanismKind'
+  - '@azure/servicefabric.models.index.d.ScalingTriggerDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.ScalingTriggerKind'
+  - '@azure/servicefabric.models.index.d.Scheme'
+  - '@azure/servicefabric.models.index.d.SecondaryReplicatorStatusUnion'
+  - '@azure/servicefabric.models.index.d.SecretKind'
+  - '@azure/servicefabric.models.index.d.SecretResourcePropertiesBaseUnion'
+  - '@azure/servicefabric.models.index.d.SecretResourcePropertiesUnion'
+  - '@azure/servicefabric.models.index.d.ServiceCorrelationScheme'
+  - '@azure/servicefabric.models.index.d.ServiceDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.ServiceEndpointRole'
+  - '@azure/servicefabric.models.index.d.ServiceEventUnion'
+  - '@azure/servicefabric.models.index.d.ServiceInfoUnion'
+  - '@azure/servicefabric.models.index.d.ServiceKind'
+  - '@azure/servicefabric.models.index.d.ServiceLoadMetricWeight'
+  - '@azure/servicefabric.models.index.d.ServiceOperationName'
+  - '@azure/servicefabric.models.index.d.ServicePackageActivationMode'
+  - '@azure/servicefabric.models.index.d.ServicePartitionInfoUnion'
+  - '@azure/servicefabric.models.index.d.ServicePartitionKind'
+  - '@azure/servicefabric.models.index.d.ServicePartitionStatus'
+  - '@azure/servicefabric.models.index.d.ServicePlacementPolicyDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.ServicePlacementPolicyType'
+  - '@azure/servicefabric.models.index.d.ServiceStatus'
+  - '@azure/servicefabric.models.index.d.ServiceTypeDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.ServiceTypeRegistrationStatus'
+  - '@azure/servicefabric.models.index.d.ServiceUpdateDescriptionUnion'
+  - '@azure/servicefabric.models.index.d.SettingType'
+  - >-
+    @azure/servicefabric.models.index.d.SetUpgradeOrchestrationServiceStateResponse
+  - '@azure/servicefabric.models.index.d.SizeTypes'
+  - '@azure/servicefabric.models.index.d.State'
+  - '@azure/servicefabric.models.index.d.SubmitPropertyBatchResponse'
+  - '@azure/servicefabric.models.index.d.UpdateRepairExecutionStateResponse'
+  - '@azure/servicefabric.models.index.d.UpdateRepairTaskHealthPolicyResponse'
+  - '@azure/servicefabric.models.index.d.UpgradeDomainState'
+  - '@azure/servicefabric.models.index.d.UpgradeKind'
+  - '@azure/servicefabric.models.index.d.UpgradeMode'
+  - '@azure/servicefabric.models.index.d.UpgradeSortOrder'
+  - '@azure/servicefabric.models.index.d.UpgradeState'
+  - '@azure/servicefabric.models.index.d.UpgradeType'
+  - '@azure/servicefabric.models.index.d.VolumeProvider'
 classes:
-  - '@azure/servicefabric.MeshApplication'
-  - '@azure/servicefabric.MeshCodePackage'
-  - '@azure/servicefabric.MeshGateway'
-  - '@azure/servicefabric.MeshNetwork'
-  - '@azure/servicefabric.MeshSecret'
-  - '@azure/servicefabric.MeshSecretValue'
-  - '@azure/servicefabric.MeshService'
-  - '@azure/servicefabric.MeshServiceReplica'
-  - '@azure/servicefabric.MeshVolume'
-  - '@azure/servicefabric.ServiceFabricClient'
-  - '@azure/servicefabric.ServiceFabricClientContext'
+  - '@azure/servicefabric.operations.meshApplication.d.MeshApplication'
+  - '@azure/servicefabric.operations.meshCodePackage.d.MeshCodePackage'
+  - '@azure/servicefabric.operations.meshGateway.d.MeshGateway'
+  - '@azure/servicefabric.operations.meshNetwork.d.MeshNetwork'
+  - '@azure/servicefabric.operations.meshSecret.d.MeshSecret'
+  - '@azure/servicefabric.operations.meshSecretValue.d.MeshSecretValue'
+  - '@azure/servicefabric.operations.meshService.d.MeshService'
+  - '@azure/servicefabric.operations.meshServiceReplica.d.MeshServiceReplica'
+  - '@azure/servicefabric.operations.meshVolume.d.MeshVolume'
+  - '@azure/servicefabric.serviceFabricClient.d.ServiceFabricClient'
+  - '@azure/servicefabric.serviceFabricClientContext.d.ServiceFabricClientContext'

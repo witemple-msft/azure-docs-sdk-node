@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: UsageModelsResult
-uid: '@azure/arm-storagecache.UsageModelsResult'
+uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult'
 package: '@azure/arm-storagecache'
 summary: ''
 fullName: UsageModelsResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storagecache.UsageModelsResult.Array'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.Array'
     package: '@azure/arm-storagecache'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storagecache.UsageModelsResult.length'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.length'
     package: '@azure/arm-storagecache'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-storagecache.UsageModelsResult.nextLink'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.nextLink'
     package: '@azure/arm-storagecache'
     summary: The URI to fetch the next page of Cache usage models.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<UsageModel>[])'
-    uid: '@azure/arm-storagecache.UsageModelsResult.concat'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.concat'
     package: '@azure/arm-storagecache'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-storagecache.UsageModel"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storagecache.models.index.d.UsageModel" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storagecache.UsageModelsResult.concat_1'
+  - name: 'concat(UsageModel | ConcatArray<UsageModel>[])'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.concat_1'
     package: '@azure/arm-storagecache'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: UsageModel | ConcatArray<UsageModel>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storagecache.models.index.d.UsageModel" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.copyWithin'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.copyWithin'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storagecache.UsageModelsResult.entries'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.entries'
     package: '@azure/arm-storagecache'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +143,7 @@ methods:
   - name: >-
       every((value: UsageModel, index: number, array: UsageModel[]) => unknown,
       any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.every'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.every_1'
     package: '@azure/arm-storagecache'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +151,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: UsageModel, index: number, array:
+        function every(predicate: (value: UsageModel, index: number, array:
         UsageModel[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageModel, index: number, array: UsageModel[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: UsageModel, index: number, array: UsageModel[]) => value,
+      any)
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.every'
+    package: '@azure/arm-storagecache'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: UsageModel, index: number, array:
+        UsageModel[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: UsageModel, index: number, array: UsageModel[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(UsageModel, undefined | number, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.fill'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.fill'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +227,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storagecache.UsageModel" />
+          type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +249,7 @@ methods:
   - name: >-
       filter((value: UsageModel, index: number, array: UsageModel[]) => unknown,
       any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.filter_1'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.filter_1'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +259,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: UsageModel, index: number, array:
+        function filter(predicate: (value: UsageModel, index: number, array:
         UsageModel[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageModel, index: number, array: UsageModel[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
   - name: >-
       filter<S>((value: UsageModel, index: number, array: UsageModel[]) =>
-      boolean, any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.filter'
+      value, any)
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.filter'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +291,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: UsageModel, index: number, array:
-        UsageModel[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: UsageModel, index: number, array:
+        UsageModel[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: UsageModel, index: number, array: UsageModel[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: UsageModel, index: number, array: UsageModel[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +311,7 @@ methods:
   - name: >-
       find((value: UsageModel, index: number, obj: UsageModel[]) => unknown,
       any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.find_1'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.find_1'
     package: '@azure/arm-storagecache'
     summary: ''
     remarks: ''
@@ -289,12 +329,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: UsageModel, index: number, obj: UsageModel[])
-      => boolean, any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.find'
+      => value, any)
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.find'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -307,12 +349,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: UsageModel, index:
-        number, obj: UsageModel[]) => boolean, thisArg?: any)
+        number, obj: UsageModel[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: UsageModel, index: number, obj: UsageModel[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -335,7 +377,7 @@ methods:
   - name: >-
       findIndex((value: UsageModel, index: number, obj: UsageModel[]) =>
       unknown, any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.findIndex'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.findIndex'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -374,7 +416,7 @@ methods:
   - name: >-
       forEach((value: UsageModel, index: number, array: UsageModel[]) => void,
       any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.forEach'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.forEach'
     package: '@azure/arm-storagecache'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -397,7 +439,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(UsageModel, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.includes'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.includes'
     package: '@azure/arm-storagecache'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -411,7 +453,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storagecache.UsageModel" />
+          type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -422,7 +464,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(UsageModel, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.indexOf'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.indexOf'
     package: '@azure/arm-storagecache'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -434,7 +476,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storagecache.UsageModel" />
+          type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -445,7 +487,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storagecache.UsageModelsResult.join'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.join'
     package: '@azure/arm-storagecache'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -466,7 +508,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storagecache.UsageModelsResult.keys'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.keys'
     package: '@azure/arm-storagecache'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -478,7 +520,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(UsageModel, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.lastIndexOf'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.lastIndexOf'
     package: '@azure/arm-storagecache'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -490,7 +532,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storagecache.UsageModel" />
+          type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -501,7 +543,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: UsageModel, index: number, array: UsageModel[]) => U, any)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.map'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.map'
     package: '@azure/arm-storagecache'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -529,7 +571,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storagecache.UsageModelsResult.pop'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.pop'
     package: '@azure/arm-storagecache'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -538,10 +580,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" /> |
+          undefined
         description: ''
   - name: 'push(UsageModel[])'
-    uid: '@azure/arm-storagecache.UsageModelsResult.push'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.push'
     package: '@azure/arm-storagecache'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -551,7 +595,7 @@ methods:
       content: 'function push(items: UsageModel[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+          type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
           description: |
             New elements of the Array.
       return:
@@ -560,7 +604,7 @@ methods:
   - name: >-
       reduce((previousValue: UsageModel, currentValue: UsageModel, currentIndex:
       number, array: UsageModel[]) => UsageModel)
-    uid: '@azure/arm-storagecache.UsageModelsResult.reduce'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reduce'
     package: '@azure/arm-storagecache'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,12 +627,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" />
+        type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
         description: ''
   - name: >-
       reduce((previousValue: UsageModel, currentValue: UsageModel, currentIndex:
       number, array: UsageModel[]) => UsageModel, UsageModel)
-    uid: '@azure/arm-storagecache.UsageModelsResult.reduce_1'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reduce_1'
     package: '@azure/arm-storagecache'
     summary: ''
     remarks: ''
@@ -606,15 +650,15 @@ methods:
             number, array: UsageModel[]) =&gt; UsageModel
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storagecache.UsageModel" />
+          type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" />
+        type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: UsageModel, currentIndex:
       number, array: UsageModel[]) => U, U)
-    uid: '@azure/arm-storagecache.UsageModelsResult.reduce_2'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reduce_2'
     package: '@azure/arm-storagecache'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -649,7 +693,7 @@ methods:
   - name: >-
       reduceRight((previousValue: UsageModel, currentValue: UsageModel,
       currentIndex: number, array: UsageModel[]) => UsageModel)
-    uid: '@azure/arm-storagecache.UsageModelsResult.reduceRight'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reduceRight'
     package: '@azure/arm-storagecache'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -674,12 +718,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" />
+        type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
         description: ''
   - name: >-
       reduceRight((previousValue: UsageModel, currentValue: UsageModel,
       currentIndex: number, array: UsageModel[]) => UsageModel, UsageModel)
-    uid: '@azure/arm-storagecache.UsageModelsResult.reduceRight_1'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reduceRight_1'
     package: '@azure/arm-storagecache'
     summary: ''
     remarks: ''
@@ -697,15 +741,15 @@ methods:
             number, array: UsageModel[]) =&gt; UsageModel
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storagecache.UsageModel" />
+          type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" />
+        type: <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: UsageModel, currentIndex:
       number, array: UsageModel[]) => U, U)
-    uid: '@azure/arm-storagecache.UsageModelsResult.reduceRight_2'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reduceRight_2'
     package: '@azure/arm-storagecache'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -739,7 +783,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storagecache.UsageModelsResult.reverse'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.reverse'
     package: '@azure/arm-storagecache'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -748,10 +792,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-storagecache.UsageModelsResult.shift'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.shift'
     package: '@azure/arm-storagecache'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -760,10 +804,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-storagecache.UsageModel" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storagecache.models.index.d.UsageModel" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.slice'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.slice'
     package: '@azure/arm-storagecache'
     summary: Returns a section of an array.
     remarks: ''
@@ -777,15 +823,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
   - name: >-
       some((value: UsageModel, index: number, array: UsageModel[]) => unknown,
       any)
-    uid: '@azure/arm-storagecache.UsageModelsResult.some'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.some'
     package: '@azure/arm-storagecache'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -795,28 +842,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: UsageModel, index: number, array:
+        function some(predicate: (value: UsageModel, index: number, array:
         UsageModel[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: UsageModel, index: number, array: UsageModel[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: UsageModel, b: UsageModel) => number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.sort'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.sort'
     package: '@azure/arm-storagecache'
     summary: Sorts an array.
     remarks: ''
@@ -830,14 +882,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: UsageModel, b: UsageModel) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, UsageModel[])'
-    uid: '@azure/arm-storagecache.UsageModelsResult.splice_1'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.splice_1'
     package: '@azure/arm-storagecache'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -857,14 +920,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+          type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storagecache.UsageModelsResult.splice'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.splice'
     package: '@azure/arm-storagecache'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -885,10 +948,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+        type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storagecache.UsageModelsResult.toLocaleString'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.toLocaleString'
     package: '@azure/arm-storagecache'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -902,7 +965,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storagecache.UsageModelsResult.toString'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.toString'
     package: '@azure/arm-storagecache'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -914,7 +977,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(UsageModel[])'
-    uid: '@azure/arm-storagecache.UsageModelsResult.unshift'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.unshift'
     package: '@azure/arm-storagecache'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -924,14 +987,14 @@ methods:
       content: 'function unshift(items: UsageModel[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storagecache.UsageModel" />[]'
+          type: '<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storagecache.UsageModelsResult.values'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.values'
     package: '@azure/arm-storagecache'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -941,7 +1004,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-storagecache.UsageModel"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storagecache.models.index.d.UsageModel" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storagecache.UsageModel" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-storagecache.models.index.d.UsageModelsResult.[Symbol.iterator]'
+    package: '@azure/arm-storagecache'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storagecache.models.index.d.UsageModel" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-storagecache.models.index.d.UsageModelsResult.[Symbol.unscopables]
+    package: '@azure/arm-storagecache'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-storagecache.models.index.d.ApiOperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-storagecache.models.index.d.UsageModel" />&gt;

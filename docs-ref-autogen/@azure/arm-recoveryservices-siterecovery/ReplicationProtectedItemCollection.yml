@@ -1,6 +1,7 @@
 ### YamlMime:TSType
 name: ReplicationProtectedItemCollection
-uid: '@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection'
+uid: >-
+  @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection
 package: '@azure/arm-recoveryservices-siterecovery'
 summary: ''
 fullName: ReplicationProtectedItemCollection
@@ -11,7 +12,7 @@ type: interface
 properties:
   - name: Array
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.Array
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.Array
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: Array
@@ -25,7 +26,7 @@ properties:
         description: ''
   - name: length
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.length
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.length
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -41,7 +42,7 @@ properties:
         description: ''
   - name: nextLink
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.nextLink
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.nextLink
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: nextLink
@@ -56,7 +57,7 @@ properties:
 methods:
   - name: 'concat(ConcatArray<ReplicationProtectedItem>[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.concat
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.concat
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,40 +69,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
+  - name: 'concat(ReplicationProtectedItem | ConcatArray<ReplicationProtectedItem>[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.concat_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.concat_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: ReplicationProtectedItem |
+        ConcatArray<ReplicationProtectedItem>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.copyWithin
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.copyWithin
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -140,7 +148,7 @@ methods:
         description: ''
   - name: entries()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.entries
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.entries
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -155,7 +163,7 @@ methods:
       every((value: ReplicationProtectedItem, index: number, array:
       ReplicationProtectedItem[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.every
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.every_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -163,29 +171,73 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ReplicationProtectedItem, index:
+        function every(predicate: (value: ReplicationProtectedItem, index:
         number, array: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ReplicationProtectedItem, index: number, array:
             ReplicationProtectedItem[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ReplicationProtectedItem, index: number, array:
+      ReplicationProtectedItem[]) => value, any)
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.every
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ReplicationProtectedItem, index:
+        number, array: ReplicationProtectedItem[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ReplicationProtectedItem, index: number, array:
+            ReplicationProtectedItem[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ReplicationProtectedItem, undefined | number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.fill
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.fill
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -201,7 +253,7 @@ methods:
         - id: value
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />
           description: value to fill array section with
         - id: start
@@ -225,7 +277,7 @@ methods:
       filter((value: ReplicationProtectedItem, index: number, array:
       ReplicationProtectedItem[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.filter_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,34 +287,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ReplicationProtectedItem, index:
+        function filter(predicate: (value: ReplicationProtectedItem, index:
         number, array: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ReplicationProtectedItem, index: number, array:
             ReplicationProtectedItem[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
   - name: >-
       filter<S>((value: ReplicationProtectedItem, index: number, array:
-      ReplicationProtectedItem[]) => boolean, any)
+      ReplicationProtectedItem[]) => value, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.filter
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.filter
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -272,21 +323,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ReplicationProtectedItem, index:
-        number, array: ReplicationProtectedItem[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ReplicationProtectedItem, index:
+        number, array: ReplicationProtectedItem[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ReplicationProtectedItem, index: number, array:
-            ReplicationProtectedItem[]) =&gt; boolean
+            ReplicationProtectedItem[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -296,7 +346,7 @@ methods:
       find((value: ReplicationProtectedItem, index: number, obj:
       ReplicationProtectedItem[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.find_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.find_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -318,14 +368,14 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ReplicationProtectedItem, index: number, obj:
-      ReplicationProtectedItem[]) => boolean, any)
+      ReplicationProtectedItem[]) => value, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.find
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.find
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -339,12 +389,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         ReplicationProtectedItem, index: number, obj:
-        ReplicationProtectedItem[]) => boolean, thisArg?: any)
+        ReplicationProtectedItem[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ReplicationProtectedItem, index: number, obj:
-            ReplicationProtectedItem[]) =&gt; boolean
+            ReplicationProtectedItem[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -368,7 +418,7 @@ methods:
       findIndex((value: ReplicationProtectedItem, index: number, obj:
       ReplicationProtectedItem[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.findIndex
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.findIndex
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -410,7 +460,7 @@ methods:
       forEach((value: ReplicationProtectedItem, index: number, array:
       ReplicationProtectedItem[]) => void, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.forEach
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.forEach
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -436,7 +486,7 @@ methods:
             value.
   - name: 'includes(ReplicationProtectedItem, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.includes
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.includes
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -452,7 +502,7 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />
           description: The element to search for.
         - id: fromIndex
@@ -465,7 +515,7 @@ methods:
         description: ''
   - name: 'indexOf(ReplicationProtectedItem, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.indexOf
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.indexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -479,7 +529,7 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />
           description: The value to locate in the array.
         - id: fromIndex
@@ -492,7 +542,7 @@ methods:
         description: ''
   - name: join(undefined | string)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.join
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.join
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -514,7 +564,7 @@ methods:
         description: ''
   - name: keys()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.keys
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.keys
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -527,7 +577,7 @@ methods:
         description: ''
   - name: 'lastIndexOf(ReplicationProtectedItem, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.lastIndexOf
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.lastIndexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -541,7 +591,7 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />
           description: The value to locate in the array.
         - id: fromIndex
@@ -556,7 +606,7 @@ methods:
       map<U>((value: ReplicationProtectedItem, index: number, array:
       ReplicationProtectedItem[]) => U, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.map
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.map
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -587,7 +637,7 @@ methods:
         description: ''
   - name: pop()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.pop
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.pop
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -598,12 +648,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           /> | undefined
         description: ''
   - name: 'push(ReplicationProtectedItem[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.push
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.push
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -615,7 +665,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />[]
           description: |
             New elements of the Array.
@@ -627,7 +677,7 @@ methods:
       ReplicationProtectedItem, currentIndex: number, array:
       ReplicationProtectedItem[]) => ReplicationProtectedItem)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduce
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reduce
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -654,7 +704,7 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />
         description: ''
   - name: >-
@@ -663,7 +713,7 @@ methods:
       ReplicationProtectedItem[]) => ReplicationProtectedItem,
       ReplicationProtectedItem)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduce_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reduce_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -685,20 +735,20 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ReplicationProtectedItem,
       currentIndex: number, array: ReplicationProtectedItem[]) => U, U)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduce_2
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reduce_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -735,7 +785,7 @@ methods:
       ReplicationProtectedItem, currentIndex: number, array:
       ReplicationProtectedItem[]) => ReplicationProtectedItem)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduceRight
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reduceRight
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +814,7 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />
         description: ''
   - name: >-
@@ -773,7 +823,7 @@ methods:
       ReplicationProtectedItem[]) => ReplicationProtectedItem,
       ReplicationProtectedItem)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduceRight_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reduceRight_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -795,20 +845,20 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ReplicationProtectedItem,
       currentIndex: number, array: ReplicationProtectedItem[]) => U, U)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reduceRight_2
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reduceRight_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -843,7 +893,7 @@ methods:
         description: ''
   - name: reverse()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.reverse
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.reverse
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -854,12 +904,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
   - name: shift()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.shift
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.shift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -870,12 +920,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.slice
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.slice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a section of an array.
     remarks: ''
@@ -889,19 +939,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
   - name: >-
       some((value: ReplicationProtectedItem, index: number, array:
       ReplicationProtectedItem[]) => unknown, any)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.some
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.some
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -911,23 +962,28 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ReplicationProtectedItem, index:
+        function some(predicate: (value: ReplicationProtectedItem, index:
         number, array: ReplicationProtectedItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ReplicationProtectedItem, index: number, array:
             ReplicationProtectedItem[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
@@ -935,7 +991,7 @@ methods:
       sort(undefined | (a: ReplicationProtectedItem, b:
       ReplicationProtectedItem) => number)
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.sort
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.sort
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Sorts an array.
     remarks: ''
@@ -951,15 +1007,26 @@ methods:
             undefined | (a: ReplicationProtectedItem, b:
             ReplicationProtectedItem) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ReplicationProtectedItem[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.splice_1
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.splice_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -983,19 +1050,19 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
   - name: 'splice(number, undefined | number)'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.splice
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.splice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -1018,12 +1085,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />[]
         description: ''
   - name: toLocaleString()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.toLocaleString
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.toLocaleString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -1038,7 +1105,7 @@ methods:
         description: ''
   - name: toString()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.toString
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.toString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -1051,7 +1118,7 @@ methods:
         description: ''
   - name: 'unshift(ReplicationProtectedItem[])'
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.unshift
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.unshift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -1063,7 +1130,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -1072,7 +1139,7 @@ methods:
         description: ''
   - name: values()
     uid: >-
-      @azure/arm-recoveryservices-siterecovery.ReplicationProtectedItemCollection.values
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.values
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1083,9 +1150,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem"
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
           />&gt;
         description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.[Symbol.iterator]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItemCollection.[Symbol.unscopables]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
 extends: >-
-  Array&lt;<xref
-  uid="@azure/arm-recoveryservices-siterecovery.ReplicationProtectedItem" />&gt;
+  <xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.OperationsDiscoveryCollection.Array"
+  />&lt;<xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.ReplicationProtectedItem"
+  />&gt;

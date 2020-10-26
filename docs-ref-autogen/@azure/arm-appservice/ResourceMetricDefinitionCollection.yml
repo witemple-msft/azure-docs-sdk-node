@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ResourceMetricDefinitionCollection
-uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection'
+uid: '@azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: ResourceMetricDefinitionCollection
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.Array'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.Array
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.length'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.length
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.nextLink'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.nextLink
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +59,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<ResourceMetricDefinition>[])'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.concat'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.concat
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +72,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-appservice.ResourceMetricDefinition" />&gt;[]
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.concat_1'
+  - name: 'concat(ResourceMetricDefinition | ConcatArray<ResourceMetricDefinition>[])'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.concat_1
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: ResourceMetricDefinition |
+        ConcatArray<ResourceMetricDefinition>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.copyWithin'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.copyWithin
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +150,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.entries'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.entries
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +165,8 @@ methods:
   - name: >-
       every((value: ResourceMetricDefinition, index: number, array:
       ResourceMetricDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.every'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.every_1
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +174,73 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ResourceMetricDefinition, index:
+        function every(predicate: (value: ResourceMetricDefinition, index:
         number, array: ResourceMetricDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ResourceMetricDefinition, index: number, array:
             ResourceMetricDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ResourceMetricDefinition, index: number, array:
+      ResourceMetricDefinition[]) => value, any)
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.every
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ResourceMetricDefinition, index:
+        number, array: ResourceMetricDefinition[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ResourceMetricDefinition, index: number, array:
+            ResourceMetricDefinition[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ResourceMetricDefinition, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.fill'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.fill
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +254,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +279,8 @@ methods:
   - name: >-
       filter((value: ResourceMetricDefinition, index: number, array:
       ResourceMetricDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.filter_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.filter_1
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +290,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ResourceMetricDefinition, index:
+        function filter(predicate: (value: ResourceMetricDefinition, index:
         number, array: ResourceMetricDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ResourceMetricDefinition, index: number, array:
             ResourceMetricDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: ResourceMetricDefinition, index: number, array:
-      ResourceMetricDefinition[]) => boolean, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.filter'
+      ResourceMetricDefinition[]) => value, any)
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.filter
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +326,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ResourceMetricDefinition, index:
-        number, array: ResourceMetricDefinition[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ResourceMetricDefinition, index:
+        number, array: ResourceMetricDefinition[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ResourceMetricDefinition, index: number, array:
-            ResourceMetricDefinition[]) =&gt; boolean
+            ResourceMetricDefinition[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +348,8 @@ methods:
   - name: >-
       find((value: ResourceMetricDefinition, index: number, obj:
       ResourceMetricDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.find_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.find_1
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -296,13 +370,15 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-appservice.ResourceMetricDefinition" /> |
-          undefined
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ResourceMetricDefinition, index: number, obj:
-      ResourceMetricDefinition[]) => boolean, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.find'
+      ResourceMetricDefinition[]) => value, any)
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.find
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -316,12 +392,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         ResourceMetricDefinition, index: number, obj:
-        ResourceMetricDefinition[]) => boolean, thisArg?: any)
+        ResourceMetricDefinition[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ResourceMetricDefinition, index: number, obj:
-            ResourceMetricDefinition[]) =&gt; boolean
+            ResourceMetricDefinition[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -344,7 +420,8 @@ methods:
   - name: >-
       findIndex((value: ResourceMetricDefinition, index: number, obj:
       ResourceMetricDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.findIndex'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.findIndex
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -385,7 +462,8 @@ methods:
   - name: >-
       forEach((value: ResourceMetricDefinition, index: number, array:
       ResourceMetricDefinition[]) => void, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.forEach'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.forEach
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -410,7 +488,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ResourceMetricDefinition, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.includes'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.includes
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -424,7 +503,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +517,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ResourceMetricDefinition, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.indexOf'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.indexOf
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -447,7 +530,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +544,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.join'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.join
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -479,7 +566,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.keys'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.keys
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -491,7 +579,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ResourceMetricDefinition, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.lastIndexOf
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -503,7 +592,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -516,7 +608,8 @@ methods:
   - name: >-
       map<U>((value: ResourceMetricDefinition, index: number, array:
       ResourceMetricDefinition[]) => U, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.map'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.map
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -546,7 +639,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.pop'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.pop
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -556,11 +650,13 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-appservice.ResourceMetricDefinition" /> |
-          undefined
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
+          | undefined
         description: ''
   - name: 'push(ResourceMetricDefinition[])'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.push'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.push
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -570,7 +666,10 @@ methods:
       content: 'function push(items: ResourceMetricDefinition[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -580,7 +679,8 @@ methods:
       reduce((previousValue: ResourceMetricDefinition, currentValue:
       ResourceMetricDefinition, currentIndex: number, array:
       ResourceMetricDefinition[]) => ResourceMetricDefinition)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reduce'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reduce
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -605,14 +705,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
         description: ''
   - name: >-
       reduce((previousValue: ResourceMetricDefinition, currentValue:
       ResourceMetricDefinition, currentIndex: number, array:
       ResourceMetricDefinition[]) => ResourceMetricDefinition,
       ResourceMetricDefinition)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reduce_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reduce_1
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -632,15 +735,21 @@ methods:
             ResourceMetricDefinition[]) =&gt; ResourceMetricDefinition
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ResourceMetricDefinition,
       currentIndex: number, array: ResourceMetricDefinition[]) => U, U)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reduce_2'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reduce_2
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -676,7 +785,8 @@ methods:
       reduceRight((previousValue: ResourceMetricDefinition, currentValue:
       ResourceMetricDefinition, currentIndex: number, array:
       ResourceMetricDefinition[]) => ResourceMetricDefinition)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reduceRight'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reduceRight
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -703,14 +813,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
         description: ''
   - name: >-
       reduceRight((previousValue: ResourceMetricDefinition, currentValue:
       ResourceMetricDefinition, currentIndex: number, array:
       ResourceMetricDefinition[]) => ResourceMetricDefinition,
       ResourceMetricDefinition)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reduceRight_1
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -730,15 +843,21 @@ methods:
             ResourceMetricDefinition[]) =&gt; ResourceMetricDefinition
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.ResourceMetricDefinition" />
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ResourceMetricDefinition,
       currentIndex: number, array: ResourceMetricDefinition[]) => U, U)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reduceRight_2
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -772,7 +891,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.reverse'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.reverse
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -781,10 +901,14 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.shift'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.shift
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -794,11 +918,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-appservice.ResourceMetricDefinition" /> |
-          undefined
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.slice'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.slice
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -812,15 +938,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
   - name: >-
       some((value: ResourceMetricDefinition, index: number, array:
       ResourceMetricDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.some'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.some
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -830,30 +961,36 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ResourceMetricDefinition, index:
+        function some(predicate: (value: ResourceMetricDefinition, index:
         number, array: ResourceMetricDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ResourceMetricDefinition, index: number, array:
             ResourceMetricDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: ResourceMetricDefinition, b:
       ResourceMetricDefinition) => number)
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.sort'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.sort
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -869,14 +1006,26 @@ methods:
             undefined | (a: ResourceMetricDefinition, b:
             ResourceMetricDefinition) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ResourceMetricDefinition[])'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.splice_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.splice_1
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -898,14 +1047,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.splice'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.splice
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -926,10 +1082,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.toLocaleString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.toLocaleString
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -943,7 +1103,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.toString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.toString
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -955,7 +1116,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ResourceMetricDefinition[])'
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.unshift'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.unshift
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -965,14 +1127,18 @@ methods:
       content: 'function unshift(items: ResourceMetricDefinition[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.ResourceMetricDefinitionCollection.values'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.values
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -983,6 +1149,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-appservice.ResourceMetricDefinition" />&gt;
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.ResourceMetricDefinition" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.ResourceMetricDefinitionCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref
+  uid="@azure/arm-appservice.models.index.d.ResourceMetricDefinition" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: UserList
-uid: '@azure/arm-devtestlabs.UserList'
+uid: '@azure/arm-devtestlabs.models.index.d.UserList'
 package: '@azure/arm-devtestlabs'
 summary: ''
 fullName: UserList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-devtestlabs.UserList.Array'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.Array'
     package: '@azure/arm-devtestlabs'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-devtestlabs.UserList.length'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.length'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-devtestlabs.UserList.nextLink'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.nextLink'
     package: '@azure/arm-devtestlabs'
     summary: Link for next set of results.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<User>[])'
-    uid: '@azure/arm-devtestlabs.UserList.concat'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.concat'
     package: '@azure/arm-devtestlabs'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<User>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-devtestlabs.User" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.User" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-devtestlabs.UserList.concat_1'
+  - name: 'concat(User | ConcatArray<User>[])'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.concat_1'
     package: '@azure/arm-devtestlabs'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: User | ConcatArray<User>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-devtestlabs.models.index.d.User" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.User" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.copyWithin'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.copyWithin'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-devtestlabs.UserList.entries'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.entries'
     package: '@azure/arm-devtestlabs'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: User, index: number, array: User[]) => unknown, any)'
-    uid: '@azure/arm-devtestlabs.UserList.every'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.every_1'
     package: '@azure/arm-devtestlabs'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: User, index: number, array: User[])
-        => unknown, thisArg?: any)
+        function every(predicate: (value: User, index: number, array: User[]) =>
+        unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: User, index: number, array: User[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: User, index: number, array: User[]) => value, any)'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.every'
+    package: '@azure/arm-devtestlabs'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: User, index: number, array: User[])
+        => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: User, index: number, array: User[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(User, undefined | number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.fill'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.fill'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +221,7 @@ methods:
         number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-devtestlabs.User" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -197,7 +241,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: User, index: number, array: User[]) => unknown, any)'
-    uid: '@azure/arm-devtestlabs.UserList.filter_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.filter_1'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -207,26 +251,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: User, index: number, array: User[])
+        function filter(predicate: (value: User, index: number, array: User[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: User, index: number, array: User[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
-  - name: 'filter<S>((value: User, index: number, array: User[]) => boolean, any)'
-    uid: '@azure/arm-devtestlabs.UserList.filter'
+  - name: 'filter<S>((value: User, index: number, array: User[]) => value, any)'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.filter'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -236,26 +279,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: User, index: number, array:
-        User[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: User, index: number, array:
+        User[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: User, index: number, array: User[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: User, index: number, array: User[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: User, index: number, obj: User[]) => unknown, any)'
-    uid: '@azure/arm-devtestlabs.UserList.find_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.find_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -273,12 +315,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" /> | undefined
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" /> | undefined
         description: ''
   - name: >-
-      find<S>((this: void, value: User, index: number, obj: User[]) => boolean,
+      find<S>((this: void, value: User, index: number, obj: User[]) => value,
       any)
-    uid: '@azure/arm-devtestlabs.UserList.find'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.find'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -291,10 +333,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: User, index: number,
-        obj: User[]) => boolean, thisArg?: any)
+        obj: User[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: '(this: void, value: User, index: number, obj: User[]) =&gt; boolean'
+          type: '(this: void, value: User, index: number, obj: User[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -315,7 +357,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: User, index: number, obj: User[]) => unknown, any)'
-    uid: '@azure/arm-devtestlabs.UserList.findIndex'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.findIndex'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -352,7 +394,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: User, index: number, array: User[]) => void, any)'
-    uid: '@azure/arm-devtestlabs.UserList.forEach'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.forEach'
     package: '@azure/arm-devtestlabs'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -375,7 +417,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(User, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.includes'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.includes'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -387,7 +429,7 @@ methods:
       content: 'function includes(searchElement: User, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.User" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -398,7 +440,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(User, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.indexOf'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.indexOf'
     package: '@azure/arm-devtestlabs'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -408,7 +450,7 @@ methods:
       content: 'function indexOf(searchElement: User, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.User" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -419,7 +461,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-devtestlabs.UserList.join'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.join'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -440,7 +482,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-devtestlabs.UserList.keys'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.keys'
     package: '@azure/arm-devtestlabs'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -452,7 +494,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(User, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.lastIndexOf'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.lastIndexOf'
     package: '@azure/arm-devtestlabs'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -464,7 +506,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-devtestlabs.User" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -475,7 +517,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: User, index: number, array: User[]) => U, any)'
-    uid: '@azure/arm-devtestlabs.UserList.map'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.map'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -503,7 +545,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-devtestlabs.UserList.pop'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.pop'
     package: '@azure/arm-devtestlabs'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -512,10 +554,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" /> | undefined
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" /> | undefined
         description: ''
   - name: 'push(User[])'
-    uid: '@azure/arm-devtestlabs.UserList.push'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.push'
     package: '@azure/arm-devtestlabs'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -525,7 +567,7 @@ methods:
       content: 'function push(items: User[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+          type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
           description: |
             New elements of the Array.
       return:
@@ -534,7 +576,7 @@ methods:
   - name: >-
       reduce((previousValue: User, currentValue: User, currentIndex: number,
       array: User[]) => User)
-    uid: '@azure/arm-devtestlabs.UserList.reduce'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reduce'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -557,12 +599,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
         description: ''
   - name: >-
       reduce((previousValue: User, currentValue: User, currentIndex: number,
       array: User[]) => User, User)
-    uid: '@azure/arm-devtestlabs.UserList.reduce_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reduce_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -579,15 +621,15 @@ methods:
             array: User[]) =&gt; User
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-devtestlabs.User" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: User, currentIndex: number,
       array: User[]) => U, U)
-    uid: '@azure/arm-devtestlabs.UserList.reduce_2'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reduce_2'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -621,7 +663,7 @@ methods:
   - name: >-
       reduceRight((previousValue: User, currentValue: User, currentIndex:
       number, array: User[]) => User)
-    uid: '@azure/arm-devtestlabs.UserList.reduceRight'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reduceRight'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -645,12 +687,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
         description: ''
   - name: >-
       reduceRight((previousValue: User, currentValue: User, currentIndex:
       number, array: User[]) => User, User)
-    uid: '@azure/arm-devtestlabs.UserList.reduceRight_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reduceRight_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -667,15 +709,15 @@ methods:
             array: User[]) =&gt; User
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-devtestlabs.User" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" />
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: User, currentIndex:
       number, array: User[]) => U, U)
-    uid: '@azure/arm-devtestlabs.UserList.reduceRight_2'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reduceRight_2'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -708,7 +750,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-devtestlabs.UserList.reverse'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.reverse'
     package: '@azure/arm-devtestlabs'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -717,10 +759,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-devtestlabs.UserList.shift'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.shift'
     package: '@azure/arm-devtestlabs'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -729,10 +771,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-devtestlabs.User" /> | undefined
+        type: <xref uid="@azure/arm-devtestlabs.models.index.d.User" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.slice'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.slice'
     package: '@azure/arm-devtestlabs'
     summary: Returns a section of an array.
     remarks: ''
@@ -746,13 +788,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
   - name: 'some((value: User, index: number, array: User[]) => unknown, any)'
-    uid: '@azure/arm-devtestlabs.UserList.some'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.some'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -762,26 +805,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: User, index: number, array: User[]) =>
+        function some(predicate: (value: User, index: number, array: User[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: User, index: number, array: User[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: User, b: User) => number)'
-    uid: '@azure/arm-devtestlabs.UserList.sort'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.sort'
     package: '@azure/arm-devtestlabs'
     summary: Sorts an array.
     remarks: ''
@@ -793,14 +841,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: User, b: User) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, User[])'
-    uid: '@azure/arm-devtestlabs.UserList.splice_1'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.splice_1'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -820,14 +879,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+          type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-devtestlabs.UserList.splice'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.splice'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -848,10 +907,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+        type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-devtestlabs.UserList.toLocaleString'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.toLocaleString'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -865,7 +924,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-devtestlabs.UserList.toString'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.toString'
     package: '@azure/arm-devtestlabs'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -877,7 +936,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(User[])'
-    uid: '@azure/arm-devtestlabs.UserList.unshift'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.unshift'
     package: '@azure/arm-devtestlabs'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -887,14 +946,14 @@ methods:
       content: 'function unshift(items: User[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-devtestlabs.User" />[]'
+          type: '<xref uid="@azure/arm-devtestlabs.models.index.d.User" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-devtestlabs.UserList.values'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.values'
     package: '@azure/arm-devtestlabs'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -903,6 +962,39 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-devtestlabs.User" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-devtestlabs.models.index.d.User" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-devtestlabs.User" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.[Symbol.iterator]'
+    package: '@azure/arm-devtestlabs'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-devtestlabs.models.index.d.User" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-devtestlabs.models.index.d.UserList.[Symbol.unscopables]'
+    package: '@azure/arm-devtestlabs'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-devtestlabs.models.index.d.ProviderOperationResult.Array"
+  />&lt;<xref uid="@azure/arm-devtestlabs.models.index.d.User" />&gt;

@@ -1,6 +1,7 @@
 ### YamlMime:TSType
 name: WorkItemConfigurations
-uid: '@azure/arm-appinsights.WorkItemConfigurations'
+uid: >-
+  @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations
 package: '@azure/arm-appinsights'
 summary: Class representing a WorkItemConfigurations.
 fullName: WorkItemConfigurations
@@ -10,7 +11,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: WorkItemConfigurations(ApplicationInsightsManagementClientContext)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.constructor'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.constructor
     package: '@azure/arm-appinsights'
     summary: Create a WorkItemConfigurations.
     remarks: ''
@@ -24,7 +26,7 @@ constructors:
         - id: client
           type: >-
             <xref
-            uid="@azure/arm-appinsights.ApplicationInsightsManagementClientContext"
+            uid="@azure/arm-appinsights.applicationInsightsManagementClientContext.d.ApplicationInsightsManagementClientContext"
             />
           description: |
             Reference to the service client.
@@ -32,7 +34,8 @@ methods:
   - name: >-
       create(string, string, WorkItemCreateConfiguration,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.create'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.create
     package: '@azure/arm-appinsights'
     summary: Create a work item configuration for an Application Insights component.
     remarks: ''
@@ -46,12 +49,15 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: workItemConfigurationProperties
-          type: <xref uid="@azure/arm-appinsights.WorkItemCreateConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemCreateConfiguration"
+            />
           description: |-
             Properties that need to be specified to create a work
             item configuration of a Application Insights component.
@@ -66,7 +72,8 @@ methods:
   - name: >-
       create(string, string, WorkItemCreateConfiguration, RequestOptionsBase,
       ServiceCallback<WorkItemConfiguration>)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.create_2'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.create_2
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -80,12 +87,15 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: workItemConfigurationProperties
-          type: <xref uid="@azure/arm-appinsights.WorkItemCreateConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemCreateConfiguration"
+            />
           description: |-
             Properties that need to be specified to create a work
             item configuration of a Application Insights component.
@@ -95,13 +105,15 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.WorkItemConfiguration" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
           description: |
             The callback
   - name: >-
       create(string, string, WorkItemCreateConfiguration,
       ServiceCallback<WorkItemConfiguration>)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.create_1'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.create_1
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -115,25 +127,30 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: workItemConfigurationProperties
-          type: <xref uid="@azure/arm-appinsights.WorkItemCreateConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemCreateConfiguration"
+            />
           description: |-
             Properties that need to be specified to create a work
             item configuration of a Application Insights component.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.WorkItemConfiguration" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.deleteMethod'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.deleteMethod
     package: '@azure/arm-appinsights'
-    summary: Delete an workitem configuration of an Application Insights component.
+    summary: Delete a work item configuration of an Application Insights component.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -144,7 +161,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -159,14 +176,13 @@ methods:
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
       return:
-        type: >-
-          Promise&lt;<xref
-          uid="Models.WorkItemConfigurationsDeleteMethodResponse" />&gt;
-        description: Promise<Models.WorkItemConfigurationsDeleteMethodResponse>
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>
   - name: >-
       deleteMethod(string, string, string, RequestOptionsBase,
-      ServiceCallback<any>)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.deleteMethod_2'
+      ServiceCallback<void>)
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.deleteMethod_2
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -176,11 +192,11 @@ methods:
       content: >-
         function deleteMethod(resourceGroupName: string, resourceName: string,
         workItemConfigId: string, options: RequestOptionsBase, callback:
-        ServiceCallback<any>)
+        ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -195,11 +211,12 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;any&gt;
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-  - name: 'deleteMethod(string, string, string, ServiceCallback<any>)'
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.deleteMethod_1'
+  - name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.deleteMethod_1
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -208,11 +225,11 @@ methods:
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, resourceName: string,
-        workItemConfigId: string, callback: ServiceCallback<any>)
+        workItemConfigId: string, callback: ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -224,11 +241,12 @@ methods:
 
             of connector as defined in connector configuration
         - id: callback
-          type: ServiceCallback&lt;any&gt;
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'getDefault(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.getDefault'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.getDefault
     package: '@azure/arm-appinsights'
     summary: Gets default work item configurations that exist for the application
     remarks: ''
@@ -241,7 +259,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -256,7 +274,8 @@ methods:
   - name: >-
       getDefault(string, string, RequestOptionsBase,
       ServiceCallback<WorkItemConfiguration>)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.getDefault_2'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.getDefault_2
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -270,7 +289,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -280,11 +299,13 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.WorkItemConfiguration" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
           description: |
             The callback
   - name: 'getDefault(string, string, ServiceCallback<WorkItemConfiguration>)'
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.getDefault_1'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.getDefault_1
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -297,18 +318,129 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.WorkItemConfiguration" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
+          description: |
+            The callback
+  - name: 'getItem(string, string, string, msRest.RequestOptionsBase)'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.getItem
+    package: '@azure/arm-appinsights'
+    summary: >-
+      Gets specified work item configuration for an Application Insights
+      component.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getItem(resourceGroupName: string, resourceName: string,
+        workItemConfigId: string, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the Application Insights component resource.
+        - id: workItemConfigId
+          type: string
+          description: >-
+            The unique work item configuration Id. This can be either friendly
+            name
+
+            of connector as defined in connector configuration
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref uid="Models.WorkItemConfigurationsGetItemResponse"
+          />&gt;
+        description: Promise<Models.WorkItemConfigurationsGetItemResponse>
+  - name: >-
+      getItem(string, string, string, RequestOptionsBase,
+      ServiceCallback<WorkItemConfiguration>)
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.getItem_2
+    package: '@azure/arm-appinsights'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getItem(resourceGroupName: string, resourceName: string,
+        workItemConfigId: string, options: RequestOptionsBase, callback:
+        ServiceCallback<WorkItemConfiguration>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the Application Insights component resource.
+        - id: workItemConfigId
+          type: string
+          description: >-
+            The unique work item configuration Id. This can be either friendly
+            name
+
+            of connector as defined in connector configuration
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
+          description: |
+            The callback
+  - name: 'getItem(string, string, string, ServiceCallback<WorkItemConfiguration>)'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.getItem_1
+    package: '@azure/arm-appinsights'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getItem(resourceGroupName: string, resourceName: string,
+        workItemConfigId: string, callback:
+        ServiceCallback<WorkItemConfiguration>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the Application Insights component resource.
+        - id: workItemConfigId
+          type: string
+          description: >-
+            The unique work item configuration Id. This can be either friendly
+            name
+
+            of connector as defined in connector configuration
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
           description: |
             The callback
   - name: 'list(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.list'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.list
     package: '@azure/arm-appinsights'
     summary: Gets the list work item configurations that exist for the application
     remarks: ''
@@ -321,7 +453,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -336,7 +468,8 @@ methods:
   - name: >-
       list(string, string, RequestOptionsBase,
       ServiceCallback<WorkItemConfigurationsListResult>)
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.list_2'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.list_2
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -350,7 +483,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -360,11 +493,13 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.WorkItemConfigurationsListResult" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfigurationsListResult"
+            />&gt;
           description: |
             The callback
   - name: 'list(string, string, ServiceCallback<WorkItemConfigurationsListResult>)'
-    uid: '@azure/arm-appinsights.WorkItemConfigurations.list_1'
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.list_1
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -377,13 +512,152 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.WorkItemConfigurationsListResult" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfigurationsListResult"
+            />&gt;
+          description: |
+            The callback
+  - name: >-
+      updateItem(string, string, string, WorkItemCreateConfiguration,
+      msRest.RequestOptionsBase)
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.updateItem
+    package: '@azure/arm-appinsights'
+    summary: Update a work item configuration for an Application Insights component.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateItem(resourceGroupName: string, resourceName: string,
+        workItemConfigId: string, workItemConfigurationProperties:
+        WorkItemCreateConfiguration, options?: msRest.RequestOptionsBase)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the Application Insights component resource.
+        - id: workItemConfigId
+          type: string
+          description: >-
+            The unique work item configuration Id. This can be either friendly
+            name
+
+            of connector as defined in connector configuration
+        - id: workItemConfigurationProperties
+          type: >-
+            <xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemCreateConfiguration"
+            />
+          description: |-
+            Properties that need to be specified to update a work
+            item configuration for this Application Insights component.
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref uid="Models.WorkItemConfigurationsUpdateItemResponse"
+          />&gt;
+        description: Promise<Models.WorkItemConfigurationsUpdateItemResponse>
+  - name: >-
+      updateItem(string, string, string, WorkItemCreateConfiguration,
+      RequestOptionsBase, ServiceCallback<WorkItemConfiguration>)
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.updateItem_2
+    package: '@azure/arm-appinsights'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateItem(resourceGroupName: string, resourceName: string,
+        workItemConfigId: string, workItemConfigurationProperties:
+        WorkItemCreateConfiguration, options: RequestOptionsBase, callback:
+        ServiceCallback<WorkItemConfiguration>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the Application Insights component resource.
+        - id: workItemConfigId
+          type: string
+          description: >-
+            The unique work item configuration Id. This can be either friendly
+            name
+
+            of connector as defined in connector configuration
+        - id: workItemConfigurationProperties
+          type: >-
+            <xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemCreateConfiguration"
+            />
+          description: |-
+            Properties that need to be specified to update a work
+            item configuration for this Application Insights component.
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
+          description: |
+            The callback
+  - name: >-
+      updateItem(string, string, string, WorkItemCreateConfiguration,
+      ServiceCallback<WorkItemConfiguration>)
+    uid: >-
+      @azure/arm-appinsights.operations.workItemConfigurations.d.WorkItemConfigurations.updateItem_1
+    package: '@azure/arm-appinsights'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateItem(resourceGroupName: string, resourceName: string,
+        workItemConfigId: string, workItemConfigurationProperties:
+        WorkItemCreateConfiguration, callback:
+        ServiceCallback<WorkItemConfiguration>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the Application Insights component resource.
+        - id: workItemConfigId
+          type: string
+          description: >-
+            The unique work item configuration Id. This can be either friendly
+            name
+
+            of connector as defined in connector configuration
+        - id: workItemConfigurationProperties
+          type: >-
+            <xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemCreateConfiguration"
+            />
+          description: |-
+            Properties that need to be specified to update a work
+            item configuration for this Application Insights component.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.WorkItemConfiguration"
+            />&gt;
           description: |
             The callback

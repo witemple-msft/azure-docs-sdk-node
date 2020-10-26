@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RequestPolicyOptions
-uid: '@azure/core-http.RequestPolicyOptions'
+uid: '@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions'
 package: '@azure/core-http'
 summary: Optional properties that can be used when creating a RequestPolicy.
 fullName: RequestPolicyOptions
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: RequestPolicyOptions(HttpPipelineLogger | undefined)
-    uid: '@azure/core-http.RequestPolicyOptions.constructor'
+    uid: '@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions.constructor'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -20,11 +20,13 @@ constructors:
       content: 'new RequestPolicyOptions(_logger?: HttpPipelineLogger | undefined)'
       parameters:
         - id: _logger
-          type: <xref uid="@azure/core-http.HttpPipelineLogger" /> | undefined
+          type: >-
+            <xref uid="@azure/core-http.httpPipelineLogger.d.HttpPipelineLogger"
+            /> | undefined
           description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.RequestPolicyOptions.log'
+    uid: '@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions.log'
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -39,14 +41,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.RequestPolicyOptions.shouldLog'
+    uid: '@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions.shouldLog'
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -56,7 +61,10 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean

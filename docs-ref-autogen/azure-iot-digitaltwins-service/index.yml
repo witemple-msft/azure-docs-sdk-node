@@ -4,139 +4,196 @@ name: azure-iot-digitaltwins-service
 summary: ''
 type: package
 classes:
-  - azure-iot-digitaltwins-service.IoTHubTokenCredentials
-  - azure-iot-digitaltwins-service.DigitalTwinServiceClient
-  - azure-iot-digitaltwins-service.IotHubGatewayServiceAPIsContext
-  - azure-iot-digitaltwins-service.ConfigurationOperations
-  - azure-iot-digitaltwins-service.DeviceMethod
-  - azure-iot-digitaltwins-service.DigitalTwin
-  - azure-iot-digitaltwins-service.FaultInjection
-  - azure-iot-digitaltwins-service.HttpRuntime
-  - azure-iot-digitaltwins-service.JobClient
-  - azure-iot-digitaltwins-service.RegistryManager
-  - azure-iot-digitaltwins-service.TwinOperations
+  - >-
+    azure-iot-digitaltwins-service.auth.iothub_token_credentials.IoTHubTokenCredentials
+  - >-
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinServiceClient
+  - >-
+    azure-iot-digitaltwins-service.pl.iotHubGatewayServiceAPIs.IotHubGatewayServiceAPIs
+  - >-
+    azure-iot-digitaltwins-service.pl.iotHubGatewayServiceAPIsContext.IotHubGatewayServiceAPIsContext
+  - >-
+    azure-iot-digitaltwins-service.pl.operations.configurationOperations.ConfigurationOperations
+  - azure-iot-digitaltwins-service.pl.operations.deviceMethod.DeviceMethod
+  - azure-iot-digitaltwins-service.pl.operations.digitalTwin.DigitalTwin
+  - azure-iot-digitaltwins-service.pl.operations.faultInjection.FaultInjection
+  - azure-iot-digitaltwins-service.pl.operations.httpRuntime.HttpRuntime
+  - azure-iot-digitaltwins-service.pl.operations.jobClient.JobClient
+  - azure-iot-digitaltwins-service.pl.operations.registryManager.RegistryManager
+  - azure-iot-digitaltwins-service.pl.operations.twinOperations.TwinOperations
 typeAliases:
-  - azure-iot-digitaltwins-service.DigitalTwin
+  - azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwin
   - >-
-    azure-iot-digitaltwins-service.DigitalTwinInvokeComponentCommandOptionalParams
-  - azure-iot-digitaltwins-service.DigitalTwinInvokeComponentCommandResponse
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinInvokeComponentCommandOptionalParams
   - >-
-    azure-iot-digitaltwins-service.DigitalTwinInvokeRootLevelCommandOptionalParams
-  - azure-iot-digitaltwins-service.DigitalTwinInvokeRootLevelCommandResponse
-  - azure-iot-digitaltwins-service.DigitalTwinResponse
-  - azure-iot-digitaltwins-service.DigitalTwinUpdateResponse
-  - azure-iot-digitaltwins-service.Action
-  - azure-iot-digitaltwins-service.AuthenticationType
-  - azure-iot-digitaltwins-service.ConfigurationApplyOnEdgeDeviceResponse
-  - azure-iot-digitaltwins-service.ConfigurationCreateOrUpdateResponse
-  - azure-iot-digitaltwins-service.ConfigurationGetConfigurationsResponse
-  - azure-iot-digitaltwins-service.ConfigurationGetResponse
-  - azure-iot-digitaltwins-service.ConfigurationTestQueriesResponse
-  - azure-iot-digitaltwins-service.ConnectionState
-  - azure-iot-digitaltwins-service.ConnectionState1
-  - azure-iot-digitaltwins-service.ConnectionState2
-  - azure-iot-digitaltwins-service.DeviceMethodInvokeDeviceMethodResponse
-  - azure-iot-digitaltwins-service.DeviceMethodInvokeModuleMethodResponse
-  - azure-iot-digitaltwins-service.DigitalTwinGetDigitalTwinResponse
-  - azure-iot-digitaltwins-service.DigitalTwinInvokeComponentCommandResponse
-  - azure-iot-digitaltwins-service.DigitalTwinInvokeRootLevelCommandResponse
-  - azure-iot-digitaltwins-service.DigitalTwinUpdateDigitalTwinResponse
-  - azure-iot-digitaltwins-service.ErrorCode
-  - azure-iot-digitaltwins-service.FaultInjectionGetResponse
-  - azure-iot-digitaltwins-service.ImportMode
-  - azure-iot-digitaltwins-service.JobClientCancelImportExportJobResponse
-  - azure-iot-digitaltwins-service.JobClientCancelJobResponse
-  - azure-iot-digitaltwins-service.JobClientCreateImportExportJobResponse
-  - azure-iot-digitaltwins-service.JobClientCreateJobResponse
-  - azure-iot-digitaltwins-service.JobClientGetImportExportJobResponse
-  - azure-iot-digitaltwins-service.JobClientGetImportExportJobsResponse
-  - azure-iot-digitaltwins-service.JobClientGetJobResponse
-  - azure-iot-digitaltwins-service.JobClientQueryJobsResponse
-  - azure-iot-digitaltwins-service.RegistryManagerBulkDeviceCRUDResponse
-  - azure-iot-digitaltwins-service.RegistryManagerCreateOrUpdateDeviceResponse
-  - azure-iot-digitaltwins-service.RegistryManagerCreateOrUpdateModuleResponse
-  - azure-iot-digitaltwins-service.RegistryManagerGetDeviceResponse
-  - azure-iot-digitaltwins-service.RegistryManagerGetDeviceStatisticsResponse
-  - azure-iot-digitaltwins-service.RegistryManagerGetDevicesResponse
-  - azure-iot-digitaltwins-service.RegistryManagerGetModuleResponse
-  - azure-iot-digitaltwins-service.RegistryManagerGetModulesOnDeviceResponse
-  - azure-iot-digitaltwins-service.RegistryManagerGetServiceStatisticsResponse
-  - azure-iot-digitaltwins-service.RegistryManagerPurgeCommandQueueResponse
-  - azure-iot-digitaltwins-service.RegistryManagerQueryIotHubResponse
-  - azure-iot-digitaltwins-service.Status
-  - azure-iot-digitaltwins-service.Status1
-  - azure-iot-digitaltwins-service.Status2
-  - azure-iot-digitaltwins-service.Status3
-  - azure-iot-digitaltwins-service.Status4
-  - azure-iot-digitaltwins-service.StorageAuthenticationType
-  - azure-iot-digitaltwins-service.TwinGetDeviceTwinResponse
-  - azure-iot-digitaltwins-service.TwinGetModuleTwinResponse
-  - azure-iot-digitaltwins-service.TwinReplaceDeviceTwinResponse
-  - azure-iot-digitaltwins-service.TwinReplaceModuleTwinResponse
-  - azure-iot-digitaltwins-service.TwinUpdateDeviceTwinResponse
-  - azure-iot-digitaltwins-service.TwinUpdateModuleTwinResponse
-  - azure-iot-digitaltwins-service.Type
-  - azure-iot-digitaltwins-service.Type1
-  - azure-iot-digitaltwins-service.Type2
-  - azure-iot-digitaltwins-service.Type3
-  - azure-iot-digitaltwins-service.Type4
-  - azure-iot-digitaltwins-service.WarningCode
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinInvokeComponentCommandResponse
+  - >-
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinInvokeRootLevelCommandOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinInvokeRootLevelCommandResponse
+  - >-
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinResponse
+  - >-
+    azure-iot-digitaltwins-service.cl.digital_twin_service_client.DigitalTwinUpdateResponse
+  - azure-iot-digitaltwins-service.pl.models.index.Action
+  - azure-iot-digitaltwins-service.pl.models.index.AuthenticationType
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationApplyOnEdgeDeviceResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationCreateOrUpdateResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationGetConfigurationsResponse
+  - azure-iot-digitaltwins-service.pl.models.index.ConfigurationGetResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationTestQueriesResponse
+  - azure-iot-digitaltwins-service.pl.models.index.ConnectionState
+  - azure-iot-digitaltwins-service.pl.models.index.ConnectionState1
+  - azure-iot-digitaltwins-service.pl.models.index.ConnectionState2
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DeviceMethodInvokeDeviceMethodResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DeviceMethodInvokeModuleMethodResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinGetDigitalTwinResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinInvokeComponentCommandResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinInvokeRootLevelCommandResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinUpdateDigitalTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.ErrorCode
+  - azure-iot-digitaltwins-service.pl.models.index.FaultInjectionGetResponse
+  - azure-iot-digitaltwins-service.pl.models.index.ImportMode
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.JobClientCancelImportExportJobResponse
+  - azure-iot-digitaltwins-service.pl.models.index.JobClientCancelJobResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.JobClientCreateImportExportJobResponse
+  - azure-iot-digitaltwins-service.pl.models.index.JobClientCreateJobResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.JobClientGetImportExportJobResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.JobClientGetImportExportJobsResponse
+  - azure-iot-digitaltwins-service.pl.models.index.JobClientGetJobResponse
+  - azure-iot-digitaltwins-service.pl.models.index.JobClientQueryJobsResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerBulkDeviceCRUDResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerCreateOrUpdateDeviceResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerCreateOrUpdateModuleResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetDeviceResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetDevicesResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetDeviceStatisticsResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetModuleResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetModulesOnDeviceResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetServiceStatisticsResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerPurgeCommandQueueResponse
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerQueryIotHubResponse
+  - azure-iot-digitaltwins-service.pl.models.index.Status
+  - azure-iot-digitaltwins-service.pl.models.index.Status1
+  - azure-iot-digitaltwins-service.pl.models.index.Status2
+  - azure-iot-digitaltwins-service.pl.models.index.Status3
+  - azure-iot-digitaltwins-service.pl.models.index.Status4
+  - azure-iot-digitaltwins-service.pl.models.index.StorageAuthenticationType
+  - azure-iot-digitaltwins-service.pl.models.index.TwinGetDeviceTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.TwinGetModuleTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.TwinReplaceDeviceTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.TwinReplaceModuleTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.TwinUpdateDeviceTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.TwinUpdateModuleTwinResponse
+  - azure-iot-digitaltwins-service.pl.models.index.Type
+  - azure-iot-digitaltwins-service.pl.models.index.Type1
+  - azure-iot-digitaltwins-service.pl.models.index.Type2
+  - azure-iot-digitaltwins-service.pl.models.index.Type3
+  - azure-iot-digitaltwins-service.pl.models.index.Type4
+  - azure-iot-digitaltwins-service.pl.models.index.WarningCode
 interfaces:
-  - azure-iot-digitaltwins-service.AuthenticationMechanism
-  - azure-iot-digitaltwins-service.BulkRegistryOperationResult
-  - azure-iot-digitaltwins-service.CloudToDeviceMethod
-  - azure-iot-digitaltwins-service.CloudToDeviceMethodResult
-  - azure-iot-digitaltwins-service.Configuration
-  - azure-iot-digitaltwins-service.ConfigurationContent
-  - azure-iot-digitaltwins-service.ConfigurationCreateOrUpdateOptionalParams
-  - azure-iot-digitaltwins-service.ConfigurationDeleteMethodOptionalParams
-  - azure-iot-digitaltwins-service.ConfigurationGetConfigurationsOptionalParams
-  - azure-iot-digitaltwins-service.ConfigurationMetrics
-  - azure-iot-digitaltwins-service.ConfigurationQueriesTestInput
-  - azure-iot-digitaltwins-service.ConfigurationQueriesTestResponse
-  - azure-iot-digitaltwins-service.Device
-  - azure-iot-digitaltwins-service.DeviceCapabilities
-  - azure-iot-digitaltwins-service.DeviceJobStatistics
-  - azure-iot-digitaltwins-service.DeviceRegistryOperationError
-  - azure-iot-digitaltwins-service.DeviceRegistryOperationWarning
-  - azure-iot-digitaltwins-service.DigitalTwinGetDigitalTwinHeaders
-  - azure-iot-digitaltwins-service.DigitalTwinInvokeComponentCommandHeaders
+  - azure-iot-digitaltwins-service.pl.models.index.AuthenticationMechanism
+  - azure-iot-digitaltwins-service.pl.models.index.BulkRegistryOperationResult
+  - azure-iot-digitaltwins-service.pl.models.index.CloudToDeviceMethod
+  - azure-iot-digitaltwins-service.pl.models.index.CloudToDeviceMethodResult
+  - azure-iot-digitaltwins-service.pl.models.index.Configuration
+  - azure-iot-digitaltwins-service.pl.models.index.ConfigurationContent
   - >-
-    azure-iot-digitaltwins-service.DigitalTwinInvokeComponentCommandOptionalParams
-  - azure-iot-digitaltwins-service.DigitalTwinInvokeRootLevelCommandHeaders
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationCreateOrUpdateOptionalParams
   - >-
-    azure-iot-digitaltwins-service.DigitalTwinInvokeRootLevelCommandOptionalParams
-  - azure-iot-digitaltwins-service.DigitalTwinUpdateDigitalTwinHeaders
-  - azure-iot-digitaltwins-service.DigitalTwinUpdateDigitalTwinOptionalParams
-  - azure-iot-digitaltwins-service.ExportImportDevice
-  - azure-iot-digitaltwins-service.FaultInjectionConnectionProperties
-  - azure-iot-digitaltwins-service.FaultInjectionProperties
-  - azure-iot-digitaltwins-service.IotHubGatewayServiceAPIsOptions
-  - azure-iot-digitaltwins-service.JobClientQueryJobsOptionalParams
-  - azure-iot-digitaltwins-service.JobProperties
-  - azure-iot-digitaltwins-service.JobRequest
-  - azure-iot-digitaltwins-service.JobResponse
-  - azure-iot-digitaltwins-service.Module
-  - azure-iot-digitaltwins-service.PropertyContainer
-  - azure-iot-digitaltwins-service.PurgeMessageQueueResult
-  - azure-iot-digitaltwins-service.QueryResult
-  - azure-iot-digitaltwins-service.QuerySpecification
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationDeleteMethodOptionalParams
   - >-
-    azure-iot-digitaltwins-service.RegistryManagerCreateOrUpdateDeviceOptionalParams
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationGetConfigurationsOptionalParams
+  - azure-iot-digitaltwins-service.pl.models.index.ConfigurationMetrics
+  - azure-iot-digitaltwins-service.pl.models.index.ConfigurationQueriesTestInput
   - >-
-    azure-iot-digitaltwins-service.RegistryManagerCreateOrUpdateModuleOptionalParams
-  - azure-iot-digitaltwins-service.RegistryManagerDeleteDeviceOptionalParams
-  - azure-iot-digitaltwins-service.RegistryManagerDeleteModuleOptionalParams
-  - azure-iot-digitaltwins-service.RegistryManagerGetDevicesOptionalParams
-  - azure-iot-digitaltwins-service.RegistryManagerQueryIotHubHeaders
-  - azure-iot-digitaltwins-service.RegistryManagerQueryIotHubOptionalParams
-  - azure-iot-digitaltwins-service.RegistryStatistics
-  - azure-iot-digitaltwins-service.ServiceStatistics
-  - azure-iot-digitaltwins-service.SymmetricKey
-  - azure-iot-digitaltwins-service.Twin
-  - azure-iot-digitaltwins-service.TwinProperties
-  - azure-iot-digitaltwins-service.TwinReplaceDeviceTwinOptionalParams
-  - azure-iot-digitaltwins-service.TwinReplaceModuleTwinOptionalParams
-  - azure-iot-digitaltwins-service.TwinUpdateDeviceTwinOptionalParams
-  - azure-iot-digitaltwins-service.TwinUpdateModuleTwinOptionalParams
-  - azure-iot-digitaltwins-service.X509Thumbprint
+    azure-iot-digitaltwins-service.pl.models.index.ConfigurationQueriesTestResponse
+  - azure-iot-digitaltwins-service.pl.models.index.Device
+  - azure-iot-digitaltwins-service.pl.models.index.DeviceCapabilities
+  - azure-iot-digitaltwins-service.pl.models.index.DeviceJobStatistics
+  - azure-iot-digitaltwins-service.pl.models.index.DeviceRegistryOperationError
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DeviceRegistryOperationWarning
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinGetDigitalTwinHeaders
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinInvokeComponentCommandHeaders
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinInvokeComponentCommandOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinInvokeRootLevelCommandHeaders
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinInvokeRootLevelCommandOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinUpdateDigitalTwinHeaders
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.DigitalTwinUpdateDigitalTwinOptionalParams
+  - azure-iot-digitaltwins-service.pl.models.index.ExportImportDevice
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.FaultInjectionConnectionProperties
+  - azure-iot-digitaltwins-service.pl.models.index.FaultInjectionProperties
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.IotHubGatewayServiceAPIsOptions
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.JobClientQueryJobsOptionalParams
+  - azure-iot-digitaltwins-service.pl.models.index.JobProperties
+  - azure-iot-digitaltwins-service.pl.models.index.JobRequest
+  - azure-iot-digitaltwins-service.pl.models.index.JobResponse
+  - azure-iot-digitaltwins-service.pl.models.index.Module
+  - azure-iot-digitaltwins-service.pl.models.index.PropertyContainer
+  - azure-iot-digitaltwins-service.pl.models.index.PurgeMessageQueueResult
+  - azure-iot-digitaltwins-service.pl.models.index.QueryResult
+  - azure-iot-digitaltwins-service.pl.models.index.QuerySpecification
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerCreateOrUpdateDeviceOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerCreateOrUpdateModuleOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerDeleteDeviceOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerDeleteModuleOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerGetDevicesOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerQueryIotHubHeaders
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.RegistryManagerQueryIotHubOptionalParams
+  - azure-iot-digitaltwins-service.pl.models.index.RegistryStatistics
+  - azure-iot-digitaltwins-service.pl.models.index.ServiceStatistics
+  - azure-iot-digitaltwins-service.pl.models.index.SymmetricKey
+  - azure-iot-digitaltwins-service.pl.models.index.Twin
+  - azure-iot-digitaltwins-service.pl.models.index.TwinProperties
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.TwinReplaceDeviceTwinOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.TwinReplaceModuleTwinOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.TwinUpdateDeviceTwinOptionalParams
+  - >-
+    azure-iot-digitaltwins-service.pl.models.index.TwinUpdateModuleTwinOptionalParams
+  - azure-iot-digitaltwins-service.pl.models.index.X509Thumbprint

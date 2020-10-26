@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SapMonitorListResult
-uid: '@azure/arm-hanaonazure.SapMonitorListResult'
+uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult'
 package: '@azure/arm-hanaonazure'
 summary: ''
 fullName: SapMonitorListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.Array'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.Array'
     package: '@azure/arm-hanaonazure'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.length'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.length'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.nextLink'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.nextLink'
     package: '@azure/arm-hanaonazure'
     summary: The URL to get the next set of SAP monitors.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SapMonitor>[])'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.concat'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.concat'
     package: '@azure/arm-hanaonazure'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-hanaonazure.SapMonitor"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.concat_1'
+  - name: 'concat(SapMonitor | ConcatArray<SapMonitor>[])'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.concat_1'
     package: '@azure/arm-hanaonazure'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: SapMonitor | ConcatArray<SapMonitor>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.copyWithin'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.copyWithin'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.entries'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.entries'
     package: '@azure/arm-hanaonazure'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +143,7 @@ methods:
   - name: >-
       every((value: SapMonitor, index: number, array: SapMonitor[]) => unknown,
       any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.every'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.every_1'
     package: '@azure/arm-hanaonazure'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +151,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SapMonitor, index: number, array:
+        function every(predicate: (value: SapMonitor, index: number, array:
         SapMonitor[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SapMonitor, index: number, array: SapMonitor[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SapMonitor, index: number, array: SapMonitor[]) => value,
+      any)
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.every'
+    package: '@azure/arm-hanaonazure'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SapMonitor, index: number, array:
+        SapMonitor[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: SapMonitor, index: number, array: SapMonitor[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SapMonitor, undefined | number, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.fill'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.fill'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +227,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+          type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +249,7 @@ methods:
   - name: >-
       filter((value: SapMonitor, index: number, array: SapMonitor[]) => unknown,
       any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.filter_1'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.filter_1'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +259,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SapMonitor, index: number, array:
+        function filter(predicate: (value: SapMonitor, index: number, array:
         SapMonitor[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SapMonitor, index: number, array: SapMonitor[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
   - name: >-
       filter<S>((value: SapMonitor, index: number, array: SapMonitor[]) =>
-      boolean, any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.filter'
+      value, any)
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.filter'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +291,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SapMonitor, index: number, array:
-        SapMonitor[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SapMonitor, index: number, array:
+        SapMonitor[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: SapMonitor, index: number, array: SapMonitor[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: SapMonitor, index: number, array: SapMonitor[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +311,7 @@ methods:
   - name: >-
       find((value: SapMonitor, index: number, obj: SapMonitor[]) => unknown,
       any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.find_1'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.find_1'
     package: '@azure/arm-hanaonazure'
     summary: ''
     remarks: ''
@@ -289,12 +329,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SapMonitor, index: number, obj: SapMonitor[])
-      => boolean, any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.find'
+      => value, any)
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.find'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -307,12 +349,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SapMonitor, index:
-        number, obj: SapMonitor[]) => boolean, thisArg?: any)
+        number, obj: SapMonitor[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SapMonitor, index: number, obj: SapMonitor[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -335,7 +377,7 @@ methods:
   - name: >-
       findIndex((value: SapMonitor, index: number, obj: SapMonitor[]) =>
       unknown, any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.findIndex'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.findIndex'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -374,7 +416,7 @@ methods:
   - name: >-
       forEach((value: SapMonitor, index: number, array: SapMonitor[]) => void,
       any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.forEach'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.forEach'
     package: '@azure/arm-hanaonazure'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -397,7 +439,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SapMonitor, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.includes'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.includes'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -411,7 +453,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+          type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -422,7 +464,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SapMonitor, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.indexOf'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.indexOf'
     package: '@azure/arm-hanaonazure'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -434,7 +476,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+          type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -445,7 +487,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.join'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.join'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -466,7 +508,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.keys'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.keys'
     package: '@azure/arm-hanaonazure'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -478,7 +520,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SapMonitor, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.lastIndexOf'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.lastIndexOf'
     package: '@azure/arm-hanaonazure'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -490,7 +532,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+          type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -501,7 +543,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: SapMonitor, index: number, array: SapMonitor[]) => U, any)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.map'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.map'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -529,7 +571,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.pop'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.pop'
     package: '@azure/arm-hanaonazure'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -538,10 +580,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" /> |
+          undefined
         description: ''
   - name: 'push(SapMonitor[])'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.push'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.push'
     package: '@azure/arm-hanaonazure'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -551,7 +595,7 @@ methods:
       content: 'function push(items: SapMonitor[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+          type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
           description: |
             New elements of the Array.
       return:
@@ -560,7 +604,7 @@ methods:
   - name: >-
       reduce((previousValue: SapMonitor, currentValue: SapMonitor, currentIndex:
       number, array: SapMonitor[]) => SapMonitor)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reduce'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reduce'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,12 +627,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+        type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
         description: ''
   - name: >-
       reduce((previousValue: SapMonitor, currentValue: SapMonitor, currentIndex:
       number, array: SapMonitor[]) => SapMonitor, SapMonitor)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reduce_1'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reduce_1'
     package: '@azure/arm-hanaonazure'
     summary: ''
     remarks: ''
@@ -606,15 +650,15 @@ methods:
             number, array: SapMonitor[]) =&gt; SapMonitor
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+          type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+        type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SapMonitor, currentIndex:
       number, array: SapMonitor[]) => U, U)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reduce_2'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reduce_2'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -649,7 +693,7 @@ methods:
   - name: >-
       reduceRight((previousValue: SapMonitor, currentValue: SapMonitor,
       currentIndex: number, array: SapMonitor[]) => SapMonitor)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reduceRight'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reduceRight'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -674,12 +718,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+        type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
         description: ''
   - name: >-
       reduceRight((previousValue: SapMonitor, currentValue: SapMonitor,
       currentIndex: number, array: SapMonitor[]) => SapMonitor, SapMonitor)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reduceRight_1'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reduceRight_1'
     package: '@azure/arm-hanaonazure'
     summary: ''
     remarks: ''
@@ -697,15 +741,15 @@ methods:
             number, array: SapMonitor[]) =&gt; SapMonitor
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+          type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" />
+        type: <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SapMonitor, currentIndex:
       number, array: SapMonitor[]) => U, U)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reduceRight_2'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reduceRight_2'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -739,7 +783,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.reverse'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.reverse'
     package: '@azure/arm-hanaonazure'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -748,10 +792,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.shift'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.shift'
     package: '@azure/arm-hanaonazure'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -760,10 +804,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-hanaonazure.SapMonitor" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.slice'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.slice'
     package: '@azure/arm-hanaonazure'
     summary: Returns a section of an array.
     remarks: ''
@@ -777,15 +823,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
   - name: >-
       some((value: SapMonitor, index: number, array: SapMonitor[]) => unknown,
       any)
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.some'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.some'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -795,28 +842,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SapMonitor, index: number, array:
+        function some(predicate: (value: SapMonitor, index: number, array:
         SapMonitor[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SapMonitor, index: number, array: SapMonitor[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: SapMonitor, b: SapMonitor) => number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.sort'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.sort'
     package: '@azure/arm-hanaonazure'
     summary: Sorts an array.
     remarks: ''
@@ -830,14 +882,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: SapMonitor, b: SapMonitor) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SapMonitor[])'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.splice_1'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.splice_1'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -857,14 +920,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+          type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.splice'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.splice'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -885,10 +948,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+        type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.toLocaleString'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.toLocaleString'
     package: '@azure/arm-hanaonazure'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -902,7 +965,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.toString'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.toString'
     package: '@azure/arm-hanaonazure'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -914,7 +977,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SapMonitor[])'
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.unshift'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.unshift'
     package: '@azure/arm-hanaonazure'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -924,14 +987,14 @@ methods:
       content: 'function unshift(items: SapMonitor[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-hanaonazure.SapMonitor" />[]'
+          type: '<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-hanaonazure.SapMonitorListResult.values'
+    uid: '@azure/arm-hanaonazure.models.index.d.SapMonitorListResult.values'
     package: '@azure/arm-hanaonazure'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -941,7 +1004,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-hanaonazure.SapMonitor"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-hanaonazure.SapMonitor" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-hanaonazure.models.index.d.SapMonitorListResult.[Symbol.iterator]
+    package: '@azure/arm-hanaonazure'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-hanaonazure.models.index.d.SapMonitorListResult.[Symbol.unscopables]
+    package: '@azure/arm-hanaonazure'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-hanaonazure.models.index.d.OperationList.Array"
+  />&lt;<xref uid="@azure/arm-hanaonazure.models.index.d.SapMonitor" />&gt;

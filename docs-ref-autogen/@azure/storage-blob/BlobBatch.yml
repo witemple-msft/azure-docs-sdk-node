@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BlobBatch
-uid: '@azure/storage-blob.BlobBatch'
+uid: '@azure/storage-blob.storage-blob.d.BlobBatch'
 package: '@azure/storage-blob'
 summary: |-
   A BlobBatch represents an aggregated set of operations on blobs.
@@ -12,7 +12,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: BlobBatch()
-    uid: '@azure/storage-blob.BlobBatch.constructor'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.constructor'
     package: '@azure/storage-blob'
     summary: ''
     remarks: ''
@@ -22,7 +22,7 @@ constructors:
       content: new BlobBatch()
 methods:
   - name: 'deleteBlob(BlobClient, BlobDeleteOptions)'
-    uid: '@azure/storage-blob.BlobBatch.deleteBlob_1'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.deleteBlob_1'
     package: '@azure/storage-blob'
     summary: >
       The deleteBlob operation marks the specified blob or snapshot for
@@ -49,10 +49,10 @@ methods:
       content: 'function deleteBlob(blobClient: BlobClient, options?: BlobDeleteOptions)'
       parameters:
         - id: blobClient
-          type: <xref uid="@azure/storage-blob.BlobClient" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.BlobClient" />
           description: The BlobClient.
         - id: options
-          type: <xref uid="@azure/storage-blob.BlobDeleteOptions" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.BlobDeleteOptions" />
           description: ''
       return:
         type: Promise&lt;void&gt;
@@ -60,7 +60,7 @@ methods:
   - name: >-
       deleteBlob(string, StorageSharedKeyCredential | AnonymousCredential |
       TokenCredential, BlobDeleteOptions)
-    uid: '@azure/storage-blob.BlobBatch.deleteBlob'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.deleteBlob'
     package: '@azure/storage-blob'
     summary: >
       The deleteBlob operation marks the specified blob or snapshot for
@@ -93,8 +93,10 @@ methods:
           description: The url of the blob resource to delete.
         - id: credential
           type: >-
-            <xref uid="@azure/storage-blob.StorageSharedKeyCredential" /> |
-            <xref uid="@azure/storage-blob.AnonymousCredential" /> |
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.StorageSharedKeyCredential"
+            /> | <xref
+            uid="@azure/storage-blob.storage-blob.d.AnonymousCredential" /> |
             TokenCredential
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
@@ -103,13 +105,13 @@ methods:
             TokenCredential interface. If not specified, AnonymousCredential is
             used.
         - id: options
-          type: <xref uid="@azure/storage-blob.BlobDeleteOptions" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.BlobDeleteOptions" />
           description: ''
       return:
         type: Promise&lt;void&gt;
         description: ''
   - name: getHttpRequestBody()
-    uid: '@azure/storage-blob.BlobBatch.getHttpRequestBody'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.getHttpRequestBody'
     package: '@azure/storage-blob'
     summary: Get assembled HTTP request body for sub requests.
     remarks: ''
@@ -121,7 +123,7 @@ methods:
         type: string
         description: ''
   - name: getMultiPartContentType()
-    uid: '@azure/storage-blob.BlobBatch.getMultiPartContentType'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.getMultiPartContentType'
     package: '@azure/storage-blob'
     summary: >-
       Get the value of Content-Type for a batch request.
@@ -139,7 +141,7 @@ methods:
         type: string
         description: ''
   - name: getSubRequests()
-    uid: '@azure/storage-blob.BlobBatch.getSubRequests'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.getSubRequests'
     package: '@azure/storage-blob'
     summary: Get sub requests that are added into the batch request.
     remarks: ''
@@ -148,10 +150,12 @@ methods:
     syntax:
       content: function getSubRequests()
       return:
-        type: 'Map&lt;number, <xref uid="@azure/storage-blob.BatchSubRequest" />&gt;'
+        type: >-
+          Map&lt;number, <xref
+          uid="@azure/storage-blob.storage-blob.d.BatchSubRequest" />&gt;
         description: ''
   - name: 'setBlobAccessTier(BlobClient, AccessTier, BlobSetTierOptions)'
-    uid: '@azure/storage-blob.BlobBatch.setBlobAccessTier_1'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.setBlobAccessTier_1'
     package: '@azure/storage-blob'
     summary: >
       The setBlobAccessTier operation sets the tier on a blob.
@@ -183,13 +187,13 @@ methods:
         options?: BlobSetTierOptions)
       parameters:
         - id: blobClient
-          type: <xref uid="@azure/storage-blob.BlobClient" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.BlobClient" />
           description: The BlobClient.
         - id: tier
-          type: <xref uid="@azure/storage-blob.AccessTier" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.AccessTier" />
           description: ''
         - id: options
-          type: <xref uid="@azure/storage-blob.BlobSetTierOptions" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.BlobSetTierOptions" />
           description: ''
       return:
         type: Promise&lt;void&gt;
@@ -197,7 +201,7 @@ methods:
   - name: >-
       setBlobAccessTier(string, StorageSharedKeyCredential | AnonymousCredential
       | TokenCredential, AccessTier, BlobSetTierOptions)
-    uid: '@azure/storage-blob.BlobBatch.setBlobAccessTier'
+    uid: '@azure/storage-blob.storage-blob.d.BlobBatch.setBlobAccessTier'
     package: '@azure/storage-blob'
     summary: >
       The setBlobAccessTier operation sets the tier on a blob.
@@ -234,8 +238,10 @@ methods:
           description: The url of the blob resource to delete.
         - id: credential
           type: >-
-            <xref uid="@azure/storage-blob.StorageSharedKeyCredential" /> |
-            <xref uid="@azure/storage-blob.AnonymousCredential" /> |
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.StorageSharedKeyCredential"
+            /> | <xref
+            uid="@azure/storage-blob.storage-blob.d.AnonymousCredential" /> |
             TokenCredential
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
@@ -244,10 +250,10 @@ methods:
             TokenCredential interface. If not specified, AnonymousCredential is
             used.
         - id: tier
-          type: <xref uid="@azure/storage-blob.AccessTier" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.AccessTier" />
           description: ''
         - id: options
-          type: <xref uid="@azure/storage-blob.BlobSetTierOptions" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.BlobSetTierOptions" />
           description: ''
       return:
         type: Promise&lt;void&gt;

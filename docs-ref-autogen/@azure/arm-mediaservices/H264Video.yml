@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: H264Video
-uid: '@azure/arm-mediaservices.H264Video'
+uid: '@azure/arm-mediaservices.models.index.d.H264Video'
 package: '@azure/arm-mediaservices'
 summary: Describes all the properties for encoding a video with the H.264 codec.
 fullName: H264Video
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: complexity
-    uid: '@azure/arm-mediaservices.H264Video.complexity'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.complexity'
     package: '@azure/arm-mediaservices'
     summary: >-
       Tells the encoder how to choose its encoding settings. The default value
@@ -24,19 +24,22 @@ properties:
     syntax:
       content: 'complexity?: H264Complexity'
       return:
-        type: <xref uid="@azure/arm-mediaservices.H264Complexity" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.H264Complexity" />
         description: ''
   - name: keyFrameInterval
-    uid: '@azure/arm-mediaservices.H264Video.keyFrameInterval'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.keyFrameInterval'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The distance between two key frames, thereby defining a group of pictures
-      (GOP). The value
+      The distance between two key frames. The value should be non-zero in the
+      range [0.5, 20]
 
-      should be a non-zero integer in the range [1, 30] seconds, specified in
-      ISO 8601 format. The
+      seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S).
+      Note that this setting
 
-      default is 2 seconds (PT2S).
+      is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval
+      value will follow
+
+      the input source setting.
     fullName: keyFrameInterval
     remarks: ''
     isPreview: false
@@ -47,7 +50,7 @@ properties:
         type: undefined | string
         description: ''
   - name: label
-    uid: '@azure/arm-mediaservices.H264Video.label'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.label'
     package: '@azure/arm-mediaservices'
     summary: >-
       An optional label for the codec. The label can be used to control muxing
@@ -62,7 +65,7 @@ properties:
         type: undefined | string
         description: ''
   - name: layers
-    uid: '@azure/arm-mediaservices.H264Video.layers'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.layers'
     package: '@azure/arm-mediaservices'
     summary: The collection of output H.264 layers to be produced by the encoder.
     fullName: layers
@@ -72,10 +75,10 @@ properties:
     syntax:
       content: 'layers?: H264Layer[]'
       return:
-        type: '<xref uid="@azure/arm-mediaservices.H264Layer" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.H264Layer" />[]'
         description: ''
   - name: odatatype
-    uid: '@azure/arm-mediaservices.H264Video.odatatype'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.odatatype'
     package: '@azure/arm-mediaservices'
     summary: Polymorphic Discriminator
     fullName: odatatype
@@ -88,7 +91,7 @@ properties:
         type: '"#<xref uid="Microsoft.Media.H264Video" />"'
         description: ''
   - name: sceneChangeDetection
-    uid: '@azure/arm-mediaservices.H264Video.sceneChangeDetection'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.sceneChangeDetection'
     package: '@azure/arm-mediaservices'
     summary: >-
       Whether or not the encoder should insert key frames at scene changes. If
@@ -108,7 +111,7 @@ properties:
         type: undefined | false | true
         description: ''
   - name: stretchMode
-    uid: '@azure/arm-mediaservices.H264Video.stretchMode'
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.stretchMode'
     package: '@azure/arm-mediaservices'
     summary: >-
       The resizing mode - how the input video will be resized to fit the desired
@@ -123,5 +126,20 @@ properties:
     syntax:
       content: 'stretchMode?: StretchMode'
       return:
-        type: <xref uid="@azure/arm-mediaservices.StretchMode" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.StretchMode" />
+        description: ''
+  - name: syncMode
+    uid: '@azure/arm-mediaservices.models.index.d.H264Video.syncMode'
+    package: '@azure/arm-mediaservices'
+    summary: >-
+      The Video Sync Mode. Possible values include: 'Auto', 'Passthrough',
+      'Cfr', 'Vfr'
+    fullName: syncMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'syncMode?: VideoSyncMode'
+      return:
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.VideoSyncMode" />
         description: ''

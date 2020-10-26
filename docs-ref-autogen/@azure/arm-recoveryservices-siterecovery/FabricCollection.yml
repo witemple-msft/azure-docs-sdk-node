@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: FabricCollection
-uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection'
+uid: '@azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection'
 package: '@azure/arm-recoveryservices-siterecovery'
 summary: ''
 fullName: FabricCollection
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.Array'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.Array
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.length'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.length
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.nextLink'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.nextLink
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     fullName: nextLink
@@ -52,7 +55,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Fabric>[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.concat'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.concat
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +68,45 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-recoveryservices-siterecovery.Fabric" />&gt;[]
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.concat_1'
+  - name: 'concat(Fabric | ConcatArray<Fabric>[])'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.concat_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Fabric | ConcatArray<Fabric>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.copyWithin'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.copyWithin
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +144,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.entries'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.entries
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +157,8 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Fabric, index: number, array: Fabric[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.every'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.every_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,26 +166,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Fabric, index: number, array:
+        function every(predicate: (value: Fabric, index: number, array:
         Fabric[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Fabric, index: number, array: Fabric[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Fabric, index: number, array: Fabric[]) => value, any)'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.every
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Fabric, index: number, array:
+        Fabric[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Fabric, index: number, array: Fabric[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Fabric, undefined | number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.fill'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.fill
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -179,7 +240,10 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +263,8 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Fabric, index: number, array: Fabric[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.filter_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.filter_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,26 +274,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Fabric, index: number, array:
+        function filter(predicate: (value: Fabric, index: number, array:
         Fabric[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Fabric, index: number, array: Fabric[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
-  - name: 'filter<S>((value: Fabric, index: number, array: Fabric[]) => boolean, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.filter'
+  - name: 'filter<S>((value: Fabric, index: number, array: Fabric[]) => value, any)'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.filter
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +306,26 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Fabric, index: number, array:
-        Fabric[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Fabric, index: number, array:
+        Fabric[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Fabric, index: number, array: Fabric[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Fabric, index: number, array: Fabric[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Fabric, index: number, obj: Fabric[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.find_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.find_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -276,13 +344,15 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" /> |
-          undefined
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Fabric, index: number, obj: Fabric[]) =>
-      boolean, any)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.find'
+      value, any)
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.find
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +365,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Fabric, index: number,
-        obj: Fabric[]) => boolean, thisArg?: any)
+        obj: Fabric[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Fabric, index: number, obj: Fabric[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -321,7 +391,8 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Fabric, index: number, obj: Fabric[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.findIndex'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.findIndex
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -358,7 +429,8 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Fabric, index: number, array: Fabric[]) => void, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.forEach'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.forEach
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -381,7 +453,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Fabric, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.includes'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.includes
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -393,7 +466,10 @@ methods:
       content: 'function includes(searchElement: Fabric, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -404,7 +480,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Fabric, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.indexOf'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.indexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -414,7 +491,10 @@ methods:
       content: 'function indexOf(searchElement: Fabric, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +505,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.join'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.join
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -446,7 +527,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.keys'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.keys
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -458,7 +540,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Fabric, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.lastIndexOf
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -470,7 +553,10 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -481,7 +567,8 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Fabric, index: number, array: Fabric[]) => U, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.map'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.map
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -509,7 +596,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.pop'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.pop
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -519,11 +607,13 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" /> |
-          undefined
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          /> | undefined
         description: ''
   - name: 'push(Fabric[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.push'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.push
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -533,7 +623,10 @@ methods:
       content: 'function push(items: Fabric[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -542,7 +635,8 @@ methods:
   - name: >-
       reduce((previousValue: Fabric, currentValue: Fabric, currentIndex: number,
       array: Fabric[]) => Fabric)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reduce'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reduce
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -565,12 +659,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />
         description: ''
   - name: >-
       reduce((previousValue: Fabric, currentValue: Fabric, currentIndex: number,
       array: Fabric[]) => Fabric, Fabric)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reduce_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reduce_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -588,15 +686,22 @@ methods:
             array: Fabric[]) =&gt; Fabric
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Fabric, currentIndex: number,
       array: Fabric[]) => U, U)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reduce_2'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reduce_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -630,7 +735,8 @@ methods:
   - name: >-
       reduceRight((previousValue: Fabric, currentValue: Fabric, currentIndex:
       number, array: Fabric[]) => Fabric)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reduceRight'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reduceRight
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -654,12 +760,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: Fabric, currentValue: Fabric, currentIndex:
       number, array: Fabric[]) => Fabric, Fabric)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reduceRight_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: ''
     remarks: ''
@@ -677,15 +787,22 @@ methods:
             array: Fabric[]) =&gt; Fabric
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Fabric, currentIndex:
       number, array: Fabric[]) => U, U)
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reduceRight_2
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -718,7 +835,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.reverse'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.reverse
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -727,10 +845,14 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.shift'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.shift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -740,11 +862,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" /> |
-          undefined
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.slice'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.slice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a section of an array.
     remarks: ''
@@ -758,13 +882,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
   - name: 'some((value: Fabric, index: number, array: Fabric[]) => unknown, any)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.some'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.some
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -774,26 +903,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Fabric, index: number, array:
-        Fabric[]) => unknown, thisArg?: any)
+        function some(predicate: (value: Fabric, index: number, array: Fabric[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Fabric, index: number, array: Fabric[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Fabric, b: Fabric) => number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.sort'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.sort
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Sorts an array.
     remarks: ''
@@ -805,14 +940,26 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Fabric, b: Fabric) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Fabric[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.splice_1'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.splice_1
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -832,14 +979,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.splice'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.splice
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -860,10 +1014,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.toLocaleString'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.toLocaleString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -877,7 +1035,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.toString'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.toString
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -889,7 +1048,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Fabric[])'
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.unshift'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.unshift
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -899,14 +1059,18 @@ methods:
       content: 'function unshift(items: Fabric[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-recoveryservices-siterecovery.FabricCollection.values'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.values
     package: '@azure/arm-recoveryservices-siterecovery'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -917,6 +1081,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-recoveryservices-siterecovery.Fabric" />&gt;
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-recoveryservices-siterecovery.Fabric" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.[Symbol.iterator]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-recoveryservices-siterecovery.models.index.d.FabricCollection.[Symbol.unscopables]
+    package: '@azure/arm-recoveryservices-siterecovery'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.OperationsDiscoveryCollection.Array"
+  />&lt;<xref
+  uid="@azure/arm-recoveryservices-siterecovery.models.index.d.Fabric" />&gt;

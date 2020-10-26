@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AssetCollection
-uid: '@azure/arm-mediaservices.AssetCollection'
+uid: '@azure/arm-mediaservices.models.index.d.AssetCollection'
 package: '@azure/arm-mediaservices'
 summary: ''
 fullName: AssetCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-mediaservices.AssetCollection.Array'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.Array'
     package: '@azure/arm-mediaservices'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-mediaservices.AssetCollection.length'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.length'
     package: '@azure/arm-mediaservices'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: odatanextLink
-    uid: '@azure/arm-mediaservices.AssetCollection.odatanextLink'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.odatanextLink'
     package: '@azure/arm-mediaservices'
     summary: >-
       A link to the next page of the collection (when the collection contains
@@ -55,8 +55,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(Asset | ConcatArray<Asset>[])'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.concat_1'
+    package: '@azure/arm-mediaservices'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: Asset | ConcatArray<Asset>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.Asset" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.Asset" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
+        description: ''
   - name: 'concat(ConcatArray<Asset>[])'
-    uid: '@azure/arm-mediaservices.AssetCollection.concat'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.concat'
     package: '@azure/arm-mediaservices'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +86,16 @@ methods:
       content: 'function concat(items: ConcatArray<Asset>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-mediaservices.Asset" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.Asset" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-mediaservices.AssetCollection.concat_1'
-    package: '@azure/arm-mediaservices'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.copyWithin'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.copyWithin'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-mediaservices.AssetCollection.entries'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.entries'
     package: '@azure/arm-mediaservices'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Asset, index: number, array: Asset[]) => unknown, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.every'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.every_1'
     package: '@azure/arm-mediaservices'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,26 +153,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Asset, index: number, array: Asset[])
+        function every(predicate: (value: Asset, index: number, array: Asset[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Asset, index: number, array: Asset[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Asset, index: number, array: Asset[]) => value, any)'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.every'
+    package: '@azure/arm-mediaservices'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Asset, index: number, array:
+        Asset[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Asset, index: number, array: Asset[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Asset, undefined | number, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.fill'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.fill'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +225,7 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-mediaservices.Asset" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -201,7 +245,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Asset, index: number, array: Asset[]) => unknown, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.filter_1'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.filter_1'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -211,26 +255,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Asset, index: number, array:
-        Asset[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: Asset, index: number, array: Asset[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Asset, index: number, array: Asset[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
         description: ''
-  - name: 'filter<S>((value: Asset, index: number, array: Asset[]) => boolean, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.filter'
+  - name: 'filter<S>((value: Asset, index: number, array: Asset[]) => value, any)'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.filter'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +283,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Asset, index: number, array:
-        Asset[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Asset, index: number, array:
+        Asset[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Asset, index: number, array: Asset[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Asset, index: number, array: Asset[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Asset, index: number, obj: Asset[]) => unknown, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.find_1'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.find_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -277,12 +319,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.Asset" /> |
+          undefined
         description: ''
   - name: >-
-      find<S>((this: void, value: Asset, index: number, obj: Asset[]) =>
-      boolean, any)
-    uid: '@azure/arm-mediaservices.AssetCollection.find'
+      find<S>((this: void, value: Asset, index: number, obj: Asset[]) => value,
+      any)
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.find'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +339,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Asset, index: number,
-        obj: Asset[]) => boolean, thisArg?: any)
+        obj: Asset[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: >-
-            (this: void, value: Asset, index: number, obj: Asset[]) =&gt;
-            boolean
+          type: '(this: void, value: Asset, index: number, obj: Asset[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -321,7 +363,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Asset, index: number, obj: Asset[]) => unknown, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.findIndex'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.findIndex'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -358,7 +400,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Asset, index: number, array: Asset[]) => void, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.forEach'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.forEach'
     package: '@azure/arm-mediaservices'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -381,7 +423,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Asset, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.includes'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.includes'
     package: '@azure/arm-mediaservices'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -393,7 +435,7 @@ methods:
       content: 'function includes(searchElement: Asset, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.Asset" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -404,7 +446,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Asset, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.indexOf'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.indexOf'
     package: '@azure/arm-mediaservices'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -414,7 +456,7 @@ methods:
       content: 'function indexOf(searchElement: Asset, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.Asset" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +467,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-mediaservices.AssetCollection.join'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.join'
     package: '@azure/arm-mediaservices'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -446,7 +488,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-mediaservices.AssetCollection.keys'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.keys'
     package: '@azure/arm-mediaservices'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -458,7 +500,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Asset, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.lastIndexOf'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.lastIndexOf'
     package: '@azure/arm-mediaservices'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -470,7 +512,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.Asset" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -481,7 +523,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Asset, index: number, array: Asset[]) => U, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.map'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.map'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -509,7 +551,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-mediaservices.AssetCollection.pop'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.pop'
     package: '@azure/arm-mediaservices'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -518,10 +560,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.Asset" /> |
+          undefined
         description: ''
   - name: 'push(Asset[])'
-    uid: '@azure/arm-mediaservices.AssetCollection.push'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.push'
     package: '@azure/arm-mediaservices'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -531,7 +575,7 @@ methods:
       content: 'function push(items: Asset[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+          type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
           description: |
             New elements of the Array.
       return:
@@ -540,7 +584,7 @@ methods:
   - name: >-
       reduce((previousValue: Asset, currentValue: Asset, currentIndex: number,
       array: Asset[]) => Asset)
-    uid: '@azure/arm-mediaservices.AssetCollection.reduce'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reduce'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -563,12 +607,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
         description: ''
   - name: >-
       reduce((previousValue: Asset, currentValue: Asset, currentIndex: number,
       array: Asset[]) => Asset, Asset)
-    uid: '@azure/arm-mediaservices.AssetCollection.reduce_1'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reduce_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -585,15 +629,15 @@ methods:
             array: Asset[]) =&gt; Asset
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-mediaservices.Asset" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Asset, currentIndex: number,
       array: Asset[]) => U, U)
-    uid: '@azure/arm-mediaservices.AssetCollection.reduce_2'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reduce_2'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -627,7 +671,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Asset, currentValue: Asset, currentIndex:
       number, array: Asset[]) => Asset)
-    uid: '@azure/arm-mediaservices.AssetCollection.reduceRight'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reduceRight'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -651,12 +695,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
         description: ''
   - name: >-
       reduceRight((previousValue: Asset, currentValue: Asset, currentIndex:
       number, array: Asset[]) => Asset, Asset)
-    uid: '@azure/arm-mediaservices.AssetCollection.reduceRight_1'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reduceRight_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -674,15 +718,15 @@ methods:
             array: Asset[]) =&gt; Asset
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-mediaservices.Asset" />
+          type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Asset" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Asset, currentIndex:
       number, array: Asset[]) => U, U)
-    uid: '@azure/arm-mediaservices.AssetCollection.reduceRight_2'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reduceRight_2'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -715,7 +759,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-mediaservices.AssetCollection.reverse'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.reverse'
     package: '@azure/arm-mediaservices'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -724,10 +768,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-mediaservices.AssetCollection.shift'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.shift'
     package: '@azure/arm-mediaservices'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -736,10 +780,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-mediaservices.Asset" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.Asset" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.slice'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.slice'
     package: '@azure/arm-mediaservices'
     summary: Returns a section of an array.
     remarks: ''
@@ -753,13 +799,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
         description: ''
   - name: 'some((value: Asset, index: number, array: Asset[]) => unknown, any)'
-    uid: '@azure/arm-mediaservices.AssetCollection.some'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.some'
     package: '@azure/arm-mediaservices'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -769,26 +816,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Asset, index: number, array: Asset[])
+        function some(predicate: (value: Asset, index: number, array: Asset[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Asset, index: number, array: Asset[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Asset, b: Asset) => number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.sort'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.sort'
     package: '@azure/arm-mediaservices'
     summary: Sorts an array.
     remarks: ''
@@ -800,14 +852,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Asset, b: Asset) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Asset[])'
-    uid: '@azure/arm-mediaservices.AssetCollection.splice_1'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.splice_1'
     package: '@azure/arm-mediaservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -827,14 +890,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+          type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-mediaservices.AssetCollection.splice'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.splice'
     package: '@azure/arm-mediaservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -855,10 +918,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+        type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-mediaservices.AssetCollection.toLocaleString'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.toLocaleString'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -872,7 +935,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-mediaservices.AssetCollection.toString'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.toString'
     package: '@azure/arm-mediaservices'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -884,7 +947,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Asset[])'
-    uid: '@azure/arm-mediaservices.AssetCollection.unshift'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.unshift'
     package: '@azure/arm-mediaservices'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -894,14 +957,14 @@ methods:
       content: 'function unshift(items: Asset[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.Asset" />[]'
+          type: '<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-mediaservices.AssetCollection.values'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.values'
     package: '@azure/arm-mediaservices'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -910,6 +973,40 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-mediaservices.Asset" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-mediaservices.models.index.d.Asset" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-mediaservices.Asset" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-mediaservices.models.index.d.AssetCollection.[Symbol.iterator]'
+    package: '@azure/arm-mediaservices'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-mediaservices.models.index.d.Asset" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.AssetCollection.[Symbol.unscopables]
+    package: '@azure/arm-mediaservices'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-mediaservices.models.index.d.AccountFilterCollection.Array"
+  />&lt;<xref uid="@azure/arm-mediaservices.models.index.d.Asset" />&gt;

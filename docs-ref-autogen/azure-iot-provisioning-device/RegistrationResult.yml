@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RegistrationResult
-uid: azure-iot-provisioning-device.RegistrationResult
+uid: azure-iot-provisioning-device.interfaces.d.RegistrationResult
 package: azure-iot-provisioning-device
 summary: Device configuration returned when registration is complete
 fullName: RegistrationResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: assignedHub
-    uid: azure-iot-provisioning-device.RegistrationResult.assignedHub
+    uid: azure-iot-provisioning-device.interfaces.d.RegistrationResult.assignedHub
     package: azure-iot-provisioning-device
     summary: IoT Hub where the provisioned device is located
     fullName: assignedHub
@@ -23,7 +23,7 @@ properties:
         type: string
         description: ''
   - name: deviceId
-    uid: azure-iot-provisioning-device.RegistrationResult.deviceId
+    uid: azure-iot-provisioning-device.interfaces.d.RegistrationResult.deviceId
     package: azure-iot-provisioning-device
     summary: deviceId for the provisioned device
     fullName: deviceId
@@ -36,7 +36,7 @@ properties:
         type: string
         description: ''
   - name: status
-    uid: azure-iot-provisioning-device.RegistrationResult.status
+    uid: azure-iot-provisioning-device.interfaces.d.RegistrationResult.status
     package: azure-iot-provisioning-device
     summary: registration status
     fullName: status
@@ -46,10 +46,12 @@ properties:
     syntax:
       content: 'status: RegistrationStatus'
       return:
-        type: <xref uid="azure-iot-provisioning-device.RegistrationStatus" />
+        type: >-
+          <xref
+          uid="azure-iot-provisioning-device.interfaces.d.RegistrationStatus" />
         description: ''
   - name: tpm
-    uid: azure-iot-provisioning-device.RegistrationResult.tpm
+    uid: azure-iot-provisioning-device.interfaces.d.RegistrationResult.tpm
     package: azure-iot-provisioning-device
     summary: TPM registration result
     fullName: tpm
@@ -62,7 +64,7 @@ properties:
         type: TpmRegistrationResult
         description: ''
   - name: x509
-    uid: azure-iot-provisioning-device.RegistrationResult.x509
+    uid: azure-iot-provisioning-device.interfaces.d.RegistrationResult.x509
     package: azure-iot-provisioning-device
     summary: x509 registration result
     fullName: x509
@@ -72,6 +74,11 @@ properties:
     syntax:
       content: 'x509?: X509Registration'
       return:
-        type: <xref uid="azure-iot-provisioning-device.X509Registration" />
+        type: >-
+          <xref
+          uid="azure-iot-provisioning-device.x509_registration.d.X509Registration"
+          />
         description: ''
-extends: <xref uid="azure-iot-provisioning-device.DeviceRegistrationState" />
+extends: >-
+  <xref uid="azure-iot-provisioning-device.interfaces.d.DeviceRegistrationState"
+  />

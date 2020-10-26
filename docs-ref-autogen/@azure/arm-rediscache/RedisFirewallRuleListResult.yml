@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RedisFirewallRuleListResult
-uid: '@azure/arm-rediscache.RedisFirewallRuleListResult'
+uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult'
 package: '@azure/arm-rediscache'
 summary: ''
 fullName: RedisFirewallRuleListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.Array'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.Array'
     package: '@azure/arm-rediscache'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.length'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.length'
     package: '@azure/arm-rediscache'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.nextLink'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.nextLink'
     package: '@azure/arm-rediscache'
     summary: >-
       Link for next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<RedisFirewallRule>[])'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.concat'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.concat'
     package: '@azure/arm-rediscache'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,44 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-rediscache.RedisFirewallRule"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.concat_1'
+  - name: 'concat(RedisFirewallRule | ConcatArray<RedisFirewallRule>[])'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.concat_1'
     package: '@azure/arm-rediscache'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: RedisFirewallRule |
+        ConcatArray<RedisFirewallRule>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.copyWithin'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.copyWithin
     package: '@azure/arm-rediscache'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.entries'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.entries'
     package: '@azure/arm-rediscache'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +156,7 @@ methods:
   - name: >-
       every((value: RedisFirewallRule, index: number, array:
       RedisFirewallRule[]) => unknown, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.every'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.every_1'
     package: '@azure/arm-rediscache'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +164,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: RedisFirewallRule, index: number,
+        function every(predicate: (value: RedisFirewallRule, index: number,
         array: RedisFirewallRule[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RedisFirewallRule, index: number, array:
             RedisFirewallRule[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: RedisFirewallRule, index: number, array:
+      RedisFirewallRule[]) => value, any)
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.every'
+    package: '@azure/arm-rediscache'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: RedisFirewallRule, index: number,
+        array: RedisFirewallRule[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: RedisFirewallRule, index: number, array:
+            RedisFirewallRule[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(RedisFirewallRule, undefined | number, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.fill'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.fill'
     package: '@azure/arm-rediscache'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +242,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +266,7 @@ methods:
   - name: >-
       filter((value: RedisFirewallRule, index: number, array:
       RedisFirewallRule[]) => unknown, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.filter_1'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.filter_1'
     package: '@azure/arm-rediscache'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +276,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: RedisFirewallRule, index: number,
+        function filter(predicate: (value: RedisFirewallRule, index: number,
         array: RedisFirewallRule[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RedisFirewallRule, index: number, array:
             RedisFirewallRule[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: RedisFirewallRule, index: number, array:
-      RedisFirewallRule[]) => boolean, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.filter'
+      RedisFirewallRule[]) => value, any)
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.filter'
     package: '@azure/arm-rediscache'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +310,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: RedisFirewallRule, index: number,
-        array: RedisFirewallRule[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: RedisFirewallRule, index: number,
+        array: RedisFirewallRule[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RedisFirewallRule, index: number, array:
-            RedisFirewallRule[]) =&gt; boolean
+            RedisFirewallRule[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +332,7 @@ methods:
   - name: >-
       find((value: RedisFirewallRule, index: number, obj: RedisFirewallRule[])
       => unknown, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.find_1'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.find_1'
     package: '@azure/arm-rediscache'
     summary: ''
     remarks: ''
@@ -295,12 +352,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: RedisFirewallRule, index: number, obj:
-      RedisFirewallRule[]) => boolean, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.find'
+      RedisFirewallRule[]) => value, any)
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.find'
     package: '@azure/arm-rediscache'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +372,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: RedisFirewallRule,
-        index: number, obj: RedisFirewallRule[]) => boolean, thisArg?: any)
+        index: number, obj: RedisFirewallRule[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: RedisFirewallRule, index: number, obj:
-            RedisFirewallRule[]) =&gt; boolean
+            RedisFirewallRule[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +400,7 @@ methods:
   - name: >-
       findIndex((value: RedisFirewallRule, index: number, obj:
       RedisFirewallRule[]) => unknown, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.findIndex'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.findIndex'
     package: '@azure/arm-rediscache'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +441,7 @@ methods:
   - name: >-
       forEach((value: RedisFirewallRule, index: number, array:
       RedisFirewallRule[]) => void, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.forEach'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.forEach'
     package: '@azure/arm-rediscache'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +466,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(RedisFirewallRule, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.includes'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.includes'
     package: '@azure/arm-rediscache'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +480,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +493,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(RedisFirewallRule, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.indexOf'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.indexOf'
     package: '@azure/arm-rediscache'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +505,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +518,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.join'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.join'
     package: '@azure/arm-rediscache'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +539,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.keys'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.keys'
     package: '@azure/arm-rediscache'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +551,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(RedisFirewallRule, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.lastIndexOf
     package: '@azure/arm-rediscache'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +564,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +579,7 @@ methods:
   - name: >-
       map<U>((value: RedisFirewallRule, index: number, array:
       RedisFirewallRule[]) => U, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.map'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.map'
     package: '@azure/arm-rediscache'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +609,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.pop'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.pop'
     package: '@azure/arm-rediscache'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +618,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
+          | undefined
         description: ''
   - name: 'push(RedisFirewallRule[])'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.push'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.push'
     package: '@azure/arm-rediscache'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +633,9 @@ methods:
       content: 'function push(items: RedisFirewallRule[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -574,7 +644,7 @@ methods:
   - name: >-
       reduce((previousValue: RedisFirewallRule, currentValue: RedisFirewallRule,
       currentIndex: number, array: RedisFirewallRule[]) => RedisFirewallRule)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reduce'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reduce'
     package: '@azure/arm-rediscache'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +669,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+        type: <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
         description: ''
   - name: >-
       reduce((previousValue: RedisFirewallRule, currentValue: RedisFirewallRule,
       currentIndex: number, array: RedisFirewallRule[]) => RedisFirewallRule,
       RedisFirewallRule)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reduce_1'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reduce_1'
     package: '@azure/arm-rediscache'
     summary: ''
     remarks: ''
@@ -625,15 +695,17 @@ methods:
             RedisFirewallRule
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+        type: <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: RedisFirewallRule,
       currentIndex: number, array: RedisFirewallRule[]) => U, U)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reduce_2'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reduce_2'
     package: '@azure/arm-rediscache'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -669,7 +741,8 @@ methods:
       reduceRight((previousValue: RedisFirewallRule, currentValue:
       RedisFirewallRule, currentIndex: number, array: RedisFirewallRule[]) =>
       RedisFirewallRule)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reduceRight'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reduceRight
     package: '@azure/arm-rediscache'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -695,13 +768,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+        type: <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
         description: ''
   - name: >-
       reduceRight((previousValue: RedisFirewallRule, currentValue:
       RedisFirewallRule, currentIndex: number, array: RedisFirewallRule[]) =>
       RedisFirewallRule, RedisFirewallRule)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reduceRight_1
     package: '@azure/arm-rediscache'
     summary: ''
     remarks: ''
@@ -721,15 +795,18 @@ methods:
             RedisFirewallRule
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" />
+        type: <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: RedisFirewallRule,
       currentIndex: number, array: RedisFirewallRule[]) => U, U)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reduceRight_2
     package: '@azure/arm-rediscache'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -763,7 +840,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.reverse'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.reverse'
     package: '@azure/arm-rediscache'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -772,10 +849,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.shift'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.shift'
     package: '@azure/arm-rediscache'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -784,10 +863,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-rediscache.RedisFirewallRule" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.slice'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.slice'
     package: '@azure/arm-rediscache'
     summary: Returns a section of an array.
     remarks: ''
@@ -801,15 +882,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
   - name: >-
       some((value: RedisFirewallRule, index: number, array: RedisFirewallRule[])
       => unknown, any)
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.some'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.some'
     package: '@azure/arm-rediscache'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -819,28 +903,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: RedisFirewallRule, index: number,
+        function some(predicate: (value: RedisFirewallRule, index: number,
         array: RedisFirewallRule[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RedisFirewallRule, index: number, array:
             RedisFirewallRule[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: RedisFirewallRule, b: RedisFirewallRule) => number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.sort'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.sort'
     package: '@azure/arm-rediscache'
     summary: Sorts an array.
     remarks: ''
@@ -856,14 +945,25 @@ methods:
             undefined | (a: RedisFirewallRule, b: RedisFirewallRule) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, RedisFirewallRule[])'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.splice_1'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.splice_1'
     package: '@azure/arm-rediscache'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -885,14 +985,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.splice'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.splice'
     package: '@azure/arm-rediscache'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -913,10 +1017,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+        type: >-
+          <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.toLocaleString'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.toLocaleString
     package: '@azure/arm-rediscache'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -930,7 +1037,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.toString'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.toString'
     package: '@azure/arm-rediscache'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -942,7 +1049,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(RedisFirewallRule[])'
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.unshift'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.unshift'
     package: '@azure/arm-rediscache'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -952,14 +1059,16 @@ methods:
       content: 'function unshift(items: RedisFirewallRule[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-rediscache.RedisFirewallRule" />[]'
+          type: >-
+            <xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-rediscache.RedisFirewallRuleListResult.values'
+    uid: '@azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.values'
     package: '@azure/arm-rediscache'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -970,6 +1079,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-rediscache.RedisFirewallRule" />&gt;
+          uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-rediscache.RedisFirewallRule" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.[Symbol.iterator]
+    package: '@azure/arm-rediscache'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-rediscache.models.index.d.RedisFirewallRuleListResult.[Symbol.unscopables]
+    package: '@azure/arm-rediscache'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-rediscache.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-rediscache.models.index.d.RedisFirewallRule"
+  />&gt;

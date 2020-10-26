@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SyncFullSchemaPropertiesListResult
-uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult'
+uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult'
 package: '@azure/arm-sql'
 summary: ''
 fullName: SyncFullSchemaPropertiesListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.Array'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.Array'
     package: '@azure/arm-sql'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.length'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.length'
     package: '@azure/arm-sql'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.nextLink'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.nextLink'
     package: '@azure/arm-sql'
     summary: >-
       Link to retrieve next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SyncFullSchemaProperties>[])'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.concat'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.concat'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,44 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-sql.SyncFullSchemaProperties"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.concat_1'
+  - name: 'concat(SyncFullSchemaProperties | ConcatArray<SyncFullSchemaProperties>[])'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.concat_1'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SyncFullSchemaProperties |
+        ConcatArray<SyncFullSchemaProperties>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.copyWithin'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.copyWithin
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.entries'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.entries'
     package: '@azure/arm-sql'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +156,7 @@ methods:
   - name: >-
       every((value: SyncFullSchemaProperties, index: number, array:
       SyncFullSchemaProperties[]) => unknown, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.every'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.every_1'
     package: '@azure/arm-sql'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +164,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SyncFullSchemaProperties, index:
+        function every(predicate: (value: SyncFullSchemaProperties, index:
         number, array: SyncFullSchemaProperties[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncFullSchemaProperties, index: number, array:
             SyncFullSchemaProperties[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SyncFullSchemaProperties, index: number, array:
+      SyncFullSchemaProperties[]) => value, any)
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.every'
+    package: '@azure/arm-sql'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SyncFullSchemaProperties, index:
+        number, array: SyncFullSchemaProperties[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SyncFullSchemaProperties, index: number, array:
+            SyncFullSchemaProperties[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SyncFullSchemaProperties, undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.fill'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.fill'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +242,9 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +266,7 @@ methods:
   - name: >-
       filter((value: SyncFullSchemaProperties, index: number, array:
       SyncFullSchemaProperties[]) => unknown, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.filter_1'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.filter_1'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +276,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SyncFullSchemaProperties, index:
+        function filter(predicate: (value: SyncFullSchemaProperties, index:
         number, array: SyncFullSchemaProperties[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncFullSchemaProperties, index: number, array:
             SyncFullSchemaProperties[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SyncFullSchemaProperties, index: number, array:
-      SyncFullSchemaProperties[]) => boolean, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.filter'
+      SyncFullSchemaProperties[]) => value, any)
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.filter'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +310,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SyncFullSchemaProperties, index:
-        number, array: SyncFullSchemaProperties[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SyncFullSchemaProperties, index:
+        number, array: SyncFullSchemaProperties[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncFullSchemaProperties, index: number, array:
-            SyncFullSchemaProperties[]) =&gt; boolean
+            SyncFullSchemaProperties[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +332,7 @@ methods:
   - name: >-
       find((value: SyncFullSchemaProperties, index: number, obj:
       SyncFullSchemaProperties[]) => unknown, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.find_1'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.find_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -295,12 +352,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SyncFullSchemaProperties, index: number, obj:
-      SyncFullSchemaProperties[]) => boolean, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.find'
+      SyncFullSchemaProperties[]) => value, any)
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.find'
     package: '@azure/arm-sql'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -314,12 +373,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         SyncFullSchemaProperties, index: number, obj:
-        SyncFullSchemaProperties[]) => boolean, thisArg?: any)
+        SyncFullSchemaProperties[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SyncFullSchemaProperties, index: number, obj:
-            SyncFullSchemaProperties[]) =&gt; boolean
+            SyncFullSchemaProperties[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -342,7 +401,7 @@ methods:
   - name: >-
       findIndex((value: SyncFullSchemaProperties, index: number, obj:
       SyncFullSchemaProperties[]) => unknown, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.findIndex'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.findIndex'
     package: '@azure/arm-sql'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -383,7 +442,7 @@ methods:
   - name: >-
       forEach((value: SyncFullSchemaProperties, index: number, array:
       SyncFullSchemaProperties[]) => void, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.forEach'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.forEach'
     package: '@azure/arm-sql'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -408,7 +467,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SyncFullSchemaProperties, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.includes'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.includes'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -422,7 +481,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -433,7 +494,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SyncFullSchemaProperties, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.indexOf'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.indexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -445,7 +506,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -456,7 +519,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.join'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.join'
     package: '@azure/arm-sql'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -477,7 +540,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.keys'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.keys'
     package: '@azure/arm-sql'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -489,7 +552,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SyncFullSchemaProperties, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.lastIndexOf
     package: '@azure/arm-sql'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -501,7 +565,9 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -514,7 +580,7 @@ methods:
   - name: >-
       map<U>((value: SyncFullSchemaProperties, index: number, array:
       SyncFullSchemaProperties[]) => U, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.map'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.map'
     package: '@azure/arm-sql'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -544,7 +610,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.pop'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.pop'
     package: '@azure/arm-sql'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -553,10 +619,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
+          | undefined
         description: ''
   - name: 'push(SyncFullSchemaProperties[])'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.push'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.push'
     package: '@azure/arm-sql'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -566,7 +634,9 @@ methods:
       content: 'function push(items: SyncFullSchemaProperties[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -576,7 +646,7 @@ methods:
       reduce((previousValue: SyncFullSchemaProperties, currentValue:
       SyncFullSchemaProperties, currentIndex: number, array:
       SyncFullSchemaProperties[]) => SyncFullSchemaProperties)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reduce'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reduce'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -601,14 +671,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
         description: ''
   - name: >-
       reduce((previousValue: SyncFullSchemaProperties, currentValue:
       SyncFullSchemaProperties, currentIndex: number, array:
       SyncFullSchemaProperties[]) => SyncFullSchemaProperties,
       SyncFullSchemaProperties)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reduce_1'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reduce_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -628,15 +698,17 @@ methods:
             SyncFullSchemaProperties[]) =&gt; SyncFullSchemaProperties
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SyncFullSchemaProperties,
       currentIndex: number, array: SyncFullSchemaProperties[]) => U, U)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reduce_2'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reduce_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -672,7 +744,8 @@ methods:
       reduceRight((previousValue: SyncFullSchemaProperties, currentValue:
       SyncFullSchemaProperties, currentIndex: number, array:
       SyncFullSchemaProperties[]) => SyncFullSchemaProperties)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reduceRight'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reduceRight
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -699,14 +772,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
         description: ''
   - name: >-
       reduceRight((previousValue: SyncFullSchemaProperties, currentValue:
       SyncFullSchemaProperties, currentIndex: number, array:
       SyncFullSchemaProperties[]) => SyncFullSchemaProperties,
       SyncFullSchemaProperties)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reduceRight_1
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -726,15 +800,18 @@ methods:
             SyncFullSchemaProperties[]) =&gt; SyncFullSchemaProperties
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SyncFullSchemaProperties,
       currentIndex: number, array: SyncFullSchemaProperties[]) => U, U)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reduceRight_2
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -768,7 +845,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.reverse'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.reverse'
     package: '@azure/arm-sql'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -777,10 +854,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.shift'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.shift'
     package: '@azure/arm-sql'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -789,10 +868,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-sql.SyncFullSchemaProperties" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.slice'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.slice'
     package: '@azure/arm-sql'
     summary: Returns a section of an array.
     remarks: ''
@@ -806,15 +887,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
   - name: >-
       some((value: SyncFullSchemaProperties, index: number, array:
       SyncFullSchemaProperties[]) => unknown, any)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.some'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.some'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -824,30 +908,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SyncFullSchemaProperties, index:
+        function some(predicate: (value: SyncFullSchemaProperties, index:
         number, array: SyncFullSchemaProperties[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncFullSchemaProperties, index: number, array:
             SyncFullSchemaProperties[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: SyncFullSchemaProperties, b:
       SyncFullSchemaProperties) => number)
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.sort'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.sort'
     package: '@azure/arm-sql'
     summary: Sorts an array.
     remarks: ''
@@ -863,14 +952,25 @@ methods:
             undefined | (a: SyncFullSchemaProperties, b:
             SyncFullSchemaProperties) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SyncFullSchemaProperties[])'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.splice_1'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.splice_1'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -892,14 +992,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.splice'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.splice'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -920,10 +1024,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.toLocaleString'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.toLocaleString
     package: '@azure/arm-sql'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -937,7 +1044,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.toString'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.toString'
     package: '@azure/arm-sql'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -949,7 +1056,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SyncFullSchemaProperties[])'
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.unshift'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.unshift'
     package: '@azure/arm-sql'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -959,14 +1066,16 @@ methods:
       content: 'function unshift(items: SyncFullSchemaProperties[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-sql.SyncFullSchemaPropertiesListResult.values'
+    uid: '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.values'
     package: '@azure/arm-sql'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -977,6 +1086,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-sql.SyncFullSchemaProperties" />&gt;
+          uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-sql.SyncFullSchemaProperties" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.[Symbol.iterator]
+    package: '@azure/arm-sql'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult.[Symbol.unscopables]
+    package: '@azure/arm-sql'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-sql.models.index.d.RecoverableDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-sql.models.index.d.SyncFullSchemaProperties"
+  />&gt;

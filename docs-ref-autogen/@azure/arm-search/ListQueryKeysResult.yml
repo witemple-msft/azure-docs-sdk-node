@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ListQueryKeysResult
-uid: '@azure/arm-search.ListQueryKeysResult'
+uid: '@azure/arm-search.models.index.d.ListQueryKeysResult'
 package: '@azure/arm-search'
 summary: ''
 fullName: ListQueryKeysResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-search.ListQueryKeysResult.Array'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.Array'
     package: '@azure/arm-search'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-search.ListQueryKeysResult.length'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.length'
     package: '@azure/arm-search'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<QueryKey>[])'
-    uid: '@azure/arm-search.ListQueryKeysResult.concat'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.concat'
     package: '@azure/arm-search'
     summary: Combines two or more arrays.
     remarks: ''
@@ -49,31 +49,36 @@ methods:
       content: 'function concat(items: ConcatArray<QueryKey>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-search.QueryKey" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-search.models.index.d.QueryKey"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-search.ListQueryKeysResult.concat_1'
+  - name: 'concat(QueryKey | ConcatArray<QueryKey>[])'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.concat_1'
     package: '@azure/arm-search'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: QueryKey | ConcatArray<QueryKey>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-search.models.index.d.QueryKey" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-search.models.index.d.QueryKey"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.copyWithin'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.copyWithin'
     package: '@azure/arm-search'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -111,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-search.ListQueryKeysResult.entries'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.entries'
     package: '@azure/arm-search'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -123,7 +128,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: QueryKey, index: number, array: QueryKey[]) => unknown, any)'
-    uid: '@azure/arm-search.ListQueryKeysResult.every'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.every_1'
     package: '@azure/arm-search'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -131,26 +136,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: QueryKey, index: number, array:
+        function every(predicate: (value: QueryKey, index: number, array:
         QueryKey[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: QueryKey, index: number, array: QueryKey[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: QueryKey, index: number, array: QueryKey[]) => value,
+      any)
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.every'
+    package: '@azure/arm-search'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: QueryKey, index: number, array:
+        QueryKey[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: QueryKey, index: number, array: QueryKey[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(QueryKey, undefined | number, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.fill'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.fill'
     package: '@azure/arm-search'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -164,7 +210,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-search.QueryKey" />
+          type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -186,7 +232,7 @@ methods:
   - name: >-
       filter((value: QueryKey, index: number, array: QueryKey[]) => unknown,
       any)
-    uid: '@azure/arm-search.ListQueryKeysResult.filter_1'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.filter_1'
     package: '@azure/arm-search'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -196,28 +242,27 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: QueryKey, index: number, array:
+        function filter(predicate: (value: QueryKey, index: number, array:
         QueryKey[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: QueryKey, index: number, array: QueryKey[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
   - name: >-
-      filter<S>((value: QueryKey, index: number, array: QueryKey[]) => boolean,
+      filter<S>((value: QueryKey, index: number, array: QueryKey[]) => value,
       any)
-    uid: '@azure/arm-search.ListQueryKeysResult.filter'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.filter'
     package: '@azure/arm-search'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -227,26 +272,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: QueryKey, index: number, array:
-        QueryKey[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: QueryKey, index: number, array:
+        QueryKey[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: QueryKey, index: number, array: QueryKey[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: QueryKey, index: number, array: QueryKey[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: QueryKey, index: number, obj: QueryKey[]) => unknown, any)'
-    uid: '@azure/arm-search.ListQueryKeysResult.find_1'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.find_1'
     package: '@azure/arm-search'
     summary: ''
     remarks: ''
@@ -264,12 +308,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" /> | undefined
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: QueryKey, index: number, obj: QueryKey[]) =>
-      boolean, any)
-    uid: '@azure/arm-search.ListQueryKeysResult.find'
+      value, any)
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.find'
     package: '@azure/arm-search'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -282,12 +326,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: QueryKey, index: number,
-        obj: QueryKey[]) => boolean, thisArg?: any)
+        obj: QueryKey[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: QueryKey, index: number, obj: QueryKey[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -310,7 +354,7 @@ methods:
   - name: >-
       findIndex((value: QueryKey, index: number, obj: QueryKey[]) => unknown,
       any)
-    uid: '@azure/arm-search.ListQueryKeysResult.findIndex'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.findIndex'
     package: '@azure/arm-search'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -347,7 +391,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: QueryKey, index: number, array: QueryKey[]) => void, any)'
-    uid: '@azure/arm-search.ListQueryKeysResult.forEach'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.forEach'
     package: '@azure/arm-search'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -370,7 +414,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(QueryKey, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.includes'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.includes'
     package: '@azure/arm-search'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -384,7 +428,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-search.QueryKey" />
+          type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -395,7 +439,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(QueryKey, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.indexOf'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.indexOf'
     package: '@azure/arm-search'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -407,7 +451,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-search.QueryKey" />
+          type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -418,7 +462,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-search.ListQueryKeysResult.join'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.join'
     package: '@azure/arm-search'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -439,7 +483,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-search.ListQueryKeysResult.keys'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.keys'
     package: '@azure/arm-search'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -451,7 +495,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(QueryKey, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.lastIndexOf'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.lastIndexOf'
     package: '@azure/arm-search'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -463,7 +507,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-search.QueryKey" />
+          type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -474,7 +518,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: QueryKey, index: number, array: QueryKey[]) => U, any)'
-    uid: '@azure/arm-search.ListQueryKeysResult.map'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.map'
     package: '@azure/arm-search'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -502,7 +546,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-search.ListQueryKeysResult.pop'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.pop'
     package: '@azure/arm-search'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -511,10 +555,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" /> | undefined
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" /> | undefined
         description: ''
   - name: 'push(QueryKey[])'
-    uid: '@azure/arm-search.ListQueryKeysResult.push'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.push'
     package: '@azure/arm-search'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -524,7 +568,7 @@ methods:
       content: 'function push(items: QueryKey[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+          type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
           description: |
             New elements of the Array.
       return:
@@ -533,7 +577,7 @@ methods:
   - name: >-
       reduce((previousValue: QueryKey, currentValue: QueryKey, currentIndex:
       number, array: QueryKey[]) => QueryKey)
-    uid: '@azure/arm-search.ListQueryKeysResult.reduce'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reduce'
     package: '@azure/arm-search'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -556,12 +600,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" />
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
         description: ''
   - name: >-
       reduce((previousValue: QueryKey, currentValue: QueryKey, currentIndex:
       number, array: QueryKey[]) => QueryKey, QueryKey)
-    uid: '@azure/arm-search.ListQueryKeysResult.reduce_1'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reduce_1'
     package: '@azure/arm-search'
     summary: ''
     remarks: ''
@@ -579,15 +623,15 @@ methods:
             number, array: QueryKey[]) =&gt; QueryKey
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-search.QueryKey" />
+          type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" />
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: QueryKey, currentIndex: number,
       array: QueryKey[]) => U, U)
-    uid: '@azure/arm-search.ListQueryKeysResult.reduce_2'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reduce_2'
     package: '@azure/arm-search'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -622,7 +666,7 @@ methods:
   - name: >-
       reduceRight((previousValue: QueryKey, currentValue: QueryKey,
       currentIndex: number, array: QueryKey[]) => QueryKey)
-    uid: '@azure/arm-search.ListQueryKeysResult.reduceRight'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reduceRight'
     package: '@azure/arm-search'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -646,12 +690,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" />
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
         description: ''
   - name: >-
       reduceRight((previousValue: QueryKey, currentValue: QueryKey,
       currentIndex: number, array: QueryKey[]) => QueryKey, QueryKey)
-    uid: '@azure/arm-search.ListQueryKeysResult.reduceRight_1'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reduceRight_1'
     package: '@azure/arm-search'
     summary: ''
     remarks: ''
@@ -669,15 +713,15 @@ methods:
             number, array: QueryKey[]) =&gt; QueryKey
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-search.QueryKey" />
+          type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" />
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: QueryKey, currentIndex:
       number, array: QueryKey[]) => U, U)
-    uid: '@azure/arm-search.ListQueryKeysResult.reduceRight_2'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reduceRight_2'
     package: '@azure/arm-search'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -711,7 +755,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-search.ListQueryKeysResult.reverse'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.reverse'
     package: '@azure/arm-search'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -720,10 +764,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-search.ListQueryKeysResult.shift'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.shift'
     package: '@azure/arm-search'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -732,10 +776,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-search.QueryKey" /> | undefined
+        type: <xref uid="@azure/arm-search.models.index.d.QueryKey" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.slice'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.slice'
     package: '@azure/arm-search'
     summary: Returns a section of an array.
     remarks: ''
@@ -749,13 +793,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
   - name: 'some((value: QueryKey, index: number, array: QueryKey[]) => unknown, any)'
-    uid: '@azure/arm-search.ListQueryKeysResult.some'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.some'
     package: '@azure/arm-search'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -765,26 +810,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: QueryKey, index: number, array:
+        function some(predicate: (value: QueryKey, index: number, array:
         QueryKey[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: QueryKey, index: number, array: QueryKey[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: QueryKey, b: QueryKey) => number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.sort'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.sort'
     package: '@azure/arm-search'
     summary: Sorts an array.
     remarks: ''
@@ -798,14 +848,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: QueryKey, b: QueryKey) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, QueryKey[])'
-    uid: '@azure/arm-search.ListQueryKeysResult.splice_1'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.splice_1'
     package: '@azure/arm-search'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -825,14 +886,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+          type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-search.ListQueryKeysResult.splice'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.splice'
     package: '@azure/arm-search'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -853,10 +914,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+        type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-search.ListQueryKeysResult.toLocaleString'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.toLocaleString'
     package: '@azure/arm-search'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -870,7 +931,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-search.ListQueryKeysResult.toString'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.toString'
     package: '@azure/arm-search'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -882,7 +943,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(QueryKey[])'
-    uid: '@azure/arm-search.ListQueryKeysResult.unshift'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.unshift'
     package: '@azure/arm-search'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -892,14 +953,14 @@ methods:
       content: 'function unshift(items: QueryKey[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-search.QueryKey" />[]'
+          type: '<xref uid="@azure/arm-search.models.index.d.QueryKey" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-search.ListQueryKeysResult.values'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.values'
     package: '@azure/arm-search'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -908,6 +969,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-search.QueryKey" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-search.models.index.d.QueryKey" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-search.QueryKey" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.[Symbol.iterator]'
+    package: '@azure/arm-search'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-search.models.index.d.QueryKey" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-search.models.index.d.ListQueryKeysResult.[Symbol.unscopables]'
+    package: '@azure/arm-search'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-search.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-search.models.index.d.QueryKey" />&gt;

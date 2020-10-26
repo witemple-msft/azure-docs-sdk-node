@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: MessagingRegionsListResult
-uid: '@azure/arm-eventhub.MessagingRegionsListResult'
+uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult'
 package: '@azure/arm-eventhub'
 summary: ''
 fullName: MessagingRegionsListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.Array'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.Array'
     package: '@azure/arm-eventhub'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.length'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.length'
     package: '@azure/arm-eventhub'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.nextLink'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.nextLink'
     package: '@azure/arm-eventhub'
     summary: >-
       Link to the next set of results. Not empty if Value contains incomplete
@@ -59,7 +59,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<MessagingRegions>[])'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.concat'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.concat'
     package: '@azure/arm-eventhub'
     summary: Combines two or more arrays.
     remarks: ''
@@ -70,32 +70,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-eventhub.MessagingRegions"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.concat_1'
+  - name: 'concat(MessagingRegions | ConcatArray<MessagingRegions>[])'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.concat_1'
     package: '@azure/arm-eventhub'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: MessagingRegions |
+        ConcatArray<MessagingRegions>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.copyWithin'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.copyWithin'
     package: '@azure/arm-eventhub'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -133,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.entries'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.entries'
     package: '@azure/arm-eventhub'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -147,7 +152,7 @@ methods:
   - name: >-
       every((value: MessagingRegions, index: number, array: MessagingRegions[])
       => unknown, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.every'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.every_1'
     package: '@azure/arm-eventhub'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -155,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: MessagingRegions, index: number,
+        function every(predicate: (value: MessagingRegions, index: number,
         array: MessagingRegions[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MessagingRegions, index: number, array: MessagingRegions[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: MessagingRegions, index: number, array:
+      MessagingRegions[]) => value, any)
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.every'
+    package: '@azure/arm-eventhub'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: MessagingRegions, index: number,
+        array: MessagingRegions[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: MessagingRegions, index: number, array: MessagingRegions[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(MessagingRegions, undefined | number, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.fill'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.fill'
     package: '@azure/arm-eventhub'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -190,7 +238,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+          type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -212,7 +260,7 @@ methods:
   - name: >-
       filter((value: MessagingRegions, index: number, array: MessagingRegions[])
       => unknown, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.filter_1'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.filter_1'
     package: '@azure/arm-eventhub'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -222,30 +270,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: MessagingRegions, index: number,
+        function filter(predicate: (value: MessagingRegions, index: number,
         array: MessagingRegions[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MessagingRegions, index: number, array: MessagingRegions[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
   - name: >-
       filter<S>((value: MessagingRegions, index: number, array:
-      MessagingRegions[]) => boolean, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.filter'
+      MessagingRegions[]) => value, any)
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.filter'
     package: '@azure/arm-eventhub'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -255,21 +302,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: MessagingRegions, index: number,
-        array: MessagingRegions[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: MessagingRegions, index: number,
+        array: MessagingRegions[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MessagingRegions, index: number, array: MessagingRegions[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -278,7 +324,7 @@ methods:
   - name: >-
       find((value: MessagingRegions, index: number, obj: MessagingRegions[]) =>
       unknown, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.find_1'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.find_1'
     package: '@azure/arm-eventhub'
     summary: ''
     remarks: ''
@@ -298,12 +344,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: MessagingRegions, index: number, obj:
-      MessagingRegions[]) => boolean, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.find'
+      MessagingRegions[]) => value, any)
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.find'
     package: '@azure/arm-eventhub'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -316,12 +364,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: MessagingRegions, index:
-        number, obj: MessagingRegions[]) => boolean, thisArg?: any)
+        number, obj: MessagingRegions[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: MessagingRegions, index: number, obj:
-            MessagingRegions[]) =&gt; boolean
+            MessagingRegions[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -344,7 +392,7 @@ methods:
   - name: >-
       findIndex((value: MessagingRegions, index: number, obj:
       MessagingRegions[]) => unknown, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.findIndex'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.findIndex'
     package: '@azure/arm-eventhub'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -385,7 +433,7 @@ methods:
   - name: >-
       forEach((value: MessagingRegions, index: number, array:
       MessagingRegions[]) => void, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.forEach'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.forEach'
     package: '@azure/arm-eventhub'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -410,7 +458,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(MessagingRegions, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.includes'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.includes'
     package: '@azure/arm-eventhub'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -424,7 +472,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+          type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +483,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(MessagingRegions, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.indexOf'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.indexOf'
     package: '@azure/arm-eventhub'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -447,7 +495,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+          type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +506,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.join'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.join'
     package: '@azure/arm-eventhub'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -479,7 +527,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.keys'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.keys'
     package: '@azure/arm-eventhub'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -491,7 +539,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(MessagingRegions, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.lastIndexOf'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.lastIndexOf'
     package: '@azure/arm-eventhub'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -503,7 +551,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+          type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -516,7 +564,7 @@ methods:
   - name: >-
       map<U>((value: MessagingRegions, index: number, array: MessagingRegions[])
       => U, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.map'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.map'
     package: '@azure/arm-eventhub'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -546,7 +594,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.pop'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.pop'
     package: '@azure/arm-eventhub'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -555,10 +603,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" /> |
+          undefined
         description: ''
   - name: 'push(MessagingRegions[])'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.push'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.push'
     package: '@azure/arm-eventhub'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -568,7 +618,7 @@ methods:
       content: 'function push(items: MessagingRegions[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+          type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
           description: |
             New elements of the Array.
       return:
@@ -577,7 +627,7 @@ methods:
   - name: >-
       reduce((previousValue: MessagingRegions, currentValue: MessagingRegions,
       currentIndex: number, array: MessagingRegions[]) => MessagingRegions)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reduce'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reduce'
     package: '@azure/arm-eventhub'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -602,13 +652,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+        type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
         description: ''
   - name: >-
       reduce((previousValue: MessagingRegions, currentValue: MessagingRegions,
       currentIndex: number, array: MessagingRegions[]) => MessagingRegions,
       MessagingRegions)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reduce_1'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reduce_1'
     package: '@azure/arm-eventhub'
     summary: ''
     remarks: ''
@@ -627,15 +677,15 @@ methods:
             MessagingRegions
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+          type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+        type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: MessagingRegions, currentIndex:
       number, array: MessagingRegions[]) => U, U)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reduce_2'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reduce_2'
     package: '@azure/arm-eventhub'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -671,7 +721,7 @@ methods:
       reduceRight((previousValue: MessagingRegions, currentValue:
       MessagingRegions, currentIndex: number, array: MessagingRegions[]) =>
       MessagingRegions)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reduceRight'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reduceRight'
     package: '@azure/arm-eventhub'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -697,13 +747,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+        type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
         description: ''
   - name: >-
       reduceRight((previousValue: MessagingRegions, currentValue:
       MessagingRegions, currentIndex: number, array: MessagingRegions[]) =>
       MessagingRegions, MessagingRegions)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reduceRight_1
     package: '@azure/arm-eventhub'
     summary: ''
     remarks: ''
@@ -722,15 +773,16 @@ methods:
             MessagingRegions
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+          type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" />
+        type: <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: MessagingRegions,
       currentIndex: number, array: MessagingRegions[]) => U, U)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reduceRight_2
     package: '@azure/arm-eventhub'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +816,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.reverse'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.reverse'
     package: '@azure/arm-eventhub'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +825,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.shift'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.shift'
     package: '@azure/arm-eventhub'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +837,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-eventhub.MessagingRegions" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.slice'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.slice'
     package: '@azure/arm-eventhub'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +856,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
   - name: >-
       some((value: MessagingRegions, index: number, array: MessagingRegions[])
       => unknown, any)
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.some'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.some'
     package: '@azure/arm-eventhub'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,28 +875,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: MessagingRegions, index: number,
-        array: MessagingRegions[]) => unknown, thisArg?: any)
+        function some(predicate: (value: MessagingRegions, index: number, array:
+        MessagingRegions[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MessagingRegions, index: number, array: MessagingRegions[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: MessagingRegions, b: MessagingRegions) => number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.sort'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.sort'
     package: '@azure/arm-eventhub'
     summary: Sorts an array.
     remarks: ''
@@ -855,14 +915,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: MessagingRegions, b: MessagingRegions) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, MessagingRegions[])'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.splice_1'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.splice_1'
     package: '@azure/arm-eventhub'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -884,14 +955,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+          type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.splice'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.splice'
     package: '@azure/arm-eventhub'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -912,10 +983,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+        type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.toLocaleString'
+    uid: >-
+      @azure/arm-eventhub.models.index.d.MessagingRegionsListResult.toLocaleString
     package: '@azure/arm-eventhub'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -929,7 +1001,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.toString'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.toString'
     package: '@azure/arm-eventhub'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -941,7 +1013,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(MessagingRegions[])'
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.unshift'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.unshift'
     package: '@azure/arm-eventhub'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -951,14 +1023,14 @@ methods:
       content: 'function unshift(items: MessagingRegions[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-eventhub.MessagingRegions" />[]'
+          type: '<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-eventhub.MessagingRegionsListResult.values'
+    uid: '@azure/arm-eventhub.models.index.d.MessagingRegionsListResult.values'
     package: '@azure/arm-eventhub'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -968,7 +1040,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-eventhub.MessagingRegions"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-eventhub.MessagingRegions" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-eventhub.models.index.d.MessagingRegionsListResult.[Symbol.iterator]
+    package: '@azure/arm-eventhub'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-eventhub.models.index.d.MessagingRegionsListResult.[Symbol.unscopables]
+    package: '@azure/arm-eventhub'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-eventhub.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-eventhub.models.index.d.MessagingRegions" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AutoUserSpecification
-uid: '@azure/batch.AutoUserSpecification'
+uid: '@azure/batch.models.index.d.AutoUserSpecification'
 package: '@azure/batch'
 summary: An interface representing AutoUserSpecification.
 fullName: AutoUserSpecification
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: elevationLevel
-    uid: '@azure/batch.AutoUserSpecification.elevationLevel'
+    uid: '@azure/batch.models.index.d.AutoUserSpecification.elevationLevel'
     package: '@azure/batch'
     summary: >-
       The elevation level of the auto user. The default value is nonAdmin.
@@ -24,16 +24,25 @@ properties:
     syntax:
       content: 'elevationLevel?: ElevationLevel'
       return:
-        type: <xref uid="@azure/batch.ElevationLevel" />
+        type: <xref uid="@azure/batch.models.index.d.ElevationLevel" />
         description: ''
   - name: scope
-    uid: '@azure/batch.AutoUserSpecification.scope'
+    uid: '@azure/batch.models.index.d.AutoUserSpecification.scope'
     package: '@azure/batch'
     summary: >-
-      The scope for the auto user. The default value is task. Possible values
-      include: 'task',
+      The scope for the auto user. The default value is pool. If the pool is
+      running Windows a value
 
-      'pool'
+      of Task should be specified if stricter isolation between tasks is
+      required. For example, if
+
+      the task mutates the registry in a way which could impact other tasks, or
+      if certificates have
+
+      been specified on the pool which should not be accessible by normal tasks
+      but should be
+
+      accessible by StartTasks. Possible values include: 'task', 'pool'
     fullName: scope
     remarks: ''
     isPreview: false
@@ -41,5 +50,5 @@ properties:
     syntax:
       content: 'scope?: AutoUserScope'
       return:
-        type: <xref uid="@azure/batch.AutoUserScope" />
+        type: <xref uid="@azure/batch.models.index.d.AutoUserScope" />
         description: ''

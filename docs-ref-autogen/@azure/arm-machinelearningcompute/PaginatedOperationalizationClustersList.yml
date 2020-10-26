@@ -1,6 +1,7 @@
 ### YamlMime:TSType
 name: PaginatedOperationalizationClustersList
-uid: '@azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList'
+uid: >-
+  @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList
 package: '@azure/arm-machinelearningcompute'
 summary: ''
 fullName: PaginatedOperationalizationClustersList
@@ -11,7 +12,7 @@ type: interface
 properties:
   - name: Array
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.Array
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.Array
     package: '@azure/arm-machinelearningcompute'
     summary: ''
     fullName: Array
@@ -25,7 +26,7 @@ properties:
         description: ''
   - name: length
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.length
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.length
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -41,7 +42,7 @@ properties:
         description: ''
   - name: nextLink
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.nextLink
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.nextLink
     package: '@azure/arm-machinelearningcompute'
     summary: ''
     fullName: nextLink
@@ -56,7 +57,7 @@ properties:
 methods:
   - name: 'concat(ConcatArray<OperationalizationCluster>[])'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.concat
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.concat
     package: '@azure/arm-machinelearningcompute'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,38 +69,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster"
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
+  - name: >-
+      concat(OperationalizationCluster |
+      ConcatArray<OperationalizationCluster>[])
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.concat_1
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.concat_1
     package: '@azure/arm-machinelearningcompute'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: OperationalizationCluster |
+        ConcatArray<OperationalizationCluster>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.copyWithin
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.copyWithin
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -138,7 +150,7 @@ methods:
         description: ''
   - name: entries()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.entries
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.entries
     package: '@azure/arm-machinelearningcompute'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -153,7 +165,7 @@ methods:
       every((value: OperationalizationCluster, index: number, array:
       OperationalizationCluster[]) => unknown, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.every
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.every_1
     package: '@azure/arm-machinelearningcompute'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -161,29 +173,73 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: OperationalizationCluster, index:
+        function every(predicate: (value: OperationalizationCluster, index:
         number, array: OperationalizationCluster[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationalizationCluster, index: number, array:
             OperationalizationCluster[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: OperationalizationCluster, index: number, array:
+      OperationalizationCluster[]) => value, any)
+    uid: >-
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.every
+    package: '@azure/arm-machinelearningcompute'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: OperationalizationCluster, index:
+        number, array: OperationalizationCluster[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: OperationalizationCluster, index: number, array:
+            OperationalizationCluster[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(OperationalizationCluster, undefined | number, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.fill
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.fill
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -199,7 +255,8 @@ methods:
         - id: value
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -222,7 +279,7 @@ methods:
       filter((value: OperationalizationCluster, index: number, array:
       OperationalizationCluster[]) => unknown, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.filter_1
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.filter_1
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -232,33 +289,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: OperationalizationCluster, index:
+        function filter(predicate: (value: OperationalizationCluster, index:
         number, array: OperationalizationCluster[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationalizationCluster, index: number, array:
             OperationalizationCluster[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: OperationalizationCluster, index: number, array:
-      OperationalizationCluster[]) => boolean, any)
+      OperationalizationCluster[]) => value, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.filter
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.filter
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -268,21 +325,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: OperationalizationCluster, index:
-        number, array: OperationalizationCluster[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: OperationalizationCluster, index:
+        number, array: OperationalizationCluster[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationalizationCluster, index: number, array:
-            OperationalizationCluster[]) =&gt; boolean
+            OperationalizationCluster[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -292,7 +348,7 @@ methods:
       find((value: OperationalizationCluster, index: number, obj:
       OperationalizationCluster[]) => unknown, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.find_1
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.find_1
     package: '@azure/arm-machinelearningcompute'
     summary: ''
     remarks: ''
@@ -314,14 +370,14 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" /> |
-          undefined
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: OperationalizationCluster, index: number, obj:
-      OperationalizationCluster[]) => boolean, any)
+      OperationalizationCluster[]) => value, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.find
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.find
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -335,12 +391,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         OperationalizationCluster, index: number, obj:
-        OperationalizationCluster[]) => boolean, thisArg?: any)
+        OperationalizationCluster[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: OperationalizationCluster, index: number, obj:
-            OperationalizationCluster[]) =&gt; boolean
+            OperationalizationCluster[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -364,7 +420,7 @@ methods:
       findIndex((value: OperationalizationCluster, index: number, obj:
       OperationalizationCluster[]) => unknown, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.findIndex
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.findIndex
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -406,7 +462,7 @@ methods:
       forEach((value: OperationalizationCluster, index: number, array:
       OperationalizationCluster[]) => void, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.forEach
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.forEach
     package: '@azure/arm-machinelearningcompute'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -432,7 +488,7 @@ methods:
             value.
   - name: 'includes(OperationalizationCluster, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.includes
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.includes
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -448,7 +504,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -460,7 +517,7 @@ methods:
         description: ''
   - name: 'indexOf(OperationalizationCluster, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.indexOf
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.indexOf
     package: '@azure/arm-machinelearningcompute'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -474,7 +531,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -486,7 +544,7 @@ methods:
         description: ''
   - name: join(undefined | string)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.join
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.join
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -508,7 +566,7 @@ methods:
         description: ''
   - name: keys()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.keys
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.keys
     package: '@azure/arm-machinelearningcompute'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -521,7 +579,7 @@ methods:
         description: ''
   - name: 'lastIndexOf(OperationalizationCluster, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.lastIndexOf
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.lastIndexOf
     package: '@azure/arm-machinelearningcompute'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -535,7 +593,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -549,7 +608,7 @@ methods:
       map<U>((value: OperationalizationCluster, index: number, array:
       OperationalizationCluster[]) => U, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.map
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.map
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -580,7 +639,7 @@ methods:
         description: ''
   - name: pop()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.pop
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.pop
     package: '@azure/arm-machinelearningcompute'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -591,12 +650,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" /> |
-          undefined
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          /> | undefined
         description: ''
   - name: 'push(OperationalizationCluster[])'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.push
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.push
     package: '@azure/arm-machinelearningcompute'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -608,7 +667,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster"
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
             />[]
           description: |
             New elements of the Array.
@@ -620,7 +679,7 @@ methods:
       OperationalizationCluster, currentIndex: number, array:
       OperationalizationCluster[]) => OperationalizationCluster)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reduce
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reduce
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -647,7 +706,8 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />
         description: ''
   - name: >-
       reduce((previousValue: OperationalizationCluster, currentValue:
@@ -655,7 +715,7 @@ methods:
       OperationalizationCluster[]) => OperationalizationCluster,
       OperationalizationCluster)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reduce_1
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reduce_1
     package: '@azure/arm-machinelearningcompute'
     summary: ''
     remarks: ''
@@ -677,18 +737,20 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: OperationalizationCluster,
       currentIndex: number, array: OperationalizationCluster[]) => U, U)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reduce_2
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reduce_2
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -725,7 +787,7 @@ methods:
       OperationalizationCluster, currentIndex: number, array:
       OperationalizationCluster[]) => OperationalizationCluster)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reduceRight
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reduceRight
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -754,7 +816,8 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: OperationalizationCluster, currentValue:
@@ -762,7 +825,7 @@ methods:
       OperationalizationCluster[]) => OperationalizationCluster,
       OperationalizationCluster)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reduceRight_1
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reduceRight_1
     package: '@azure/arm-machinelearningcompute'
     summary: ''
     remarks: ''
@@ -784,18 +847,20 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+            />
           description: ''
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: OperationalizationCluster,
       currentIndex: number, array: OperationalizationCluster[]) => U, U)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reduceRight_2
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reduceRight_2
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -830,7 +895,7 @@ methods:
         description: ''
   - name: reverse()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.reverse
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.reverse
     package: '@azure/arm-machinelearningcompute'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -841,11 +906,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
   - name: shift()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.shift
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.shift
     package: '@azure/arm-machinelearningcompute'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -856,12 +922,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" /> |
-          undefined
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.slice
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.slice
     package: '@azure/arm-machinelearningcompute'
     summary: Returns a section of an array.
     remarks: ''
@@ -875,18 +941,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
   - name: >-
       some((value: OperationalizationCluster, index: number, array:
       OperationalizationCluster[]) => unknown, any)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.some
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.some
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -896,23 +964,28 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: OperationalizationCluster, index:
+        function some(predicate: (value: OperationalizationCluster, index:
         number, array: OperationalizationCluster[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: OperationalizationCluster, index: number, array:
             OperationalizationCluster[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
@@ -920,7 +993,7 @@ methods:
       sort(undefined | (a: OperationalizationCluster, b:
       OperationalizationCluster) => number)
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.sort
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.sort
     package: '@azure/arm-machinelearningcompute'
     summary: Sorts an array.
     remarks: ''
@@ -936,15 +1009,26 @@ methods:
             undefined | (a: OperationalizationCluster, b:
             OperationalizationCluster) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, OperationalizationCluster[])'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.splice_1
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.splice_1
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -968,18 +1052,19 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster"
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.splice
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.splice
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -1002,11 +1087,12 @@ methods:
       return:
         type: >-
           <xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />[]
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />[]
         description: ''
   - name: toLocaleString()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.toLocaleString
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.toLocaleString
     package: '@azure/arm-machinelearningcompute'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -1021,7 +1107,7 @@ methods:
         description: ''
   - name: toString()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.toString
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.toString
     package: '@azure/arm-machinelearningcompute'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -1034,7 +1120,7 @@ methods:
         description: ''
   - name: 'unshift(OperationalizationCluster[])'
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.unshift
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.unshift
     package: '@azure/arm-machinelearningcompute'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -1046,7 +1132,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-machinelearningcompute.OperationalizationCluster"
+            uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -1055,7 +1141,7 @@ methods:
         description: ''
   - name: values()
     uid: >-
-      @azure/arm-machinelearningcompute.PaginatedOperationalizationClustersList.values
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.values
     package: '@azure/arm-machinelearningcompute'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1066,9 +1152,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-machinelearningcompute.OperationalizationCluster"
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
           />&gt;
         description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.[Symbol.iterator]
+    package: '@azure/arm-machinelearningcompute'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.[Symbol.unscopables]
+    package: '@azure/arm-machinelearningcompute'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
 extends: >-
-  Array&lt;<xref
-  uid="@azure/arm-machinelearningcompute.OperationalizationCluster" />&gt;
+  <xref
+  uid="@azure/arm-machinelearningcompute.models.index.d.PaginatedOperationalizationClustersList.Array"
+  />&lt;<xref
+  uid="@azure/arm-machinelearningcompute.models.index.d.OperationalizationCluster"
+  />&gt;

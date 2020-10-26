@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SigningPolicy
-uid: '@azure/ms-rest-js.SigningPolicy'
+uid: '@azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy'
 package: '@azure/ms-rest-js'
 summary: ''
 fullName: SigningPolicy
@@ -12,7 +12,7 @@ constructors:
   - name: >-
       SigningPolicy(RequestPolicy, RequestPolicyOptionsLike,
       ServiceClientCredentials)
-    uid: '@azure/ms-rest-js.SigningPolicy.constructor'
+    uid: '@azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy.constructor'
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -25,17 +25,26 @@ constructors:
         ServiceClientCredentials)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/ms-rest-js.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/ms-rest-js.RequestPolicyOptionsLike" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicyOptionsLike"
+            />
           description: ''
         - id: authenticationProvider
-          type: <xref uid="@azure/ms-rest-js.ServiceClientCredentials" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.credentials.serviceClientCredentials.d.ServiceClientCredentials"
+            />
           description: ''
 properties:
   - name: authenticationProvider
-    uid: '@azure/ms-rest-js.SigningPolicy.authenticationProvider'
+    uid: >-
+      @azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy.authenticationProvider
     package: '@azure/ms-rest-js'
     summary: ''
     fullName: authenticationProvider
@@ -45,11 +54,14 @@ properties:
     syntax:
       content: 'authenticationProvider: ServiceClientCredentials'
       return:
-        type: <xref uid="@azure/ms-rest-js.ServiceClientCredentials" />
+        type: >-
+          <xref
+          uid="@azure/ms-rest-js.credentials.serviceClientCredentials.d.ServiceClientCredentials"
+          />
         description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/ms-rest-js.SigningPolicy.log'
+    uid: '@azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy.log'
     package: '@azure/ms-rest-js'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -64,14 +76,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/ms-rest-js.SigningPolicy.sendRequest'
+    uid: '@azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy.sendRequest'
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -81,13 +96,16 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+          type: <xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/ms-rest-js.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/ms-rest-js.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/ms-rest-js.SigningPolicy.shouldLog'
+    uid: '@azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy.shouldLog'
     package: '@azure/ms-rest-js'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -97,13 +115,16 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
   - name: signRequest(WebResourceLike)
-    uid: '@azure/ms-rest-js.SigningPolicy.signRequest'
+    uid: '@azure/ms-rest-js.policies.signingPolicy.d.SigningPolicy.signRequest'
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -113,9 +134,11 @@ methods:
       content: 'function signRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+          type: <xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/ms-rest-js.WebResourceLike" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike"
+          />&gt;
         description: ''
-extends: <xref uid="@azure/ms-rest-js.BaseRequestPolicy" />
+extends: <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.BaseRequestPolicy" />

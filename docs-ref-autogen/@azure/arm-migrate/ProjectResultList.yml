@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ProjectResultList
-uid: '@azure/arm-migrate.ProjectResultList'
+uid: '@azure/arm-migrate.models.index.d.ProjectResultList'
 package: '@azure/arm-migrate'
 summary: ''
 fullName: ProjectResultList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-migrate.ProjectResultList.Array'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.Array'
     package: '@azure/arm-migrate'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-migrate.ProjectResultList.length'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.length'
     package: '@azure/arm-migrate'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Project>[])'
-    uid: '@azure/arm-migrate.ProjectResultList.concat'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.concat'
     package: '@azure/arm-migrate'
     summary: Combines two or more arrays.
     remarks: ''
@@ -49,31 +49,36 @@ methods:
       content: 'function concat(items: ConcatArray<Project>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-migrate.Project" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-migrate.models.index.d.Project"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-migrate.ProjectResultList.concat_1'
+  - name: 'concat(Project | ConcatArray<Project>[])'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.concat_1'
     package: '@azure/arm-migrate'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Project | ConcatArray<Project>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-migrate.models.index.d.Project" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-migrate.models.index.d.Project"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.copyWithin'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.copyWithin'
     package: '@azure/arm-migrate'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -111,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-migrate.ProjectResultList.entries'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.entries'
     package: '@azure/arm-migrate'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -123,7 +128,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Project, index: number, array: Project[]) => unknown, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.every'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.every_1'
     package: '@azure/arm-migrate'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -131,26 +136,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Project, index: number, array:
+        function every(predicate: (value: Project, index: number, array:
         Project[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Project, index: number, array: Project[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Project, index: number, array: Project[]) => value, any)'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.every'
+    package: '@azure/arm-migrate'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Project, index: number, array:
+        Project[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Project, index: number, array: Project[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Project, undefined | number, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.fill'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.fill'
     package: '@azure/arm-migrate'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -164,7 +208,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-migrate.Project" />
+          type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -184,7 +228,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Project, index: number, array: Project[]) => unknown, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.filter_1'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.filter_1'
     package: '@azure/arm-migrate'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -194,28 +238,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Project, index: number, array:
+        function filter(predicate: (value: Project, index: number, array:
         Project[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Project, index: number, array: Project[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
-  - name: >-
-      filter<S>((value: Project, index: number, array: Project[]) => boolean,
-      any)
-    uid: '@azure/arm-migrate.ProjectResultList.filter'
+  - name: 'filter<S>((value: Project, index: number, array: Project[]) => value, any)'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.filter'
     package: '@azure/arm-migrate'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -225,26 +266,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Project, index: number, array:
-        Project[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Project, index: number, array:
+        Project[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Project, index: number, array: Project[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Project, index: number, array: Project[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Project, index: number, obj: Project[]) => unknown, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.find_1'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.find_1'
     package: '@azure/arm-migrate'
     summary: ''
     remarks: ''
@@ -262,12 +302,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-migrate.Project" /> | undefined
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Project, index: number, obj: Project[]) =>
-      boolean, any)
-    uid: '@azure/arm-migrate.ProjectResultList.find'
+      value, any)
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.find'
     package: '@azure/arm-migrate'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -280,12 +320,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Project, index: number,
-        obj: Project[]) => boolean, thisArg?: any)
+        obj: Project[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Project, index: number, obj: Project[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -306,7 +346,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Project, index: number, obj: Project[]) => unknown, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.findIndex'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.findIndex'
     package: '@azure/arm-migrate'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -343,7 +383,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Project, index: number, array: Project[]) => void, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.forEach'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.forEach'
     package: '@azure/arm-migrate'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -366,7 +406,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Project, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.includes'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.includes'
     package: '@azure/arm-migrate'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -380,7 +420,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-migrate.Project" />
+          type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -391,7 +431,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Project, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.indexOf'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.indexOf'
     package: '@azure/arm-migrate'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -401,7 +441,7 @@ methods:
       content: 'function indexOf(searchElement: Project, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-migrate.Project" />
+          type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -412,7 +452,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-migrate.ProjectResultList.join'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.join'
     package: '@azure/arm-migrate'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -433,7 +473,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-migrate.ProjectResultList.keys'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.keys'
     package: '@azure/arm-migrate'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -445,7 +485,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Project, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.lastIndexOf'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.lastIndexOf'
     package: '@azure/arm-migrate'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -457,7 +497,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-migrate.Project" />
+          type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -468,7 +508,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Project, index: number, array: Project[]) => U, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.map'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.map'
     package: '@azure/arm-migrate'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -496,7 +536,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-migrate.ProjectResultList.pop'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.pop'
     package: '@azure/arm-migrate'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -505,10 +545,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-migrate.Project" /> | undefined
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" /> | undefined
         description: ''
   - name: 'push(Project[])'
-    uid: '@azure/arm-migrate.ProjectResultList.push'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.push'
     package: '@azure/arm-migrate'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -518,7 +558,7 @@ methods:
       content: 'function push(items: Project[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-migrate.Project" />[]'
+          type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
           description: |
             New elements of the Array.
       return:
@@ -527,7 +567,7 @@ methods:
   - name: >-
       reduce((previousValue: Project, currentValue: Project, currentIndex:
       number, array: Project[]) => Project)
-    uid: '@azure/arm-migrate.ProjectResultList.reduce'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reduce'
     package: '@azure/arm-migrate'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -550,12 +590,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-migrate.Project" />
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
         description: ''
   - name: >-
       reduce((previousValue: Project, currentValue: Project, currentIndex:
       number, array: Project[]) => Project, Project)
-    uid: '@azure/arm-migrate.ProjectResultList.reduce_1'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reduce_1'
     package: '@azure/arm-migrate'
     summary: ''
     remarks: ''
@@ -573,15 +613,15 @@ methods:
             number, array: Project[]) =&gt; Project
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-migrate.Project" />
+          type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-migrate.Project" />
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Project, currentIndex: number,
       array: Project[]) => U, U)
-    uid: '@azure/arm-migrate.ProjectResultList.reduce_2'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reduce_2'
     package: '@azure/arm-migrate'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -615,7 +655,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Project, currentValue: Project, currentIndex:
       number, array: Project[]) => Project)
-    uid: '@azure/arm-migrate.ProjectResultList.reduceRight'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reduceRight'
     package: '@azure/arm-migrate'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -639,12 +679,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-migrate.Project" />
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
         description: ''
   - name: >-
       reduceRight((previousValue: Project, currentValue: Project, currentIndex:
       number, array: Project[]) => Project, Project)
-    uid: '@azure/arm-migrate.ProjectResultList.reduceRight_1'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reduceRight_1'
     package: '@azure/arm-migrate'
     summary: ''
     remarks: ''
@@ -662,15 +702,15 @@ methods:
             number, array: Project[]) =&gt; Project
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-migrate.Project" />
+          type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-migrate.Project" />
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Project, currentIndex:
       number, array: Project[]) => U, U)
-    uid: '@azure/arm-migrate.ProjectResultList.reduceRight_2'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reduceRight_2'
     package: '@azure/arm-migrate'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -703,7 +743,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-migrate.ProjectResultList.reverse'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.reverse'
     package: '@azure/arm-migrate'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -712,10 +752,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-migrate.ProjectResultList.shift'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.shift'
     package: '@azure/arm-migrate'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -724,10 +764,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-migrate.Project" /> | undefined
+        type: <xref uid="@azure/arm-migrate.models.index.d.Project" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.slice'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.slice'
     package: '@azure/arm-migrate'
     summary: Returns a section of an array.
     remarks: ''
@@ -741,13 +781,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
   - name: 'some((value: Project, index: number, array: Project[]) => unknown, any)'
-    uid: '@azure/arm-migrate.ProjectResultList.some'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.some'
     package: '@azure/arm-migrate'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -757,26 +798,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Project, index: number, array:
+        function some(predicate: (value: Project, index: number, array:
         Project[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Project, index: number, array: Project[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Project, b: Project) => number)'
-    uid: '@azure/arm-migrate.ProjectResultList.sort'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.sort'
     package: '@azure/arm-migrate'
     summary: Sorts an array.
     remarks: ''
@@ -790,14 +836,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Project, b: Project) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Project[])'
-    uid: '@azure/arm-migrate.ProjectResultList.splice_1'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.splice_1'
     package: '@azure/arm-migrate'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -817,14 +874,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-migrate.Project" />[]'
+          type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-migrate.ProjectResultList.splice'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.splice'
     package: '@azure/arm-migrate'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -845,10 +902,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-migrate.Project" />[]'
+        type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-migrate.ProjectResultList.toLocaleString'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.toLocaleString'
     package: '@azure/arm-migrate'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -862,7 +919,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-migrate.ProjectResultList.toString'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.toString'
     package: '@azure/arm-migrate'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -874,7 +931,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Project[])'
-    uid: '@azure/arm-migrate.ProjectResultList.unshift'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.unshift'
     package: '@azure/arm-migrate'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -884,14 +941,14 @@ methods:
       content: 'function unshift(items: Project[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-migrate.Project" />[]'
+          type: '<xref uid="@azure/arm-migrate.models.index.d.Project" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-migrate.ProjectResultList.values'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.values'
     package: '@azure/arm-migrate'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -900,6 +957,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-migrate.Project" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-migrate.models.index.d.Project" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-migrate.Project" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.[Symbol.iterator]'
+    package: '@azure/arm-migrate'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-migrate.models.index.d.Project" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-migrate.models.index.d.ProjectResultList.[Symbol.unscopables]'
+    package: '@azure/arm-migrate'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-migrate.models.index.d.ProjectResultList.Array"
+  />&lt;<xref uid="@azure/arm-migrate.models.index.d.Project" />&gt;

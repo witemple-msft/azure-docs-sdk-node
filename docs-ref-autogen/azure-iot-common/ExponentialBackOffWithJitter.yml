@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ExponentialBackOffWithJitter
-uid: azure-iot-common.ExponentialBackOffWithJitter
+uid: azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter
 package: azure-iot-common
 summary: >-
   Implements an Exponential Backoff with Jitter retry strategy.
@@ -16,7 +16,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'ExponentialBackOffWithJitter(boolean, ErrorFilter)'
-    uid: azure-iot-common.ExponentialBackOffWithJitter.constructor
+    uid: azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter.constructor
     package: azure-iot-common
     summary: >-
       Initializes a new instance of the
@@ -39,7 +39,8 @@ constructors:
           description: ''
 properties:
   - name: immediateFirstRetry
-    uid: azure-iot-common.ExponentialBackOffWithJitter.immediateFirstRetry
+    uid: >-
+      azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter.immediateFirstRetry
     package: azure-iot-common
     summary: >-
       Boolean indicating whether the first retry should be immediate (if set to
@@ -54,7 +55,8 @@ properties:
         type: boolean
         description: ''
   - name: normalParameters
-    uid: azure-iot-common.ExponentialBackOffWithJitter.normalParameters
+    uid: >-
+      azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter.normalParameters
     package: azure-iot-common
     summary: >-
       Retry parameters used to calculate the delay between each retry in normal
@@ -66,10 +68,14 @@ properties:
     syntax:
       content: 'normalParameters: ExponentialBackoffWithJitterParameters'
       return:
-        type: <xref uid="azure-iot-common.ExponentialBackoffWithJitterParameters" />
+        type: >-
+          <xref
+          uid="azure-iot-common.retry_policy.d.ExponentialBackoffWithJitterParameters"
+          />
         description: ''
   - name: throttledParameters
-    uid: azure-iot-common.ExponentialBackOffWithJitter.throttledParameters
+    uid: >-
+      azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter.throttledParameters
     package: azure-iot-common
     summary: >-
       Retry parameters used to calculate the delay between each retry in
@@ -81,11 +87,15 @@ properties:
     syntax:
       content: 'throttledParameters: ExponentialBackoffWithJitterParameters'
       return:
-        type: <xref uid="azure-iot-common.ExponentialBackoffWithJitterParameters" />
+        type: >-
+          <xref
+          uid="azure-iot-common.retry_policy.d.ExponentialBackoffWithJitterParameters"
+          />
         description: ''
 methods:
   - name: 'nextRetryTimeout(number, boolean)'
-    uid: azure-iot-common.ExponentialBackOffWithJitter.nextRetryTimeout
+    uid: >-
+      azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter.nextRetryTimeout
     package: azure-iot-common
     summary: Computes the interval to wait before retrying at each new retry tentative.
     remarks: ''
@@ -106,7 +116,7 @@ methods:
         type: number
         description: The time to wait before attempting a retry in milliseconds.
   - name: shouldRetry(Error)
-    uid: azure-iot-common.ExponentialBackOffWithJitter.shouldRetry
+    uid: azure-iot-common.retry_policy.d.ExponentialBackOffWithJitter.shouldRetry
     package: azure-iot-common
     summary: >-
       Based on the error passed as argument, determines if an error is transient
@@ -118,7 +128,7 @@ methods:
       content: 'function shouldRetry(error: Error)'
       parameters:
         - id: error
-          type: Error
+          type: <xref uid="azure-iot-common.errors.d.ArgumentError.Error" />
           description: The error encountered by the operation.
       return:
         type: boolean

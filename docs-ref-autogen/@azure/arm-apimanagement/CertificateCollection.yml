@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: CertificateCollection
-uid: '@azure/arm-apimanagement.CertificateCollection'
+uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection'
 package: '@azure/arm-apimanagement'
 summary: ''
 fullName: CertificateCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-apimanagement.CertificateCollection.Array'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.Array'
     package: '@azure/arm-apimanagement'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-apimanagement.CertificateCollection.length'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.length'
     package: '@azure/arm-apimanagement'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-apimanagement.CertificateCollection.nextLink'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.nextLink'
     package: '@azure/arm-apimanagement'
     summary: Next page link if any.
     fullName: nextLink
@@ -51,8 +51,34 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(CertificateContract | ConcatArray<CertificateContract>[])'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.concat_1'
+    package: '@azure/arm-apimanagement'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: CertificateContract |
+        ConcatArray<CertificateContract>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
+        description: ''
   - name: 'concat(ConcatArray<CertificateContract>[])'
-    uid: '@azure/arm-apimanagement.CertificateCollection.concat'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.concat'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +90,17 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-apimanagement.CertificateContract" />&gt;[]
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-apimanagement.CertificateCollection.concat_1'
-    package: '@azure/arm-apimanagement'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.copyWithin'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.copyWithin'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-apimanagement.CertificateCollection.entries'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.entries'
     package: '@azure/arm-apimanagement'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: CertificateContract, index: number, array:
       CertificateContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.every'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.every_1'
     package: '@azure/arm-apimanagement'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: CertificateContract, index: number,
+        function every(predicate: (value: CertificateContract, index: number,
         array: CertificateContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CertificateContract, index: number, array:
             CertificateContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: CertificateContract, index: number, array:
+      CertificateContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.every'
+    package: '@azure/arm-apimanagement'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: CertificateContract, index: number,
+        array: CertificateContract[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: CertificateContract, index: number, array:
+            CertificateContract[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(CertificateContract, undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.fill'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.fill'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: CertificateContract, index: number, array:
       CertificateContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.filter_1'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.filter_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: CertificateContract, index: number,
+        function filter(predicate: (value: CertificateContract, index: number,
         array: CertificateContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CertificateContract, index: number, array:
             CertificateContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
         description: ''
   - name: >-
       filter<S>((value: CertificateContract, index: number, array:
-      CertificateContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.filter'
+      CertificateContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.filter'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: CertificateContract, index:
-        number, array: CertificateContract[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: CertificateContract, index:
+        number, array: CertificateContract[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CertificateContract, index: number, array:
-            CertificateContract[]) =&gt; boolean
+            CertificateContract[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: CertificateContract, index: number, obj:
       CertificateContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.find_1'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.find_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -292,13 +349,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.CertificateContract" /> |
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" /> |
           undefined
         description: ''
   - name: >-
       find<S>((this: void, value: CertificateContract, index: number, obj:
-      CertificateContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.find'
+      CertificateContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.find'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +369,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: CertificateContract,
-        index: number, obj: CertificateContract[]) => boolean, thisArg?: any)
+        index: number, obj: CertificateContract[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: CertificateContract, index: number, obj:
-            CertificateContract[]) =&gt; boolean
+            CertificateContract[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +397,7 @@ methods:
   - name: >-
       findIndex((value: CertificateContract, index: number, obj:
       CertificateContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.findIndex'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.findIndex'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +438,7 @@ methods:
   - name: >-
       forEach((value: CertificateContract, index: number, array:
       CertificateContract[]) => void, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.forEach'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.forEach'
     package: '@azure/arm-apimanagement'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +463,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(CertificateContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.includes'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.includes'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +477,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +490,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(CertificateContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.indexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.indexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +502,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +515,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-apimanagement.CertificateCollection.join'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.join'
     package: '@azure/arm-apimanagement'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +536,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-apimanagement.CertificateCollection.keys'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.keys'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +548,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(CertificateContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.lastIndexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.lastIndexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +560,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +575,7 @@ methods:
   - name: >-
       map<U>((value: CertificateContract, index: number, array:
       CertificateContract[]) => U, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.map'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.map'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +605,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-apimanagement.CertificateCollection.pop'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.pop'
     package: '@azure/arm-apimanagement'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -551,11 +615,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.CertificateContract" /> |
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" /> |
           undefined
         description: ''
   - name: 'push(CertificateContract[])'
-    uid: '@azure/arm-apimanagement.CertificateCollection.push'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.push'
     package: '@azure/arm-apimanagement'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +630,10 @@ methods:
       content: 'function push(items: CertificateContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +643,7 @@ methods:
       reduce((previousValue: CertificateContract, currentValue:
       CertificateContract, currentIndex: number, array: CertificateContract[])
       => CertificateContract)
-    uid: '@azure/arm-apimanagement.CertificateCollection.reduce'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.reduce'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +668,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
         description: ''
   - name: >-
       reduce((previousValue: CertificateContract, currentValue:
       CertificateContract, currentIndex: number, array: CertificateContract[])
       => CertificateContract, CertificateContract)
-    uid: '@azure/arm-apimanagement.CertificateCollection.reduce_1'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.reduce_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -626,15 +696,19 @@ methods:
             CertificateContract[]) =&gt; CertificateContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: CertificateContract,
       currentIndex: number, array: CertificateContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.CertificateCollection.reduce_2'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.reduce_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +744,7 @@ methods:
       reduceRight((previousValue: CertificateContract, currentValue:
       CertificateContract, currentIndex: number, array: CertificateContract[])
       => CertificateContract)
-    uid: '@azure/arm-apimanagement.CertificateCollection.reduceRight'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.reduceRight'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +770,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
         description: ''
   - name: >-
       reduceRight((previousValue: CertificateContract, currentValue:
       CertificateContract, currentIndex: number, array: CertificateContract[])
       => CertificateContract, CertificateContract)
-    uid: '@azure/arm-apimanagement.CertificateCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.CertificateCollection.reduceRight_1
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -722,15 +799,20 @@ methods:
             CertificateContract[]) =&gt; CertificateContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.CertificateContract" />
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: CertificateContract,
       currentIndex: number, array: CertificateContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.CertificateCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.CertificateCollection.reduceRight_2
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +846,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-apimanagement.CertificateCollection.reverse'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.reverse'
     package: '@azure/arm-apimanagement'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +855,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-apimanagement.CertificateCollection.shift'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.shift'
     package: '@azure/arm-apimanagement'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -786,11 +870,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-apimanagement.CertificateContract" /> |
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" /> |
           undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.slice'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.slice'
     package: '@azure/arm-apimanagement'
     summary: Returns a section of an array.
     remarks: ''
@@ -804,15 +889,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
         description: ''
   - name: >-
       some((value: CertificateContract, index: number, array:
       CertificateContract[]) => unknown, any)
-    uid: '@azure/arm-apimanagement.CertificateCollection.some'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.some'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -822,30 +910,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: CertificateContract, index: number,
+        function some(predicate: (value: CertificateContract, index: number,
         array: CertificateContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CertificateContract, index: number, array:
             CertificateContract[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: CertificateContract, b: CertificateContract) =>
       number)
-    uid: '@azure/arm-apimanagement.CertificateCollection.sort'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.sort'
     package: '@azure/arm-apimanagement'
     summary: Sorts an array.
     remarks: ''
@@ -861,14 +954,25 @@ methods:
             undefined | (a: CertificateContract, b: CertificateContract) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, CertificateContract[])'
-    uid: '@azure/arm-apimanagement.CertificateCollection.splice_1'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.splice_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -890,14 +994,19 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-apimanagement.CertificateCollection.splice'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.splice'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -918,10 +1027,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract" />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-apimanagement.CertificateCollection.toLocaleString'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.CertificateCollection.toLocaleString
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -935,7 +1047,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-apimanagement.CertificateCollection.toString'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.toString'
     package: '@azure/arm-apimanagement'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -947,7 +1059,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(CertificateContract[])'
-    uid: '@azure/arm-apimanagement.CertificateCollection.unshift'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.unshift'
     package: '@azure/arm-apimanagement'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -957,14 +1069,17 @@ methods:
       content: 'function unshift(items: CertificateContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.CertificateContract" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-apimanagement.CertificateCollection.values'
+    uid: '@azure/arm-apimanagement.models.index.d.CertificateCollection.values'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -975,6 +1090,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-apimanagement.CertificateContract" />&gt;
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-apimanagement.CertificateContract" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.CertificateCollection.[Symbol.iterator]
+    package: '@azure/arm-apimanagement'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.CertificateCollection.[Symbol.unscopables]
+    package: '@azure/arm-apimanagement'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-apimanagement.models.index.d.ApiCollection.Array"
+  />&lt;<xref uid="@azure/arm-apimanagement.models.index.d.CertificateContract"
+  />&gt;

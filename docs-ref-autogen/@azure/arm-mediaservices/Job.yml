@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Job
-uid: '@azure/arm-mediaservices.Job'
+uid: '@azure/arm-mediaservices.models.index.d.Job'
 package: '@azure/arm-mediaservices'
 summary: >-
   A Job resource type. The progress and state can be obtained by polling a Job
@@ -14,7 +14,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: correlationData
-    uid: '@azure/arm-mediaservices.Job.correlationData'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.correlationData'
     package: '@azure/arm-mediaservices'
     summary: >-
       Customer provided key, value pairs that will be returned in Job and
@@ -29,11 +29,11 @@ properties:
         type: 'undefined | [key: string]: string'
         description: ''
   - name: created
-    uid: '@azure/arm-mediaservices.Job.created'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.created'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The UTC date and time when the Job was created, in 'YYYY-MM-DDThh:mm:ssZ'
-      format.
+      The UTC date and time when the customer has created the Job, in
+      'YYYY-MM-DDThh:mm:ssZ' format.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -47,7 +47,7 @@ properties:
         type: Date
         description: ''
   - name: description
-    uid: '@azure/arm-mediaservices.Job.description'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.description'
     package: '@azure/arm-mediaservices'
     summary: Optional customer supplied description of the Job.
     fullName: description
@@ -60,7 +60,7 @@ properties:
         type: undefined | string
         description: ''
   - name: endTime
-    uid: '@azure/arm-mediaservices.Job.endTime'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.endTime'
     package: '@azure/arm-mediaservices'
     summary: >-
       The UTC date and time at which this Job finished processing.
@@ -77,10 +77,12 @@ properties:
         type: Date
         description: ''
   - name: id
-    uid: '@azure/arm-mediaservices.Job.id'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.id'
     package: '@azure/arm-mediaservices'
     summary: >-
-      Fully qualified resource ID for the resource.
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -94,7 +96,7 @@ properties:
         type: undefined | string
         description: ''
   - name: input
-    uid: '@azure/arm-mediaservices.Job.input'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.input'
     package: '@azure/arm-mediaservices'
     summary: The inputs for the Job.
     fullName: input
@@ -104,14 +106,16 @@ properties:
     syntax:
       content: 'input: JobInputUnion'
       return:
-        type: <xref uid="@azure/arm-mediaservices.JobInputUnion" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.JobInputUnion" />
         description: ''
   - name: lastModified
-    uid: '@azure/arm-mediaservices.Job.lastModified'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.lastModified'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The UTC date and time when the Job was last updated, in
-      'YYYY-MM-DDThh:mm:ssZ' format.
+      The UTC date and time when the customer has last updated the Job, in
+      'YYYY-MM-DDThh:mm:ssZ'
+
+      format.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -125,10 +129,10 @@ properties:
         type: Date
         description: ''
   - name: name
-    uid: '@azure/arm-mediaservices.Job.name'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.name'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The name of the resource.
+      The name of the resource
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -142,7 +146,7 @@ properties:
         type: undefined | string
         description: ''
   - name: outputs
-    uid: '@azure/arm-mediaservices.Job.outputs'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.outputs'
     package: '@azure/arm-mediaservices'
     summary: The outputs for the Job.
     fullName: outputs
@@ -152,10 +156,12 @@ properties:
     syntax:
       content: 'outputs: JobOutputUnion[]'
       return:
-        type: '<xref uid="@azure/arm-mediaservices.JobOutputUnion" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.JobOutputUnion"
+          />[]
         description: ''
   - name: priority
-    uid: '@azure/arm-mediaservices.Job.priority'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.priority'
     package: '@azure/arm-mediaservices'
     summary: >-
       Priority with which the job should be processed. Higher priority jobs are
@@ -172,10 +178,10 @@ properties:
     syntax:
       content: 'priority?: Priority'
       return:
-        type: <xref uid="@azure/arm-mediaservices.Priority" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Priority" />
         description: ''
   - name: startTime
-    uid: '@azure/arm-mediaservices.Job.startTime'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.startTime'
     package: '@azure/arm-mediaservices'
     summary: >-
       The UTC date and time at which this Job began processing.
@@ -192,7 +198,7 @@ properties:
         type: Date
         description: ''
   - name: state
-    uid: '@azure/arm-mediaservices.Job.state'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.state'
     package: '@azure/arm-mediaservices'
     summary: >-
       The current state of the job. Possible values include: 'Canceled',
@@ -209,13 +215,15 @@ properties:
     syntax:
       content: 'state?: JobState'
       return:
-        type: <xref uid="@azure/arm-mediaservices.JobState" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.JobState" />
         description: ''
   - name: type
-    uid: '@azure/arm-mediaservices.Job.type'
+    uid: '@azure/arm-mediaservices.models.index.d.Job.type'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The type of the resource.
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -228,4 +236,4 @@ properties:
       return:
         type: undefined | string
         description: ''
-extends: <xref uid="@azure/arm-mediaservices.ProxyResource" />
+extends: <xref uid="@azure/arm-mediaservices.models.index.d.ProxyResource" />

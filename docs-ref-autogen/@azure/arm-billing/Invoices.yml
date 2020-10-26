@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Invoices
-uid: '@azure/arm-billing.Invoices'
+uid: '@azure/arm-billing.operations.invoices.d.Invoices'
 package: '@azure/arm-billing'
 summary: Class representing a Invoices.
 fullName: Invoices
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Invoices(BillingManagementClientContext)
-    uid: '@azure/arm-billing.Invoices.constructor'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.constructor'
     package: '@azure/arm-billing'
     summary: Create a Invoices.
     remarks: ''
@@ -20,14 +20,18 @@ constructors:
       content: 'new Invoices(client: BillingManagementClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-billing.BillingManagementClientContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-billing.billingManagementClientContext.d.BillingManagementClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       beginDownloadBillingSubscriptionInvoice(string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-billing.Invoices.beginDownloadBillingSubscriptionInvoice'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.beginDownloadBillingSubscriptionInvoice
     package: '@azure/arm-billing'
     summary: Gets a URL to download an invoice.
     remarks: ''
@@ -51,7 +55,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginDownloadInvoice(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.beginDownloadInvoice'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.beginDownloadInvoice'
     package: '@azure/arm-billing'
     summary: >-
       Gets a URL to download an invoice. The operation is supported for billing
@@ -86,7 +90,7 @@ methods:
       beginDownloadMultipleBillingSubscriptionInvoice(string[],
       msRest.RequestOptionsBase)
     uid: >-
-      @azure/arm-billing.Invoices.beginDownloadMultipleBillingSubscriptionInvoice
+      @azure/arm-billing.operations.invoices.d.Invoices.beginDownloadMultipleBillingSubscriptionInvoice
     package: '@azure/arm-billing'
     summary: >-
       Gets a URL to download multiple invoices documents (invoice pdf, tax
@@ -113,7 +117,8 @@ methods:
   - name: >-
       beginDownloadMultipleModernInvoice(string, string[],
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-billing.Invoices.beginDownloadMultipleModernInvoice'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.beginDownloadMultipleModernInvoice
     package: '@azure/arm-billing'
     summary: >-
       Gets a URL to download an multiple invoices documents (invoice pdf, tax
@@ -146,7 +151,8 @@ methods:
   - name: >-
       downloadBillingSubscriptionInvoice(string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-billing.Invoices.downloadBillingSubscriptionInvoice'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.downloadBillingSubscriptionInvoice
     package: '@azure/arm-billing'
     summary: Gets a URL to download an invoice.
     remarks: ''
@@ -172,7 +178,7 @@ methods:
           uid="Models.InvoicesDownloadBillingSubscriptionInvoiceResponse" />&gt;
         description: Promise<Models.InvoicesDownloadBillingSubscriptionInvoiceResponse>
   - name: 'downloadInvoice(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.downloadInvoice'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.downloadInvoice'
     package: '@azure/arm-billing'
     summary: >-
       Gets a URL to download an invoice. The operation is supported for billing
@@ -206,7 +212,8 @@ methods:
   - name: >-
       downloadMultipleBillingSubscriptionInvoice(string[],
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-billing.Invoices.downloadMultipleBillingSubscriptionInvoice'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.downloadMultipleBillingSubscriptionInvoice
     package: '@azure/arm-billing'
     summary: >-
       Gets a URL to download multiple invoices documents (invoice pdf, tax
@@ -235,7 +242,8 @@ methods:
         description: >-
           Promise<Models.InvoicesDownloadMultipleBillingSubscriptionInvoiceResponse>
   - name: 'downloadMultipleModernInvoice(string, string[], msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.downloadMultipleModernInvoice'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.downloadMultipleModernInvoice
     package: '@azure/arm-billing'
     summary: >-
       Gets a URL to download an multiple invoices documents (invoice pdf, tax
@@ -268,7 +276,7 @@ methods:
           uid="Models.InvoicesDownloadMultipleModernInvoiceResponse" />&gt;
         description: Promise<Models.InvoicesDownloadMultipleModernInvoiceResponse>
   - name: 'get(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.get'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.get'
     package: '@azure/arm-billing'
     summary: >-
       Gets an invoice by billing account name and ID. The operation is supported
@@ -297,7 +305,7 @@ methods:
         type: Promise&lt;<xref uid="Models.InvoicesGetResponse" />&gt;
         description: Promise<Models.InvoicesGetResponse>
   - name: 'get(string, string, RequestOptionsBase, ServiceCallback<Invoice>)'
-    uid: '@azure/arm-billing.Invoices.get_2'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.get_2'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -318,11 +326,13 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-billing.Invoice" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.Invoice" />&gt;
           description: |
             The callback
   - name: 'get(string, string, ServiceCallback<Invoice>)'
-    uid: '@azure/arm-billing.Invoices.get_1'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.get_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -340,11 +350,13 @@ methods:
           type: string
           description: The ID that uniquely identifies an invoice.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-billing.Invoice" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.Invoice" />&gt;
           description: |
             The callback
   - name: 'getById(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.getById'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.getById'
     package: '@azure/arm-billing'
     summary: >-
       Gets an invoice by ID. The operation is supported for billing accounts
@@ -369,7 +381,7 @@ methods:
         type: Promise&lt;<xref uid="Models.InvoicesGetByIdResponse" />&gt;
         description: Promise<Models.InvoicesGetByIdResponse>
   - name: 'getById(string, RequestOptionsBase, ServiceCallback<Invoice>)'
-    uid: '@azure/arm-billing.Invoices.getById_2'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.getById_2'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -387,11 +399,13 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-billing.Invoice" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.Invoice" />&gt;
           description: |
             The callback
   - name: 'getById(string, ServiceCallback<Invoice>)'
-    uid: '@azure/arm-billing.Invoices.getById_1'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.getById_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -406,11 +420,14 @@ methods:
           type: string
           description: The ID that uniquely identifies an invoice.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-billing.Invoice" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.Invoice" />&gt;
           description: |
             The callback
   - name: 'getBySubscriptionAndInvoiceId(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.getBySubscriptionAndInvoiceId'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.getBySubscriptionAndInvoiceId
     package: '@azure/arm-billing'
     summary: Gets an invoice by subscription ID and invoice ID.
     remarks: ''
@@ -435,7 +452,8 @@ methods:
   - name: >-
       getBySubscriptionAndInvoiceId(string, RequestOptionsBase,
       ServiceCallback<Invoice>)
-    uid: '@azure/arm-billing.Invoices.getBySubscriptionAndInvoiceId_2'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.getBySubscriptionAndInvoiceId_2
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -453,11 +471,14 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-billing.Invoice" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.Invoice" />&gt;
           description: |
             The callback
   - name: 'getBySubscriptionAndInvoiceId(string, ServiceCallback<Invoice>)'
-    uid: '@azure/arm-billing.Invoices.getBySubscriptionAndInvoiceId_1'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.getBySubscriptionAndInvoiceId_1
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -472,11 +493,13 @@ methods:
           type: string
           description: The ID that uniquely identifies an invoice.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-billing.Invoice" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.Invoice" />&gt;
           description: |
             The callback
   - name: 'listByBillingAccount(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.listByBillingAccount'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingAccount'
     package: '@azure/arm-billing'
     summary: >-
       Lists the invoices for a billing account for a given start date and end
@@ -521,7 +544,7 @@ methods:
   - name: >-
       listByBillingAccount(string, string, string, RequestOptionsBase,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingAccount_2'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingAccount_2'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -553,14 +576,14 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: >-
       listByBillingAccount(string, string, string,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingAccount_1'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingAccount_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -589,12 +612,12 @@ methods:
             MM-DD-YYYY format.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingAccountNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.listByBillingAccountNext'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingAccountNext'
     package: '@azure/arm-billing'
     summary: >-
       Lists the invoices for a billing account for a given start date and end
@@ -626,7 +649,8 @@ methods:
   - name: >-
       listByBillingAccountNext(string, RequestOptionsBase,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingAccountNext_2'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingAccountNext_2
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -645,12 +669,13 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingAccountNext(string, ServiceCallback<InvoiceListResult>)'
-    uid: '@azure/arm-billing.Invoices.listByBillingAccountNext_1'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingAccountNext_1
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -666,14 +691,14 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: >-
       listByBillingProfile(string, string, string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-billing.Invoices.listByBillingProfile'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingProfile'
     package: '@azure/arm-billing'
     summary: >-
       Lists the invoices for a billing profile for a given start date and end
@@ -721,7 +746,7 @@ methods:
   - name: >-
       listByBillingProfile(string, string, string, string, RequestOptionsBase,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingProfile_2'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingProfile_2'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -757,14 +782,14 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: >-
       listByBillingProfile(string, string, string, string,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingProfile_1'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingProfile_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -796,12 +821,12 @@ methods:
             MM-DD-YYYY format.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingProfileNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.listByBillingProfileNext'
+    uid: '@azure/arm-billing.operations.invoices.d.Invoices.listByBillingProfileNext'
     package: '@azure/arm-billing'
     summary: >-
       Lists the invoices for a billing profile for a given start date and end
@@ -833,7 +858,8 @@ methods:
   - name: >-
       listByBillingProfileNext(string, RequestOptionsBase,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingProfileNext_2'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingProfileNext_2
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -852,12 +878,13 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingProfileNext(string, ServiceCallback<InvoiceListResult>)'
-    uid: '@azure/arm-billing.Invoices.listByBillingProfileNext_1'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingProfileNext_1
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -873,12 +900,13 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingSubscription(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.listByBillingSubscription'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingSubscription
     package: '@azure/arm-billing'
     summary: Lists the invoices for a subscription.
     remarks: ''
@@ -906,7 +934,8 @@ methods:
   - name: >-
       listByBillingSubscription(string, string, RequestOptionsBase,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingSubscription_2'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingSubscription_2
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -929,14 +958,15 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: >-
       listByBillingSubscription(string, string,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingSubscription_1'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingSubscription_1
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -955,12 +985,13 @@ methods:
           description: Invoice period end date.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingSubscriptionNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-billing.Invoices.listByBillingSubscriptionNext'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingSubscriptionNext
     package: '@azure/arm-billing'
     summary: Lists the invoices for a subscription.
     remarks: ''
@@ -985,7 +1016,8 @@ methods:
   - name: >-
       listByBillingSubscriptionNext(string, RequestOptionsBase,
       ServiceCallback<InvoiceListResult>)
-    uid: '@azure/arm-billing.Invoices.listByBillingSubscriptionNext_2'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingSubscriptionNext_2
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -1004,12 +1036,13 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback
   - name: 'listByBillingSubscriptionNext(string, ServiceCallback<InvoiceListResult>)'
-    uid: '@azure/arm-billing.Invoices.listByBillingSubscriptionNext_1'
+    uid: >-
+      @azure/arm-billing.operations.invoices.d.Invoices.listByBillingSubscriptionNext_1
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -1025,7 +1058,7 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-billing.InvoiceListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-billing.models.index.d.InvoiceListResult" />&gt;
           description: |
             The callback

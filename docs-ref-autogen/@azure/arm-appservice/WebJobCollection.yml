@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: WebJobCollection
-uid: '@azure/arm-appservice.WebJobCollection'
+uid: '@azure/arm-appservice.models.index.d.WebJobCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: WebJobCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.WebJobCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.WebJobCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.WebJobCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<WebJob>[])'
-    uid: '@azure/arm-appservice.WebJobCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<WebJob>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-appservice.WebJob" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.WebJob" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.WebJobCollection.concat_1'
+  - name: 'concat(WebJob | ConcatArray<WebJob>[])'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: WebJob | ConcatArray<WebJob>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.WebJob" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.WebJob" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.WebJobCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: WebJob, index: number, array: WebJob[]) => unknown, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,26 +153,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: WebJob, index: number, array:
+        function every(predicate: (value: WebJob, index: number, array:
         WebJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: WebJob, index: number, array: WebJob[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: WebJob, index: number, array: WebJob[]) => value, any)'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: WebJob, index: number, array:
+        WebJob[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: WebJob, index: number, array: WebJob[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(WebJob, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +225,7 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.WebJob" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -201,7 +245,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: WebJob, index: number, array: WebJob[]) => unknown, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -211,26 +255,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: WebJob, index: number, array:
+        function filter(predicate: (value: WebJob, index: number, array:
         WebJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: WebJob, index: number, array: WebJob[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
-  - name: 'filter<S>((value: WebJob, index: number, array: WebJob[]) => boolean, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.filter'
+  - name: 'filter<S>((value: WebJob, index: number, array: WebJob[]) => value, any)'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +283,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: WebJob, index: number, array:
-        WebJob[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: WebJob, index: number, array:
+        WebJob[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: WebJob, index: number, array: WebJob[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: WebJob, index: number, array: WebJob[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: WebJob, index: number, obj: WebJob[]) => unknown, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -277,12 +319,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" /> | undefined
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: WebJob, index: number, obj: WebJob[]) =>
-      boolean, any)
-    uid: '@azure/arm-appservice.WebJobCollection.find'
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,12 +337,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: WebJob, index: number,
-        obj: WebJob[]) => boolean, thisArg?: any)
+        obj: WebJob[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: WebJob, index: number, obj: WebJob[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -321,7 +363,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: WebJob, index: number, obj: WebJob[]) => unknown, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -358,7 +400,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: WebJob, index: number, array: WebJob[]) => void, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -381,7 +423,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(WebJob, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -393,7 +435,7 @@ methods:
       content: 'function includes(searchElement: WebJob, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.WebJob" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -404,7 +446,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(WebJob, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -414,7 +456,7 @@ methods:
       content: 'function indexOf(searchElement: WebJob, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.WebJob" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +467,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.WebJobCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -446,7 +488,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.WebJobCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -458,7 +500,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(WebJob, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -470,7 +512,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.WebJob" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -481,7 +523,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: WebJob, index: number, array: WebJob[]) => U, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -509,7 +551,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.WebJobCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -518,10 +560,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" /> | undefined
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" /> | undefined
         description: ''
   - name: 'push(WebJob[])'
-    uid: '@azure/arm-appservice.WebJobCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -531,7 +573,7 @@ methods:
       content: 'function push(items: WebJob[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
           description: |
             New elements of the Array.
       return:
@@ -540,7 +582,7 @@ methods:
   - name: >-
       reduce((previousValue: WebJob, currentValue: WebJob, currentIndex: number,
       array: WebJob[]) => WebJob)
-    uid: '@azure/arm-appservice.WebJobCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -563,12 +605,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
         description: ''
   - name: >-
       reduce((previousValue: WebJob, currentValue: WebJob, currentIndex: number,
       array: WebJob[]) => WebJob, WebJob)
-    uid: '@azure/arm-appservice.WebJobCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -586,15 +628,15 @@ methods:
             array: WebJob[]) =&gt; WebJob
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.WebJob" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: WebJob, currentIndex: number,
       array: WebJob[]) => U, U)
-    uid: '@azure/arm-appservice.WebJobCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -628,7 +670,7 @@ methods:
   - name: >-
       reduceRight((previousValue: WebJob, currentValue: WebJob, currentIndex:
       number, array: WebJob[]) => WebJob)
-    uid: '@azure/arm-appservice.WebJobCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -652,12 +694,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
         description: ''
   - name: >-
       reduceRight((previousValue: WebJob, currentValue: WebJob, currentIndex:
       number, array: WebJob[]) => WebJob, WebJob)
-    uid: '@azure/arm-appservice.WebJobCollection.reduceRight_1'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reduceRight_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -675,15 +717,15 @@ methods:
             array: WebJob[]) =&gt; WebJob
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.WebJob" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: WebJob, currentIndex:
       number, array: WebJob[]) => U, U)
-    uid: '@azure/arm-appservice.WebJobCollection.reduceRight_2'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reduceRight_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -716,7 +758,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.WebJobCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -725,10 +767,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.WebJobCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -737,10 +779,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.WebJob" /> | undefined
+        type: <xref uid="@azure/arm-appservice.models.index.d.WebJob" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -754,13 +796,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
   - name: 'some((value: WebJob, index: number, array: WebJob[]) => unknown, any)'
-    uid: '@azure/arm-appservice.WebJobCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -770,26 +813,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: WebJob, index: number, array:
-        WebJob[]) => unknown, thisArg?: any)
+        function some(predicate: (value: WebJob, index: number, array: WebJob[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: WebJob, index: number, array: WebJob[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: WebJob, b: WebJob) => number)'
-    uid: '@azure/arm-appservice.WebJobCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -801,14 +849,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: WebJob, b: WebJob) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, WebJob[])'
-    uid: '@azure/arm-appservice.WebJobCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -828,14 +887,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.WebJobCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -856,10 +915,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.WebJobCollection.toLocaleString'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.toLocaleString'
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -873,7 +932,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.WebJobCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -885,7 +944,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(WebJob[])'
-    uid: '@azure/arm-appservice.WebJobCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -895,14 +954,14 @@ methods:
       content: 'function unshift(items: WebJob[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.WebJob" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.WebJob" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.WebJobCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -911,6 +970,39 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-appservice.WebJob" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.WebJob" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.WebJob" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.[Symbol.iterator]'
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.WebJob" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-appservice.models.index.d.WebJobCollection.[Symbol.unscopables]'
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.WebJob" />&gt;

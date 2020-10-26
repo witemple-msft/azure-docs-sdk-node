@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SecureScoreControlList
-uid: '@azure/arm-security.SecureScoreControlList'
+uid: '@azure/arm-security.models.index.d.SecureScoreControlList'
 package: '@azure/arm-security'
 summary: ''
 fullName: SecureScoreControlList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-security.SecureScoreControlList.Array'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.Array'
     package: '@azure/arm-security'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-security.SecureScoreControlList.length'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.length'
     package: '@azure/arm-security'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-security.SecureScoreControlList.nextLink'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.nextLink'
     package: '@azure/arm-security'
     summary: >-
       The URI to fetch the next page.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SecureScoreControlDetails>[])'
-    uid: '@azure/arm-security.SecureScoreControlList.concat'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.concat'
     package: '@azure/arm-security'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +68,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-security.SecureScoreControlDetails" />&gt;[]
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-security.SecureScoreControlList.concat_1'
+  - name: >-
+      concat(SecureScoreControlDetails |
+      ConcatArray<SecureScoreControlDetails>[])
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.concat_1'
     package: '@azure/arm-security'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SecureScoreControlDetails |
+        ConcatArray<SecureScoreControlDetails>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.copyWithin'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.copyWithin'
     package: '@azure/arm-security'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +146,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-security.SecureScoreControlList.entries'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.entries'
     package: '@azure/arm-security'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +160,7 @@ methods:
   - name: >-
       every((value: SecureScoreControlDetails, index: number, array:
       SecureScoreControlDetails[]) => unknown, any)
-    uid: '@azure/arm-security.SecureScoreControlList.every'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.every_1'
     package: '@azure/arm-security'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +168,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SecureScoreControlDetails, index:
+        function every(predicate: (value: SecureScoreControlDetails, index:
         number, array: SecureScoreControlDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecureScoreControlDetails, index: number, array:
             SecureScoreControlDetails[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SecureScoreControlDetails, index: number, array:
+      SecureScoreControlDetails[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.every'
+    package: '@azure/arm-security'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SecureScoreControlDetails, index:
+        number, array: SecureScoreControlDetails[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SecureScoreControlDetails, index: number, array:
+            SecureScoreControlDetails[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SecureScoreControlDetails, undefined | number, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.fill'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.fill'
     package: '@azure/arm-security'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +246,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +271,7 @@ methods:
   - name: >-
       filter((value: SecureScoreControlDetails, index: number, array:
       SecureScoreControlDetails[]) => unknown, any)
-    uid: '@azure/arm-security.SecureScoreControlList.filter_1'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.filter_1'
     package: '@azure/arm-security'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +281,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SecureScoreControlDetails, index:
+        function filter(predicate: (value: SecureScoreControlDetails, index:
         number, array: SecureScoreControlDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecureScoreControlDetails, index: number, array:
             SecureScoreControlDetails[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SecureScoreControlDetails, index: number, array:
-      SecureScoreControlDetails[]) => boolean, any)
-    uid: '@azure/arm-security.SecureScoreControlList.filter'
+      SecureScoreControlDetails[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.filter'
     package: '@azure/arm-security'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +316,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SecureScoreControlDetails, index:
-        number, array: SecureScoreControlDetails[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SecureScoreControlDetails, index:
+        number, array: SecureScoreControlDetails[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecureScoreControlDetails, index: number, array:
-            SecureScoreControlDetails[]) =&gt; boolean
+            SecureScoreControlDetails[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +338,7 @@ methods:
   - name: >-
       find((value: SecureScoreControlDetails, index: number, obj:
       SecureScoreControlDetails[]) => unknown, any)
-    uid: '@azure/arm-security.SecureScoreControlList.find_1'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.find_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -296,13 +359,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-security.SecureScoreControlDetails" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SecureScoreControlDetails, index: number, obj:
-      SecureScoreControlDetails[]) => boolean, any)
-    uid: '@azure/arm-security.SecureScoreControlList.find'
+      SecureScoreControlDetails[]) => value, any)
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.find'
     package: '@azure/arm-security'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -316,12 +380,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         SecureScoreControlDetails, index: number, obj:
-        SecureScoreControlDetails[]) => boolean, thisArg?: any)
+        SecureScoreControlDetails[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SecureScoreControlDetails, index: number, obj:
-            SecureScoreControlDetails[]) =&gt; boolean
+            SecureScoreControlDetails[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -344,7 +408,7 @@ methods:
   - name: >-
       findIndex((value: SecureScoreControlDetails, index: number, obj:
       SecureScoreControlDetails[]) => unknown, any)
-    uid: '@azure/arm-security.SecureScoreControlList.findIndex'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.findIndex'
     package: '@azure/arm-security'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -385,7 +449,7 @@ methods:
   - name: >-
       forEach((value: SecureScoreControlDetails, index: number, array:
       SecureScoreControlDetails[]) => void, any)
-    uid: '@azure/arm-security.SecureScoreControlList.forEach'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.forEach'
     package: '@azure/arm-security'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -410,7 +474,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SecureScoreControlDetails, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.includes'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.includes'
     package: '@azure/arm-security'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -424,7 +488,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +502,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SecureScoreControlDetails, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.indexOf'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.indexOf'
     package: '@azure/arm-security'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -447,7 +514,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +528,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-security.SecureScoreControlList.join'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.join'
     package: '@azure/arm-security'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -479,7 +549,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-security.SecureScoreControlList.keys'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.keys'
     package: '@azure/arm-security'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -491,7 +561,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SecureScoreControlDetails, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.lastIndexOf'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.lastIndexOf'
     package: '@azure/arm-security'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -503,7 +573,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -516,7 +589,7 @@ methods:
   - name: >-
       map<U>((value: SecureScoreControlDetails, index: number, array:
       SecureScoreControlDetails[]) => U, any)
-    uid: '@azure/arm-security.SecureScoreControlList.map'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.map'
     package: '@azure/arm-security'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -546,7 +619,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-security.SecureScoreControlList.pop'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.pop'
     package: '@azure/arm-security'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -556,11 +629,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-security.SecureScoreControlDetails" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
+          | undefined
         description: ''
   - name: 'push(SecureScoreControlDetails[])'
-    uid: '@azure/arm-security.SecureScoreControlList.push'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.push'
     package: '@azure/arm-security'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -570,7 +644,10 @@ methods:
       content: 'function push(items: SecureScoreControlDetails[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -580,7 +657,7 @@ methods:
       reduce((previousValue: SecureScoreControlDetails, currentValue:
       SecureScoreControlDetails, currentIndex: number, array:
       SecureScoreControlDetails[]) => SecureScoreControlDetails)
-    uid: '@azure/arm-security.SecureScoreControlList.reduce'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reduce'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -605,14 +682,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
         description: ''
   - name: >-
       reduce((previousValue: SecureScoreControlDetails, currentValue:
       SecureScoreControlDetails, currentIndex: number, array:
       SecureScoreControlDetails[]) => SecureScoreControlDetails,
       SecureScoreControlDetails)
-    uid: '@azure/arm-security.SecureScoreControlList.reduce_1'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reduce_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -632,15 +711,20 @@ methods:
             SecureScoreControlDetails[]) =&gt; SecureScoreControlDetails
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SecureScoreControlDetails,
       currentIndex: number, array: SecureScoreControlDetails[]) => U, U)
-    uid: '@azure/arm-security.SecureScoreControlList.reduce_2'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reduce_2'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -676,7 +760,7 @@ methods:
       reduceRight((previousValue: SecureScoreControlDetails, currentValue:
       SecureScoreControlDetails, currentIndex: number, array:
       SecureScoreControlDetails[]) => SecureScoreControlDetails)
-    uid: '@azure/arm-security.SecureScoreControlList.reduceRight'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reduceRight'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -703,14 +787,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
         description: ''
   - name: >-
       reduceRight((previousValue: SecureScoreControlDetails, currentValue:
       SecureScoreControlDetails, currentIndex: number, array:
       SecureScoreControlDetails[]) => SecureScoreControlDetails,
       SecureScoreControlDetails)
-    uid: '@azure/arm-security.SecureScoreControlList.reduceRight_1'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reduceRight_1'
     package: '@azure/arm-security'
     summary: ''
     remarks: ''
@@ -730,15 +816,20 @@ methods:
             SecureScoreControlDetails[]) =&gt; SecureScoreControlDetails
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-security.SecureScoreControlDetails" />
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SecureScoreControlDetails,
       currentIndex: number, array: SecureScoreControlDetails[]) => U, U)
-    uid: '@azure/arm-security.SecureScoreControlList.reduceRight_2'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reduceRight_2'
     package: '@azure/arm-security'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -772,7 +863,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-security.SecureScoreControlList.reverse'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.reverse'
     package: '@azure/arm-security'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -781,10 +872,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-security.SecureScoreControlList.shift'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.shift'
     package: '@azure/arm-security'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -794,11 +888,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-security.SecureScoreControlDetails" /> |
-          undefined
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.slice'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.slice'
     package: '@azure/arm-security'
     summary: Returns a section of an array.
     remarks: ''
@@ -812,15 +907,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
   - name: >-
       some((value: SecureScoreControlDetails, index: number, array:
       SecureScoreControlDetails[]) => unknown, any)
-    uid: '@azure/arm-security.SecureScoreControlList.some'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.some'
     package: '@azure/arm-security'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -830,30 +929,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SecureScoreControlDetails, index:
+        function some(predicate: (value: SecureScoreControlDetails, index:
         number, array: SecureScoreControlDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SecureScoreControlDetails, index: number, array:
             SecureScoreControlDetails[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: SecureScoreControlDetails, b:
       SecureScoreControlDetails) => number)
-    uid: '@azure/arm-security.SecureScoreControlList.sort'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.sort'
     package: '@azure/arm-security'
     summary: Sorts an array.
     remarks: ''
@@ -869,14 +973,25 @@ methods:
             undefined | (a: SecureScoreControlDetails, b:
             SecureScoreControlDetails) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SecureScoreControlDetails[])'
-    uid: '@azure/arm-security.SecureScoreControlList.splice_1'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.splice_1'
     package: '@azure/arm-security'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -898,14 +1013,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-security.SecureScoreControlList.splice'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.splice'
     package: '@azure/arm-security'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -926,10 +1047,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-security.SecureScoreControlList.toLocaleString'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.toLocaleString'
     package: '@azure/arm-security'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -943,7 +1067,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-security.SecureScoreControlList.toString'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.toString'
     package: '@azure/arm-security'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -955,7 +1079,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SecureScoreControlDetails[])'
-    uid: '@azure/arm-security.SecureScoreControlList.unshift'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.unshift'
     package: '@azure/arm-security'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -965,14 +1089,17 @@ methods:
       content: 'function unshift(items: SecureScoreControlDetails[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-security.SecureScoreControlDetails" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-security.SecureScoreControlList.values'
+    uid: '@azure/arm-security.models.index.d.SecureScoreControlList.values'
     package: '@azure/arm-security'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -983,6 +1110,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-security.SecureScoreControlDetails" />&gt;
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-security.SecureScoreControlDetails" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-security.models.index.d.SecureScoreControlList.[Symbol.iterator]
+    package: '@azure/arm-security'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-security.models.index.d.SecureScoreControlList.[Symbol.unscopables]
+    package: '@azure/arm-security'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-security.models.index.d.ComplianceResultList.Array"
+  />&lt;<xref uid="@azure/arm-security.models.index.d.SecureScoreControlDetails"
+  />&gt;

@@ -1,6 +1,7 @@
 ### YamlMime:TSType
 name: ApplicationPackageOperations
-uid: '@azure/arm-batch.ApplicationPackageOperations'
+uid: >-
+  @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations
 package: '@azure/arm-batch'
 summary: Class representing a ApplicationPackageOperations.
 fullName: ApplicationPackageOperations
@@ -10,7 +11,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: ApplicationPackageOperations(BatchManagementClientContext)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.constructor'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.constructor
     package: '@azure/arm-batch'
     summary: Create a ApplicationPackageOperations.
     remarks: ''
@@ -20,23 +22,34 @@ constructors:
       content: 'new ApplicationPackageOperations(client: BatchManagementClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-batch.BatchManagementClientContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-batch.batchManagementClientContext.d.BatchManagementClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       activate(string, string, string, string, string,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.activate'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.activate
     package: '@azure/arm-batch'
-    summary: Activates the specified application package.
+    summary: >-
+      Activates the specified application package. This should be done after the
+      `ApplicationPackage`
+
+      was created and uploaded. This needs to be done before an
+      `ApplicationPackage` can be used on
+
+      Pools or Tasks.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function activate(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, format: string, options?:
+        applicationName: string, versionName: string, format: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
@@ -45,12 +58,12 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
-          description: The version of the application to activate.
+          description: The version of the application.
         - id: format
           type: string
           description: The format of the application package binary file.
@@ -58,12 +71,15 @@ methods:
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
       return:
-        type: Promise&lt;RestResponse&gt;
-        description: Promise<msRest.RestResponse>
+        type: >-
+          Promise&lt;<xref uid="Models.ApplicationPackageActivateResponse"
+          />&gt;
+        description: Promise<Models.ApplicationPackageActivateResponse>
   - name: >-
       activate(string, string, string, string, string, RequestOptionsBase,
-      ServiceCallback<void>)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.activate_2'
+      ServiceCallback<ApplicationPackage>)
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.activate_2
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -72,8 +88,8 @@ methods:
     syntax:
       content: >-
         function activate(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, format: string, options:
-        RequestOptionsBase, callback: ServiceCallback<void>)
+        applicationName: string, versionName: string, format: string, options:
+        RequestOptionsBase, callback: ServiceCallback<ApplicationPackage>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -81,12 +97,12 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
-          description: The version of the application to activate.
+          description: The version of the application.
         - id: format
           type: string
           description: The format of the application package binary file.
@@ -94,11 +110,16 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;void&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackage" />&gt;
           description: |
             The callback
-  - name: 'activate(string, string, string, string, string, ServiceCallback<void>)'
-    uid: '@azure/arm-batch.ApplicationPackageOperations.activate_1'
+  - name: >-
+      activate(string, string, string, string, string,
+      ServiceCallback<ApplicationPackage>)
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.activate_1
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -107,8 +128,8 @@ methods:
     syntax:
       content: >-
         function activate(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, format: string, callback:
-        ServiceCallback<void>)
+        applicationName: string, versionName: string, format: string, callback:
+        ServiceCallback<ApplicationPackage>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -116,30 +137,40 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
-          description: The version of the application to activate.
+          description: The version of the application.
         - id: format
           type: string
           description: The format of the application package binary file.
         - id: callback
-          type: ServiceCallback&lt;void&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackage" />&gt;
           description: |
             The callback
   - name: 'create(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batch.ApplicationPackageOperations.create'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.create
     package: '@azure/arm-batch'
-    summary: Creates an application package record.
+    summary: >-
+      Creates an application package record. The record contains the SAS where
+      the package should be
+
+      uploaded to.  Once it is uploaded the `ApplicationPackage` needs to be
+      activated using
+
+      `ApplicationPackageActive` before it can be used.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function create(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, options?:
+        applicationName: string, versionName: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
@@ -148,10 +179,10 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
           description: The version of the application.
         - id: options
@@ -163,7 +194,8 @@ methods:
   - name: >-
       create(string, string, string, string, RequestOptionsBase,
       ServiceCallback<ApplicationPackage>)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.create_2'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.create_2
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -172,8 +204,8 @@ methods:
     syntax:
       content: >-
         function create(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, options: RequestOptionsBase,
-        callback: ServiceCallback<ApplicationPackage>)
+        applicationName: string, versionName: string, options:
+        RequestOptionsBase, callback: ServiceCallback<ApplicationPackage>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -181,10 +213,10 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
           description: The version of the application.
         - id: options
@@ -192,14 +224,15 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batch.ApplicationPackage"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackage" />&gt;
           description: |
             The callback
   - name: >-
       create(string, string, string, string,
       ServiceCallback<ApplicationPackage>)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.create_1'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.create_1
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -208,7 +241,7 @@ methods:
     syntax:
       content: >-
         function create(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, callback:
+        applicationName: string, versionName: string, callback:
         ServiceCallback<ApplicationPackage>)
       parameters:
         - id: resourceGroupName
@@ -217,20 +250,21 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
           description: The version of the application.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batch.ApplicationPackage"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackage" />&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batch.ApplicationPackageOperations.deleteMethod'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.deleteMethod
     package: '@azure/arm-batch'
     summary: Deletes an application package record and its associated binary file.
     remarks: ''
@@ -239,7 +273,7 @@ methods:
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, options?:
+        applicationName: string, versionName: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
@@ -248,12 +282,12 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
-          description: The version of the application to delete.
+          description: The version of the application.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
@@ -263,7 +297,8 @@ methods:
   - name: >-
       deleteMethod(string, string, string, string, RequestOptionsBase,
       ServiceCallback<void>)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.deleteMethod_2'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.deleteMethod_2
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -272,8 +307,8 @@ methods:
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, options: RequestOptionsBase,
-        callback: ServiceCallback<void>)
+        applicationName: string, versionName: string, options:
+        RequestOptionsBase, callback: ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -281,12 +316,12 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
-          description: The version of the application to delete.
+          description: The version of the application.
         - id: options
           type: RequestOptionsBase
           description: The optional parameters
@@ -295,7 +330,8 @@ methods:
           description: |
             The callback
   - name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
-    uid: '@azure/arm-batch.ApplicationPackageOperations.deleteMethod_1'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.deleteMethod_1
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -304,7 +340,8 @@ methods:
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, callback: ServiceCallback<void>)
+        applicationName: string, versionName: string, callback:
+        ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -312,18 +349,19 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
-          description: The version of the application to delete.
+          description: The version of the application.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-batch.ApplicationPackageOperations.get'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.get
     package: '@azure/arm-batch'
     summary: Gets information about the specified application package.
     remarks: ''
@@ -332,7 +370,7 @@ methods:
     syntax:
       content: >-
         function get(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, options?:
+        applicationName: string, versionName: string, options?:
         msRest.RequestOptionsBase)
       parameters:
         - id: resourceGroupName
@@ -341,10 +379,10 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
           description: The version of the application.
         - id: options
@@ -356,7 +394,8 @@ methods:
   - name: >-
       get(string, string, string, string, RequestOptionsBase,
       ServiceCallback<ApplicationPackage>)
-    uid: '@azure/arm-batch.ApplicationPackageOperations.get_2'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.get_2
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -365,8 +404,8 @@ methods:
     syntax:
       content: >-
         function get(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, options: RequestOptionsBase,
-        callback: ServiceCallback<ApplicationPackage>)
+        applicationName: string, versionName: string, options:
+        RequestOptionsBase, callback: ServiceCallback<ApplicationPackage>)
       parameters:
         - id: resourceGroupName
           type: string
@@ -374,10 +413,10 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
           description: The version of the application.
         - id: options
@@ -385,12 +424,13 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batch.ApplicationPackage"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackage" />&gt;
           description: |
             The callback
   - name: 'get(string, string, string, string, ServiceCallback<ApplicationPackage>)'
-    uid: '@azure/arm-batch.ApplicationPackageOperations.get_1'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.get_1
     package: '@azure/arm-batch'
     summary: ''
     remarks: ''
@@ -399,7 +439,7 @@ methods:
     syntax:
       content: >-
         function get(resourceGroupName: string, accountName: string,
-        applicationId: string, version: string, callback:
+        applicationName: string, versionName: string, callback:
         ServiceCallback<ApplicationPackage>)
       parameters:
         - id: resourceGroupName
@@ -408,15 +448,189 @@ methods:
         - id: accountName
           type: string
           description: The name of the Batch account.
-        - id: applicationId
+        - id: applicationName
           type: string
-          description: The ID of the application.
-        - id: version
+          description: The name of the application. This must be unique within the account.
+        - id: versionName
           type: string
           description: The version of the application.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-batch.ApplicationPackage"
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackage" />&gt;
+          description: |
+            The callback
+  - name: >-
+      list(string, string, string, ApplicationPackageListOptionalParams,
+      ServiceCallback<ListApplicationPackagesResult>)
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.list_2
+    package: '@azure/arm-batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(resourceGroupName: string, accountName: string,
+        applicationName: string, options: ApplicationPackageListOptionalParams,
+        callback: ServiceCallback<ListApplicationPackagesResult>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group that contains the Batch account.
+        - id: accountName
+          type: string
+          description: The name of the Batch account.
+        - id: applicationName
+          type: string
+          description: The name of the application. This must be unique within the account.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-batch.models.index.d.ApplicationPackageListOptionalParams"
+            />
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ListApplicationPackagesResult"
+            />&gt;
+          description: |
+            The callback
+  - name: 'list(string, string, string, Models.ApplicationPackageListOptionalParams)'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.list
+    package: '@azure/arm-batch'
+    summary: Lists all of the application packages in the specified application.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(resourceGroupName: string, accountName: string,
+        applicationName: string, options?:
+        Models.ApplicationPackageListOptionalParams)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group that contains the Batch account.
+        - id: accountName
+          type: string
+          description: The name of the Batch account.
+        - id: applicationName
+          type: string
+          description: The name of the application. This must be unique within the account.
+        - id: options
+          type: <xref uid="Models.ApplicationPackageListOptionalParams" />
+          description: ''
+      return:
+        type: Promise&lt;<xref uid="Models.ApplicationPackageListResponse" />&gt;
+        description: Promise<Models.ApplicationPackageListResponse>
+  - name: >-
+      list(string, string, string,
+      ServiceCallback<ListApplicationPackagesResult>)
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.list_1
+    package: '@azure/arm-batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function list(resourceGroupName: string, accountName: string,
+        applicationName: string, callback:
+        ServiceCallback<ListApplicationPackagesResult>)
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group that contains the Batch account.
+        - id: accountName
+          type: string
+          description: The name of the Batch account.
+        - id: applicationName
+          type: string
+          description: The name of the application. This must be unique within the account.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ListApplicationPackagesResult"
+            />&gt;
+          description: |
+            The callback
+  - name: 'listNext(string, msRest.RequestOptionsBase)'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.listNext
+    package: '@azure/arm-batch'
+    summary: Lists all of the application packages in the specified application.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options?:
+        msRest.RequestOptionsBase)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: <xref uid="msRest.RequestOptionsBase" />
+          description: ''
+      return:
+        type: >-
+          Promise&lt;<xref uid="Models.ApplicationPackageListNextResponse"
+          />&gt;
+        description: Promise<Models.ApplicationPackageListNextResponse>
+  - name: >-
+      listNext(string, RequestOptionsBase,
+      ServiceCallback<ListApplicationPackagesResult>)
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.listNext_2
+    package: '@azure/arm-batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, options: RequestOptionsBase,
+        callback: ServiceCallback<ListApplicationPackagesResult>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: options
+          type: RequestOptionsBase
+          description: The optional parameters
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ListApplicationPackagesResult"
+            />&gt;
+          description: |
+            The callback
+  - name: 'listNext(string, ServiceCallback<ListApplicationPackagesResult>)'
+    uid: >-
+      @azure/arm-batch.operations.applicationPackageOperations.d.ApplicationPackageOperations.listNext_1
+    package: '@azure/arm-batch'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listNext(nextPageLink: string, callback:
+        ServiceCallback<ListApplicationPackagesResult>)
+      parameters:
+        - id: nextPageLink
+          type: string
+          description: The NextLink from the previous successful call to List operation.
+        - id: callback
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-batch.models.index.d.ListApplicationPackagesResult"
             />&gt;
           description: |
             The callback

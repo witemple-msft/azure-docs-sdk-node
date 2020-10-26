@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: VirtualMachineScaleSetExtensionListResult
-uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult'
+uid: '@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult'
 package: '@azure/arm-compute'
 summary: ''
 fullName: VirtualMachineScaleSetExtensionListResult
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.Array'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.Array
     package: '@azure/arm-compute'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.length'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.length
     package: '@azure/arm-compute'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.nextLink'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.nextLink
     package: '@azure/arm-compute'
     summary: >-
       The uri to fetch the next page of VM scale set extensions. Call ListNext()
@@ -56,7 +59,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<VirtualMachineScaleSetExtension>[])'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.concat'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.concat
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +72,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />&gt;[]
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.concat_1'
+  - name: >-
+      concat(VirtualMachineScaleSetExtension |
+      ConcatArray<VirtualMachineScaleSetExtension>[])
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.concat_1
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: VirtualMachineScaleSetExtension |
+        ConcatArray<VirtualMachineScaleSetExtension>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.copyWithin'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.copyWithin
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +152,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.entries'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.entries
     package: '@azure/arm-compute'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +167,8 @@ methods:
   - name: >-
       every((value: VirtualMachineScaleSetExtension, index: number, array:
       VirtualMachineScaleSetExtension[]) => unknown, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.every'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.every_1
     package: '@azure/arm-compute'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,31 +176,77 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: VirtualMachineScaleSetExtension,
+        function every(predicate: (value: VirtualMachineScaleSetExtension,
         index: number, array: VirtualMachineScaleSetExtension[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualMachineScaleSetExtension, index: number, array:
             VirtualMachineScaleSetExtension[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
+      every<S>((value: VirtualMachineScaleSetExtension, index: number, array:
+      VirtualMachineScaleSetExtension[]) => value, any)
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.every
+    package: '@azure/arm-compute'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: VirtualMachineScaleSetExtension,
+        index: number, array: VirtualMachineScaleSetExtension[]) => value,
+        thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: VirtualMachineScaleSetExtension, index: number, array:
+            VirtualMachineScaleSetExtension[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
+  - name: >-
       fill(VirtualMachineScaleSetExtension, undefined | number, undefined |
       number)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.fill'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.fill
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -190,7 +260,10 @@ methods:
         | number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -212,7 +285,8 @@ methods:
   - name: >-
       filter((value: VirtualMachineScaleSetExtension, index: number, array:
       VirtualMachineScaleSetExtension[]) => unknown, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.filter_1'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.filter_1
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -222,31 +296,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: VirtualMachineScaleSetExtension,
+        function filter(predicate: (value: VirtualMachineScaleSetExtension,
         index: number, array: VirtualMachineScaleSetExtension[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualMachineScaleSetExtension, index: number, array:
             VirtualMachineScaleSetExtension[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: VirtualMachineScaleSetExtension, index: number, array:
-      VirtualMachineScaleSetExtension[]) => boolean, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.filter'
+      VirtualMachineScaleSetExtension[]) => value, any)
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.filter
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -256,22 +333,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: VirtualMachineScaleSetExtension,
-        index: number, array: VirtualMachineScaleSetExtension[]) => boolean,
+        function filter<S>(predicate: (value: VirtualMachineScaleSetExtension,
+        index: number, array: VirtualMachineScaleSetExtension[]) => value,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualMachineScaleSetExtension, index: number, array:
-            VirtualMachineScaleSetExtension[]) =&gt; boolean
+            VirtualMachineScaleSetExtension[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -280,7 +356,8 @@ methods:
   - name: >-
       find((value: VirtualMachineScaleSetExtension, index: number, obj:
       VirtualMachineScaleSetExtension[]) => unknown, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.find_1'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.find_1
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -302,13 +379,15 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" /> |
-          undefined
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: VirtualMachineScaleSetExtension, index:
-      number, obj: VirtualMachineScaleSetExtension[]) => boolean, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.find'
+      number, obj: VirtualMachineScaleSetExtension[]) => value, any)
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.find
     package: '@azure/arm-compute'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -322,12 +401,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         VirtualMachineScaleSetExtension, index: number, obj:
-        VirtualMachineScaleSetExtension[]) => boolean, thisArg?: any)
+        VirtualMachineScaleSetExtension[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: VirtualMachineScaleSetExtension, index: number,
-            obj: VirtualMachineScaleSetExtension[]) =&gt; boolean
+            obj: VirtualMachineScaleSetExtension[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -350,7 +429,8 @@ methods:
   - name: >-
       findIndex((value: VirtualMachineScaleSetExtension, index: number, obj:
       VirtualMachineScaleSetExtension[]) => unknown, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.findIndex'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.findIndex
     package: '@azure/arm-compute'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -392,7 +472,8 @@ methods:
   - name: >-
       forEach((value: VirtualMachineScaleSetExtension, index: number, array:
       VirtualMachineScaleSetExtension[]) => void, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.forEach'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.forEach
     package: '@azure/arm-compute'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -418,7 +499,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(VirtualMachineScaleSetExtension, undefined | number)'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.includes'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.includes
     package: '@azure/arm-compute'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -432,7 +514,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -443,7 +528,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(VirtualMachineScaleSetExtension, undefined | number)'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.indexOf'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.indexOf
     package: '@azure/arm-compute'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -455,7 +541,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -466,7 +555,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.join'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.join
     package: '@azure/arm-compute'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -487,7 +577,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.keys'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.keys
     package: '@azure/arm-compute'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -499,7 +590,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(VirtualMachineScaleSetExtension, undefined | number)'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.lastIndexOf
     package: '@azure/arm-compute'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -511,7 +603,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -524,7 +619,8 @@ methods:
   - name: >-
       map<U>((value: VirtualMachineScaleSetExtension, index: number, array:
       VirtualMachineScaleSetExtension[]) => U, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.map'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.map
     package: '@azure/arm-compute'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -555,7 +651,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.pop'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.pop
     package: '@azure/arm-compute'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -565,11 +662,13 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" /> |
-          undefined
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          /> | undefined
         description: ''
   - name: 'push(VirtualMachineScaleSetExtension[])'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.push'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.push
     package: '@azure/arm-compute'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -579,7 +678,10 @@ methods:
       content: 'function push(items: VirtualMachineScaleSetExtension[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -589,7 +691,8 @@ methods:
       reduce((previousValue: VirtualMachineScaleSetExtension, currentValue:
       VirtualMachineScaleSetExtension, currentIndex: number, array:
       VirtualMachineScaleSetExtension[]) => VirtualMachineScaleSetExtension)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reduce'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reduce
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -616,14 +719,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />
         description: ''
   - name: >-
       reduce((previousValue: VirtualMachineScaleSetExtension, currentValue:
       VirtualMachineScaleSetExtension, currentIndex: number, array:
       VirtualMachineScaleSetExtension[]) => VirtualMachineScaleSetExtension,
       VirtualMachineScaleSetExtension)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reduce_1'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reduce_1
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -645,16 +752,23 @@ methods:
             VirtualMachineScaleSetExtension
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue:
       VirtualMachineScaleSetExtension, currentIndex: number, array:
       VirtualMachineScaleSetExtension[]) => U, U)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reduce_2'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reduce_2
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -691,7 +805,8 @@ methods:
       reduceRight((previousValue: VirtualMachineScaleSetExtension, currentValue:
       VirtualMachineScaleSetExtension, currentIndex: number, array:
       VirtualMachineScaleSetExtension[]) => VirtualMachineScaleSetExtension)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reduceRight'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reduceRight
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -719,14 +834,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: VirtualMachineScaleSetExtension, currentValue:
       VirtualMachineScaleSetExtension, currentIndex: number, array:
       VirtualMachineScaleSetExtension[]) => VirtualMachineScaleSetExtension,
       VirtualMachineScaleSetExtension)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reduceRight_1
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -748,16 +867,23 @@ methods:
             VirtualMachineScaleSetExtension
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       VirtualMachineScaleSetExtension, currentIndex: number, array:
       VirtualMachineScaleSetExtension[]) => U, U)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reduceRight_2
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -792,7 +918,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.reverse'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.reverse
     package: '@azure/arm-compute'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -801,10 +928,14 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.shift'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.shift
     package: '@azure/arm-compute'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -814,11 +945,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" /> |
-          undefined
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.slice'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.slice
     package: '@azure/arm-compute'
     summary: Returns a section of an array.
     remarks: ''
@@ -832,15 +965,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
   - name: >-
       some((value: VirtualMachineScaleSetExtension, index: number, array:
       VirtualMachineScaleSetExtension[]) => unknown, any)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.some'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.some
     package: '@azure/arm-compute'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -850,31 +988,37 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: VirtualMachineScaleSetExtension,
-        index: number, array: VirtualMachineScaleSetExtension[]) => unknown,
-        thisArg?: any)
+        function some(predicate: (value: VirtualMachineScaleSetExtension, index:
+        number, array: VirtualMachineScaleSetExtension[]) => unknown, thisArg?:
+        any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualMachineScaleSetExtension, index: number, array:
             VirtualMachineScaleSetExtension[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: VirtualMachineScaleSetExtension, b:
       VirtualMachineScaleSetExtension) => number)
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.sort'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.sort
     package: '@azure/arm-compute'
     summary: Sorts an array.
     remarks: ''
@@ -891,14 +1035,26 @@ methods:
             undefined | (a: VirtualMachineScaleSetExtension, b:
             VirtualMachineScaleSetExtension) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, VirtualMachineScaleSetExtension[])'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.splice_1'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.splice_1
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -920,14 +1076,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.splice'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.splice
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -948,11 +1111,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />[]
         description: ''
   - name: toLocaleString()
     uid: >-
-      @azure/arm-compute.VirtualMachineScaleSetExtensionListResult.toLocaleString
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.toLocaleString
     package: '@azure/arm-compute'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -966,7 +1132,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.toString'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.toString
     package: '@azure/arm-compute'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -978,7 +1145,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(VirtualMachineScaleSetExtension[])'
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.unshift'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.unshift
     package: '@azure/arm-compute'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -988,14 +1156,18 @@ methods:
       content: 'function unshift(items: VirtualMachineScaleSetExtension[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-compute.VirtualMachineScaleSetExtensionListResult.values'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.values
     package: '@azure/arm-compute'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1006,6 +1178,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />&gt;
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-compute.VirtualMachineScaleSetExtension" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.[Symbol.iterator]
+    package: '@azure/arm-compute'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-compute.models.index.d.VirtualMachineScaleSetExtensionListResult.[Symbol.unscopables]
+    package: '@azure/arm-compute'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-compute.models.index.d.ComputeOperationListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-compute.models.index.d.VirtualMachineScaleSetExtension" />&gt;

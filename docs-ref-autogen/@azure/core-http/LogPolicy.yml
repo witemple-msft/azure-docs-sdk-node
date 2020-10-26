@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LogPolicy
-uid: '@azure/core-http.LogPolicy'
+uid: '@azure/core-http.policies.logPolicy.d.LogPolicy'
 package: '@azure/core-http'
 summary: ''
 fullName: LogPolicy
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'LogPolicy(RequestPolicy, RequestPolicyOptions, Object)'
-    uid: '@azure/core-http.LogPolicy.constructor'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.constructor'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -22,17 +22,22 @@ constructors:
         __namedParameters?: Object)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: __namedParameters
           type: Object
           description: ''
 properties:
   - name: allowedHeaderNames
-    uid: '@azure/core-http.LogPolicy.allowedHeaderNames'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.allowedHeaderNames'
     package: '@azure/core-http'
     summary: >-
       Header names whose values will be logged when logging is enabled. Defaults
@@ -65,7 +70,7 @@ properties:
         type: Set&lt;string&gt;
         description: ''
   - name: allowedQueryParameters
-    uid: '@azure/core-http.LogPolicy.allowedQueryParameters'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.allowedQueryParameters'
     package: '@azure/core-http'
     summary: >-
       Query string names whose values will be logged when logging is enabled. By
@@ -88,7 +93,7 @@ properties:
         type: Set&lt;string&gt;
         description: ''
   - name: logger
-    uid: '@azure/core-http.LogPolicy.logger'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.logger'
     package: '@azure/core-http'
     summary: ''
     fullName: logger
@@ -101,7 +106,7 @@ properties:
         type: Debugger
         description: ''
   - name: sanitizer
-    uid: '@azure/core-http.LogPolicy.sanitizer'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.sanitizer'
     package: '@azure/core-http'
     summary: ''
     fullName: sanitizer
@@ -111,11 +116,11 @@ properties:
     syntax:
       content: 'sanitizer: Sanitizer'
       return:
-        type: <xref uid="@azure/core-http.Sanitizer" />
+        type: <xref uid="@azure/core-http.util.sanitizer.d.Sanitizer" />
         description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.LogPolicy.log'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.log'
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -130,14 +135,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.LogPolicy.sendRequest'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.sendRequest'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -147,13 +155,16 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.LogPolicy.shouldLog'
+    uid: '@azure/core-http.policies.logPolicy.d.LogPolicy.shouldLog'
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -163,9 +174,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SystemErrorRetryPolicy
-uid: '@azure/core-http.SystemErrorRetryPolicy'
+uid: '@azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy'
 package: '@azure/core-http'
 summary: ''
 fullName: SystemErrorRetryPolicy
@@ -12,7 +12,8 @@ constructors:
   - name: >-
       SystemErrorRetryPolicy(RequestPolicy, RequestPolicyOptions, number,
       number, number, number)
-    uid: '@azure/core-http.SystemErrorRetryPolicy.constructor'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.constructor
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -25,10 +26,15 @@ constructors:
         minRetryInterval?: number, maxRetryInterval?: number)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: retryCount
           type: number
@@ -44,7 +50,8 @@ constructors:
           description: ''
 properties:
   - name: maxRetryInterval
-    uid: '@azure/core-http.SystemErrorRetryPolicy.maxRetryInterval'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.maxRetryInterval
     package: '@azure/core-http'
     summary: ''
     fullName: maxRetryInterval
@@ -57,7 +64,8 @@ properties:
         type: number
         description: ''
   - name: minRetryInterval
-    uid: '@azure/core-http.SystemErrorRetryPolicy.minRetryInterval'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.minRetryInterval
     package: '@azure/core-http'
     summary: ''
     fullName: minRetryInterval
@@ -70,7 +78,8 @@ properties:
         type: number
         description: ''
   - name: retryCount
-    uid: '@azure/core-http.SystemErrorRetryPolicy.retryCount'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.retryCount
     package: '@azure/core-http'
     summary: ''
     fullName: retryCount
@@ -83,7 +92,8 @@ properties:
         type: number
         description: ''
   - name: retryInterval
-    uid: '@azure/core-http.SystemErrorRetryPolicy.retryInterval'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.retryInterval
     package: '@azure/core-http'
     summary: ''
     fullName: retryInterval
@@ -97,7 +107,8 @@ properties:
         description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.SystemErrorRetryPolicy.log'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.log
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -112,14 +123,18 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.SystemErrorRetryPolicy.sendRequest'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.sendRequest
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -129,13 +144,17 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.SystemErrorRetryPolicy.shouldLog'
+    uid: >-
+      @azure/core-http.policies.systemErrorRetryPolicy.d.SystemErrorRetryPolicy.shouldLog
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -145,9 +164,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

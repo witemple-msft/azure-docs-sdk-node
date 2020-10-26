@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ThrottlingRetryPolicy
-uid: '@azure/ms-rest-js.ThrottlingRetryPolicy'
+uid: '@azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy'
 package: '@azure/ms-rest-js'
 summary: >-
   To learn more, please refer to
@@ -19,7 +19,8 @@ constructors:
   - name: >-
       ThrottlingRetryPolicy(RequestPolicy, RequestPolicyOptionsLike,
       ResponseHandler)
-    uid: '@azure/ms-rest-js.ThrottlingRetryPolicy.constructor'
+    uid: >-
+      @azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.constructor
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -31,17 +32,26 @@ constructors:
         RequestPolicyOptionsLike, _handleResponse?: ResponseHandler)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/ms-rest-js.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/ms-rest-js.RequestPolicyOptionsLike" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicyOptionsLike"
+            />
           description: ''
         - id: _handleResponse
-          type: <xref uid="@azure/ms-rest-js.ResponseHandler" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.policies.throttlingRetryPolicy.d.ResponseHandler"
+            />
           description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/ms-rest-js.ThrottlingRetryPolicy.log'
+    uid: >-
+      @azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.log
     package: '@azure/ms-rest-js'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -56,14 +66,18 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: parseDateRetryAfterHeader(string)
-    uid: '@azure/ms-rest-js.ThrottlingRetryPolicy.parseDateRetryAfterHeader'
+    uid: >-
+      @azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.parseDateRetryAfterHeader
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -79,7 +93,8 @@ methods:
         type: number | undefined
         description: ''
   - name: parseRetryAfterHeader(string)
-    uid: '@azure/ms-rest-js.ThrottlingRetryPolicy.parseRetryAfterHeader'
+    uid: >-
+      @azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.parseRetryAfterHeader
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -95,7 +110,8 @@ methods:
         type: number | undefined
         description: ''
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/ms-rest-js.ThrottlingRetryPolicy.sendRequest'
+    uid: >-
+      @azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.sendRequest
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -105,13 +121,17 @@ methods:
       content: 'function sendRequest(httpRequest: WebResourceLike)'
       parameters:
         - id: httpRequest
-          type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+          type: <xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/ms-rest-js.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/ms-rest-js.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/ms-rest-js.ThrottlingRetryPolicy.shouldLog'
+    uid: >-
+      @azure/ms-rest-js.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.shouldLog
     package: '@azure/ms-rest-js'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -121,9 +141,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/ms-rest-js.BaseRequestPolicy" />
+extends: <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.BaseRequestPolicy" />

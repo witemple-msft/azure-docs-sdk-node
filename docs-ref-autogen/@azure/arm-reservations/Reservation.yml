@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Reservation
-uid: '@azure/arm-reservations.Reservation'
+uid: '@azure/arm-reservations.operations.reservation.d.Reservation'
 package: '@azure/arm-reservations'
 summary: Class representing a Reservation.
 fullName: Reservation
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Reservation(AzureReservationAPIContext)
-    uid: '@azure/arm-reservations.Reservation.constructor'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.constructor'
     package: '@azure/arm-reservations'
     summary: Create a Reservation.
     remarks: ''
@@ -20,12 +20,16 @@ constructors:
       content: 'new Reservation(client: AzureReservationAPIContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-reservations.AzureReservationAPIContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.azureReservationAPIContext.d.AzureReservationAPIContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: 'availableScopes(string, string, string[], msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.availableScopes'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.availableScopes
     package: '@azure/arm-reservations'
     summary: Get Available Scopes for `Reservation`.
     remarks: ''
@@ -54,7 +58,8 @@ methods:
           />&gt;
         description: Promise<Models.ReservationAvailableScopesResponse>
   - name: 'beginAvailableScopes(string, string, string[], msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.beginAvailableScopes'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.beginAvailableScopes
     package: '@azure/arm-reservations'
     summary: Get Available Scopes for `Reservation`.
     remarks: ''
@@ -81,7 +86,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginMerge(string, MergeRequest, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.beginMerge'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.beginMerge'
     package: '@azure/arm-reservations'
     summary: >-
       Merge the specified `Reservation`s into a new `Reservation`. The two
@@ -100,7 +105,7 @@ methods:
           type: string
           description: Order Id of the reservation
         - id: body
-          type: <xref uid="@azure/arm-reservations.MergeRequest" />
+          type: <xref uid="@azure/arm-reservations.models.index.d.MergeRequest" />
           description: Information needed for commercial request for a reservation
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -109,7 +114,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginSplit(string, SplitRequest, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.beginSplit'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.beginSplit'
     package: '@azure/arm-reservations'
     summary: >-
       Split a `Reservation` into two `Reservation`s with specified quantity
@@ -126,7 +131,7 @@ methods:
           type: string
           description: Order Id of the reservation
         - id: body
-          type: <xref uid="@azure/arm-reservations.SplitRequest" />
+          type: <xref uid="@azure/arm-reservations.models.index.d.SplitRequest" />
           description: Information needed to Split a reservation item
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -135,7 +140,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginUpdate(string, string, Patch, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.beginUpdate'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.beginUpdate'
     package: '@azure/arm-reservations'
     summary: Updates the applied scopes of the `Reservation`.
     remarks: ''
@@ -153,7 +158,7 @@ methods:
           type: string
           description: Id of the Reservation Item
         - id: parameters
-          type: <xref uid="@azure/arm-reservations.Patch" />
+          type: <xref uid="@azure/arm-reservations.models.index.d.Patch" />
           description: Information needed to patch a reservation item
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -162,7 +167,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'get(string, string, Models.ReservationGetOptionalParams)'
-    uid: '@azure/arm-reservations.Reservation.get'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.get'
     package: '@azure/arm-reservations'
     summary: Get specific `Reservation` details.
     remarks: ''
@@ -188,7 +193,7 @@ methods:
   - name: >-
       get(string, string, ReservationGetOptionalParams,
       ServiceCallback<ReservationResponse>)
-    uid: '@azure/arm-reservations.Reservation.get_2'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.get_2'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -207,16 +212,20 @@ methods:
           type: string
           description: Order Id of the reservation
         - id: options
-          type: <xref uid="@azure/arm-reservations.ReservationGetOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.ReservationGetOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationResponse" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationResponse"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, string, ServiceCallback<ReservationResponse>)'
-    uid: '@azure/arm-reservations.Reservation.get_1'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.get_1'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -236,11 +245,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationResponse" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationResponse"
+            />&gt;
           description: |
             The callback
   - name: 'list(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.list'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.list'
     package: '@azure/arm-reservations'
     summary: List `Reservation`s within a single `ReservationOrder`.
     remarks: ''
@@ -261,7 +271,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ReservationListResponse" />&gt;
         description: Promise<Models.ReservationListResponse>
   - name: 'list(string, RequestOptionsBase, ServiceCallback<ReservationList>)'
-    uid: '@azure/arm-reservations.Reservation.list_2'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.list_2'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -281,11 +291,11 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'list(string, ServiceCallback<ReservationList>)'
-    uid: '@azure/arm-reservations.Reservation.list_1'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.list_1'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -302,11 +312,11 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'listNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.listNext'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.listNext'
     package: '@azure/arm-reservations'
     summary: List `Reservation`s within a single `ReservationOrder`.
     remarks: ''
@@ -327,7 +337,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ReservationListNextResponse" />&gt;
         description: Promise<Models.ReservationListNextResponse>
   - name: 'listNext(string, RequestOptionsBase, ServiceCallback<ReservationList>)'
-    uid: '@azure/arm-reservations.Reservation.listNext_2'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.listNext_2'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -347,11 +357,11 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'listNext(string, ServiceCallback<ReservationList>)'
-    uid: '@azure/arm-reservations.Reservation.listNext_1'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.listNext_1'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -368,11 +378,11 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'listRevisions(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.listRevisions'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.listRevisions'
     package: '@azure/arm-reservations'
     summary: List of all the revisions for the `Reservation`.
     remarks: ''
@@ -398,7 +408,8 @@ methods:
   - name: >-
       listRevisions(string, string, RequestOptionsBase,
       ServiceCallback<ReservationList>)
-    uid: '@azure/arm-reservations.Reservation.listRevisions_2'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.listRevisions_2
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -422,11 +433,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'listRevisions(string, string, ServiceCallback<ReservationList>)'
-    uid: '@azure/arm-reservations.Reservation.listRevisions_1'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.listRevisions_1
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -446,11 +458,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'listRevisionsNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.listRevisionsNext'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.listRevisionsNext
     package: '@azure/arm-reservations'
     summary: List of all the revisions for the `Reservation`.
     remarks: ''
@@ -475,7 +488,8 @@ methods:
   - name: >-
       listRevisionsNext(string, RequestOptionsBase,
       ServiceCallback<ReservationList>)
-    uid: '@azure/arm-reservations.Reservation.listRevisionsNext_2'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.listRevisionsNext_2
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -495,11 +509,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'listRevisionsNext(string, ServiceCallback<ReservationList>)'
-    uid: '@azure/arm-reservations.Reservation.listRevisionsNext_1'
+    uid: >-
+      @azure/arm-reservations.operations.reservation.d.Reservation.listRevisionsNext_1
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -516,11 +531,11 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-reservations.ReservationList" />&gt;
+            uid="@azure/arm-reservations.models.index.d.ReservationList" />&gt;
           description: |
             The callback
   - name: 'merge(string, MergeRequest, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.merge'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.merge'
     package: '@azure/arm-reservations'
     summary: >-
       Merge the specified `Reservation`s into a new `Reservation`. The two
@@ -539,7 +554,7 @@ methods:
           type: string
           description: Order Id of the reservation
         - id: body
-          type: <xref uid="@azure/arm-reservations.MergeRequest" />
+          type: <xref uid="@azure/arm-reservations.models.index.d.MergeRequest" />
           description: Information needed for commercial request for a reservation
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -548,7 +563,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ReservationMergeResponse" />&gt;
         description: Promise<Models.ReservationMergeResponse>
   - name: 'split(string, SplitRequest, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.split'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.split'
     package: '@azure/arm-reservations'
     summary: >-
       Split a `Reservation` into two `Reservation`s with specified quantity
@@ -565,7 +580,7 @@ methods:
           type: string
           description: Order Id of the reservation
         - id: body
-          type: <xref uid="@azure/arm-reservations.SplitRequest" />
+          type: <xref uid="@azure/arm-reservations.models.index.d.SplitRequest" />
           description: Information needed to Split a reservation item
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -574,7 +589,7 @@ methods:
         type: Promise&lt;<xref uid="Models.ReservationSplitResponse" />&gt;
         description: Promise<Models.ReservationSplitResponse>
   - name: 'update(string, string, Patch, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-reservations.Reservation.update'
+    uid: '@azure/arm-reservations.operations.reservation.d.Reservation.update'
     package: '@azure/arm-reservations'
     summary: Updates the applied scopes of the `Reservation`.
     remarks: ''
@@ -592,7 +607,7 @@ methods:
           type: string
           description: Id of the Reservation Item
         - id: parameters
-          type: <xref uid="@azure/arm-reservations.Patch" />
+          type: <xref uid="@azure/arm-reservations.models.index.d.Patch" />
           description: Information needed to patch a reservation item
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />

@@ -1,8 +1,8 @@
 ### YamlMime:TSType
 name: LiveEventInput
-uid: '@azure/arm-mediaservices.LiveEventInput'
+uid: '@azure/arm-mediaservices.models.index.d.LiveEventInput'
 package: '@azure/arm-mediaservices'
-summary: The Live Event input.
+summary: The live event input.
 fullName: LiveEventInput
 remarks: ''
 isPreview: false
@@ -10,9 +10,9 @@ isDeprecated: false
 type: interface
 properties:
   - name: accessControl
-    uid: '@azure/arm-mediaservices.LiveEventInput.accessControl'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveEventInput.accessControl'
     package: '@azure/arm-mediaservices'
-    summary: The access control for LiveEvent Input.
+    summary: Access control for live event input.
     fullName: accessControl
     remarks: ''
     isPreview: false
@@ -20,16 +20,20 @@ properties:
     syntax:
       content: 'accessControl?: LiveEventInputAccessControl'
       return:
-        type: <xref uid="@azure/arm-mediaservices.LiveEventInputAccessControl" />
+        type: >-
+          <xref
+          uid="@azure/arm-mediaservices.models.index.d.LiveEventInputAccessControl"
+          />
         description: ''
   - name: accessToken
-    uid: '@azure/arm-mediaservices.LiveEventInput.accessToken'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveEventInput.accessToken'
     package: '@azure/arm-mediaservices'
     summary: >-
-      A unique identifier for a stream.  This can be specified at creation time
-      but cannot be
+      A UUID in string form to uniquely identify the stream. This can be
+      specified at creation time
 
-      updated.  If omitted, the service will generate a unique value.
+      but cannot be updated. If omitted, the service will generate a unique
+      value.
     fullName: accessToken
     remarks: ''
     isPreview: false
@@ -40,9 +44,9 @@ properties:
         type: undefined | string
         description: ''
   - name: endpoints
-    uid: '@azure/arm-mediaservices.LiveEventInput.endpoints'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveEventInput.endpoints'
     package: '@azure/arm-mediaservices'
-    summary: The input endpoints for the Live Event.
+    summary: The input endpoints for the live event.
     fullName: endpoints
     remarks: ''
     isPreview: false
@@ -50,12 +54,22 @@ properties:
     syntax:
       content: 'endpoints?: LiveEventEndpoint[]'
       return:
-        type: '<xref uid="@azure/arm-mediaservices.LiveEventEndpoint" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.LiveEventEndpoint"
+          />[]
         description: ''
   - name: keyFrameIntervalDuration
-    uid: '@azure/arm-mediaservices.LiveEventInput.keyFrameIntervalDuration'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.LiveEventInput.keyFrameIntervalDuration
     package: '@azure/arm-mediaservices'
-    summary: ISO 8601 timespan duration of the key frame interval duration.
+    summary: >-
+      ISO 8601 time duration of the key frame interval duration of the input.
+      This value sets the
+
+      EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to
+      indicate 2 seconds.
+
+      Leave the value empty for encoding live events.
     fullName: keyFrameIntervalDuration
     remarks: ''
     isPreview: false
@@ -66,11 +80,11 @@ properties:
         type: undefined | string
         description: ''
   - name: streamingProtocol
-    uid: '@azure/arm-mediaservices.LiveEventInput.streamingProtocol'
+    uid: '@azure/arm-mediaservices.models.index.d.LiveEventInput.streamingProtocol'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The streaming protocol for the Live Event.  This is specified at creation
-      time and cannot be
+      The input protocol for the live event. This is specified at creation time
+      and cannot be
 
       updated. Possible values include: 'FragmentedMP4', 'RTMP'
     fullName: streamingProtocol
@@ -80,5 +94,8 @@ properties:
     syntax:
       content: 'streamingProtocol: LiveEventInputProtocol'
       return:
-        type: <xref uid="@azure/arm-mediaservices.LiveEventInputProtocol" />
+        type: >-
+          <xref
+          uid="@azure/arm-mediaservices.models.index.d.LiveEventInputProtocol"
+          />
         description: ''

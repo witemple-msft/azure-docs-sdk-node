@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: StreamingPolicyCollection
-uid: '@azure/arm-mediaservices.StreamingPolicyCollection'
+uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection'
 package: '@azure/arm-mediaservices'
 summary: ''
 fullName: StreamingPolicyCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.Array'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.Array'
     package: '@azure/arm-mediaservices'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.length'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.length'
     package: '@azure/arm-mediaservices'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,8 @@ properties:
         type: number
         description: ''
   - name: odatanextLink
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.odatanextLink'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.odatanextLink
     package: '@azure/arm-mediaservices'
     summary: >-
       A link to the next page of the collection (when the collection contains
@@ -56,7 +57,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<StreamingPolicy>[])'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.concat'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.concat'
     package: '@azure/arm-mediaservices'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +68,42 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-mediaservices.StreamingPolicy"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.concat_1'
+  - name: 'concat(StreamingPolicy | ConcatArray<StreamingPolicy>[])'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.concat_1'
     package: '@azure/arm-mediaservices'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: StreamingPolicy | ConcatArray<StreamingPolicy>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.copyWithin'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.copyWithin
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +141,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.entries'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.entries'
     package: '@azure/arm-mediaservices'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +155,7 @@ methods:
   - name: >-
       every((value: StreamingPolicy, index: number, array: StreamingPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.every'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.every_1'
     package: '@azure/arm-mediaservices'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +163,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: StreamingPolicy, index: number,
-        array: StreamingPolicy[]) => unknown, thisArg?: any)
+        function every(predicate: (value: StreamingPolicy, index: number, array:
+        StreamingPolicy[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingPolicy, index: number, array: StreamingPolicy[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: StreamingPolicy, index: number, array: StreamingPolicy[])
+      => value, any)
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.every'
+    package: '@azure/arm-mediaservices'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: StreamingPolicy, index: number,
+        array: StreamingPolicy[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: StreamingPolicy, index: number, array: StreamingPolicy[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(StreamingPolicy, undefined | number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.fill'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.fill'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +241,9 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +265,7 @@ methods:
   - name: >-
       filter((value: StreamingPolicy, index: number, array: StreamingPolicy[])
       => unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.filter_1'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.filter_1'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +275,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: StreamingPolicy, index: number,
+        function filter(predicate: (value: StreamingPolicy, index: number,
         array: StreamingPolicy[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingPolicy, index: number, array: StreamingPolicy[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: StreamingPolicy, index: number, array:
-      StreamingPolicy[]) => boolean, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.filter'
+      StreamingPolicy[]) => value, any)
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.filter'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +309,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: StreamingPolicy, index: number,
-        array: StreamingPolicy[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: StreamingPolicy, index: number,
+        array: StreamingPolicy[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingPolicy, index: number, array: StreamingPolicy[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +331,7 @@ methods:
   - name: >-
       find((value: StreamingPolicy, index: number, obj: StreamingPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.find_1'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.find_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -295,12 +351,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: StreamingPolicy, index: number, obj:
-      StreamingPolicy[]) => boolean, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.find'
+      StreamingPolicy[]) => value, any)
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.find'
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +371,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: StreamingPolicy, index:
-        number, obj: StreamingPolicy[]) => boolean, thisArg?: any)
+        number, obj: StreamingPolicy[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: StreamingPolicy, index: number, obj:
-            StreamingPolicy[]) =&gt; boolean
+            StreamingPolicy[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +399,8 @@ methods:
   - name: >-
       findIndex((value: StreamingPolicy, index: number, obj: StreamingPolicy[])
       => unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.findIndex'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.findIndex
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +441,7 @@ methods:
   - name: >-
       forEach((value: StreamingPolicy, index: number, array: StreamingPolicy[])
       => void, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.forEach'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.forEach'
     package: '@azure/arm-mediaservices'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +466,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(StreamingPolicy, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.includes'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.includes'
     package: '@azure/arm-mediaservices'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +480,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +493,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(StreamingPolicy, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.indexOf'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.indexOf'
     package: '@azure/arm-mediaservices'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +505,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +518,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.join'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.join'
     package: '@azure/arm-mediaservices'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +539,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.keys'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.keys'
     package: '@azure/arm-mediaservices'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +551,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(StreamingPolicy, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.lastIndexOf
     package: '@azure/arm-mediaservices'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +564,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +579,7 @@ methods:
   - name: >-
       map<U>((value: StreamingPolicy, index: number, array: StreamingPolicy[])
       => U, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.map'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.map'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +609,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.pop'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.pop'
     package: '@azure/arm-mediaservices'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +618,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
+          | undefined
         description: ''
   - name: 'push(StreamingPolicy[])'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.push'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.push'
     package: '@azure/arm-mediaservices'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +633,9 @@ methods:
       content: 'function push(items: StreamingPolicy[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -574,7 +644,7 @@ methods:
   - name: >-
       reduce((previousValue: StreamingPolicy, currentValue: StreamingPolicy,
       currentIndex: number, array: StreamingPolicy[]) => StreamingPolicy)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reduce'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reduce'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +669,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
         description: ''
   - name: >-
       reduce((previousValue: StreamingPolicy, currentValue: StreamingPolicy,
       currentIndex: number, array: StreamingPolicy[]) => StreamingPolicy,
       StreamingPolicy)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reduce_1'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reduce_1'
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -624,15 +694,17 @@ methods:
             StreamingPolicy
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: StreamingPolicy, currentIndex:
       number, array: StreamingPolicy[]) => U, U)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reduce_2'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reduce_2'
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -668,7 +740,8 @@ methods:
       reduceRight((previousValue: StreamingPolicy, currentValue:
       StreamingPolicy, currentIndex: number, array: StreamingPolicy[]) =>
       StreamingPolicy)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reduceRight'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reduceRight
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -694,13 +767,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
         description: ''
   - name: >-
       reduceRight((previousValue: StreamingPolicy, currentValue:
       StreamingPolicy, currentIndex: number, array: StreamingPolicy[]) =>
       StreamingPolicy, StreamingPolicy)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reduceRight_1
     package: '@azure/arm-mediaservices'
     summary: ''
     remarks: ''
@@ -719,15 +793,18 @@ methods:
             StreamingPolicy
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: StreamingPolicy,
       currentIndex: number, array: StreamingPolicy[]) => U, U)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reduceRight_2
     package: '@azure/arm-mediaservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -761,7 +838,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.reverse'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.reverse'
     package: '@azure/arm-mediaservices'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -770,10 +847,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.shift'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.shift'
     package: '@azure/arm-mediaservices'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -782,10 +861,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-mediaservices.StreamingPolicy" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.slice'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.slice'
     package: '@azure/arm-mediaservices'
     summary: Returns a section of an array.
     remarks: ''
@@ -799,15 +880,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
   - name: >-
       some((value: StreamingPolicy, index: number, array: StreamingPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.some'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.some'
     package: '@azure/arm-mediaservices'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -817,28 +901,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: StreamingPolicy, index: number, array:
+        function some(predicate: (value: StreamingPolicy, index: number, array:
         StreamingPolicy[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingPolicy, index: number, array: StreamingPolicy[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: StreamingPolicy, b: StreamingPolicy) => number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.sort'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.sort'
     package: '@azure/arm-mediaservices'
     summary: Sorts an array.
     remarks: ''
@@ -852,14 +941,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: StreamingPolicy, b: StreamingPolicy) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, StreamingPolicy[])'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.splice_1'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.splice_1'
     package: '@azure/arm-mediaservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -881,14 +981,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.splice'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.splice'
     package: '@azure/arm-mediaservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -909,10 +1013,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.toLocaleString'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.toLocaleString
     package: '@azure/arm-mediaservices'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -926,7 +1033,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.toString'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.toString'
     package: '@azure/arm-mediaservices'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -938,7 +1045,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(StreamingPolicy[])'
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.unshift'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.unshift'
     package: '@azure/arm-mediaservices'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -948,14 +1055,16 @@ methods:
       content: 'function unshift(items: StreamingPolicy[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-mediaservices.StreamingPolicy" />[]'
+          type: >-
+            <xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-mediaservices.StreamingPolicyCollection.values'
+    uid: '@azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.values'
     package: '@azure/arm-mediaservices'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -966,6 +1075,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-mediaservices.StreamingPolicy" />&gt;
+          uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-mediaservices.StreamingPolicy" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.[Symbol.iterator]
+    package: '@azure/arm-mediaservices'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-mediaservices.models.index.d.StreamingPolicyCollection.[Symbol.unscopables]
+    package: '@azure/arm-mediaservices'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-mediaservices.models.index.d.AccountFilterCollection.Array"
+  />&lt;<xref uid="@azure/arm-mediaservices.models.index.d.StreamingPolicy"
+  />&gt;

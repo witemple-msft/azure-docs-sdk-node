@@ -1,0 +1,255 @@
+### YamlMime:TSPackage
+uid: '@azure/core-amqp.core-amqp.d'
+name: core-amqp.d
+summary: ''
+type: module
+interfaces:
+  - '@azure/core-amqp.core-amqp.d.AsyncLockOptions'
+  - '@azure/core-amqp.core-amqp.d.CbsResponse'
+  - '@azure/core-amqp.core-amqp.d.ConnectionConfig'
+  - '@azure/core-amqp.core-amqp.d.ConnectionConfigOptions'
+  - '@azure/core-amqp.core-amqp.d.ConnectionContextBase'
+  - '@azure/core-amqp.core-amqp.d.ConnectionProperties'
+  - '@azure/core-amqp.core-amqp.d.CreateConnectionContextBaseParameters'
+  - '@azure/core-amqp.core-amqp.d.DataTransformer'
+  - '@azure/core-amqp.core-amqp.d.EventHubConnectionConfig'
+  - '@azure/core-amqp.core-amqp.d.EventHubConnectionStringModel'
+  - '@azure/core-amqp.core-amqp.d.IotHubConnectionStringModel'
+  - '@azure/core-amqp.core-amqp.d.MessageHeader'
+  - '@azure/core-amqp.core-amqp.d.MessageProperties'
+  - '@azure/core-amqp.core-amqp.d.NetworkSystemError'
+  - '@azure/core-amqp.core-amqp.d.RetryConfig'
+  - '@azure/core-amqp.core-amqp.d.RetryOptions'
+  - '@azure/core-amqp.core-amqp.d.SendRequestOptions'
+  - '@azure/core-amqp.core-amqp.d.ServiceBusConnectionStringModel'
+  - '@azure/core-amqp.core-amqp.d.StorageConnectionStringModel'
+  - '@azure/core-amqp.core-amqp.d.WebSocketOptions'
+classes:
+  - '@azure/core-amqp.core-amqp.d.CbsClient'
+  - '@azure/core-amqp.core-amqp.d.DefaultDataTransformer'
+  - '@azure/core-amqp.core-amqp.d.MessagingError'
+  - '@azure/core-amqp.core-amqp.d.RequestResponseLink'
+  - '@azure/core-amqp.core-amqp.d.SharedKeyCredential'
+  - '@azure/core-amqp.core-amqp.d.Timeout'
+enums:
+  - '@azure/core-amqp.core-amqp.d.ConditionErrorNameMapper'
+  - '@azure/core-amqp.core-amqp.d.ConditionStatusMapper'
+  - '@azure/core-amqp.core-amqp.d.ErrorNameConditionMapper'
+  - '@azure/core-amqp.core-amqp.d.RetryMode'
+  - '@azure/core-amqp.core-amqp.d.RetryOperationType'
+  - '@azure/core-amqp.core-amqp.d.SystemErrorConditionMapper'
+  - '@azure/core-amqp.core-amqp.d.TokenType'
+typeAliases:
+  - '@azure/core-amqp.core-amqp.d.Func'
+  - '@azure/core-amqp.core-amqp.d.ParsedOutput'
+package: '@azure/core-amqp'
+functions:
+  - name: 'delay<T>(number, AbortSignalLike, string, T)'
+    uid: '@azure/core-amqp.core-amqp.d.delay'
+    package: '@azure/core-amqp'
+    summary: A wrapper for setTimeout that resolves a promise after t milliseconds.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function delay<T>(delayInMs: number, abortSignal?: AbortSignalLike,
+        abortErrorMsg?: string, value?: T)
+      parameters:
+        - id: delayInMs
+          type: number
+          description: The number of milliseconds to be delayed.
+        - id: abortSignal
+          type: AbortSignalLike
+          description: The abortSignal associated with containing operation.
+        - id: abortErrorMsg
+          type: string
+          description: The abort error message associated with containing operation.
+        - id: value
+          type: T
+          description: The value to be resolved with after a timeout of t milliseconds.
+      return:
+        type: Promise&lt;T&gt;
+        description: '- Resolved promise'
+  - name: 'executePromisesSequentially(Array<any>, any)'
+    uid: '@azure/core-amqp.core-amqp.d.executePromisesSequentially'
+    package: '@azure/core-amqp'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function executePromisesSequentially(promiseFactories: Array<any>,
+        kickstart?: any)
+      parameters:
+        - id: promiseFactories
+          type: Array&lt;any&gt;
+          description: ''
+        - id: kickstart
+          type: any
+          description: ''
+      return:
+        type: Promise&lt;any&gt;
+        description: ''
+  - name: getNewAsyncLock(AsyncLockOptions)
+    uid: '@azure/core-amqp.core-amqp.d.getNewAsyncLock'
+    package: '@azure/core-amqp'
+    summary: Gets a new instance of the async lock with desired settings.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getNewAsyncLock(options?: AsyncLockOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="@azure/core-amqp.core-amqp.d.AsyncLockOptions" />
+          description: ''
+      return:
+        type: AsyncLock
+        description: AsyncLock
+  - name: isIotHubConnectionString(string)
+    uid: '@azure/core-amqp.core-amqp.d.isIotHubConnectionString'
+    package: '@azure/core-amqp'
+    summary: >-
+      Determines whether the given connection string is an iothub connection
+      string.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isIotHubConnectionString(connectionString: string)'
+      parameters:
+        - id: connectionString
+          type: string
+          description: The connection string.
+      return:
+        type: boolean
+        description: boolean.
+  - name: isSystemError(any)
+    uid: '@azure/core-amqp.core-amqp.d.isSystemError'
+    package: '@azure/core-amqp'
+    summary: Checks whether the provided error is a node.js SystemError.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isSystemError(err: any)'
+      parameters:
+        - id: err
+          type: any
+          description: |
+            An object that may contain error information.
+      return:
+        type: err
+        description: ''
+  - name: parseConnectionString<T>(string)
+    uid: '@azure/core-amqp.core-amqp.d.parseConnectionString'
+    package: '@azure/core-amqp'
+    summary: >
+      Parses the connection string and returns an object of type T.
+
+      Connection strings have the following syntax:
+
+
+      ConnectionString ::= Part { ";" Part } [ ";" ] [ WhiteSpace ]
+
+      Part             ::= [ PartLiteral [ "=" PartLiteral ] ]
+
+      PartLiteral      ::= [ WhiteSpace ] Literal [ WhiteSpace ]
+
+      Literal          ::= ? any sequence of characters except ; or = or
+      WhiteSpace ?
+
+      WhiteSpace       ::= ? all whitespace characters including \r and \n ?
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function parseConnectionString<T>(connectionString: string)'
+      parameters:
+        - id: connectionString
+          type: string
+          description: The connection string to be parsed.
+      return:
+        type: <xref uid="@azure/core-amqp.core-amqp.d.ParsedOutput" />&lt;T&gt;
+        description: ParsedOutput<T>.
+  - name: 'randomNumberFromInterval(number, number)'
+    uid: '@azure/core-amqp.core-amqp.d.randomNumberFromInterval'
+    package: '@azure/core-amqp'
+    summary: Generates a random number between the given interval
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function randomNumberFromInterval(min: number, max: number)'
+      parameters:
+        - id: min
+          type: number
+          description: Min number of the range (inclusive).
+        - id: max
+          type: number
+          description: |
+            Max number of the range (inclusive).
+      return:
+        type: number
+        description: ''
+  - name: retry<T>(RetryConfig<T>)
+    uid: '@azure/core-amqp.core-amqp.d.retry'
+    package: '@azure/core-amqp'
+    summary: >
+      Every operation is attempted at least once. Additional attempts are made
+      if the previous attempt failed
+
+      with a retryable error. The number of additional attempts is governed by
+      the `maxRetries` property provided
+
+      on the `RetryConfig` argument.
+
+      If `mode` option is set to `Fixed`, then the retries are made on the
+
+      given operation for a specified number of times, with a fixed delay in
+      between each retry each time.
+
+
+      If `mode` option is set to `Exponential`, then the delay between retries
+      is adjusted to increase
+
+      exponentially with each attempt using back-off factor of power 2.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function retry<T>(config: RetryConfig<T>)'
+      parameters:
+        - id: config
+          type: <xref uid="@azure/core-amqp.core-amqp.d.RetryConfig" />&lt;T&gt;
+          description: |
+            Parameters to configure retry operation
+      return:
+        type: Promise&lt;T&gt;
+        description: Promise<T>.
+  - name: translate(AmqpError | Error)
+    uid: '@azure/core-amqp.core-amqp.d.translate'
+    package: '@azure/core-amqp'
+    summary: >-
+      Translates the AMQP error received at the protocol layer or a SystemError
+      into a MessagingError.
+
+      All other errors are returned unaltered.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function translate(err: AmqpError | Error)'
+      parameters:
+        - id: err
+          type: >-
+            AmqpError | <xref
+            uid="@azure/core-amqp.core-amqp.d.MessagingError.Error" />
+          description: The amqp error that was received.
+      return:
+        type: >-
+          <xref uid="@azure/core-amqp.core-amqp.d.MessagingError" /> | <xref
+          uid="@azure/core-amqp.core-amqp.d.MessagingError.Error" />
+        description: MessagingError object.

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DurableOrchestrationContext
-uid: durable-functions.DurableOrchestrationContext
+uid: durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext
 package: durable-functions
 summary: |-
   Parameter data for orchestration bindings that can be used to schedule
@@ -12,7 +12,8 @@ isDeprecated: false
 type: class
 properties:
   - name: currentUtcDateTime
-    uid: durable-functions.DurableOrchestrationContext.currentUtcDateTime
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.currentUtcDateTime
     package: durable-functions
     summary: |
       Gets the current date/time in a way that is safe for use by orchestrator
@@ -30,7 +31,8 @@ properties:
         type: Date
         description: ''
   - name: instanceId
-    uid: durable-functions.DurableOrchestrationContext.instanceId
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.instanceId
     package: durable-functions
     summary: |
       The ID of the current orchestration instance.
@@ -47,7 +49,8 @@ properties:
         type: string
         description: ''
   - name: isReplaying
-    uid: durable-functions.DurableOrchestrationContext.isReplaying
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.isReplaying
     package: durable-functions
     summary: |
       Gets a value indicating whether the orchestrator function is currently
@@ -68,7 +71,8 @@ properties:
         type: boolean
         description: ''
   - name: parentInstanceId
-    uid: durable-functions.DurableOrchestrationContext.parentInstanceId
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.parentInstanceId
     package: durable-functions
     summary: |
       The ID of the parent orchestration of the current sub-orchestration
@@ -87,7 +91,8 @@ properties:
         type: string | undefined
         description: ''
   - name: Task
-    uid: durable-functions.DurableOrchestrationContext.Task
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.Task
     package: durable-functions
     summary: |-
       Just an entry point to reference the methods in [[ITaskMethods]].
@@ -100,11 +105,12 @@ properties:
     syntax:
       content: 'Task: ITaskMethods'
       return:
-        type: <xref uid="durable-functions.ITaskMethods" />
+        type: <xref uid="durable-functions.tasks.itaskmethods.d.ITaskMethods" />
         description: ''
 methods:
   - name: 'callActivity(string, unknown)'
-    uid: durable-functions.DurableOrchestrationContext.callActivity
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.callActivity
     package: durable-functions
     summary: Schedules an activity function named `name` for execution.
     remarks: ''
@@ -122,12 +128,13 @@ methods:
             The JSON-serializable input to pass to the activity
             function.
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: |-
           A Durable Task that completes when the called activity
           function completes or fails.
   - name: 'callActivityWithRetry(string, RetryOptions, unknown)'
-    uid: durable-functions.DurableOrchestrationContext.callActivityWithRetry
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.callActivityWithRetry
     package: durable-functions
     summary: |-
       Schedules an activity function named `name` for execution with
@@ -144,7 +151,7 @@ methods:
           type: string
           description: The name of the activity function to call.
         - id: retryOptions
-          type: <xref uid="durable-functions.RetryOptions" />
+          type: <xref uid="durable-functions.retryoptions.d.RetryOptions" />
           description: The retry options for the activity function.
         - id: input
           type: unknown
@@ -152,10 +159,11 @@ methods:
             The JSON-serializable input to pass to the activity
             function.
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''
   - name: 'callEntity(EntityId, string, unknown)'
-    uid: durable-functions.DurableOrchestrationContext.callEntity
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.callEntity
     package: durable-functions
     summary: |-
       Calls an operation on an entity, passing an argument, and waits for it
@@ -169,7 +177,7 @@ methods:
         operationInput?: unknown)
       parameters:
         - id: entityId
-          type: <xref uid="durable-functions.EntityId" />
+          type: <xref uid="durable-functions.entities.entityid.d.EntityId" />
           description: The target entity.
         - id: operationName
           type: string
@@ -179,12 +187,13 @@ methods:
           description: |
             The input for the operation.
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''
   - name: >-
       callHttp(string, string, string | object, [key: string]: string,
       TokenSource)
-    uid: durable-functions.DurableOrchestrationContext.callHttp
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.callHttp
     package: durable-functions
     summary: Schedules a durable HTTP call to the specified endpoint.
     remarks: ''
@@ -208,13 +217,14 @@ methods:
           type: '[key: string]\: string'
           description: ''
         - id: tokenSource
-          type: <xref uid="durable-functions.TokenSource" />
+          type: <xref uid="durable-functions.tokensource.d.TokenSource" />
           description: ''
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''
   - name: 'callSubOrchestrator(string, unknown, string)'
-    uid: durable-functions.DurableOrchestrationContext.callSubOrchestrator
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.callSubOrchestrator
     package: durable-functions
     summary: Schedules an orchestration function named `name` for execution.
     remarks: ''
@@ -243,10 +253,11 @@ methods:
 
             the format `<calling orchestrator instance ID>:<#>`
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''
   - name: 'callSubOrchestratorWithRetry(string, RetryOptions, unknown, string)'
-    uid: durable-functions.DurableOrchestrationContext.callSubOrchestratorWithRetry
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.callSubOrchestratorWithRetry
     package: durable-functions
     summary: |-
       Schedules an orchestrator function named `name` for execution with retry
@@ -263,7 +274,7 @@ methods:
           type: string
           description: The name of the orchestrator function to call.
         - id: retryOptions
-          type: <xref uid="durable-functions.RetryOptions" />
+          type: <xref uid="durable-functions.retryoptions.d.RetryOptions" />
           description: The retry options for the orchestrator function.
         - id: input
           type: unknown
@@ -275,10 +286,11 @@ methods:
           description: |
             A unique ID to use for the sub-orchestration instance.
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''
   - name: continueAsNew(unknown)
-    uid: durable-functions.DurableOrchestrationContext.continueAsNew
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.continueAsNew
     package: durable-functions
     summary: Restarts the orchestration by clearing its history.
     remarks: ''
@@ -291,10 +303,11 @@ methods:
           type: unknown
           description: ''
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''
   - name: createTimer(Date)
-    uid: durable-functions.DurableOrchestrationContext.createTimer
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.createTimer
     package: durable-functions
     summary: |
       Creates a durable timer that expires at a specified time.
@@ -315,10 +328,11 @@ methods:
           type: Date
           description: The time at which the timer should expire.
       return:
-        type: <xref uid="durable-functions.TimerTask" />
+        type: <xref uid="durable-functions.tasks.timertask.d.TimerTask" />
         description: A TimerTask that completes when the durable timer expires.
   - name: getInput()
-    uid: durable-functions.DurableOrchestrationContext.getInput
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.getInput
     package: durable-functions
     summary: |-
       Gets the input of the current orchestrator function as a deserialized
@@ -332,7 +346,8 @@ methods:
         type: unknown
         description: ''
   - name: newGuid()
-    uid: durable-functions.DurableOrchestrationContext.newGuid
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.newGuid
     package: durable-functions
     summary: |
       Creates a new GUID that is safe for replay within an orchestration or
@@ -350,7 +365,8 @@ methods:
         type: string
         description: ''
   - name: setCustomStatus(unknown)
-    uid: durable-functions.DurableOrchestrationContext.setCustomStatus
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.setCustomStatus
     package: durable-functions
     summary: |
       Sets the JSON-serializable status of the current orchestrator function.
@@ -372,7 +388,8 @@ methods:
             The JSON-serializable value to use as the
             orchestrator function's custom status.
   - name: waitForExternalEvent(string)
-    uid: durable-functions.DurableOrchestrationContext.waitForExternalEvent
+    uid: >-
+      durable-functions.durableorchestrationcontext.d.DurableOrchestrationContext.waitForExternalEvent
     package: durable-functions
     summary: |
       Waits asynchronously for an event to be raised with the name `name` and
@@ -389,5 +406,5 @@ methods:
           type: string
           description: ''
       return:
-        type: <xref uid="durable-functions.Task" />
+        type: <xref uid="durable-functions.tasks.task.d.Task" />
         description: ''

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RelationshipLinkListResult
-uid: '@azure/arm-customerinsights.RelationshipLinkListResult'
+uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult'
 package: '@azure/arm-customerinsights'
 summary: ''
 fullName: RelationshipLinkListResult
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.Array'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.Array
     package: '@azure/arm-customerinsights'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.length'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.length
     package: '@azure/arm-customerinsights'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.nextLink'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.nextLink
     package: '@azure/arm-customerinsights'
     summary: ''
     fullName: nextLink
@@ -52,7 +55,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<RelationshipLinkResourceFormat>[])'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.concat'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.concat
     package: '@azure/arm-customerinsights'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,36 +68,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.concat_1'
+  - name: >-
+      concat(RelationshipLinkResourceFormat |
+      ConcatArray<RelationshipLinkResourceFormat>[])
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.concat_1
     package: '@azure/arm-customerinsights'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: RelationshipLinkResourceFormat |
+        ConcatArray<RelationshipLinkResourceFormat>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.copyWithin'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.copyWithin
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -131,7 +148,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.entries'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.entries
     package: '@azure/arm-customerinsights'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -145,7 +163,8 @@ methods:
   - name: >-
       every((value: RelationshipLinkResourceFormat, index: number, array:
       RelationshipLinkResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.every'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.every_1
     package: '@azure/arm-customerinsights'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -153,31 +172,76 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: RelationshipLinkResourceFormat,
-        index: number, array: RelationshipLinkResourceFormat[]) => unknown,
-        thisArg?: any)
+        function every(predicate: (value: RelationshipLinkResourceFormat, index:
+        number, array: RelationshipLinkResourceFormat[]) => unknown, thisArg?:
+        any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RelationshipLinkResourceFormat, index: number, array:
             RelationshipLinkResourceFormat[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
+      every<S>((value: RelationshipLinkResourceFormat, index: number, array:
+      RelationshipLinkResourceFormat[]) => value, any)
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.every
+    package: '@azure/arm-customerinsights'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: RelationshipLinkResourceFormat,
+        index: number, array: RelationshipLinkResourceFormat[]) => value,
+        thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: RelationshipLinkResourceFormat, index: number, array:
+            RelationshipLinkResourceFormat[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
+  - name: >-
       fill(RelationshipLinkResourceFormat, undefined | number, undefined |
       number)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.fill'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.fill'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -193,7 +257,8 @@ methods:
         - id: value
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -215,7 +280,8 @@ methods:
   - name: >-
       filter((value: RelationshipLinkResourceFormat, index: number, array:
       RelationshipLinkResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.filter_1'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.filter_1
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -225,33 +291,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: RelationshipLinkResourceFormat,
+        function filter(predicate: (value: RelationshipLinkResourceFormat,
         index: number, array: RelationshipLinkResourceFormat[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RelationshipLinkResourceFormat, index: number, array:
             RelationshipLinkResourceFormat[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
   - name: >-
       filter<S>((value: RelationshipLinkResourceFormat, index: number, array:
-      RelationshipLinkResourceFormat[]) => boolean, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.filter'
+      RelationshipLinkResourceFormat[]) => value, any)
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.filter
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -261,22 +328,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: RelationshipLinkResourceFormat,
-        index: number, array: RelationshipLinkResourceFormat[]) => boolean,
+        function filter<S>(predicate: (value: RelationshipLinkResourceFormat,
+        index: number, array: RelationshipLinkResourceFormat[]) => value,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RelationshipLinkResourceFormat, index: number, array:
-            RelationshipLinkResourceFormat[]) =&gt; boolean
+            RelationshipLinkResourceFormat[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -285,7 +351,8 @@ methods:
   - name: >-
       find((value: RelationshipLinkResourceFormat, index: number, obj:
       RelationshipLinkResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.find_1'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.find_1
     package: '@azure/arm-customerinsights'
     summary: ''
     remarks: ''
@@ -307,13 +374,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: RelationshipLinkResourceFormat, index: number,
-      obj: RelationshipLinkResourceFormat[]) => boolean, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.find'
+      obj: RelationshipLinkResourceFormat[]) => value, any)
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.find'
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -327,12 +395,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         RelationshipLinkResourceFormat, index: number, obj:
-        RelationshipLinkResourceFormat[]) => boolean, thisArg?: any)
+        RelationshipLinkResourceFormat[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: RelationshipLinkResourceFormat, index: number,
-            obj: RelationshipLinkResourceFormat[]) =&gt; boolean
+            obj: RelationshipLinkResourceFormat[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -355,7 +423,8 @@ methods:
   - name: >-
       findIndex((value: RelationshipLinkResourceFormat, index: number, obj:
       RelationshipLinkResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.findIndex'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.findIndex
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -397,7 +466,8 @@ methods:
   - name: >-
       forEach((value: RelationshipLinkResourceFormat, index: number, array:
       RelationshipLinkResourceFormat[]) => void, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.forEach'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.forEach
     package: '@azure/arm-customerinsights'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -423,7 +493,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(RelationshipLinkResourceFormat, undefined | number)'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.includes'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.includes
     package: '@azure/arm-customerinsights'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -439,7 +510,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -450,7 +522,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(RelationshipLinkResourceFormat, undefined | number)'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.indexOf'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.indexOf
     package: '@azure/arm-customerinsights'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -464,7 +537,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -475,7 +549,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.join'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.join'
     package: '@azure/arm-customerinsights'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -496,7 +570,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.keys'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.keys'
     package: '@azure/arm-customerinsights'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -508,7 +582,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(RelationshipLinkResourceFormat, undefined | number)'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.lastIndexOf
     package: '@azure/arm-customerinsights'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -522,7 +597,8 @@ methods:
         - id: searchElement
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -535,7 +611,7 @@ methods:
   - name: >-
       map<U>((value: RelationshipLinkResourceFormat, index: number, array:
       RelationshipLinkResourceFormat[]) => U, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.map'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.map'
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -566,7 +642,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.pop'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.pop'
     package: '@azure/arm-customerinsights'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -576,11 +652,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           /> | undefined
         description: ''
   - name: 'push(RelationshipLinkResourceFormat[])'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.push'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.push'
     package: '@azure/arm-customerinsights'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -592,7 +669,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
             />[]
           description: |
             New elements of the Array.
@@ -603,7 +680,8 @@ methods:
       reduce((previousValue: RelationshipLinkResourceFormat, currentValue:
       RelationshipLinkResourceFormat, currentIndex: number, array:
       RelationshipLinkResourceFormat[]) => RelationshipLinkResourceFormat)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reduce'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reduce
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -631,7 +709,8 @@ methods:
             array.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />
         description: ''
   - name: >-
@@ -639,7 +718,8 @@ methods:
       RelationshipLinkResourceFormat, currentIndex: number, array:
       RelationshipLinkResourceFormat[]) => RelationshipLinkResourceFormat,
       RelationshipLinkResourceFormat)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reduce_1'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reduce_1
     package: '@azure/arm-customerinsights'
     summary: ''
     remarks: ''
@@ -663,17 +743,20 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: RelationshipLinkResourceFormat,
       currentIndex: number, array: RelationshipLinkResourceFormat[]) => U, U)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reduce_2'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reduce_2
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -710,7 +793,8 @@ methods:
       reduceRight((previousValue: RelationshipLinkResourceFormat, currentValue:
       RelationshipLinkResourceFormat, currentIndex: number, array:
       RelationshipLinkResourceFormat[]) => RelationshipLinkResourceFormat)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reduceRight'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reduceRight
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -739,7 +823,8 @@ methods:
             array.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />
         description: ''
   - name: >-
@@ -747,7 +832,8 @@ methods:
       RelationshipLinkResourceFormat, currentIndex: number, array:
       RelationshipLinkResourceFormat[]) => RelationshipLinkResourceFormat,
       RelationshipLinkResourceFormat)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reduceRight_1
     package: '@azure/arm-customerinsights'
     summary: ''
     remarks: ''
@@ -771,18 +857,21 @@ methods:
         - id: initialValue
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+            />
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       RelationshipLinkResourceFormat, currentIndex: number, array:
       RelationshipLinkResourceFormat[]) => U, U)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reduceRight_2
     package: '@azure/arm-customerinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -817,7 +906,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.reverse'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.reverse
     package: '@azure/arm-customerinsights'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -827,11 +917,13 @@ methods:
       content: function reverse()
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.shift'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.shift
     package: '@azure/arm-customerinsights'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -841,11 +933,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.slice'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.slice
     package: '@azure/arm-customerinsights'
     summary: Returns a section of an array.
     remarks: ''
@@ -859,17 +953,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
   - name: >-
       some((value: RelationshipLinkResourceFormat, index: number, array:
       RelationshipLinkResourceFormat[]) => unknown, any)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.some'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.some'
     package: '@azure/arm-customerinsights'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -879,31 +975,36 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: RelationshipLinkResourceFormat, index:
+        function some(predicate: (value: RelationshipLinkResourceFormat, index:
         number, array: RelationshipLinkResourceFormat[]) => unknown, thisArg?:
         any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RelationshipLinkResourceFormat, index: number, array:
             RelationshipLinkResourceFormat[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: RelationshipLinkResourceFormat, b:
       RelationshipLinkResourceFormat) => number)
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.sort'
+    uid: '@azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.sort'
     package: '@azure/arm-customerinsights'
     summary: Sorts an array.
     remarks: ''
@@ -920,14 +1021,26 @@ methods:
             undefined | (a: RelationshipLinkResourceFormat, b:
             RelationshipLinkResourceFormat) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, RelationshipLinkResourceFormat[])'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.splice_1'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.splice_1
     package: '@azure/arm-customerinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -951,17 +1064,19 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.splice'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.splice
     package: '@azure/arm-customerinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -983,11 +1098,13 @@ methods:
             The number of elements to remove.
       return:
         type: >-
-          <xref uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          <xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.toLocaleString'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.toLocaleString
     package: '@azure/arm-customerinsights'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -1001,7 +1118,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.toString'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.toString
     package: '@azure/arm-customerinsights'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -1013,7 +1131,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(RelationshipLinkResourceFormat[])'
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.unshift'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.unshift
     package: '@azure/arm-customerinsights'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -1025,7 +1144,7 @@ methods:
         - id: items
           type: >-
             <xref
-            uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+            uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -1033,7 +1152,8 @@ methods:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-customerinsights.RelationshipLinkListResult.values'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.values
     package: '@azure/arm-customerinsights'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1044,9 +1164,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat"
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
           />&gt;
         description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.[Symbol.iterator]
+    package: '@azure/arm-customerinsights'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-customerinsights.models.index.d.RelationshipLinkListResult.[Symbol.unscopables]
+    package: '@azure/arm-customerinsights'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
 extends: >-
-  Array&lt;<xref
-  uid="@azure/arm-customerinsights.RelationshipLinkResourceFormat" />&gt;
+  <xref
+  uid="@azure/arm-customerinsights.models.index.d.OperationListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-customerinsights.models.index.d.RelationshipLinkResourceFormat"
+  />&gt;

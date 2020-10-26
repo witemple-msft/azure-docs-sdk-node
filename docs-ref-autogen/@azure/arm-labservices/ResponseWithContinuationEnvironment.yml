@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ResponseWithContinuationEnvironment
-uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment'
+uid: '@azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment'
 package: '@azure/arm-labservices'
 summary: ''
 fullName: ResponseWithContinuationEnvironment
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.Array'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.Array
     package: '@azure/arm-labservices'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.length'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.length
     package: '@azure/arm-labservices'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.nextLink'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.nextLink
     package: '@azure/arm-labservices'
     summary: Link for next set of results.
     fullName: nextLink
@@ -52,7 +55,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Environment>[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.concat'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.concat
     package: '@azure/arm-labservices'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +67,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-labservices.Environment"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-labservices.models.index.d.Environment" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.concat_1'
+  - name: 'concat(Environment | ConcatArray<Environment>[])'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.concat_1
     package: '@azure/arm-labservices'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Environment | ConcatArray<Environment>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-labservices.models.index.d.Environment" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-labservices.models.index.d.Environment" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.copyWithin'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.copyWithin
     package: '@azure/arm-labservices'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +135,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.entries'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.entries
     package: '@azure/arm-labservices'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +150,8 @@ methods:
   - name: >-
       every((value: Environment, index: number, array: Environment[]) =>
       unknown, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.every'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.every_1
     package: '@azure/arm-labservices'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +159,73 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Environment, index: number, array:
+        function every(predicate: (value: Environment, index: number, array:
         Environment[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Environment, index: number, array: Environment[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Environment, index: number, array: Environment[]) =>
+      value, any)
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.every
+    package: '@azure/arm-labservices'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Environment, index: number, array:
+        Environment[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: Environment, index: number, array: Environment[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Environment, undefined | number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.fill'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.fill
     package: '@azure/arm-labservices'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +239,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-labservices.Environment" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +261,8 @@ methods:
   - name: >-
       filter((value: Environment, index: number, array: Environment[]) =>
       unknown, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.filter_1
     package: '@azure/arm-labservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,30 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Environment, index: number, array:
+        function filter(predicate: (value: Environment, index: number, array:
         Environment[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Environment, index: number, array: Environment[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
   - name: >-
       filter<S>((value: Environment, index: number, array: Environment[]) =>
-      boolean, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.filter'
+      value, any)
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.filter
     package: '@azure/arm-labservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +305,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Environment, index: number,
-        array: Environment[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Environment, index: number, array:
+        Environment[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Environment, index: number, array: Environment[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +327,8 @@ methods:
   - name: >-
       find((value: Environment, index: number, obj: Environment[]) => unknown,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.find_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.find_1
     package: '@azure/arm-labservices'
     summary: ''
     remarks: ''
@@ -291,12 +348,15 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-labservices.models.index.d.Environment" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Environment, index: number, obj:
-      Environment[]) => boolean, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.find'
+      Environment[]) => value, any)
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.find
     package: '@azure/arm-labservices'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +369,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Environment, index:
-        number, obj: Environment[]) => boolean, thisArg?: any)
+        number, obj: Environment[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Environment, index: number, obj: Environment[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +397,8 @@ methods:
   - name: >-
       findIndex((value: Environment, index: number, obj: Environment[]) =>
       unknown, any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.findIndex'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.findIndex
     package: '@azure/arm-labservices'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +439,8 @@ methods:
   - name: >-
       forEach((value: Environment, index: number, array: Environment[]) => void,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.forEach'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.forEach
     package: '@azure/arm-labservices'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -401,7 +463,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Environment, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.includes'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.includes
     package: '@azure/arm-labservices'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -415,7 +478,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-labservices.Environment" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -426,7 +489,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Environment, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.indexOf'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.indexOf
     package: '@azure/arm-labservices'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -438,7 +502,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-labservices.Environment" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -449,7 +513,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.join'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.join
     package: '@azure/arm-labservices'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -470,7 +535,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.keys'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.keys
     package: '@azure/arm-labservices'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -482,7 +548,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Environment, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.lastIndexOf'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.lastIndexOf
     package: '@azure/arm-labservices'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -494,7 +561,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-labservices.Environment" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -507,7 +574,8 @@ methods:
   - name: >-
       map<U>((value: Environment, index: number, array: Environment[]) => U,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.map'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.map
     package: '@azure/arm-labservices'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -535,7 +603,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.pop'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.pop
     package: '@azure/arm-labservices'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -544,10 +613,13 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-labservices.models.index.d.Environment" /> |
+          undefined
         description: ''
   - name: 'push(Environment[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.push'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.push
     package: '@azure/arm-labservices'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -557,7 +629,7 @@ methods:
       content: 'function push(items: Environment[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+          type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
           description: |
             New elements of the Array.
       return:
@@ -566,7 +638,8 @@ methods:
   - name: >-
       reduce((previousValue: Environment, currentValue: Environment,
       currentIndex: number, array: Environment[]) => Environment)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduce'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reduce
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -589,12 +662,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
         description: ''
   - name: >-
       reduce((previousValue: Environment, currentValue: Environment,
       currentIndex: number, array: Environment[]) => Environment, Environment)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduce_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reduce_1
     package: '@azure/arm-labservices'
     summary: ''
     remarks: ''
@@ -612,15 +686,16 @@ methods:
             currentIndex: number, array: Environment[]) =&gt; Environment
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-labservices.Environment" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Environment, currentIndex:
       number, array: Environment[]) => U, U)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduce_2'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reduce_2
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -655,7 +730,8 @@ methods:
   - name: >-
       reduceRight((previousValue: Environment, currentValue: Environment,
       currentIndex: number, array: Environment[]) => Environment)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduceRight'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reduceRight
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -680,12 +756,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
         description: ''
   - name: >-
       reduceRight((previousValue: Environment, currentValue: Environment,
       currentIndex: number, array: Environment[]) => Environment, Environment)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduceRight_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reduceRight_1
     package: '@azure/arm-labservices'
     summary: ''
     remarks: ''
@@ -703,15 +780,16 @@ methods:
             currentIndex: number, array: Environment[]) =&gt; Environment
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-labservices.Environment" />
+          type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" />
+        type: <xref uid="@azure/arm-labservices.models.index.d.Environment" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Environment, currentIndex:
       number, array: Environment[]) => U, U)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reduceRight_2'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reduceRight_2
     package: '@azure/arm-labservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -745,7 +823,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.reverse'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.reverse
     package: '@azure/arm-labservices'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -754,10 +833,11 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.shift'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.shift
     package: '@azure/arm-labservices'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -766,10 +846,13 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-labservices.Environment" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-labservices.models.index.d.Environment" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.slice'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.slice
     package: '@azure/arm-labservices'
     summary: Returns a section of an array.
     remarks: ''
@@ -783,15 +866,17 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
   - name: >-
       some((value: Environment, index: number, array: Environment[]) => unknown,
       any)
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.some'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.some
     package: '@azure/arm-labservices'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -801,28 +886,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Environment, index: number, array:
+        function some(predicate: (value: Environment, index: number, array:
         Environment[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Environment, index: number, array: Environment[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Environment, b: Environment) => number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.sort'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.sort
     package: '@azure/arm-labservices'
     summary: Sorts an array.
     remarks: ''
@@ -836,14 +927,26 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Environment, b: Environment) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Environment[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.splice_1'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.splice_1
     package: '@azure/arm-labservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -865,14 +968,15 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+          type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.splice'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.splice
     package: '@azure/arm-labservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -893,10 +997,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+        type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.toLocaleString'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.toLocaleString
     package: '@azure/arm-labservices'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -910,7 +1015,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.toString'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.toString
     package: '@azure/arm-labservices'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -922,7 +1028,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Environment[])'
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.unshift'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.unshift
     package: '@azure/arm-labservices'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -932,14 +1039,15 @@ methods:
       content: 'function unshift(items: Environment[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-labservices.Environment" />[]'
+          type: '<xref uid="@azure/arm-labservices.models.index.d.Environment" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-labservices.ResponseWithContinuationEnvironment.values'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.values
     package: '@azure/arm-labservices'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -949,7 +1057,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-labservices.Environment"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-labservices.models.index.d.Environment" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-labservices.Environment" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.[Symbol.iterator]
+    package: '@azure/arm-labservices'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-labservices.models.index.d.Environment" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-labservices.models.index.d.ResponseWithContinuationEnvironment.[Symbol.unscopables]
+    package: '@azure/arm-labservices'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-labservices.models.index.d.ProviderOperationResult.Array"
+  />&lt;<xref uid="@azure/arm-labservices.models.index.d.Environment" />&gt;

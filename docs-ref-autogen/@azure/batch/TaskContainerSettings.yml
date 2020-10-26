@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: TaskContainerSettings
-uid: '@azure/batch.TaskContainerSettings'
+uid: '@azure/batch.models.index.d.TaskContainerSettings'
 package: '@azure/batch'
 summary: An interface representing TaskContainerSettings.
 fullName: TaskContainerSettings
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: containerRunOptions
-    uid: '@azure/batch.TaskContainerSettings.containerRunOptions'
+    uid: '@azure/batch.models.index.d.TaskContainerSettings.containerRunOptions'
     package: '@azure/batch'
     summary: >-
       Additional options to the container create command. These additional
@@ -30,14 +30,14 @@ properties:
         type: undefined | string
         description: ''
   - name: imageName
-    uid: '@azure/batch.TaskContainerSettings.imageName'
+    uid: '@azure/batch.models.index.d.TaskContainerSettings.imageName'
     package: '@azure/batch'
     summary: >-
-      The image to use to create the container in which the task will run. This
-      is the full image
+      The Image to use to create the container in which the Task will run. This
+      is the full Image
 
       reference, as would be specified to "docker pull". If no tag is provided
-      as part of the image
+      as part of the Image
 
       name, the tag ":latest" is used as a default.
     fullName: imageName
@@ -50,13 +50,13 @@ properties:
         type: string
         description: ''
   - name: registry
-    uid: '@azure/batch.TaskContainerSettings.registry'
+    uid: '@azure/batch.models.index.d.TaskContainerSettings.registry'
     package: '@azure/batch'
     summary: >-
-      The private registry which contains the container image. This setting can
+      The private registry which contains the container Image. This setting can
       be omitted if was
 
-      already provided at pool creation.
+      already provided at Pool creation.
     fullName: registry
     remarks: ''
     isPreview: false
@@ -64,5 +64,22 @@ properties:
     syntax:
       content: 'registry?: ContainerRegistry'
       return:
-        type: <xref uid="@azure/batch.ContainerRegistry" />
+        type: <xref uid="@azure/batch.models.index.d.ContainerRegistry" />
+        description: ''
+  - name: workingDirectory
+    uid: '@azure/batch.models.index.d.TaskContainerSettings.workingDirectory'
+    package: '@azure/batch'
+    summary: >-
+      The location of the container Task working directory. The default is
+      'taskWorkingDirectory'.
+
+      Possible values include: 'taskWorkingDirectory', 'containerImageDefault'
+    fullName: workingDirectory
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'workingDirectory?: ContainerWorkingDirectory'
+      return:
+        type: <xref uid="@azure/batch.models.index.d.ContainerWorkingDirectory" />
         description: ''

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DigitalTwinClient
-uid: azure-iothub.DigitalTwinClient
+uid: azure-iothub.cl.digital_twin_client.d.DigitalTwinClient
 package: azure-iothub
 summary: ''
 fullName: DigitalTwinClient
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: DigitalTwinClient(IoTHubTokenCredentials)
-    uid: azure-iothub.DigitalTwinClient.constructor
+    uid: azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.constructor
     package: azure-iothub
     summary: >-
       Constructor which also creates an instance of the Protocol Layer Client
@@ -22,13 +22,16 @@ constructors:
       content: 'new DigitalTwinClient(creds: IoTHubTokenCredentials)'
       parameters:
         - id: creds
-          type: <xref uid="azure-iothub.IoTHubTokenCredentials" />
+          type: >-
+            <xref
+            uid="azure-iothub.auth.iothub_token_credentials.d.IoTHubTokenCredentials"
+            />
           description: >-
             The IoTHub token credentials used for creating the Protocol Layer
             client.
 methods:
   - name: getDigitalTwin(string)
-    uid: azure-iothub.DigitalTwinClient.getDigitalTwin
+    uid: azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.getDigitalTwin
     package: azure-iothub
     summary: Retrieve the Digital Twin of a given device.
     remarks: ''
@@ -43,14 +46,16 @@ methods:
             The digital twin Id of the given device or module.
                                                         Format of digitalTwinId is DeviceId[~ModuleId]. ModuleId is optional.
       return:
-        type: Promise&lt;<xref uid="azure-iothub.DigitalTwinResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="azure-iothub.cl.digital_twin_client.d.DigitalTwinResponse" />&gt;
         description: >-
           DigitalTwinResponse                The return object containing the
           Digital Twin plus the HttpResponse.
   - name: >-
       getDigitalTwin(string, TripleValueCallback<DigitalTwin,
       HttpOperationResponse>)
-    uid: azure-iothub.DigitalTwinClient.getDigitalTwin_1
+    uid: azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.getDigitalTwin_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -66,13 +71,14 @@ methods:
           description: ''
         - id: callback
           type: >-
-            TripleValueCallback&lt;<xref uid="azure-iothub.DigitalTwin" />,
+            TripleValueCallback&lt;<xref
+            uid="azure-iothub.cl.digital_twin_client.d.DigitalTwin" />,
             HttpOperationResponse&gt;
           description: ''
   - name: >-
       invokeCommand(string, string, string,
       DigitalTwinInvokeRootLevelCommandOptionalParams)
-    uid: azure-iothub.DigitalTwinClient.invokeCommand
+    uid: azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.invokeCommand
     package: azure-iothub
     summary: >-
       Invoke a command on an component of a particular device and get the result
@@ -98,7 +104,7 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="azure-iothub.DigitalTwinInvokeRootLevelCommandOptionalParams"
+            uid="azure-iothub.pl.models.index.d.DigitalTwinInvokeRootLevelCommandOptionalParams"
             />
           description: >-
             The optional parameter to set options including
@@ -107,7 +113,8 @@ methods:
       return:
         type: >-
           Promise&lt;<xref
-          uid="azure-iothub.DigitalTwinInvokeRootLevelCommandResponse" />&gt;
+          uid="azure-iothub.cl.digital_twin_client.d.DigitalTwinInvokeRootLevelCommandResponse"
+          />&gt;
         description: >-
           DigitalTwinInvokeRootLevelCommandResponse                 The result
           of the invoked command containing the result, status code, request ID
@@ -115,7 +122,8 @@ methods:
   - name: >-
       invokeComponentCommand(string, string, string, string,
       DigitalTwinInvokeComponentCommandOptionalParams)
-    uid: azure-iothub.DigitalTwinClient.invokeComponentCommand
+    uid: >-
+      azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.invokeComponentCommand
     package: azure-iothub
     summary: >-
       Invoke a command on an component of a particular device and get the result
@@ -144,7 +152,7 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="azure-iothub.DigitalTwinInvokeComponentCommandOptionalParams"
+            uid="azure-iothub.pl.models.index.d.DigitalTwinInvokeComponentCommandOptionalParams"
             />
           description: >-
             The optional parameter to set options including
@@ -153,7 +161,8 @@ methods:
       return:
         type: >-
           Promise&lt;<xref
-          uid="azure-iothub.DigitalTwinInvokeComponentCommandResponse" />&gt;
+          uid="azure-iothub.cl.digital_twin_client.d.DigitalTwinInvokeComponentCommandResponse"
+          />&gt;
         description: >-
           DigitalTwinInvokeComponentCommandResponse                 The result
           of the invoked command containing the result, status code, request ID
@@ -161,7 +170,8 @@ methods:
   - name: >-
       updateDigitalTwin(string, any[], string | TripleValueCallback<void,
       HttpOperationResponse>, TripleValueCallback<void, HttpOperationResponse>)
-    uid: azure-iothub.DigitalTwinClient.updateDigitalTwin_1
+    uid: >-
+      azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.updateDigitalTwin_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -187,7 +197,7 @@ methods:
           type: 'TripleValueCallback&lt;void, HttpOperationResponse&gt;'
           description: ''
   - name: 'updateDigitalTwin(string, any[], string)'
-    uid: azure-iothub.DigitalTwinClient.updateDigitalTwin
+    uid: azure-iothub.cl.digital_twin_client.d.DigitalTwinClient.updateDigitalTwin
     package: azure-iothub
     summary: Update the Digital Twin of a given device using a patch object.
     remarks: ''
@@ -208,5 +218,8 @@ methods:
           type: string
           description: The eTag for identifying the patch.
       return:
-        type: Promise&lt;<xref uid="azure-iothub.DigitalTwinUpdateResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="azure-iothub.cl.digital_twin_client.d.DigitalTwinUpdateResponse"
+          />&gt;
         description: DigitalTwinUpdateResponse                 The HTTPesponse.

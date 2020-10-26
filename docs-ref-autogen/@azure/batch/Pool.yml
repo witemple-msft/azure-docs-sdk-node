@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Pool
-uid: '@azure/batch.Pool'
+uid: '@azure/batch.operations.pool.d.Pool'
 package: '@azure/batch'
 summary: Class representing a Pool.
 fullName: Pool
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Pool(BatchServiceClientContext)
-    uid: '@azure/batch.Pool.constructor'
+    uid: '@azure/batch.operations.pool.d.Pool.constructor'
     package: '@azure/batch'
     summary: Create a Pool.
     remarks: ''
@@ -20,15 +20,18 @@ constructors:
       content: 'new Pool(client: BatchServiceClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          type: >-
+            <xref
+            uid="@azure/batch.batchServiceClientContext.d.BatchServiceClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: 'add(PoolAddParameter, Models.PoolAddOptionalParams)'
-    uid: '@azure/batch.Pool.add'
+    uid: '@azure/batch.operations.pool.d.Pool.add'
     package: '@azure/batch'
     summary: >-
-      When naming pools, avoid including sensitive information such as user
+      When naming Pools, avoid including sensitive information such as user
       names or secret project
 
       names. This information may appear in telemetry logs accessible to
@@ -42,8 +45,8 @@ methods:
         Models.PoolAddOptionalParams)
       parameters:
         - id: pool
-          type: <xref uid="@azure/batch.PoolAddParameter" />
-          description: The pool to be added.
+          type: <xref uid="@azure/batch.models.index.d.PoolAddParameter" />
+          description: The Pool to be added.
         - id: options
           type: <xref uid="Models.PoolAddOptionalParams" />
           description: ''
@@ -51,7 +54,7 @@ methods:
         type: Promise&lt;<xref uid="Models.PoolAddResponse" />&gt;
         description: Promise<Models.PoolAddResponse>
   - name: 'add(PoolAddParameter, PoolAddOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.add_2'
+    uid: '@azure/batch.operations.pool.d.Pool.add_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -63,17 +66,17 @@ methods:
         callback: ServiceCallback<void>)
       parameters:
         - id: pool
-          type: <xref uid="@azure/batch.PoolAddParameter" />
-          description: The pool to be added.
+          type: <xref uid="@azure/batch.models.index.d.PoolAddParameter" />
+          description: The Pool to be added.
         - id: options
-          type: <xref uid="@azure/batch.PoolAddOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.PoolAddOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'add(PoolAddParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.add_1'
+    uid: '@azure/batch.operations.pool.d.Pool.add_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -83,44 +86,44 @@ methods:
       content: 'function add(pool: PoolAddParameter, callback: ServiceCallback<void>)'
       parameters:
         - id: pool
-          type: <xref uid="@azure/batch.PoolAddParameter" />
-          description: The pool to be added.
+          type: <xref uid="@azure/batch.models.index.d.PoolAddParameter" />
+          description: The Pool to be added.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, Models.PoolDeleteMethodOptionalParams)'
-    uid: '@azure/batch.Pool.deleteMethod'
+    uid: '@azure/batch.operations.pool.d.Pool.deleteMethod'
     package: '@azure/batch'
     summary: >-
-      When you request that a pool be deleted, the following actions occur: the
-      pool state is set to
+      When you request that a Pool be deleted, the following actions occur: the
+      Pool state is set to
 
-      deleting; any ongoing resize operation on the pool are stopped; the Batch
+      deleting; any ongoing resize operation on the Pool are stopped; the Batch
       service starts
 
-      resizing the pool to zero nodes; any tasks running on existing nodes are
-      terminated and requeued
+      resizing the Pool to zero Compute Nodes; any Tasks running on existing
+      Compute Nodes are
 
-      (as if a resize pool operation had been requested with the default requeue
-      option); finally, the
+      terminated and requeued (as if a resize Pool operation had been requested
+      with the default
 
-      pool is removed from the system. Because running tasks are requeued, the
-      user can rerun these
+      requeue option); finally, the Pool is removed from the system. Because
+      running Tasks are
 
-      tasks by updating their job to target a different pool. The tasks can then
-      run on the new pool.
+      requeued, the user can rerun these Tasks by updating their Job to target a
+      different Pool. The
 
-      If you want to override the requeue behavior, then you should call resize
-      pool explicitly to
+      Tasks can then run on the new Pool. If you want to override the requeue
+      behavior, then you
 
-      shrink the pool to zero size before deleting the pool. If you call an
-      Update, Patch or Delete
+      should call resize Pool explicitly to shrink the Pool to zero size before
+      deleting the Pool. If
 
-      API on a pool in the deleting state, it will fail with HTTP status code
-      409 with error code
+      you call an Update, Patch or Delete API on a Pool in the deleting state,
+      it will fail with HTTP
 
-      PoolBeingDeleted.
+      status code 409 with error code PoolBeingDeleted.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -131,7 +134,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to delete.
+          description: The ID of the Pool to delete.
         - id: options
           type: <xref uid="Models.PoolDeleteMethodOptionalParams" />
           description: ''
@@ -141,7 +144,7 @@ methods:
   - name: >-
       deleteMethod(string, PoolDeleteMethodOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.deleteMethod_2'
+    uid: '@azure/batch.operations.pool.d.Pool.deleteMethod_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -154,16 +157,18 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to delete.
+          description: The ID of the Pool to delete.
         - id: options
-          type: <xref uid="@azure/batch.PoolDeleteMethodOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolDeleteMethodOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.deleteMethod_1'
+    uid: '@azure/batch.operations.pool.d.Pool.deleteMethod_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -174,13 +179,13 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to delete.
+          description: The ID of the Pool to delete.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'disableAutoScale(string, Models.PoolDisableAutoScaleOptionalParams)'
-    uid: '@azure/batch.Pool.disableAutoScale'
+    uid: '@azure/batch.operations.pool.d.Pool.disableAutoScale'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -193,7 +198,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool on which to disable automatic scaling.
+          description: The ID of the Pool on which to disable automatic scaling.
         - id: options
           type: <xref uid="Models.PoolDisableAutoScaleOptionalParams" />
           description: ''
@@ -203,7 +208,7 @@ methods:
   - name: >-
       disableAutoScale(string, PoolDisableAutoScaleOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.disableAutoScale_2'
+    uid: '@azure/batch.operations.pool.d.Pool.disableAutoScale_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -216,16 +221,19 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool on which to disable automatic scaling.
+          description: The ID of the Pool on which to disable automatic scaling.
         - id: options
-          type: <xref uid="@azure/batch.PoolDisableAutoScaleOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolDisableAutoScaleOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'disableAutoScale(string, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.disableAutoScale_1'
+    uid: '@azure/batch.operations.pool.d.Pool.disableAutoScale_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -238,7 +246,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool on which to disable automatic scaling.
+          description: The ID of the Pool on which to disable automatic scaling.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -246,22 +254,22 @@ methods:
   - name: >-
       enableAutoScale(string, PoolEnableAutoScaleParameter,
       Models.PoolEnableAutoScaleOptionalParams)
-    uid: '@azure/batch.Pool.enableAutoScale'
+    uid: '@azure/batch.operations.pool.d.Pool.enableAutoScale'
     package: '@azure/batch'
     summary: >-
-      You cannot enable automatic scaling on a pool if a resize operation is in
-      progress on the pool.
+      You cannot enable automatic scaling on a Pool if a resize operation is in
+      progress on the Pool.
 
-      If automatic scaling of the pool is currently disabled, you must specify a
+      If automatic scaling of the Pool is currently disabled, you must specify a
       valid autoscale
 
-      formula as part of the request. If automatic scaling of the pool is
+      formula as part of the request. If automatic scaling of the Pool is
       already enabled, you may
 
       specify a new autoscale formula and/or a new evaluation interval. You
       cannot call this API for
 
-      the same pool more than once every 30 seconds.
+      the same Pool more than once every 30 seconds.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -273,9 +281,11 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool on which to enable automatic scaling.
+          description: The ID of the Pool on which to enable automatic scaling.
         - id: poolEnableAutoScaleParameter
-          type: <xref uid="@azure/batch.PoolEnableAutoScaleParameter" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.PoolEnableAutoScaleParameter"
+            />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.PoolEnableAutoScaleOptionalParams" />
@@ -286,7 +296,7 @@ methods:
   - name: >-
       enableAutoScale(string, PoolEnableAutoScaleParameter,
       PoolEnableAutoScaleOptionalParams, ServiceCallback<void>)
-    uid: '@azure/batch.Pool.enableAutoScale_2'
+    uid: '@azure/batch.operations.pool.d.Pool.enableAutoScale_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -300,12 +310,17 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool on which to enable automatic scaling.
+          description: The ID of the Pool on which to enable automatic scaling.
         - id: poolEnableAutoScaleParameter
-          type: <xref uid="@azure/batch.PoolEnableAutoScaleParameter" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.PoolEnableAutoScaleParameter"
+            />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.PoolEnableAutoScaleOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolEnableAutoScaleOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -314,7 +329,7 @@ methods:
   - name: >-
       enableAutoScale(string, PoolEnableAutoScaleParameter,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.enableAutoScale_1'
+    uid: '@azure/batch.operations.pool.d.Pool.enableAutoScale_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -327,9 +342,11 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool on which to enable automatic scaling.
+          description: The ID of the Pool on which to enable automatic scaling.
         - id: poolEnableAutoScaleParameter
-          type: <xref uid="@azure/batch.PoolEnableAutoScaleParameter" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.PoolEnableAutoScaleParameter"
+            />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -338,13 +355,13 @@ methods:
   - name: >-
       evaluateAutoScale(string, string,
       Models.PoolEvaluateAutoScaleOptionalParams)
-    uid: '@azure/batch.Pool.evaluateAutoScale'
+    uid: '@azure/batch.operations.pool.d.Pool.evaluateAutoScale'
     package: '@azure/batch'
     summary: >-
       This API is primarily for validating an autoscale formula, as it simply
       returns the result
 
-      without applying the formula to the pool. The pool must have auto scaling
+      without applying the formula to the Pool. The Pool must have auto scaling
       enabled in order to
 
       evaluate a formula.
@@ -359,21 +376,21 @@ methods:
         - id: poolId
           type: string
           description: >-
-            The ID of the pool on which to evaluate the automatic scaling
+            The ID of the Pool on which to evaluate the automatic scaling
             formula.
         - id: autoScaleFormula
           type: string
           description: >-
-            The formula for the desired number of compute nodes in the pool. The
+            The formula for the desired number of Compute Nodes in the Pool. The
 
             formula is validated and its results calculated, but it is not
-            applied to the pool. To apply the
+            applied to the Pool. To apply the
 
-            formula to the pool, 'Enable automatic scaling on a pool'. For more
+            formula to the Pool, 'Enable automatic scaling on a Pool'. For more
             information about specifying
 
-            this formula, see Automatically scale compute nodes in an Azure
-            Batch pool
+            this formula, see Automatically scale Compute Nodes in an Azure
+            Batch Pool
 
             (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).
         - id: options
@@ -385,7 +402,7 @@ methods:
   - name: >-
       evaluateAutoScale(string, string, PoolEvaluateAutoScaleOptionalParams,
       ServiceCallback<AutoScaleRun>)
-    uid: '@azure/batch.Pool.evaluateAutoScale_2'
+    uid: '@azure/batch.operations.pool.d.Pool.evaluateAutoScale_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -400,32 +417,37 @@ methods:
         - id: poolId
           type: string
           description: >-
-            The ID of the pool on which to evaluate the automatic scaling
+            The ID of the Pool on which to evaluate the automatic scaling
             formula.
         - id: autoScaleFormula
           type: string
           description: >-
-            The formula for the desired number of compute nodes in the pool. The
+            The formula for the desired number of Compute Nodes in the Pool. The
 
             formula is validated and its results calculated, but it is not
-            applied to the pool. To apply the
+            applied to the Pool. To apply the
 
-            formula to the pool, 'Enable automatic scaling on a pool'. For more
+            formula to the Pool, 'Enable automatic scaling on a Pool'. For more
             information about specifying
 
-            this formula, see Automatically scale compute nodes in an Azure
-            Batch pool
+            this formula, see Automatically scale Compute Nodes in an Azure
+            Batch Pool
 
             (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).
         - id: options
-          type: <xref uid="@azure/batch.PoolEvaluateAutoScaleOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolEvaluateAutoScaleOptionalParams"
+            />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.AutoScaleRun" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.AutoScaleRun" />&gt;
           description: |
             The callback
   - name: 'evaluateAutoScale(string, string, ServiceCallback<AutoScaleRun>)'
-    uid: '@azure/batch.Pool.evaluateAutoScale_1'
+    uid: '@azure/batch.operations.pool.d.Pool.evaluateAutoScale_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -439,31 +461,33 @@ methods:
         - id: poolId
           type: string
           description: >-
-            The ID of the pool on which to evaluate the automatic scaling
+            The ID of the Pool on which to evaluate the automatic scaling
             formula.
         - id: autoScaleFormula
           type: string
           description: >-
-            The formula for the desired number of compute nodes in the pool. The
+            The formula for the desired number of Compute Nodes in the Pool. The
 
             formula is validated and its results calculated, but it is not
-            applied to the pool. To apply the
+            applied to the Pool. To apply the
 
-            formula to the pool, 'Enable automatic scaling on a pool'. For more
+            formula to the Pool, 'Enable automatic scaling on a Pool'. For more
             information about specifying
 
-            this formula, see Automatically scale compute nodes in an Azure
-            Batch pool
+            this formula, see Automatically scale Compute Nodes in an Azure
+            Batch Pool
 
             (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.AutoScaleRun" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.AutoScaleRun" />&gt;
           description: |
             The callback
   - name: 'exists(string, Models.PoolExistsOptionalParams)'
-    uid: '@azure/batch.Pool.exists'
+    uid: '@azure/batch.operations.pool.d.Pool.exists'
     package: '@azure/batch'
-    summary: Gets basic properties of a pool.
+    summary: Gets basic properties of a Pool.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -474,7 +498,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to get.
+          description: The ID of the Pool to get.
         - id: options
           type: <xref uid="Models.PoolExistsOptionalParams" />
           description: ''
@@ -482,7 +506,7 @@ methods:
         type: Promise&lt;<xref uid="Models.PoolExistsResponse" />&gt;
         description: Promise<Models.PoolExistsResponse>
   - name: 'exists(string, PoolExistsOptionalParams, ServiceCallback<boolean>)'
-    uid: '@azure/batch.Pool.exists_2'
+    uid: '@azure/batch.operations.pool.d.Pool.exists_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -495,16 +519,16 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to get.
+          description: The ID of the Pool to get.
         - id: options
-          type: <xref uid="@azure/batch.PoolExistsOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.PoolExistsOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;boolean&gt;
           description: |
             The callback
   - name: 'exists(string, ServiceCallback<boolean>)'
-    uid: '@azure/batch.Pool.exists_1'
+    uid: '@azure/batch.operations.pool.d.Pool.exists_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -515,15 +539,15 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to get.
+          description: The ID of the Pool to get.
         - id: callback
           type: ServiceCallback&lt;boolean&gt;
           description: |
             The callback
   - name: 'get(string, Models.PoolGetOptionalParams)'
-    uid: '@azure/batch.Pool.get'
+    uid: '@azure/batch.operations.pool.d.Pool.get'
     package: '@azure/batch'
-    summary: Gets information about the specified pool.
+    summary: Gets information about the specified Pool.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -532,7 +556,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to get.
+          description: The ID of the Pool to get.
         - id: options
           type: <xref uid="Models.PoolGetOptionalParams" />
           description: ''
@@ -540,7 +564,7 @@ methods:
         type: Promise&lt;<xref uid="Models.PoolGetResponse" />&gt;
         description: Promise<Models.PoolGetResponse>
   - name: 'get(string, PoolGetOptionalParams, ServiceCallback<CloudPool>)'
-    uid: '@azure/batch.Pool.get_2'
+    uid: '@azure/batch.operations.pool.d.Pool.get_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -553,16 +577,18 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to get.
+          description: The ID of the Pool to get.
         - id: options
-          type: <xref uid="@azure/batch.PoolGetOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.PoolGetOptionalParams" />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.CloudPool" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.models.index.d.CloudPool"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, ServiceCallback<CloudPool>)'
-    uid: '@azure/batch.Pool.get_1'
+    uid: '@azure/batch.operations.pool.d.Pool.get_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -573,18 +599,20 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to get.
+          description: The ID of the Pool to get.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.CloudPool" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.models.index.d.CloudPool"
+            />&gt;
           description: |
             The callback
   - name: >-
       getAllLifetimeStatistics(Models.PoolGetAllLifetimeStatisticsOptionalParams)
-    uid: '@azure/batch.Pool.getAllLifetimeStatistics'
+    uid: '@azure/batch.operations.pool.d.Pool.getAllLifetimeStatistics'
     package: '@azure/batch'
     summary: >-
-      Statistics are aggregated across all pools that have ever existed in the
-      account, from account
+      Statistics are aggregated across all Pools that have ever existed in the
+      Account, from Account
 
       creation to the last update time of the statistics. The statistics may not
       be immediately
@@ -612,7 +640,7 @@ methods:
   - name: >-
       getAllLifetimeStatistics(PoolGetAllLifetimeStatisticsOptionalParams,
       ServiceCallback<PoolStatistics>)
-    uid: '@azure/batch.Pool.getAllLifetimeStatistics_2'
+    uid: '@azure/batch.operations.pool.d.Pool.getAllLifetimeStatistics_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -626,15 +654,18 @@ methods:
       parameters:
         - id: options
           type: >-
-            <xref uid="@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams"
+            <xref
+            uid="@azure/batch.models.index.d.PoolGetAllLifetimeStatisticsOptionalParams"
             />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.PoolStatistics" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.PoolStatistics" />&gt;
           description: |
             The callback
   - name: getAllLifetimeStatistics(ServiceCallback<PoolStatistics>)
-    uid: '@azure/batch.Pool.getAllLifetimeStatistics_1'
+    uid: '@azure/batch.operations.pool.d.Pool.getAllLifetimeStatistics_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -646,11 +677,13 @@ methods:
         ServiceCallback<PoolStatistics>)
       parameters:
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.PoolStatistics" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.PoolStatistics" />&gt;
           description: |
             The callback
   - name: list(Models.PoolListOptionalParams)
-    uid: '@azure/batch.Pool.list'
+    uid: '@azure/batch.operations.pool.d.Pool.list'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -666,7 +699,7 @@ methods:
         type: Promise&lt;<xref uid="Models.PoolListResponse" />&gt;
         description: Promise<Models.PoolListResponse>
   - name: 'list(PoolListOptionalParams, ServiceCallback<CloudPoolListResult>)'
-    uid: '@azure/batch.Pool.list_2'
+    uid: '@azure/batch.operations.pool.d.Pool.list_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -678,16 +711,16 @@ methods:
         ServiceCallback<CloudPoolListResult>)
       parameters:
         - id: options
-          type: <xref uid="@azure/batch.PoolListOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.PoolListOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudPoolListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudPoolListResult" />&gt;
           description: |
             The callback
   - name: list(ServiceCallback<CloudPoolListResult>)
-    uid: '@azure/batch.Pool.list_1'
+    uid: '@azure/batch.operations.pool.d.Pool.list_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -698,12 +731,12 @@ methods:
       parameters:
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudPoolListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudPoolListResult" />&gt;
           description: |
             The callback
   - name: 'listNext(string, Models.PoolListNextOptionalParams)'
-    uid: '@azure/batch.Pool.listNext'
+    uid: '@azure/batch.operations.pool.d.Pool.listNext'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -726,7 +759,7 @@ methods:
   - name: >-
       listNext(string, PoolListNextOptionalParams,
       ServiceCallback<CloudPoolListResult>)
-    uid: '@azure/batch.Pool.listNext_2'
+    uid: '@azure/batch.operations.pool.d.Pool.listNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -742,16 +775,18 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.PoolListNextOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.PoolListNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudPoolListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudPoolListResult" />&gt;
           description: |
             The callback
   - name: 'listNext(string, ServiceCallback<CloudPoolListResult>)'
-    uid: '@azure/batch.Pool.listNext_1'
+    uid: '@azure/batch.operations.pool.d.Pool.listNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -767,18 +802,18 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudPoolListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudPoolListResult" />&gt;
           description: |
             The callback
   - name: listUsageMetrics(Models.PoolListUsageMetricsOptionalParams)
-    uid: '@azure/batch.Pool.listUsageMetrics'
+    uid: '@azure/batch.operations.pool.d.Pool.listUsageMetrics'
     package: '@azure/batch'
     summary: >-
       If you do not specify a $filter clause including a poolId, the response
-      includes all pools that
+      includes all Pools that
 
-      existed in the account in the time range of the returned aggregation
+      existed in the Account in the time range of the returned aggregation
       intervals. If you do not
 
       specify a $filter clause including a startTime or endTime these filters
@@ -805,7 +840,7 @@ methods:
   - name: >-
       listUsageMetrics(PoolListUsageMetricsOptionalParams,
       ServiceCallback<PoolListUsageMetricsResult>)
-    uid: '@azure/batch.Pool.listUsageMetrics_2'
+    uid: '@azure/batch.operations.pool.d.Pool.listUsageMetrics_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -817,16 +852,19 @@ methods:
         callback: ServiceCallback<PoolListUsageMetricsResult>)
       parameters:
         - id: options
-          type: <xref uid="@azure/batch.PoolListUsageMetricsOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolListUsageMetricsOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.PoolListUsageMetricsResult" />&gt;
+            uid="@azure/batch.models.index.d.PoolListUsageMetricsResult" />&gt;
           description: |
             The callback
   - name: listUsageMetrics(ServiceCallback<PoolListUsageMetricsResult>)
-    uid: '@azure/batch.Pool.listUsageMetrics_1'
+    uid: '@azure/batch.operations.pool.d.Pool.listUsageMetrics_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -840,19 +878,19 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.PoolListUsageMetricsResult" />&gt;
+            uid="@azure/batch.models.index.d.PoolListUsageMetricsResult" />&gt;
           description: |
             The callback
   - name: >-
       listUsageMetricsNext(string,
       Models.PoolListUsageMetricsNextOptionalParams)
-    uid: '@azure/batch.Pool.listUsageMetricsNext'
+    uid: '@azure/batch.operations.pool.d.Pool.listUsageMetricsNext'
     package: '@azure/batch'
     summary: >-
       If you do not specify a $filter clause including a poolId, the response
-      includes all pools that
+      includes all Pools that
 
-      existed in the account in the time range of the returned aggregation
+      existed in the Account in the time range of the returned aggregation
       intervals. If you do not
 
       specify a $filter clause including a startTime or endTime these filters
@@ -882,7 +920,7 @@ methods:
   - name: >-
       listUsageMetricsNext(string, PoolListUsageMetricsNextOptionalParams,
       ServiceCallback<PoolListUsageMetricsResult>)
-    uid: '@azure/batch.Pool.listUsageMetricsNext_2'
+    uid: '@azure/batch.operations.pool.d.Pool.listUsageMetricsNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -898,16 +936,19 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.PoolListUsageMetricsNextOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolListUsageMetricsNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.PoolListUsageMetricsResult" />&gt;
+            uid="@azure/batch.models.index.d.PoolListUsageMetricsResult" />&gt;
           description: |
             The callback
   - name: 'listUsageMetricsNext(string, ServiceCallback<PoolListUsageMetricsResult>)'
-    uid: '@azure/batch.Pool.listUsageMetricsNext_1'
+    uid: '@azure/batch.operations.pool.d.Pool.listUsageMetricsNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -924,20 +965,20 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.PoolListUsageMetricsResult" />&gt;
+            uid="@azure/batch.models.index.d.PoolListUsageMetricsResult" />&gt;
           description: |
             The callback
   - name: 'patch(string, PoolPatchParameter, Models.PoolPatchOptionalParams)'
-    uid: '@azure/batch.Pool.patch'
+    uid: '@azure/batch.operations.pool.d.Pool.patch'
     package: '@azure/batch'
     summary: >-
-      This only replaces the pool properties specified in the request. For
-      example, if the pool has a
+      This only replaces the Pool properties specified in the request. For
+      example, if the Pool has a
 
-      start task associated with it, and a request does not specify a start task
-      element, then the
+      StartTask associated with it, and a request does not specify a StartTask
+      element, then the Pool
 
-      pool keeps the existing start task.
+      keeps the existing StartTask.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -948,9 +989,9 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to update.
+          description: The ID of the Pool to update.
         - id: poolPatchParameter
-          type: <xref uid="@azure/batch.PoolPatchParameter" />
+          type: <xref uid="@azure/batch.models.index.d.PoolPatchParameter" />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.PoolPatchOptionalParams" />
@@ -961,7 +1002,7 @@ methods:
   - name: >-
       patch(string, PoolPatchParameter, PoolPatchOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.patch_2'
+    uid: '@azure/batch.operations.pool.d.Pool.patch_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -974,19 +1015,19 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to update.
+          description: The ID of the Pool to update.
         - id: poolPatchParameter
-          type: <xref uid="@azure/batch.PoolPatchParameter" />
+          type: <xref uid="@azure/batch.models.index.d.PoolPatchParameter" />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.PoolPatchOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.PoolPatchOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'patch(string, PoolPatchParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.patch_1'
+    uid: '@azure/batch.operations.pool.d.Pool.patch_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -999,9 +1040,9 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to update.
+          description: The ID of the Pool to update.
         - id: poolPatchParameter
-          type: <xref uid="@azure/batch.PoolPatchParameter" />
+          type: <xref uid="@azure/batch.models.index.d.PoolPatchParameter" />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -1010,10 +1051,10 @@ methods:
   - name: >-
       removeNodes(string, NodeRemoveParameter,
       Models.PoolRemoveNodesOptionalParams)
-    uid: '@azure/batch.Pool.removeNodes'
+    uid: '@azure/batch.operations.pool.d.Pool.removeNodes'
     package: '@azure/batch'
     summary: >-
-      This operation can only run when the allocation state of the pool is
+      This operation can only run when the allocation state of the Pool is
       steady. When this operation
 
       runs, the allocation state changes from steady to resizing.
@@ -1027,9 +1068,9 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool from which you want to remove nodes.
+          description: The ID of the Pool from which you want to remove Compute Nodes.
         - id: nodeRemoveParameter
-          type: <xref uid="@azure/batch.NodeRemoveParameter" />
+          type: <xref uid="@azure/batch.models.index.d.NodeRemoveParameter" />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.PoolRemoveNodesOptionalParams" />
@@ -1040,7 +1081,7 @@ methods:
   - name: >-
       removeNodes(string, NodeRemoveParameter, PoolRemoveNodesOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.removeNodes_2'
+    uid: '@azure/batch.operations.pool.d.Pool.removeNodes_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1054,19 +1095,21 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool from which you want to remove nodes.
+          description: The ID of the Pool from which you want to remove Compute Nodes.
         - id: nodeRemoveParameter
-          type: <xref uid="@azure/batch.NodeRemoveParameter" />
+          type: <xref uid="@azure/batch.models.index.d.NodeRemoveParameter" />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.PoolRemoveNodesOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolRemoveNodesOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'removeNodes(string, NodeRemoveParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.removeNodes_1'
+    uid: '@azure/batch.operations.pool.d.Pool.removeNodes_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1079,34 +1122,34 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool from which you want to remove nodes.
+          description: The ID of the Pool from which you want to remove Compute Nodes.
         - id: nodeRemoveParameter
-          type: <xref uid="@azure/batch.NodeRemoveParameter" />
+          type: <xref uid="@azure/batch.models.index.d.NodeRemoveParameter" />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'resize(string, PoolResizeParameter, Models.PoolResizeOptionalParams)'
-    uid: '@azure/batch.Pool.resize'
+    uid: '@azure/batch.operations.pool.d.Pool.resize'
     package: '@azure/batch'
     summary: >-
-      You can only resize a pool when its allocation state is steady. If the
-      pool is already resizing,
+      You can only resize a Pool when its allocation state is steady. If the
+      Pool is already resizing,
 
-      the request fails with status code 409. When you resize a pool, the pool's
+      the request fails with status code 409. When you resize a Pool, the Pool's
       allocation state
 
-      changes from steady to resizing. You cannot resize pools which are
+      changes from steady to resizing. You cannot resize Pools which are
       configured for automatic
 
       scaling. If you try to do this, the Batch service returns an error 409. If
-      you resize a pool
+      you resize a Pool
 
-      downwards, the Batch service chooses which nodes to remove. To remove
-      specific nodes, use the
+      downwards, the Batch service chooses which Compute Nodes to remove. To
+      remove specific Compute
 
-      pool remove nodes API instead.
+      Nodes, use the Pool remove Compute Nodes API instead.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -1117,9 +1160,9 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to resize.
+          description: The ID of the Pool to resize.
         - id: poolResizeParameter
-          type: <xref uid="@azure/batch.PoolResizeParameter" />
+          type: <xref uid="@azure/batch.models.index.d.PoolResizeParameter" />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.PoolResizeOptionalParams" />
@@ -1130,7 +1173,7 @@ methods:
   - name: >-
       resize(string, PoolResizeParameter, PoolResizeOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.resize_2'
+    uid: '@azure/batch.operations.pool.d.Pool.resize_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1144,19 +1187,19 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to resize.
+          description: The ID of the Pool to resize.
         - id: poolResizeParameter
-          type: <xref uid="@azure/batch.PoolResizeParameter" />
+          type: <xref uid="@azure/batch.models.index.d.PoolResizeParameter" />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.PoolResizeOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.PoolResizeOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'resize(string, PoolResizeParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.resize_1'
+    uid: '@azure/batch.operations.pool.d.Pool.resize_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1169,34 +1212,34 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to resize.
+          description: The ID of the Pool to resize.
         - id: poolResizeParameter
-          type: <xref uid="@azure/batch.PoolResizeParameter" />
+          type: <xref uid="@azure/batch.models.index.d.PoolResizeParameter" />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'stopResize(string, Models.PoolStopResizeOptionalParams)'
-    uid: '@azure/batch.Pool.stopResize'
+    uid: '@azure/batch.operations.pool.d.Pool.stopResize'
     package: '@azure/batch'
     summary: >-
-      This does not restore the pool to its previous state before the resize
+      This does not restore the Pool to its previous state before the resize
       operation: it only stops
 
-      any further changes being made, and the pool maintains its current state.
+      any further changes being made, and the Pool maintains its current state.
       After stopping, the
 
-      pool stabilizes at the number of nodes it was at when the stop operation
-      was done. During the
+      Pool stabilizes at the number of Compute Nodes it was at when the stop
+      operation was done.
 
-      stop operation, the pool allocation state changes first to stopping and
-      then to steady. A resize
+      During the stop operation, the Pool allocation state changes first to
+      stopping and then to
 
-      operation need not be an explicit resize pool request; this API can also
-      be used to halt the
+      steady. A resize operation need not be an explicit resize Pool request;
+      this API can also be
 
-      initial sizing of the pool when it is created.
+      used to halt the initial sizing of the Pool when it is created.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -1207,7 +1250,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool whose resizing you want to stop.
+          description: The ID of the Pool whose resizing you want to stop.
         - id: options
           type: <xref uid="Models.PoolStopResizeOptionalParams" />
           description: ''
@@ -1215,7 +1258,7 @@ methods:
         type: Promise&lt;<xref uid="Models.PoolStopResizeResponse" />&gt;
         description: Promise<Models.PoolStopResizeResponse>
   - name: 'stopResize(string, PoolStopResizeOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.stopResize_2'
+    uid: '@azure/batch.operations.pool.d.Pool.stopResize_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1228,16 +1271,18 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool whose resizing you want to stop.
+          description: The ID of the Pool whose resizing you want to stop.
         - id: options
-          type: <xref uid="@azure/batch.PoolStopResizeOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.PoolStopResizeOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'stopResize(string, ServiceCallback<void>)'
-    uid: '@azure/batch.Pool.stopResize_1'
+    uid: '@azure/batch.operations.pool.d.Pool.stopResize_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1248,7 +1293,7 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool whose resizing you want to stop.
+          description: The ID of the Pool whose resizing you want to stop.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -1256,16 +1301,16 @@ methods:
   - name: >-
       updateProperties(string, PoolUpdatePropertiesParameter,
       Models.PoolUpdatePropertiesOptionalParams)
-    uid: '@azure/batch.Pool.updateProperties'
+    uid: '@azure/batch.operations.pool.d.Pool.updateProperties'
     package: '@azure/batch'
     summary: >-
-      This fully replaces all the updatable properties of the pool. For example,
-      if the pool has a
+      This fully replaces all the updatable properties of the Pool. For example,
+      if the Pool has a
 
-      start task associated with it and if start task is not specified with this
-      request, then the
+      StartTask associated with it and if StartTask is not specified with this
+      request, then the Batch
 
-      Batch service will remove the existing start task.
+      service will remove the existing StartTask.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -1277,9 +1322,11 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to update.
+          description: The ID of the Pool to update.
         - id: poolUpdatePropertiesParameter
-          type: <xref uid="@azure/batch.PoolUpdatePropertiesParameter" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolUpdatePropertiesParameter" />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.PoolUpdatePropertiesOptionalParams" />
@@ -1290,7 +1337,7 @@ methods:
   - name: >-
       updateProperties(string, PoolUpdatePropertiesParameter,
       PoolUpdatePropertiesOptionalParams, ServiceCallback<void>)
-    uid: '@azure/batch.Pool.updateProperties_2'
+    uid: '@azure/batch.operations.pool.d.Pool.updateProperties_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1304,12 +1351,17 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to update.
+          description: The ID of the Pool to update.
         - id: poolUpdatePropertiesParameter
-          type: <xref uid="@azure/batch.PoolUpdatePropertiesParameter" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolUpdatePropertiesParameter" />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.PoolUpdatePropertiesOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolUpdatePropertiesOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -1318,7 +1370,7 @@ methods:
   - name: >-
       updateProperties(string, PoolUpdatePropertiesParameter,
       ServiceCallback<void>)
-    uid: '@azure/batch.Pool.updateProperties_1'
+    uid: '@azure/batch.operations.pool.d.Pool.updateProperties_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1331,9 +1383,11 @@ methods:
       parameters:
         - id: poolId
           type: string
-          description: The ID of the pool to update.
+          description: The ID of the Pool to update.
         - id: poolUpdatePropertiesParameter
-          type: <xref uid="@azure/batch.PoolUpdatePropertiesParameter" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.PoolUpdatePropertiesParameter" />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;

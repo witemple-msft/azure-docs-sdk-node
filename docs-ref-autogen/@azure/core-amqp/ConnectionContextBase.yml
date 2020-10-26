@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ConnectionContextBase
-uid: '@azure/core-amqp.ConnectionContextBase'
+uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase'
 package: '@azure/core-amqp'
 summary: >-
   Provides contextual information like the underlying amqp connection, cbs
@@ -14,7 +14,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: cbsSession
-    uid: '@azure/core-amqp.ConnectionContextBase.cbsSession'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.cbsSession'
     package: '@azure/core-amqp'
     summary: >-
       {CbsClient} cbsSession A reference to the cbs session ($cbs endpoint) on
@@ -28,10 +28,10 @@ properties:
     syntax:
       content: 'cbsSession: CbsClient'
       return:
-        type: <xref uid="@azure/core-amqp.CbsClient" />
+        type: <xref uid="@azure/core-amqp.core-amqp.d.CbsClient" />
         description: ''
   - name: config
-    uid: '@azure/core-amqp.ConnectionContextBase.config'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.config'
     package: '@azure/core-amqp'
     summary: >-
       {ConnectionConfig} config The EventHub connection config that is created
@@ -45,10 +45,10 @@ properties:
     syntax:
       content: 'config: ConnectionConfig'
       return:
-        type: <xref uid="@azure/core-amqp.ConnectionConfig" />
+        type: <xref uid="@azure/core-amqp.core-amqp.d.ConnectionConfig" />
         description: ''
   - name: connection
-    uid: '@azure/core-amqp.ConnectionContextBase.connection'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.connection'
     package: '@azure/core-amqp'
     summary: '{Connection} connection The underlying AMQP connection.'
     fullName: connection
@@ -61,7 +61,7 @@ properties:
         type: Connection
         description: ''
   - name: connectionId
-    uid: '@azure/core-amqp.ConnectionContextBase.connectionId'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.connectionId'
     package: '@azure/core-amqp'
     summary: |-
       {string} connectionId The amqp connection id that uniquely identifies the
@@ -76,7 +76,7 @@ properties:
         type: string
         description: ''
   - name: connectionLock
-    uid: '@azure/core-amqp.ConnectionContextBase.connectionLock'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.connectionLock'
     package: '@azure/core-amqp'
     summary: >-
       {string} connectionLock The unique lock name per connection that is used
@@ -94,7 +94,7 @@ properties:
         type: string
         description: ''
   - name: dataTransformer
-    uid: '@azure/core-amqp.ConnectionContextBase.dataTransformer'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.dataTransformer'
     package: '@azure/core-amqp'
     summary: >-
       {DataTransformer} dataTransformer A DataTransformer object that has
@@ -112,10 +112,10 @@ properties:
     syntax:
       content: 'dataTransformer: DataTransformer'
       return:
-        type: <xref uid="@azure/core-amqp.DataTransformer" />
+        type: <xref uid="@azure/core-amqp.core-amqp.d.DataTransformer" />
         description: ''
   - name: negotiateClaimLock
-    uid: '@azure/core-amqp.ConnectionContextBase.negotiateClaimLock'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.negotiateClaimLock'
     package: '@azure/core-amqp'
     summary: >-
       {string} negotiateClaimLock The unique lock name per connection that is
@@ -133,7 +133,7 @@ properties:
         type: string
         description: ''
   - name: refreshConnection
-    uid: '@azure/core-amqp.ConnectionContextBase.refreshConnection'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.refreshConnection'
     package: '@azure/core-amqp'
     summary: >-
       Updates the context to use a new underlying AMQP connection and new cbs
@@ -148,7 +148,7 @@ properties:
         type: () =&gt; void
         description: ''
   - name: tokenCredential
-    uid: '@azure/core-amqp.ConnectionContextBase.tokenCredential'
+    uid: '@azure/core-amqp.core-amqp.d.ConnectionContextBase.tokenCredential'
     package: '@azure/core-amqp'
     summary: >-
       {SharedKeyCredential | TokenCredential} tokenCredential The credential to
@@ -162,10 +162,13 @@ properties:
     syntax:
       content: 'tokenCredential: SharedKeyCredential | TokenCredential'
       return:
-        type: <xref uid="@azure/core-amqp.SharedKeyCredential" /> | TokenCredential
+        type: >-
+          <xref uid="@azure/core-amqp.core-amqp.d.SharedKeyCredential" /> |
+          TokenCredential
         description: ''
   - name: wasConnectionCloseCalled
-    uid: '@azure/core-amqp.ConnectionContextBase.wasConnectionCloseCalled'
+    uid: >-
+      @azure/core-amqp.core-amqp.d.ConnectionContextBase.wasConnectionCloseCalled
     package: '@azure/core-amqp'
     summary: >-
       {boolean} wasConnectionCloseCalled Indicates whether the close() method

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: NotificationHubListResult
-uid: '@azure/arm-notificationhubs.NotificationHubListResult'
+uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult'
 package: '@azure/arm-notificationhubs'
 summary: ''
 fullName: NotificationHubListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.Array'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.Array'
     package: '@azure/arm-notificationhubs'
     summary: ''
     fullName: Array
@@ -23,7 +23,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.length'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.length
     package: '@azure/arm-notificationhubs'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +39,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.nextLink'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.nextLink
     package: '@azure/arm-notificationhubs'
     summary: ''
     fullName: nextLink
@@ -52,7 +54,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<NotificationHubResource>[])'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.concat'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.concat
     package: '@azure/arm-notificationhubs'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +67,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-notificationhubs.NotificationHubResource" />&gt;[]
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.concat_1'
+  - name: 'concat(NotificationHubResource | ConcatArray<NotificationHubResource>[])'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.concat_1
     package: '@azure/arm-notificationhubs'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: NotificationHubResource |
+        ConcatArray<NotificationHubResource>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.copyWithin'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.copyWithin
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +145,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.entries'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.entries
     package: '@azure/arm-notificationhubs'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +160,8 @@ methods:
   - name: >-
       every((value: NotificationHubResource, index: number, array:
       NotificationHubResource[]) => unknown, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.every'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.every_1
     package: '@azure/arm-notificationhubs'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +169,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: NotificationHubResource, index:
+        function every(predicate: (value: NotificationHubResource, index:
         number, array: NotificationHubResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationHubResource, index: number, array:
             NotificationHubResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: NotificationHubResource, index: number, array:
+      NotificationHubResource[]) => value, any)
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.every'
+    package: '@azure/arm-notificationhubs'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: NotificationHubResource, index:
+        number, array: NotificationHubResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: NotificationHubResource, index: number, array:
+            NotificationHubResource[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(NotificationHubResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.fill'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.fill'
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +247,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +272,8 @@ methods:
   - name: >-
       filter((value: NotificationHubResource, index: number, array:
       NotificationHubResource[]) => unknown, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.filter_1'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.filter_1
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +283,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: NotificationHubResource, index:
+        function filter(predicate: (value: NotificationHubResource, index:
         number, array: NotificationHubResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationHubResource, index: number, array:
             NotificationHubResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: NotificationHubResource, index: number, array:
-      NotificationHubResource[]) => boolean, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.filter'
+      NotificationHubResource[]) => value, any)
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.filter
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +319,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: NotificationHubResource, index:
-        number, array: NotificationHubResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: NotificationHubResource, index:
+        number, array: NotificationHubResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationHubResource, index: number, array:
-            NotificationHubResource[]) =&gt; boolean
+            NotificationHubResource[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +341,8 @@ methods:
   - name: >-
       find((value: NotificationHubResource, index: number, obj:
       NotificationHubResource[]) => unknown, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.find_1'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.find_1
     package: '@azure/arm-notificationhubs'
     summary: ''
     remarks: ''
@@ -292,13 +363,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-notificationhubs.NotificationHubResource" /> |
-          undefined
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: NotificationHubResource, index: number, obj:
-      NotificationHubResource[]) => boolean, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.find'
+      NotificationHubResource[]) => value, any)
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.find'
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,13 +383,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: NotificationHubResource,
-        index: number, obj: NotificationHubResource[]) => boolean, thisArg?:
-        any)
+        index: number, obj: NotificationHubResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: NotificationHubResource, index: number, obj:
-            NotificationHubResource[]) =&gt; boolean
+            NotificationHubResource[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -340,7 +411,8 @@ methods:
   - name: >-
       findIndex((value: NotificationHubResource, index: number, obj:
       NotificationHubResource[]) => unknown, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.findIndex'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.findIndex
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -381,7 +453,8 @@ methods:
   - name: >-
       forEach((value: NotificationHubResource, index: number, array:
       NotificationHubResource[]) => void, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.forEach'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.forEach
     package: '@azure/arm-notificationhubs'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -406,7 +479,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(NotificationHubResource, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.includes'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.includes
     package: '@azure/arm-notificationhubs'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -420,7 +494,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -431,7 +508,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(NotificationHubResource, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.indexOf'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.indexOf
     package: '@azure/arm-notificationhubs'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -443,7 +521,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -454,7 +535,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.join'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.join'
     package: '@azure/arm-notificationhubs'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -475,7 +556,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.keys'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.keys'
     package: '@azure/arm-notificationhubs'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -487,7 +568,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(NotificationHubResource, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.lastIndexOf
     package: '@azure/arm-notificationhubs'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -499,7 +581,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -512,7 +597,7 @@ methods:
   - name: >-
       map<U>((value: NotificationHubResource, index: number, array:
       NotificationHubResource[]) => U, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.map'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.map'
     package: '@azure/arm-notificationhubs'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -542,7 +627,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.pop'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.pop'
     package: '@azure/arm-notificationhubs'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,11 +637,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-notificationhubs.NotificationHubResource" /> |
-          undefined
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          /> | undefined
         description: ''
   - name: 'push(NotificationHubResource[])'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.push'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.push'
     package: '@azure/arm-notificationhubs'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -566,7 +652,10 @@ methods:
       content: 'function push(items: NotificationHubResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -576,7 +665,8 @@ methods:
       reduce((previousValue: NotificationHubResource, currentValue:
       NotificationHubResource, currentIndex: number, array:
       NotificationHubResource[]) => NotificationHubResource)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reduce'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reduce
     package: '@azure/arm-notificationhubs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -601,14 +691,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />
         description: ''
   - name: >-
       reduce((previousValue: NotificationHubResource, currentValue:
       NotificationHubResource, currentIndex: number, array:
       NotificationHubResource[]) => NotificationHubResource,
       NotificationHubResource)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reduce_1'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reduce_1
     package: '@azure/arm-notificationhubs'
     summary: ''
     remarks: ''
@@ -628,15 +722,22 @@ methods:
             NotificationHubResource[]) =&gt; NotificationHubResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: NotificationHubResource,
       currentIndex: number, array: NotificationHubResource[]) => U, U)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reduce_2'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reduce_2
     package: '@azure/arm-notificationhubs'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -672,7 +773,8 @@ methods:
       reduceRight((previousValue: NotificationHubResource, currentValue:
       NotificationHubResource, currentIndex: number, array:
       NotificationHubResource[]) => NotificationHubResource)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reduceRight'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reduceRight
     package: '@azure/arm-notificationhubs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -699,14 +801,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: NotificationHubResource, currentValue:
       NotificationHubResource, currentIndex: number, array:
       NotificationHubResource[]) => NotificationHubResource,
       NotificationHubResource)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reduceRight_1
     package: '@azure/arm-notificationhubs'
     summary: ''
     remarks: ''
@@ -726,15 +832,22 @@ methods:
             NotificationHubResource[]) =&gt; NotificationHubResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: NotificationHubResource,
       currentIndex: number, array: NotificationHubResource[]) => U, U)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reduceRight_2
     package: '@azure/arm-notificationhubs'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -768,7 +881,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.reverse'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.reverse
     package: '@azure/arm-notificationhubs'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -777,10 +891,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.shift'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.shift'
     package: '@azure/arm-notificationhubs'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -790,11 +907,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-notificationhubs.NotificationHubResource" /> |
-          undefined
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.slice'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.slice'
     package: '@azure/arm-notificationhubs'
     summary: Returns a section of an array.
     remarks: ''
@@ -808,15 +926,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
   - name: >-
       some((value: NotificationHubResource, index: number, array:
       NotificationHubResource[]) => unknown, any)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.some'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.some'
     package: '@azure/arm-notificationhubs'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -826,30 +948,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: NotificationHubResource, index:
-        number, array: NotificationHubResource[]) => unknown, thisArg?: any)
+        function some(predicate: (value: NotificationHubResource, index: number,
+        array: NotificationHubResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: NotificationHubResource, index: number, array:
             NotificationHubResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: NotificationHubResource, b: NotificationHubResource)
       => number)
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.sort'
+    uid: '@azure/arm-notificationhubs.models.index.d.NotificationHubListResult.sort'
     package: '@azure/arm-notificationhubs'
     summary: Sorts an array.
     remarks: ''
@@ -865,14 +992,26 @@ methods:
             undefined | (a: NotificationHubResource, b: NotificationHubResource)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, NotificationHubResource[])'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.splice_1'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.splice_1
     package: '@azure/arm-notificationhubs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -894,14 +1033,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.splice'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.splice
     package: '@azure/arm-notificationhubs'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -922,10 +1068,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.toLocaleString'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.toLocaleString
     package: '@azure/arm-notificationhubs'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -939,7 +1089,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.toString'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.toString
     package: '@azure/arm-notificationhubs'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -951,7 +1102,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(NotificationHubResource[])'
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.unshift'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.unshift
     package: '@azure/arm-notificationhubs'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -961,14 +1113,18 @@ methods:
       content: 'function unshift(items: NotificationHubResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-notificationhubs.NotificationHubResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-notificationhubs.NotificationHubListResult.values'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.values
     package: '@azure/arm-notificationhubs'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -979,8 +1135,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-notificationhubs.NotificationHubResource" />&gt;
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />&gt;
+        description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.[Symbol.iterator]
+    package: '@azure/arm-notificationhubs'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-notificationhubs.models.index.d.NotificationHubListResult.[Symbol.unscopables]
+    package: '@azure/arm-notificationhubs'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
         description: ''
 extends: >-
-  Array&lt;<xref uid="@azure/arm-notificationhubs.NotificationHubResource"
+  <xref
+  uid="@azure/arm-notificationhubs.models.index.d.OperationListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-notificationhubs.models.index.d.NotificationHubResource"
   />&gt;

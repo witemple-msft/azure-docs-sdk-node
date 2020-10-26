@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DeletedWebAppCollection
-uid: '@azure/arm-appservice.DeletedWebAppCollection'
+uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: DeletedWebAppCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<DeletedSite>[])'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appservice.DeletedSite"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.DeletedSite" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.concat_1'
+  - name: 'concat(DeletedSite | ConcatArray<DeletedSite>[])'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: DeletedSite | ConcatArray<DeletedSite>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.DeletedSite" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +147,7 @@ methods:
   - name: >-
       every((value: DeletedSite, index: number, array: DeletedSite[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +155,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: DeletedSite, index: number, array:
+        function every(predicate: (value: DeletedSite, index: number, array:
         DeletedSite[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DeletedSite, index: number, array: DeletedSite[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: DeletedSite, index: number, array: DeletedSite[]) =>
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: DeletedSite, index: number, array:
+        DeletedSite[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: DeletedSite, index: number, array: DeletedSite[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(DeletedSite, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +233,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.DeletedSite" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +255,7 @@ methods:
   - name: >-
       filter((value: DeletedSite, index: number, array: DeletedSite[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +265,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: DeletedSite, index: number, array:
+        function filter(predicate: (value: DeletedSite, index: number, array:
         DeletedSite[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DeletedSite, index: number, array: DeletedSite[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
   - name: >-
       filter<S>((value: DeletedSite, index: number, array: DeletedSite[]) =>
-      boolean, any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.filter'
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +297,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: DeletedSite, index: number,
-        array: DeletedSite[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: DeletedSite, index: number, array:
+        DeletedSite[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DeletedSite, index: number, array: DeletedSite[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +319,7 @@ methods:
   - name: >-
       find((value: DeletedSite, index: number, obj: DeletedSite[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -295,12 +339,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: DeletedSite, index: number, obj:
-      DeletedSite[]) => boolean, any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.find'
+      DeletedSite[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +359,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: DeletedSite, index:
-        number, obj: DeletedSite[]) => boolean, thisArg?: any)
+        number, obj: DeletedSite[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: DeletedSite, index: number, obj: DeletedSite[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +387,7 @@ methods:
   - name: >-
       findIndex((value: DeletedSite, index: number, obj: DeletedSite[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +428,7 @@ methods:
   - name: >-
       forEach((value: DeletedSite, index: number, array: DeletedSite[]) => void,
       any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +451,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(DeletedSite, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +465,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.DeletedSite" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +476,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(DeletedSite, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +488,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.DeletedSite" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +499,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +520,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +532,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(DeletedSite, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +544,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.DeletedSite" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +557,7 @@ methods:
   - name: >-
       map<U>((value: DeletedSite, index: number, array: DeletedSite[]) => U,
       any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +585,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +594,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" /> |
+          undefined
         description: ''
   - name: 'push(DeletedSite[])'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +609,7 @@ methods:
       content: 'function push(items: DeletedSite[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
           description: |
             New elements of the Array.
       return:
@@ -570,7 +618,7 @@ methods:
   - name: >-
       reduce((previousValue: DeletedSite, currentValue: DeletedSite,
       currentIndex: number, array: DeletedSite[]) => DeletedSite)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -593,12 +641,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
         description: ''
   - name: >-
       reduce((previousValue: DeletedSite, currentValue: DeletedSite,
       currentIndex: number, array: DeletedSite[]) => DeletedSite, DeletedSite)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -616,15 +664,15 @@ methods:
             currentIndex: number, array: DeletedSite[]) =&gt; DeletedSite
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.DeletedSite" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: DeletedSite, currentIndex:
       number, array: DeletedSite[]) => U, U)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -659,7 +707,7 @@ methods:
   - name: >-
       reduceRight((previousValue: DeletedSite, currentValue: DeletedSite,
       currentIndex: number, array: DeletedSite[]) => DeletedSite)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -684,12 +732,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
         description: ''
   - name: >-
       reduceRight((previousValue: DeletedSite, currentValue: DeletedSite,
       currentIndex: number, array: DeletedSite[]) => DeletedSite, DeletedSite)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reduceRight_1'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reduceRight_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -707,15 +755,15 @@ methods:
             currentIndex: number, array: DeletedSite[]) =&gt; DeletedSite
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.DeletedSite" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: DeletedSite, currentIndex:
       number, array: DeletedSite[]) => U, U)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reduceRight_2'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reduceRight_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -749,7 +797,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -758,10 +806,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -770,10 +818,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.DeletedSite" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.DeletedSite" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -787,15 +837,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
   - name: >-
       some((value: DeletedSite, index: number, array: DeletedSite[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -805,28 +856,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: DeletedSite, index: number, array:
+        function some(predicate: (value: DeletedSite, index: number, array:
         DeletedSite[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DeletedSite, index: number, array: DeletedSite[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: DeletedSite, b: DeletedSite) => number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -840,14 +896,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: DeletedSite, b: DeletedSite) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, DeletedSite[])'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -869,14 +936,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -897,10 +964,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.toLocaleString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DeletedWebAppCollection.toLocaleString
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -914,7 +982,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -926,7 +994,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(DeletedSite[])'
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -936,14 +1004,14 @@ methods:
       content: 'function unshift(items: DeletedSite[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.DeletedSite" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.DeletedWebAppCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.DeletedWebAppCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -953,7 +1021,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-appservice.DeletedSite"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.DeletedSite" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.DeletedSite" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DeletedWebAppCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.DeletedSite" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DeletedWebAppCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.DeletedSite" />&gt;

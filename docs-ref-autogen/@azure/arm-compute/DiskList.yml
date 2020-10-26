@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DiskList
-uid: '@azure/arm-compute.DiskList'
+uid: '@azure/arm-compute.models.index.d.DiskList'
 package: '@azure/arm-compute'
 summary: ''
 fullName: DiskList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-compute.DiskList.Array'
+    uid: '@azure/arm-compute.models.index.d.DiskList.Array'
     package: '@azure/arm-compute'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-compute.DiskList.length'
+    uid: '@azure/arm-compute.models.index.d.DiskList.length'
     package: '@azure/arm-compute'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-compute.DiskList.nextLink'
+    uid: '@azure/arm-compute.models.index.d.DiskList.nextLink'
     package: '@azure/arm-compute'
     summary: >-
       The uri to fetch the next page of disks. Call ListNext() with this to
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Disk>[])'
-    uid: '@azure/arm-compute.DiskList.concat'
+    uid: '@azure/arm-compute.models.index.d.DiskList.concat'
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<Disk>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-compute.Disk" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-compute.models.index.d.Disk"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-compute.DiskList.concat_1'
+  - name: 'concat(Disk | ConcatArray<Disk>[])'
+    uid: '@azure/arm-compute.models.index.d.DiskList.concat_1'
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Disk | ConcatArray<Disk>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.Disk" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-compute.models.index.d.Disk"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.copyWithin'
+    uid: '@azure/arm-compute.models.index.d.DiskList.copyWithin'
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-compute.DiskList.entries'
+    uid: '@azure/arm-compute.models.index.d.DiskList.entries'
     package: '@azure/arm-compute'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Disk, index: number, array: Disk[]) => unknown, any)'
-    uid: '@azure/arm-compute.DiskList.every'
+    uid: '@azure/arm-compute.models.index.d.DiskList.every_1'
     package: '@azure/arm-compute'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,26 +153,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Disk, index: number, array: Disk[])
-        => unknown, thisArg?: any)
+        function every(predicate: (value: Disk, index: number, array: Disk[]) =>
+        unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Disk, index: number, array: Disk[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Disk, index: number, array: Disk[]) => value, any)'
+    uid: '@azure/arm-compute.models.index.d.DiskList.every'
+    package: '@azure/arm-compute'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Disk, index: number, array: Disk[])
+        => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Disk, index: number, array: Disk[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Disk, undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.fill'
+    uid: '@azure/arm-compute.models.index.d.DiskList.fill'
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +225,7 @@ methods:
         number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-compute.Disk" />
+          type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -201,7 +245,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Disk, index: number, array: Disk[]) => unknown, any)'
-    uid: '@azure/arm-compute.DiskList.filter_1'
+    uid: '@azure/arm-compute.models.index.d.DiskList.filter_1'
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -211,26 +255,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Disk, index: number, array: Disk[])
+        function filter(predicate: (value: Disk, index: number, array: Disk[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Disk, index: number, array: Disk[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
-  - name: 'filter<S>((value: Disk, index: number, array: Disk[]) => boolean, any)'
-    uid: '@azure/arm-compute.DiskList.filter'
+  - name: 'filter<S>((value: Disk, index: number, array: Disk[]) => value, any)'
+    uid: '@azure/arm-compute.models.index.d.DiskList.filter'
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -240,26 +283,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Disk, index: number, array:
-        Disk[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Disk, index: number, array:
+        Disk[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Disk, index: number, array: Disk[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Disk, index: number, array: Disk[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Disk, index: number, obj: Disk[]) => unknown, any)'
-    uid: '@azure/arm-compute.DiskList.find_1'
+    uid: '@azure/arm-compute.models.index.d.DiskList.find_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -277,12 +319,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.Disk" /> | undefined
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" /> | undefined
         description: ''
   - name: >-
-      find<S>((this: void, value: Disk, index: number, obj: Disk[]) => boolean,
+      find<S>((this: void, value: Disk, index: number, obj: Disk[]) => value,
       any)
-    uid: '@azure/arm-compute.DiskList.find'
+    uid: '@azure/arm-compute.models.index.d.DiskList.find'
     package: '@azure/arm-compute'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -295,10 +337,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Disk, index: number,
-        obj: Disk[]) => boolean, thisArg?: any)
+        obj: Disk[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: '(this: void, value: Disk, index: number, obj: Disk[]) =&gt; boolean'
+          type: '(this: void, value: Disk, index: number, obj: Disk[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -319,7 +361,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Disk, index: number, obj: Disk[]) => unknown, any)'
-    uid: '@azure/arm-compute.DiskList.findIndex'
+    uid: '@azure/arm-compute.models.index.d.DiskList.findIndex'
     package: '@azure/arm-compute'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -356,7 +398,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Disk, index: number, array: Disk[]) => void, any)'
-    uid: '@azure/arm-compute.DiskList.forEach'
+    uid: '@azure/arm-compute.models.index.d.DiskList.forEach'
     package: '@azure/arm-compute'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -379,7 +421,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Disk, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.includes'
+    uid: '@azure/arm-compute.models.index.d.DiskList.includes'
     package: '@azure/arm-compute'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -391,7 +433,7 @@ methods:
       content: 'function includes(searchElement: Disk, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.Disk" />
+          type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -402,7 +444,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Disk, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.indexOf'
+    uid: '@azure/arm-compute.models.index.d.DiskList.indexOf'
     package: '@azure/arm-compute'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -412,7 +454,7 @@ methods:
       content: 'function indexOf(searchElement: Disk, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.Disk" />
+          type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -423,7 +465,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-compute.DiskList.join'
+    uid: '@azure/arm-compute.models.index.d.DiskList.join'
     package: '@azure/arm-compute'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -444,7 +486,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-compute.DiskList.keys'
+    uid: '@azure/arm-compute.models.index.d.DiskList.keys'
     package: '@azure/arm-compute'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -456,7 +498,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Disk, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.lastIndexOf'
+    uid: '@azure/arm-compute.models.index.d.DiskList.lastIndexOf'
     package: '@azure/arm-compute'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -468,7 +510,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.Disk" />
+          type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -479,7 +521,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Disk, index: number, array: Disk[]) => U, any)'
-    uid: '@azure/arm-compute.DiskList.map'
+    uid: '@azure/arm-compute.models.index.d.DiskList.map'
     package: '@azure/arm-compute'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -507,7 +549,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-compute.DiskList.pop'
+    uid: '@azure/arm-compute.models.index.d.DiskList.pop'
     package: '@azure/arm-compute'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -516,10 +558,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-compute.Disk" /> | undefined
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" /> | undefined
         description: ''
   - name: 'push(Disk[])'
-    uid: '@azure/arm-compute.DiskList.push'
+    uid: '@azure/arm-compute.models.index.d.DiskList.push'
     package: '@azure/arm-compute'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -529,7 +571,7 @@ methods:
       content: 'function push(items: Disk[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.Disk" />[]'
+          type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
           description: |
             New elements of the Array.
       return:
@@ -538,7 +580,7 @@ methods:
   - name: >-
       reduce((previousValue: Disk, currentValue: Disk, currentIndex: number,
       array: Disk[]) => Disk)
-    uid: '@azure/arm-compute.DiskList.reduce'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reduce'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -561,12 +603,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.Disk" />
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
         description: ''
   - name: >-
       reduce((previousValue: Disk, currentValue: Disk, currentIndex: number,
       array: Disk[]) => Disk, Disk)
-    uid: '@azure/arm-compute.DiskList.reduce_1'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reduce_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -583,15 +625,15 @@ methods:
             array: Disk[]) =&gt; Disk
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.Disk" />
+          type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.Disk" />
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Disk, currentIndex: number,
       array: Disk[]) => U, U)
-    uid: '@azure/arm-compute.DiskList.reduce_2'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reduce_2'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -625,7 +667,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Disk, currentValue: Disk, currentIndex:
       number, array: Disk[]) => Disk)
-    uid: '@azure/arm-compute.DiskList.reduceRight'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reduceRight'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -649,12 +691,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.Disk" />
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
         description: ''
   - name: >-
       reduceRight((previousValue: Disk, currentValue: Disk, currentIndex:
       number, array: Disk[]) => Disk, Disk)
-    uid: '@azure/arm-compute.DiskList.reduceRight_1'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reduceRight_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -671,15 +713,15 @@ methods:
             array: Disk[]) =&gt; Disk
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.Disk" />
+          type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.Disk" />
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Disk, currentIndex:
       number, array: Disk[]) => U, U)
-    uid: '@azure/arm-compute.DiskList.reduceRight_2'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reduceRight_2'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -712,7 +754,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-compute.DiskList.reverse'
+    uid: '@azure/arm-compute.models.index.d.DiskList.reverse'
     package: '@azure/arm-compute'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -721,10 +763,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-compute.DiskList.shift'
+    uid: '@azure/arm-compute.models.index.d.DiskList.shift'
     package: '@azure/arm-compute'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -733,10 +775,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-compute.Disk" /> | undefined
+        type: <xref uid="@azure/arm-compute.models.index.d.Disk" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.slice'
+    uid: '@azure/arm-compute.models.index.d.DiskList.slice'
     package: '@azure/arm-compute'
     summary: Returns a section of an array.
     remarks: ''
@@ -750,13 +792,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
   - name: 'some((value: Disk, index: number, array: Disk[]) => unknown, any)'
-    uid: '@azure/arm-compute.DiskList.some'
+    uid: '@azure/arm-compute.models.index.d.DiskList.some'
     package: '@azure/arm-compute'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -766,26 +809,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Disk, index: number, array: Disk[]) =>
+        function some(predicate: (value: Disk, index: number, array: Disk[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Disk, index: number, array: Disk[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Disk, b: Disk) => number)'
-    uid: '@azure/arm-compute.DiskList.sort'
+    uid: '@azure/arm-compute.models.index.d.DiskList.sort'
     package: '@azure/arm-compute'
     summary: Sorts an array.
     remarks: ''
@@ -797,14 +845,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Disk, b: Disk) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Disk[])'
-    uid: '@azure/arm-compute.DiskList.splice_1'
+    uid: '@azure/arm-compute.models.index.d.DiskList.splice_1'
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -824,14 +883,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-compute.Disk" />[]'
+          type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-compute.DiskList.splice'
+    uid: '@azure/arm-compute.models.index.d.DiskList.splice'
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -852,10 +911,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-compute.Disk" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-compute.DiskList.toLocaleString'
+    uid: '@azure/arm-compute.models.index.d.DiskList.toLocaleString'
     package: '@azure/arm-compute'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -869,7 +928,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-compute.DiskList.toString'
+    uid: '@azure/arm-compute.models.index.d.DiskList.toString'
     package: '@azure/arm-compute'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -881,7 +940,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Disk[])'
-    uid: '@azure/arm-compute.DiskList.unshift'
+    uid: '@azure/arm-compute.models.index.d.DiskList.unshift'
     package: '@azure/arm-compute'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -891,14 +950,14 @@ methods:
       content: 'function unshift(items: Disk[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.Disk" />[]'
+          type: '<xref uid="@azure/arm-compute.models.index.d.Disk" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-compute.DiskList.values'
+    uid: '@azure/arm-compute.models.index.d.DiskList.values'
     package: '@azure/arm-compute'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -907,6 +966,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-compute.Disk" />&gt;
+        type: >-
+          IterableIterator&lt;<xref uid="@azure/arm-compute.models.index.d.Disk"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-compute.Disk" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-compute.models.index.d.DiskList.[Symbol.iterator]'
+    package: '@azure/arm-compute'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref uid="@azure/arm-compute.models.index.d.Disk"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-compute.models.index.d.DiskList.[Symbol.unscopables]'
+    package: '@azure/arm-compute'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-compute.models.index.d.ComputeOperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-compute.models.index.d.Disk" />&gt;

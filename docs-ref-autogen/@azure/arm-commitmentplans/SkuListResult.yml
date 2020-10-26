@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SkuListResult
-uid: '@azure/arm-commitmentplans.SkuListResult'
+uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult'
 package: '@azure/arm-commitmentplans'
 summary: ''
 fullName: SkuListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-commitmentplans.SkuListResult.Array'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.Array'
     package: '@azure/arm-commitmentplans'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-commitmentplans.SkuListResult.length'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.length'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,8 +38,28 @@ properties:
         type: number
         description: ''
 methods:
+  - name: 'concat(CatalogSku | ConcatArray<CatalogSku>[])'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.concat_1'
+    package: '@azure/arm-commitmentplans'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: CatalogSku | ConcatArray<CatalogSku>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
+        description: ''
   - name: 'concat(ConcatArray<CatalogSku>[])'
-    uid: '@azure/arm-commitmentplans.SkuListResult.concat'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.concat'
     package: '@azure/arm-commitmentplans'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +70,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-commitmentplans.CatalogSku"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-commitmentplans.SkuListResult.concat_1'
-    package: '@azure/arm-commitmentplans'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.copyWithin'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.copyWithin'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-commitmentplans.SkuListResult.entries'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.entries'
     package: '@azure/arm-commitmentplans'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +130,7 @@ methods:
   - name: >-
       every((value: CatalogSku, index: number, array: CatalogSku[]) => unknown,
       any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.every'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.every_1'
     package: '@azure/arm-commitmentplans'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +138,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: CatalogSku, index: number, array:
+        function every(predicate: (value: CatalogSku, index: number, array:
         CatalogSku[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CatalogSku, index: number, array: CatalogSku[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: CatalogSku, index: number, array: CatalogSku[]) => value,
+      any)
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.every'
+    package: '@azure/arm-commitmentplans'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: CatalogSku, index: number, array:
+        CatalogSku[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: CatalogSku, index: number, array: CatalogSku[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(CatalogSku, undefined | number, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.fill'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.fill'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +214,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+          type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +236,7 @@ methods:
   - name: >-
       filter((value: CatalogSku, index: number, array: CatalogSku[]) => unknown,
       any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.filter_1'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.filter_1'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +246,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: CatalogSku, index: number, array:
+        function filter(predicate: (value: CatalogSku, index: number, array:
         CatalogSku[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CatalogSku, index: number, array: CatalogSku[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
         description: ''
   - name: >-
       filter<S>((value: CatalogSku, index: number, array: CatalogSku[]) =>
-      boolean, any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.filter'
+      value, any)
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.filter'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +278,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: CatalogSku, index: number, array:
-        CatalogSku[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: CatalogSku, index: number, array:
+        CatalogSku[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: CatalogSku, index: number, array: CatalogSku[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: CatalogSku, index: number, array: CatalogSku[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +298,7 @@ methods:
   - name: >-
       find((value: CatalogSku, index: number, obj: CatalogSku[]) => unknown,
       any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.find_1'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.find_1'
     package: '@azure/arm-commitmentplans'
     summary: ''
     remarks: ''
@@ -276,12 +316,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: CatalogSku, index: number, obj: CatalogSku[])
-      => boolean, any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.find'
+      => value, any)
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.find'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -294,12 +336,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: CatalogSku, index:
-        number, obj: CatalogSku[]) => boolean, thisArg?: any)
+        number, obj: CatalogSku[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: CatalogSku, index: number, obj: CatalogSku[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -322,7 +364,7 @@ methods:
   - name: >-
       findIndex((value: CatalogSku, index: number, obj: CatalogSku[]) =>
       unknown, any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.findIndex'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.findIndex'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -361,7 +403,7 @@ methods:
   - name: >-
       forEach((value: CatalogSku, index: number, array: CatalogSku[]) => void,
       any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.forEach'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.forEach'
     package: '@azure/arm-commitmentplans'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -384,7 +426,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(CatalogSku, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.includes'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.includes'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -398,7 +440,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+          type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -409,7 +451,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(CatalogSku, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.indexOf'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.indexOf'
     package: '@azure/arm-commitmentplans'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -421,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+          type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +474,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-commitmentplans.SkuListResult.join'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.join'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -453,7 +495,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-commitmentplans.SkuListResult.keys'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.keys'
     package: '@azure/arm-commitmentplans'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -465,7 +507,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(CatalogSku, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.lastIndexOf'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.lastIndexOf'
     package: '@azure/arm-commitmentplans'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -477,7 +519,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+          type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -488,7 +530,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: CatalogSku, index: number, array: CatalogSku[]) => U, any)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.map'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.map'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -516,7 +558,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-commitmentplans.SkuListResult.pop'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.pop'
     package: '@azure/arm-commitmentplans'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -525,10 +567,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" /> |
+          undefined
         description: ''
   - name: 'push(CatalogSku[])'
-    uid: '@azure/arm-commitmentplans.SkuListResult.push'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.push'
     package: '@azure/arm-commitmentplans'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -538,7 +582,9 @@ methods:
       content: 'function push(items: CatalogSku[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+          type: >-
+            <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -547,7 +593,7 @@ methods:
   - name: >-
       reduce((previousValue: CatalogSku, currentValue: CatalogSku, currentIndex:
       number, array: CatalogSku[]) => CatalogSku)
-    uid: '@azure/arm-commitmentplans.SkuListResult.reduce'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reduce'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -570,12 +616,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+        type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
         description: ''
   - name: >-
       reduce((previousValue: CatalogSku, currentValue: CatalogSku, currentIndex:
       number, array: CatalogSku[]) => CatalogSku, CatalogSku)
-    uid: '@azure/arm-commitmentplans.SkuListResult.reduce_1'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reduce_1'
     package: '@azure/arm-commitmentplans'
     summary: ''
     remarks: ''
@@ -593,15 +639,15 @@ methods:
             number, array: CatalogSku[]) =&gt; CatalogSku
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+          type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+        type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: CatalogSku, currentIndex:
       number, array: CatalogSku[]) => U, U)
-    uid: '@azure/arm-commitmentplans.SkuListResult.reduce_2'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reduce_2'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -636,7 +682,7 @@ methods:
   - name: >-
       reduceRight((previousValue: CatalogSku, currentValue: CatalogSku,
       currentIndex: number, array: CatalogSku[]) => CatalogSku)
-    uid: '@azure/arm-commitmentplans.SkuListResult.reduceRight'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reduceRight'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -661,12 +707,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+        type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
         description: ''
   - name: >-
       reduceRight((previousValue: CatalogSku, currentValue: CatalogSku,
       currentIndex: number, array: CatalogSku[]) => CatalogSku, CatalogSku)
-    uid: '@azure/arm-commitmentplans.SkuListResult.reduceRight_1'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reduceRight_1'
     package: '@azure/arm-commitmentplans'
     summary: ''
     remarks: ''
@@ -684,15 +730,15 @@ methods:
             number, array: CatalogSku[]) =&gt; CatalogSku
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+          type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" />
+        type: <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: CatalogSku, currentIndex:
       number, array: CatalogSku[]) => U, U)
-    uid: '@azure/arm-commitmentplans.SkuListResult.reduceRight_2'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reduceRight_2'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -726,7 +772,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-commitmentplans.SkuListResult.reverse'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.reverse'
     package: '@azure/arm-commitmentplans'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -735,10 +781,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-commitmentplans.SkuListResult.shift'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.shift'
     package: '@azure/arm-commitmentplans'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -747,10 +793,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-commitmentplans.CatalogSku" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.slice'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.slice'
     package: '@azure/arm-commitmentplans'
     summary: Returns a section of an array.
     remarks: ''
@@ -764,15 +812,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
         description: ''
   - name: >-
       some((value: CatalogSku, index: number, array: CatalogSku[]) => unknown,
       any)
-    uid: '@azure/arm-commitmentplans.SkuListResult.some'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.some'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -782,28 +831,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: CatalogSku, index: number, array:
+        function some(predicate: (value: CatalogSku, index: number, array:
         CatalogSku[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: CatalogSku, index: number, array: CatalogSku[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: CatalogSku, b: CatalogSku) => number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.sort'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.sort'
     package: '@azure/arm-commitmentplans'
     summary: Sorts an array.
     remarks: ''
@@ -817,14 +871,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: CatalogSku, b: CatalogSku) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, CatalogSku[])'
-    uid: '@azure/arm-commitmentplans.SkuListResult.splice_1'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.splice_1'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -844,14 +909,16 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+          type: >-
+            <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-commitmentplans.SkuListResult.splice'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.splice'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,10 +939,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+        type: '<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-commitmentplans.SkuListResult.toLocaleString'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.toLocaleString'
     package: '@azure/arm-commitmentplans'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -889,7 +956,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-commitmentplans.SkuListResult.toString'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.toString'
     package: '@azure/arm-commitmentplans'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -901,7 +968,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(CatalogSku[])'
-    uid: '@azure/arm-commitmentplans.SkuListResult.unshift'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.unshift'
     package: '@azure/arm-commitmentplans'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -911,14 +978,16 @@ methods:
       content: 'function unshift(items: CatalogSku[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-commitmentplans.CatalogSku" />[]'
+          type: >-
+            <xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-commitmentplans.SkuListResult.values'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.values'
     package: '@azure/arm-commitmentplans'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -928,7 +997,38 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-commitmentplans.CatalogSku"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-commitmentplans.CatalogSku" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-commitmentplans.models.index.d.SkuListResult.[Symbol.iterator]'
+    package: '@azure/arm-commitmentplans'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-commitmentplans.models.index.d.SkuListResult.[Symbol.unscopables]
+    package: '@azure/arm-commitmentplans'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-commitmentplans.models.index.d.SkuListResult.Array"
+  />&lt;<xref uid="@azure/arm-commitmentplans.models.index.d.CatalogSku" />&gt;

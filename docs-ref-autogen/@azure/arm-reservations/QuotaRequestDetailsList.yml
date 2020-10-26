@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: QuotaRequestDetailsList
-uid: '@azure/arm-reservations.QuotaRequestDetailsList'
+uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList'
 package: '@azure/arm-reservations'
 summary: ''
 fullName: QuotaRequestDetailsList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.Array'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.Array'
     package: '@azure/arm-reservations'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.length'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.length'
     package: '@azure/arm-reservations'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.nextLink'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.nextLink'
     package: '@azure/arm-reservations'
     summary: >-
       The uri to fetch the next page of quota limits. When there are no more
@@ -54,7 +54,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<QuotaRequestDetails>[])'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.concat'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.concat'
     package: '@azure/arm-reservations'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-reservations.QuotaRequestDetails" />&gt;[]
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.concat_1'
+  - name: 'concat(QuotaRequestDetails | ConcatArray<QuotaRequestDetails>[])'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.concat_1'
     package: '@azure/arm-reservations'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: QuotaRequestDetails |
+        ConcatArray<QuotaRequestDetails>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.copyWithin'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.copyWithin'
     package: '@azure/arm-reservations'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +140,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.entries'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.entries'
     package: '@azure/arm-reservations'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +154,7 @@ methods:
   - name: >-
       every((value: QuotaRequestDetails, index: number, array:
       QuotaRequestDetails[]) => unknown, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.every'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.every_1'
     package: '@azure/arm-reservations'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +162,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: QuotaRequestDetails, index: number,
+        function every(predicate: (value: QuotaRequestDetails, index: number,
         array: QuotaRequestDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: QuotaRequestDetails, index: number, array:
             QuotaRequestDetails[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: QuotaRequestDetails, index: number, array:
+      QuotaRequestDetails[]) => value, any)
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.every'
+    package: '@azure/arm-reservations'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: QuotaRequestDetails, index: number,
+        array: QuotaRequestDetails[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: QuotaRequestDetails, index: number, array:
+            QuotaRequestDetails[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(QuotaRequestDetails, undefined | number, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.fill'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.fill'
     package: '@azure/arm-reservations'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +240,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +264,7 @@ methods:
   - name: >-
       filter((value: QuotaRequestDetails, index: number, array:
       QuotaRequestDetails[]) => unknown, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.filter_1'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.filter_1'
     package: '@azure/arm-reservations'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +274,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: QuotaRequestDetails, index: number,
+        function filter(predicate: (value: QuotaRequestDetails, index: number,
         array: QuotaRequestDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: QuotaRequestDetails, index: number, array:
             QuotaRequestDetails[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: QuotaRequestDetails, index: number, array:
-      QuotaRequestDetails[]) => boolean, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.filter'
+      QuotaRequestDetails[]) => value, any)
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.filter'
     package: '@azure/arm-reservations'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +308,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: QuotaRequestDetails, index:
-        number, array: QuotaRequestDetails[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: QuotaRequestDetails, index:
+        number, array: QuotaRequestDetails[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: QuotaRequestDetails, index: number, array:
-            QuotaRequestDetails[]) =&gt; boolean
+            QuotaRequestDetails[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +330,7 @@ methods:
   - name: >-
       find((value: QuotaRequestDetails, index: number, obj:
       QuotaRequestDetails[]) => unknown, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.find_1'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.find_1'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -293,12 +350,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: QuotaRequestDetails, index: number, obj:
-      QuotaRequestDetails[]) => boolean, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.find'
+      QuotaRequestDetails[]) => value, any)
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.find'
     package: '@azure/arm-reservations'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +370,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: QuotaRequestDetails,
-        index: number, obj: QuotaRequestDetails[]) => boolean, thisArg?: any)
+        index: number, obj: QuotaRequestDetails[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: QuotaRequestDetails, index: number, obj:
-            QuotaRequestDetails[]) =&gt; boolean
+            QuotaRequestDetails[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +398,7 @@ methods:
   - name: >-
       findIndex((value: QuotaRequestDetails, index: number, obj:
       QuotaRequestDetails[]) => unknown, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.findIndex'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.findIndex'
     package: '@azure/arm-reservations'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +439,7 @@ methods:
   - name: >-
       forEach((value: QuotaRequestDetails, index: number, array:
       QuotaRequestDetails[]) => void, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.forEach'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.forEach'
     package: '@azure/arm-reservations'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +464,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(QuotaRequestDetails, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.includes'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.includes'
     package: '@azure/arm-reservations'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +478,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +491,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(QuotaRequestDetails, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.indexOf'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.indexOf'
     package: '@azure/arm-reservations'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +503,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +516,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.join'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.join'
     package: '@azure/arm-reservations'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +537,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.keys'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.keys'
     package: '@azure/arm-reservations'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +549,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(QuotaRequestDetails, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.lastIndexOf'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.lastIndexOf'
     package: '@azure/arm-reservations'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +561,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +576,7 @@ methods:
   - name: >-
       map<U>((value: QuotaRequestDetails, index: number, array:
       QuotaRequestDetails[]) => U, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.map'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.map'
     package: '@azure/arm-reservations'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +606,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.pop'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.pop'
     package: '@azure/arm-reservations'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -550,10 +615,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          /> | undefined
         description: ''
   - name: 'push(QuotaRequestDetails[])'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.push'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.push'
     package: '@azure/arm-reservations'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -563,7 +630,10 @@ methods:
       content: 'function push(items: QuotaRequestDetails[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -573,7 +643,7 @@ methods:
       reduce((previousValue: QuotaRequestDetails, currentValue:
       QuotaRequestDetails, currentIndex: number, array: QuotaRequestDetails[])
       => QuotaRequestDetails)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reduce'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reduce'
     package: '@azure/arm-reservations'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -598,13 +668,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />
         description: ''
   - name: >-
       reduce((previousValue: QuotaRequestDetails, currentValue:
       QuotaRequestDetails, currentIndex: number, array: QuotaRequestDetails[])
       => QuotaRequestDetails, QuotaRequestDetails)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reduce_1'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reduce_1'
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -624,15 +696,19 @@ methods:
             QuotaRequestDetails[]) =&gt; QuotaRequestDetails
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: QuotaRequestDetails,
       currentIndex: number, array: QuotaRequestDetails[]) => U, U)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reduce_2'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reduce_2'
     package: '@azure/arm-reservations'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -668,7 +744,7 @@ methods:
       reduceRight((previousValue: QuotaRequestDetails, currentValue:
       QuotaRequestDetails, currentIndex: number, array: QuotaRequestDetails[])
       => QuotaRequestDetails)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reduceRight'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reduceRight'
     package: '@azure/arm-reservations'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -694,13 +770,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: QuotaRequestDetails, currentValue:
       QuotaRequestDetails, currentIndex: number, array: QuotaRequestDetails[])
       => QuotaRequestDetails, QuotaRequestDetails)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reduceRight_1'
+    uid: >-
+      @azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reduceRight_1
     package: '@azure/arm-reservations'
     summary: ''
     remarks: ''
@@ -720,15 +799,20 @@ methods:
             QuotaRequestDetails[]) =&gt; QuotaRequestDetails
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" />
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: QuotaRequestDetails,
       currentIndex: number, array: QuotaRequestDetails[]) => U, U)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reduceRight_2'
+    uid: >-
+      @azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reduceRight_2
     package: '@azure/arm-reservations'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -762,7 +846,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.reverse'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.reverse'
     package: '@azure/arm-reservations'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -771,10 +855,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.shift'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.shift'
     package: '@azure/arm-reservations'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -783,10 +869,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-reservations.QuotaRequestDetails" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.slice'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.slice'
     package: '@azure/arm-reservations'
     summary: Returns a section of an array.
     remarks: ''
@@ -800,15 +888,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
   - name: >-
       some((value: QuotaRequestDetails, index: number, array:
       QuotaRequestDetails[]) => unknown, any)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.some'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.some'
     package: '@azure/arm-reservations'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -818,30 +909,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: QuotaRequestDetails, index: number,
+        function some(predicate: (value: QuotaRequestDetails, index: number,
         array: QuotaRequestDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: QuotaRequestDetails, index: number, array:
             QuotaRequestDetails[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: QuotaRequestDetails, b: QuotaRequestDetails) =>
       number)
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.sort'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.sort'
     package: '@azure/arm-reservations'
     summary: Sorts an array.
     remarks: ''
@@ -857,14 +953,25 @@ methods:
             undefined | (a: QuotaRequestDetails, b: QuotaRequestDetails) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, QuotaRequestDetails[])'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.splice_1'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.splice_1'
     package: '@azure/arm-reservations'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -886,14 +993,19 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.splice'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.splice'
     package: '@azure/arm-reservations'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -914,10 +1026,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+        type: >-
+          <xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.toLocaleString'
+    uid: >-
+      @azure/arm-reservations.models.index.d.QuotaRequestDetailsList.toLocaleString
     package: '@azure/arm-reservations'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -931,7 +1046,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.toString'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.toString'
     package: '@azure/arm-reservations'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -943,7 +1058,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(QuotaRequestDetails[])'
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.unshift'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.unshift'
     package: '@azure/arm-reservations'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -953,14 +1068,17 @@ methods:
       content: 'function unshift(items: QuotaRequestDetails[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-reservations.QuotaRequestDetails" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-reservations.QuotaRequestDetailsList.values'
+    uid: '@azure/arm-reservations.models.index.d.QuotaRequestDetailsList.values'
     package: '@azure/arm-reservations'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -971,6 +1089,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-reservations.QuotaRequestDetails" />&gt;
+          uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-reservations.QuotaRequestDetails" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-reservations.models.index.d.QuotaRequestDetailsList.[Symbol.iterator]
+    package: '@azure/arm-reservations'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-reservations.models.index.d.QuotaRequestDetailsList.[Symbol.unscopables]
+    package: '@azure/arm-reservations'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-reservations.models.index.d.QuotaLimits.Array"
+  />&lt;<xref uid="@azure/arm-reservations.models.index.d.QuotaRequestDetails"
+  />&gt;

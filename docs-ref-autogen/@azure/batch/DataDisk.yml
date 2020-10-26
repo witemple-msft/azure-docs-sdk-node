@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DataDisk
-uid: '@azure/batch.DataDisk'
+uid: '@azure/batch.models.index.d.DataDisk'
 package: '@azure/batch'
 summary: An interface representing DataDisk.
 fullName: DataDisk
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: caching
-    uid: '@azure/batch.DataDisk.caching'
+    uid: '@azure/batch.models.index.d.DataDisk.caching'
     package: '@azure/batch'
     summary: >-
       The type of caching to be enabled for the data disks. The default value
@@ -28,10 +28,10 @@ properties:
     syntax:
       content: 'caching?: CachingType'
       return:
-        type: <xref uid="@azure/batch.CachingType" />
+        type: <xref uid="@azure/batch.models.index.d.CachingType" />
         description: ''
   - name: diskSizeGB
-    uid: '@azure/batch.DataDisk.diskSizeGB'
+    uid: '@azure/batch.models.index.d.DataDisk.diskSizeGB'
     package: '@azure/batch'
     summary: The initial disk size in gigabytes.
     fullName: diskSizeGB
@@ -44,13 +44,16 @@ properties:
         type: number
         description: ''
   - name: lun
-    uid: '@azure/batch.DataDisk.lun'
+    uid: '@azure/batch.models.index.d.DataDisk.lun'
     package: '@azure/batch'
     summary: >-
       The logical unit number. The lun is used to uniquely identify each data
       disk. If attaching
 
-      multiple disks, each should have a distinct lun.
+      multiple disks, each should have a distinct lun. The value must be between
+      0 and 63,
+
+      inclusive.
     fullName: lun
     remarks: ''
     isPreview: false
@@ -61,10 +64,10 @@ properties:
         type: number
         description: ''
   - name: storageAccountType
-    uid: '@azure/batch.DataDisk.storageAccountType'
+    uid: '@azure/batch.models.index.d.DataDisk.storageAccountType'
     package: '@azure/batch'
     summary: >-
-      The storage account type to be used for the data disk. If omitted, the
+      The storage Account type to be used for the data disk. If omitted, the
       default is
 
       "standard_lrs". Possible values include: 'StandardLRS', 'PremiumLRS'
@@ -75,5 +78,5 @@ properties:
     syntax:
       content: 'storageAccountType?: StorageAccountType'
       return:
-        type: <xref uid="@azure/batch.StorageAccountType" />
+        type: <xref uid="@azure/batch.models.index.d.StorageAccountType" />
         description: ''

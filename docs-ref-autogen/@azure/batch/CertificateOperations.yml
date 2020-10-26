@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: CertificateOperations
-uid: '@azure/batch.CertificateOperations'
+uid: '@azure/batch.operations.certificateOperations.d.CertificateOperations'
 package: '@azure/batch'
 summary: Class representing a CertificateOperations.
 fullName: CertificateOperations
@@ -10,7 +10,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: CertificateOperations(BatchServiceClientContext)
-    uid: '@azure/batch.CertificateOperations.constructor'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.constructor
     package: '@azure/batch'
     summary: Create a CertificateOperations.
     remarks: ''
@@ -20,14 +21,18 @@ constructors:
       content: 'new CertificateOperations(client: BatchServiceClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          type: >-
+            <xref
+            uid="@azure/batch.batchServiceClientContext.d.BatchServiceClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       add(CertificateAddParameter, CertificateAddOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.CertificateOperations.add_2'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.add_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -39,17 +44,19 @@ methods:
         CertificateAddOptionalParams, callback: ServiceCallback<void>)
       parameters:
         - id: certificate
-          type: <xref uid="@azure/batch.CertificateAddParameter" />
-          description: The certificate to be added.
+          type: <xref uid="@azure/batch.models.index.d.CertificateAddParameter" />
+          description: The Certificate to be added.
         - id: options
-          type: <xref uid="@azure/batch.CertificateAddOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.CertificateAddOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'add(CertificateAddParameter, Models.CertificateAddOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.add'
+    uid: '@azure/batch.operations.certificateOperations.d.CertificateOperations.add'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -61,8 +68,8 @@ methods:
         Models.CertificateAddOptionalParams)
       parameters:
         - id: certificate
-          type: <xref uid="@azure/batch.CertificateAddParameter" />
-          description: The certificate to be added.
+          type: <xref uid="@azure/batch.models.index.d.CertificateAddParameter" />
+          description: The Certificate to be added.
         - id: options
           type: <xref uid="Models.CertificateAddOptionalParams" />
           description: ''
@@ -70,7 +77,8 @@ methods:
         type: Promise&lt;<xref uid="Models.CertificateAddResponse" />&gt;
         description: Promise<Models.CertificateAddResponse>
   - name: 'add(CertificateAddParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.CertificateOperations.add_1'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.add_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -82,8 +90,8 @@ methods:
         ServiceCallback<void>)
       parameters:
         - id: certificate
-          type: <xref uid="@azure/batch.CertificateAddParameter" />
-          description: The certificate to be added.
+          type: <xref uid="@azure/batch.models.index.d.CertificateAddParameter" />
+          description: The Certificate to be added.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -91,7 +99,8 @@ methods:
   - name: >-
       cancelDeletion(string, string, CertificateCancelDeletionOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.CertificateOperations.cancelDeletion_2'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.cancelDeletion_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -110,9 +119,12 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate being deleted.
+          description: The thumbprint of the Certificate being deleted.
         - id: options
-          type: <xref uid="@azure/batch.CertificateCancelDeletionOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.CertificateCancelDeletionOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -121,25 +133,26 @@ methods:
   - name: >-
       cancelDeletion(string, string,
       Models.CertificateCancelDeletionOptionalParams)
-    uid: '@azure/batch.CertificateOperations.cancelDeletion'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.cancelDeletion
     package: '@azure/batch'
     summary: >-
-      If you try to delete a certificate that is being used by a pool or compute
-      node, the status of
+      If you try to delete a Certificate that is being used by a Pool or Compute
+      Node, the status of
 
-      the certificate changes to deleteFailed. If you decide that you want to
+      the Certificate changes to deleteFailed. If you decide that you want to
       continue using the
 
-      certificate, you can use this operation to set the status of the
-      certificate back to active. If
+      Certificate, you can use this operation to set the status of the
+      Certificate back to active. If
 
-      you intend to delete the certificate, you do not need to run this
+      you intend to delete the Certificate, you do not need to run this
       operation after the deletion
 
-      failed. You must make sure that the certificate is not being used by any
+      failed. You must make sure that the Certificate is not being used by any
       resources, and then you
 
-      can try again to delete the certificate.
+      can try again to delete the Certificate.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -155,7 +168,7 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate being deleted.
+          description: The thumbprint of the Certificate being deleted.
         - id: options
           type: <xref uid="Models.CertificateCancelDeletionOptionalParams" />
           description: ''
@@ -163,7 +176,8 @@ methods:
         type: Promise&lt;<xref uid="Models.CertificateCancelDeletionResponse" />&gt;
         description: Promise<Models.CertificateCancelDeletionResponse>
   - name: 'cancelDeletion(string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.CertificateOperations.cancelDeletion_1'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.cancelDeletion_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -181,7 +195,7 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate being deleted.
+          description: The thumbprint of the Certificate being deleted.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -189,7 +203,8 @@ methods:
   - name: >-
       deleteMethod(string, string, CertificateDeleteMethodOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.CertificateOperations.deleteMethod_2'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.deleteMethod_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -208,40 +223,44 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate to be deleted.
+          description: The thumbprint of the Certificate to be deleted.
         - id: options
-          type: <xref uid="@azure/batch.CertificateDeleteMethodOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.CertificateDeleteMethodOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, string, Models.CertificateDeleteMethodOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.deleteMethod'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.deleteMethod
     package: '@azure/batch'
     summary: >-
-      You cannot delete a certificate if a resource (pool or compute node) is
+      You cannot delete a Certificate if a resource (Pool or Compute Node) is
       using it. Before you can
 
-      delete a certificate, you must therefore make sure that the certificate is
+      delete a Certificate, you must therefore make sure that the Certificate is
       not associated with
 
-      any existing pools, the certificate is not installed on any compute nodes
-      (even if you remove a
+      any existing Pools, the Certificate is not installed on any Nodes (even if
+      you remove a
 
-      certificate from a pool, it is not removed from existing compute nodes in
-      that pool until they
+      Certificate from a Pool, it is not removed from existing Compute Nodes in
+      that Pool until they
 
-      restart), and no running tasks depend on the certificate. If you try to
-      delete a certificate
+      restart), and no running Tasks depend on the Certificate. If you try to
+      delete a Certificate
 
-      that is in use, the deletion fails. The certificate status changes to
+      that is in use, the deletion fails. The Certificate status changes to
       deleteFailed. You can use
 
       Cancel Delete Certificate to set the status back to active if you decide
       that you want to
 
-      continue using the certificate.
+      continue using the Certificate.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -257,7 +276,7 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate to be deleted.
+          description: The thumbprint of the Certificate to be deleted.
         - id: options
           type: <xref uid="Models.CertificateDeleteMethodOptionalParams" />
           description: ''
@@ -265,7 +284,8 @@ methods:
         type: Promise&lt;<xref uid="Models.CertificateDeleteResponse" />&gt;
         description: Promise<Models.CertificateDeleteResponse>
   - name: 'deleteMethod(string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.CertificateOperations.deleteMethod_1'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.deleteMethod_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -283,7 +303,7 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate to be deleted.
+          description: The thumbprint of the Certificate to be deleted.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -291,7 +311,8 @@ methods:
   - name: >-
       get(string, string, CertificateGetOptionalParams,
       ServiceCallback<Certificate>)
-    uid: '@azure/batch.CertificateOperations.get_2'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.get_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -309,18 +330,22 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate to get.
+          description: The thumbprint of the Certificate to get.
         - id: options
-          type: <xref uid="@azure/batch.CertificateGetOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.CertificateGetOptionalParams"
+            />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.Certificate" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.Certificate" />&gt;
           description: |
             The callback
   - name: 'get(string, string, Models.CertificateGetOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.get'
+    uid: '@azure/batch.operations.certificateOperations.d.CertificateOperations.get'
     package: '@azure/batch'
-    summary: Gets information about the specified certificate.
+    summary: Gets information about the specified Certificate.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -336,7 +361,7 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate to get.
+          description: The thumbprint of the Certificate to get.
         - id: options
           type: <xref uid="Models.CertificateGetOptionalParams" />
           description: ''
@@ -344,7 +369,8 @@ methods:
         type: Promise&lt;<xref uid="Models.CertificateGetResponse" />&gt;
         description: Promise<Models.CertificateGetResponse>
   - name: 'get(string, string, ServiceCallback<Certificate>)'
-    uid: '@azure/batch.CertificateOperations.get_1'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.get_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -362,15 +388,18 @@ methods:
             sha1.
         - id: thumbprint
           type: string
-          description: The thumbprint of the certificate to get.
+          description: The thumbprint of the Certificate to get.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.Certificate" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.Certificate" />&gt;
           description: |
             The callback
   - name: >-
       list(CertificateListOptionalParams,
       ServiceCallback<CertificateListResult>)
-    uid: '@azure/batch.CertificateOperations.list_2'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.list_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -382,16 +411,18 @@ methods:
         ServiceCallback<CertificateListResult>)
       parameters:
         - id: options
-          type: <xref uid="@azure/batch.CertificateListOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.CertificateListOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CertificateListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CertificateListResult" />&gt;
           description: |
             The callback
   - name: list(Models.CertificateListOptionalParams)
-    uid: '@azure/batch.CertificateOperations.list'
+    uid: '@azure/batch.operations.certificateOperations.d.CertificateOperations.list'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -407,7 +438,8 @@ methods:
         type: Promise&lt;<xref uid="Models.CertificateListResponse" />&gt;
         description: Promise<Models.CertificateListResponse>
   - name: list(ServiceCallback<CertificateListResult>)
-    uid: '@azure/batch.CertificateOperations.list_1'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.list_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -418,14 +450,15 @@ methods:
       parameters:
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CertificateListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CertificateListResult" />&gt;
           description: |
             The callback
   - name: >-
       listNext(string, CertificateListNextOptionalParams,
       ServiceCallback<CertificateListResult>)
-    uid: '@azure/batch.CertificateOperations.listNext_2'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.listNext_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -441,16 +474,20 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.CertificateListNextOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.CertificateListNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CertificateListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CertificateListResult" />&gt;
           description: |
             The callback
   - name: 'listNext(string, Models.CertificateListNextOptionalParams)'
-    uid: '@azure/batch.CertificateOperations.listNext'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.listNext
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -471,7 +508,8 @@ methods:
         type: Promise&lt;<xref uid="Models.CertificateListResponse" />&gt;
         description: Promise<Models.CertificateListResponse>
   - name: 'listNext(string, ServiceCallback<CertificateListResult>)'
-    uid: '@azure/batch.CertificateOperations.listNext_1'
+    uid: >-
+      @azure/batch.operations.certificateOperations.d.CertificateOperations.listNext_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -487,7 +525,7 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CertificateListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CertificateListResult" />&gt;
           description: |
             The callback

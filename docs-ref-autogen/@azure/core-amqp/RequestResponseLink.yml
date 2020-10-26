@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RequestResponseLink
-uid: '@azure/core-amqp.RequestResponseLink'
+uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink'
 package: '@azure/core-amqp'
 summary: >-
   Describes an amqp request(sender)-response(receiver) link that is created over
@@ -12,7 +12,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'RequestResponseLink(Session, Sender, Receiver)'
-    uid: '@azure/core-amqp.RequestResponseLink.constructor'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.constructor'
     package: '@azure/core-amqp'
     summary: ''
     remarks: ''
@@ -35,7 +35,7 @@ constructors:
             The amqp receiver link.
 properties:
   - name: connection
-    uid: '@azure/core-amqp.RequestResponseLink.connection'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.connection'
     package: '@azure/core-amqp'
     summary: Provides the underlying amqp connection object.
     fullName: connection
@@ -48,7 +48,7 @@ properties:
         type: Connection
         description: Connection.
   - name: receiver
-    uid: '@azure/core-amqp.RequestResponseLink.receiver'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.receiver'
     package: '@azure/core-amqp'
     summary: ''
     fullName: receiver
@@ -61,7 +61,7 @@ properties:
         type: Receiver
         description: ''
   - name: sender
-    uid: '@azure/core-amqp.RequestResponseLink.sender'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.sender'
     package: '@azure/core-amqp'
     summary: ''
     fullName: sender
@@ -74,7 +74,7 @@ properties:
         type: Sender
         description: ''
   - name: session
-    uid: '@azure/core-amqp.RequestResponseLink.session'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.session'
     package: '@azure/core-amqp'
     summary: ''
     fullName: session
@@ -88,7 +88,7 @@ properties:
         description: ''
 methods:
   - name: close()
-    uid: '@azure/core-amqp.RequestResponseLink.close'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.close'
     package: '@azure/core-amqp'
     summary: 'Closes the sender, receiver link and the underlying session.'
     remarks: ''
@@ -100,7 +100,7 @@ methods:
         type: Promise&lt;void&gt;
         description: Promise<void>
   - name: 'create(Connection, SenderOptions, ReceiverOptions)'
-    uid: '@azure/core-amqp.RequestResponseLink.create'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.create'
     package: '@azure/core-amqp'
     summary: Creates an amqp request/response link.
     remarks: ''
@@ -121,10 +121,12 @@ methods:
           type: ReceiverOptions
           description: Options that must be provided to create the receiver link.
       return:
-        type: Promise&lt;<xref uid="@azure/core-amqp.RequestResponseLink" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-amqp.core-amqp.d.RequestResponseLink" />&gt;
         description: Promise<RequestResponseLink>
   - name: isOpen()
-    uid: '@azure/core-amqp.RequestResponseLink.isOpen'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.isOpen'
     package: '@azure/core-amqp'
     summary: >-
       Indicates whether the session and the sender and receiver links are all
@@ -138,7 +140,7 @@ methods:
         type: boolean
         description: 'boolean - `true` - `open`, `false` - `closed`.'
   - name: remove()
-    uid: '@azure/core-amqp.RequestResponseLink.remove'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.remove'
     package: '@azure/core-amqp'
     summary: 'Removes the sender, receiver link and it''s underlying session.'
     remarks: ''
@@ -147,7 +149,7 @@ methods:
     syntax:
       content: function remove()
   - name: 'sendRequest(AmqpMessage, SendRequestOptions)'
-    uid: '@azure/core-amqp.RequestResponseLink.sendRequest'
+    uid: '@azure/core-amqp.core-amqp.d.RequestResponseLink.sendRequest'
     package: '@azure/core-amqp'
     summary: >-
       Sends the given request message and returns the received response. If the
@@ -165,7 +167,7 @@ methods:
           type: AmqpMessage
           description: The AMQP (request) message.
         - id: options
-          type: <xref uid="@azure/core-amqp.SendRequestOptions" />
+          type: <xref uid="@azure/core-amqp.core-amqp.d.SendRequestOptions" />
           description: ''
       return:
         type: Promise&lt;AmqpMessage&gt;

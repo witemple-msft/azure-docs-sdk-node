@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RuleListResult
-uid: '@azure/arm-servicebus.RuleListResult'
+uid: '@azure/arm-servicebus.models.index.d.RuleListResult'
 package: '@azure/arm-servicebus'
 summary: ''
 fullName: RuleListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-servicebus.RuleListResult.Array'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.Array'
     package: '@azure/arm-servicebus'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-servicebus.RuleListResult.length'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.length'
     package: '@azure/arm-servicebus'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-servicebus.RuleListResult.nextLink'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.nextLink'
     package: '@azure/arm-servicebus'
     summary: >-
       Link to the next set of results. Not empty if Value contains incomplete
@@ -54,7 +54,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Rule>[])'
-    uid: '@azure/arm-servicebus.RuleListResult.concat'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.concat'
     package: '@azure/arm-servicebus'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +64,36 @@ methods:
       content: 'function concat(items: ConcatArray<Rule>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-servicebus.Rule" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-servicebus.models.index.d.Rule"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-servicebus.RuleListResult.concat_1'
+  - name: 'concat(Rule | ConcatArray<Rule>[])'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.concat_1'
     package: '@azure/arm-servicebus'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Rule | ConcatArray<Rule>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-servicebus.models.index.d.Rule" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-servicebus.models.index.d.Rule"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.copyWithin'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.copyWithin'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +131,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-servicebus.RuleListResult.entries'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.entries'
     package: '@azure/arm-servicebus'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +143,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Rule, index: number, array: Rule[]) => unknown, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.every'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.every_1'
     package: '@azure/arm-servicebus'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,26 +151,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Rule, index: number, array: Rule[])
-        => unknown, thisArg?: any)
+        function every(predicate: (value: Rule, index: number, array: Rule[]) =>
+        unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Rule, index: number, array: Rule[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Rule, index: number, array: Rule[]) => value, any)'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.every'
+    package: '@azure/arm-servicebus'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Rule, index: number, array: Rule[])
+        => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Rule, index: number, array: Rule[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Rule, undefined | number, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.fill'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.fill'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -179,7 +223,7 @@ methods:
         number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-servicebus.Rule" />
+          type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +243,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Rule, index: number, array: Rule[]) => unknown, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.filter_1'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.filter_1'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,26 +253,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Rule, index: number, array: Rule[])
+        function filter(predicate: (value: Rule, index: number, array: Rule[])
         => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Rule, index: number, array: Rule[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
-  - name: 'filter<S>((value: Rule, index: number, array: Rule[]) => boolean, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.filter'
+  - name: 'filter<S>((value: Rule, index: number, array: Rule[]) => value, any)'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.filter'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +281,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Rule, index: number, array:
-        Rule[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Rule, index: number, array:
+        Rule[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Rule, index: number, array: Rule[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Rule, index: number, array: Rule[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Rule, index: number, obj: Rule[]) => unknown, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.find_1'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.find_1'
     package: '@azure/arm-servicebus'
     summary: ''
     remarks: ''
@@ -275,12 +317,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" /> | undefined
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" /> | undefined
         description: ''
   - name: >-
-      find<S>((this: void, value: Rule, index: number, obj: Rule[]) => boolean,
+      find<S>((this: void, value: Rule, index: number, obj: Rule[]) => value,
       any)
-    uid: '@azure/arm-servicebus.RuleListResult.find'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.find'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -293,10 +335,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Rule, index: number,
-        obj: Rule[]) => boolean, thisArg?: any)
+        obj: Rule[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: '(this: void, value: Rule, index: number, obj: Rule[]) =&gt; boolean'
+          type: '(this: void, value: Rule, index: number, obj: Rule[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -317,7 +359,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Rule, index: number, obj: Rule[]) => unknown, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.findIndex'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.findIndex'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -354,7 +396,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Rule, index: number, array: Rule[]) => void, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.forEach'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.forEach'
     package: '@azure/arm-servicebus'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -377,7 +419,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Rule, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.includes'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.includes'
     package: '@azure/arm-servicebus'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -389,7 +431,7 @@ methods:
       content: 'function includes(searchElement: Rule, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-servicebus.Rule" />
+          type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -400,7 +442,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Rule, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.indexOf'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.indexOf'
     package: '@azure/arm-servicebus'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -410,7 +452,7 @@ methods:
       content: 'function indexOf(searchElement: Rule, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-servicebus.Rule" />
+          type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -421,7 +463,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-servicebus.RuleListResult.join'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.join'
     package: '@azure/arm-servicebus'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -442,7 +484,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-servicebus.RuleListResult.keys'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.keys'
     package: '@azure/arm-servicebus'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -454,7 +496,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Rule, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.lastIndexOf'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.lastIndexOf'
     package: '@azure/arm-servicebus'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -466,7 +508,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-servicebus.Rule" />
+          type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -477,7 +519,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Rule, index: number, array: Rule[]) => U, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.map'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.map'
     package: '@azure/arm-servicebus'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -505,7 +547,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-servicebus.RuleListResult.pop'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.pop'
     package: '@azure/arm-servicebus'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -514,10 +556,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" /> | undefined
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" /> | undefined
         description: ''
   - name: 'push(Rule[])'
-    uid: '@azure/arm-servicebus.RuleListResult.push'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.push'
     package: '@azure/arm-servicebus'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -527,7 +569,7 @@ methods:
       content: 'function push(items: Rule[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+          type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
           description: |
             New elements of the Array.
       return:
@@ -536,7 +578,7 @@ methods:
   - name: >-
       reduce((previousValue: Rule, currentValue: Rule, currentIndex: number,
       array: Rule[]) => Rule)
-    uid: '@azure/arm-servicebus.RuleListResult.reduce'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reduce'
     package: '@azure/arm-servicebus'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -559,12 +601,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" />
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
         description: ''
   - name: >-
       reduce((previousValue: Rule, currentValue: Rule, currentIndex: number,
       array: Rule[]) => Rule, Rule)
-    uid: '@azure/arm-servicebus.RuleListResult.reduce_1'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reduce_1'
     package: '@azure/arm-servicebus'
     summary: ''
     remarks: ''
@@ -581,15 +623,15 @@ methods:
             array: Rule[]) =&gt; Rule
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-servicebus.Rule" />
+          type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" />
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Rule, currentIndex: number,
       array: Rule[]) => U, U)
-    uid: '@azure/arm-servicebus.RuleListResult.reduce_2'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reduce_2'
     package: '@azure/arm-servicebus'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -623,7 +665,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Rule, currentValue: Rule, currentIndex:
       number, array: Rule[]) => Rule)
-    uid: '@azure/arm-servicebus.RuleListResult.reduceRight'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reduceRight'
     package: '@azure/arm-servicebus'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -647,12 +689,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" />
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
         description: ''
   - name: >-
       reduceRight((previousValue: Rule, currentValue: Rule, currentIndex:
       number, array: Rule[]) => Rule, Rule)
-    uid: '@azure/arm-servicebus.RuleListResult.reduceRight_1'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reduceRight_1'
     package: '@azure/arm-servicebus'
     summary: ''
     remarks: ''
@@ -669,15 +711,15 @@ methods:
             array: Rule[]) =&gt; Rule
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-servicebus.Rule" />
+          type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" />
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Rule, currentIndex:
       number, array: Rule[]) => U, U)
-    uid: '@azure/arm-servicebus.RuleListResult.reduceRight_2'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reduceRight_2'
     package: '@azure/arm-servicebus'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -710,7 +752,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-servicebus.RuleListResult.reverse'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.reverse'
     package: '@azure/arm-servicebus'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -719,10 +761,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-servicebus.RuleListResult.shift'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.shift'
     package: '@azure/arm-servicebus'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -731,10 +773,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-servicebus.Rule" /> | undefined
+        type: <xref uid="@azure/arm-servicebus.models.index.d.Rule" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.slice'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.slice'
     package: '@azure/arm-servicebus'
     summary: Returns a section of an array.
     remarks: ''
@@ -748,13 +790,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
   - name: 'some((value: Rule, index: number, array: Rule[]) => unknown, any)'
-    uid: '@azure/arm-servicebus.RuleListResult.some'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.some'
     package: '@azure/arm-servicebus'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -764,26 +807,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Rule, index: number, array: Rule[]) =>
+        function some(predicate: (value: Rule, index: number, array: Rule[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Rule, index: number, array: Rule[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Rule, b: Rule) => number)'
-    uid: '@azure/arm-servicebus.RuleListResult.sort'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.sort'
     package: '@azure/arm-servicebus'
     summary: Sorts an array.
     remarks: ''
@@ -795,14 +843,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Rule, b: Rule) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Rule[])'
-    uid: '@azure/arm-servicebus.RuleListResult.splice_1'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.splice_1'
     package: '@azure/arm-servicebus'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -822,14 +881,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+          type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-servicebus.RuleListResult.splice'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.splice'
     package: '@azure/arm-servicebus'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -850,10 +909,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+        type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-servicebus.RuleListResult.toLocaleString'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.toLocaleString'
     package: '@azure/arm-servicebus'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -867,7 +926,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-servicebus.RuleListResult.toString'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.toString'
     package: '@azure/arm-servicebus'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -879,7 +938,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Rule[])'
-    uid: '@azure/arm-servicebus.RuleListResult.unshift'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.unshift'
     package: '@azure/arm-servicebus'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -889,14 +948,14 @@ methods:
       content: 'function unshift(items: Rule[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-servicebus.Rule" />[]'
+          type: '<xref uid="@azure/arm-servicebus.models.index.d.Rule" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-servicebus.RuleListResult.values'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.values'
     package: '@azure/arm-servicebus'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -905,6 +964,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-servicebus.Rule" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-servicebus.models.index.d.Rule" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-servicebus.Rule" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.[Symbol.iterator]'
+    package: '@azure/arm-servicebus'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-servicebus.models.index.d.Rule" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-servicebus.models.index.d.RuleListResult.[Symbol.unscopables]'
+    package: '@azure/arm-servicebus'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-servicebus.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-servicebus.models.index.d.Rule" />&gt;

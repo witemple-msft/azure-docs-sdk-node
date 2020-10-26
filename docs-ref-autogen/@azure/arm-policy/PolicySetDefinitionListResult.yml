@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: PolicySetDefinitionListResult
-uid: '@azure/arm-policy.PolicySetDefinitionListResult'
+uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult'
 package: '@azure/arm-policy'
 summary: ''
 fullName: PolicySetDefinitionListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.Array'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.Array'
     package: '@azure/arm-policy'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.length'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.length'
     package: '@azure/arm-policy'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.nextLink'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.nextLink'
     package: '@azure/arm-policy'
     summary: The URL to use for getting the next set of results.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<PolicySetDefinition>[])'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.concat'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.concat'
     package: '@azure/arm-policy'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-policy.PolicySetDefinition"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.concat_1'
+  - name: 'concat(PolicySetDefinition | ConcatArray<PolicySetDefinition>[])'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.concat_1'
     package: '@azure/arm-policy'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: PolicySetDefinition |
+        ConcatArray<PolicySetDefinition>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.copyWithin'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.copyWithin'
     package: '@azure/arm-policy'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +131,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.entries'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.entries'
     package: '@azure/arm-policy'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
   - name: >-
       every((value: PolicySetDefinition, index: number, array:
       PolicySetDefinition[]) => unknown, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.every'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.every_1'
     package: '@azure/arm-policy'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +153,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: PolicySetDefinition, index: number,
+        function every(predicate: (value: PolicySetDefinition, index: number,
         array: PolicySetDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PolicySetDefinition, index: number, array:
             PolicySetDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: PolicySetDefinition, index: number, array:
+      PolicySetDefinition[]) => value, any)
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.every'
+    package: '@azure/arm-policy'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: PolicySetDefinition, index: number,
+        array: PolicySetDefinition[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: PolicySetDefinition, index: number, array:
+            PolicySetDefinition[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(PolicySetDefinition, undefined | number, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.fill'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.fill'
     package: '@azure/arm-policy'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +231,7 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+          type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +253,7 @@ methods:
   - name: >-
       filter((value: PolicySetDefinition, index: number, array:
       PolicySetDefinition[]) => unknown, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.filter_1'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.filter_1'
     package: '@azure/arm-policy'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: PolicySetDefinition, index: number,
+        function filter(predicate: (value: PolicySetDefinition, index: number,
         array: PolicySetDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PolicySetDefinition, index: number, array:
             PolicySetDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
   - name: >-
       filter<S>((value: PolicySetDefinition, index: number, array:
-      PolicySetDefinition[]) => boolean, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.filter'
+      PolicySetDefinition[]) => value, any)
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.filter'
     package: '@azure/arm-policy'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +295,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: PolicySetDefinition, index:
-        number, array: PolicySetDefinition[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: PolicySetDefinition, index:
+        number, array: PolicySetDefinition[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PolicySetDefinition, index: number, array:
-            PolicySetDefinition[]) =&gt; boolean
+            PolicySetDefinition[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +317,7 @@ methods:
   - name: >-
       find((value: PolicySetDefinition, index: number, obj:
       PolicySetDefinition[]) => unknown, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.find_1'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.find_1'
     package: '@azure/arm-policy'
     summary: ''
     remarks: ''
@@ -291,12 +337,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: PolicySetDefinition, index: number, obj:
-      PolicySetDefinition[]) => boolean, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.find'
+      PolicySetDefinition[]) => value, any)
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.find'
     package: '@azure/arm-policy'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +357,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: PolicySetDefinition,
-        index: number, obj: PolicySetDefinition[]) => boolean, thisArg?: any)
+        index: number, obj: PolicySetDefinition[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: PolicySetDefinition, index: number, obj:
-            PolicySetDefinition[]) =&gt; boolean
+            PolicySetDefinition[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +385,7 @@ methods:
   - name: >-
       findIndex((value: PolicySetDefinition, index: number, obj:
       PolicySetDefinition[]) => unknown, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.findIndex'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.findIndex'
     package: '@azure/arm-policy'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +426,7 @@ methods:
   - name: >-
       forEach((value: PolicySetDefinition, index: number, array:
       PolicySetDefinition[]) => void, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.forEach'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.forEach'
     package: '@azure/arm-policy'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +451,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(PolicySetDefinition, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.includes'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.includes'
     package: '@azure/arm-policy'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +465,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+          type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +476,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(PolicySetDefinition, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.indexOf'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.indexOf'
     package: '@azure/arm-policy'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +488,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+          type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +499,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.join'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.join'
     package: '@azure/arm-policy'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +520,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.keys'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.keys'
     package: '@azure/arm-policy'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +532,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(PolicySetDefinition, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.lastIndexOf'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.lastIndexOf'
     package: '@azure/arm-policy'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +544,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+          type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +557,7 @@ methods:
   - name: >-
       map<U>((value: PolicySetDefinition, index: number, array:
       PolicySetDefinition[]) => U, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.map'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.map'
     package: '@azure/arm-policy'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +587,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.pop'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.pop'
     package: '@azure/arm-policy'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +596,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" /> |
+          undefined
         description: ''
   - name: 'push(PolicySetDefinition[])'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.push'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.push'
     package: '@azure/arm-policy'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +611,9 @@ methods:
       content: 'function push(items: PolicySetDefinition[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+          type: >-
+            <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -571,7 +623,7 @@ methods:
       reduce((previousValue: PolicySetDefinition, currentValue:
       PolicySetDefinition, currentIndex: number, array: PolicySetDefinition[])
       => PolicySetDefinition)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reduce'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reduce'
     package: '@azure/arm-policy'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -596,13 +648,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+        type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
         description: ''
   - name: >-
       reduce((previousValue: PolicySetDefinition, currentValue:
       PolicySetDefinition, currentIndex: number, array: PolicySetDefinition[])
       => PolicySetDefinition, PolicySetDefinition)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reduce_1'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reduce_1'
     package: '@azure/arm-policy'
     summary: ''
     remarks: ''
@@ -622,15 +674,15 @@ methods:
             PolicySetDefinition[]) =&gt; PolicySetDefinition
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+          type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+        type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: PolicySetDefinition,
       currentIndex: number, array: PolicySetDefinition[]) => U, U)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reduce_2'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reduce_2'
     package: '@azure/arm-policy'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -666,7 +718,7 @@ methods:
       reduceRight((previousValue: PolicySetDefinition, currentValue:
       PolicySetDefinition, currentIndex: number, array: PolicySetDefinition[])
       => PolicySetDefinition)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reduceRight'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reduceRight'
     package: '@azure/arm-policy'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -692,13 +744,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+        type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
         description: ''
   - name: >-
       reduceRight((previousValue: PolicySetDefinition, currentValue:
       PolicySetDefinition, currentIndex: number, array: PolicySetDefinition[])
       => PolicySetDefinition, PolicySetDefinition)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reduceRight_1
     package: '@azure/arm-policy'
     summary: ''
     remarks: ''
@@ -718,15 +771,16 @@ methods:
             PolicySetDefinition[]) =&gt; PolicySetDefinition
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+          type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" />
+        type: <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: PolicySetDefinition,
       currentIndex: number, array: PolicySetDefinition[]) => U, U)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reduceRight_2
     package: '@azure/arm-policy'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -760,7 +814,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.reverse'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.reverse'
     package: '@azure/arm-policy'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -769,10 +823,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.shift'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.shift'
     package: '@azure/arm-policy'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -781,10 +835,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-policy.PolicySetDefinition" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.slice'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.slice'
     package: '@azure/arm-policy'
     summary: Returns a section of an array.
     remarks: ''
@@ -798,15 +854,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
   - name: >-
       some((value: PolicySetDefinition, index: number, array:
       PolicySetDefinition[]) => unknown, any)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.some'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.some'
     package: '@azure/arm-policy'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -816,30 +873,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: PolicySetDefinition, index: number,
+        function some(predicate: (value: PolicySetDefinition, index: number,
         array: PolicySetDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PolicySetDefinition, index: number, array:
             PolicySetDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: PolicySetDefinition, b: PolicySetDefinition) =>
       number)
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.sort'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.sort'
     package: '@azure/arm-policy'
     summary: Sorts an array.
     remarks: ''
@@ -855,14 +917,25 @@ methods:
             undefined | (a: PolicySetDefinition, b: PolicySetDefinition) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, PolicySetDefinition[])'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.splice_1'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.splice_1'
     package: '@azure/arm-policy'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -884,14 +957,16 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+          type: >-
+            <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.splice'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.splice'
     package: '@azure/arm-policy'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -912,10 +987,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+        type: '<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.toLocaleString'
+    uid: >-
+      @azure/arm-policy.models.index.d.PolicySetDefinitionListResult.toLocaleString
     package: '@azure/arm-policy'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -929,7 +1005,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.toString'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.toString'
     package: '@azure/arm-policy'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -941,7 +1017,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(PolicySetDefinition[])'
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.unshift'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.unshift'
     package: '@azure/arm-policy'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -951,14 +1027,16 @@ methods:
       content: 'function unshift(items: PolicySetDefinition[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-policy.PolicySetDefinition" />[]'
+          type: >-
+            <xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-policy.PolicySetDefinitionListResult.values'
+    uid: '@azure/arm-policy.models.index.d.PolicySetDefinitionListResult.values'
     package: '@azure/arm-policy'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -968,7 +1046,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-policy.PolicySetDefinition"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-policy.PolicySetDefinition" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-policy.models.index.d.PolicySetDefinitionListResult.[Symbol.iterator]
+    package: '@azure/arm-policy'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-policy.models.index.d.PolicySetDefinitionListResult.[Symbol.unscopables]
+    package: '@azure/arm-policy'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-policy.models.index.d.PolicyAssignmentListResult.Array"
+  />&lt;<xref uid="@azure/arm-policy.models.index.d.PolicySetDefinition" />&gt;

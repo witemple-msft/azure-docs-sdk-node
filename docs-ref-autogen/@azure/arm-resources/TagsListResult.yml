@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: TagsListResult
-uid: '@azure/arm-resources.TagsListResult'
+uid: '@azure/arm-resources.models.index.d.TagsListResult'
 package: '@azure/arm-resources'
 summary: ''
 fullName: TagsListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-resources.TagsListResult.Array'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.Array'
     package: '@azure/arm-resources'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-resources.TagsListResult.length'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.length'
     package: '@azure/arm-resources'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-resources.TagsListResult.nextLink'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.nextLink'
     package: '@azure/arm-resources'
     summary: >-
       The URL to use for getting the next set of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<TagDetails>[])'
-    uid: '@azure/arm-resources.TagsListResult.concat'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.concat'
     package: '@azure/arm-resources'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<TagDetails>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-resources.TagDetails" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-resources.models.index.d.TagDetails" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-resources.TagsListResult.concat_1'
+  - name: 'concat(TagDetails | ConcatArray<TagDetails>[])'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.concat_1'
     package: '@azure/arm-resources'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: TagDetails | ConcatArray<TagDetails>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-resources.models.index.d.TagDetails" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-resources.models.index.d.TagDetails" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.copyWithin'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.copyWithin'
     package: '@azure/arm-resources'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-resources.TagsListResult.entries'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.entries'
     package: '@azure/arm-resources'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: TagDetails, index: number, array: TagDetails[]) => unknown,
       any)
-    uid: '@azure/arm-resources.TagsListResult.every'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.every_1'
     package: '@azure/arm-resources'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: TagDetails, index: number, array:
+        function every(predicate: (value: TagDetails, index: number, array:
         TagDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagDetails, index: number, array: TagDetails[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: TagDetails, index: number, array: TagDetails[]) => value,
+      any)
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.every'
+    package: '@azure/arm-resources'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: TagDetails, index: number, array:
+        TagDetails[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: TagDetails, index: number, array: TagDetails[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(TagDetails, undefined | number, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.fill'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.fill'
     package: '@azure/arm-resources'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-resources.TagDetails" />
+          type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +253,7 @@ methods:
   - name: >-
       filter((value: TagDetails, index: number, array: TagDetails[]) => unknown,
       any)
-    uid: '@azure/arm-resources.TagsListResult.filter_1'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.filter_1'
     package: '@azure/arm-resources'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: TagDetails, index: number, array:
+        function filter(predicate: (value: TagDetails, index: number, array:
         TagDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagDetails, index: number, array: TagDetails[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
   - name: >-
       filter<S>((value: TagDetails, index: number, array: TagDetails[]) =>
-      boolean, any)
-    uid: '@azure/arm-resources.TagsListResult.filter'
+      value, any)
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.filter'
     package: '@azure/arm-resources'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +295,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: TagDetails, index: number, array:
-        TagDetails[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: TagDetails, index: number, array:
+        TagDetails[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: TagDetails, index: number, array: TagDetails[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: TagDetails, index: number, array: TagDetails[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +315,7 @@ methods:
   - name: >-
       find((value: TagDetails, index: number, obj: TagDetails[]) => unknown,
       any)
-    uid: '@azure/arm-resources.TagsListResult.find_1'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.find_1'
     package: '@azure/arm-resources'
     summary: ''
     remarks: ''
@@ -291,12 +333,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-resources.models.index.d.TagDetails" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: TagDetails, index: number, obj: TagDetails[])
-      => boolean, any)
-    uid: '@azure/arm-resources.TagsListResult.find'
+      => value, any)
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.find'
     package: '@azure/arm-resources'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +353,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: TagDetails, index:
-        number, obj: TagDetails[]) => boolean, thisArg?: any)
+        number, obj: TagDetails[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: TagDetails, index: number, obj: TagDetails[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +381,7 @@ methods:
   - name: >-
       findIndex((value: TagDetails, index: number, obj: TagDetails[]) =>
       unknown, any)
-    uid: '@azure/arm-resources.TagsListResult.findIndex'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.findIndex'
     package: '@azure/arm-resources'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +420,7 @@ methods:
   - name: >-
       forEach((value: TagDetails, index: number, array: TagDetails[]) => void,
       any)
-    uid: '@azure/arm-resources.TagsListResult.forEach'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.forEach'
     package: '@azure/arm-resources'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -399,7 +443,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(TagDetails, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.includes'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.includes'
     package: '@azure/arm-resources'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -413,7 +457,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-resources.TagDetails" />
+          type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -424,7 +468,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(TagDetails, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.indexOf'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.indexOf'
     package: '@azure/arm-resources'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -436,7 +480,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-resources.TagDetails" />
+          type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -447,7 +491,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-resources.TagsListResult.join'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.join'
     package: '@azure/arm-resources'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -468,7 +512,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-resources.TagsListResult.keys'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.keys'
     package: '@azure/arm-resources'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -480,7 +524,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(TagDetails, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.lastIndexOf'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.lastIndexOf'
     package: '@azure/arm-resources'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -492,7 +536,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-resources.TagDetails" />
+          type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -503,7 +547,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: TagDetails, index: number, array: TagDetails[]) => U, any)'
-    uid: '@azure/arm-resources.TagsListResult.map'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.map'
     package: '@azure/arm-resources'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -531,7 +575,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-resources.TagsListResult.pop'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.pop'
     package: '@azure/arm-resources'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -540,10 +584,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-resources.models.index.d.TagDetails" /> |
+          undefined
         description: ''
   - name: 'push(TagDetails[])'
-    uid: '@azure/arm-resources.TagsListResult.push'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.push'
     package: '@azure/arm-resources'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -553,7 +599,7 @@ methods:
       content: 'function push(items: TagDetails[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+          type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
           description: |
             New elements of the Array.
       return:
@@ -562,7 +608,7 @@ methods:
   - name: >-
       reduce((previousValue: TagDetails, currentValue: TagDetails, currentIndex:
       number, array: TagDetails[]) => TagDetails)
-    uid: '@azure/arm-resources.TagsListResult.reduce'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reduce'
     package: '@azure/arm-resources'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -585,12 +631,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" />
+        type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
         description: ''
   - name: >-
       reduce((previousValue: TagDetails, currentValue: TagDetails, currentIndex:
       number, array: TagDetails[]) => TagDetails, TagDetails)
-    uid: '@azure/arm-resources.TagsListResult.reduce_1'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reduce_1'
     package: '@azure/arm-resources'
     summary: ''
     remarks: ''
@@ -608,15 +654,15 @@ methods:
             number, array: TagDetails[]) =&gt; TagDetails
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-resources.TagDetails" />
+          type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" />
+        type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: TagDetails, currentIndex:
       number, array: TagDetails[]) => U, U)
-    uid: '@azure/arm-resources.TagsListResult.reduce_2'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reduce_2'
     package: '@azure/arm-resources'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -651,7 +697,7 @@ methods:
   - name: >-
       reduceRight((previousValue: TagDetails, currentValue: TagDetails,
       currentIndex: number, array: TagDetails[]) => TagDetails)
-    uid: '@azure/arm-resources.TagsListResult.reduceRight'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reduceRight'
     package: '@azure/arm-resources'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -676,12 +722,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" />
+        type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
         description: ''
   - name: >-
       reduceRight((previousValue: TagDetails, currentValue: TagDetails,
       currentIndex: number, array: TagDetails[]) => TagDetails, TagDetails)
-    uid: '@azure/arm-resources.TagsListResult.reduceRight_1'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reduceRight_1'
     package: '@azure/arm-resources'
     summary: ''
     remarks: ''
@@ -699,15 +745,15 @@ methods:
             number, array: TagDetails[]) =&gt; TagDetails
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-resources.TagDetails" />
+          type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" />
+        type: <xref uid="@azure/arm-resources.models.index.d.TagDetails" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: TagDetails, currentIndex:
       number, array: TagDetails[]) => U, U)
-    uid: '@azure/arm-resources.TagsListResult.reduceRight_2'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reduceRight_2'
     package: '@azure/arm-resources'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -741,7 +787,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-resources.TagsListResult.reverse'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.reverse'
     package: '@azure/arm-resources'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -750,10 +796,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-resources.TagsListResult.shift'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.shift'
     package: '@azure/arm-resources'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -762,10 +808,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-resources.TagDetails" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-resources.models.index.d.TagDetails" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.slice'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.slice'
     package: '@azure/arm-resources'
     summary: Returns a section of an array.
     remarks: ''
@@ -779,15 +827,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
   - name: >-
       some((value: TagDetails, index: number, array: TagDetails[]) => unknown,
       any)
-    uid: '@azure/arm-resources.TagsListResult.some'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.some'
     package: '@azure/arm-resources'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -797,28 +846,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: TagDetails, index: number, array:
+        function some(predicate: (value: TagDetails, index: number, array:
         TagDetails[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: TagDetails, index: number, array: TagDetails[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: TagDetails, b: TagDetails) => number)'
-    uid: '@azure/arm-resources.TagsListResult.sort'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.sort'
     package: '@azure/arm-resources'
     summary: Sorts an array.
     remarks: ''
@@ -832,14 +886,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: TagDetails, b: TagDetails) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, TagDetails[])'
-    uid: '@azure/arm-resources.TagsListResult.splice_1'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.splice_1'
     package: '@azure/arm-resources'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +924,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+          type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-resources.TagsListResult.splice'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.splice'
     package: '@azure/arm-resources'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +952,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+        type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-resources.TagsListResult.toLocaleString'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.toLocaleString'
     package: '@azure/arm-resources'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +969,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-resources.TagsListResult.toString'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.toString'
     package: '@azure/arm-resources'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +981,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(TagDetails[])'
-    uid: '@azure/arm-resources.TagsListResult.unshift'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.unshift'
     package: '@azure/arm-resources'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +991,14 @@ methods:
       content: 'function unshift(items: TagDetails[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-resources.TagDetails" />[]'
+          type: '<xref uid="@azure/arm-resources.models.index.d.TagDetails" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-resources.TagsListResult.values'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.values'
     package: '@azure/arm-resources'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -942,6 +1007,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-resources.TagDetails" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-resources.models.index.d.TagDetails" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-resources.TagDetails" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.[Symbol.iterator]'
+    package: '@azure/arm-resources'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-resources.models.index.d.TagDetails" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-resources.models.index.d.TagsListResult.[Symbol.unscopables]'
+    package: '@azure/arm-resources'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-resources.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-resources.models.index.d.TagDetails" />&gt;

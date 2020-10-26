@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: VirtualNetworkGatewayConnectionListResult
-uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult'
+uid: '@azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult'
 package: '@azure/arm-network'
 summary: ''
 fullName: VirtualNetworkGatewayConnectionListResult
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.Array'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.Array
     package: '@azure/arm-network'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.length'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.length
     package: '@azure/arm-network'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +40,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.nextLink'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.nextLink
     package: '@azure/arm-network'
     summary: >-
       The URL to get the next set of results.
@@ -56,7 +59,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<VirtualNetworkGatewayConnection>[])'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.concat'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.concat
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +72,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-network.VirtualNetworkGatewayConnection" />&gt;[]
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.concat_1'
+  - name: >-
+      concat(VirtualNetworkGatewayConnection |
+      ConcatArray<VirtualNetworkGatewayConnection>[])
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.concat_1
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: VirtualNetworkGatewayConnection |
+        ConcatArray<VirtualNetworkGatewayConnection>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.copyWithin'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.copyWithin
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +152,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.entries'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.entries
     package: '@azure/arm-network'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +167,8 @@ methods:
   - name: >-
       every((value: VirtualNetworkGatewayConnection, index: number, array:
       VirtualNetworkGatewayConnection[]) => unknown, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.every'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.every_1
     package: '@azure/arm-network'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,31 +176,77 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: VirtualNetworkGatewayConnection,
+        function every(predicate: (value: VirtualNetworkGatewayConnection,
         index: number, array: VirtualNetworkGatewayConnection[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualNetworkGatewayConnection, index: number, array:
             VirtualNetworkGatewayConnection[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
+      every<S>((value: VirtualNetworkGatewayConnection, index: number, array:
+      VirtualNetworkGatewayConnection[]) => value, any)
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.every
+    package: '@azure/arm-network'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: VirtualNetworkGatewayConnection,
+        index: number, array: VirtualNetworkGatewayConnection[]) => value,
+        thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: VirtualNetworkGatewayConnection, index: number, array:
+            VirtualNetworkGatewayConnection[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
+  - name: >-
       fill(VirtualNetworkGatewayConnection, undefined | number, undefined |
       number)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.fill'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.fill
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -190,7 +260,10 @@ methods:
         | number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -212,7 +285,8 @@ methods:
   - name: >-
       filter((value: VirtualNetworkGatewayConnection, index: number, array:
       VirtualNetworkGatewayConnection[]) => unknown, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.filter_1'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.filter_1
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -222,31 +296,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: VirtualNetworkGatewayConnection,
+        function filter(predicate: (value: VirtualNetworkGatewayConnection,
         index: number, array: VirtualNetworkGatewayConnection[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualNetworkGatewayConnection, index: number, array:
             VirtualNetworkGatewayConnection[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: VirtualNetworkGatewayConnection, index: number, array:
-      VirtualNetworkGatewayConnection[]) => boolean, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.filter'
+      VirtualNetworkGatewayConnection[]) => value, any)
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.filter
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -256,22 +333,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: VirtualNetworkGatewayConnection,
-        index: number, array: VirtualNetworkGatewayConnection[]) => boolean,
+        function filter<S>(predicate: (value: VirtualNetworkGatewayConnection,
+        index: number, array: VirtualNetworkGatewayConnection[]) => value,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualNetworkGatewayConnection, index: number, array:
-            VirtualNetworkGatewayConnection[]) =&gt; boolean
+            VirtualNetworkGatewayConnection[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -280,7 +356,8 @@ methods:
   - name: >-
       find((value: VirtualNetworkGatewayConnection, index: number, obj:
       VirtualNetworkGatewayConnection[]) => unknown, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.find_1'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.find_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -302,13 +379,15 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" /> |
-          undefined
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: VirtualNetworkGatewayConnection, index:
-      number, obj: VirtualNetworkGatewayConnection[]) => boolean, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.find'
+      number, obj: VirtualNetworkGatewayConnection[]) => value, any)
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.find
     package: '@azure/arm-network'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -322,12 +401,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         VirtualNetworkGatewayConnection, index: number, obj:
-        VirtualNetworkGatewayConnection[]) => boolean, thisArg?: any)
+        VirtualNetworkGatewayConnection[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: VirtualNetworkGatewayConnection, index: number,
-            obj: VirtualNetworkGatewayConnection[]) =&gt; boolean
+            obj: VirtualNetworkGatewayConnection[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -350,7 +429,8 @@ methods:
   - name: >-
       findIndex((value: VirtualNetworkGatewayConnection, index: number, obj:
       VirtualNetworkGatewayConnection[]) => unknown, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.findIndex'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.findIndex
     package: '@azure/arm-network'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -392,7 +472,8 @@ methods:
   - name: >-
       forEach((value: VirtualNetworkGatewayConnection, index: number, array:
       VirtualNetworkGatewayConnection[]) => void, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.forEach'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.forEach
     package: '@azure/arm-network'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -418,7 +499,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(VirtualNetworkGatewayConnection, undefined | number)'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.includes'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.includes
     package: '@azure/arm-network'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -432,7 +514,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -443,7 +528,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(VirtualNetworkGatewayConnection, undefined | number)'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.indexOf'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.indexOf
     package: '@azure/arm-network'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -455,7 +541,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -466,7 +555,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.join'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.join
     package: '@azure/arm-network'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -487,7 +577,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.keys'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.keys
     package: '@azure/arm-network'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -499,7 +590,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(VirtualNetworkGatewayConnection, undefined | number)'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.lastIndexOf
     package: '@azure/arm-network'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -511,7 +603,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -524,7 +619,8 @@ methods:
   - name: >-
       map<U>((value: VirtualNetworkGatewayConnection, index: number, array:
       VirtualNetworkGatewayConnection[]) => U, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.map'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.map
     package: '@azure/arm-network'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -555,7 +651,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.pop'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.pop
     package: '@azure/arm-network'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -565,11 +662,13 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" /> |
-          undefined
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          /> | undefined
         description: ''
   - name: 'push(VirtualNetworkGatewayConnection[])'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.push'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.push
     package: '@azure/arm-network'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -579,7 +678,10 @@ methods:
       content: 'function push(items: VirtualNetworkGatewayConnection[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -589,7 +691,8 @@ methods:
       reduce((previousValue: VirtualNetworkGatewayConnection, currentValue:
       VirtualNetworkGatewayConnection, currentIndex: number, array:
       VirtualNetworkGatewayConnection[]) => VirtualNetworkGatewayConnection)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reduce'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reduce
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -616,14 +719,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />
         description: ''
   - name: >-
       reduce((previousValue: VirtualNetworkGatewayConnection, currentValue:
       VirtualNetworkGatewayConnection, currentIndex: number, array:
       VirtualNetworkGatewayConnection[]) => VirtualNetworkGatewayConnection,
       VirtualNetworkGatewayConnection)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reduce_1'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reduce_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -645,16 +752,23 @@ methods:
             VirtualNetworkGatewayConnection
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue:
       VirtualNetworkGatewayConnection, currentIndex: number, array:
       VirtualNetworkGatewayConnection[]) => U, U)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reduce_2'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reduce_2
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -691,7 +805,8 @@ methods:
       reduceRight((previousValue: VirtualNetworkGatewayConnection, currentValue:
       VirtualNetworkGatewayConnection, currentIndex: number, array:
       VirtualNetworkGatewayConnection[]) => VirtualNetworkGatewayConnection)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reduceRight'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reduceRight
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -719,14 +834,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: VirtualNetworkGatewayConnection, currentValue:
       VirtualNetworkGatewayConnection, currentIndex: number, array:
       VirtualNetworkGatewayConnection[]) => VirtualNetworkGatewayConnection,
       VirtualNetworkGatewayConnection)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reduceRight_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -748,16 +867,23 @@ methods:
             VirtualNetworkGatewayConnection
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       VirtualNetworkGatewayConnection, currentIndex: number, array:
       VirtualNetworkGatewayConnection[]) => U, U)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reduceRight_2
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -792,7 +918,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.reverse'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.reverse
     package: '@azure/arm-network'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -801,10 +928,14 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.shift'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.shift
     package: '@azure/arm-network'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -814,11 +945,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" /> |
-          undefined
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.slice'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.slice
     package: '@azure/arm-network'
     summary: Returns a section of an array.
     remarks: ''
@@ -832,15 +965,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
   - name: >-
       some((value: VirtualNetworkGatewayConnection, index: number, array:
       VirtualNetworkGatewayConnection[]) => unknown, any)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.some'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.some
     package: '@azure/arm-network'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -850,31 +988,37 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: VirtualNetworkGatewayConnection,
-        index: number, array: VirtualNetworkGatewayConnection[]) => unknown,
-        thisArg?: any)
+        function some(predicate: (value: VirtualNetworkGatewayConnection, index:
+        number, array: VirtualNetworkGatewayConnection[]) => unknown, thisArg?:
+        any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: VirtualNetworkGatewayConnection, index: number, array:
             VirtualNetworkGatewayConnection[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: VirtualNetworkGatewayConnection, b:
       VirtualNetworkGatewayConnection) => number)
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.sort'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.sort
     package: '@azure/arm-network'
     summary: Sorts an array.
     remarks: ''
@@ -891,14 +1035,26 @@ methods:
             undefined | (a: VirtualNetworkGatewayConnection, b:
             VirtualNetworkGatewayConnection) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, VirtualNetworkGatewayConnection[])'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.splice_1'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.splice_1
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -920,14 +1076,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.splice'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.splice
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -948,11 +1111,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />[]
         description: ''
   - name: toLocaleString()
     uid: >-
-      @azure/arm-network.VirtualNetworkGatewayConnectionListResult.toLocaleString
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.toLocaleString
     package: '@azure/arm-network'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -966,7 +1132,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.toString'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.toString
     package: '@azure/arm-network'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -978,7 +1145,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(VirtualNetworkGatewayConnection[])'
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.unshift'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.unshift
     package: '@azure/arm-network'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -988,14 +1156,18 @@ methods:
       content: 'function unshift(items: VirtualNetworkGatewayConnection[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-network.VirtualNetworkGatewayConnectionListResult.values'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.values
     package: '@azure/arm-network'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -1006,6 +1178,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-network.VirtualNetworkGatewayConnection" />&gt;
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-network.VirtualNetworkGatewayConnection" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.[Symbol.iterator]
+    package: '@azure/arm-network'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-network.models.index.d.VirtualNetworkGatewayConnectionListResult.[Symbol.unscopables]
+    package: '@azure/arm-network'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-network.models.index.d.ApplicationGatewayListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-network.models.index.d.VirtualNetworkGatewayConnection" />&gt;

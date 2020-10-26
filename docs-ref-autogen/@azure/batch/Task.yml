@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Task
-uid: '@azure/batch.Task'
+uid: '@azure/batch.operations.task.d.Task'
 package: '@azure/batch'
 summary: Class representing a Task.
 fullName: Task
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Task(BatchServiceClientContext)
-    uid: '@azure/batch.Task.constructor'
+    uid: '@azure/batch.operations.task.d.Task.constructor'
     package: '@azure/batch'
     summary: Create a Task.
     remarks: ''
@@ -20,16 +20,19 @@ constructors:
       content: 'new Task(client: BatchServiceClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          type: >-
+            <xref
+            uid="@azure/batch.batchServiceClientContext.d.BatchServiceClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: 'add(string, TaskAddParameter, Models.TaskAddOptionalParams)'
-    uid: '@azure/batch.Task.add'
+    uid: '@azure/batch.operations.task.d.Task.add'
     package: '@azure/batch'
     summary: >-
-      The maximum lifetime of a task from addition to completion is 180 days. If
-      a task has not
+      The maximum lifetime of a Task from addition to completion is 180 days. If
+      a Task has not
 
       completed within 180 days of being added it will be terminated by the
       Batch service and left in
@@ -45,10 +48,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to which the task is to be added.
+          description: The ID of the Job to which the Task is to be added.
         - id: task
-          type: <xref uid="@azure/batch.TaskAddParameter" />
-          description: The task to be added.
+          type: <xref uid="@azure/batch.models.index.d.TaskAddParameter" />
+          description: The Task to be added.
         - id: options
           type: <xref uid="Models.TaskAddOptionalParams" />
           description: ''
@@ -56,7 +59,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskAddResponse" />&gt;
         description: Promise<Models.TaskAddResponse>
   - name: 'add(string, TaskAddParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Task.add_1'
+    uid: '@azure/batch.operations.task.d.Task.add_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -69,10 +72,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to which the task is to be added.
+          description: The ID of the Job to which the Task is to be added.
         - id: task
-          type: <xref uid="@azure/batch.TaskAddParameter" />
-          description: The task to be added.
+          type: <xref uid="@azure/batch.models.index.d.TaskAddParameter" />
+          description: The Task to be added.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -80,7 +83,7 @@ methods:
   - name: >-
       add(string, TaskAddParameter, TaskAddOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Task.add_2'
+    uid: '@azure/batch.operations.task.d.Task.add_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -93,12 +96,12 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to which the task is to be added.
+          description: The ID of the Job to which the Task is to be added.
         - id: task
-          type: <xref uid="@azure/batch.TaskAddParameter" />
-          description: The task to be added.
+          type: <xref uid="@azure/batch.models.index.d.TaskAddParameter" />
+          description: The Task to be added.
         - id: options
-          type: <xref uid="@azure/batch.TaskAddOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.TaskAddOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
@@ -107,13 +110,13 @@ methods:
   - name: >-
       addCollection(string, TaskAddParameter[],
       Models.TaskAddCollectionOptionalParams)
-    uid: '@azure/batch.Task.addCollection'
+    uid: '@azure/batch.operations.task.d.Task.addCollection'
     package: '@azure/batch'
     summary: >-
-      Note that each task must have a unique ID. The Batch service may not
+      Note that each Task must have a unique ID. The Batch service may not
       return the results for each
 
-      task in the same order the tasks were submitted in this request. If the
+      Task in the same order the Tasks were submitted in this request. If the
       server times out or the
 
       connection is closed during the request, the request may have been
@@ -125,19 +128,19 @@ methods:
       user to correctly handle failures when re-issuing a request. For example,
       you should use the
 
-      same task IDs during a retry so that if the prior operation succeeded, the
+      same Task IDs during a retry so that if the prior operation succeeded, the
       retry will not create
 
-      extra tasks unexpectedly. If the response contains any tasks which failed
+      extra Tasks unexpectedly. If the response contains any Tasks which failed
       to add, a client can
 
-      retry the request. In a retry, it is most efficient to resubmit only tasks
+      retry the request. In a retry, it is most efficient to resubmit only Tasks
       that failed to add,
 
-      and to omit tasks that were successfully added on the first attempt. The
+      and to omit Tasks that were successfully added on the first attempt. The
       maximum lifetime of a
 
-      task from addition to completion is 180 days. If a task has not completed
+      Task from addition to completion is 180 days. If a Task has not completed
       within 180 days of
 
       being added it will be terminated by the Batch service and left in
@@ -154,21 +157,21 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to which the task collection is to be added.
+          description: The ID of the Job to which the Task collection is to be added.
         - id: value
-          type: '<xref uid="@azure/batch.TaskAddParameter" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.TaskAddParameter" />[]'
           description: >-
-            The collection of tasks to add. The maximum count of tasks is 100.
+            The collection of Tasks to add. The maximum count of Tasks is 100.
             The total
 
             serialized size of this collection must be less than 1MB. If it is
             greater than 1MB (for example
 
-            if each task has 100's of resource files or environment variables),
+            if each Task has 100's of resource files or environment variables),
             the request will fail with
 
             code 'RequestBodyTooLarge' and should be retried again with fewer
-            tasks.
+            Tasks.
         - id: options
           type: <xref uid="Models.TaskAddCollectionOptionalParams" />
           description: ''
@@ -178,7 +181,7 @@ methods:
   - name: >-
       addCollection(string, TaskAddParameter[],
       ServiceCallback<TaskAddCollectionResult>)
-    uid: '@azure/batch.Task.addCollection_1'
+    uid: '@azure/batch.operations.task.d.Task.addCollection_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -191,31 +194,31 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to which the task collection is to be added.
+          description: The ID of the Job to which the Task collection is to be added.
         - id: value
-          type: '<xref uid="@azure/batch.TaskAddParameter" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.TaskAddParameter" />[]'
           description: >-
-            The collection of tasks to add. The maximum count of tasks is 100.
+            The collection of Tasks to add. The maximum count of Tasks is 100.
             The total
 
             serialized size of this collection must be less than 1MB. If it is
             greater than 1MB (for example
 
-            if each task has 100's of resource files or environment variables),
+            if each Task has 100's of resource files or environment variables),
             the request will fail with
 
             code 'RequestBodyTooLarge' and should be retried again with fewer
-            tasks.
+            Tasks.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.TaskAddCollectionResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.TaskAddCollectionResult" />&gt;
           description: |
             The callback
   - name: >-
       addCollection(string, TaskAddParameter[], TaskAddCollectionOptionalParams,
       ServiceCallback<TaskAddCollectionResult>)
-    uid: '@azure/batch.Task.addCollection_2'
+    uid: '@azure/batch.operations.task.d.Task.addCollection_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -229,39 +232,41 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to which the task collection is to be added.
+          description: The ID of the Job to which the Task collection is to be added.
         - id: value
-          type: '<xref uid="@azure/batch.TaskAddParameter" />[]'
+          type: '<xref uid="@azure/batch.models.index.d.TaskAddParameter" />[]'
           description: >-
-            The collection of tasks to add. The maximum count of tasks is 100.
+            The collection of Tasks to add. The maximum count of Tasks is 100.
             The total
 
             serialized size of this collection must be less than 1MB. If it is
             greater than 1MB (for example
 
-            if each task has 100's of resource files or environment variables),
+            if each Task has 100's of resource files or environment variables),
             the request will fail with
 
             code 'RequestBodyTooLarge' and should be retried again with fewer
-            tasks.
+            Tasks.
         - id: options
-          type: <xref uid="@azure/batch.TaskAddCollectionOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.TaskAddCollectionOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.TaskAddCollectionResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.TaskAddCollectionResult" />&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, string, Models.TaskDeleteMethodOptionalParams)'
-    uid: '@azure/batch.Task.deleteMethod'
+    uid: '@azure/batch.operations.task.d.Task.deleteMethod'
     package: '@azure/batch'
     summary: >-
-      When a task is deleted, all of the files in its directory on the compute
-      node where it ran are
+      When a Task is deleted, all of the files in its directory on the Compute
+      Node where it ran are
 
-      also deleted (regardless of the retention time). For multi-instance tasks,
-      the delete task
+      also deleted (regardless of the retention time). For multi-instance Tasks,
+      the delete Task
 
       operation applies synchronously to the primary task; subtasks and their
       files are then deleted
@@ -277,10 +282,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job from which to delete the task.
+          description: The ID of the Job from which to delete the Task.
         - id: taskId
           type: string
-          description: The ID of the task to delete.
+          description: The ID of the Task to delete.
         - id: options
           type: <xref uid="Models.TaskDeleteMethodOptionalParams" />
           description: ''
@@ -288,7 +293,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskDeleteResponse" />&gt;
         description: Promise<Models.TaskDeleteResponse>
   - name: 'deleteMethod(string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.Task.deleteMethod_1'
+    uid: '@azure/batch.operations.task.d.Task.deleteMethod_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -301,10 +306,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job from which to delete the task.
+          description: The ID of the Job from which to delete the Task.
         - id: taskId
           type: string
-          description: The ID of the task to delete.
+          description: The ID of the Task to delete.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -312,7 +317,7 @@ methods:
   - name: >-
       deleteMethod(string, string, TaskDeleteMethodOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Task.deleteMethod_2'
+    uid: '@azure/batch.operations.task.d.Task.deleteMethod_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -325,25 +330,27 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job from which to delete the task.
+          description: The ID of the Job from which to delete the Task.
         - id: taskId
           type: string
-          description: The ID of the task to delete.
+          description: The ID of the Task to delete.
         - id: options
-          type: <xref uid="@azure/batch.TaskDeleteMethodOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.TaskDeleteMethodOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'get(string, string, Models.TaskGetOptionalParams)'
-    uid: '@azure/batch.Task.get'
+    uid: '@azure/batch.operations.task.d.Task.get'
     package: '@azure/batch'
     summary: >-
-      For multi-instance tasks, information such as affinityId, executionInfo
+      For multi-instance Tasks, information such as affinityId, executionInfo
       and nodeInfo refer to
 
-      the primary task. Use the list subtasks API to retrieve information about
+      the primary Task. Use the list subtasks API to retrieve information about
       subtasks.
     remarks: ''
     isPreview: false
@@ -355,10 +362,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task to get information about.
+          description: The ID of the Task to get information about.
         - id: options
           type: <xref uid="Models.TaskGetOptionalParams" />
           description: ''
@@ -366,7 +373,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskGetResponse" />&gt;
         description: Promise<Models.TaskGetResponse>
   - name: 'get(string, string, ServiceCallback<CloudTask>)'
-    uid: '@azure/batch.Task.get_1'
+    uid: '@azure/batch.operations.task.d.Task.get_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -379,16 +386,18 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task to get information about.
+          description: The ID of the Task to get information about.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.CloudTask" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.models.index.d.CloudTask"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, string, TaskGetOptionalParams, ServiceCallback<CloudTask>)'
-    uid: '@azure/batch.Task.get_2'
+    uid: '@azure/batch.operations.task.d.Task.get_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -401,25 +410,27 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job that contains the task.
+          description: The ID of the Job that contains the Task.
         - id: taskId
           type: string
-          description: The ID of the task to get information about.
+          description: The ID of the Task to get information about.
         - id: options
-          type: <xref uid="@azure/batch.TaskGetOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.TaskGetOptionalParams" />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.CloudTask" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.models.index.d.CloudTask"
+            />&gt;
           description: |
             The callback
   - name: 'list(string, Models.TaskListOptionalParams)'
-    uid: '@azure/batch.Task.list'
+    uid: '@azure/batch.operations.task.d.Task.list'
     package: '@azure/batch'
     summary: >-
-      For multi-instance tasks, information such as affinityId, executionInfo
+      For multi-instance Tasks, information such as affinityId, executionInfo
       and nodeInfo refer to
 
-      the primary task. Use the list subtasks API to retrieve information about
+      the primary Task. Use the list subtasks API to retrieve information about
       subtasks.
     remarks: ''
     isPreview: false
@@ -429,7 +440,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
           type: <xref uid="Models.TaskListOptionalParams" />
           description: ''
@@ -437,7 +448,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskListResponse" />&gt;
         description: Promise<Models.TaskListResponse>
   - name: 'list(string, ServiceCallback<CloudTaskListResult>)'
-    uid: '@azure/batch.Task.list_1'
+    uid: '@azure/batch.operations.task.d.Task.list_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -450,15 +461,15 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudTaskListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudTaskListResult" />&gt;
           description: |
             The callback
   - name: 'list(string, TaskListOptionalParams, ServiceCallback<CloudTaskListResult>)'
-    uid: '@azure/batch.Task.list_2'
+    uid: '@azure/batch.operations.task.d.Task.list_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -471,24 +482,24 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
-          type: <xref uid="@azure/batch.TaskListOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.TaskListOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudTaskListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudTaskListResult" />&gt;
           description: |
             The callback
   - name: 'listNext(string, Models.TaskListNextOptionalParams)'
-    uid: '@azure/batch.Task.listNext'
+    uid: '@azure/batch.operations.task.d.Task.listNext'
     package: '@azure/batch'
     summary: >-
-      For multi-instance tasks, information such as affinityId, executionInfo
+      For multi-instance Tasks, information such as affinityId, executionInfo
       and nodeInfo refer to
 
-      the primary task. Use the list subtasks API to retrieve information about
+      the primary Task. Use the list subtasks API to retrieve information about
       subtasks.
     remarks: ''
     isPreview: false
@@ -508,7 +519,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskListResponse" />&gt;
         description: Promise<Models.TaskListResponse>
   - name: 'listNext(string, ServiceCallback<CloudTaskListResult>)'
-    uid: '@azure/batch.Task.listNext_1'
+    uid: '@azure/batch.operations.task.d.Task.listNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -524,14 +535,14 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudTaskListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudTaskListResult" />&gt;
           description: |
             The callback
   - name: >-
       listNext(string, TaskListNextOptionalParams,
       ServiceCallback<CloudTaskListResult>)
-    uid: '@azure/batch.Task.listNext_2'
+    uid: '@azure/batch.operations.task.d.Task.listNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -547,19 +558,21 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.TaskListNextOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.TaskListNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudTaskListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudTaskListResult" />&gt;
           description: |
             The callback
   - name: 'listSubtasks(string, string, Models.TaskListSubtasksOptionalParams)'
-    uid: '@azure/batch.Task.listSubtasks'
+    uid: '@azure/batch.operations.task.d.Task.listSubtasks'
     package: '@azure/batch'
     summary: >-
-      If the task is not a multi-instance task then this returns an empty
+      If the Task is not a multi-instance Task then this returns an empty
       collection.
     remarks: ''
     isPreview: false
@@ -571,10 +584,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: taskId
           type: string
-          description: The ID of the task.
+          description: The ID of the Task.
         - id: options
           type: <xref uid="Models.TaskListSubtasksOptionalParams" />
           description: ''
@@ -582,7 +595,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskListSubtasksResponse" />&gt;
         description: Promise<Models.TaskListSubtasksResponse>
   - name: 'listSubtasks(string, string, ServiceCallback<CloudTaskListSubtasksResult>)'
-    uid: '@azure/batch.Task.listSubtasks_1'
+    uid: '@azure/batch.operations.task.d.Task.listSubtasks_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -595,20 +608,20 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: taskId
           type: string
-          description: The ID of the task.
+          description: The ID of the Task.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.CloudTaskListSubtasksResult" />&gt;
+            uid="@azure/batch.models.index.d.CloudTaskListSubtasksResult" />&gt;
           description: |
             The callback
   - name: >-
       listSubtasks(string, string, TaskListSubtasksOptionalParams,
       ServiceCallback<CloudTaskListSubtasksResult>)
-    uid: '@azure/batch.Task.listSubtasks_2'
+    uid: '@azure/batch.operations.task.d.Task.listSubtasks_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -622,39 +635,41 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: taskId
           type: string
-          description: The ID of the task.
+          description: The ID of the Task.
         - id: options
-          type: <xref uid="@azure/batch.TaskListSubtasksOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.TaskListSubtasksOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.CloudTaskListSubtasksResult" />&gt;
+            uid="@azure/batch.models.index.d.CloudTaskListSubtasksResult" />&gt;
           description: |
             The callback
   - name: 'reactivate(string, string, Models.TaskReactivateOptionalParams)'
-    uid: '@azure/batch.Task.reactivate'
+    uid: '@azure/batch.operations.task.d.Task.reactivate'
     package: '@azure/batch'
     summary: >-
-      Reactivation makes a task eligible to be retried again up to its maximum
-      retry count. The task's
+      Reactivation makes a Task eligible to be retried again up to its maximum
+      retry count. The Task's
 
-      state is changed to active. As the task is no longer in the completed
+      state is changed to active. As the Task is no longer in the completed
       state, any previous exit
 
       code or failure information is no longer available after reactivation.
-      Each time a task is
+      Each time a Task is
 
       reactivated, its retry count is reset to 0. Reactivation will fail for
-      tasks that are not
+      Tasks that are not
 
       completed or that previously completed successfully (with an exit code of
       0). Additionally, it
 
-      will fail if the job has completed (or is terminating or deleting).
+      will fail if the Job has completed (or is terminating or deleting).
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -665,10 +680,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to reactivate.
+          description: The ID of the Task to reactivate.
         - id: options
           type: <xref uid="Models.TaskReactivateOptionalParams" />
           description: ''
@@ -676,7 +691,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskReactivateResponse" />&gt;
         description: Promise<Models.TaskReactivateResponse>
   - name: 'reactivate(string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.Task.reactivate_1'
+    uid: '@azure/batch.operations.task.d.Task.reactivate_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -689,10 +704,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to reactivate.
+          description: The ID of the Task to reactivate.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -700,7 +715,7 @@ methods:
   - name: >-
       reactivate(string, string, TaskReactivateOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Task.reactivate_2'
+    uid: '@azure/batch.operations.task.d.Task.reactivate_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -713,25 +728,27 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to reactivate.
+          description: The ID of the Task to reactivate.
         - id: options
-          type: <xref uid="@azure/batch.TaskReactivateOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.TaskReactivateOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'terminate(string, string, Models.TaskTerminateOptionalParams)'
-    uid: '@azure/batch.Task.terminate'
+    uid: '@azure/batch.operations.task.d.Task.terminate'
     package: '@azure/batch'
     summary: >-
-      When the task has been terminated, it moves to the completed state. For
-      multi-instance tasks,
+      When the Task has been terminated, it moves to the completed state. For
+      multi-instance Tasks,
 
-      the terminate task operation applies synchronously to the primary task;
+      the terminate Task operation applies synchronously to the primary task;
       subtasks are then
 
       terminated asynchronously in the background.
@@ -745,10 +762,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to terminate.
+          description: The ID of the Task to terminate.
         - id: options
           type: <xref uid="Models.TaskTerminateOptionalParams" />
           description: ''
@@ -756,7 +773,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskTerminateResponse" />&gt;
         description: Promise<Models.TaskTerminateResponse>
   - name: 'terminate(string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.Task.terminate_1'
+    uid: '@azure/batch.operations.task.d.Task.terminate_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -769,10 +786,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to terminate.
+          description: The ID of the Task to terminate.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -780,7 +797,7 @@ methods:
   - name: >-
       terminate(string, string, TaskTerminateOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Task.terminate_2'
+    uid: '@azure/batch.operations.task.d.Task.terminate_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -793,21 +810,23 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to terminate.
+          description: The ID of the Task to terminate.
         - id: options
-          type: <xref uid="@azure/batch.TaskTerminateOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.TaskTerminateOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'update(string, string, Models.TaskUpdateOptionalParams)'
-    uid: '@azure/batch.Task.update'
+    uid: '@azure/batch.operations.task.d.Task.update'
     package: '@azure/batch'
-    summary: Updates the properties of the specified task.
+    summary: Updates the properties of the specified Task.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -818,10 +837,10 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to update.
+          description: The ID of the Task to update.
         - id: options
           type: <xref uid="Models.TaskUpdateOptionalParams" />
           description: ''
@@ -829,7 +848,7 @@ methods:
         type: Promise&lt;<xref uid="Models.TaskUpdateResponse" />&gt;
         description: Promise<Models.TaskUpdateResponse>
   - name: 'update(string, string, ServiceCallback<void>)'
-    uid: '@azure/batch.Task.update_1'
+    uid: '@azure/batch.operations.task.d.Task.update_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -842,16 +861,16 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to update.
+          description: The ID of the Task to update.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'update(string, string, TaskUpdateOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Task.update_2'
+    uid: '@azure/batch.operations.task.d.Task.update_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -864,12 +883,12 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job containing the task.
+          description: The ID of the Job containing the Task.
         - id: taskId
           type: string
-          description: The ID of the task to update.
+          description: The ID of the Task to update.
         - id: options
-          type: <xref uid="@azure/batch.TaskUpdateOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.TaskUpdateOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;

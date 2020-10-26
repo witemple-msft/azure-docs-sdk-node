@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: MetricNamespaceCollection
-uid: '@azure/arm-monitor.MetricNamespaceCollection'
+uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection'
 package: '@azure/arm-monitor'
 summary: ''
 fullName: MetricNamespaceCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.Array'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.Array'
     package: '@azure/arm-monitor'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.length'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.length'
     package: '@azure/arm-monitor'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<MetricNamespace>[])'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.concat'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.concat'
     package: '@azure/arm-monitor'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +50,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-monitor.MetricNamespace"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-monitor.models.index.d.MetricNamespace" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.concat_1'
+  - name: 'concat(MetricNamespace | ConcatArray<MetricNamespace>[])'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.concat_1'
     package: '@azure/arm-monitor'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: MetricNamespace | ConcatArray<MetricNamespace>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-monitor.models.index.d.MetricNamespace" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.copyWithin'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.copyWithin'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.entries'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.entries'
     package: '@azure/arm-monitor'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +130,7 @@ methods:
   - name: >-
       every((value: MetricNamespace, index: number, array: MetricNamespace[]) =>
       unknown, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.every'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.every_1'
     package: '@azure/arm-monitor'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +138,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: MetricNamespace, index: number,
-        array: MetricNamespace[]) => unknown, thisArg?: any)
+        function every(predicate: (value: MetricNamespace, index: number, array:
+        MetricNamespace[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MetricNamespace, index: number, array: MetricNamespace[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: MetricNamespace, index: number, array: MetricNamespace[])
+      => value, any)
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.every'
+    package: '@azure/arm-monitor'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: MetricNamespace, index: number,
+        array: MetricNamespace[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: MetricNamespace, index: number, array: MetricNamespace[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(MetricNamespace, undefined | number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.fill'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.fill'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +216,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+          type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +238,7 @@ methods:
   - name: >-
       filter((value: MetricNamespace, index: number, array: MetricNamespace[])
       => unknown, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.filter_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.filter_1'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +248,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: MetricNamespace, index: number,
+        function filter(predicate: (value: MetricNamespace, index: number,
         array: MetricNamespace[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MetricNamespace, index: number, array: MetricNamespace[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
   - name: >-
       filter<S>((value: MetricNamespace, index: number, array:
-      MetricNamespace[]) => boolean, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.filter'
+      MetricNamespace[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.filter'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +280,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: MetricNamespace, index: number,
-        array: MetricNamespace[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: MetricNamespace, index: number,
+        array: MetricNamespace[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MetricNamespace, index: number, array: MetricNamespace[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +302,7 @@ methods:
   - name: >-
       find((value: MetricNamespace, index: number, obj: MetricNamespace[]) =>
       unknown, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.find_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.find_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -278,12 +322,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: MetricNamespace, index: number, obj:
-      MetricNamespace[]) => boolean, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.find'
+      MetricNamespace[]) => value, any)
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.find'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +342,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: MetricNamespace, index:
-        number, obj: MetricNamespace[]) => boolean, thisArg?: any)
+        number, obj: MetricNamespace[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: MetricNamespace, index: number, obj:
-            MetricNamespace[]) =&gt; boolean
+            MetricNamespace[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +370,7 @@ methods:
   - name: >-
       findIndex((value: MetricNamespace, index: number, obj: MetricNamespace[])
       => unknown, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.findIndex'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.findIndex'
     package: '@azure/arm-monitor'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +411,7 @@ methods:
   - name: >-
       forEach((value: MetricNamespace, index: number, array: MetricNamespace[])
       => void, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.forEach'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.forEach'
     package: '@azure/arm-monitor'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +436,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(MetricNamespace, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.includes'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.includes'
     package: '@azure/arm-monitor'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +450,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+          type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +461,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(MetricNamespace, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.indexOf'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.indexOf'
     package: '@azure/arm-monitor'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +473,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+          type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +484,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.join'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.join'
     package: '@azure/arm-monitor'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +505,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.keys'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.keys'
     package: '@azure/arm-monitor'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +517,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(MetricNamespace, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.lastIndexOf'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.lastIndexOf'
     package: '@azure/arm-monitor'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +529,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+          type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +542,7 @@ methods:
   - name: >-
       map<U>((value: MetricNamespace, index: number, array: MetricNamespace[])
       => U, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.map'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.map'
     package: '@azure/arm-monitor'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +572,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.pop'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.pop'
     package: '@azure/arm-monitor'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +581,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" /> |
+          undefined
         description: ''
   - name: 'push(MetricNamespace[])'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.push'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.push'
     package: '@azure/arm-monitor'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +596,7 @@ methods:
       content: 'function push(items: MetricNamespace[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+          type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
           description: |
             New elements of the Array.
       return:
@@ -557,7 +605,7 @@ methods:
   - name: >-
       reduce((previousValue: MetricNamespace, currentValue: MetricNamespace,
       currentIndex: number, array: MetricNamespace[]) => MetricNamespace)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reduce'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reduce'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -582,13 +630,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
         description: ''
   - name: >-
       reduce((previousValue: MetricNamespace, currentValue: MetricNamespace,
       currentIndex: number, array: MetricNamespace[]) => MetricNamespace,
       MetricNamespace)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reduce_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reduce_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -607,15 +655,15 @@ methods:
             MetricNamespace
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+          type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: MetricNamespace, currentIndex:
       number, array: MetricNamespace[]) => U, U)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reduce_2'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reduce_2'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -651,7 +699,7 @@ methods:
       reduceRight((previousValue: MetricNamespace, currentValue:
       MetricNamespace, currentIndex: number, array: MetricNamespace[]) =>
       MetricNamespace)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reduceRight'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reduceRight'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -677,13 +725,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
         description: ''
   - name: >-
       reduceRight((previousValue: MetricNamespace, currentValue:
       MetricNamespace, currentIndex: number, array: MetricNamespace[]) =>
       MetricNamespace, MetricNamespace)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reduceRight_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reduceRight_1'
     package: '@azure/arm-monitor'
     summary: ''
     remarks: ''
@@ -702,15 +750,15 @@ methods:
             MetricNamespace
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+          type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" />
+        type: <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: MetricNamespace,
       currentIndex: number, array: MetricNamespace[]) => U, U)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reduceRight_2'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reduceRight_2'
     package: '@azure/arm-monitor'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -744,7 +792,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.reverse'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.reverse'
     package: '@azure/arm-monitor'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -753,10 +801,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.shift'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.shift'
     package: '@azure/arm-monitor'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -765,10 +813,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-monitor.MetricNamespace" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.slice'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.slice'
     package: '@azure/arm-monitor'
     summary: Returns a section of an array.
     remarks: ''
@@ -782,15 +832,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
   - name: >-
       some((value: MetricNamespace, index: number, array: MetricNamespace[]) =>
       unknown, any)
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.some'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.some'
     package: '@azure/arm-monitor'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -800,28 +851,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: MetricNamespace, index: number, array:
+        function some(predicate: (value: MetricNamespace, index: number, array:
         MetricNamespace[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: MetricNamespace, index: number, array: MetricNamespace[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: MetricNamespace, b: MetricNamespace) => number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.sort'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.sort'
     package: '@azure/arm-monitor'
     summary: Sorts an array.
     remarks: ''
@@ -835,14 +891,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: MetricNamespace, b: MetricNamespace) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, MetricNamespace[])'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.splice_1'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.splice_1'
     package: '@azure/arm-monitor'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -864,14 +931,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+          type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.splice'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.splice'
     package: '@azure/arm-monitor'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -892,10 +959,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+        type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.toLocaleString'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.toLocaleString'
     package: '@azure/arm-monitor'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -909,7 +976,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.toString'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.toString'
     package: '@azure/arm-monitor'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -921,7 +988,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(MetricNamespace[])'
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.unshift'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.unshift'
     package: '@azure/arm-monitor'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -931,14 +998,14 @@ methods:
       content: 'function unshift(items: MetricNamespace[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-monitor.MetricNamespace" />[]'
+          type: '<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-monitor.MetricNamespaceCollection.values'
+    uid: '@azure/arm-monitor.models.index.d.MetricNamespaceCollection.values'
     package: '@azure/arm-monitor'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -948,7 +1015,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-monitor.MetricNamespace"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-monitor.models.index.d.MetricNamespace" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-monitor.MetricNamespace" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-monitor.models.index.d.MetricNamespaceCollection.[Symbol.iterator]
+    package: '@azure/arm-monitor'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-monitor.models.index.d.MetricNamespace" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-monitor.models.index.d.MetricNamespaceCollection.[Symbol.unscopables]
+    package: '@azure/arm-monitor'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-monitor.models.index.d.AutoscaleSettingResourceCollection.Array"
+  />&lt;<xref uid="@azure/arm-monitor.models.index.d.MetricNamespace" />&gt;

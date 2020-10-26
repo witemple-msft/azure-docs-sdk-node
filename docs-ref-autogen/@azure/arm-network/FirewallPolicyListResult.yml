@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: FirewallPolicyListResult
-uid: '@azure/arm-network.FirewallPolicyListResult'
+uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult'
 package: '@azure/arm-network'
 summary: ''
 fullName: FirewallPolicyListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-network.FirewallPolicyListResult.Array'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.Array'
     package: '@azure/arm-network'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-network.FirewallPolicyListResult.length'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.length'
     package: '@azure/arm-network'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-network.FirewallPolicyListResult.nextLink'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.nextLink'
     package: '@azure/arm-network'
     summary: URL to get the next set of results.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<FirewallPolicy>[])'
-    uid: '@azure/arm-network.FirewallPolicyListResult.concat'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.concat'
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-network.FirewallPolicy"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.FirewallPolicy" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-network.FirewallPolicyListResult.concat_1'
+  - name: 'concat(FirewallPolicy | ConcatArray<FirewallPolicy>[])'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.concat_1'
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: FirewallPolicy | ConcatArray<FirewallPolicy>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.FirewallPolicy" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.copyWithin'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.copyWithin'
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-network.FirewallPolicyListResult.entries'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.entries'
     package: '@azure/arm-network'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +143,7 @@ methods:
   - name: >-
       every((value: FirewallPolicy, index: number, array: FirewallPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.every'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.every_1'
     package: '@azure/arm-network'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: FirewallPolicy, index: number, array:
+        function every(predicate: (value: FirewallPolicy, index: number, array:
         FirewallPolicy[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FirewallPolicy, index: number, array: FirewallPolicy[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: FirewallPolicy, index: number, array: FirewallPolicy[])
+      => value, any)
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.every'
+    package: '@azure/arm-network'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: FirewallPolicy, index: number,
+        array: FirewallPolicy[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: FirewallPolicy, index: number, array: FirewallPolicy[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(FirewallPolicy, undefined | number, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.fill'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.fill'
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-network.FirewallPolicy" />
+          type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +251,7 @@ methods:
   - name: >-
       filter((value: FirewallPolicy, index: number, array: FirewallPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.filter_1'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.filter_1'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +261,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: FirewallPolicy, index: number,
-        array: FirewallPolicy[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: FirewallPolicy, index: number, array:
+        FirewallPolicy[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FirewallPolicy, index: number, array: FirewallPolicy[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
   - name: >-
       filter<S>((value: FirewallPolicy, index: number, array: FirewallPolicy[])
-      => boolean, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.filter'
+      => value, any)
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.filter'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: FirewallPolicy, index: number,
-        array: FirewallPolicy[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: FirewallPolicy, index: number,
+        array: FirewallPolicy[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FirewallPolicy, index: number, array: FirewallPolicy[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +315,7 @@ methods:
   - name: >-
       find((value: FirewallPolicy, index: number, obj: FirewallPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.find_1'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.find_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -291,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: FirewallPolicy, index: number, obj:
-      FirewallPolicy[]) => boolean, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.find'
+      FirewallPolicy[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.find'
     package: '@azure/arm-network'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: FirewallPolicy, index:
-        number, obj: FirewallPolicy[]) => boolean, thisArg?: any)
+        number, obj: FirewallPolicy[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: FirewallPolicy, index: number, obj:
-            FirewallPolicy[]) =&gt; boolean
+            FirewallPolicy[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: FirewallPolicy, index: number, obj: FirewallPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.findIndex'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.findIndex'
     package: '@azure/arm-network'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +424,7 @@ methods:
   - name: >-
       forEach((value: FirewallPolicy, index: number, array: FirewallPolicy[]) =>
       void, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.forEach'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.forEach'
     package: '@azure/arm-network'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +449,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(FirewallPolicy, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.includes'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.includes'
     package: '@azure/arm-network'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.FirewallPolicy" />
+          type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +474,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(FirewallPolicy, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.indexOf'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.indexOf'
     package: '@azure/arm-network'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +486,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.FirewallPolicy" />
+          type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +497,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-network.FirewallPolicyListResult.join'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.join'
     package: '@azure/arm-network'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +518,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-network.FirewallPolicyListResult.keys'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.keys'
     package: '@azure/arm-network'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +530,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(FirewallPolicy, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.lastIndexOf'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.lastIndexOf'
     package: '@azure/arm-network'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +542,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.FirewallPolicy" />
+          type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +555,7 @@ methods:
   - name: >-
       map<U>((value: FirewallPolicy, index: number, array: FirewallPolicy[]) =>
       U, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.map'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.map'
     package: '@azure/arm-network'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +585,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-network.FirewallPolicyListResult.pop'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.pop'
     package: '@azure/arm-network'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +594,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" /> |
+          undefined
         description: ''
   - name: 'push(FirewallPolicy[])'
-    uid: '@azure/arm-network.FirewallPolicyListResult.push'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.push'
     package: '@azure/arm-network'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +609,7 @@ methods:
       content: 'function push(items: FirewallPolicy[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+          type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
           description: |
             New elements of the Array.
       return:
@@ -570,7 +618,7 @@ methods:
   - name: >-
       reduce((previousValue: FirewallPolicy, currentValue: FirewallPolicy,
       currentIndex: number, array: FirewallPolicy[]) => FirewallPolicy)
-    uid: '@azure/arm-network.FirewallPolicyListResult.reduce'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reduce'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -594,13 +642,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" />
+        type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
         description: ''
   - name: >-
       reduce((previousValue: FirewallPolicy, currentValue: FirewallPolicy,
       currentIndex: number, array: FirewallPolicy[]) => FirewallPolicy,
       FirewallPolicy)
-    uid: '@azure/arm-network.FirewallPolicyListResult.reduce_1'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reduce_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -618,15 +666,15 @@ methods:
             currentIndex: number, array: FirewallPolicy[]) =&gt; FirewallPolicy
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.FirewallPolicy" />
+          type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" />
+        type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: FirewallPolicy, currentIndex:
       number, array: FirewallPolicy[]) => U, U)
-    uid: '@azure/arm-network.FirewallPolicyListResult.reduce_2'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reduce_2'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +709,7 @@ methods:
   - name: >-
       reduceRight((previousValue: FirewallPolicy, currentValue: FirewallPolicy,
       currentIndex: number, array: FirewallPolicy[]) => FirewallPolicy)
-    uid: '@azure/arm-network.FirewallPolicyListResult.reduceRight'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reduceRight'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -686,13 +734,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" />
+        type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
         description: ''
   - name: >-
       reduceRight((previousValue: FirewallPolicy, currentValue: FirewallPolicy,
       currentIndex: number, array: FirewallPolicy[]) => FirewallPolicy,
       FirewallPolicy)
-    uid: '@azure/arm-network.FirewallPolicyListResult.reduceRight_1'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reduceRight_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -710,15 +758,15 @@ methods:
             currentIndex: number, array: FirewallPolicy[]) =&gt; FirewallPolicy
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.FirewallPolicy" />
+          type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" />
+        type: <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: FirewallPolicy,
       currentIndex: number, array: FirewallPolicy[]) => U, U)
-    uid: '@azure/arm-network.FirewallPolicyListResult.reduceRight_2'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reduceRight_2'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -752,7 +800,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-network.FirewallPolicyListResult.reverse'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.reverse'
     package: '@azure/arm-network'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -761,10 +809,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-network.FirewallPolicyListResult.shift'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.shift'
     package: '@azure/arm-network'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -773,10 +821,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-network.FirewallPolicy" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.FirewallPolicy" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.slice'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.slice'
     package: '@azure/arm-network'
     summary: Returns a section of an array.
     remarks: ''
@@ -790,15 +840,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
   - name: >-
       some((value: FirewallPolicy, index: number, array: FirewallPolicy[]) =>
       unknown, any)
-    uid: '@azure/arm-network.FirewallPolicyListResult.some'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.some'
     package: '@azure/arm-network'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -808,28 +859,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: FirewallPolicy, index: number, array:
+        function some(predicate: (value: FirewallPolicy, index: number, array:
         FirewallPolicy[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: FirewallPolicy, index: number, array: FirewallPolicy[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: FirewallPolicy, b: FirewallPolicy) => number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.sort'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.sort'
     package: '@azure/arm-network'
     summary: Sorts an array.
     remarks: ''
@@ -843,14 +899,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: FirewallPolicy, b: FirewallPolicy) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, FirewallPolicy[])'
-    uid: '@azure/arm-network.FirewallPolicyListResult.splice_1'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.splice_1'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,14 +939,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+          type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-network.FirewallPolicyListResult.splice'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.splice'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,10 +967,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+        type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-network.FirewallPolicyListResult.toLocaleString'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.toLocaleString'
     package: '@azure/arm-network'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -917,7 +984,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-network.FirewallPolicyListResult.toString'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.toString'
     package: '@azure/arm-network'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -929,7 +996,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(FirewallPolicy[])'
-    uid: '@azure/arm-network.FirewallPolicyListResult.unshift'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.unshift'
     package: '@azure/arm-network'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -939,14 +1006,14 @@ methods:
       content: 'function unshift(items: FirewallPolicy[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.FirewallPolicy" />[]'
+          type: '<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-network.FirewallPolicyListResult.values'
+    uid: '@azure/arm-network.models.index.d.FirewallPolicyListResult.values'
     package: '@azure/arm-network'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -956,7 +1023,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-network.FirewallPolicy"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-network.models.index.d.FirewallPolicy" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-network.FirewallPolicy" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-network.models.index.d.FirewallPolicyListResult.[Symbol.iterator]
+    package: '@azure/arm-network'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-network.models.index.d.FirewallPolicy" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-network.models.index.d.FirewallPolicyListResult.[Symbol.unscopables]
+    package: '@azure/arm-network'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-network.models.index.d.ApplicationGatewayListResult.Array"
+  />&lt;<xref uid="@azure/arm-network.models.index.d.FirewallPolicy" />&gt;

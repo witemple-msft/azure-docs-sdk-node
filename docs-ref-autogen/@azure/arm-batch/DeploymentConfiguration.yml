@@ -1,8 +1,8 @@
 ### YamlMime:TSType
 name: DeploymentConfiguration
-uid: '@azure/arm-batch.DeploymentConfiguration'
+uid: '@azure/arm-batch.models.index.d.DeploymentConfiguration'
 package: '@azure/arm-batch'
-summary: ''
+summary: An interface representing DeploymentConfiguration.
 fullName: DeploymentConfiguration
 remarks: ''
 isPreview: false
@@ -10,9 +10,20 @@ isDeprecated: false
 type: interface
 properties:
   - name: cloudServiceConfiguration
-    uid: '@azure/arm-batch.DeploymentConfiguration.cloudServiceConfiguration'
+    uid: >-
+      @azure/arm-batch.models.index.d.DeploymentConfiguration.cloudServiceConfiguration
     package: '@azure/arm-batch'
-    summary: ''
+    summary: >-
+      The cloud service configuration for the pool. This property and
+      virtualMachineConfiguration
+
+      are mutually exclusive and one of the properties must be specified. This
+      property cannot be
+
+      specified if the Batch account was created with its poolAllocationMode
+      property set to
+
+      'UserSubscription'.
     fullName: cloudServiceConfiguration
     remarks: ''
     isPreview: false
@@ -20,12 +31,19 @@ properties:
     syntax:
       content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
       return:
-        type: <xref uid="@azure/arm-batch.CloudServiceConfiguration" />
+        type: >-
+          <xref uid="@azure/arm-batch.models.index.d.CloudServiceConfiguration"
+          />
         description: ''
   - name: virtualMachineConfiguration
-    uid: '@azure/arm-batch.DeploymentConfiguration.virtualMachineConfiguration'
+    uid: >-
+      @azure/arm-batch.models.index.d.DeploymentConfiguration.virtualMachineConfiguration
     package: '@azure/arm-batch'
-    summary: ''
+    summary: >-
+      The virtual machine configuration for the pool. This property and
+      cloudServiceConfiguration
+
+      are mutually exclusive and one of the properties must be specified.
     fullName: virtualMachineConfiguration
     remarks: ''
     isPreview: false
@@ -33,5 +51,7 @@ properties:
     syntax:
       content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
       return:
-        type: <xref uid="@azure/arm-batch.VirtualMachineConfiguration" />
+        type: >-
+          <xref
+          uid="@azure/arm-batch.models.index.d.VirtualMachineConfiguration" />
         description: ''

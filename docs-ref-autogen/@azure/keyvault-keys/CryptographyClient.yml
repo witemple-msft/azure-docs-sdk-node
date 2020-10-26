@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: CryptographyClient
-uid: '@azure/keyvault-keys.CryptographyClient'
+uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient'
 package: '@azure/keyvault-keys'
 summary: A client used to perform cryptographic operations with Azure Key Vault keys.
 fullName: CryptographyClient
@@ -12,7 +12,7 @@ constructors:
   - name: >-
       CryptographyClient(string | KeyVaultKey, TokenCredential,
       CryptographyClientOptions)
-    uid: '@azure/keyvault-keys.CryptographyClient.constructor'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.constructor'
     package: '@azure/keyvault-keys'
     summary: |-
       Constructs a new instance of the Cryptography client for the given key
@@ -40,7 +40,9 @@ constructors:
         TokenCredential, pipelineOptions?: CryptographyClientOptions)
       parameters:
         - id: key
-          type: string | <xref uid="@azure/keyvault-keys.KeyVaultKey" />
+          type: >-
+            string | <xref
+            uid="@azure/keyvault-keys.keyvault-keys.d.KeyVaultKey" />
           description: >-
             The key to use during cryptography tasks. You can also pass the
             identifier of the key i.e its url here.
@@ -51,11 +53,14 @@ constructors:
             authenticate requests to the service. Use the @azure/identity
             package to create a credential that suits your needs.
         - id: pipelineOptions
-          type: <xref uid="@azure/keyvault-keys.CryptographyClientOptions" />
+          type: >-
+            <xref
+            uid="@azure/keyvault-keys.keyvault-keys.d.CryptographyClientOptions"
+            />
           description: ''
 properties:
   - name: vaultUrl
-    uid: '@azure/keyvault-keys.CryptographyClient.vaultUrl'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.vaultUrl'
     package: '@azure/keyvault-keys'
     summary: The base URL to the vault
     fullName: vaultUrl
@@ -69,7 +74,7 @@ properties:
         description: ''
 methods:
   - name: 'decrypt(EncryptionAlgorithm, Uint8Array, DecryptOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.decrypt'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.decrypt'
     package: '@azure/keyvault-keys'
     summary: |-
       Decrypts the given ciphertext with the specified cryptography algorithm
@@ -87,19 +92,23 @@ methods:
         options?: DecryptOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.EncryptionAlgorithm" />
+          type: >-
+            <xref uid="@azure/keyvault-keys.keyvault-keys.d.EncryptionAlgorithm"
+            />
           description: The algorithm to use.
         - id: ciphertext
           type: Uint8Array
           description: The text to decrypt.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.DecryptOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.DecryptOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.DecryptResult" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/keyvault-keys.keyvault-keys.d.DecryptResult" />&gt;
         description: ''
   - name: 'encrypt(EncryptionAlgorithm, Uint8Array, EncryptOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.encrypt'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.encrypt'
     package: '@azure/keyvault-keys'
     summary: |-
       Encrypts the given plaintext with the specified cryptography algorithm
@@ -117,19 +126,23 @@ methods:
         options?: EncryptOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.EncryptionAlgorithm" />
+          type: >-
+            <xref uid="@azure/keyvault-keys.keyvault-keys.d.EncryptionAlgorithm"
+            />
           description: The algorithm to use.
         - id: plaintext
           type: Uint8Array
           description: The text to encrypt.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.EncryptOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.EncryptOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.EncryptResult" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/keyvault-keys.keyvault-keys.d.EncryptResult" />&gt;
         description: ''
   - name: 'sign(SignatureAlgorithm, Uint8Array, SignOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.sign'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.sign'
     package: '@azure/keyvault-keys'
     summary: |-
       Cryptographically sign the digest of a message
@@ -147,19 +160,23 @@ methods:
         options?: SignOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.SignatureAlgorithm" />
+          type: >-
+            <xref uid="@azure/keyvault-keys.keyvault-keys.d.SignatureAlgorithm"
+            />
           description: The signing algorithm to use.
         - id: digest
           type: Uint8Array
           description: The digest of the data to sign.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.SignOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.SignOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.SignResult" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/keyvault-keys.keyvault-keys.d.SignResult"
+          />&gt;
         description: ''
   - name: 'signData(SignatureAlgorithm, Uint8Array, SignOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.signData'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.signData'
     package: '@azure/keyvault-keys'
     summary: |-
       Cryptographically sign a block of data
@@ -177,19 +194,23 @@ methods:
         options?: SignOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.SignatureAlgorithm" />
+          type: >-
+            <xref uid="@azure/keyvault-keys.keyvault-keys.d.SignatureAlgorithm"
+            />
           description: The signing algorithm to use.
         - id: data
           type: Uint8Array
           description: The data to sign.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.SignOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.SignOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.SignResult" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/keyvault-keys.keyvault-keys.d.SignResult"
+          />&gt;
         description: ''
   - name: 'unwrapKey(KeyWrapAlgorithm, Uint8Array, UnwrapKeyOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.unwrapKey'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.unwrapKey'
     package: '@azure/keyvault-keys'
     summary: |-
       Unwraps the given wrapped key using the specified cryptography algorithm
@@ -207,19 +228,21 @@ methods:
         Uint8Array, options?: UnwrapKeyOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.KeyWrapAlgorithm" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.KeyWrapAlgorithm" />
           description: The decryption algorithm to use to unwrap the key.
         - id: encryptedKey
           type: Uint8Array
           description: The encrypted key to unwrap.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.UnwrapKeyOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.UnwrapKeyOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.UnwrapResult" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/keyvault-keys.keyvault-keys.d.UnwrapResult" />&gt;
         description: ''
   - name: 'verify(SignatureAlgorithm, Uint8Array, Uint8Array, VerifyOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.verify'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.verify'
     package: '@azure/keyvault-keys'
     summary: |-
       Verify the signed message digest
@@ -237,7 +260,9 @@ methods:
         signature: Uint8Array, options?: VerifyOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.SignatureAlgorithm" />
+          type: >-
+            <xref uid="@azure/keyvault-keys.keyvault-keys.d.SignatureAlgorithm"
+            />
           description: The signing algorithm to use to verify with.
         - id: digest
           type: Uint8Array
@@ -246,13 +271,15 @@ methods:
           type: Uint8Array
           description: The signature to verify the digest against.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.VerifyOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.VerifyOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.VerifyResult" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/keyvault-keys.keyvault-keys.d.VerifyResult" />&gt;
         description: ''
   - name: 'verifyData(SignatureAlgorithm, Uint8Array, Uint8Array, VerifyOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.verifyData'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.verifyData'
     package: '@azure/keyvault-keys'
     summary: |-
       Verify the signed block of data
@@ -270,7 +297,9 @@ methods:
         signature: Uint8Array, options?: VerifyOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.SignatureAlgorithm" />
+          type: >-
+            <xref uid="@azure/keyvault-keys.keyvault-keys.d.SignatureAlgorithm"
+            />
           description: The algorithm to use to verify with.
         - id: data
           type: Uint8Array
@@ -279,13 +308,15 @@ methods:
           type: Uint8Array
           description: The signature to verify the block against.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.VerifyOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.VerifyOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.VerifyResult" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/keyvault-keys.keyvault-keys.d.VerifyResult" />&gt;
         description: ''
   - name: 'wrapKey(KeyWrapAlgorithm, Uint8Array, WrapKeyOptions)'
-    uid: '@azure/keyvault-keys.CryptographyClient.wrapKey'
+    uid: '@azure/keyvault-keys.keyvault-keys.d.CryptographyClient.wrapKey'
     package: '@azure/keyvault-keys'
     summary: |-
       Wraps the given key using the specified cryptography algorithm
@@ -303,14 +334,16 @@ methods:
         WrapKeyOptions)
       parameters:
         - id: algorithm
-          type: <xref uid="@azure/keyvault-keys.KeyWrapAlgorithm" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.KeyWrapAlgorithm" />
           description: The encryption algorithm to use to wrap the given key.
         - id: key
           type: Uint8Array
           description: The key to wrap.
         - id: options
-          type: <xref uid="@azure/keyvault-keys.WrapKeyOptions" />
+          type: <xref uid="@azure/keyvault-keys.keyvault-keys.d.WrapKeyOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.WrapResult" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/keyvault-keys.keyvault-keys.d.WrapResult"
+          />&gt;
         description: ''

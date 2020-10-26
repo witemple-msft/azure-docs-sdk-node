@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ManagementGroupListResult
-uid: '@azure/arm-managementgroups.ManagementGroupListResult'
+uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult'
 package: '@azure/arm-managementgroups'
 summary: ''
 fullName: ManagementGroupListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.Array'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.Array'
     package: '@azure/arm-managementgroups'
     summary: ''
     fullName: Array
@@ -23,7 +23,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.length'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.length
     package: '@azure/arm-managementgroups'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +39,8 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.nextLink'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.nextLink
     package: '@azure/arm-managementgroups'
     summary: ''
     fullName: nextLink
@@ -52,7 +54,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<ManagementGroupInfo>[])'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.concat'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.concat
     package: '@azure/arm-managementgroups'
     summary: Combines two or more arrays.
     remarks: ''
@@ -64,31 +67,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-managementgroups.ManagementGroupInfo" />&gt;[]
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.concat_1'
+  - name: 'concat(ManagementGroupInfo | ConcatArray<ManagementGroupInfo>[])'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.concat_1
     package: '@azure/arm-managementgroups'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: ManagementGroupInfo |
+        ConcatArray<ManagementGroupInfo>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.copyWithin'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.copyWithin
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +145,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.entries'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.entries
     package: '@azure/arm-managementgroups'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +160,8 @@ methods:
   - name: >-
       every((value: ManagementGroupInfo, index: number, array:
       ManagementGroupInfo[]) => unknown, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.every'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.every_1
     package: '@azure/arm-managementgroups'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +169,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ManagementGroupInfo, index: number,
+        function every(predicate: (value: ManagementGroupInfo, index: number,
         array: ManagementGroupInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ManagementGroupInfo, index: number, array:
             ManagementGroupInfo[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ManagementGroupInfo, index: number, array:
+      ManagementGroupInfo[]) => value, any)
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.every'
+    package: '@azure/arm-managementgroups'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ManagementGroupInfo, index: number,
+        array: ManagementGroupInfo[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ManagementGroupInfo, index: number, array:
+            ManagementGroupInfo[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ManagementGroupInfo, undefined | number, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.fill'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.fill'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +247,10 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +272,8 @@ methods:
   - name: >-
       filter((value: ManagementGroupInfo, index: number, array:
       ManagementGroupInfo[]) => unknown, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.filter_1'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.filter_1
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +283,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ManagementGroupInfo, index: number,
+        function filter(predicate: (value: ManagementGroupInfo, index: number,
         array: ManagementGroupInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ManagementGroupInfo, index: number, array:
             ManagementGroupInfo[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: ManagementGroupInfo, index: number, array:
-      ManagementGroupInfo[]) => boolean, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.filter'
+      ManagementGroupInfo[]) => value, any)
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.filter
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +319,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ManagementGroupInfo, index:
-        number, array: ManagementGroupInfo[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ManagementGroupInfo, index:
+        number, array: ManagementGroupInfo[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ManagementGroupInfo, index: number, array:
-            ManagementGroupInfo[]) =&gt; boolean
+            ManagementGroupInfo[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +341,8 @@ methods:
   - name: >-
       find((value: ManagementGroupInfo, index: number, obj:
       ManagementGroupInfo[]) => unknown, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.find_1'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.find_1
     package: '@azure/arm-managementgroups'
     summary: ''
     remarks: ''
@@ -292,13 +363,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" /> |
-          undefined
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ManagementGroupInfo, index: number, obj:
-      ManagementGroupInfo[]) => boolean, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.find'
+      ManagementGroupInfo[]) => value, any)
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.find'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +383,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: ManagementGroupInfo,
-        index: number, obj: ManagementGroupInfo[]) => boolean, thisArg?: any)
+        index: number, obj: ManagementGroupInfo[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ManagementGroupInfo, index: number, obj:
-            ManagementGroupInfo[]) =&gt; boolean
+            ManagementGroupInfo[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +411,8 @@ methods:
   - name: >-
       findIndex((value: ManagementGroupInfo, index: number, obj:
       ManagementGroupInfo[]) => unknown, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.findIndex'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.findIndex
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +453,8 @@ methods:
   - name: >-
       forEach((value: ManagementGroupInfo, index: number, array:
       ManagementGroupInfo[]) => void, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.forEach'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.forEach
     package: '@azure/arm-managementgroups'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +479,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ManagementGroupInfo, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.includes'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.includes
     package: '@azure/arm-managementgroups'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +494,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +508,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ManagementGroupInfo, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.indexOf'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.indexOf
     package: '@azure/arm-managementgroups'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +521,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +535,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.join'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.join'
     package: '@azure/arm-managementgroups'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +556,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.keys'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.keys'
     package: '@azure/arm-managementgroups'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +568,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ManagementGroupInfo, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.lastIndexOf
     package: '@azure/arm-managementgroups'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +581,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +597,7 @@ methods:
   - name: >-
       map<U>((value: ManagementGroupInfo, index: number, array:
       ManagementGroupInfo[]) => U, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.map'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.map'
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +627,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.pop'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.pop'
     package: '@azure/arm-managementgroups'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -551,11 +637,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" /> |
-          undefined
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          /> | undefined
         description: ''
   - name: 'push(ManagementGroupInfo[])'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.push'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.push'
     package: '@azure/arm-managementgroups'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +652,10 @@ methods:
       content: 'function push(items: ManagementGroupInfo[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +665,8 @@ methods:
       reduce((previousValue: ManagementGroupInfo, currentValue:
       ManagementGroupInfo, currentIndex: number, array: ManagementGroupInfo[])
       => ManagementGroupInfo)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reduce'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reduce
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +691,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />
         description: ''
   - name: >-
       reduce((previousValue: ManagementGroupInfo, currentValue:
       ManagementGroupInfo, currentIndex: number, array: ManagementGroupInfo[])
       => ManagementGroupInfo, ManagementGroupInfo)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reduce_1'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reduce_1
     package: '@azure/arm-managementgroups'
     summary: ''
     remarks: ''
@@ -626,15 +721,22 @@ methods:
             ManagementGroupInfo[]) =&gt; ManagementGroupInfo
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ManagementGroupInfo,
       currentIndex: number, array: ManagementGroupInfo[]) => U, U)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reduce_2'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reduce_2
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +772,8 @@ methods:
       reduceRight((previousValue: ManagementGroupInfo, currentValue:
       ManagementGroupInfo, currentIndex: number, array: ManagementGroupInfo[])
       => ManagementGroupInfo)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reduceRight'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reduceRight
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +799,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: ManagementGroupInfo, currentValue:
       ManagementGroupInfo, currentIndex: number, array: ManagementGroupInfo[])
       => ManagementGroupInfo, ManagementGroupInfo)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reduceRight_1
     package: '@azure/arm-managementgroups'
     summary: ''
     remarks: ''
@@ -722,15 +829,22 @@ methods:
             ManagementGroupInfo[]) =&gt; ManagementGroupInfo
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ManagementGroupInfo,
       currentIndex: number, array: ManagementGroupInfo[]) => U, U)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reduceRight_2
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +878,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.reverse'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.reverse
     package: '@azure/arm-managementgroups'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +888,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.shift'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.shift'
     package: '@azure/arm-managementgroups'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -786,11 +904,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-managementgroups.ManagementGroupInfo" /> |
-          undefined
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.slice'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.slice'
     package: '@azure/arm-managementgroups'
     summary: Returns a section of an array.
     remarks: ''
@@ -804,15 +923,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
   - name: >-
       some((value: ManagementGroupInfo, index: number, array:
       ManagementGroupInfo[]) => unknown, any)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.some'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.some'
     package: '@azure/arm-managementgroups'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -822,30 +945,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ManagementGroupInfo, index: number,
+        function some(predicate: (value: ManagementGroupInfo, index: number,
         array: ManagementGroupInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ManagementGroupInfo, index: number, array:
             ManagementGroupInfo[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: ManagementGroupInfo, b: ManagementGroupInfo) =>
       number)
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.sort'
+    uid: '@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.sort'
     package: '@azure/arm-managementgroups'
     summary: Sorts an array.
     remarks: ''
@@ -861,14 +989,26 @@ methods:
             undefined | (a: ManagementGroupInfo, b: ManagementGroupInfo) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ManagementGroupInfo[])'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.splice_1'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.splice_1
     package: '@azure/arm-managementgroups'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -890,14 +1030,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.splice'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.splice
     package: '@azure/arm-managementgroups'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -918,10 +1065,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.toLocaleString'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.toLocaleString
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -935,7 +1086,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.toString'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.toString
     package: '@azure/arm-managementgroups'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -947,7 +1099,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ManagementGroupInfo[])'
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.unshift'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.unshift
     package: '@azure/arm-managementgroups'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -957,14 +1110,18 @@ methods:
       content: 'function unshift(items: ManagementGroupInfo[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-managementgroups.ManagementGroupListResult.values'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.values
     package: '@azure/arm-managementgroups'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -975,6 +1132,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-managementgroups.ManagementGroupInfo" />&gt;
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-managementgroups.ManagementGroupInfo" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.[Symbol.iterator]
+    package: '@azure/arm-managementgroups'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.ManagementGroupListResult.[Symbol.unscopables]
+    package: '@azure/arm-managementgroups'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-managementgroups.models.index.d.ManagementGroupInfo" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RestorePointListResult
-uid: '@azure/arm-sql.RestorePointListResult'
+uid: '@azure/arm-sql.models.index.d.RestorePointListResult'
 package: '@azure/arm-sql'
 summary: ''
 fullName: RestorePointListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-sql.RestorePointListResult.Array'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.Array'
     package: '@azure/arm-sql'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-sql.RestorePointListResult.length'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.length'
     package: '@azure/arm-sql'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-sql.RestorePointListResult.nextLink'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.nextLink'
     package: '@azure/arm-sql'
     summary: >-
       Link to retrieve next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<RestorePoint>[])'
-    uid: '@azure/arm-sql.RestorePointListResult.concat'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.concat'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<RestorePoint>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-sql.RestorePoint" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-sql.models.index.d.RestorePoint" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-sql.RestorePointListResult.concat_1'
+  - name: 'concat(RestorePoint | ConcatArray<RestorePoint>[])'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.concat_1'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: RestorePoint | ConcatArray<RestorePoint>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.RestorePoint" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-sql.models.index.d.RestorePoint" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.copyWithin'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.copyWithin'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-sql.RestorePointListResult.entries'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.entries'
     package: '@azure/arm-sql'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: RestorePoint, index: number, array: RestorePoint[]) =>
       unknown, any)
-    uid: '@azure/arm-sql.RestorePointListResult.every'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.every_1'
     package: '@azure/arm-sql'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: RestorePoint, index: number, array:
+        function every(predicate: (value: RestorePoint, index: number, array:
         RestorePoint[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RestorePoint, index: number, array: RestorePoint[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: RestorePoint, index: number, array: RestorePoint[]) =>
+      value, any)
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.every'
+    package: '@azure/arm-sql'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: RestorePoint, index: number, array:
+        RestorePoint[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: RestorePoint, index: number, array: RestorePoint[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(RestorePoint, undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.fill'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.fill'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +233,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-sql.RestorePoint" />
+          type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +255,7 @@ methods:
   - name: >-
       filter((value: RestorePoint, index: number, array: RestorePoint[]) =>
       unknown, any)
-    uid: '@azure/arm-sql.RestorePointListResult.filter_1'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.filter_1'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +265,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: RestorePoint, index: number, array:
+        function filter(predicate: (value: RestorePoint, index: number, array:
         RestorePoint[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RestorePoint, index: number, array: RestorePoint[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
   - name: >-
       filter<S>((value: RestorePoint, index: number, array: RestorePoint[]) =>
-      boolean, any)
-    uid: '@azure/arm-sql.RestorePointListResult.filter'
+      value, any)
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.filter'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +297,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: RestorePoint, index: number,
-        array: RestorePoint[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: RestorePoint, index: number,
+        array: RestorePoint[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RestorePoint, index: number, array: RestorePoint[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +319,7 @@ methods:
   - name: >-
       find((value: RestorePoint, index: number, obj: RestorePoint[]) => unknown,
       any)
-    uid: '@azure/arm-sql.RestorePointListResult.find_1'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.find_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -293,12 +339,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: RestorePoint, index: number, obj:
-      RestorePoint[]) => boolean, any)
-    uid: '@azure/arm-sql.RestorePointListResult.find'
+      RestorePoint[]) => value, any)
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.find'
     package: '@azure/arm-sql'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +357,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: RestorePoint, index:
-        number, obj: RestorePoint[]) => boolean, thisArg?: any)
+        number, obj: RestorePoint[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: RestorePoint, index: number, obj:
-            RestorePoint[]) =&gt; boolean
+            RestorePoint[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +385,7 @@ methods:
   - name: >-
       findIndex((value: RestorePoint, index: number, obj: RestorePoint[]) =>
       unknown, any)
-    uid: '@azure/arm-sql.RestorePointListResult.findIndex'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.findIndex'
     package: '@azure/arm-sql'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +426,7 @@ methods:
   - name: >-
       forEach((value: RestorePoint, index: number, array: RestorePoint[]) =>
       void, any)
-    uid: '@azure/arm-sql.RestorePointListResult.forEach'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.forEach'
     package: '@azure/arm-sql'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +451,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(RestorePoint, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.includes'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.includes'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +465,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.RestorePoint" />
+          type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +476,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(RestorePoint, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.indexOf'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.indexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +488,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.RestorePoint" />
+          type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +499,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-sql.RestorePointListResult.join'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.join'
     package: '@azure/arm-sql'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +520,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-sql.RestorePointListResult.keys'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.keys'
     package: '@azure/arm-sql'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +532,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(RestorePoint, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.lastIndexOf'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.lastIndexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +544,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.RestorePoint" />
+          type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +557,7 @@ methods:
   - name: >-
       map<U>((value: RestorePoint, index: number, array: RestorePoint[]) => U,
       any)
-    uid: '@azure/arm-sql.RestorePointListResult.map'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.map'
     package: '@azure/arm-sql'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +585,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-sql.RestorePointListResult.pop'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.pop'
     package: '@azure/arm-sql'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +594,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" /> | undefined
         description: ''
   - name: 'push(RestorePoint[])'
-    uid: '@azure/arm-sql.RestorePointListResult.push'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.push'
     package: '@azure/arm-sql'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +607,7 @@ methods:
       content: 'function push(items: RestorePoint[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
           description: |
             New elements of the Array.
       return:
@@ -570,7 +616,7 @@ methods:
   - name: >-
       reduce((previousValue: RestorePoint, currentValue: RestorePoint,
       currentIndex: number, array: RestorePoint[]) => RestorePoint)
-    uid: '@azure/arm-sql.RestorePointListResult.reduce'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reduce'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -594,13 +640,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" />
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
         description: ''
   - name: >-
       reduce((previousValue: RestorePoint, currentValue: RestorePoint,
       currentIndex: number, array: RestorePoint[]) => RestorePoint,
       RestorePoint)
-    uid: '@azure/arm-sql.RestorePointListResult.reduce_1'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reduce_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -618,15 +664,15 @@ methods:
             currentIndex: number, array: RestorePoint[]) =&gt; RestorePoint
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.RestorePoint" />
+          type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" />
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: RestorePoint, currentIndex:
       number, array: RestorePoint[]) => U, U)
-    uid: '@azure/arm-sql.RestorePointListResult.reduce_2'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reduce_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +707,7 @@ methods:
   - name: >-
       reduceRight((previousValue: RestorePoint, currentValue: RestorePoint,
       currentIndex: number, array: RestorePoint[]) => RestorePoint)
-    uid: '@azure/arm-sql.RestorePointListResult.reduceRight'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reduceRight'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -686,13 +732,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" />
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
         description: ''
   - name: >-
       reduceRight((previousValue: RestorePoint, currentValue: RestorePoint,
       currentIndex: number, array: RestorePoint[]) => RestorePoint,
       RestorePoint)
-    uid: '@azure/arm-sql.RestorePointListResult.reduceRight_1'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reduceRight_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -710,15 +756,15 @@ methods:
             currentIndex: number, array: RestorePoint[]) =&gt; RestorePoint
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.RestorePoint" />
+          type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" />
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: RestorePoint,
       currentIndex: number, array: RestorePoint[]) => U, U)
-    uid: '@azure/arm-sql.RestorePointListResult.reduceRight_2'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reduceRight_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -752,7 +798,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-sql.RestorePointListResult.reverse'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.reverse'
     package: '@azure/arm-sql'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -761,10 +807,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-sql.RestorePointListResult.shift'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.shift'
     package: '@azure/arm-sql'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -773,10 +819,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-sql.RestorePoint" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.RestorePoint" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.slice'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.slice'
     package: '@azure/arm-sql'
     summary: Returns a section of an array.
     remarks: ''
@@ -790,15 +836,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
   - name: >-
       some((value: RestorePoint, index: number, array: RestorePoint[]) =>
       unknown, any)
-    uid: '@azure/arm-sql.RestorePointListResult.some'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.some'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -808,28 +855,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: RestorePoint, index: number, array:
+        function some(predicate: (value: RestorePoint, index: number, array:
         RestorePoint[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: RestorePoint, index: number, array: RestorePoint[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: RestorePoint, b: RestorePoint) => number)'
-    uid: '@azure/arm-sql.RestorePointListResult.sort'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.sort'
     package: '@azure/arm-sql'
     summary: Sorts an array.
     remarks: ''
@@ -843,14 +895,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: RestorePoint, b: RestorePoint) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, RestorePoint[])'
-    uid: '@azure/arm-sql.RestorePointListResult.splice_1'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.splice_1'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,14 +935,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-sql.RestorePointListResult.splice'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.splice'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,10 +963,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-sql.RestorePointListResult.toLocaleString'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.toLocaleString'
     package: '@azure/arm-sql'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -917,7 +980,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-sql.RestorePointListResult.toString'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.toString'
     package: '@azure/arm-sql'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -929,7 +992,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(RestorePoint[])'
-    uid: '@azure/arm-sql.RestorePointListResult.unshift'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.unshift'
     package: '@azure/arm-sql'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -939,14 +1002,14 @@ methods:
       content: 'function unshift(items: RestorePoint[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.RestorePoint" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-sql.RestorePointListResult.values'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.values'
     package: '@azure/arm-sql'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -955,6 +1018,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-sql.RestorePoint" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.RestorePoint" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-sql.RestorePoint" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.[Symbol.iterator]'
+    package: '@azure/arm-sql'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.RestorePoint" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-sql.models.index.d.RestorePointListResult.[Symbol.unscopables]'
+    package: '@azure/arm-sql'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-sql.models.index.d.RecoverableDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-sql.models.index.d.RestorePoint" />&gt;

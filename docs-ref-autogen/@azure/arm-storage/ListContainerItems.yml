@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ListContainerItems
-uid: '@azure/arm-storage.ListContainerItems'
+uid: '@azure/arm-storage.models.index.d.ListContainerItems'
 package: '@azure/arm-storage'
 summary: ''
 fullName: ListContainerItems
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storage.ListContainerItems.Array'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.Array'
     package: '@azure/arm-storage'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storage.ListContainerItems.length'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.length'
     package: '@azure/arm-storage'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-storage.ListContainerItems.nextLink'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.nextLink'
     package: '@azure/arm-storage'
     summary: >-
       Request URL that can be used to query next page of containers. Returned
@@ -59,7 +59,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<ListContainerItem>[])'
-    uid: '@azure/arm-storage.ListContainerItems.concat'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.concat'
     package: '@azure/arm-storage'
     summary: Combines two or more arrays.
     remarks: ''
@@ -70,32 +70,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-storage.ListContainerItem"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storage.models.index.d.ListContainerItem" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storage.ListContainerItems.concat_1'
+  - name: 'concat(ListContainerItem | ConcatArray<ListContainerItem>[])'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.concat_1'
     package: '@azure/arm-storage'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: ListContainerItem |
+        ConcatArray<ListContainerItem>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storage.models.index.d.ListContainerItem" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.copyWithin'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.copyWithin'
     package: '@azure/arm-storage'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -133,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storage.ListContainerItems.entries'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.entries'
     package: '@azure/arm-storage'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -147,7 +152,7 @@ methods:
   - name: >-
       every((value: ListContainerItem, index: number, array:
       ListContainerItem[]) => unknown, any)
-    uid: '@azure/arm-storage.ListContainerItems.every'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.every_1'
     package: '@azure/arm-storage'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -155,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ListContainerItem, index: number,
+        function every(predicate: (value: ListContainerItem, index: number,
         array: ListContainerItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ListContainerItem, index: number, array:
             ListContainerItem[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ListContainerItem, index: number, array:
+      ListContainerItem[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.every'
+    package: '@azure/arm-storage'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ListContainerItem, index: number,
+        array: ListContainerItem[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ListContainerItem, index: number, array:
+            ListContainerItem[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ListContainerItem, undefined | number, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.fill'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.fill'
     package: '@azure/arm-storage'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -190,7 +238,7 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storage.ListContainerItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -212,7 +260,7 @@ methods:
   - name: >-
       filter((value: ListContainerItem, index: number, array:
       ListContainerItem[]) => unknown, any)
-    uid: '@azure/arm-storage.ListContainerItems.filter_1'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.filter_1'
     package: '@azure/arm-storage'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -222,30 +270,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ListContainerItem, index: number,
+        function filter(predicate: (value: ListContainerItem, index: number,
         array: ListContainerItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ListContainerItem, index: number, array:
             ListContainerItem[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
   - name: >-
       filter<S>((value: ListContainerItem, index: number, array:
-      ListContainerItem[]) => boolean, any)
-    uid: '@azure/arm-storage.ListContainerItems.filter'
+      ListContainerItem[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.filter'
     package: '@azure/arm-storage'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -255,21 +302,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ListContainerItem, index: number,
-        array: ListContainerItem[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ListContainerItem, index: number,
+        array: ListContainerItem[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ListContainerItem, index: number, array:
-            ListContainerItem[]) =&gt; boolean
+            ListContainerItem[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -278,7 +324,7 @@ methods:
   - name: >-
       find((value: ListContainerItem, index: number, obj: ListContainerItem[])
       => unknown, any)
-    uid: '@azure/arm-storage.ListContainerItems.find_1'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.find_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -298,12 +344,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ListContainerItem, index: number, obj:
-      ListContainerItem[]) => boolean, any)
-    uid: '@azure/arm-storage.ListContainerItems.find'
+      ListContainerItem[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.find'
     package: '@azure/arm-storage'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -316,12 +364,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: ListContainerItem,
-        index: number, obj: ListContainerItem[]) => boolean, thisArg?: any)
+        index: number, obj: ListContainerItem[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ListContainerItem, index: number, obj:
-            ListContainerItem[]) =&gt; boolean
+            ListContainerItem[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -344,7 +392,7 @@ methods:
   - name: >-
       findIndex((value: ListContainerItem, index: number, obj:
       ListContainerItem[]) => unknown, any)
-    uid: '@azure/arm-storage.ListContainerItems.findIndex'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.findIndex'
     package: '@azure/arm-storage'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -385,7 +433,7 @@ methods:
   - name: >-
       forEach((value: ListContainerItem, index: number, array:
       ListContainerItem[]) => void, any)
-    uid: '@azure/arm-storage.ListContainerItems.forEach'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.forEach'
     package: '@azure/arm-storage'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -410,7 +458,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ListContainerItem, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.includes'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.includes'
     package: '@azure/arm-storage'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -424,7 +472,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.ListContainerItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +483,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ListContainerItem, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.indexOf'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.indexOf'
     package: '@azure/arm-storage'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -447,7 +495,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.ListContainerItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +506,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storage.ListContainerItems.join'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.join'
     package: '@azure/arm-storage'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -479,7 +527,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storage.ListContainerItems.keys'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.keys'
     package: '@azure/arm-storage'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -491,7 +539,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ListContainerItem, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.lastIndexOf'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.lastIndexOf'
     package: '@azure/arm-storage'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -503,7 +551,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.ListContainerItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -516,7 +564,7 @@ methods:
   - name: >-
       map<U>((value: ListContainerItem, index: number, array:
       ListContainerItem[]) => U, any)
-    uid: '@azure/arm-storage.ListContainerItems.map'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.map'
     package: '@azure/arm-storage'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -546,7 +594,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storage.ListContainerItems.pop'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.pop'
     package: '@azure/arm-storage'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -555,10 +603,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" /> |
+          undefined
         description: ''
   - name: 'push(ListContainerItem[])'
-    uid: '@azure/arm-storage.ListContainerItems.push'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.push'
     package: '@azure/arm-storage'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -568,7 +618,7 @@ methods:
       content: 'function push(items: ListContainerItem[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+          type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
           description: |
             New elements of the Array.
       return:
@@ -577,7 +627,7 @@ methods:
   - name: >-
       reduce((previousValue: ListContainerItem, currentValue: ListContainerItem,
       currentIndex: number, array: ListContainerItem[]) => ListContainerItem)
-    uid: '@azure/arm-storage.ListContainerItems.reduce'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reduce'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -602,13 +652,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
         description: ''
   - name: >-
       reduce((previousValue: ListContainerItem, currentValue: ListContainerItem,
       currentIndex: number, array: ListContainerItem[]) => ListContainerItem,
       ListContainerItem)
-    uid: '@azure/arm-storage.ListContainerItems.reduce_1'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reduce_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -628,15 +678,15 @@ methods:
             ListContainerItem
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storage.ListContainerItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ListContainerItem,
       currentIndex: number, array: ListContainerItem[]) => U, U)
-    uid: '@azure/arm-storage.ListContainerItems.reduce_2'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reduce_2'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -672,7 +722,7 @@ methods:
       reduceRight((previousValue: ListContainerItem, currentValue:
       ListContainerItem, currentIndex: number, array: ListContainerItem[]) =>
       ListContainerItem)
-    uid: '@azure/arm-storage.ListContainerItems.reduceRight'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reduceRight'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -698,13 +748,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
         description: ''
   - name: >-
       reduceRight((previousValue: ListContainerItem, currentValue:
       ListContainerItem, currentIndex: number, array: ListContainerItem[]) =>
       ListContainerItem, ListContainerItem)
-    uid: '@azure/arm-storage.ListContainerItems.reduceRight_1'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reduceRight_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -724,15 +774,15 @@ methods:
             ListContainerItem
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storage.ListContainerItem" />
+          type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" />
+        type: <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ListContainerItem,
       currentIndex: number, array: ListContainerItem[]) => U, U)
-    uid: '@azure/arm-storage.ListContainerItems.reduceRight_2'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reduceRight_2'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -766,7 +816,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storage.ListContainerItems.reverse'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.reverse'
     package: '@azure/arm-storage'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -775,10 +825,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-storage.ListContainerItems.shift'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.shift'
     package: '@azure/arm-storage'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -787,10 +837,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-storage.ListContainerItem" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.ListContainerItem" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.slice'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.slice'
     package: '@azure/arm-storage'
     summary: Returns a section of an array.
     remarks: ''
@@ -804,15 +856,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
   - name: >-
       some((value: ListContainerItem, index: number, array: ListContainerItem[])
       => unknown, any)
-    uid: '@azure/arm-storage.ListContainerItems.some'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.some'
     package: '@azure/arm-storage'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -822,28 +875,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ListContainerItem, index: number,
+        function some(predicate: (value: ListContainerItem, index: number,
         array: ListContainerItem[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ListContainerItem, index: number, array:
             ListContainerItem[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: ListContainerItem, b: ListContainerItem) => number)'
-    uid: '@azure/arm-storage.ListContainerItems.sort'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.sort'
     package: '@azure/arm-storage'
     summary: Sorts an array.
     remarks: ''
@@ -859,14 +917,25 @@ methods:
             undefined | (a: ListContainerItem, b: ListContainerItem) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ListContainerItem[])'
-    uid: '@azure/arm-storage.ListContainerItems.splice_1'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.splice_1'
     package: '@azure/arm-storage'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -888,14 +957,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+          type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storage.ListContainerItems.splice'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.splice'
     package: '@azure/arm-storage'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -916,10 +985,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+        type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storage.ListContainerItems.toLocaleString'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.toLocaleString'
     package: '@azure/arm-storage'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -933,7 +1002,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storage.ListContainerItems.toString'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.toString'
     package: '@azure/arm-storage'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -945,7 +1014,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ListContainerItem[])'
-    uid: '@azure/arm-storage.ListContainerItems.unshift'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.unshift'
     package: '@azure/arm-storage'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -955,14 +1024,14 @@ methods:
       content: 'function unshift(items: ListContainerItem[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storage.ListContainerItem" />[]'
+          type: '<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storage.ListContainerItems.values'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.values'
     package: '@azure/arm-storage'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -972,7 +1041,37 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-storage.ListContainerItem"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storage.models.index.d.ListContainerItem" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storage.ListContainerItem" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.[Symbol.iterator]'
+    package: '@azure/arm-storage'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storage.models.index.d.ListContainerItem" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-storage.models.index.d.ListContainerItems.[Symbol.unscopables]'
+    package: '@azure/arm-storage'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-storage.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-storage.models.index.d.ListContainerItem" />&gt;

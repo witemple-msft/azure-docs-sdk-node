@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ContainerClient
-uid: '@azure/storage-blob.ContainerClient'
+uid: '@azure/storage-blob.storage-blob.d.ContainerClient'
 package: '@azure/storage-blob'
 summary: >-
   A ContainerClient represents a URL to the Azure Storage container allowing you
@@ -12,7 +12,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'ContainerClient(string, Pipeline)'
-    uid: '@azure/storage-blob.ContainerClient.constructor_2'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.constructor_2'
     package: '@azure/storage-blob'
     summary: >-
       Creates an instance of ContainerClient.
@@ -42,14 +42,14 @@ constructors:
                                 However, if a blob name includes ? or %, blob name must be encoded in the URL.
                                 Such as a blob named "my?blob%", the URL should be "https://myaccount.blob.core.windows.net/mycontainer/my%3Fblob%25".
         - id: pipeline
-          type: <xref uid="@azure/storage-blob.Pipeline" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.Pipeline" />
           description: |-
             Call newPipeline() to create a default
                                        pipeline, or provide a customized pipeline.
   - name: >-
       ContainerClient(string, StorageSharedKeyCredential | AnonymousCredential |
       TokenCredential, StoragePipelineOptions)
-    uid: '@azure/storage-blob.ContainerClient.constructor_1'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.constructor_1'
     package: '@azure/storage-blob'
     summary: >-
       Creates an instance of ContainerClient.
@@ -83,8 +83,10 @@ constructors:
                                 Such as a blob named "my?blob%", the URL should be "https://myaccount.blob.core.windows.net/mycontainer/my%3Fblob%25".
         - id: credential
           type: >-
-            <xref uid="@azure/storage-blob.StorageSharedKeyCredential" /> |
-            <xref uid="@azure/storage-blob.AnonymousCredential" /> |
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.StorageSharedKeyCredential"
+            /> | <xref
+            uid="@azure/storage-blob.storage-blob.d.AnonymousCredential" /> |
             TokenCredential
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
@@ -93,10 +95,12 @@ constructors:
             TokenCredential interface. If not specified, AnonymousCredential is
             used.
         - id: options
-          type: <xref uid="@azure/storage-blob.StoragePipelineOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.StoragePipelineOptions" />
           description: ''
   - name: 'ContainerClient(string, string, StoragePipelineOptions)'
-    uid: '@azure/storage-blob.ContainerClient.constructor'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.constructor'
     package: '@azure/storage-blob'
     summary: Creates an instance of ContainerClient.
     remarks: ''
@@ -121,11 +125,13 @@ constructors:
           type: string
           description: Container name.
         - id: options
-          type: <xref uid="@azure/storage-blob.StoragePipelineOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.StoragePipelineOptions" />
           description: ''
 properties:
   - name: accountName
-    uid: '@azure/storage-blob.ContainerClient.accountName'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.accountName'
     package: '@azure/storage-blob'
     summary: ''
     fullName: accountName
@@ -138,7 +144,7 @@ properties:
         type: string
         description: ''
   - name: containerName
-    uid: '@azure/storage-blob.ContainerClient.containerName'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.containerName'
     package: '@azure/storage-blob'
     summary: The name of the container.
     fullName: containerName
@@ -151,7 +157,7 @@ properties:
         type: string
         description: ''
   - name: credential
-    uid: '@azure/storage-blob.ContainerClient.credential'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.credential'
     package: '@azure/storage-blob'
     summary: >-
       Such as AnonymousCredential, StorageSharedKeyCredential or any credential
@@ -168,11 +174,13 @@ properties:
         TokenCredential
       return:
         type: >-
-          <xref uid="@azure/storage-blob.StorageSharedKeyCredential" /> | <xref
-          uid="@azure/storage-blob.AnonymousCredential" /> | TokenCredential
+          <xref
+          uid="@azure/storage-blob.storage-blob.d.StorageSharedKeyCredential" />
+          | <xref uid="@azure/storage-blob.storage-blob.d.AnonymousCredential"
+          /> | TokenCredential
         description: ''
   - name: url
-    uid: '@azure/storage-blob.ContainerClient.url'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.url'
     package: '@azure/storage-blob'
     summary: Encoded URL string value.
     fullName: url
@@ -186,7 +194,7 @@ properties:
         description: ''
 methods:
   - name: create(ContainerCreateOptions)
-    uid: '@azure/storage-blob.ContainerClient.create'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.create'
     package: '@azure/storage-blob'
     summary: |-
       Creates a new container under the specified account. If the container with
@@ -198,15 +206,18 @@ methods:
       content: 'function create(options?: ContainerCreateOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerCreateOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerCreateOptions" />
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/storage-blob.ContainerCreateResponse"
+          Promise&lt;<xref
+          uid="@azure/storage-blob.storage-blob.d.ContainerCreateResponse"
           />&gt;
         description: ''
   - name: createIfNotExists(ContainerCreateOptions)
-    uid: '@azure/storage-blob.ContainerClient.createIfNotExists'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.createIfNotExists'
     package: '@azure/storage-blob'
     summary: |-
       Creates a new container under the specified account. If the container with
@@ -218,15 +229,18 @@ methods:
       content: 'function createIfNotExists(options?: ContainerCreateOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerCreateOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerCreateOptions" />
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-blob.ContainerCreateIfNotExistsResponse" />&gt;
+          uid="@azure/storage-blob.storage-blob.d.ContainerCreateIfNotExistsResponse"
+          />&gt;
         description: ''
   - name: delete(ContainerDeleteMethodOptions)
-    uid: '@azure/storage-blob.ContainerClient.delete'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.delete'
     package: '@azure/storage-blob'
     summary: |-
       Marks the specified container for deletion. The container and any blobs
@@ -238,15 +252,19 @@ methods:
       content: 'function delete(options?: ContainerDeleteMethodOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerDeleteMethodOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerDeleteMethodOptions"
+            />
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/storage-blob.ContainerDeleteResponse"
+          Promise&lt;<xref
+          uid="@azure/storage-blob.storage-blob.d.ContainerDeleteResponse"
           />&gt;
         description: ''
   - name: 'deleteBlob(string, ContainerDeleteBlobOptions)'
-    uid: '@azure/storage-blob.ContainerClient.deleteBlob'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.deleteBlob'
     package: '@azure/storage-blob'
     summary: >-
       Marks the specified blob or snapshot for deletion. The blob is later
@@ -270,13 +288,18 @@ methods:
           type: string
           description: ''
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerDeleteBlobOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerDeleteBlobOptions"
+            />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/storage-blob.BlobDeleteResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/storage-blob.storage-blob.d.BlobDeleteResponse" />&gt;
         description: Block blob deletion response data.
   - name: deleteIfExists(ContainerDeleteMethodOptions)
-    uid: '@azure/storage-blob.ContainerClient.deleteIfExists'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.deleteIfExists'
     package: '@azure/storage-blob'
     summary: >-
       Marks the specified container for deletion if it exists. The container and
@@ -290,15 +313,19 @@ methods:
       content: 'function deleteIfExists(options?: ContainerDeleteMethodOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerDeleteMethodOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerDeleteMethodOptions"
+            />
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-blob.ContainerDeleteIfExistsResponse" />&gt;
+          uid="@azure/storage-blob.storage-blob.d.ContainerDeleteIfExistsResponse"
+          />&gt;
         description: ''
   - name: exists(ContainerExistsOptions)
-    uid: '@azure/storage-blob.ContainerClient.exists'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.exists'
     package: '@azure/storage-blob'
     summary: >
       Returns true if the Azure container resource represented by this client
@@ -318,13 +345,15 @@ methods:
       content: 'function exists(options?: ContainerExistsOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerExistsOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerExistsOptions" />
           description: ''
       return:
         type: Promise&lt;boolean&gt;
         description: ''
   - name: getAccessPolicy(ContainerGetAccessPolicyOptions)
-    uid: '@azure/storage-blob.ContainerClient.getAccessPolicy'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getAccessPolicy'
     package: '@azure/storage-blob'
     summary: >
       Gets the permissions for the specified container. The permissions indicate
@@ -343,15 +372,19 @@ methods:
       content: 'function getAccessPolicy(options?: ContainerGetAccessPolicyOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerGetAccessPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerGetAccessPolicyOptions"
+            />
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-blob.ContainerGetAccessPolicyResponse" />&gt;
+          uid="@azure/storage-blob.storage-blob.d.ContainerGetAccessPolicyResponse"
+          />&gt;
         description: ''
   - name: getAppendBlobClient(string)
-    uid: '@azure/storage-blob.ContainerClient.getAppendBlobClient'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getAppendBlobClient'
     package: '@azure/storage-blob'
     summary: 'Creates an <xref:AppendBlobClient>'
     remarks: ''
@@ -364,10 +397,10 @@ methods:
           type: string
           description: An append blob name
       return:
-        type: <xref uid="@azure/storage-blob.AppendBlobClient" />
+        type: <xref uid="@azure/storage-blob.storage-blob.d.AppendBlobClient" />
         description: ''
   - name: getBlobClient(string)
-    uid: '@azure/storage-blob.ContainerClient.getBlobClient'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getBlobClient'
     package: '@azure/storage-blob'
     summary: 'Creates a <xref:BlobClient>'
     remarks: ''
@@ -380,10 +413,10 @@ methods:
           type: string
           description: A blob name
       return:
-        type: <xref uid="@azure/storage-blob.BlobClient" />
+        type: <xref uid="@azure/storage-blob.storage-blob.d.BlobClient" />
         description: A new BlobClient object for the given blob name.
   - name: getBlobLeaseClient(string)
-    uid: '@azure/storage-blob.ContainerClient.getBlobLeaseClient'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getBlobLeaseClient'
     package: '@azure/storage-blob'
     summary: 'Get a <xref:BlobLeaseClient> that manages leases on the container.'
     remarks: ''
@@ -396,10 +429,10 @@ methods:
           type: string
           description: ''
       return:
-        type: <xref uid="@azure/storage-blob.BlobLeaseClient" />
+        type: <xref uid="@azure/storage-blob.storage-blob.d.BlobLeaseClient" />
         description: A new BlobLeaseClient object for managing leases on the container.
   - name: getBlockBlobClient(string)
-    uid: '@azure/storage-blob.ContainerClient.getBlockBlobClient'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getBlockBlobClient'
     package: '@azure/storage-blob'
     summary: 'Creates a <xref:BlockBlobClient>'
     remarks: ''
@@ -412,10 +445,10 @@ methods:
           type: string
           description: A block blob name
       return:
-        type: <xref uid="@azure/storage-blob.BlockBlobClient" />
+        type: <xref uid="@azure/storage-blob.storage-blob.d.BlockBlobClient" />
         description: ''
   - name: getPageBlobClient(string)
-    uid: '@azure/storage-blob.ContainerClient.getPageBlobClient'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getPageBlobClient'
     package: '@azure/storage-blob'
     summary: 'Creates a <xref:PageBlobClient>'
     remarks: ''
@@ -428,10 +461,10 @@ methods:
           type: string
           description: A page blob name
       return:
-        type: <xref uid="@azure/storage-blob.PageBlobClient" />
+        type: <xref uid="@azure/storage-blob.storage-blob.d.PageBlobClient" />
         description: ''
   - name: getProperties(ContainerGetPropertiesOptions)
-    uid: '@azure/storage-blob.ContainerClient.getProperties'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.getProperties'
     package: '@azure/storage-blob'
     summary: >-
       Returns all user-defined metadata and system properties for the specified
@@ -445,15 +478,19 @@ methods:
       content: 'function getProperties(options?: ContainerGetPropertiesOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerGetPropertiesOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerGetPropertiesOptions"
+            />
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-blob.ContainerGetPropertiesResponse" />&gt;
+          uid="@azure/storage-blob.storage-blob.d.ContainerGetPropertiesResponse"
+          />&gt;
         description: ''
   - name: 'listBlobsByHierarchy(string, ContainerListBlobsOptions)'
-    uid: '@azure/storage-blob.ContainerClient.listBlobsByHierarchy'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.listBlobsByHierarchy'
     package: '@azure/storage-blob'
     summary: >
       Returns an async iterable iterator to list all the blobs by hierarchy.
@@ -566,14 +603,17 @@ methods:
           type: string
           description: The character or string used to define the virtual hierarchy
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerListBlobsOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerListBlobsOptions"
+            />
           description: ''
       return:
         type: >-
           PagedAsyncIterableIterator&lt;Object & <xref
-          uid="@azure/storage-blob.BlobPrefix" /> | Object & <xref
-          uid="@azure/storage-blob.BlobItem" />, <xref
-          uid="@azure/storage-blob.ContainerListBlobHierarchySegmentResponse"
+          uid="@azure/storage-blob.storage-blob.d.BlobPrefix" /> | Object &
+          <xref uid="@azure/storage-blob.storage-blob.d.BlobItem" />, <xref
+          uid="@azure/storage-blob.storage-blob.d.ContainerListBlobHierarchySegmentResponse"
           />&gt;
         description: |-
           {(PagedAsyncIterableIterator<
@@ -581,7 +621,7 @@ methods:
               ContainerListBlobHierarchySegmentResponse
             >)}
   - name: listBlobsFlat(ContainerListBlobsOptions)
-    uid: '@azure/storage-blob.ContainerClient.listBlobsFlat'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.listBlobsFlat'
     package: '@azure/storage-blob'
     summary: >
       Returns an async iterable iterator to list all the blobs
@@ -695,18 +735,22 @@ methods:
       content: 'function listBlobsFlat(options?: ContainerListBlobsOptions)'
       parameters:
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerListBlobsOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerListBlobsOptions"
+            />
           description: ''
       return:
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/storage-blob.BlobItem"
-          />, <xref
-          uid="@azure/storage-blob.ContainerListBlobFlatSegmentResponse" />&gt;
+          PagedAsyncIterableIterator&lt;<xref
+          uid="@azure/storage-blob.storage-blob.d.BlobItem" />, <xref
+          uid="@azure/storage-blob.storage-blob.d.ContainerListBlobFlatSegmentResponse"
+          />&gt;
         description: An asyncIterableIterator that supports paging.
   - name: >-
       setAccessPolicy(PublicAccessType, SignedIdentifier[],
       ContainerSetAccessPolicyOptions)
-    uid: '@azure/storage-blob.ContainerClient.setAccessPolicy'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.setAccessPolicy'
     package: '@azure/storage-blob'
     summary: >-
       Sets the permissions for the specified container. The permissions indicate
@@ -738,21 +782,25 @@ methods:
         SignedIdentifier[], options?: ContainerSetAccessPolicyOptions)
       parameters:
         - id: access
-          type: <xref uid="@azure/storage-blob.PublicAccessType" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.PublicAccessType" />
           description: ''
         - id: containerAcl
-          type: '<xref uid="@azure/storage-blob.SignedIdentifier" />[]'
+          type: '<xref uid="@azure/storage-blob.storage-blob.d.SignedIdentifier" />[]'
           description: ''
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerSetAccessPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerSetAccessPolicyOptions"
+            />
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-blob.ContainerSetAccessPolicyResponse" />&gt;
+          uid="@azure/storage-blob.storage-blob.d.ContainerSetAccessPolicyResponse"
+          />&gt;
         description: ''
   - name: 'setMetadata(Metadata, ContainerSetMetadataOptions)'
-    uid: '@azure/storage-blob.ContainerClient.setMetadata'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.setMetadata'
     package: '@azure/storage-blob'
     summary: >
       Sets one or more user-defined name-value pairs for the specified
@@ -771,18 +819,22 @@ methods:
         ContainerSetMetadataOptions)
       parameters:
         - id: metadata
-          type: <xref uid="@azure/storage-blob.Metadata" />
+          type: <xref uid="@azure/storage-blob.storage-blob.d.Metadata" />
           description: ''
         - id: options
-          type: <xref uid="@azure/storage-blob.ContainerSetMetadataOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.ContainerSetMetadataOptions"
+            />
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-blob.ContainerSetMetadataResponse" />&gt;
+          uid="@azure/storage-blob.storage-blob.d.ContainerSetMetadataResponse"
+          />&gt;
         description: ''
   - name: 'uploadBlockBlob(string, HttpRequestBody, number, BlockBlobUploadOptions)'
-    uid: '@azure/storage-blob.ContainerClient.uploadBlockBlob'
+    uid: '@azure/storage-blob.storage-blob.d.ContainerClient.uploadBlockBlob'
     package: '@azure/storage-blob'
     summary: >
       Creates a new block blob, or updates the content of an existing block
@@ -830,11 +882,13 @@ methods:
             length for a
                                           string including non non-Base64/Hex-encoded characters.
         - id: options
-          type: <xref uid="@azure/storage-blob.BlockBlobUploadOptions" />
+          type: >-
+            <xref
+            uid="@azure/storage-blob.storage-blob.d.BlockBlobUploadOptions" />
           description: ''
       return:
         type: Promise&lt;Object&gt;
         description: >-
           >} Block Blob upload response data and the corresponding
           BlockBlobClient instance.
-extends: <xref uid="@azure/storage-blob.StorageClient" />
+extends: <xref uid="@azure/storage-blob.storage-blob.d.StorageClient" />

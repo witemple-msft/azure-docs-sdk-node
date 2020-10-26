@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Twin
-uid: azure-iothub.Twin
+uid: azure-iothub.twin.d.Twin
 package: azure-iothub
 summary: >
   A Device Twin is document describing the state of a device that is stored by
@@ -30,7 +30,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'Twin(DeviceIdentity | string, Registry)'
-    uid: azure-iothub.Twin.constructor
+    uid: azure-iothub.twin.d.Twin.constructor
     package: azure-iothub
     summary: >-
       Instantiates a new <xref:azure-iothub.Twin>. The recommended way to get a
@@ -49,12 +49,12 @@ constructors:
             Object,
                                                 it must contain a deviceId property.
         - id: registryClient
-          type: <xref uid="azure-iothub.Registry" />
+          type: <xref uid="azure-iothub.registry.d.Registry" />
           description: |
             The HTTP registry client used to execute REST API calls.
 properties:
   - name: deviceId
-    uid: azure-iothub.Twin.deviceId
+    uid: azure-iothub.twin.d.Twin.deviceId
     package: azure-iothub
     summary: >-
       Unique identifier of the device identity associated with the twin, as it
@@ -69,7 +69,7 @@ properties:
         type: string
         description: ''
   - name: etag
-    uid: azure-iothub.Twin.etag
+    uid: azure-iothub.twin.d.Twin.etag
     package: azure-iothub
     summary: >-
       Tag used in optimistic concurrency to avoid multiple parallel editions of
@@ -84,7 +84,7 @@ properties:
         type: string
         description: ''
   - name: modelId
-    uid: azure-iothub.Twin.modelId
+    uid: azure-iothub.twin.d.Twin.modelId
     package: azure-iothub
     summary: >-
       Model Id of the device identity associated with the twin, as it exists in
@@ -99,7 +99,7 @@ properties:
         type: string
         description: ''
   - name: moduleId
-    uid: azure-iothub.Twin.moduleId
+    uid: azure-iothub.twin.d.Twin.moduleId
     package: azure-iothub
     summary: >-
       Module identifier for the module associated with the twin, as it exists in
@@ -114,7 +114,7 @@ properties:
         type: string
         description: ''
   - name: properties
-    uid: azure-iothub.Twin.properties
+    uid: azure-iothub.twin.d.Twin.properties
     package: azure-iothub
     summary: >-
       The desired and reported properties dictionnaries (respectively in
@@ -129,7 +129,7 @@ properties:
         type: Object
         description: ''
   - name: tags
-    uid: azure-iothub.Twin.tags
+    uid: azure-iothub.twin.d.Twin.tags
     package: azure-iothub
     summary: >-
       Collection of key/value pairs that is available only on the service side
@@ -145,7 +145,7 @@ properties:
         description: ''
 methods:
   - name: get()
-    uid: azure-iothub.Twin.get_1
+    uid: azure-iothub.twin.d.Twin.get_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -155,11 +155,12 @@ methods:
       content: function get()
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
-          />&lt;<xref uid="azure-iothub.Twin" />&gt;&gt;
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage" />&lt;<xref
+          uid="azure-iothub.twin.d.Twin" />&gt;&gt;
         description: ''
   - name: get(IncomingMessageCallback<Twin>)
-    uid: azure-iothub.Twin.get
+    uid: azure-iothub.twin.d.Twin.get
     package: azure-iothub
     summary: Gets the latest version of this device twin from the IoT Hub service.
     remarks: ''
@@ -170,11 +171,11 @@ methods:
       parameters:
         - id: done
           type: >-
-            <xref uid="azure-iothub.IncomingMessageCallback" />&lt;<xref
-            uid="azure-iothub.Twin" />&gt;
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;<xref uid="azure-iothub.twin.d.Twin" />&gt;
           description: ''
   - name: toJSON()
-    uid: azure-iothub.Twin.toJSON
+    uid: azure-iothub.twin.d.Twin.toJSON
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -186,7 +187,7 @@ methods:
         type: object
         description: ''
   - name: update(any)
-    uid: azure-iothub.Twin.update_1
+    uid: azure-iothub.twin.d.Twin.update_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -200,11 +201,12 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
-          />&lt;<xref uid="azure-iothub.Twin" />&gt;&gt;
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage" />&lt;<xref
+          uid="azure-iothub.twin.d.Twin" />&gt;&gt;
         description: ''
   - name: 'update(any, IncomingMessageCallback<Twin>)'
-    uid: azure-iothub.Twin.update
+    uid: azure-iothub.twin.d.Twin.update
     package: azure-iothub
     summary: Update the device twin with the patch provided as argument.
     remarks: ''
@@ -218,6 +220,6 @@ methods:
           description: Object containing the new values to apply to this device twin.
         - id: done
           type: >-
-            <xref uid="azure-iothub.IncomingMessageCallback" />&lt;<xref
-            uid="azure-iothub.Twin" />&gt;
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;<xref uid="azure-iothub.twin.d.Twin" />&gt;
           description: ''

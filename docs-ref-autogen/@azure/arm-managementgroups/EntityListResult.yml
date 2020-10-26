@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: EntityListResult
-uid: '@azure/arm-managementgroups.EntityListResult'
+uid: '@azure/arm-managementgroups.models.index.d.EntityListResult'
 package: '@azure/arm-managementgroups'
 summary: ''
 fullName: EntityListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-managementgroups.EntityListResult.Array'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.Array'
     package: '@azure/arm-managementgroups'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: count
-    uid: '@azure/arm-managementgroups.EntityListResult.count'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.count'
     package: '@azure/arm-managementgroups'
     summary: ''
     fullName: count
@@ -36,7 +36,7 @@ properties:
         type: undefined | number
         description: ''
   - name: length
-    uid: '@azure/arm-managementgroups.EntityListResult.length'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.length'
     package: '@azure/arm-managementgroups'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -51,7 +51,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-managementgroups.EntityListResult.nextLink'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.nextLink'
     package: '@azure/arm-managementgroups'
     summary: ''
     fullName: nextLink
@@ -65,7 +65,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<EntityInfo>[])'
-    uid: '@azure/arm-managementgroups.EntityListResult.concat'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.concat'
     package: '@azure/arm-managementgroups'
     summary: Combines two or more arrays.
     remarks: ''
@@ -76,32 +76,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-managementgroups.EntityInfo"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-managementgroups.EntityListResult.concat_1'
+  - name: 'concat(EntityInfo | ConcatArray<EntityInfo>[])'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.concat_1'
     package: '@azure/arm-managementgroups'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: EntityInfo | ConcatArray<EntityInfo>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.copyWithin'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.copyWithin'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -139,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-managementgroups.EntityListResult.entries'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.entries'
     package: '@azure/arm-managementgroups'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -153,7 +156,7 @@ methods:
   - name: >-
       every((value: EntityInfo, index: number, array: EntityInfo[]) => unknown,
       any)
-    uid: '@azure/arm-managementgroups.EntityListResult.every'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.every_1'
     package: '@azure/arm-managementgroups'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -161,28 +164,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: EntityInfo, index: number, array:
+        function every(predicate: (value: EntityInfo, index: number, array:
         EntityInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EntityInfo, index: number, array: EntityInfo[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: EntityInfo, index: number, array: EntityInfo[]) => value,
+      any)
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.every'
+    package: '@azure/arm-managementgroups'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: EntityInfo, index: number, array:
+        EntityInfo[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: EntityInfo, index: number, array: EntityInfo[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(EntityInfo, undefined | number, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.fill'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.fill'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -196,7 +240,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+          type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -218,7 +262,7 @@ methods:
   - name: >-
       filter((value: EntityInfo, index: number, array: EntityInfo[]) => unknown,
       any)
-    uid: '@azure/arm-managementgroups.EntityListResult.filter_1'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.filter_1'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -228,30 +272,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: EntityInfo, index: number, array:
+        function filter(predicate: (value: EntityInfo, index: number, array:
         EntityInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EntityInfo, index: number, array: EntityInfo[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
   - name: >-
       filter<S>((value: EntityInfo, index: number, array: EntityInfo[]) =>
-      boolean, any)
-    uid: '@azure/arm-managementgroups.EntityListResult.filter'
+      value, any)
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.filter'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -261,21 +304,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: EntityInfo, index: number, array:
-        EntityInfo[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: EntityInfo, index: number, array:
+        EntityInfo[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: EntityInfo, index: number, array: EntityInfo[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: EntityInfo, index: number, array: EntityInfo[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -284,7 +324,7 @@ methods:
   - name: >-
       find((value: EntityInfo, index: number, obj: EntityInfo[]) => unknown,
       any)
-    uid: '@azure/arm-managementgroups.EntityListResult.find_1'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.find_1'
     package: '@azure/arm-managementgroups'
     summary: ''
     remarks: ''
@@ -302,12 +342,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: EntityInfo, index: number, obj: EntityInfo[])
-      => boolean, any)
-    uid: '@azure/arm-managementgroups.EntityListResult.find'
+      => value, any)
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.find'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -320,12 +362,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: EntityInfo, index:
-        number, obj: EntityInfo[]) => boolean, thisArg?: any)
+        number, obj: EntityInfo[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: EntityInfo, index: number, obj: EntityInfo[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -348,7 +390,7 @@ methods:
   - name: >-
       findIndex((value: EntityInfo, index: number, obj: EntityInfo[]) =>
       unknown, any)
-    uid: '@azure/arm-managementgroups.EntityListResult.findIndex'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.findIndex'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -387,7 +429,7 @@ methods:
   - name: >-
       forEach((value: EntityInfo, index: number, array: EntityInfo[]) => void,
       any)
-    uid: '@azure/arm-managementgroups.EntityListResult.forEach'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.forEach'
     package: '@azure/arm-managementgroups'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -410,7 +452,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(EntityInfo, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.includes'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.includes'
     package: '@azure/arm-managementgroups'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -424,7 +466,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+          type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +477,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(EntityInfo, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.indexOf'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.indexOf'
     package: '@azure/arm-managementgroups'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -447,7 +489,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+          type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -458,7 +500,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-managementgroups.EntityListResult.join'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.join'
     package: '@azure/arm-managementgroups'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -479,7 +521,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-managementgroups.EntityListResult.keys'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.keys'
     package: '@azure/arm-managementgroups'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -491,7 +533,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(EntityInfo, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.lastIndexOf'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.lastIndexOf'
     package: '@azure/arm-managementgroups'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -503,7 +545,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+          type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -514,7 +556,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: EntityInfo, index: number, array: EntityInfo[]) => U, any)'
-    uid: '@azure/arm-managementgroups.EntityListResult.map'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.map'
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -542,7 +584,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-managementgroups.EntityListResult.pop'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.pop'
     package: '@azure/arm-managementgroups'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -551,10 +593,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" /> |
+          undefined
         description: ''
   - name: 'push(EntityInfo[])'
-    uid: '@azure/arm-managementgroups.EntityListResult.push'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.push'
     package: '@azure/arm-managementgroups'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -564,7 +608,9 @@ methods:
       content: 'function push(items: EntityInfo[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+          type: >-
+            <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -573,7 +619,7 @@ methods:
   - name: >-
       reduce((previousValue: EntityInfo, currentValue: EntityInfo, currentIndex:
       number, array: EntityInfo[]) => EntityInfo)
-    uid: '@azure/arm-managementgroups.EntityListResult.reduce'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reduce'
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -596,12 +642,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+        type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
         description: ''
   - name: >-
       reduce((previousValue: EntityInfo, currentValue: EntityInfo, currentIndex:
       number, array: EntityInfo[]) => EntityInfo, EntityInfo)
-    uid: '@azure/arm-managementgroups.EntityListResult.reduce_1'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reduce_1'
     package: '@azure/arm-managementgroups'
     summary: ''
     remarks: ''
@@ -619,15 +665,15 @@ methods:
             number, array: EntityInfo[]) =&gt; EntityInfo
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+          type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+        type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: EntityInfo, currentIndex:
       number, array: EntityInfo[]) => U, U)
-    uid: '@azure/arm-managementgroups.EntityListResult.reduce_2'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reduce_2'
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -662,7 +708,7 @@ methods:
   - name: >-
       reduceRight((previousValue: EntityInfo, currentValue: EntityInfo,
       currentIndex: number, array: EntityInfo[]) => EntityInfo)
-    uid: '@azure/arm-managementgroups.EntityListResult.reduceRight'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reduceRight'
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -687,12 +733,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+        type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
         description: ''
   - name: >-
       reduceRight((previousValue: EntityInfo, currentValue: EntityInfo,
       currentIndex: number, array: EntityInfo[]) => EntityInfo, EntityInfo)
-    uid: '@azure/arm-managementgroups.EntityListResult.reduceRight_1'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reduceRight_1'
     package: '@azure/arm-managementgroups'
     summary: ''
     remarks: ''
@@ -710,15 +756,15 @@ methods:
             number, array: EntityInfo[]) =&gt; EntityInfo
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+          type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" />
+        type: <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: EntityInfo, currentIndex:
       number, array: EntityInfo[]) => U, U)
-    uid: '@azure/arm-managementgroups.EntityListResult.reduceRight_2'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reduceRight_2'
     package: '@azure/arm-managementgroups'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -752,7 +798,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-managementgroups.EntityListResult.reverse'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.reverse'
     package: '@azure/arm-managementgroups'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -761,10 +807,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-managementgroups.EntityListResult.shift'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.shift'
     package: '@azure/arm-managementgroups'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -773,10 +819,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-managementgroups.EntityInfo" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.slice'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.slice'
     package: '@azure/arm-managementgroups'
     summary: Returns a section of an array.
     remarks: ''
@@ -790,15 +838,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
   - name: >-
       some((value: EntityInfo, index: number, array: EntityInfo[]) => unknown,
       any)
-    uid: '@azure/arm-managementgroups.EntityListResult.some'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.some'
     package: '@azure/arm-managementgroups'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -808,28 +857,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: EntityInfo, index: number, array:
+        function some(predicate: (value: EntityInfo, index: number, array:
         EntityInfo[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EntityInfo, index: number, array: EntityInfo[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: EntityInfo, b: EntityInfo) => number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.sort'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.sort'
     package: '@azure/arm-managementgroups'
     summary: Sorts an array.
     remarks: ''
@@ -843,14 +897,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: EntityInfo, b: EntityInfo) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, EntityInfo[])'
-    uid: '@azure/arm-managementgroups.EntityListResult.splice_1'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.splice_1'
     package: '@azure/arm-managementgroups'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -870,14 +935,16 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+          type: >-
+            <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-managementgroups.EntityListResult.splice'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.splice'
     package: '@azure/arm-managementgroups'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -898,10 +965,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+        type: '<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-managementgroups.EntityListResult.toLocaleString'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.toLocaleString'
     package: '@azure/arm-managementgroups'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -915,7 +982,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-managementgroups.EntityListResult.toString'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.toString'
     package: '@azure/arm-managementgroups'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -927,7 +994,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(EntityInfo[])'
-    uid: '@azure/arm-managementgroups.EntityListResult.unshift'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.unshift'
     package: '@azure/arm-managementgroups'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -937,14 +1004,16 @@ methods:
       content: 'function unshift(items: EntityInfo[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-managementgroups.EntityInfo" />[]'
+          type: >-
+            <xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-managementgroups.EntityListResult.values'
+    uid: '@azure/arm-managementgroups.models.index.d.EntityListResult.values'
     package: '@azure/arm-managementgroups'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -954,7 +1023,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-managementgroups.EntityInfo"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-managementgroups.EntityInfo" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.EntityListResult.[Symbol.iterator]
+    package: '@azure/arm-managementgroups'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-managementgroups.models.index.d.EntityListResult.[Symbol.unscopables]
+    package: '@azure/arm-managementgroups'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-managementgroups.models.index.d.ManagementGroupListResult.Array"
+  />&lt;<xref uid="@azure/arm-managementgroups.models.index.d.EntityInfo" />&gt;

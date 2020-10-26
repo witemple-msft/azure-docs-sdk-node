@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AppResourceCollection
-uid: '@azure/arm-appplatform.AppResourceCollection'
+uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection'
 package: '@azure/arm-appplatform'
 summary: ''
 fullName: AppResourceCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appplatform.AppResourceCollection.Array'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.Array'
     package: '@azure/arm-appplatform'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appplatform.AppResourceCollection.length'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.length'
     package: '@azure/arm-appplatform'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appplatform.AppResourceCollection.nextLink'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.nextLink'
     package: '@azure/arm-appplatform'
     summary: |-
       URL client should use to fetch the next page (per server side paging).
@@ -53,8 +53,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(AppResource | ConcatArray<AppResource>[])'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.concat_1'
+    package: '@azure/arm-appplatform'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: AppResource | ConcatArray<AppResource>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-appplatform.models.index.d.AppResource" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appplatform.models.index.d.AppResource" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
+        description: ''
   - name: 'concat(ConcatArray<AppResource>[])'
-    uid: '@azure/arm-appplatform.AppResourceCollection.concat'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.concat'
     package: '@azure/arm-appplatform'
     summary: Combines two or more arrays.
     remarks: ''
@@ -65,32 +85,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appplatform.AppResource"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appplatform.models.index.d.AppResource" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appplatform.AppResourceCollection.concat_1'
-    package: '@azure/arm-appplatform'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.copyWithin'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.copyWithin'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +131,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appplatform.AppResourceCollection.entries'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.entries'
     package: '@azure/arm-appplatform'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +145,7 @@ methods:
   - name: >-
       every((value: AppResource, index: number, array: AppResource[]) =>
       unknown, any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.every'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.every_1'
     package: '@azure/arm-appplatform'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +153,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: AppResource, index: number, array:
+        function every(predicate: (value: AppResource, index: number, array:
         AppResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AppResource, index: number, array: AppResource[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: AppResource, index: number, array: AppResource[]) =>
+      value, any)
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.every'
+    package: '@azure/arm-appplatform'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: AppResource, index: number, array:
+        AppResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: AppResource, index: number, array: AppResource[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(AppResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.fill'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.fill'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appplatform.AppResource" />
+          type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +253,7 @@ methods:
   - name: >-
       filter((value: AppResource, index: number, array: AppResource[]) =>
       unknown, any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.filter_1'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.filter_1'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: AppResource, index: number, array:
+        function filter(predicate: (value: AppResource, index: number, array:
         AppResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AppResource, index: number, array: AppResource[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
         description: ''
   - name: >-
       filter<S>((value: AppResource, index: number, array: AppResource[]) =>
-      boolean, any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.filter'
+      value, any)
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.filter'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +295,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: AppResource, index: number,
-        array: AppResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: AppResource, index: number, array:
+        AppResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AppResource, index: number, array: AppResource[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +317,7 @@ methods:
   - name: >-
       find((value: AppResource, index: number, obj: AppResource[]) => unknown,
       any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.find_1'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.find_1'
     package: '@azure/arm-appplatform'
     summary: ''
     remarks: ''
@@ -293,12 +337,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appplatform.models.index.d.AppResource" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: AppResource, index: number, obj:
-      AppResource[]) => boolean, any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.find'
+      AppResource[]) => value, any)
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.find'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +357,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: AppResource, index:
-        number, obj: AppResource[]) => boolean, thisArg?: any)
+        number, obj: AppResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: AppResource, index: number, obj: AppResource[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +385,7 @@ methods:
   - name: >-
       findIndex((value: AppResource, index: number, obj: AppResource[]) =>
       unknown, any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.findIndex'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.findIndex'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +426,7 @@ methods:
   - name: >-
       forEach((value: AppResource, index: number, array: AppResource[]) => void,
       any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.forEach'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.forEach'
     package: '@azure/arm-appplatform'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +449,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(AppResource, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.includes'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.includes'
     package: '@azure/arm-appplatform'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appplatform.AppResource" />
+          type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +474,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(AppResource, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.indexOf'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.indexOf'
     package: '@azure/arm-appplatform'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +486,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appplatform.AppResource" />
+          type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +497,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appplatform.AppResourceCollection.join'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.join'
     package: '@azure/arm-appplatform'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +518,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appplatform.AppResourceCollection.keys'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.keys'
     package: '@azure/arm-appplatform'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +530,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(AppResource, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.lastIndexOf'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.lastIndexOf'
     package: '@azure/arm-appplatform'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +542,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appplatform.AppResource" />
+          type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +555,7 @@ methods:
   - name: >-
       map<U>((value: AppResource, index: number, array: AppResource[]) => U,
       any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.map'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.map'
     package: '@azure/arm-appplatform'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -537,7 +583,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appplatform.AppResourceCollection.pop'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.pop'
     package: '@azure/arm-appplatform'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -546,10 +592,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appplatform.models.index.d.AppResource" /> |
+          undefined
         description: ''
   - name: 'push(AppResource[])'
-    uid: '@azure/arm-appplatform.AppResourceCollection.push'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.push'
     package: '@azure/arm-appplatform'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -559,7 +607,7 @@ methods:
       content: 'function push(items: AppResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+          type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
           description: |
             New elements of the Array.
       return:
@@ -568,7 +616,7 @@ methods:
   - name: >-
       reduce((previousValue: AppResource, currentValue: AppResource,
       currentIndex: number, array: AppResource[]) => AppResource)
-    uid: '@azure/arm-appplatform.AppResourceCollection.reduce'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reduce'
     package: '@azure/arm-appplatform'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -591,12 +639,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" />
+        type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
         description: ''
   - name: >-
       reduce((previousValue: AppResource, currentValue: AppResource,
       currentIndex: number, array: AppResource[]) => AppResource, AppResource)
-    uid: '@azure/arm-appplatform.AppResourceCollection.reduce_1'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reduce_1'
     package: '@azure/arm-appplatform'
     summary: ''
     remarks: ''
@@ -614,15 +662,15 @@ methods:
             currentIndex: number, array: AppResource[]) =&gt; AppResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appplatform.AppResource" />
+          type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" />
+        type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: AppResource, currentIndex:
       number, array: AppResource[]) => U, U)
-    uid: '@azure/arm-appplatform.AppResourceCollection.reduce_2'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reduce_2'
     package: '@azure/arm-appplatform'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -657,7 +705,7 @@ methods:
   - name: >-
       reduceRight((previousValue: AppResource, currentValue: AppResource,
       currentIndex: number, array: AppResource[]) => AppResource)
-    uid: '@azure/arm-appplatform.AppResourceCollection.reduceRight'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reduceRight'
     package: '@azure/arm-appplatform'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -682,12 +730,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" />
+        type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
         description: ''
   - name: >-
       reduceRight((previousValue: AppResource, currentValue: AppResource,
       currentIndex: number, array: AppResource[]) => AppResource, AppResource)
-    uid: '@azure/arm-appplatform.AppResourceCollection.reduceRight_1'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reduceRight_1'
     package: '@azure/arm-appplatform'
     summary: ''
     remarks: ''
@@ -705,15 +753,15 @@ methods:
             currentIndex: number, array: AppResource[]) =&gt; AppResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appplatform.AppResource" />
+          type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" />
+        type: <xref uid="@azure/arm-appplatform.models.index.d.AppResource" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: AppResource, currentIndex:
       number, array: AppResource[]) => U, U)
-    uid: '@azure/arm-appplatform.AppResourceCollection.reduceRight_2'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reduceRight_2'
     package: '@azure/arm-appplatform'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -747,7 +795,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appplatform.AppResourceCollection.reverse'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.reverse'
     package: '@azure/arm-appplatform'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -756,10 +804,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appplatform.AppResourceCollection.shift'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.shift'
     package: '@azure/arm-appplatform'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -768,10 +816,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appplatform.AppResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appplatform.models.index.d.AppResource" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.slice'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.slice'
     package: '@azure/arm-appplatform'
     summary: Returns a section of an array.
     remarks: ''
@@ -785,15 +835,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
         description: ''
   - name: >-
       some((value: AppResource, index: number, array: AppResource[]) => unknown,
       any)
-    uid: '@azure/arm-appplatform.AppResourceCollection.some'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.some'
     package: '@azure/arm-appplatform'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -803,28 +854,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: AppResource, index: number, array:
+        function some(predicate: (value: AppResource, index: number, array:
         AppResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AppResource, index: number, array: AppResource[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: AppResource, b: AppResource) => number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.sort'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.sort'
     package: '@azure/arm-appplatform'
     summary: Sorts an array.
     remarks: ''
@@ -838,14 +894,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: AppResource, b: AppResource) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, AppResource[])'
-    uid: '@azure/arm-appplatform.AppResourceCollection.splice_1'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.splice_1'
     package: '@azure/arm-appplatform'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -867,14 +934,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+          type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appplatform.AppResourceCollection.splice'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.splice'
     package: '@azure/arm-appplatform'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -895,10 +962,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+        type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appplatform.AppResourceCollection.toLocaleString'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.toLocaleString'
     package: '@azure/arm-appplatform'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -912,7 +979,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appplatform.AppResourceCollection.toString'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.toString'
     package: '@azure/arm-appplatform'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -924,7 +991,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(AppResource[])'
-    uid: '@azure/arm-appplatform.AppResourceCollection.unshift'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.unshift'
     package: '@azure/arm-appplatform'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -934,14 +1001,14 @@ methods:
       content: 'function unshift(items: AppResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appplatform.AppResource" />[]'
+          type: '<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appplatform.AppResourceCollection.values'
+    uid: '@azure/arm-appplatform.models.index.d.AppResourceCollection.values'
     package: '@azure/arm-appplatform'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -951,7 +1018,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-appplatform.AppResource"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appplatform.models.index.d.AppResource" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appplatform.AppResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appplatform.models.index.d.AppResourceCollection.[Symbol.iterator]
+    package: '@azure/arm-appplatform'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appplatform.models.index.d.AppResource" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appplatform.models.index.d.AppResourceCollection.[Symbol.unscopables]
+    package: '@azure/arm-appplatform'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-appplatform.models.index.d.ServiceResourceList.Array"
+  />&lt;<xref uid="@azure/arm-appplatform.models.index.d.AppResource" />&gt;

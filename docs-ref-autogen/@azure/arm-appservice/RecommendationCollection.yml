@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: RecommendationCollection
-uid: '@azure/arm-appservice.RecommendationCollection'
+uid: '@azure/arm-appservice.models.index.d.RecommendationCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: RecommendationCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.RecommendationCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.RecommendationCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.RecommendationCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Recommendation>[])'
-    uid: '@azure/arm-appservice.RecommendationCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appservice.Recommendation"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.Recommendation" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.RecommendationCollection.concat_1'
+  - name: 'concat(Recommendation | ConcatArray<Recommendation>[])'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Recommendation | ConcatArray<Recommendation>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.Recommendation" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.Recommendation" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.RecommendationCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +147,7 @@ methods:
   - name: >-
       every((value: Recommendation, index: number, array: Recommendation[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +155,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Recommendation, index: number, array:
+        function every(predicate: (value: Recommendation, index: number, array:
         Recommendation[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Recommendation, index: number, array: Recommendation[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Recommendation, index: number, array: Recommendation[])
+      => value, any)
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Recommendation, index: number,
+        array: Recommendation[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: Recommendation, index: number, array: Recommendation[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Recommendation, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +233,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.Recommendation" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +255,7 @@ methods:
   - name: >-
       filter((value: Recommendation, index: number, array: Recommendation[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +265,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Recommendation, index: number,
-        array: Recommendation[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: Recommendation, index: number, array:
+        Recommendation[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Recommendation, index: number, array: Recommendation[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
   - name: >-
       filter<S>((value: Recommendation, index: number, array: Recommendation[])
-      => boolean, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.filter'
+      => value, any)
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +297,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Recommendation, index: number,
-        array: Recommendation[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Recommendation, index: number,
+        array: Recommendation[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Recommendation, index: number, array: Recommendation[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +319,7 @@ methods:
   - name: >-
       find((value: Recommendation, index: number, obj: Recommendation[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -295,12 +339,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Recommendation" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Recommendation, index: number, obj:
-      Recommendation[]) => boolean, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.find'
+      Recommendation[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +359,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Recommendation, index:
-        number, obj: Recommendation[]) => boolean, thisArg?: any)
+        number, obj: Recommendation[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Recommendation, index: number, obj:
-            Recommendation[]) =&gt; boolean
+            Recommendation[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +387,7 @@ methods:
   - name: >-
       findIndex((value: Recommendation, index: number, obj: Recommendation[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +428,7 @@ methods:
   - name: >-
       forEach((value: Recommendation, index: number, array: Recommendation[]) =>
       void, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +453,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Recommendation, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +467,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Recommendation" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +478,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Recommendation, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +490,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Recommendation" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +501,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.RecommendationCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +522,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.RecommendationCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +534,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Recommendation, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +546,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Recommendation" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +559,7 @@ methods:
   - name: >-
       map<U>((value: Recommendation, index: number, array: Recommendation[]) =>
       U, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +589,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.RecommendationCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +598,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Recommendation" /> |
+          undefined
         description: ''
   - name: 'push(Recommendation[])'
-    uid: '@azure/arm-appservice.RecommendationCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +613,7 @@ methods:
       content: 'function push(items: Recommendation[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
           description: |
             New elements of the Array.
       return:
@@ -574,7 +622,7 @@ methods:
   - name: >-
       reduce((previousValue: Recommendation, currentValue: Recommendation,
       currentIndex: number, array: Recommendation[]) => Recommendation)
-    uid: '@azure/arm-appservice.RecommendationCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -598,13 +646,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
         description: ''
   - name: >-
       reduce((previousValue: Recommendation, currentValue: Recommendation,
       currentIndex: number, array: Recommendation[]) => Recommendation,
       Recommendation)
-    uid: '@azure/arm-appservice.RecommendationCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -622,15 +670,15 @@ methods:
             currentIndex: number, array: Recommendation[]) =&gt; Recommendation
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.Recommendation" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Recommendation, currentIndex:
       number, array: Recommendation[]) => U, U)
-    uid: '@azure/arm-appservice.RecommendationCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -665,7 +713,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Recommendation, currentValue: Recommendation,
       currentIndex: number, array: Recommendation[]) => Recommendation)
-    uid: '@azure/arm-appservice.RecommendationCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -690,13 +738,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
         description: ''
   - name: >-
       reduceRight((previousValue: Recommendation, currentValue: Recommendation,
       currentIndex: number, array: Recommendation[]) => Recommendation,
       Recommendation)
-    uid: '@azure/arm-appservice.RecommendationCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.RecommendationCollection.reduceRight_1
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -714,15 +763,16 @@ methods:
             currentIndex: number, array: Recommendation[]) =&gt; Recommendation
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.Recommendation" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Recommendation" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Recommendation,
       currentIndex: number, array: Recommendation[]) => U, U)
-    uid: '@azure/arm-appservice.RecommendationCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-appservice.models.index.d.RecommendationCollection.reduceRight_2
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -756,7 +806,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.RecommendationCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -765,10 +815,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.RecommendationCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -777,10 +827,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.Recommendation" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Recommendation" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -794,15 +846,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
   - name: >-
       some((value: Recommendation, index: number, array: Recommendation[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.RecommendationCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -812,28 +865,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Recommendation, index: number, array:
+        function some(predicate: (value: Recommendation, index: number, array:
         Recommendation[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Recommendation, index: number, array: Recommendation[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Recommendation, b: Recommendation) => number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -847,14 +905,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Recommendation, b: Recommendation) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Recommendation[])'
-    uid: '@azure/arm-appservice.RecommendationCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -876,14 +945,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.RecommendationCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -904,10 +973,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.RecommendationCollection.toLocaleString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.RecommendationCollection.toLocaleString
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -921,7 +991,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.RecommendationCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -933,7 +1003,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Recommendation[])'
-    uid: '@azure/arm-appservice.RecommendationCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -943,14 +1013,14 @@ methods:
       content: 'function unshift(items: Recommendation[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Recommendation" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.RecommendationCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.RecommendationCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -960,7 +1030,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-appservice.Recommendation"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.Recommendation" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.Recommendation" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.RecommendationCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.Recommendation" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.RecommendationCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.Recommendation" />&gt;

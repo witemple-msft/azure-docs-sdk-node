@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Annotations
-uid: '@azure/arm-appinsights.Annotations'
+uid: '@azure/arm-appinsights.operations.annotations.d.Annotations'
 package: '@azure/arm-appinsights'
 summary: Class representing a Annotations.
 fullName: Annotations
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Annotations(ApplicationInsightsManagementClientContext)
-    uid: '@azure/arm-appinsights.Annotations.constructor'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.constructor'
     package: '@azure/arm-appinsights'
     summary: Create a Annotations.
     remarks: ''
@@ -22,13 +22,13 @@ constructors:
         - id: client
           type: >-
             <xref
-            uid="@azure/arm-appinsights.ApplicationInsightsManagementClientContext"
+            uid="@azure/arm-appinsights.applicationInsightsManagementClientContext.d.ApplicationInsightsManagementClientContext"
             />
           description: |
             Reference to the service client.
 methods:
   - name: 'create(string, string, Annotation, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.Annotations.create'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.create'
     package: '@azure/arm-appinsights'
     summary: Create an Annotation of an Application Insights component.
     remarks: ''
@@ -41,12 +41,12 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: annotationProperties
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: |-
             Properties that need to be specified to create an annotation of a
             Application Insights component.
@@ -59,7 +59,7 @@ methods:
   - name: >-
       create(string, string, Annotation, RequestOptionsBase,
       ServiceCallback<Annotation[]>)
-    uid: '@azure/arm-appinsights.Annotations.create_2'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.create_2'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -73,12 +73,12 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: annotationProperties
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: |-
             Properties that need to be specified to create an annotation of a
             Application Insights component.
@@ -87,12 +87,12 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-appinsights.Annotation"
-            />[]&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.Annotation" />[]&gt;
           description: |
             The callback
   - name: 'create(string, string, Annotation, ServiceCallback<Annotation[]>)'
-    uid: '@azure/arm-appinsights.Annotations.create_1'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.create_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -106,23 +106,23 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
         - id: annotationProperties
-          type: <xref uid="@azure/arm-appinsights.Annotation" />
+          type: <xref uid="@azure/arm-appinsights.models.index.d.Annotation" />
           description: |-
             Properties that need to be specified to create an annotation of a
             Application Insights component.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-appinsights.Annotation"
-            />[]&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.Annotation" />[]&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.Annotations.deleteMethod'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.deleteMethod'
     package: '@azure/arm-appinsights'
     summary: Delete an Annotation of an Application Insights component.
     remarks: ''
@@ -135,7 +135,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -150,12 +150,12 @@ methods:
           type: <xref uid="msRest.RequestOptionsBase" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="Models.AnnotationsDeleteMethodResponse" />&gt;
-        description: Promise<Models.AnnotationsDeleteMethodResponse>
+        type: Promise&lt;RestResponse&gt;
+        description: Promise<msRest.RestResponse>
   - name: >-
       deleteMethod(string, string, string, RequestOptionsBase,
-      ServiceCallback<any>)
-    uid: '@azure/arm-appinsights.Annotations.deleteMethod_2'
+      ServiceCallback<void>)
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.deleteMethod_2'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -165,11 +165,11 @@ methods:
       content: >-
         function deleteMethod(resourceGroupName: string, resourceName: string,
         annotationId: string, options: RequestOptionsBase, callback:
-        ServiceCallback<any>)
+        ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -184,11 +184,11 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;any&gt;
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
-  - name: 'deleteMethod(string, string, string, ServiceCallback<any>)'
-    uid: '@azure/arm-appinsights.Annotations.deleteMethod_1'
+  - name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.deleteMethod_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -197,11 +197,11 @@ methods:
     syntax:
       content: >-
         function deleteMethod(resourceGroupName: string, resourceName: string,
-        annotationId: string, callback: ServiceCallback<any>)
+        annotationId: string, callback: ServiceCallback<void>)
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -213,11 +213,11 @@ methods:
 
             component.
         - id: callback
-          type: ServiceCallback&lt;any&gt;
+          type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'get(string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.Annotations.get'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.get'
     package: '@azure/arm-appinsights'
     summary: Get the annotation for given id.
     remarks: ''
@@ -230,7 +230,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -250,7 +250,7 @@ methods:
   - name: >-
       get(string, string, string, RequestOptionsBase,
       ServiceCallback<Annotation[]>)
-    uid: '@azure/arm-appinsights.Annotations.get_2'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.get_2'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -264,7 +264,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -280,12 +280,12 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-appinsights.Annotation"
-            />[]&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.Annotation" />[]&gt;
           description: |
             The callback
   - name: 'get(string, string, string, ServiceCallback<Annotation[]>)'
-    uid: '@azure/arm-appinsights.Annotations.get_1'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.get_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -298,7 +298,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -311,12 +311,12 @@ methods:
             component.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-appinsights.Annotation"
-            />[]&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-appinsights.models.index.d.Annotation" />[]&gt;
           description: |
             The callback
   - name: 'list(string, string, string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-appinsights.Annotations.list'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.list'
     package: '@azure/arm-appinsights'
     summary: Gets the list of annotations for a component for given time range
     remarks: ''
@@ -329,7 +329,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -352,7 +352,7 @@ methods:
   - name: >-
       list(string, string, string, string, RequestOptionsBase,
       ServiceCallback<AnnotationsListResult>)
-    uid: '@azure/arm-appinsights.Annotations.list_2'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.list_2'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -366,7 +366,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -386,13 +386,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.AnnotationsListResult" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.AnnotationsListResult"
+            />&gt;
           description: |
             The callback
   - name: >-
       list(string, string, string, string,
       ServiceCallback<AnnotationsListResult>)
-    uid: '@azure/arm-appinsights.Annotations.list_1'
+    uid: '@azure/arm-appinsights.operations.annotations.d.Annotations.list_1'
     package: '@azure/arm-appinsights'
     summary: ''
     remarks: ''
@@ -405,7 +406,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the Application Insights component resource.
@@ -422,6 +423,7 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-appinsights.AnnotationsListResult" />&gt;
+            uid="@azure/arm-appinsights.models.index.d.AnnotationsListResult"
+            />&gt;
           description: |
             The callback

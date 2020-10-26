@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ModuleListResult
-uid: '@azure/arm-automation.ModuleListResult'
+uid: '@azure/arm-automation.models.index.d.ModuleListResult'
 package: '@azure/arm-automation'
 summary: ''
 fullName: ModuleListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-automation.ModuleListResult.Array'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.Array'
     package: '@azure/arm-automation'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-automation.ModuleListResult.length'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.length'
     package: '@azure/arm-automation'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-automation.ModuleListResult.nextLink'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.nextLink'
     package: '@azure/arm-automation'
     summary: Gets or sets the next link.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Module>[])'
-    uid: '@azure/arm-automation.ModuleListResult.concat'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.concat'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +62,36 @@ methods:
       content: 'function concat(items: ConcatArray<Module>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-automation.Module" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.Module" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-automation.ModuleListResult.concat_1'
+  - name: 'concat(Module | ConcatArray<Module>[])'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.concat_1'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Module | ConcatArray<Module>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.Module" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.Module" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.copyWithin'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.copyWithin'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-automation.ModuleListResult.entries'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.entries'
     package: '@azure/arm-automation'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Module, index: number, array: Module[]) => unknown, any)'
-    uid: '@azure/arm-automation.ModuleListResult.every'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.every_1'
     package: '@azure/arm-automation'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Module, index: number, array:
+        function every(predicate: (value: Module, index: number, array:
         Module[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Module, index: number, array: Module[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Module, index: number, array: Module[]) => value, any)'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.every'
+    package: '@azure/arm-automation'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Module, index: number, array:
+        Module[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Module, index: number, array: Module[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Module, undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.fill'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.fill'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +221,7 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-automation.Module" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Module" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -197,7 +241,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Module, index: number, array: Module[]) => unknown, any)'
-    uid: '@azure/arm-automation.ModuleListResult.filter_1'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.filter_1'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -207,26 +251,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Module, index: number, array:
+        function filter(predicate: (value: Module, index: number, array:
         Module[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Module, index: number, array: Module[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
-  - name: 'filter<S>((value: Module, index: number, array: Module[]) => boolean, any)'
-    uid: '@azure/arm-automation.ModuleListResult.filter'
+  - name: 'filter<S>((value: Module, index: number, array: Module[]) => value, any)'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.filter'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -236,26 +279,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Module, index: number, array:
-        Module[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Module, index: number, array:
+        Module[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Module, index: number, array: Module[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Module, index: number, array: Module[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Module, index: number, obj: Module[]) => unknown, any)'
-    uid: '@azure/arm-automation.ModuleListResult.find_1'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.find_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -273,12 +315,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Module" /> | undefined
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Module, index: number, obj: Module[]) =>
-      boolean, any)
-    uid: '@azure/arm-automation.ModuleListResult.find'
+      value, any)
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.find'
     package: '@azure/arm-automation'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -291,12 +333,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Module, index: number,
-        obj: Module[]) => boolean, thisArg?: any)
+        obj: Module[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Module, index: number, obj: Module[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -317,7 +359,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Module, index: number, obj: Module[]) => unknown, any)'
-    uid: '@azure/arm-automation.ModuleListResult.findIndex'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.findIndex'
     package: '@azure/arm-automation'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -354,7 +396,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Module, index: number, array: Module[]) => void, any)'
-    uid: '@azure/arm-automation.ModuleListResult.forEach'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.forEach'
     package: '@azure/arm-automation'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -377,7 +419,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Module, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.includes'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.includes'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -389,7 +431,7 @@ methods:
       content: 'function includes(searchElement: Module, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Module" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Module" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -400,7 +442,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Module, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.indexOf'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.indexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -410,7 +452,7 @@ methods:
       content: 'function indexOf(searchElement: Module, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Module" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Module" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -421,7 +463,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-automation.ModuleListResult.join'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.join'
     package: '@azure/arm-automation'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -442,7 +484,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-automation.ModuleListResult.keys'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.keys'
     package: '@azure/arm-automation'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -454,7 +496,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Module, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.lastIndexOf'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.lastIndexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -466,7 +508,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Module" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Module" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -477,7 +519,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Module, index: number, array: Module[]) => U, any)'
-    uid: '@azure/arm-automation.ModuleListResult.map'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.map'
     package: '@azure/arm-automation'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -505,7 +547,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-automation.ModuleListResult.pop'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.pop'
     package: '@azure/arm-automation'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -514,10 +556,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-automation.Module" /> | undefined
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" /> | undefined
         description: ''
   - name: 'push(Module[])'
-    uid: '@azure/arm-automation.ModuleListResult.push'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.push'
     package: '@azure/arm-automation'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -527,7 +569,7 @@ methods:
       content: 'function push(items: Module[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.Module" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
           description: |
             New elements of the Array.
       return:
@@ -536,7 +578,7 @@ methods:
   - name: >-
       reduce((previousValue: Module, currentValue: Module, currentIndex: number,
       array: Module[]) => Module)
-    uid: '@azure/arm-automation.ModuleListResult.reduce'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reduce'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -559,12 +601,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.Module" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" />
         description: ''
   - name: >-
       reduce((previousValue: Module, currentValue: Module, currentIndex: number,
       array: Module[]) => Module, Module)
-    uid: '@azure/arm-automation.ModuleListResult.reduce_1'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reduce_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -582,15 +624,15 @@ methods:
             array: Module[]) =&gt; Module
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.Module" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Module" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Module" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Module, currentIndex: number,
       array: Module[]) => U, U)
-    uid: '@azure/arm-automation.ModuleListResult.reduce_2'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reduce_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -624,7 +666,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Module, currentValue: Module, currentIndex:
       number, array: Module[]) => Module)
-    uid: '@azure/arm-automation.ModuleListResult.reduceRight'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reduceRight'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -648,12 +690,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.Module" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" />
         description: ''
   - name: >-
       reduceRight((previousValue: Module, currentValue: Module, currentIndex:
       number, array: Module[]) => Module, Module)
-    uid: '@azure/arm-automation.ModuleListResult.reduceRight_1'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reduceRight_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -671,15 +713,15 @@ methods:
             array: Module[]) =&gt; Module
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.Module" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Module" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Module" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Module, currentIndex:
       number, array: Module[]) => U, U)
-    uid: '@azure/arm-automation.ModuleListResult.reduceRight_2'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reduceRight_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -712,7 +754,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-automation.ModuleListResult.reverse'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.reverse'
     package: '@azure/arm-automation'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -721,10 +763,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-automation.ModuleListResult.shift'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.shift'
     package: '@azure/arm-automation'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -733,10 +775,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-automation.Module" /> | undefined
+        type: <xref uid="@azure/arm-automation.models.index.d.Module" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.slice'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.slice'
     package: '@azure/arm-automation'
     summary: Returns a section of an array.
     remarks: ''
@@ -750,13 +792,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
   - name: 'some((value: Module, index: number, array: Module[]) => unknown, any)'
-    uid: '@azure/arm-automation.ModuleListResult.some'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.some'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -766,26 +809,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Module, index: number, array:
-        Module[]) => unknown, thisArg?: any)
+        function some(predicate: (value: Module, index: number, array: Module[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Module, index: number, array: Module[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Module, b: Module) => number)'
-    uid: '@azure/arm-automation.ModuleListResult.sort'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.sort'
     package: '@azure/arm-automation'
     summary: Sorts an array.
     remarks: ''
@@ -797,14 +845,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Module, b: Module) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Module[])'
-    uid: '@azure/arm-automation.ModuleListResult.splice_1'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.splice_1'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -824,14 +883,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-automation.Module" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-automation.ModuleListResult.splice'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.splice'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -852,10 +911,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-automation.Module" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-automation.ModuleListResult.toLocaleString'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.toLocaleString'
     package: '@azure/arm-automation'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -869,7 +928,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-automation.ModuleListResult.toString'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.toString'
     package: '@azure/arm-automation'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -881,7 +940,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Module[])'
-    uid: '@azure/arm-automation.ModuleListResult.unshift'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.unshift'
     package: '@azure/arm-automation'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -891,14 +950,14 @@ methods:
       content: 'function unshift(items: Module[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.Module" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Module" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-automation.ModuleListResult.values'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.values'
     package: '@azure/arm-automation'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -907,6 +966,39 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-automation.Module" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.Module" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-automation.Module" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.[Symbol.iterator]'
+    package: '@azure/arm-automation'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.Module" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-automation.models.index.d.ModuleListResult.[Symbol.unscopables]'
+    package: '@azure/arm-automation'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-automation.models.index.d.AutomationAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-automation.models.index.d.Module" />&gt;

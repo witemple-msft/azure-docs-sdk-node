@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SparkSession
-uid: '@azure/synapse.SparkSession'
+uid: '@azure/synapse.operations.sparkSession.d.SparkSession'
 package: '@azure/synapse'
 summary: Class representing a SparkSession.
 fullName: SparkSession
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: SparkSession(SynapseClientContext)
-    uid: '@azure/synapse.SparkSession.constructor'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.constructor'
     package: '@azure/synapse'
     summary: Create a SparkSession.
     remarks: ''
@@ -20,14 +20,16 @@ constructors:
       content: 'new SparkSession(client: SynapseClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/synapse.SynapseClientContext" />
+          type: >-
+            <xref
+            uid="@azure/synapse.synapseClientContext.d.SynapseClientContext" />
           description: |
             Reference to the service client.
 methods:
   - name: >-
       create(string, string, ExtendedLivySessionRequest,
       Models.SparkSessionCreateOptionalParams)
-    uid: '@azure/synapse.SparkSession.create'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.create'
     package: '@azure/synapse'
     summary: Create new spark session.
     remarks: ''
@@ -46,7 +48,9 @@ methods:
           type: string
           description: Name of the spark pool. "ondemand" targets the ondemand pool.
         - id: livyRequest
-          type: <xref uid="@azure/synapse.ExtendedLivySessionRequest" />
+          type: >-
+            <xref uid="@azure/synapse.models.index.d.ExtendedLivySessionRequest"
+            />
           description: Livy compatible batch job request payload.
         - id: options
           type: <xref uid="Models.SparkSessionCreateOptionalParams" />
@@ -57,7 +61,7 @@ methods:
   - name: >-
       create(string, string, ExtendedLivySessionRequest,
       ServiceCallback<ExtendedLivySessionResponse>)
-    uid: '@azure/synapse.SparkSession.create_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.create_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -76,19 +80,22 @@ methods:
           type: string
           description: Name of the spark pool. "ondemand" targets the ondemand pool.
         - id: livyRequest
-          type: <xref uid="@azure/synapse.ExtendedLivySessionRequest" />
+          type: >-
+            <xref uid="@azure/synapse.models.index.d.ExtendedLivySessionRequest"
+            />
           description: Livy compatible batch job request payload.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.ExtendedLivySessionResponse" />&gt;
+            uid="@azure/synapse.models.index.d.ExtendedLivySessionResponse"
+            />&gt;
           description: |
             The callback
   - name: >-
       create(string, string, ExtendedLivySessionRequest,
       SparkSessionCreateOptionalParams,
       ServiceCallback<ExtendedLivySessionResponse>)
-    uid: '@azure/synapse.SparkSession.create_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.create_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -108,21 +115,27 @@ methods:
           type: string
           description: Name of the spark pool. "ondemand" targets the ondemand pool.
         - id: livyRequest
-          type: <xref uid="@azure/synapse.ExtendedLivySessionRequest" />
+          type: >-
+            <xref uid="@azure/synapse.models.index.d.ExtendedLivySessionRequest"
+            />
           description: Livy compatible batch job request payload.
         - id: options
-          type: <xref uid="@azure/synapse.SparkSessionCreateOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/synapse.models.index.d.SparkSessionCreateOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.ExtendedLivySessionResponse" />&gt;
+            uid="@azure/synapse.models.index.d.ExtendedLivySessionResponse"
+            />&gt;
           description: |
             The callback
   - name: >-
       createStatement(string, string, number, LivyStatementRequestBody,
       msRest.RequestOptionsBase)
-    uid: '@azure/synapse.SparkSession.createStatement'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.createStatement'
     package: '@azure/synapse'
     summary: Create statement within a spark session.
     remarks: ''
@@ -144,7 +157,9 @@ methods:
           type: number
           description: Identifier for the session.
         - id: livyRequest
-          type: <xref uid="@azure/synapse.LivyStatementRequestBody" />
+          type: >-
+            <xref uid="@azure/synapse.models.index.d.LivyStatementRequestBody"
+            />
           description: Livy compatible batch job request payload.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -157,7 +172,7 @@ methods:
   - name: >-
       createStatement(string, string, number, LivyStatementRequestBody,
       RequestOptionsBase, ServiceCallback<LivyStatementResponseBody>)
-    uid: '@azure/synapse.SparkSession.createStatement_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.createStatement_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -180,7 +195,9 @@ methods:
           type: number
           description: Identifier for the session.
         - id: livyRequest
-          type: <xref uid="@azure/synapse.LivyStatementRequestBody" />
+          type: >-
+            <xref uid="@azure/synapse.models.index.d.LivyStatementRequestBody"
+            />
           description: Livy compatible batch job request payload.
         - id: options
           type: RequestOptionsBase
@@ -188,13 +205,13 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementResponseBody" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementResponseBody" />&gt;
           description: |
             The callback
   - name: >-
       createStatement(string, string, number, LivyStatementRequestBody,
       ServiceCallback<LivyStatementResponseBody>)
-    uid: '@azure/synapse.SparkSession.createStatement_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.createStatement_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -216,16 +233,18 @@ methods:
           type: number
           description: Identifier for the session.
         - id: livyRequest
-          type: <xref uid="@azure/synapse.LivyStatementRequestBody" />
+          type: >-
+            <xref uid="@azure/synapse.models.index.d.LivyStatementRequestBody"
+            />
           description: Livy compatible batch job request payload.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementResponseBody" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementResponseBody" />&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, string, number, msRest.RequestOptionsBase)'
-    uid: '@azure/synapse.SparkSession.deleteMethod'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.deleteMethod'
     package: '@azure/synapse'
     summary: Cancels a running spark session.
     remarks: ''
@@ -256,7 +275,7 @@ methods:
   - name: >-
       deleteMethod(string, string, number, RequestOptionsBase,
       ServiceCallback<void>)
-    uid: '@azure/synapse.SparkSession.deleteMethod_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.deleteMethod_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -287,7 +306,7 @@ methods:
           description: |
             The callback
   - name: 'deleteMethod(string, string, number, ServiceCallback<void>)'
-    uid: '@azure/synapse.SparkSession.deleteMethod_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.deleteMethod_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -314,7 +333,7 @@ methods:
           description: |
             The callback
   - name: 'deleteStatement(string, string, number, number, msRest.RequestOptionsBase)'
-    uid: '@azure/synapse.SparkSession.deleteStatement'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.deleteStatement'
     package: '@azure/synapse'
     summary: Kill a statement within a session.
     remarks: ''
@@ -349,7 +368,7 @@ methods:
   - name: >-
       deleteStatement(string, string, number, number, RequestOptionsBase,
       ServiceCallback<LivyStatementCancellationResponse>)
-    uid: '@azure/synapse.SparkSession.deleteStatement_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.deleteStatement_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -379,13 +398,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementCancellationResponse" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementCancellationResponse"
+            />&gt;
           description: |
             The callback
   - name: >-
       deleteStatement(string, string, number, number,
       ServiceCallback<LivyStatementCancellationResponse>)
-    uid: '@azure/synapse.SparkSession.deleteStatement_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.deleteStatement_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -412,11 +432,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementCancellationResponse" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementCancellationResponse"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, string, number, Models.SparkSessionGetOptionalParams)'
-    uid: '@azure/synapse.SparkSession.get'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.get'
     package: '@azure/synapse'
     summary: Gets a single spark session.
     remarks: ''
@@ -443,7 +464,7 @@ methods:
         type: Promise&lt;<xref uid="Models.SparkSessionGetResponse" />&gt;
         description: Promise<Models.SparkSessionGetResponse>
   - name: 'get(string, string, number, ServiceCallback<ExtendedLivySessionResponse>)'
-    uid: '@azure/synapse.SparkSession.get_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.get_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -466,13 +487,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.ExtendedLivySessionResponse" />&gt;
+            uid="@azure/synapse.models.index.d.ExtendedLivySessionResponse"
+            />&gt;
           description: |
             The callback
   - name: >-
       get(string, string, number, SparkSessionGetOptionalParams,
       ServiceCallback<ExtendedLivySessionResponse>)
-    uid: '@azure/synapse.SparkSession.get_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.get_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -494,16 +516,19 @@ methods:
           type: number
           description: Identifier for the session.
         - id: options
-          type: <xref uid="@azure/synapse.SparkSessionGetOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/synapse.models.index.d.SparkSessionGetOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.ExtendedLivySessionResponse" />&gt;
+            uid="@azure/synapse.models.index.d.ExtendedLivySessionResponse"
+            />&gt;
           description: |
             The callback
   - name: 'getStatement(string, string, number, number, msRest.RequestOptionsBase)'
-    uid: '@azure/synapse.SparkSession.getStatement'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.getStatement'
     package: '@azure/synapse'
     summary: Gets a single statement within a spark session.
     remarks: ''
@@ -536,7 +561,7 @@ methods:
   - name: >-
       getStatement(string, string, number, number, RequestOptionsBase,
       ServiceCallback<LivyStatementResponseBody>)
-    uid: '@azure/synapse.SparkSession.getStatement_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.getStatement_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -566,13 +591,13 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementResponseBody" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementResponseBody" />&gt;
           description: |
             The callback
   - name: >-
       getStatement(string, string, number, number,
       ServiceCallback<LivyStatementResponseBody>)
-    uid: '@azure/synapse.SparkSession.getStatement_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.getStatement_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -599,11 +624,11 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementResponseBody" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementResponseBody" />&gt;
           description: |
             The callback
   - name: 'list(string, string, Models.SparkSessionListOptionalParams)'
-    uid: '@azure/synapse.SparkSession.list'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.list'
     package: '@azure/synapse'
     summary: List all spark sessions which are running under a particular spark pool.
     remarks: ''
@@ -627,7 +652,7 @@ methods:
         type: Promise&lt;<xref uid="Models.SparkSessionListResponse" />&gt;
         description: Promise<Models.SparkSessionListResponse>
   - name: 'list(string, string, ServiceCallback<ExtendedLivyListSessionResponse>)'
-    uid: '@azure/synapse.SparkSession.list_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.list_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -647,13 +672,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.ExtendedLivyListSessionResponse" />&gt;
+            uid="@azure/synapse.models.index.d.ExtendedLivyListSessionResponse"
+            />&gt;
           description: |
             The callback
   - name: >-
       list(string, string, SparkSessionListOptionalParams,
       ServiceCallback<ExtendedLivyListSessionResponse>)
-    uid: '@azure/synapse.SparkSession.list_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.list_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -672,16 +698,20 @@ methods:
           type: string
           description: Name of the spark pool. "ondemand" targets the ondemand pool.
         - id: options
-          type: <xref uid="@azure/synapse.SparkSessionListOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/synapse.models.index.d.SparkSessionListOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.ExtendedLivyListSessionResponse" />&gt;
+            uid="@azure/synapse.models.index.d.ExtendedLivyListSessionResponse"
+            />&gt;
           description: |
             The callback
   - name: 'listStatements(string, string, number, msRest.RequestOptionsBase)'
-    uid: '@azure/synapse.SparkSession.listStatements'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.listStatements'
     package: '@azure/synapse'
     summary: Gets a list of statements within a spark session.
     remarks: ''
@@ -712,7 +742,7 @@ methods:
   - name: >-
       listStatements(string, string, number, RequestOptionsBase,
       ServiceCallback<LivyStatementsResponseBody>)
-    uid: '@azure/synapse.SparkSession.listStatements_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.listStatements_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -739,13 +769,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementsResponseBody" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementsResponseBody"
+            />&gt;
           description: |
             The callback
   - name: >-
       listStatements(string, string, number,
       ServiceCallback<LivyStatementsResponseBody>)
-    uid: '@azure/synapse.SparkSession.listStatements_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.listStatements_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -769,11 +800,12 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/synapse.LivyStatementsResponseBody" />&gt;
+            uid="@azure/synapse.models.index.d.LivyStatementsResponseBody"
+            />&gt;
           description: |
             The callback
   - name: 'resetTimeout(string, string, number, msRest.RequestOptionsBase)'
-    uid: '@azure/synapse.SparkSession.resetTimeout'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.resetTimeout'
     package: '@azure/synapse'
     summary: >-
       Sends a keep alive call to the current session to reset the session
@@ -806,7 +838,7 @@ methods:
   - name: >-
       resetTimeout(string, string, number, RequestOptionsBase,
       ServiceCallback<void>)
-    uid: '@azure/synapse.SparkSession.resetTimeout_2'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.resetTimeout_2'
     package: '@azure/synapse'
     summary: ''
     remarks: ''
@@ -837,7 +869,7 @@ methods:
           description: |
             The callback
   - name: 'resetTimeout(string, string, number, ServiceCallback<void>)'
-    uid: '@azure/synapse.SparkSession.resetTimeout_1'
+    uid: '@azure/synapse.operations.sparkSession.d.SparkSession.resetTimeout_1'
     package: '@azure/synapse'
     summary: ''
     remarks: ''

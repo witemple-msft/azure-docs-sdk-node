@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: StreamingJobListResult
-uid: '@azure/arm-streamanalytics.StreamingJobListResult'
+uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult'
 package: '@azure/arm-streamanalytics'
 summary: ''
 fullName: StreamingJobListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.Array'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.Array'
     package: '@azure/arm-streamanalytics'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.length'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.length'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.nextLink'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.nextLink'
     package: '@azure/arm-streamanalytics'
     summary: >-
       The link (url) to the next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<StreamingJob>[])'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.concat'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.concat'
     package: '@azure/arm-streamanalytics'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,42 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-streamanalytics.StreamingJob"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.concat_1'
+  - name: 'concat(StreamingJob | ConcatArray<StreamingJob>[])'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.concat_1'
     package: '@azure/arm-streamanalytics'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: StreamingJob | ConcatArray<StreamingJob>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.copyWithin'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.copyWithin
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +140,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.entries'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.entries'
     package: '@azure/arm-streamanalytics'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +154,7 @@ methods:
   - name: >-
       every((value: StreamingJob, index: number, array: StreamingJob[]) =>
       unknown, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.every'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.every_1'
     package: '@azure/arm-streamanalytics'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +162,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: StreamingJob, index: number, array:
+        function every(predicate: (value: StreamingJob, index: number, array:
         StreamingJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingJob, index: number, array: StreamingJob[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: StreamingJob, index: number, array: StreamingJob[]) =>
+      value, any)
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.every'
+    package: '@azure/arm-streamanalytics'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: StreamingJob, index: number, array:
+        StreamingJob[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: StreamingJob, index: number, array: StreamingJob[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(StreamingJob, undefined | number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.fill'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.fill'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +240,9 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +264,7 @@ methods:
   - name: >-
       filter((value: StreamingJob, index: number, array: StreamingJob[]) =>
       unknown, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.filter_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.filter_1'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +274,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: StreamingJob, index: number, array:
+        function filter(predicate: (value: StreamingJob, index: number, array:
         StreamingJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingJob, index: number, array: StreamingJob[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: StreamingJob, index: number, array: StreamingJob[]) =>
-      boolean, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.filter'
+      value, any)
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.filter'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +308,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: StreamingJob, index: number,
-        array: StreamingJob[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: StreamingJob, index: number,
+        array: StreamingJob[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingJob, index: number, array: StreamingJob[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +330,7 @@ methods:
   - name: >-
       find((value: StreamingJob, index: number, obj: StreamingJob[]) => unknown,
       any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.find_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.find_1'
     package: '@azure/arm-streamanalytics'
     summary: ''
     remarks: ''
@@ -295,12 +350,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: StreamingJob, index: number, obj:
-      StreamingJob[]) => boolean, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.find'
+      StreamingJob[]) => value, any)
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.find'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +370,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: StreamingJob, index:
-        number, obj: StreamingJob[]) => boolean, thisArg?: any)
+        number, obj: StreamingJob[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: StreamingJob, index: number, obj:
-            StreamingJob[]) =&gt; boolean
+            StreamingJob[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +398,7 @@ methods:
   - name: >-
       findIndex((value: StreamingJob, index: number, obj: StreamingJob[]) =>
       unknown, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.findIndex'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.findIndex'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +439,7 @@ methods:
   - name: >-
       forEach((value: StreamingJob, index: number, array: StreamingJob[]) =>
       void, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.forEach'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.forEach'
     package: '@azure/arm-streamanalytics'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +464,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(StreamingJob, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.includes'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.includes'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +478,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +491,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(StreamingJob, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.indexOf'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.indexOf'
     package: '@azure/arm-streamanalytics'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +503,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +516,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.join'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.join'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +537,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.keys'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.keys'
     package: '@azure/arm-streamanalytics'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +549,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(StreamingJob, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.lastIndexOf
     package: '@azure/arm-streamanalytics'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +562,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +577,7 @@ methods:
   - name: >-
       map<U>((value: StreamingJob, index: number, array: StreamingJob[]) => U,
       any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.map'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.map'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +605,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.pop'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.pop'
     package: '@azure/arm-streamanalytics'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -550,10 +614,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
+          | undefined
         description: ''
   - name: 'push(StreamingJob[])'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.push'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.push'
     package: '@azure/arm-streamanalytics'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -563,7 +629,9 @@ methods:
       content: 'function push(items: StreamingJob[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -572,7 +640,7 @@ methods:
   - name: >-
       reduce((previousValue: StreamingJob, currentValue: StreamingJob,
       currentIndex: number, array: StreamingJob[]) => StreamingJob)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reduce'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reduce'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -596,13 +664,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
         description: ''
   - name: >-
       reduce((previousValue: StreamingJob, currentValue: StreamingJob,
       currentIndex: number, array: StreamingJob[]) => StreamingJob,
       StreamingJob)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reduce_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reduce_1'
     package: '@azure/arm-streamanalytics'
     summary: ''
     remarks: ''
@@ -620,15 +688,17 @@ methods:
             currentIndex: number, array: StreamingJob[]) =&gt; StreamingJob
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: StreamingJob, currentIndex:
       number, array: StreamingJob[]) => U, U)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reduce_2'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reduce_2'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -663,7 +733,8 @@ methods:
   - name: >-
       reduceRight((previousValue: StreamingJob, currentValue: StreamingJob,
       currentIndex: number, array: StreamingJob[]) => StreamingJob)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reduceRight'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reduceRight
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -688,13 +759,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
         description: ''
   - name: >-
       reduceRight((previousValue: StreamingJob, currentValue: StreamingJob,
       currentIndex: number, array: StreamingJob[]) => StreamingJob,
       StreamingJob)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reduceRight_1
     package: '@azure/arm-streamanalytics'
     summary: ''
     remarks: ''
@@ -712,15 +784,18 @@ methods:
             currentIndex: number, array: StreamingJob[]) =&gt; StreamingJob
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" />
+        type: <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: StreamingJob,
       currentIndex: number, array: StreamingJob[]) => U, U)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reduceRight_2
     package: '@azure/arm-streamanalytics'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -754,7 +829,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.reverse'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.reverse'
     package: '@azure/arm-streamanalytics'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -763,10 +838,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.shift'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.shift'
     package: '@azure/arm-streamanalytics'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -775,10 +852,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-streamanalytics.StreamingJob" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.slice'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.slice'
     package: '@azure/arm-streamanalytics'
     summary: Returns a section of an array.
     remarks: ''
@@ -792,15 +871,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
   - name: >-
       some((value: StreamingJob, index: number, array: StreamingJob[]) =>
       unknown, any)
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.some'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.some'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -810,28 +892,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: StreamingJob, index: number, array:
+        function some(predicate: (value: StreamingJob, index: number, array:
         StreamingJob[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StreamingJob, index: number, array: StreamingJob[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: StreamingJob, b: StreamingJob) => number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.sort'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.sort'
     package: '@azure/arm-streamanalytics'
     summary: Sorts an array.
     remarks: ''
@@ -845,14 +932,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: StreamingJob, b: StreamingJob) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, StreamingJob[])'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.splice_1'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.splice_1'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -874,14 +972,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.splice'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.splice'
     package: '@azure/arm-streamanalytics'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -902,10 +1004,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+        type: >-
+          <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.toLocaleString'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.toLocaleString
     package: '@azure/arm-streamanalytics'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -919,7 +1024,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.toString'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.toString'
     package: '@azure/arm-streamanalytics'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -931,7 +1036,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(StreamingJob[])'
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.unshift'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.unshift'
     package: '@azure/arm-streamanalytics'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -941,14 +1046,16 @@ methods:
       content: 'function unshift(items: StreamingJob[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-streamanalytics.StreamingJob" />[]'
+          type: >-
+            <xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-streamanalytics.StreamingJobListResult.values'
+    uid: '@azure/arm-streamanalytics.models.index.d.StreamingJobListResult.values'
     package: '@azure/arm-streamanalytics'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -959,6 +1066,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-streamanalytics.StreamingJob" />&gt;
+          uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-streamanalytics.StreamingJob" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.[Symbol.iterator]
+    package: '@azure/arm-streamanalytics'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-streamanalytics.models.index.d.StreamingJob" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-streamanalytics.models.index.d.StreamingJobListResult.[Symbol.unscopables]
+    package: '@azure/arm-streamanalytics'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-streamanalytics.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-streamanalytics.models.index.d.StreamingJob"
+  />&gt;

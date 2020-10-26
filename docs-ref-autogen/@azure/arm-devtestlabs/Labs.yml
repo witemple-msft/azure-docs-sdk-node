@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Labs
-uid: '@azure/arm-devtestlabs.Labs'
+uid: '@azure/arm-devtestlabs.operations.labs.d.Labs'
 package: '@azure/arm-devtestlabs'
 summary: Class representing a Labs.
 fullName: Labs
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Labs(DevTestLabsClientContext)
-    uid: '@azure/arm-devtestlabs.Labs.constructor'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.constructor'
     package: '@azure/arm-devtestlabs'
     summary: Create a Labs.
     remarks: ''
@@ -20,12 +20,15 @@ constructors:
       content: 'new Labs(client: DevTestLabsClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/arm-devtestlabs.DevTestLabsClientContext" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.devTestLabsClientContext.d.DevTestLabsClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: 'beginClaimAnyVm(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.beginClaimAnyVm'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.beginClaimAnyVm'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Claim a random claimable virtual machine in the lab. This operation can
@@ -55,7 +58,7 @@ methods:
   - name: >-
       beginCreateEnvironment(string, string, LabVirtualMachineCreationParameter,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.beginCreateEnvironment'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.beginCreateEnvironment'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Create virtual machines in a lab. This operation can take a while to
@@ -78,7 +81,8 @@ methods:
         - id: labVirtualMachineCreationParameter
           type: >-
             <xref
-            uid="@azure/arm-devtestlabs.LabVirtualMachineCreationParameter" />
+            uid="@azure/arm-devtestlabs.models.index.d.LabVirtualMachineCreationParameter"
+            />
           description: Properties for creating a virtual machine.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -87,7 +91,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginCreateOrUpdate(string, string, Lab, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.beginCreateOrUpdate'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.beginCreateOrUpdate'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Create or replace an existing lab. This operation can take a while to
@@ -107,7 +111,7 @@ methods:
           type: string
           description: The name of the lab.
         - id: lab
-          type: <xref uid="@azure/arm-devtestlabs.Lab" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.Lab" />
           description: A lab.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -116,7 +120,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.beginDeleteMethod'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.beginDeleteMethod'
     package: '@azure/arm-devtestlabs'
     summary: Delete lab. This operation can take a while to complete.
     remarks: ''
@@ -142,7 +146,7 @@ methods:
   - name: >-
       beginExportResourceUsage(string, string, ExportResourceUsageParameters,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.beginExportResourceUsage'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.beginExportResourceUsage'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Exports the lab resource usage into a storage account This operation can
@@ -165,7 +169,10 @@ methods:
           type: string
           description: The name of the lab.
         - id: exportResourceUsageParameters
-          type: <xref uid="@azure/arm-devtestlabs.ExportResourceUsageParameters" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.ExportResourceUsageParameters"
+            />
           description: The parameters of the export operation.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -176,7 +183,7 @@ methods:
   - name: >-
       beginImportVirtualMachine(string, string, ImportLabVirtualMachineRequest,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.beginImportVirtualMachine'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.beginImportVirtualMachine'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Import a virtual machine into a different lab. This operation can take a
@@ -197,7 +204,10 @@ methods:
           type: string
           description: The name of the lab.
         - id: importLabVirtualMachineRequest
-          type: <xref uid="@azure/arm-devtestlabs.ImportLabVirtualMachineRequest" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.ImportLabVirtualMachineRequest"
+            />
           description: |-
             This represents the payload required to import a virtual
             machine from a different lab into the current one
@@ -208,7 +218,7 @@ methods:
         type: Promise&lt;LROPoller&gt;
         description: Promise<msRestAzure.LROPoller>
   - name: 'claimAnyVm(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.claimAnyVm'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.claimAnyVm'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Claim a random claimable virtual machine in the lab. This operation can
@@ -238,7 +248,7 @@ methods:
   - name: >-
       createEnvironment(string, string, LabVirtualMachineCreationParameter,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.createEnvironment'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.createEnvironment'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Create virtual machines in a lab. This operation can take a while to
@@ -261,7 +271,8 @@ methods:
         - id: labVirtualMachineCreationParameter
           type: >-
             <xref
-            uid="@azure/arm-devtestlabs.LabVirtualMachineCreationParameter" />
+            uid="@azure/arm-devtestlabs.models.index.d.LabVirtualMachineCreationParameter"
+            />
           description: Properties for creating a virtual machine.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -270,7 +281,7 @@ methods:
         type: Promise&lt;RestResponse&gt;
         description: Promise<msRest.RestResponse>
   - name: 'createOrUpdate(string, string, Lab, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.createOrUpdate'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.createOrUpdate'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Create or replace an existing lab. This operation can take a while to
@@ -290,7 +301,7 @@ methods:
           type: string
           description: The name of the lab.
         - id: lab
-          type: <xref uid="@azure/arm-devtestlabs.Lab" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.Lab" />
           description: A lab.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -299,7 +310,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LabsCreateOrUpdateResponse" />&gt;
         description: Promise<Models.LabsCreateOrUpdateResponse>
   - name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.deleteMethod'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.deleteMethod'
     package: '@azure/arm-devtestlabs'
     summary: Delete lab. This operation can take a while to complete.
     remarks: ''
@@ -325,7 +336,7 @@ methods:
   - name: >-
       exportResourceUsage(string, string, ExportResourceUsageParameters,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.exportResourceUsage'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.exportResourceUsage'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Exports the lab resource usage into a storage account This operation can
@@ -348,7 +359,10 @@ methods:
           type: string
           description: The name of the lab.
         - id: exportResourceUsageParameters
-          type: <xref uid="@azure/arm-devtestlabs.ExportResourceUsageParameters" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.ExportResourceUsageParameters"
+            />
           description: The parameters of the export operation.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -359,7 +373,7 @@ methods:
   - name: >-
       generateUploadUri(string, string, GenerateUploadUriParameter,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.generateUploadUri'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.generateUploadUri'
     package: '@azure/arm-devtestlabs'
     summary: Generate a URI for uploading custom disk images to a Lab.
     remarks: ''
@@ -378,7 +392,10 @@ methods:
           type: string
           description: The name of the lab.
         - id: generateUploadUriParameter
-          type: <xref uid="@azure/arm-devtestlabs.GenerateUploadUriParameter" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.GenerateUploadUriParameter"
+            />
           description: Properties for generating an upload URI.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -389,7 +406,7 @@ methods:
   - name: >-
       generateUploadUri(string, string, GenerateUploadUriParameter,
       RequestOptionsBase, ServiceCallback<GenerateUploadUriResponse>)
-    uid: '@azure/arm-devtestlabs.Labs.generateUploadUri_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.generateUploadUri_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -409,7 +426,10 @@ methods:
           type: string
           description: The name of the lab.
         - id: generateUploadUriParameter
-          type: <xref uid="@azure/arm-devtestlabs.GenerateUploadUriParameter" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.GenerateUploadUriParameter"
+            />
           description: Properties for generating an upload URI.
         - id: options
           type: RequestOptionsBase
@@ -417,13 +437,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-devtestlabs.GenerateUploadUriResponse" />&gt;
+            uid="@azure/arm-devtestlabs.models.index.d.GenerateUploadUriResponse"
+            />&gt;
           description: |
             The callback
   - name: >-
       generateUploadUri(string, string, GenerateUploadUriParameter,
       ServiceCallback<GenerateUploadUriResponse>)
-    uid: '@azure/arm-devtestlabs.Labs.generateUploadUri_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.generateUploadUri_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -442,16 +463,20 @@ methods:
           type: string
           description: The name of the lab.
         - id: generateUploadUriParameter
-          type: <xref uid="@azure/arm-devtestlabs.GenerateUploadUriParameter" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.GenerateUploadUriParameter"
+            />
           description: Properties for generating an upload URI.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/arm-devtestlabs.GenerateUploadUriResponse" />&gt;
+            uid="@azure/arm-devtestlabs.models.index.d.GenerateUploadUriResponse"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, string, LabsGetOptionalParams, ServiceCallback<Lab>)'
-    uid: '@azure/arm-devtestlabs.Labs.get_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.get_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -469,14 +494,18 @@ methods:
           type: string
           description: The name of the lab.
         - id: options
-          type: <xref uid="@azure/arm-devtestlabs.LabsGetOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabsGetOptionalParams" />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.Lab" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.Lab" />&gt;
           description: |
             The callback
   - name: 'get(string, string, Models.LabsGetOptionalParams)'
-    uid: '@azure/arm-devtestlabs.Labs.get'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.get'
     package: '@azure/arm-devtestlabs'
     summary: Get lab.
     remarks: ''
@@ -500,7 +529,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LabsGetResponse" />&gt;
         description: Promise<Models.LabsGetResponse>
   - name: 'get(string, string, ServiceCallback<Lab>)'
-    uid: '@azure/arm-devtestlabs.Labs.get_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.get_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -518,13 +547,15 @@ methods:
           type: string
           description: The name of the lab.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.Lab" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.Lab" />&gt;
           description: |
             The callback
   - name: >-
       importVirtualMachine(string, string, ImportLabVirtualMachineRequest,
       msRest.RequestOptionsBase)
-    uid: '@azure/arm-devtestlabs.Labs.importVirtualMachine'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.importVirtualMachine'
     package: '@azure/arm-devtestlabs'
     summary: >-
       Import a virtual machine into a different lab. This operation can take a
@@ -545,7 +576,10 @@ methods:
           type: string
           description: The name of the lab.
         - id: importLabVirtualMachineRequest
-          type: <xref uid="@azure/arm-devtestlabs.ImportLabVirtualMachineRequest" />
+          type: >-
+            <xref
+            uid="@azure/arm-devtestlabs.models.index.d.ImportLabVirtualMachineRequest"
+            />
           description: |-
             This represents the payload required to import a virtual
             machine from a different lab into the current one
@@ -558,7 +592,7 @@ methods:
   - name: >-
       listByResourceGroup(string, LabsListByResourceGroupOptionalParams,
       ServiceCallback<LabList>)
-    uid: '@azure/arm-devtestlabs.Labs.listByResourceGroup_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listByResourceGroup_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -576,15 +610,17 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/arm-devtestlabs.LabsListByResourceGroupOptionalParams"
+            uid="@azure/arm-devtestlabs.models.index.d.LabsListByResourceGroupOptionalParams"
             />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: 'listByResourceGroup(string, Models.LabsListByResourceGroupOptionalParams)'
-    uid: '@azure/arm-devtestlabs.Labs.listByResourceGroup'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listByResourceGroup'
     package: '@azure/arm-devtestlabs'
     summary: List labs in a resource group.
     remarks: ''
@@ -605,7 +641,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LabsListByResourceGroupResponse" />&gt;
         description: Promise<Models.LabsListByResourceGroupResponse>
   - name: 'listByResourceGroup(string, ServiceCallback<LabList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listByResourceGroup_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listByResourceGroup_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -620,11 +656,13 @@ methods:
           type: string
           description: The name of the resource group.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.listByResourceGroupNext'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listByResourceGroupNext'
     package: '@azure/arm-devtestlabs'
     summary: List labs in a resource group.
     remarks: ''
@@ -649,7 +687,7 @@ methods:
   - name: >-
       listByResourceGroupNext(string, RequestOptionsBase,
       ServiceCallback<LabList>)
-    uid: '@azure/arm-devtestlabs.Labs.listByResourceGroupNext_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listByResourceGroupNext_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -667,11 +705,13 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: 'listByResourceGroupNext(string, ServiceCallback<LabList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listByResourceGroupNext_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listByResourceGroupNext_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -686,13 +726,15 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: >-
       listBySubscription(LabsListBySubscriptionOptionalParams,
       ServiceCallback<LabList>)
-    uid: '@azure/arm-devtestlabs.Labs.listBySubscription_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listBySubscription_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -707,14 +749,17 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/arm-devtestlabs.LabsListBySubscriptionOptionalParams" />
+            uid="@azure/arm-devtestlabs.models.index.d.LabsListBySubscriptionOptionalParams"
+            />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: listBySubscription(Models.LabsListBySubscriptionOptionalParams)
-    uid: '@azure/arm-devtestlabs.Labs.listBySubscription'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listBySubscription'
     package: '@azure/arm-devtestlabs'
     summary: List labs in a subscription.
     remarks: ''
@@ -732,7 +777,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LabsListBySubscriptionResponse" />&gt;
         description: Promise<Models.LabsListBySubscriptionResponse>
   - name: listBySubscription(ServiceCallback<LabList>)
-    uid: '@azure/arm-devtestlabs.Labs.listBySubscription_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listBySubscription_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -742,11 +787,13 @@ methods:
       content: 'function listBySubscription(callback: ServiceCallback<LabList>)'
       parameters:
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: 'listBySubscriptionNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.listBySubscriptionNext'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listBySubscriptionNext'
     package: '@azure/arm-devtestlabs'
     summary: List labs in a subscription.
     remarks: ''
@@ -771,7 +818,7 @@ methods:
   - name: >-
       listBySubscriptionNext(string, RequestOptionsBase,
       ServiceCallback<LabList>)
-    uid: '@azure/arm-devtestlabs.Labs.listBySubscriptionNext_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listBySubscriptionNext_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -789,11 +836,13 @@ methods:
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: 'listBySubscriptionNext(string, ServiceCallback<LabList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listBySubscriptionNext_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listBySubscriptionNext_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -808,11 +857,13 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabList" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabList" />&gt;
           description: |
             The callback
   - name: 'listVhds(string, string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.listVhds'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listVhds'
     package: '@azure/arm-devtestlabs'
     summary: List disk images available for custom image creation.
     remarks: ''
@@ -836,7 +887,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LabsListVhdsResponse" />&gt;
         description: Promise<Models.LabsListVhdsResponse>
   - name: 'listVhds(string, string, RequestOptionsBase, ServiceCallback<LabVhdList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listVhds_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listVhds_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -858,12 +909,12 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabVhdList"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabVhdList" />&gt;
           description: |
             The callback
   - name: 'listVhds(string, string, ServiceCallback<LabVhdList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listVhds_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listVhds_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -882,12 +933,12 @@ methods:
           description: The name of the lab.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabVhdList"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabVhdList" />&gt;
           description: |
             The callback
   - name: 'listVhdsNext(string, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.listVhdsNext'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listVhdsNext'
     package: '@azure/arm-devtestlabs'
     summary: List disk images available for custom image creation.
     remarks: ''
@@ -908,7 +959,7 @@ methods:
         type: Promise&lt;<xref uid="Models.LabsListVhdsNextResponse" />&gt;
         description: Promise<Models.LabsListVhdsNextResponse>
   - name: 'listVhdsNext(string, RequestOptionsBase, ServiceCallback<LabVhdList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listVhdsNext_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listVhdsNext_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -927,12 +978,12 @@ methods:
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabVhdList"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabVhdList" />&gt;
           description: |
             The callback
   - name: 'listVhdsNext(string, ServiceCallback<LabVhdList>)'
-    uid: '@azure/arm-devtestlabs.Labs.listVhdsNext_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.listVhdsNext_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -948,12 +999,12 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.LabVhdList"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.LabVhdList" />&gt;
           description: |
             The callback
   - name: 'update(string, string, LabFragment, msRest.RequestOptionsBase)'
-    uid: '@azure/arm-devtestlabs.Labs.update'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.update'
     package: '@azure/arm-devtestlabs'
     summary: Modify properties of labs.
     remarks: ''
@@ -971,7 +1022,7 @@ methods:
           type: string
           description: The name of the lab.
         - id: lab
-          type: <xref uid="@azure/arm-devtestlabs.LabFragment" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.LabFragment" />
           description: A lab.
         - id: options
           type: <xref uid="msRest.RequestOptionsBase" />
@@ -982,7 +1033,7 @@ methods:
   - name: >-
       update(string, string, LabFragment, RequestOptionsBase,
       ServiceCallback<Lab>)
-    uid: '@azure/arm-devtestlabs.Labs.update_2'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.update_2'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -1001,17 +1052,19 @@ methods:
           type: string
           description: The name of the lab.
         - id: lab
-          type: <xref uid="@azure/arm-devtestlabs.LabFragment" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.LabFragment" />
           description: A lab.
         - id: options
           type: RequestOptionsBase
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.Lab" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.Lab" />&gt;
           description: |
             The callback
   - name: 'update(string, string, LabFragment, ServiceCallback<Lab>)'
-    uid: '@azure/arm-devtestlabs.Labs.update_1'
+    uid: '@azure/arm-devtestlabs.operations.labs.d.Labs.update_1'
     package: '@azure/arm-devtestlabs'
     summary: ''
     remarks: ''
@@ -1029,9 +1082,11 @@ methods:
           type: string
           description: The name of the lab.
         - id: lab
-          type: <xref uid="@azure/arm-devtestlabs.LabFragment" />
+          type: <xref uid="@azure/arm-devtestlabs.models.index.d.LabFragment" />
           description: A lab.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/arm-devtestlabs.Lab" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/arm-devtestlabs.models.index.d.Lab" />&gt;
           description: |
             The callback

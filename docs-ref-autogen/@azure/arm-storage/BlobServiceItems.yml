@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BlobServiceItems
-uid: '@azure/arm-storage.BlobServiceItems'
+uid: '@azure/arm-storage.models.index.d.BlobServiceItems'
 package: '@azure/arm-storage'
 summary: ''
 fullName: BlobServiceItems
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storage.BlobServiceItems.Array'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.Array'
     package: '@azure/arm-storage'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storage.BlobServiceItems.length'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.length'
     package: '@azure/arm-storage'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,8 +38,33 @@ properties:
         type: number
         description: ''
 methods:
+  - name: 'concat(BlobServiceProperties | ConcatArray<BlobServiceProperties>[])'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.concat_1'
+    package: '@azure/arm-storage'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: BlobServiceProperties |
+        ConcatArray<BlobServiceProperties>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<BlobServiceProperties>[])'
-    uid: '@azure/arm-storage.BlobServiceItems.concat'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.concat'
     package: '@azure/arm-storage'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +75,18 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-storage.BlobServiceProperties"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storage.BlobServiceItems.concat_1'
-    package: '@azure/arm-storage'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.copyWithin'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.copyWithin'
     package: '@azure/arm-storage'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +124,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storage.BlobServiceItems.entries'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.entries'
     package: '@azure/arm-storage'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +138,7 @@ methods:
   - name: >-
       every((value: BlobServiceProperties, index: number, array:
       BlobServiceProperties[]) => unknown, any)
-    uid: '@azure/arm-storage.BlobServiceItems.every'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.every_1'
     package: '@azure/arm-storage'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +146,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: BlobServiceProperties, index: number,
+        function every(predicate: (value: BlobServiceProperties, index: number,
         array: BlobServiceProperties[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BlobServiceProperties, index: number, array:
             BlobServiceProperties[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: BlobServiceProperties, index: number, array:
+      BlobServiceProperties[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.every'
+    package: '@azure/arm-storage'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: BlobServiceProperties, index:
+        number, array: BlobServiceProperties[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: BlobServiceProperties, index: number, array:
+            BlobServiceProperties[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(BlobServiceProperties, undefined | number, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.fill'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.fill'
     package: '@azure/arm-storage'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +224,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +248,7 @@ methods:
   - name: >-
       filter((value: BlobServiceProperties, index: number, array:
       BlobServiceProperties[]) => unknown, any)
-    uid: '@azure/arm-storage.BlobServiceItems.filter_1'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.filter_1'
     package: '@azure/arm-storage'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +258,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: BlobServiceProperties, index:
-        number, array: BlobServiceProperties[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: BlobServiceProperties, index: number,
+        array: BlobServiceProperties[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BlobServiceProperties, index: number, array:
             BlobServiceProperties[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: BlobServiceProperties, index: number, array:
-      BlobServiceProperties[]) => boolean, any)
-    uid: '@azure/arm-storage.BlobServiceItems.filter'
+      BlobServiceProperties[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.filter'
     package: '@azure/arm-storage'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +292,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: BlobServiceProperties, index:
-        number, array: BlobServiceProperties[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: BlobServiceProperties, index:
+        number, array: BlobServiceProperties[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BlobServiceProperties, index: number, array:
-            BlobServiceProperties[]) =&gt; boolean
+            BlobServiceProperties[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +314,7 @@ methods:
   - name: >-
       find((value: BlobServiceProperties, index: number, obj:
       BlobServiceProperties[]) => unknown, any)
-    uid: '@azure/arm-storage.BlobServiceItems.find_1'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.find_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -278,12 +334,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: BlobServiceProperties, index: number, obj:
-      BlobServiceProperties[]) => boolean, any)
-    uid: '@azure/arm-storage.BlobServiceItems.find'
+      BlobServiceProperties[]) => value, any)
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.find'
     package: '@azure/arm-storage'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +354,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: BlobServiceProperties,
-        index: number, obj: BlobServiceProperties[]) => boolean, thisArg?: any)
+        index: number, obj: BlobServiceProperties[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: BlobServiceProperties, index: number, obj:
-            BlobServiceProperties[]) =&gt; boolean
+            BlobServiceProperties[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +382,7 @@ methods:
   - name: >-
       findIndex((value: BlobServiceProperties, index: number, obj:
       BlobServiceProperties[]) => unknown, any)
-    uid: '@azure/arm-storage.BlobServiceItems.findIndex'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.findIndex'
     package: '@azure/arm-storage'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +423,7 @@ methods:
   - name: >-
       forEach((value: BlobServiceProperties, index: number, array:
       BlobServiceProperties[]) => void, any)
-    uid: '@azure/arm-storage.BlobServiceItems.forEach'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.forEach'
     package: '@azure/arm-storage'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +448,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(BlobServiceProperties, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.includes'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.includes'
     package: '@azure/arm-storage'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +462,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +475,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(BlobServiceProperties, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.indexOf'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.indexOf'
     package: '@azure/arm-storage'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +487,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +500,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storage.BlobServiceItems.join'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.join'
     package: '@azure/arm-storage'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +521,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storage.BlobServiceItems.keys'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.keys'
     package: '@azure/arm-storage'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +533,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(BlobServiceProperties, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.lastIndexOf'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.lastIndexOf'
     package: '@azure/arm-storage'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +545,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +560,7 @@ methods:
   - name: >-
       map<U>((value: BlobServiceProperties, index: number, array:
       BlobServiceProperties[]) => U, any)
-    uid: '@azure/arm-storage.BlobServiceItems.map'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.map'
     package: '@azure/arm-storage'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +590,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storage.BlobServiceItems.pop'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.pop'
     package: '@azure/arm-storage'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +599,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
+          | undefined
         description: ''
   - name: 'push(BlobServiceProperties[])'
-    uid: '@azure/arm-storage.BlobServiceItems.push'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.push'
     package: '@azure/arm-storage'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +614,9 @@ methods:
       content: 'function push(items: BlobServiceProperties[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -558,7 +626,7 @@ methods:
       reduce((previousValue: BlobServiceProperties, currentValue:
       BlobServiceProperties, currentIndex: number, array:
       BlobServiceProperties[]) => BlobServiceProperties)
-    uid: '@azure/arm-storage.BlobServiceItems.reduce'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reduce'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,13 +651,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+        type: <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
         description: ''
   - name: >-
       reduce((previousValue: BlobServiceProperties, currentValue:
       BlobServiceProperties, currentIndex: number, array:
       BlobServiceProperties[]) => BlobServiceProperties, BlobServiceProperties)
-    uid: '@azure/arm-storage.BlobServiceItems.reduce_1'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reduce_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -609,15 +677,17 @@ methods:
             BlobServiceProperties[]) =&gt; BlobServiceProperties
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+        type: <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: BlobServiceProperties,
       currentIndex: number, array: BlobServiceProperties[]) => U, U)
-    uid: '@azure/arm-storage.BlobServiceItems.reduce_2'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reduce_2'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -653,7 +723,7 @@ methods:
       reduceRight((previousValue: BlobServiceProperties, currentValue:
       BlobServiceProperties, currentIndex: number, array:
       BlobServiceProperties[]) => BlobServiceProperties)
-    uid: '@azure/arm-storage.BlobServiceItems.reduceRight'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reduceRight'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -679,13 +749,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+        type: <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
         description: ''
   - name: >-
       reduceRight((previousValue: BlobServiceProperties, currentValue:
       BlobServiceProperties, currentIndex: number, array:
       BlobServiceProperties[]) => BlobServiceProperties, BlobServiceProperties)
-    uid: '@azure/arm-storage.BlobServiceItems.reduceRight_1'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reduceRight_1'
     package: '@azure/arm-storage'
     summary: ''
     remarks: ''
@@ -705,15 +775,17 @@ methods:
             BlobServiceProperties[]) =&gt; BlobServiceProperties
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" />
+        type: <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: BlobServiceProperties,
       currentIndex: number, array: BlobServiceProperties[]) => U, U)
-    uid: '@azure/arm-storage.BlobServiceItems.reduceRight_2'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reduceRight_2'
     package: '@azure/arm-storage'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -747,7 +819,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storage.BlobServiceItems.reverse'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.reverse'
     package: '@azure/arm-storage'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -756,10 +828,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-storage.BlobServiceItems.shift'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.shift'
     package: '@azure/arm-storage'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -768,10 +842,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-storage.BlobServiceProperties" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.slice'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.slice'
     package: '@azure/arm-storage'
     summary: Returns a section of an array.
     remarks: ''
@@ -785,15 +861,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
         description: ''
   - name: >-
       some((value: BlobServiceProperties, index: number, array:
       BlobServiceProperties[]) => unknown, any)
-    uid: '@azure/arm-storage.BlobServiceItems.some'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.some'
     package: '@azure/arm-storage'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -803,30 +882,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: BlobServiceProperties, index: number,
+        function some(predicate: (value: BlobServiceProperties, index: number,
         array: BlobServiceProperties[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BlobServiceProperties, index: number, array:
             BlobServiceProperties[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: BlobServiceProperties, b: BlobServiceProperties) =>
       number)
-    uid: '@azure/arm-storage.BlobServiceItems.sort'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.sort'
     package: '@azure/arm-storage'
     summary: Sorts an array.
     remarks: ''
@@ -842,14 +926,25 @@ methods:
             undefined | (a: BlobServiceProperties, b: BlobServiceProperties)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, BlobServiceProperties[])'
-    uid: '@azure/arm-storage.BlobServiceItems.splice_1'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.splice_1'
     package: '@azure/arm-storage'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -871,14 +966,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storage.BlobServiceItems.splice'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.splice'
     package: '@azure/arm-storage'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -899,10 +998,12 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+        type: >-
+          <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storage.BlobServiceItems.toLocaleString'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.toLocaleString'
     package: '@azure/arm-storage'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -916,7 +1017,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storage.BlobServiceItems.toString'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.toString'
     package: '@azure/arm-storage'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -928,7 +1029,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(BlobServiceProperties[])'
-    uid: '@azure/arm-storage.BlobServiceItems.unshift'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.unshift'
     package: '@azure/arm-storage'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -938,14 +1039,16 @@ methods:
       content: 'function unshift(items: BlobServiceProperties[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storage.BlobServiceProperties" />[]'
+          type: >-
+            <xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storage.BlobServiceItems.values'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.values'
     package: '@azure/arm-storage'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -956,6 +1059,37 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-storage.BlobServiceProperties" />&gt;
+          uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storage.BlobServiceProperties" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.[Symbol.iterator]'
+    package: '@azure/arm-storage'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storage.models.index.d.BlobServiceProperties" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-storage.models.index.d.BlobServiceItems.[Symbol.unscopables]'
+    package: '@azure/arm-storage'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-storage.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-storage.models.index.d.BlobServiceProperties"
+  />&gt;

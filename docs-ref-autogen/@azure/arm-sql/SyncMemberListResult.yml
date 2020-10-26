@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SyncMemberListResult
-uid: '@azure/arm-sql.SyncMemberListResult'
+uid: '@azure/arm-sql.models.index.d.SyncMemberListResult'
 package: '@azure/arm-sql'
 summary: ''
 fullName: SyncMemberListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-sql.SyncMemberListResult.Array'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.Array'
     package: '@azure/arm-sql'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-sql.SyncMemberListResult.length'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.length'
     package: '@azure/arm-sql'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-sql.SyncMemberListResult.nextLink'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.nextLink'
     package: '@azure/arm-sql'
     summary: >-
       Link to retrieve next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SyncMember>[])'
-    uid: '@azure/arm-sql.SyncMemberListResult.concat'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.concat'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<SyncMember>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-sql.SyncMember" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-sql.models.index.d.SyncMember"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-sql.SyncMemberListResult.concat_1'
+  - name: 'concat(SyncMember | ConcatArray<SyncMember>[])'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.concat_1'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: SyncMember | ConcatArray<SyncMember>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.SyncMember" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-sql.models.index.d.SyncMember"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.copyWithin'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.copyWithin'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-sql.SyncMemberListResult.entries'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.entries'
     package: '@azure/arm-sql'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: SyncMember, index: number, array: SyncMember[]) => unknown,
       any)
-    uid: '@azure/arm-sql.SyncMemberListResult.every'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.every_1'
     package: '@azure/arm-sql'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SyncMember, index: number, array:
+        function every(predicate: (value: SyncMember, index: number, array:
         SyncMember[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncMember, index: number, array: SyncMember[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SyncMember, index: number, array: SyncMember[]) => value,
+      any)
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.every'
+    package: '@azure/arm-sql'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SyncMember, index: number, array:
+        SyncMember[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: SyncMember, index: number, array: SyncMember[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SyncMember, undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.fill'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.fill'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-sql.SyncMember" />
+          type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +253,7 @@ methods:
   - name: >-
       filter((value: SyncMember, index: number, array: SyncMember[]) => unknown,
       any)
-    uid: '@azure/arm-sql.SyncMemberListResult.filter_1'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.filter_1'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SyncMember, index: number, array:
+        function filter(predicate: (value: SyncMember, index: number, array:
         SyncMember[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncMember, index: number, array: SyncMember[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
   - name: >-
       filter<S>((value: SyncMember, index: number, array: SyncMember[]) =>
-      boolean, any)
-    uid: '@azure/arm-sql.SyncMemberListResult.filter'
+      value, any)
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.filter'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +295,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SyncMember, index: number, array:
-        SyncMember[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SyncMember, index: number, array:
+        SyncMember[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: SyncMember, index: number, array: SyncMember[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: SyncMember, index: number, array: SyncMember[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +315,7 @@ methods:
   - name: >-
       find((value: SyncMember, index: number, obj: SyncMember[]) => unknown,
       any)
-    uid: '@azure/arm-sql.SyncMemberListResult.find_1'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.find_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -291,12 +333,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SyncMember, index: number, obj: SyncMember[])
-      => boolean, any)
-    uid: '@azure/arm-sql.SyncMemberListResult.find'
+      => value, any)
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.find'
     package: '@azure/arm-sql'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +351,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SyncMember, index:
-        number, obj: SyncMember[]) => boolean, thisArg?: any)
+        number, obj: SyncMember[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SyncMember, index: number, obj: SyncMember[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +379,7 @@ methods:
   - name: >-
       findIndex((value: SyncMember, index: number, obj: SyncMember[]) =>
       unknown, any)
-    uid: '@azure/arm-sql.SyncMemberListResult.findIndex'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.findIndex'
     package: '@azure/arm-sql'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +418,7 @@ methods:
   - name: >-
       forEach((value: SyncMember, index: number, array: SyncMember[]) => void,
       any)
-    uid: '@azure/arm-sql.SyncMemberListResult.forEach'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.forEach'
     package: '@azure/arm-sql'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -399,7 +441,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SyncMember, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.includes'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.includes'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -413,7 +455,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.SyncMember" />
+          type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -424,7 +466,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SyncMember, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.indexOf'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.indexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -436,7 +478,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.SyncMember" />
+          type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -447,7 +489,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-sql.SyncMemberListResult.join'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.join'
     package: '@azure/arm-sql'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -468,7 +510,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-sql.SyncMemberListResult.keys'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.keys'
     package: '@azure/arm-sql'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -480,7 +522,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SyncMember, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.lastIndexOf'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.lastIndexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -492,7 +534,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.SyncMember" />
+          type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -503,7 +545,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: SyncMember, index: number, array: SyncMember[]) => U, any)'
-    uid: '@azure/arm-sql.SyncMemberListResult.map'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.map'
     package: '@azure/arm-sql'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -531,7 +573,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-sql.SyncMemberListResult.pop'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.pop'
     package: '@azure/arm-sql'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -540,10 +582,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" /> | undefined
         description: ''
   - name: 'push(SyncMember[])'
-    uid: '@azure/arm-sql.SyncMemberListResult.push'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.push'
     package: '@azure/arm-sql'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -553,7 +595,7 @@ methods:
       content: 'function push(items: SyncMember[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
           description: |
             New elements of the Array.
       return:
@@ -562,7 +604,7 @@ methods:
   - name: >-
       reduce((previousValue: SyncMember, currentValue: SyncMember, currentIndex:
       number, array: SyncMember[]) => SyncMember)
-    uid: '@azure/arm-sql.SyncMemberListResult.reduce'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reduce'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -585,12 +627,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
         description: ''
   - name: >-
       reduce((previousValue: SyncMember, currentValue: SyncMember, currentIndex:
       number, array: SyncMember[]) => SyncMember, SyncMember)
-    uid: '@azure/arm-sql.SyncMemberListResult.reduce_1'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reduce_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -608,15 +650,15 @@ methods:
             number, array: SyncMember[]) =&gt; SyncMember
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.SyncMember" />
+          type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SyncMember, currentIndex:
       number, array: SyncMember[]) => U, U)
-    uid: '@azure/arm-sql.SyncMemberListResult.reduce_2'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reduce_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -651,7 +693,7 @@ methods:
   - name: >-
       reduceRight((previousValue: SyncMember, currentValue: SyncMember,
       currentIndex: number, array: SyncMember[]) => SyncMember)
-    uid: '@azure/arm-sql.SyncMemberListResult.reduceRight'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reduceRight'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -676,12 +718,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
         description: ''
   - name: >-
       reduceRight((previousValue: SyncMember, currentValue: SyncMember,
       currentIndex: number, array: SyncMember[]) => SyncMember, SyncMember)
-    uid: '@azure/arm-sql.SyncMemberListResult.reduceRight_1'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reduceRight_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -699,15 +741,15 @@ methods:
             number, array: SyncMember[]) =&gt; SyncMember
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.SyncMember" />
+          type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" />
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SyncMember, currentIndex:
       number, array: SyncMember[]) => U, U)
-    uid: '@azure/arm-sql.SyncMemberListResult.reduceRight_2'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reduceRight_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -741,7 +783,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-sql.SyncMemberListResult.reverse'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.reverse'
     package: '@azure/arm-sql'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -750,10 +792,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-sql.SyncMemberListResult.shift'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.shift'
     package: '@azure/arm-sql'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -762,10 +804,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-sql.SyncMember" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.SyncMember" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.slice'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.slice'
     package: '@azure/arm-sql'
     summary: Returns a section of an array.
     remarks: ''
@@ -779,15 +821,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
   - name: >-
       some((value: SyncMember, index: number, array: SyncMember[]) => unknown,
       any)
-    uid: '@azure/arm-sql.SyncMemberListResult.some'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.some'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -797,28 +840,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SyncMember, index: number, array:
+        function some(predicate: (value: SyncMember, index: number, array:
         SyncMember[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SyncMember, index: number, array: SyncMember[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: SyncMember, b: SyncMember) => number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.sort'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.sort'
     package: '@azure/arm-sql'
     summary: Sorts an array.
     remarks: ''
@@ -832,14 +880,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: SyncMember, b: SyncMember) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SyncMember[])'
-    uid: '@azure/arm-sql.SyncMemberListResult.splice_1'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.splice_1'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +918,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-sql.SyncMemberListResult.splice'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.splice'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +946,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-sql.SyncMemberListResult.toLocaleString'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.toLocaleString'
     package: '@azure/arm-sql'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +963,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-sql.SyncMemberListResult.toString'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.toString'
     package: '@azure/arm-sql'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +975,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SyncMember[])'
-    uid: '@azure/arm-sql.SyncMemberListResult.unshift'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.unshift'
     package: '@azure/arm-sql'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +985,14 @@ methods:
       content: 'function unshift(items: SyncMember[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.SyncMember" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.SyncMember" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-sql.SyncMemberListResult.values'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.values'
     package: '@azure/arm-sql'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -942,6 +1001,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-sql.SyncMember" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.SyncMember" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-sql.SyncMember" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.[Symbol.iterator]'
+    package: '@azure/arm-sql'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.SyncMember" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-sql.models.index.d.SyncMemberListResult.[Symbol.unscopables]'
+    package: '@azure/arm-sql'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-sql.models.index.d.RecoverableDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-sql.models.index.d.SyncMember" />&gt;

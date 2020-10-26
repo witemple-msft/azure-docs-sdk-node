@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: GremlinDatabaseListResult
-uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult'
+uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult'
 package: '@azure/arm-cosmosdb'
 summary: ''
 fullName: GremlinDatabaseListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.Array'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.Array'
     package: '@azure/arm-cosmosdb'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.length'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.length'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<GremlinDatabaseGetResults>[])'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.concat'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.concat'
     package: '@azure/arm-cosmosdb'
     summary: Combines two or more arrays.
     remarks: ''
@@ -51,31 +51,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />&gt;[]
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.concat_1'
+  - name: >-
+      concat(GremlinDatabaseGetResults |
+      ConcatArray<GremlinDatabaseGetResults>[])
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.concat_1'
     package: '@azure/arm-cosmosdb'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: GremlinDatabaseGetResults |
+        ConcatArray<GremlinDatabaseGetResults>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.copyWithin'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.copyWithin'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.entries'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.entries'
     package: '@azure/arm-cosmosdb'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +143,7 @@ methods:
   - name: >-
       every((value: GremlinDatabaseGetResults, index: number, array:
       GremlinDatabaseGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.every'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.every_1'
     package: '@azure/arm-cosmosdb'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: GremlinDatabaseGetResults, index:
+        function every(predicate: (value: GremlinDatabaseGetResults, index:
         number, array: GremlinDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GremlinDatabaseGetResults, index: number, array:
             GremlinDatabaseGetResults[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: GremlinDatabaseGetResults, index: number, array:
+      GremlinDatabaseGetResults[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.every'
+    package: '@azure/arm-cosmosdb'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: GremlinDatabaseGetResults, index:
+        number, array: GremlinDatabaseGetResults[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: GremlinDatabaseGetResults, index: number, array:
+            GremlinDatabaseGetResults[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(GremlinDatabaseGetResults, undefined | number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.fill'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.fill'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +229,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +254,7 @@ methods:
   - name: >-
       filter((value: GremlinDatabaseGetResults, index: number, array:
       GremlinDatabaseGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.filter_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.filter_1'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +264,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: GremlinDatabaseGetResults, index:
+        function filter(predicate: (value: GremlinDatabaseGetResults, index:
         number, array: GremlinDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GremlinDatabaseGetResults, index: number, array:
             GremlinDatabaseGetResults[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: GremlinDatabaseGetResults, index: number, array:
-      GremlinDatabaseGetResults[]) => boolean, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.filter'
+      GremlinDatabaseGetResults[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.filter'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +299,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: GremlinDatabaseGetResults, index:
-        number, array: GremlinDatabaseGetResults[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: GremlinDatabaseGetResults, index:
+        number, array: GremlinDatabaseGetResults[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GremlinDatabaseGetResults, index: number, array:
-            GremlinDatabaseGetResults[]) =&gt; boolean
+            GremlinDatabaseGetResults[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +321,7 @@ methods:
   - name: >-
       find((value: GremlinDatabaseGetResults, index: number, obj:
       GremlinDatabaseGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.find_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.find_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -279,13 +342,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" /> |
-          undefined
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: GremlinDatabaseGetResults, index: number, obj:
-      GremlinDatabaseGetResults[]) => boolean, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.find'
+      GremlinDatabaseGetResults[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.find'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -299,12 +363,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         GremlinDatabaseGetResults, index: number, obj:
-        GremlinDatabaseGetResults[]) => boolean, thisArg?: any)
+        GremlinDatabaseGetResults[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: GremlinDatabaseGetResults, index: number, obj:
-            GremlinDatabaseGetResults[]) =&gt; boolean
+            GremlinDatabaseGetResults[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -327,7 +391,7 @@ methods:
   - name: >-
       findIndex((value: GremlinDatabaseGetResults, index: number, obj:
       GremlinDatabaseGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.findIndex'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.findIndex'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -368,7 +432,7 @@ methods:
   - name: >-
       forEach((value: GremlinDatabaseGetResults, index: number, array:
       GremlinDatabaseGetResults[]) => void, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.forEach'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.forEach'
     package: '@azure/arm-cosmosdb'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -393,7 +457,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(GremlinDatabaseGetResults, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.includes'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.includes'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -407,7 +471,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -418,7 +485,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(GremlinDatabaseGetResults, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.indexOf'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.indexOf'
     package: '@azure/arm-cosmosdb'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -430,7 +497,10 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -441,7 +511,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.join'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.join'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -462,7 +532,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.keys'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.keys'
     package: '@azure/arm-cosmosdb'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -474,7 +544,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(GremlinDatabaseGetResults, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.lastIndexOf'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.lastIndexOf'
     package: '@azure/arm-cosmosdb'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -486,7 +556,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -499,7 +572,7 @@ methods:
   - name: >-
       map<U>((value: GremlinDatabaseGetResults, index: number, array:
       GremlinDatabaseGetResults[]) => U, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.map'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.map'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -529,7 +602,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.pop'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.pop'
     package: '@azure/arm-cosmosdb'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -539,11 +612,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" /> |
-          undefined
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
+          | undefined
         description: ''
   - name: 'push(GremlinDatabaseGetResults[])'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.push'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.push'
     package: '@azure/arm-cosmosdb'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -553,7 +627,10 @@ methods:
       content: 'function push(items: GremlinDatabaseGetResults[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -563,7 +640,7 @@ methods:
       reduce((previousValue: GremlinDatabaseGetResults, currentValue:
       GremlinDatabaseGetResults, currentIndex: number, array:
       GremlinDatabaseGetResults[]) => GremlinDatabaseGetResults)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reduce'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reduce'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -588,14 +665,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
         description: ''
   - name: >-
       reduce((previousValue: GremlinDatabaseGetResults, currentValue:
       GremlinDatabaseGetResults, currentIndex: number, array:
       GremlinDatabaseGetResults[]) => GremlinDatabaseGetResults,
       GremlinDatabaseGetResults)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reduce_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reduce_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -615,15 +694,20 @@ methods:
             GremlinDatabaseGetResults[]) =&gt; GremlinDatabaseGetResults
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: GremlinDatabaseGetResults,
       currentIndex: number, array: GremlinDatabaseGetResults[]) => U, U)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reduce_2'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reduce_2'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -659,7 +743,7 @@ methods:
       reduceRight((previousValue: GremlinDatabaseGetResults, currentValue:
       GremlinDatabaseGetResults, currentIndex: number, array:
       GremlinDatabaseGetResults[]) => GremlinDatabaseGetResults)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reduceRight'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reduceRight'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -686,14 +770,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
         description: ''
   - name: >-
       reduceRight((previousValue: GremlinDatabaseGetResults, currentValue:
       GremlinDatabaseGetResults, currentIndex: number, array:
       GremlinDatabaseGetResults[]) => GremlinDatabaseGetResults,
       GremlinDatabaseGetResults)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reduceRight_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reduceRight_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -713,15 +799,20 @@ methods:
             GremlinDatabaseGetResults[]) =&gt; GremlinDatabaseGetResults
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: GremlinDatabaseGetResults,
       currentIndex: number, array: GremlinDatabaseGetResults[]) => U, U)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reduceRight_2'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reduceRight_2'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -755,7 +846,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.reverse'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.reverse'
     package: '@azure/arm-cosmosdb'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -764,10 +855,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.shift'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.shift'
     package: '@azure/arm-cosmosdb'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -777,11 +871,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" /> |
-          undefined
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.slice'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.slice'
     package: '@azure/arm-cosmosdb'
     summary: Returns a section of an array.
     remarks: ''
@@ -795,15 +890,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
   - name: >-
       some((value: GremlinDatabaseGetResults, index: number, array:
       GremlinDatabaseGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.some'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.some'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -813,30 +912,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: GremlinDatabaseGetResults, index:
+        function some(predicate: (value: GremlinDatabaseGetResults, index:
         number, array: GremlinDatabaseGetResults[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GremlinDatabaseGetResults, index: number, array:
             GremlinDatabaseGetResults[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: GremlinDatabaseGetResults, b:
       GremlinDatabaseGetResults) => number)
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.sort'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.sort'
     package: '@azure/arm-cosmosdb'
     summary: Sorts an array.
     remarks: ''
@@ -852,14 +956,25 @@ methods:
             undefined | (a: GremlinDatabaseGetResults, b:
             GremlinDatabaseGetResults) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, GremlinDatabaseGetResults[])'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.splice_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.splice_1'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -881,14 +996,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.splice'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.splice'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -909,10 +1030,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.toLocaleString'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.toLocaleString
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -926,7 +1051,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.toString'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.toString'
     package: '@azure/arm-cosmosdb'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -938,7 +1063,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(GremlinDatabaseGetResults[])'
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.unshift'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.unshift'
     package: '@azure/arm-cosmosdb'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -948,14 +1073,17 @@ methods:
       content: 'function unshift(items: GremlinDatabaseGetResults[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-cosmosdb.GremlinDatabaseListResult.values'
+    uid: '@azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.values'
     package: '@azure/arm-cosmosdb'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -966,6 +1094,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />&gt;
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-cosmosdb.GremlinDatabaseGetResults" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.[Symbol.iterator]
+    package: '@azure/arm-cosmosdb'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.GremlinDatabaseListResult.[Symbol.unscopables]
+    package: '@azure/arm-cosmosdb'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-cosmosdb.models.index.d.DatabaseAccountsListResult.Array"
+  />&lt;<xref uid="@azure/arm-cosmosdb.models.index.d.GremlinDatabaseGetResults"
+  />&gt;

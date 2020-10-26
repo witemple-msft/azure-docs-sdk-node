@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: VideoOverlay
-uid: '@azure/arm-mediaservices.VideoOverlay'
+uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay'
 package: '@azure/arm-mediaservices'
 summary: Describes the properties of a video overlay.
 fullName: VideoOverlay
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: audioGainLevel
-    uid: '@azure/arm-mediaservices.VideoOverlay.audioGainLevel'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.audioGainLevel'
     package: '@azure/arm-mediaservices'
     summary: >-
       The gain level of audio in the overlay. The value should be in the range
@@ -27,7 +27,7 @@ properties:
         type: undefined | number
         description: ''
   - name: cropRectangle
-    uid: '@azure/arm-mediaservices.VideoOverlay.cropRectangle'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.cropRectangle'
     package: '@azure/arm-mediaservices'
     summary: An optional rectangular window used to crop the overlay image or video.
     fullName: cropRectangle
@@ -37,25 +37,28 @@ properties:
     syntax:
       content: 'cropRectangle?: Rectangle'
       return:
-        type: <xref uid="@azure/arm-mediaservices.Rectangle" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Rectangle" />
         description: ''
   - name: end
-    uid: '@azure/arm-mediaservices.VideoOverlay.end'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.end'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The position in the input video at which the overlay ends. The value
-      should be in ISO 8601
+      The end position, with reference to the input video, at which the overlay
+      ends. The value
 
-      duration format. For example, PT30S to end the overlay at 30 seconds in to
-      the input video. If
+      should be in ISO 8601 format. For example, PT30S to end the overlay at 30
+      seconds into the
 
-      not specified the overlay will be applied until the end of the input video
-      if inputLoop is
+      input video. If not specified or the value is greater than the input video
+      duration, the
 
-      true. Else, if inputLoop is false, then overlay will last as long as the
-      duration of the
+      overlay will be applied until the end of the input video if the overlay
+      media duration is
 
-      overlay media.
+      greater than the input video duration, else the overlay will last as long
+      as the overlay media
+
+      duration.
     fullName: end
     remarks: ''
     isPreview: false
@@ -66,7 +69,7 @@ properties:
         type: undefined | string
         description: ''
   - name: fadeInDuration
-    uid: '@azure/arm-mediaservices.VideoOverlay.fadeInDuration'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.fadeInDuration'
     package: '@azure/arm-mediaservices'
     summary: >-
       The duration over which the overlay fades in onto the input video. The
@@ -86,7 +89,7 @@ properties:
         type: undefined | string
         description: ''
   - name: fadeOutDuration
-    uid: '@azure/arm-mediaservices.VideoOverlay.fadeOutDuration'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.fadeOutDuration'
     package: '@azure/arm-mediaservices'
     summary: >-
       The duration over which the overlay fades out of the input video. The
@@ -106,7 +109,7 @@ properties:
         type: undefined | string
         description: ''
   - name: inputLabel
-    uid: '@azure/arm-mediaservices.VideoOverlay.inputLabel'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.inputLabel'
     package: '@azure/arm-mediaservices'
     summary: >-
       The label of the job input which is to be used as an overlay. The Input
@@ -129,7 +132,7 @@ properties:
         type: string
         description: ''
   - name: odatatype
-    uid: '@azure/arm-mediaservices.VideoOverlay.odatatype'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.odatatype'
     package: '@azure/arm-mediaservices'
     summary: Polymorphic Discriminator
     fullName: odatatype
@@ -142,7 +145,7 @@ properties:
         type: '"#<xref uid="Microsoft.Media.VideoOverlay" />"'
         description: ''
   - name: opacity
-    uid: '@azure/arm-mediaservices.VideoOverlay.opacity'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.opacity'
     package: '@azure/arm-mediaservices'
     summary: >-
       The opacity of the overlay. This is a value in the range [0 - 1.0].
@@ -159,7 +162,7 @@ properties:
         type: undefined | number
         description: ''
   - name: position
-    uid: '@azure/arm-mediaservices.VideoOverlay.position'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.position'
     package: '@azure/arm-mediaservices'
     summary: The location in the input video where the overlay is applied.
     fullName: position
@@ -169,17 +172,17 @@ properties:
     syntax:
       content: 'position?: Rectangle'
       return:
-        type: <xref uid="@azure/arm-mediaservices.Rectangle" />
+        type: <xref uid="@azure/arm-mediaservices.models.index.d.Rectangle" />
         description: ''
   - name: start
-    uid: '@azure/arm-mediaservices.VideoOverlay.start'
+    uid: '@azure/arm-mediaservices.models.index.d.VideoOverlay.start'
     package: '@azure/arm-mediaservices'
     summary: >-
       The start position, with reference to the input video, at which the
       overlay starts. The value
 
       should be in ISO 8601 format. For example, PT05S to start the overlay at 5
-      seconds in to the
+      seconds into the
 
       input video. If not specified the overlay starts from the beginning of the
       input video.

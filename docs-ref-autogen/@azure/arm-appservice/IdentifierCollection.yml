@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: IdentifierCollection
-uid: '@azure/arm-appservice.IdentifierCollection'
+uid: '@azure/arm-appservice.models.index.d.IdentifierCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: IdentifierCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.IdentifierCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.IdentifierCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.IdentifierCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Identifier>[])'
-    uid: '@azure/arm-appservice.IdentifierCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<Identifier>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-appservice.Identifier" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.Identifier" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.IdentifierCollection.concat_1'
+  - name: 'concat(Identifier | ConcatArray<Identifier>[])'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Identifier | ConcatArray<Identifier>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.Identifier" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.Identifier" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.IdentifierCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: Identifier, index: number, array: Identifier[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.IdentifierCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Identifier, index: number, array:
+        function every(predicate: (value: Identifier, index: number, array:
         Identifier[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Identifier, index: number, array: Identifier[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Identifier, index: number, array: Identifier[]) => value,
+      any)
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Identifier, index: number, array:
+        Identifier[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Identifier, index: number, array: Identifier[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Identifier, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.Identifier" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +253,7 @@ methods:
   - name: >-
       filter((value: Identifier, index: number, array: Identifier[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.IdentifierCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Identifier, index: number, array:
+        function filter(predicate: (value: Identifier, index: number, array:
         Identifier[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Identifier, index: number, array: Identifier[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
   - name: >-
       filter<S>((value: Identifier, index: number, array: Identifier[]) =>
-      boolean, any)
-    uid: '@azure/arm-appservice.IdentifierCollection.filter'
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +295,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Identifier, index: number, array:
-        Identifier[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Identifier, index: number, array:
+        Identifier[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: Identifier, index: number, array: Identifier[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: Identifier, index: number, array: Identifier[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +315,7 @@ methods:
   - name: >-
       find((value: Identifier, index: number, obj: Identifier[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.IdentifierCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -291,12 +333,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Identifier" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Identifier, index: number, obj: Identifier[])
-      => boolean, any)
-    uid: '@azure/arm-appservice.IdentifierCollection.find'
+      => value, any)
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +353,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Identifier, index:
-        number, obj: Identifier[]) => boolean, thisArg?: any)
+        number, obj: Identifier[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Identifier, index: number, obj: Identifier[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +381,7 @@ methods:
   - name: >-
       findIndex((value: Identifier, index: number, obj: Identifier[]) =>
       unknown, any)
-    uid: '@azure/arm-appservice.IdentifierCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +420,7 @@ methods:
   - name: >-
       forEach((value: Identifier, index: number, array: Identifier[]) => void,
       any)
-    uid: '@azure/arm-appservice.IdentifierCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -399,7 +443,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Identifier, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -413,7 +457,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Identifier" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -424,7 +468,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Identifier, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -436,7 +480,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Identifier" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -447,7 +491,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.IdentifierCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -468,7 +512,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.IdentifierCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -480,7 +524,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Identifier, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -492,7 +536,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Identifier" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -503,7 +547,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Identifier, index: number, array: Identifier[]) => U, any)'
-    uid: '@azure/arm-appservice.IdentifierCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -531,7 +575,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.IdentifierCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -540,10 +584,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Identifier" /> |
+          undefined
         description: ''
   - name: 'push(Identifier[])'
-    uid: '@azure/arm-appservice.IdentifierCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -553,7 +599,7 @@ methods:
       content: 'function push(items: Identifier[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
           description: |
             New elements of the Array.
       return:
@@ -562,7 +608,7 @@ methods:
   - name: >-
       reduce((previousValue: Identifier, currentValue: Identifier, currentIndex:
       number, array: Identifier[]) => Identifier)
-    uid: '@azure/arm-appservice.IdentifierCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -585,12 +631,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
         description: ''
   - name: >-
       reduce((previousValue: Identifier, currentValue: Identifier, currentIndex:
       number, array: Identifier[]) => Identifier, Identifier)
-    uid: '@azure/arm-appservice.IdentifierCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -608,15 +654,15 @@ methods:
             number, array: Identifier[]) =&gt; Identifier
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.Identifier" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Identifier, currentIndex:
       number, array: Identifier[]) => U, U)
-    uid: '@azure/arm-appservice.IdentifierCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -651,7 +697,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Identifier, currentValue: Identifier,
       currentIndex: number, array: Identifier[]) => Identifier)
-    uid: '@azure/arm-appservice.IdentifierCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -676,12 +722,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
         description: ''
   - name: >-
       reduceRight((previousValue: Identifier, currentValue: Identifier,
       currentIndex: number, array: Identifier[]) => Identifier, Identifier)
-    uid: '@azure/arm-appservice.IdentifierCollection.reduceRight_1'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reduceRight_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -699,15 +745,15 @@ methods:
             number, array: Identifier[]) =&gt; Identifier
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.Identifier" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Identifier" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Identifier, currentIndex:
       number, array: Identifier[]) => U, U)
-    uid: '@azure/arm-appservice.IdentifierCollection.reduceRight_2'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reduceRight_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -741,7 +787,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.IdentifierCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -750,10 +796,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.IdentifierCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -762,10 +808,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.Identifier" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Identifier" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -779,15 +827,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
   - name: >-
       some((value: Identifier, index: number, array: Identifier[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.IdentifierCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -797,28 +846,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Identifier, index: number, array:
+        function some(predicate: (value: Identifier, index: number, array:
         Identifier[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Identifier, index: number, array: Identifier[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Identifier, b: Identifier) => number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -832,14 +886,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Identifier, b: Identifier) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Identifier[])'
-    uid: '@azure/arm-appservice.IdentifierCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +924,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.IdentifierCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +952,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.IdentifierCollection.toLocaleString'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.toLocaleString'
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +969,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.IdentifierCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +981,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Identifier[])'
-    uid: '@azure/arm-appservice.IdentifierCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +991,14 @@ methods:
       content: 'function unshift(items: Identifier[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Identifier" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Identifier" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.IdentifierCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.IdentifierCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -943,7 +1008,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-appservice.Identifier"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.Identifier" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.Identifier" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.IdentifierCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.Identifier" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.IdentifierCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.Identifier" />&gt;

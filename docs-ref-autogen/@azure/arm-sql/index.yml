@@ -3,857 +3,1006 @@ uid: '@azure/arm-sql'
 name: '@azure/arm-sql'
 summary: ''
 type: package
-interfaces:
-  - '@azure/arm-sql.AutomaticTuningOptions'
-  - '@azure/arm-sql.AutomaticTuningServerOptions'
-  - '@azure/arm-sql.BackupLongTermRetentionPolicy'
-  - '@azure/arm-sql.BackupShortTermRetentionPolicy'
-  - '@azure/arm-sql.BackupShortTermRetentionPolicyListResult'
-  - '@azure/arm-sql.CapabilitiesListByLocationOptionalParams'
-  - '@azure/arm-sql.CheckNameAvailabilityRequest'
-  - '@azure/arm-sql.CheckNameAvailabilityResponse'
-  - '@azure/arm-sql.CompleteDatabaseRestoreDefinition'
-  - '@azure/arm-sql.CreateDatabaseRestorePointDefinition'
-  - '@azure/arm-sql.DataMaskingPolicy'
-  - '@azure/arm-sql.DataMaskingRule'
-  - '@azure/arm-sql.DataMaskingRuleListResult'
-  - '@azure/arm-sql.Database'
-  - '@azure/arm-sql.DatabaseAutomaticTuning'
-  - '@azure/arm-sql.DatabaseBlobAuditingPolicy'
-  - '@azure/arm-sql.DatabaseBlobAuditingPolicyListResult'
-  - '@azure/arm-sql.DatabaseListResult'
-  - '@azure/arm-sql.DatabaseOperation'
-  - '@azure/arm-sql.DatabaseOperationListResult'
-  - '@azure/arm-sql.DatabaseSecurityAlertPolicy'
-  - '@azure/arm-sql.DatabaseUpdate'
-  - '@azure/arm-sql.DatabaseUsage'
-  - '@azure/arm-sql.DatabaseUsageListResult'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessment'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentListResult'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentRuleBaseline'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentRuleBaselineItem'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentScansExport'
-  - '@azure/arm-sql.DatabasesBeginFailoverOptionalParams'
-  - '@azure/arm-sql.DatabasesFailoverOptionalParams'
-  - '@azure/arm-sql.EditionCapability'
-  - '@azure/arm-sql.ElasticPool'
-  - '@azure/arm-sql.ElasticPoolActivity'
-  - '@azure/arm-sql.ElasticPoolActivityListResult'
-  - '@azure/arm-sql.ElasticPoolDatabaseActivity'
-  - '@azure/arm-sql.ElasticPoolDatabaseActivityListResult'
-  - '@azure/arm-sql.ElasticPoolEditionCapability'
-  - '@azure/arm-sql.ElasticPoolListResult'
-  - '@azure/arm-sql.ElasticPoolOperation'
-  - '@azure/arm-sql.ElasticPoolOperationListResult'
-  - '@azure/arm-sql.ElasticPoolPerDatabaseMaxPerformanceLevelCapability'
-  - '@azure/arm-sql.ElasticPoolPerDatabaseMinPerformanceLevelCapability'
-  - '@azure/arm-sql.ElasticPoolPerDatabaseSettings'
-  - '@azure/arm-sql.ElasticPoolPerformanceLevelCapability'
-  - '@azure/arm-sql.ElasticPoolUpdate'
-  - '@azure/arm-sql.ElasticPoolsListByServerOptionalParams'
-  - '@azure/arm-sql.EncryptionProtector'
-  - '@azure/arm-sql.EncryptionProtectorListResult'
-  - '@azure/arm-sql.ExportRequest'
-  - '@azure/arm-sql.ExtendedDatabaseBlobAuditingPolicy'
-  - '@azure/arm-sql.ExtendedServerBlobAuditingPolicy'
-  - '@azure/arm-sql.FailoverGroup'
-  - '@azure/arm-sql.FailoverGroupListResult'
-  - '@azure/arm-sql.FailoverGroupReadOnlyEndpoint'
-  - '@azure/arm-sql.FailoverGroupReadWriteEndpoint'
-  - '@azure/arm-sql.FailoverGroupUpdate'
-  - '@azure/arm-sql.FirewallRule'
-  - '@azure/arm-sql.FirewallRuleListResult'
-  - '@azure/arm-sql.GeoBackupPolicy'
-  - '@azure/arm-sql.GeoBackupPolicyListResult'
-  - '@azure/arm-sql.ImportExportResponse'
-  - '@azure/arm-sql.ImportExtensionRequest'
-  - '@azure/arm-sql.ImportRequest'
-  - '@azure/arm-sql.InstanceFailoverGroup'
-  - '@azure/arm-sql.InstanceFailoverGroupListResult'
-  - '@azure/arm-sql.InstanceFailoverGroupReadOnlyEndpoint'
-  - '@azure/arm-sql.InstanceFailoverGroupReadWriteEndpoint'
-  - '@azure/arm-sql.InstancePool'
-  - '@azure/arm-sql.InstancePoolListResult'
-  - '@azure/arm-sql.InstancePoolUpdate'
-  - '@azure/arm-sql.Job'
-  - '@azure/arm-sql.JobAgent'
-  - '@azure/arm-sql.JobAgentListResult'
-  - '@azure/arm-sql.JobAgentUpdate'
-  - '@azure/arm-sql.JobCredential'
-  - '@azure/arm-sql.JobCredentialListResult'
-  - '@azure/arm-sql.JobExecution'
-  - '@azure/arm-sql.JobExecutionListResult'
-  - '@azure/arm-sql.JobExecutionTarget'
-  - '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
-  - '@azure/arm-sql.JobExecutionsListByJobOptionalParams'
-  - '@azure/arm-sql.JobListResult'
-  - '@azure/arm-sql.JobSchedule'
-  - '@azure/arm-sql.JobStep'
-  - '@azure/arm-sql.JobStepAction'
-  - '@azure/arm-sql.JobStepExecutionOptions'
-  - '@azure/arm-sql.JobStepExecutionsListByJobExecutionOptionalParams'
-  - '@azure/arm-sql.JobStepListResult'
-  - '@azure/arm-sql.JobStepOutput'
-  - '@azure/arm-sql.JobTarget'
-  - '@azure/arm-sql.JobTargetExecutionsListByJobExecutionOptionalParams'
-  - '@azure/arm-sql.JobTargetExecutionsListByStepOptionalParams'
-  - '@azure/arm-sql.JobTargetGroup'
-  - '@azure/arm-sql.JobTargetGroupListResult'
-  - '@azure/arm-sql.JobVersion'
-  - '@azure/arm-sql.JobVersionListResult'
-  - '@azure/arm-sql.LicenseTypeCapability'
-  - '@azure/arm-sql.LocationCapabilities'
-  - '@azure/arm-sql.LogSizeCapability'
-  - '@azure/arm-sql.LogicalServerSecurityAlertPolicyListResult'
-  - '@azure/arm-sql.LongTermRetentionBackup'
-  - '@azure/arm-sql.LongTermRetentionBackupListResult'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByDatabaseOptionalParams'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByLocationOptionalParams'
-  - >-
-    @azure/arm-sql.LongTermRetentionBackupsListByResourceGroupDatabaseOptionalParams
-  - >-
-    @azure/arm-sql.LongTermRetentionBackupsListByResourceGroupLocationOptionalParams
-  - >-
-    @azure/arm-sql.LongTermRetentionBackupsListByResourceGroupServerOptionalParams
-  - '@azure/arm-sql.LongTermRetentionBackupsListByServerOptionalParams'
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPolicy'
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPolicyListResult'
-  - '@azure/arm-sql.ManagedDatabase'
-  - '@azure/arm-sql.ManagedDatabaseListResult'
-  - '@azure/arm-sql.ManagedDatabaseRestoreDetailsResult'
-  - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicy'
-  - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicyListResult'
-  - >-
-    @azure/arm-sql.ManagedDatabaseSensitivityLabelsListCurrentByDatabaseOptionalParams
-  - >-
-    @azure/arm-sql.ManagedDatabaseSensitivityLabelsListRecommendedByDatabaseOptionalParams
-  - '@azure/arm-sql.ManagedDatabaseUpdate'
-  - '@azure/arm-sql.ManagedInstance'
-  - '@azure/arm-sql.ManagedInstanceAdministrator'
-  - '@azure/arm-sql.ManagedInstanceAdministratorListResult'
-  - '@azure/arm-sql.ManagedInstanceEditionCapability'
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtector'
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtectorListResult'
-  - '@azure/arm-sql.ManagedInstanceFamilyCapability'
-  - '@azure/arm-sql.ManagedInstanceKey'
-  - '@azure/arm-sql.ManagedInstanceKeyListResult'
-  - '@azure/arm-sql.ManagedInstanceKeysListByInstanceOptionalParams'
-  - '@azure/arm-sql.ManagedInstanceListResult'
-  - '@azure/arm-sql.ManagedInstancePairInfo'
-  - '@azure/arm-sql.ManagedInstanceUpdate'
-  - '@azure/arm-sql.ManagedInstanceVcoresCapability'
-  - '@azure/arm-sql.ManagedInstanceVersionCapability'
-  - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessment'
-  - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessmentListResult'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPolicy'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPolicyListResult'
-  - '@azure/arm-sql.MaxSizeCapability'
-  - '@azure/arm-sql.MaxSizeRangeCapability'
-  - '@azure/arm-sql.Metric'
-  - '@azure/arm-sql.MetricAvailability'
-  - '@azure/arm-sql.MetricDefinition'
-  - '@azure/arm-sql.MetricDefinitionListResult'
-  - '@azure/arm-sql.MetricListResult'
-  - '@azure/arm-sql.MetricName'
-  - '@azure/arm-sql.MetricValue'
-  - '@azure/arm-sql.Name'
-  - '@azure/arm-sql.Operation'
-  - '@azure/arm-sql.OperationDisplay'
-  - '@azure/arm-sql.OperationImpact'
-  - '@azure/arm-sql.OperationListResult'
-  - '@azure/arm-sql.PartnerInfo'
-  - '@azure/arm-sql.PartnerRegionInfo'
-  - '@azure/arm-sql.PerformanceLevelCapability'
-  - '@azure/arm-sql.PrivateEndpointConnection'
-  - '@azure/arm-sql.PrivateEndpointConnectionListResult'
-  - '@azure/arm-sql.PrivateEndpointProperty'
-  - '@azure/arm-sql.PrivateLinkResource'
-  - '@azure/arm-sql.PrivateLinkResourceListResult'
-  - '@azure/arm-sql.PrivateLinkResourceProperties'
-  - '@azure/arm-sql.PrivateLinkServiceConnectionStateProperty'
-  - '@azure/arm-sql.ProxyResource'
-  - '@azure/arm-sql.RecommendedElasticPool'
-  - '@azure/arm-sql.RecommendedElasticPoolListMetricsResult'
-  - '@azure/arm-sql.RecommendedElasticPoolListResult'
-  - '@azure/arm-sql.RecommendedElasticPoolMetric'
-  - '@azure/arm-sql.RecommendedIndex'
-  - '@azure/arm-sql.RecoverableDatabase'
-  - '@azure/arm-sql.RecoverableDatabaseListResult'
-  - '@azure/arm-sql.RecoverableManagedDatabase'
-  - '@azure/arm-sql.RecoverableManagedDatabaseListResult'
-  - '@azure/arm-sql.ReplicationLink'
-  - '@azure/arm-sql.ReplicationLinkListResult'
-  - '@azure/arm-sql.Resource'
-  - '@azure/arm-sql.ResourceIdentity'
-  - '@azure/arm-sql.ResourceMoveDefinition'
-  - '@azure/arm-sql.RestorableDroppedDatabase'
-  - '@azure/arm-sql.RestorableDroppedDatabaseListResult'
-  - '@azure/arm-sql.RestorableDroppedManagedDatabase'
-  - '@azure/arm-sql.RestorableDroppedManagedDatabaseListResult'
-  - '@azure/arm-sql.RestorePoint'
-  - '@azure/arm-sql.RestorePointListResult'
-  - '@azure/arm-sql.SensitivityLabel'
-  - '@azure/arm-sql.SensitivityLabelListResult'
-  - '@azure/arm-sql.SensitivityLabelsListCurrentByDatabaseOptionalParams'
-  - '@azure/arm-sql.SensitivityLabelsListRecommendedByDatabaseOptionalParams'
-  - '@azure/arm-sql.Server'
-  - '@azure/arm-sql.ServerAdministratorListResult'
-  - '@azure/arm-sql.ServerAutomaticTuning'
-  - '@azure/arm-sql.ServerAzureADAdministrator'
-  - '@azure/arm-sql.ServerBlobAuditingPolicy'
-  - '@azure/arm-sql.ServerBlobAuditingPolicyListResult'
-  - '@azure/arm-sql.ServerCommunicationLink'
-  - '@azure/arm-sql.ServerCommunicationLinkListResult'
-  - '@azure/arm-sql.ServerConnectionPolicy'
-  - '@azure/arm-sql.ServerDnsAlias'
-  - '@azure/arm-sql.ServerDnsAliasAcquisition'
-  - '@azure/arm-sql.ServerDnsAliasListResult'
-  - '@azure/arm-sql.ServerKey'
-  - '@azure/arm-sql.ServerKeyListResult'
-  - '@azure/arm-sql.ServerListResult'
-  - '@azure/arm-sql.ServerSecurityAlertPolicy'
-  - '@azure/arm-sql.ServerUpdate'
-  - '@azure/arm-sql.ServerUsage'
-  - '@azure/arm-sql.ServerUsageListResult'
-  - '@azure/arm-sql.ServerVersionCapability'
-  - '@azure/arm-sql.ServerVulnerabilityAssessment'
-  - '@azure/arm-sql.ServerVulnerabilityAssessmentListResult'
-  - '@azure/arm-sql.ServiceObjective'
-  - '@azure/arm-sql.ServiceObjectiveCapability'
-  - '@azure/arm-sql.ServiceObjectiveListResult'
-  - '@azure/arm-sql.ServiceTierAdvisor'
-  - '@azure/arm-sql.ServiceTierAdvisorListResult'
-  - '@azure/arm-sql.Sku'
-  - '@azure/arm-sql.SloUsageMetric'
-  - '@azure/arm-sql.SqlManagementClientOptions'
-  - '@azure/arm-sql.SubscriptionUsage'
-  - '@azure/arm-sql.SubscriptionUsageListResult'
-  - '@azure/arm-sql.SyncAgent'
-  - '@azure/arm-sql.SyncAgentKeyProperties'
-  - '@azure/arm-sql.SyncAgentLinkedDatabase'
-  - '@azure/arm-sql.SyncAgentLinkedDatabaseListResult'
-  - '@azure/arm-sql.SyncAgentListResult'
-  - '@azure/arm-sql.SyncDatabaseIdListResult'
-  - '@azure/arm-sql.SyncDatabaseIdProperties'
-  - '@azure/arm-sql.SyncFullSchemaProperties'
-  - '@azure/arm-sql.SyncFullSchemaPropertiesListResult'
-  - '@azure/arm-sql.SyncFullSchemaTable'
-  - '@azure/arm-sql.SyncFullSchemaTableColumn'
-  - '@azure/arm-sql.SyncGroup'
-  - '@azure/arm-sql.SyncGroupListResult'
-  - '@azure/arm-sql.SyncGroupLogListResult'
-  - '@azure/arm-sql.SyncGroupLogProperties'
-  - '@azure/arm-sql.SyncGroupSchema'
-  - '@azure/arm-sql.SyncGroupSchemaTable'
-  - '@azure/arm-sql.SyncGroupSchemaTableColumn'
-  - '@azure/arm-sql.SyncGroupsListLogsOptionalParams'
-  - '@azure/arm-sql.SyncMember'
-  - '@azure/arm-sql.SyncMemberListResult'
-  - '@azure/arm-sql.TdeCertificate'
-  - '@azure/arm-sql.TrackedResource'
-  - '@azure/arm-sql.TransparentDataEncryption'
-  - '@azure/arm-sql.TransparentDataEncryptionActivity'
-  - '@azure/arm-sql.TransparentDataEncryptionActivityListResult'
-  - '@azure/arm-sql.Usage'
-  - '@azure/arm-sql.UsageListResult'
-  - '@azure/arm-sql.UsagesListByInstancePoolOptionalParams'
-  - '@azure/arm-sql.VirtualCluster'
-  - '@azure/arm-sql.VirtualClusterListResult'
-  - '@azure/arm-sql.VirtualClusterUpdate'
-  - '@azure/arm-sql.VirtualNetworkRule'
-  - '@azure/arm-sql.VirtualNetworkRuleListResult'
-  - '@azure/arm-sql.VulnerabilityAssessmentRecurringScansProperties'
-  - '@azure/arm-sql.VulnerabilityAssessmentScanError'
-  - '@azure/arm-sql.VulnerabilityAssessmentScanRecord'
-  - '@azure/arm-sql.VulnerabilityAssessmentScanRecordListResult'
 typeAliases:
-  - '@azure/arm-sql.AuthenticationType'
-  - '@azure/arm-sql.AutomaticTuningDisabledReason'
-  - '@azure/arm-sql.AutomaticTuningMode'
-  - '@azure/arm-sql.AutomaticTuningOptionModeActual'
-  - '@azure/arm-sql.AutomaticTuningOptionModeDesired'
-  - '@azure/arm-sql.AutomaticTuningServerMode'
-  - '@azure/arm-sql.AutomaticTuningServerReason'
-  - '@azure/arm-sql.BackupLongTermRetentionPoliciesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.BackupLongTermRetentionPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.BackupLongTermRetentionPoliciesGetResponse'
-  - '@azure/arm-sql.BackupLongTermRetentionPoliciesListByDatabaseResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesBeginUpdateResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesGetResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesListByDatabaseNextResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesListByDatabaseResponse'
-  - '@azure/arm-sql.BackupShortTermRetentionPoliciesUpdateResponse'
-  - '@azure/arm-sql.BlobAuditingPolicyState'
-  - '@azure/arm-sql.CapabilitiesListByLocationResponse'
-  - '@azure/arm-sql.CapabilityGroup'
-  - '@azure/arm-sql.CapabilityStatus'
-  - '@azure/arm-sql.CatalogCollationType'
-  - '@azure/arm-sql.CheckNameAvailabilityReason'
-  - '@azure/arm-sql.CreateMode'
-  - '@azure/arm-sql.DataMaskingFunction'
-  - '@azure/arm-sql.DataMaskingPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.DataMaskingPoliciesGetResponse'
-  - '@azure/arm-sql.DataMaskingRuleState'
-  - '@azure/arm-sql.DataMaskingRulesCreateOrUpdateResponse'
-  - '@azure/arm-sql.DataMaskingRulesListByDatabaseResponse'
-  - '@azure/arm-sql.DataMaskingState'
-  - '@azure/arm-sql.DatabaseAutomaticTuningGetResponse'
-  - '@azure/arm-sql.DatabaseAutomaticTuningUpdateResponse'
-  - '@azure/arm-sql.DatabaseBlobAuditingPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.DatabaseBlobAuditingPoliciesGetResponse'
-  - '@azure/arm-sql.DatabaseBlobAuditingPoliciesListByDatabaseNextResponse'
-  - '@azure/arm-sql.DatabaseBlobAuditingPoliciesListByDatabaseResponse'
-  - '@azure/arm-sql.DatabaseEdition'
-  - '@azure/arm-sql.DatabaseLicenseType'
-  - '@azure/arm-sql.DatabaseOperationsListByDatabaseNextResponse'
-  - '@azure/arm-sql.DatabaseOperationsListByDatabaseResponse'
-  - '@azure/arm-sql.DatabaseReadScale'
-  - '@azure/arm-sql.DatabaseStatus'
-  - '@azure/arm-sql.DatabaseThreatDetectionPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.DatabaseThreatDetectionPoliciesGetResponse'
-  - '@azure/arm-sql.DatabaseUsagesListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.AuthenticationType'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningDisabledReason'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningMode'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningOptionModeActual'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningOptionModeDesired'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningServerMode'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningServerReason'
   - >-
-    @azure/arm-sql.DatabaseVulnerabilityAssessmentRuleBaselinesCreateOrUpdateResponse
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentRuleBaselinesGetResponse'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentScansExportMethodResponse'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentScansGetResponse'
+    @azure/arm-sql.models.index.d.BackupLongTermRetentionPoliciesBeginCreateOrUpdateResponse
   - >-
-    @azure/arm-sql.DatabaseVulnerabilityAssessmentScansListByDatabaseNextResponse
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentScansListByDatabaseResponse'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentsCreateOrUpdateResponse'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentsGetResponse'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentsListByDatabaseNextResponse'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentsListByDatabaseResponse'
-  - '@azure/arm-sql.DatabasesBeginCreateImportOperationResponse'
-  - '@azure/arm-sql.DatabasesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.DatabasesBeginExportMethodResponse'
-  - '@azure/arm-sql.DatabasesBeginImportMethodResponse'
-  - '@azure/arm-sql.DatabasesBeginPauseResponse'
-  - '@azure/arm-sql.DatabasesBeginResumeResponse'
-  - '@azure/arm-sql.DatabasesBeginUpdateResponse'
-  - '@azure/arm-sql.DatabasesCreateImportOperationResponse'
-  - '@azure/arm-sql.DatabasesCreateOrUpdateResponse'
-  - '@azure/arm-sql.DatabasesExportMethodResponse'
-  - '@azure/arm-sql.DatabasesGetResponse'
-  - '@azure/arm-sql.DatabasesImportMethodResponse'
-  - '@azure/arm-sql.DatabasesListByElasticPoolNextResponse'
-  - '@azure/arm-sql.DatabasesListByElasticPoolResponse'
-  - '@azure/arm-sql.DatabasesListByServerNextResponse'
-  - '@azure/arm-sql.DatabasesListByServerResponse'
-  - '@azure/arm-sql.DatabasesListMetricDefinitionsResponse'
-  - '@azure/arm-sql.DatabasesListMetricsResponse'
-  - '@azure/arm-sql.DatabasesPauseResponse'
-  - '@azure/arm-sql.DatabasesResumeResponse'
-  - '@azure/arm-sql.DatabasesUpdateResponse'
-  - '@azure/arm-sql.ElasticPoolActivitiesListByElasticPoolResponse'
-  - '@azure/arm-sql.ElasticPoolDatabaseActivitiesListByElasticPoolResponse'
-  - '@azure/arm-sql.ElasticPoolEdition'
-  - '@azure/arm-sql.ElasticPoolLicenseType'
-  - '@azure/arm-sql.ElasticPoolOperationsListByElasticPoolNextResponse'
-  - '@azure/arm-sql.ElasticPoolOperationsListByElasticPoolResponse'
-  - '@azure/arm-sql.ElasticPoolState'
-  - '@azure/arm-sql.ElasticPoolsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ElasticPoolsBeginUpdateResponse'
-  - '@azure/arm-sql.ElasticPoolsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ElasticPoolsGetResponse'
-  - '@azure/arm-sql.ElasticPoolsListByServerNextResponse'
-  - '@azure/arm-sql.ElasticPoolsListByServerResponse'
-  - '@azure/arm-sql.ElasticPoolsListMetricDefinitionsResponse'
-  - '@azure/arm-sql.ElasticPoolsListMetricsResponse'
-  - '@azure/arm-sql.ElasticPoolsUpdateResponse'
-  - '@azure/arm-sql.EncryptionProtectorsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.EncryptionProtectorsCreateOrUpdateResponse'
-  - '@azure/arm-sql.EncryptionProtectorsGetResponse'
-  - '@azure/arm-sql.EncryptionProtectorsListByServerNextResponse'
-  - '@azure/arm-sql.EncryptionProtectorsListByServerResponse'
-  - '@azure/arm-sql.ExtendedDatabaseBlobAuditingPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ExtendedDatabaseBlobAuditingPoliciesGetResponse'
-  - '@azure/arm-sql.ExtendedServerBlobAuditingPoliciesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ExtendedServerBlobAuditingPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ExtendedServerBlobAuditingPoliciesGetResponse'
-  - '@azure/arm-sql.FailoverGroupReplicationRole'
-  - '@azure/arm-sql.FailoverGroupsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.FailoverGroupsBeginFailoverResponse'
-  - '@azure/arm-sql.FailoverGroupsBeginForceFailoverAllowDataLossResponse'
-  - '@azure/arm-sql.FailoverGroupsBeginUpdateResponse'
-  - '@azure/arm-sql.FailoverGroupsCreateOrUpdateResponse'
-  - '@azure/arm-sql.FailoverGroupsFailoverResponse'
-  - '@azure/arm-sql.FailoverGroupsForceFailoverAllowDataLossResponse'
-  - '@azure/arm-sql.FailoverGroupsGetResponse'
-  - '@azure/arm-sql.FailoverGroupsListByServerNextResponse'
-  - '@azure/arm-sql.FailoverGroupsListByServerResponse'
-  - '@azure/arm-sql.FailoverGroupsUpdateResponse'
-  - '@azure/arm-sql.FirewallRulesCreateOrUpdateResponse'
-  - '@azure/arm-sql.FirewallRulesGetResponse'
-  - '@azure/arm-sql.FirewallRulesListByServerResponse'
-  - '@azure/arm-sql.GeoBackupPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.GeoBackupPoliciesGetResponse'
-  - '@azure/arm-sql.GeoBackupPoliciesListByDatabaseResponse'
-  - '@azure/arm-sql.GeoBackupPolicyState'
-  - '@azure/arm-sql.IdentityType'
-  - '@azure/arm-sql.InstanceFailoverGroupReplicationRole'
-  - '@azure/arm-sql.InstanceFailoverGroupsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsBeginFailoverResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsBeginForceFailoverAllowDataLossResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsCreateOrUpdateResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsFailoverResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsForceFailoverAllowDataLossResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsGetResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsListByLocationNextResponse'
-  - '@azure/arm-sql.InstanceFailoverGroupsListByLocationResponse'
-  - '@azure/arm-sql.InstancePoolLicenseType'
-  - '@azure/arm-sql.InstancePoolsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.InstancePoolsBeginUpdateResponse'
-  - '@azure/arm-sql.InstancePoolsCreateOrUpdateResponse'
-  - '@azure/arm-sql.InstancePoolsGetResponse'
-  - '@azure/arm-sql.InstancePoolsListByResourceGroupNextResponse'
-  - '@azure/arm-sql.InstancePoolsListByResourceGroupResponse'
-  - '@azure/arm-sql.InstancePoolsListNextResponse'
-  - '@azure/arm-sql.InstancePoolsListResponse'
-  - '@azure/arm-sql.InstancePoolsUpdateResponse'
-  - '@azure/arm-sql.JobAgentState'
-  - '@azure/arm-sql.JobAgentsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobAgentsBeginUpdateResponse'
-  - '@azure/arm-sql.JobAgentsCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobAgentsGetResponse'
-  - '@azure/arm-sql.JobAgentsListByServerNextResponse'
-  - '@azure/arm-sql.JobAgentsListByServerResponse'
-  - '@azure/arm-sql.JobAgentsUpdateResponse'
-  - '@azure/arm-sql.JobCredentialsCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobCredentialsGetResponse'
-  - '@azure/arm-sql.JobCredentialsListByAgentNextResponse'
-  - '@azure/arm-sql.JobCredentialsListByAgentResponse'
-  - '@azure/arm-sql.JobExecutionLifecycle'
-  - '@azure/arm-sql.JobExecutionsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobExecutionsBeginCreateResponse'
-  - '@azure/arm-sql.JobExecutionsCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobExecutionsCreateResponse'
-  - '@azure/arm-sql.JobExecutionsGetResponse'
-  - '@azure/arm-sql.JobExecutionsListByAgentNextResponse'
-  - '@azure/arm-sql.JobExecutionsListByAgentResponse'
-  - '@azure/arm-sql.JobExecutionsListByJobNextResponse'
-  - '@azure/arm-sql.JobExecutionsListByJobResponse'
-  - '@azure/arm-sql.JobScheduleType'
-  - '@azure/arm-sql.JobStepActionSource'
-  - '@azure/arm-sql.JobStepActionType'
-  - '@azure/arm-sql.JobStepExecutionsGetResponse'
-  - '@azure/arm-sql.JobStepExecutionsListByJobExecutionNextResponse'
-  - '@azure/arm-sql.JobStepExecutionsListByJobExecutionResponse'
-  - '@azure/arm-sql.JobStepOutputType'
-  - '@azure/arm-sql.JobStepsCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobStepsGetByVersionResponse'
-  - '@azure/arm-sql.JobStepsGetResponse'
-  - '@azure/arm-sql.JobStepsListByJobNextResponse'
-  - '@azure/arm-sql.JobStepsListByJobResponse'
-  - '@azure/arm-sql.JobStepsListByVersionNextResponse'
-  - '@azure/arm-sql.JobStepsListByVersionResponse'
-  - '@azure/arm-sql.JobTargetExecutionsGetResponse'
-  - '@azure/arm-sql.JobTargetExecutionsListByJobExecutionNextResponse'
-  - '@azure/arm-sql.JobTargetExecutionsListByJobExecutionResponse'
-  - '@azure/arm-sql.JobTargetExecutionsListByStepNextResponse'
-  - '@azure/arm-sql.JobTargetExecutionsListByStepResponse'
-  - '@azure/arm-sql.JobTargetGroupMembershipType'
-  - '@azure/arm-sql.JobTargetGroupsCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobTargetGroupsGetResponse'
-  - '@azure/arm-sql.JobTargetGroupsListByAgentNextResponse'
-  - '@azure/arm-sql.JobTargetGroupsListByAgentResponse'
-  - '@azure/arm-sql.JobTargetType'
-  - '@azure/arm-sql.JobVersionsGetResponse'
-  - '@azure/arm-sql.JobVersionsListByJobNextResponse'
-  - '@azure/arm-sql.JobVersionsListByJobResponse'
-  - '@azure/arm-sql.JobsCreateOrUpdateResponse'
-  - '@azure/arm-sql.JobsGetResponse'
-  - '@azure/arm-sql.JobsListByAgentNextResponse'
-  - '@azure/arm-sql.JobsListByAgentResponse'
-  - '@azure/arm-sql.LogSizeUnit'
-  - '@azure/arm-sql.LongTermRetentionBackupsGetByResourceGroupResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsGetResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByDatabaseNextResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByDatabaseResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByLocationNextResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByLocationResponse'
+    @azure/arm-sql.models.index.d.BackupLongTermRetentionPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.BackupLongTermRetentionPoliciesGetResponse'
   - >-
-    @azure/arm-sql.LongTermRetentionBackupsListByResourceGroupDatabaseNextResponse
-  - '@azure/arm-sql.LongTermRetentionBackupsListByResourceGroupDatabaseResponse'
+    @azure/arm-sql.models.index.d.BackupLongTermRetentionPoliciesListByDatabaseResponse
   - >-
-    @azure/arm-sql.LongTermRetentionBackupsListByResourceGroupLocationNextResponse
-  - '@azure/arm-sql.LongTermRetentionBackupsListByResourceGroupLocationResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByResourceGroupServerNextResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByResourceGroupServerResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByServerNextResponse'
-  - '@azure/arm-sql.LongTermRetentionBackupsListByServerResponse'
-  - '@azure/arm-sql.LongTermRetentionDatabaseState'
+    @azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesBeginCreateOrUpdateResponse
   - >-
-    @azure/arm-sql.ManagedBackupShortTermRetentionPoliciesBeginCreateOrUpdateResponse
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPoliciesBeginUpdateResponse'
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPoliciesGetResponse'
+    @azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesBeginUpdateResponse
   - >-
-    @azure/arm-sql.ManagedBackupShortTermRetentionPoliciesListByDatabaseNextResponse
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPoliciesListByDatabaseResponse'
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPoliciesUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabaseCreateMode'
-  - '@azure/arm-sql.ManagedDatabaseRestoreDetailsGetResponse'
-  - '@azure/arm-sql.ManagedDatabaseSecurityAlertPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabaseSecurityAlertPoliciesGetResponse'
+    @azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesGetResponse'
   - >-
-    @azure/arm-sql.ManagedDatabaseSecurityAlertPoliciesListByDatabaseNextResponse
-  - '@azure/arm-sql.ManagedDatabaseSecurityAlertPoliciesListByDatabaseResponse'
-  - '@azure/arm-sql.ManagedDatabaseSensitivityLabelsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabaseSensitivityLabelsGetResponse'
+    @azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesListByDatabaseNextResponse
   - >-
-    @azure/arm-sql.ManagedDatabaseSensitivityLabelsListCurrentByDatabaseNextResponse
-  - '@azure/arm-sql.ManagedDatabaseSensitivityLabelsListCurrentByDatabaseResponse'
+    @azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesListByDatabaseResponse
+  - '@azure/arm-sql.models.index.d.BackupShortTermRetentionPoliciesUpdateResponse'
+  - '@azure/arm-sql.models.index.d.BlobAuditingPolicyState'
+  - '@azure/arm-sql.models.index.d.CapabilitiesListByLocationResponse'
+  - '@azure/arm-sql.models.index.d.CapabilityGroup'
+  - '@azure/arm-sql.models.index.d.CapabilityStatus'
+  - '@azure/arm-sql.models.index.d.CatalogCollationType'
+  - '@azure/arm-sql.models.index.d.CheckNameAvailabilityReason'
+  - '@azure/arm-sql.models.index.d.CreateMode'
+  - '@azure/arm-sql.models.index.d.DatabaseAutomaticTuningGetResponse'
+  - '@azure/arm-sql.models.index.d.DatabaseAutomaticTuningUpdateResponse'
   - >-
-    @azure/arm-sql.ManagedDatabaseSensitivityLabelsListRecommendedByDatabaseNextResponse
+    @azure/arm-sql.models.index.d.DatabaseBlobAuditingPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.DatabaseBlobAuditingPoliciesGetResponse'
   - >-
-    @azure/arm-sql.ManagedDatabaseSensitivityLabelsListRecommendedByDatabaseResponse
-  - '@azure/arm-sql.ManagedDatabaseStatus'
+    @azure/arm-sql.models.index.d.DatabaseBlobAuditingPoliciesListByDatabaseNextResponse
   - >-
-    @azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesCreateOrUpdateResponse
+    @azure/arm-sql.models.index.d.DatabaseBlobAuditingPoliciesListByDatabaseResponse
+  - '@azure/arm-sql.models.index.d.DatabaseEdition'
+  - '@azure/arm-sql.models.index.d.DatabaseLicenseType'
+  - '@azure/arm-sql.models.index.d.DatabaseOperationsListByDatabaseNextResponse'
+  - '@azure/arm-sql.models.index.d.DatabaseOperationsListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.DatabaseReadScale'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginCreateImportOperationResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginExportMethodResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginImportMethodResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginPauseResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginResumeResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesCreateImportOperationResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesExportMethodResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesGetResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesImportMethodResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesListByElasticPoolNextResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesListByElasticPoolResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesListMetricDefinitionsResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesListMetricsResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesPauseResponse'
+  - '@azure/arm-sql.models.index.d.DatabasesResumeResponse'
+  - '@azure/arm-sql.models.index.d.DatabaseStatus'
+  - '@azure/arm-sql.models.index.d.DatabasesUpdateResponse'
   - >-
-    @azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesGetResponse
+    @azure/arm-sql.models.index.d.DatabaseThreatDetectionPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.DatabaseThreatDetectionPoliciesGetResponse'
+  - '@azure/arm-sql.models.index.d.DatabaseUsagesListByDatabaseResponse'
   - >-
-    @azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentScansExportMethodResponse
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentScansGetResponse'
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentRuleBaselinesCreateOrUpdateResponse
   - >-
-    @azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentScansListByDatabaseNextResponse
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentRuleBaselinesGetResponse
   - >-
-    @azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentScansListByDatabaseResponse
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentsGetResponse'
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentScansExportMethodResponse
   - >-
-    @azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentsListByDatabaseNextResponse
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentsListByDatabaseResponse'
-  - '@azure/arm-sql.ManagedDatabasesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabasesBeginUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabasesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedDatabasesGetResponse'
-  - '@azure/arm-sql.ManagedDatabasesListByInstanceNextResponse'
-  - '@azure/arm-sql.ManagedDatabasesListByInstanceResponse'
-  - '@azure/arm-sql.ManagedDatabasesUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceAdministratorsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceAdministratorsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceAdministratorsGetResponse'
-  - '@azure/arm-sql.ManagedInstanceAdministratorsListByInstanceNextResponse'
-  - '@azure/arm-sql.ManagedInstanceAdministratorsListByInstanceResponse'
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentScansGetResponse
   - >-
-    @azure/arm-sql.ManagedInstanceEncryptionProtectorsBeginCreateOrUpdateResponse
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtectorsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtectorsGetResponse'
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtectorsListByInstanceNextResponse'
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtectorsListByInstanceResponse'
-  - '@azure/arm-sql.ManagedInstanceKeysBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceKeysCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceKeysGetResponse'
-  - '@azure/arm-sql.ManagedInstanceKeysListByInstanceNextResponse'
-  - '@azure/arm-sql.ManagedInstanceKeysListByInstanceResponse'
-  - '@azure/arm-sql.ManagedInstanceLicenseType'
-  - '@azure/arm-sql.ManagedInstanceProxyOverride'
-  - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessmentsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessmentsGetResponse'
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentScansListByDatabaseNextResponse
   - >-
-    @azure/arm-sql.ManagedInstanceVulnerabilityAssessmentsListByInstanceNextResponse
-  - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessmentsListByInstanceResponse'
-  - '@azure/arm-sql.ManagedInstancesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstancesBeginUpdateResponse'
-  - '@azure/arm-sql.ManagedInstancesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedInstancesGetResponse'
-  - '@azure/arm-sql.ManagedInstancesListByInstancePoolNextResponse'
-  - '@azure/arm-sql.ManagedInstancesListByInstancePoolResponse'
-  - '@azure/arm-sql.ManagedInstancesListByResourceGroupNextResponse'
-  - '@azure/arm-sql.ManagedInstancesListByResourceGroupResponse'
-  - '@azure/arm-sql.ManagedInstancesListNextResponse'
-  - '@azure/arm-sql.ManagedInstancesListResponse'
-  - '@azure/arm-sql.ManagedInstancesUpdateResponse'
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentScansListByDatabaseResponse
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesBeginCreateOrUpdateResponse
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentsGetResponse'
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesBeginUpdateResponse
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentsListByDatabaseNextResponse
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesCreateOrUpdateResponse
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentsListByDatabaseResponse
+  - '@azure/arm-sql.models.index.d.DataMaskingFunction'
+  - '@azure/arm-sql.models.index.d.DataMaskingPoliciesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.DataMaskingPoliciesGetResponse'
+  - '@azure/arm-sql.models.index.d.DataMaskingRulesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.DataMaskingRulesListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.DataMaskingRuleState'
+  - '@azure/arm-sql.models.index.d.DataMaskingState'
+  - '@azure/arm-sql.models.index.d.ElasticPoolActivitiesListByElasticPoolResponse'
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesGetResponse
+    @azure/arm-sql.models.index.d.ElasticPoolDatabaseActivitiesListByElasticPoolResponse
+  - '@azure/arm-sql.models.index.d.ElasticPoolEdition'
+  - '@azure/arm-sql.models.index.d.ElasticPoolLicenseType'
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesListByRestorableDroppedDatabaseNextResponse
+    @azure/arm-sql.models.index.d.ElasticPoolOperationsListByElasticPoolNextResponse
+  - '@azure/arm-sql.models.index.d.ElasticPoolOperationsListByElasticPoolResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsGetResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsListMetricDefinitionsResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsListMetricsResponse'
+  - '@azure/arm-sql.models.index.d.ElasticPoolState'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsUpdateResponse'
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesListByRestorableDroppedDatabaseResponse
+    @azure/arm-sql.models.index.d.EncryptionProtectorsBeginCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.EncryptionProtectorsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.EncryptionProtectorsGetResponse'
+  - '@azure/arm-sql.models.index.d.EncryptionProtectorsListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.EncryptionProtectorsListByServerResponse'
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesUpdateResponse
-  - '@azure/arm-sql.ManagedServerCreateMode'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPoliciesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPoliciesGetResponse'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPoliciesListByInstanceNextResponse'
-  - '@azure/arm-sql.ManagedServerSecurityAlertPoliciesListByInstanceResponse'
-  - '@azure/arm-sql.ManagementOperationState'
-  - '@azure/arm-sql.MaxSizeUnit'
-  - '@azure/arm-sql.OperationOrigin'
-  - '@azure/arm-sql.OperationsListNextResponse'
-  - '@azure/arm-sql.OperationsListResponse'
-  - '@azure/arm-sql.PerformanceLevelUnit'
-  - '@azure/arm-sql.PrimaryAggregationType'
-  - '@azure/arm-sql.PrivateEndpointConnectionsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.PrivateEndpointConnectionsCreateOrUpdateResponse'
-  - '@azure/arm-sql.PrivateEndpointConnectionsGetResponse'
-  - '@azure/arm-sql.PrivateEndpointConnectionsListByServerNextResponse'
-  - '@azure/arm-sql.PrivateEndpointConnectionsListByServerResponse'
-  - '@azure/arm-sql.PrivateLinkResourcesGetResponse'
-  - '@azure/arm-sql.PrivateLinkResourcesListByServerNextResponse'
-  - '@azure/arm-sql.PrivateLinkResourcesListByServerResponse'
-  - '@azure/arm-sql.ProvisioningState'
-  - '@azure/arm-sql.ReadOnlyEndpointFailoverPolicy'
-  - '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
-  - '@azure/arm-sql.RecommendedElasticPoolsGetResponse'
-  - '@azure/arm-sql.RecommendedElasticPoolsListByServerResponse'
-  - '@azure/arm-sql.RecommendedElasticPoolsListMetricsResponse'
-  - '@azure/arm-sql.RecommendedIndexAction'
-  - '@azure/arm-sql.RecommendedIndexState'
-  - '@azure/arm-sql.RecommendedIndexType'
-  - '@azure/arm-sql.RecoverableDatabasesGetResponse'
-  - '@azure/arm-sql.RecoverableDatabasesListByServerResponse'
-  - '@azure/arm-sql.RecoverableManagedDatabasesGetResponse'
-  - '@azure/arm-sql.RecoverableManagedDatabasesListByInstanceNextResponse'
-  - '@azure/arm-sql.RecoverableManagedDatabasesListByInstanceResponse'
-  - '@azure/arm-sql.ReplicaType'
-  - '@azure/arm-sql.ReplicationLinksGetResponse'
-  - '@azure/arm-sql.ReplicationLinksListByDatabaseResponse'
-  - '@azure/arm-sql.ReplicationRole'
-  - '@azure/arm-sql.ReplicationState'
-  - '@azure/arm-sql.RestorableDroppedDatabasesGetResponse'
-  - '@azure/arm-sql.RestorableDroppedDatabasesListByServerResponse'
-  - '@azure/arm-sql.RestorableDroppedManagedDatabasesGetResponse'
-  - '@azure/arm-sql.RestorableDroppedManagedDatabasesListByInstanceNextResponse'
-  - '@azure/arm-sql.RestorableDroppedManagedDatabasesListByInstanceResponse'
-  - '@azure/arm-sql.RestorePointType'
-  - '@azure/arm-sql.RestorePointsBeginCreateResponse'
-  - '@azure/arm-sql.RestorePointsCreateResponse'
-  - '@azure/arm-sql.RestorePointsGetResponse'
-  - '@azure/arm-sql.RestorePointsListByDatabaseResponse'
-  - '@azure/arm-sql.SampleName'
-  - '@azure/arm-sql.SecurityAlertPolicyEmailAccountAdmins'
-  - '@azure/arm-sql.SecurityAlertPolicyState'
-  - '@azure/arm-sql.SecurityAlertPolicyUseServerDefault'
-  - '@azure/arm-sql.SensitivityLabelSource'
-  - '@azure/arm-sql.SensitivityLabelsCreateOrUpdateResponse'
-  - '@azure/arm-sql.SensitivityLabelsGetResponse'
-  - '@azure/arm-sql.SensitivityLabelsListCurrentByDatabaseNextResponse'
-  - '@azure/arm-sql.SensitivityLabelsListCurrentByDatabaseResponse'
-  - '@azure/arm-sql.SensitivityLabelsListRecommendedByDatabaseNextResponse'
-  - '@azure/arm-sql.SensitivityLabelsListRecommendedByDatabaseResponse'
-  - '@azure/arm-sql.ServerAutomaticTuningGetResponse'
-  - '@azure/arm-sql.ServerAutomaticTuningUpdateResponse'
-  - '@azure/arm-sql.ServerAzureADAdministratorsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerAzureADAdministratorsBeginDeleteMethodResponse'
-  - '@azure/arm-sql.ServerAzureADAdministratorsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerAzureADAdministratorsDeleteMethodResponse'
-  - '@azure/arm-sql.ServerAzureADAdministratorsGetResponse'
-  - '@azure/arm-sql.ServerAzureADAdministratorsListByServerResponse'
-  - '@azure/arm-sql.ServerBlobAuditingPoliciesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerBlobAuditingPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerBlobAuditingPoliciesGetResponse'
-  - '@azure/arm-sql.ServerBlobAuditingPoliciesListByServerNextResponse'
-  - '@azure/arm-sql.ServerBlobAuditingPoliciesListByServerResponse'
-  - '@azure/arm-sql.ServerCommunicationLinksBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerCommunicationLinksCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerCommunicationLinksGetResponse'
-  - '@azure/arm-sql.ServerCommunicationLinksListByServerResponse'
-  - '@azure/arm-sql.ServerConnectionPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerConnectionPoliciesGetResponse'
-  - '@azure/arm-sql.ServerConnectionType'
-  - '@azure/arm-sql.ServerDnsAliasesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerDnsAliasesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerDnsAliasesGetResponse'
-  - '@azure/arm-sql.ServerDnsAliasesListByServerNextResponse'
-  - '@azure/arm-sql.ServerDnsAliasesListByServerResponse'
-  - '@azure/arm-sql.ServerKeyType'
-  - '@azure/arm-sql.ServerKeysBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerKeysCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerKeysGetResponse'
-  - '@azure/arm-sql.ServerKeysListByServerNextResponse'
-  - '@azure/arm-sql.ServerKeysListByServerResponse'
-  - '@azure/arm-sql.ServerSecurityAlertPoliciesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerSecurityAlertPoliciesCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerSecurityAlertPoliciesGetResponse'
-  - '@azure/arm-sql.ServerSecurityAlertPoliciesListByServerNextResponse'
-  - '@azure/arm-sql.ServerSecurityAlertPoliciesListByServerResponse'
-  - '@azure/arm-sql.ServerUsagesListByServerResponse'
-  - '@azure/arm-sql.ServerVulnerabilityAssessmentsCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServerVulnerabilityAssessmentsGetResponse'
-  - '@azure/arm-sql.ServerVulnerabilityAssessmentsListByServerNextResponse'
-  - '@azure/arm-sql.ServerVulnerabilityAssessmentsListByServerResponse'
-  - '@azure/arm-sql.ServersBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServersBeginUpdateResponse'
-  - '@azure/arm-sql.ServersCheckNameAvailabilityResponse'
-  - '@azure/arm-sql.ServersCreateOrUpdateResponse'
-  - '@azure/arm-sql.ServersGetResponse'
-  - '@azure/arm-sql.ServersListByResourceGroupNextResponse'
-  - '@azure/arm-sql.ServersListByResourceGroupResponse'
-  - '@azure/arm-sql.ServersListNextResponse'
-  - '@azure/arm-sql.ServersListResponse'
-  - '@azure/arm-sql.ServersUpdateResponse'
-  - '@azure/arm-sql.ServiceObjectiveName'
-  - '@azure/arm-sql.ServiceObjectivesGetResponse'
-  - '@azure/arm-sql.ServiceObjectivesListByServerResponse'
-  - '@azure/arm-sql.ServiceTierAdvisorsGetResponse'
-  - '@azure/arm-sql.ServiceTierAdvisorsListByDatabaseResponse'
-  - '@azure/arm-sql.StorageKeyType'
-  - '@azure/arm-sql.SubscriptionUsagesGetResponse'
-  - '@azure/arm-sql.SubscriptionUsagesListByLocationNextResponse'
-  - '@azure/arm-sql.SubscriptionUsagesListByLocationResponse'
-  - '@azure/arm-sql.SyncAgentState'
-  - '@azure/arm-sql.SyncAgentsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.SyncAgentsCreateOrUpdateResponse'
-  - '@azure/arm-sql.SyncAgentsGenerateKeyResponse'
-  - '@azure/arm-sql.SyncAgentsGetResponse'
-  - '@azure/arm-sql.SyncAgentsListByServerNextResponse'
-  - '@azure/arm-sql.SyncAgentsListByServerResponse'
-  - '@azure/arm-sql.SyncAgentsListLinkedDatabasesNextResponse'
-  - '@azure/arm-sql.SyncAgentsListLinkedDatabasesResponse'
-  - '@azure/arm-sql.SyncConflictResolutionPolicy'
-  - '@azure/arm-sql.SyncDirection'
-  - '@azure/arm-sql.SyncGroupLogType'
-  - '@azure/arm-sql.SyncGroupState'
-  - '@azure/arm-sql.SyncGroupsBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.SyncGroupsBeginUpdateResponse'
-  - '@azure/arm-sql.SyncGroupsCreateOrUpdateResponse'
-  - '@azure/arm-sql.SyncGroupsGetResponse'
-  - '@azure/arm-sql.SyncGroupsListByDatabaseNextResponse'
-  - '@azure/arm-sql.SyncGroupsListByDatabaseResponse'
-  - '@azure/arm-sql.SyncGroupsListHubSchemasNextResponse'
-  - '@azure/arm-sql.SyncGroupsListHubSchemasResponse'
-  - '@azure/arm-sql.SyncGroupsListLogsNextResponse'
-  - '@azure/arm-sql.SyncGroupsListLogsResponse'
-  - '@azure/arm-sql.SyncGroupsListSyncDatabaseIdsNextResponse'
-  - '@azure/arm-sql.SyncGroupsListSyncDatabaseIdsResponse'
-  - '@azure/arm-sql.SyncGroupsUpdateResponse'
-  - '@azure/arm-sql.SyncMemberDbType'
-  - '@azure/arm-sql.SyncMemberState'
-  - '@azure/arm-sql.SyncMembersBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.SyncMembersBeginUpdateResponse'
-  - '@azure/arm-sql.SyncMembersCreateOrUpdateResponse'
-  - '@azure/arm-sql.SyncMembersGetResponse'
-  - '@azure/arm-sql.SyncMembersListBySyncGroupNextResponse'
-  - '@azure/arm-sql.SyncMembersListBySyncGroupResponse'
-  - '@azure/arm-sql.SyncMembersListMemberSchemasNextResponse'
-  - '@azure/arm-sql.SyncMembersListMemberSchemasResponse'
-  - '@azure/arm-sql.SyncMembersUpdateResponse'
+    @azure/arm-sql.models.index.d.ExtendedDatabaseBlobAuditingPoliciesCreateOrUpdateResponse
   - >-
-    @azure/arm-sql.TransparentDataEncryptionActivitiesListByConfigurationResponse
-  - '@azure/arm-sql.TransparentDataEncryptionActivityStatus'
-  - '@azure/arm-sql.TransparentDataEncryptionStatus'
-  - '@azure/arm-sql.TransparentDataEncryptionsCreateOrUpdateResponse'
-  - '@azure/arm-sql.TransparentDataEncryptionsGetResponse'
-  - '@azure/arm-sql.Type'
-  - '@azure/arm-sql.UnitDefinitionType'
-  - '@azure/arm-sql.UnitType'
-  - '@azure/arm-sql.UsagesListByInstancePoolNextResponse'
-  - '@azure/arm-sql.UsagesListByInstancePoolResponse'
-  - '@azure/arm-sql.VirtualClustersBeginUpdateResponse'
-  - '@azure/arm-sql.VirtualClustersGetResponse'
-  - '@azure/arm-sql.VirtualClustersListByResourceGroupNextResponse'
-  - '@azure/arm-sql.VirtualClustersListByResourceGroupResponse'
-  - '@azure/arm-sql.VirtualClustersListNextResponse'
-  - '@azure/arm-sql.VirtualClustersListResponse'
-  - '@azure/arm-sql.VirtualClustersUpdateResponse'
-  - '@azure/arm-sql.VirtualNetworkRuleState'
-  - '@azure/arm-sql.VirtualNetworkRulesBeginCreateOrUpdateResponse'
-  - '@azure/arm-sql.VirtualNetworkRulesCreateOrUpdateResponse'
-  - '@azure/arm-sql.VirtualNetworkRulesGetResponse'
-  - '@azure/arm-sql.VirtualNetworkRulesListByServerNextResponse'
-  - '@azure/arm-sql.VirtualNetworkRulesListByServerResponse'
-  - '@azure/arm-sql.VulnerabilityAssessmentPolicyBaselineName'
-  - '@azure/arm-sql.VulnerabilityAssessmentScanState'
-  - '@azure/arm-sql.VulnerabilityAssessmentScanTriggerType'
+    @azure/arm-sql.models.index.d.ExtendedDatabaseBlobAuditingPoliciesGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ExtendedServerBlobAuditingPoliciesBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ExtendedServerBlobAuditingPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ExtendedServerBlobAuditingPoliciesGetResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupReplicationRole'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsBeginFailoverResponse'
+  - >-
+    @azure/arm-sql.models.index.d.FailoverGroupsBeginForceFailoverAllowDataLossResponse
+  - '@azure/arm-sql.models.index.d.FailoverGroupsBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsFailoverResponse'
+  - >-
+    @azure/arm-sql.models.index.d.FailoverGroupsForceFailoverAllowDataLossResponse
+  - '@azure/arm-sql.models.index.d.FailoverGroupsGetResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.FailoverGroupsUpdateResponse'
+  - '@azure/arm-sql.models.index.d.FirewallRulesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.FirewallRulesGetResponse'
+  - '@azure/arm-sql.models.index.d.FirewallRulesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.GeoBackupPoliciesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.GeoBackupPoliciesGetResponse'
+  - '@azure/arm-sql.models.index.d.GeoBackupPoliciesListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.GeoBackupPolicyState'
+  - '@azure/arm-sql.models.index.d.IdentityType'
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupReplicationRole'
+  - >-
+    @azure/arm-sql.models.index.d.InstanceFailoverGroupsBeginCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupsBeginFailoverResponse'
+  - >-
+    @azure/arm-sql.models.index.d.InstanceFailoverGroupsBeginForceFailoverAllowDataLossResponse
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupsFailoverResponse'
+  - >-
+    @azure/arm-sql.models.index.d.InstanceFailoverGroupsForceFailoverAllowDataLossResponse
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.InstanceFailoverGroupsListByLocationNextResponse
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupsListByLocationResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolLicenseType'
+  - '@azure/arm-sql.models.index.d.InstancePoolsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsGetResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsListByResourceGroupNextResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsListByResourceGroupResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsListNextResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsListResponse'
+  - '@azure/arm-sql.models.index.d.InstancePoolsUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentsBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentsListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.JobAgentState'
+  - '@azure/arm-sql.models.index.d.JobAgentsUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobCredentialsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobCredentialsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobCredentialsListByAgentNextResponse'
+  - '@azure/arm-sql.models.index.d.JobCredentialsListByAgentResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionLifecycle'
+  - '@azure/arm-sql.models.index.d.JobExecutionsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsBeginCreateResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsCreateResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsListByAgentNextResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsListByAgentResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsListByJobNextResponse'
+  - '@azure/arm-sql.models.index.d.JobExecutionsListByJobResponse'
+  - '@azure/arm-sql.models.index.d.JobScheduleType'
+  - '@azure/arm-sql.models.index.d.JobsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobsListByAgentNextResponse'
+  - '@azure/arm-sql.models.index.d.JobsListByAgentResponse'
+  - '@azure/arm-sql.models.index.d.JobStepActionSource'
+  - '@azure/arm-sql.models.index.d.JobStepActionType'
+  - '@azure/arm-sql.models.index.d.JobStepExecutionsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.JobStepExecutionsListByJobExecutionNextResponse
+  - '@azure/arm-sql.models.index.d.JobStepExecutionsListByJobExecutionResponse'
+  - '@azure/arm-sql.models.index.d.JobStepOutputType'
+  - '@azure/arm-sql.models.index.d.JobStepsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobStepsGetByVersionResponse'
+  - '@azure/arm-sql.models.index.d.JobStepsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobStepsListByJobNextResponse'
+  - '@azure/arm-sql.models.index.d.JobStepsListByJobResponse'
+  - '@azure/arm-sql.models.index.d.JobStepsListByVersionNextResponse'
+  - '@azure/arm-sql.models.index.d.JobStepsListByVersionResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetExecutionsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.JobTargetExecutionsListByJobExecutionNextResponse
+  - '@azure/arm-sql.models.index.d.JobTargetExecutionsListByJobExecutionResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetExecutionsListByStepNextResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetExecutionsListByStepResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetGroupMembershipType'
+  - '@azure/arm-sql.models.index.d.JobTargetGroupsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetGroupsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetGroupsListByAgentNextResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetGroupsListByAgentResponse'
+  - '@azure/arm-sql.models.index.d.JobTargetType'
+  - '@azure/arm-sql.models.index.d.JobVersionsGetResponse'
+  - '@azure/arm-sql.models.index.d.JobVersionsListByJobNextResponse'
+  - '@azure/arm-sql.models.index.d.JobVersionsListByJobResponse'
+  - '@azure/arm-sql.models.index.d.LogSizeUnit'
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsGetByResourceGroupResponse
+  - '@azure/arm-sql.models.index.d.LongTermRetentionBackupsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByDatabaseNextResponse
+  - '@azure/arm-sql.models.index.d.LongTermRetentionBackupsListByDatabaseResponse'
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByLocationNextResponse
+  - '@azure/arm-sql.models.index.d.LongTermRetentionBackupsListByLocationResponse'
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupLocationNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupLocationResponse
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupServerNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupServerResponse
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByServerNextResponse
+  - '@azure/arm-sql.models.index.d.LongTermRetentionBackupsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.LongTermRetentionDatabaseState'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesBeginUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesListByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesListByDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPoliciesUpdateResponse
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseCreateMode'
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseRestoreDetailsGetResponse'
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesCreateOrUpdateResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSecurityAlertPoliciesCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSecurityAlertPoliciesGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSecurityAlertPoliciesListByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSecurityAlertPoliciesListByDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsListCurrentByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsListCurrentByDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsListRecommendedByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsListRecommendedByDatabaseResponse
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesGetResponse'
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesListByInstanceNextResponse'
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesListByInstanceResponse'
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseStatus'
+  - '@azure/arm-sql.models.index.d.ManagedDatabasesUpdateResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentRuleBaselinesGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentScansExportMethodResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentScansGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentScansListByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentScansListByDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentsCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentsGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentsListByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseVulnerabilityAssessmentsListByDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceAdministratorsBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceAdministratorsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ManagedInstanceAdministratorsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceAdministratorsListByInstanceNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceAdministratorsListByInstanceResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtectorsBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtectorsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtectorsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtectorsListByInstanceNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtectorsListByInstanceResponse
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKeysBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKeysCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKeysGetResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKeysListByInstanceNextResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKeysListByInstanceResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceLicenseType'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceProxyOverride'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesGetResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesListByInstancePoolNextResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesListByInstancePoolResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstancesListByResourceGroupNextResponse
+  - '@azure/arm-sql.models.index.d.ManagedInstancesListByResourceGroupResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesListNextResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesListResponse'
+  - '@azure/arm-sql.models.index.d.ManagedInstancesUpdateResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceVulnerabilityAssessmentsCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceVulnerabilityAssessmentsGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceVulnerabilityAssessmentsListByInstanceNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceVulnerabilityAssessmentsListByInstanceResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesBeginUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesGetResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesListByRestorableDroppedDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesListByRestorableDroppedDatabaseResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPoliciesUpdateResponse
+  - '@azure/arm-sql.models.index.d.ManagedServerCreateMode'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedServerSecurityAlertPoliciesBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedServerSecurityAlertPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ManagedServerSecurityAlertPoliciesGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedServerSecurityAlertPoliciesListByInstanceNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ManagedServerSecurityAlertPoliciesListByInstanceResponse
+  - '@azure/arm-sql.models.index.d.ManagementOperationState'
+  - '@azure/arm-sql.models.index.d.MaxSizeUnit'
+  - '@azure/arm-sql.models.index.d.OperationOrigin'
+  - '@azure/arm-sql.models.index.d.OperationsListNextResponse'
+  - '@azure/arm-sql.models.index.d.OperationsListResponse'
+  - '@azure/arm-sql.models.index.d.PerformanceLevelUnit'
+  - '@azure/arm-sql.models.index.d.PrimaryAggregationType'
+  - >-
+    @azure/arm-sql.models.index.d.PrivateEndpointConnectionsBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.PrivateEndpointConnectionsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.PrivateEndpointConnectionsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.PrivateEndpointConnectionsListByServerNextResponse
+  - '@azure/arm-sql.models.index.d.PrivateEndpointConnectionsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.PrivateLinkResourcesGetResponse'
+  - '@azure/arm-sql.models.index.d.PrivateLinkResourcesListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.PrivateLinkResourcesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.ProvisioningState'
+  - '@azure/arm-sql.models.index.d.ReadOnlyEndpointFailoverPolicy'
+  - '@azure/arm-sql.models.index.d.ReadWriteEndpointFailoverPolicy'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPoolsGetResponse'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPoolsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPoolsListMetricsResponse'
+  - '@azure/arm-sql.models.index.d.RecommendedIndexAction'
+  - '@azure/arm-sql.models.index.d.RecommendedIndexState'
+  - '@azure/arm-sql.models.index.d.RecommendedIndexType'
+  - '@azure/arm-sql.models.index.d.RecoverableDatabasesGetResponse'
+  - '@azure/arm-sql.models.index.d.RecoverableDatabasesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.RecoverableManagedDatabasesGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.RecoverableManagedDatabasesListByInstanceNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.RecoverableManagedDatabasesListByInstanceResponse
+  - '@azure/arm-sql.models.index.d.ReplicationLinksGetResponse'
+  - '@azure/arm-sql.models.index.d.ReplicationLinksListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.ReplicationRole'
+  - '@azure/arm-sql.models.index.d.ReplicationState'
+  - '@azure/arm-sql.models.index.d.ReplicaType'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedDatabasesGetResponse'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedDatabasesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedManagedDatabasesGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.RestorableDroppedManagedDatabasesListByInstanceNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.RestorableDroppedManagedDatabasesListByInstanceResponse
+  - '@azure/arm-sql.models.index.d.RestorePointsBeginCreateResponse'
+  - '@azure/arm-sql.models.index.d.RestorePointsCreateResponse'
+  - '@azure/arm-sql.models.index.d.RestorePointsGetResponse'
+  - '@azure/arm-sql.models.index.d.RestorePointsListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.RestorePointType'
+  - '@azure/arm-sql.models.index.d.SampleName'
+  - '@azure/arm-sql.models.index.d.SecurityAlertPolicyEmailAccountAdmins'
+  - '@azure/arm-sql.models.index.d.SecurityAlertPolicyState'
+  - '@azure/arm-sql.models.index.d.SecurityAlertPolicyUseServerDefault'
+  - '@azure/arm-sql.models.index.d.SensitivityLabelsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SensitivityLabelsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.SensitivityLabelsListCurrentByDatabaseNextResponse
+  - '@azure/arm-sql.models.index.d.SensitivityLabelsListCurrentByDatabaseResponse'
+  - >-
+    @azure/arm-sql.models.index.d.SensitivityLabelsListRecommendedByDatabaseNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.SensitivityLabelsListRecommendedByDatabaseResponse
+  - '@azure/arm-sql.models.index.d.SensitivityLabelSource'
+  - '@azure/arm-sql.models.index.d.ServerAutomaticTuningGetResponse'
+  - '@azure/arm-sql.models.index.d.ServerAutomaticTuningUpdateResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerAzureADAdministratorsBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerAzureADAdministratorsBeginDeleteMethodResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerAzureADAdministratorsCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerAzureADAdministratorsDeleteMethodResponse
+  - '@azure/arm-sql.models.index.d.ServerAzureADAdministratorsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerAzureADAdministratorsListByServerResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerBlobAuditingPoliciesBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerBlobAuditingPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ServerBlobAuditingPoliciesGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerBlobAuditingPoliciesListByServerNextResponse
+  - '@azure/arm-sql.models.index.d.ServerBlobAuditingPoliciesListByServerResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerCommunicationLinksBeginCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ServerCommunicationLinksCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerCommunicationLinksGetResponse'
+  - '@azure/arm-sql.models.index.d.ServerCommunicationLinksListByServerResponse'
+  - '@azure/arm-sql.models.index.d.ServerConnectionPoliciesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerConnectionPoliciesGetResponse'
+  - '@azure/arm-sql.models.index.d.ServerConnectionType'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasesBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasesGetResponse'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasesListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.ServerKeysBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerKeysCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerKeysGetResponse'
+  - '@azure/arm-sql.models.index.d.ServerKeysListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.ServerKeysListByServerResponse'
+  - '@azure/arm-sql.models.index.d.ServerKeyType'
+  - '@azure/arm-sql.models.index.d.ServersBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServersBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServersCheckNameAvailabilityResponse'
+  - '@azure/arm-sql.models.index.d.ServersCreateOrUpdateResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerSecurityAlertPoliciesBeginCreateOrUpdateResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerSecurityAlertPoliciesCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ServerSecurityAlertPoliciesGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerSecurityAlertPoliciesListByServerNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerSecurityAlertPoliciesListByServerResponse
+  - '@azure/arm-sql.models.index.d.ServersGetResponse'
+  - '@azure/arm-sql.models.index.d.ServersListByResourceGroupNextResponse'
+  - '@azure/arm-sql.models.index.d.ServersListByResourceGroupResponse'
+  - '@azure/arm-sql.models.index.d.ServersListNextResponse'
+  - '@azure/arm-sql.models.index.d.ServersListResponse'
+  - '@azure/arm-sql.models.index.d.ServersUpdateResponse'
+  - '@azure/arm-sql.models.index.d.ServerUsagesListByServerResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerVulnerabilityAssessmentsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.ServerVulnerabilityAssessmentsGetResponse'
+  - >-
+    @azure/arm-sql.models.index.d.ServerVulnerabilityAssessmentsListByServerNextResponse
+  - >-
+    @azure/arm-sql.models.index.d.ServerVulnerabilityAssessmentsListByServerResponse
+  - '@azure/arm-sql.models.index.d.ServiceObjectiveName'
+  - '@azure/arm-sql.models.index.d.ServiceObjectivesGetResponse'
+  - '@azure/arm-sql.models.index.d.ServiceObjectivesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.ServiceTierAdvisorsGetResponse'
+  - '@azure/arm-sql.models.index.d.ServiceTierAdvisorsListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.StorageKeyType'
+  - '@azure/arm-sql.models.index.d.SubscriptionUsagesGetResponse'
+  - '@azure/arm-sql.models.index.d.SubscriptionUsagesListByLocationNextResponse'
+  - '@azure/arm-sql.models.index.d.SubscriptionUsagesListByLocationResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsGenerateKeyResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsGetResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsListByServerResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsListLinkedDatabasesNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentsListLinkedDatabasesResponse'
+  - '@azure/arm-sql.models.index.d.SyncAgentState'
+  - '@azure/arm-sql.models.index.d.SyncConflictResolutionPolicy'
+  - '@azure/arm-sql.models.index.d.SyncDirection'
+  - '@azure/arm-sql.models.index.d.SyncGroupLogType'
+  - '@azure/arm-sql.models.index.d.SyncGroupsBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsGetResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListByDatabaseNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListByDatabaseResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListHubSchemasNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListHubSchemasResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListLogsNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListLogsResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListSyncDatabaseIdsNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListSyncDatabaseIdsResponse'
+  - '@azure/arm-sql.models.index.d.SyncGroupState'
+  - '@azure/arm-sql.models.index.d.SyncGroupsUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncMemberDbType'
+  - '@azure/arm-sql.models.index.d.SyncMembersBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersGetResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersListBySyncGroupNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersListBySyncGroupResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersListMemberSchemasNextResponse'
+  - '@azure/arm-sql.models.index.d.SyncMembersListMemberSchemasResponse'
+  - '@azure/arm-sql.models.index.d.SyncMemberState'
+  - '@azure/arm-sql.models.index.d.SyncMembersUpdateResponse'
+  - >-
+    @azure/arm-sql.models.index.d.TransparentDataEncryptionActivitiesListByConfigurationResponse
+  - '@azure/arm-sql.models.index.d.TransparentDataEncryptionActivityStatus'
+  - >-
+    @azure/arm-sql.models.index.d.TransparentDataEncryptionsCreateOrUpdateResponse
+  - '@azure/arm-sql.models.index.d.TransparentDataEncryptionsGetResponse'
+  - '@azure/arm-sql.models.index.d.TransparentDataEncryptionStatus'
+  - '@azure/arm-sql.models.index.d.Type'
+  - '@azure/arm-sql.models.index.d.UnitDefinitionType'
+  - '@azure/arm-sql.models.index.d.UnitType'
+  - '@azure/arm-sql.models.index.d.UsagesListByInstancePoolNextResponse'
+  - '@azure/arm-sql.models.index.d.UsagesListByInstancePoolResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersBeginUpdateResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersGetResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersListByResourceGroupNextResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersListByResourceGroupResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersListNextResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersListResponse'
+  - '@azure/arm-sql.models.index.d.VirtualClustersUpdateResponse'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRulesBeginCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRulesCreateOrUpdateResponse'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRulesGetResponse'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRulesListByServerNextResponse'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRulesListByServerResponse'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRuleState'
+  - '@azure/arm-sql.models.index.d.VulnerabilityAssessmentPolicyBaselineName'
+  - '@azure/arm-sql.models.index.d.VulnerabilityAssessmentScanState'
+  - '@azure/arm-sql.models.index.d.VulnerabilityAssessmentScanTriggerType'
+interfaces:
+  - '@azure/arm-sql.models.index.d.AutomaticTuningOptions'
+  - '@azure/arm-sql.models.index.d.AutomaticTuningServerOptions'
+  - '@azure/arm-sql.models.index.d.BackupLongTermRetentionPolicy'
+  - '@azure/arm-sql.models.index.d.BackupShortTermRetentionPolicy'
+  - '@azure/arm-sql.models.index.d.BackupShortTermRetentionPolicyListResult'
+  - '@azure/arm-sql.models.index.d.CapabilitiesListByLocationOptionalParams'
+  - '@azure/arm-sql.models.index.d.CheckNameAvailabilityRequest'
+  - '@azure/arm-sql.models.index.d.CheckNameAvailabilityResponse'
+  - '@azure/arm-sql.models.index.d.CompleteDatabaseRestoreDefinition'
+  - '@azure/arm-sql.models.index.d.CreateDatabaseRestorePointDefinition'
+  - '@azure/arm-sql.models.index.d.Database'
+  - '@azure/arm-sql.models.index.d.DatabaseAutomaticTuning'
+  - '@azure/arm-sql.models.index.d.DatabaseBlobAuditingPolicy'
+  - '@azure/arm-sql.models.index.d.DatabaseBlobAuditingPolicyListResult'
+  - '@azure/arm-sql.models.index.d.DatabaseListResult'
+  - '@azure/arm-sql.models.index.d.DatabaseOperation'
+  - '@azure/arm-sql.models.index.d.DatabaseOperationListResult'
+  - '@azure/arm-sql.models.index.d.DatabasesBeginFailoverOptionalParams'
+  - '@azure/arm-sql.models.index.d.DatabaseSecurityAlertPolicy'
+  - '@azure/arm-sql.models.index.d.DatabasesFailoverOptionalParams'
+  - '@azure/arm-sql.models.index.d.DatabaseUpdate'
+  - '@azure/arm-sql.models.index.d.DatabaseUsage'
+  - '@azure/arm-sql.models.index.d.DatabaseUsageListResult'
+  - '@azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessment'
+  - '@azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentListResult'
+  - '@azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentRuleBaseline'
+  - >-
+    @azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentRuleBaselineItem
+  - '@azure/arm-sql.models.index.d.DatabaseVulnerabilityAssessmentScansExport'
+  - '@azure/arm-sql.models.index.d.DataMaskingPolicy'
+  - '@azure/arm-sql.models.index.d.DataMaskingRule'
+  - '@azure/arm-sql.models.index.d.DataMaskingRuleListResult'
+  - '@azure/arm-sql.models.index.d.EditionCapability'
+  - '@azure/arm-sql.models.index.d.ElasticPool'
+  - '@azure/arm-sql.models.index.d.ElasticPoolActivity'
+  - '@azure/arm-sql.models.index.d.ElasticPoolActivityListResult'
+  - '@azure/arm-sql.models.index.d.ElasticPoolDatabaseActivity'
+  - '@azure/arm-sql.models.index.d.ElasticPoolDatabaseActivityListResult'
+  - '@azure/arm-sql.models.index.d.ElasticPoolEditionCapability'
+  - '@azure/arm-sql.models.index.d.ElasticPoolListResult'
+  - '@azure/arm-sql.models.index.d.ElasticPoolOperation'
+  - '@azure/arm-sql.models.index.d.ElasticPoolOperationListResult'
+  - >-
+    @azure/arm-sql.models.index.d.ElasticPoolPerDatabaseMaxPerformanceLevelCapability
+  - >-
+    @azure/arm-sql.models.index.d.ElasticPoolPerDatabaseMinPerformanceLevelCapability
+  - '@azure/arm-sql.models.index.d.ElasticPoolPerDatabaseSettings'
+  - '@azure/arm-sql.models.index.d.ElasticPoolPerformanceLevelCapability'
+  - '@azure/arm-sql.models.index.d.ElasticPoolsListByServerOptionalParams'
+  - '@azure/arm-sql.models.index.d.ElasticPoolUpdate'
+  - '@azure/arm-sql.models.index.d.EncryptionProtector'
+  - '@azure/arm-sql.models.index.d.EncryptionProtectorListResult'
+  - '@azure/arm-sql.models.index.d.ExportRequest'
+  - '@azure/arm-sql.models.index.d.ExtendedDatabaseBlobAuditingPolicy'
+  - '@azure/arm-sql.models.index.d.ExtendedServerBlobAuditingPolicy'
+  - '@azure/arm-sql.models.index.d.FailoverGroup'
+  - '@azure/arm-sql.models.index.d.FailoverGroupListResult'
+  - '@azure/arm-sql.models.index.d.FailoverGroupReadOnlyEndpoint'
+  - '@azure/arm-sql.models.index.d.FailoverGroupReadWriteEndpoint'
+  - '@azure/arm-sql.models.index.d.FailoverGroupUpdate'
+  - '@azure/arm-sql.models.index.d.FirewallRule'
+  - '@azure/arm-sql.models.index.d.FirewallRuleListResult'
+  - '@azure/arm-sql.models.index.d.GeoBackupPolicy'
+  - '@azure/arm-sql.models.index.d.GeoBackupPolicyListResult'
+  - '@azure/arm-sql.models.index.d.ImportExportResponse'
+  - '@azure/arm-sql.models.index.d.ImportExtensionRequest'
+  - '@azure/arm-sql.models.index.d.ImportRequest'
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroup'
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupListResult'
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupReadOnlyEndpoint'
+  - '@azure/arm-sql.models.index.d.InstanceFailoverGroupReadWriteEndpoint'
+  - '@azure/arm-sql.models.index.d.InstancePool'
+  - '@azure/arm-sql.models.index.d.InstancePoolListResult'
+  - '@azure/arm-sql.models.index.d.InstancePoolUpdate'
+  - '@azure/arm-sql.models.index.d.Job'
+  - '@azure/arm-sql.models.index.d.JobAgent'
+  - '@azure/arm-sql.models.index.d.JobAgentListResult'
+  - '@azure/arm-sql.models.index.d.JobAgentUpdate'
+  - '@azure/arm-sql.models.index.d.JobCredential'
+  - '@azure/arm-sql.models.index.d.JobCredentialListResult'
+  - '@azure/arm-sql.models.index.d.JobExecution'
+  - '@azure/arm-sql.models.index.d.JobExecutionListResult'
+  - '@azure/arm-sql.models.index.d.JobExecutionsListByAgentOptionalParams'
+  - '@azure/arm-sql.models.index.d.JobExecutionsListByJobOptionalParams'
+  - '@azure/arm-sql.models.index.d.JobExecutionTarget'
+  - '@azure/arm-sql.models.index.d.JobListResult'
+  - '@azure/arm-sql.models.index.d.JobSchedule'
+  - '@azure/arm-sql.models.index.d.JobStep'
+  - '@azure/arm-sql.models.index.d.JobStepAction'
+  - '@azure/arm-sql.models.index.d.JobStepExecutionOptions'
+  - >-
+    @azure/arm-sql.models.index.d.JobStepExecutionsListByJobExecutionOptionalParams
+  - '@azure/arm-sql.models.index.d.JobStepListResult'
+  - '@azure/arm-sql.models.index.d.JobStepOutput'
+  - '@azure/arm-sql.models.index.d.JobTarget'
+  - >-
+    @azure/arm-sql.models.index.d.JobTargetExecutionsListByJobExecutionOptionalParams
+  - '@azure/arm-sql.models.index.d.JobTargetExecutionsListByStepOptionalParams'
+  - '@azure/arm-sql.models.index.d.JobTargetGroup'
+  - '@azure/arm-sql.models.index.d.JobTargetGroupListResult'
+  - '@azure/arm-sql.models.index.d.JobVersion'
+  - '@azure/arm-sql.models.index.d.JobVersionListResult'
+  - '@azure/arm-sql.models.index.d.LicenseTypeCapability'
+  - '@azure/arm-sql.models.index.d.LocationCapabilities'
+  - '@azure/arm-sql.models.index.d.LogicalServerSecurityAlertPolicyListResult'
+  - '@azure/arm-sql.models.index.d.LogSizeCapability'
+  - '@azure/arm-sql.models.index.d.LongTermRetentionBackup'
+  - '@azure/arm-sql.models.index.d.LongTermRetentionBackupListResult'
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByDatabaseOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByLocationOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupDatabaseOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupLocationOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByResourceGroupServerOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.LongTermRetentionBackupsListByServerOptionalParams
+  - '@azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPolicy'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedBackupShortTermRetentionPolicyListResult
+  - '@azure/arm-sql.models.index.d.ManagedDatabase'
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseListResult'
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseRestoreDetailsResult'
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseSecurityAlertPolicy'
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseSecurityAlertPolicyListResult'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsListCurrentByDatabaseOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.ManagedDatabaseSensitivityLabelsListRecommendedByDatabaseOptionalParams
+  - '@azure/arm-sql.models.index.d.ManagedDatabaseUpdate'
+  - '@azure/arm-sql.models.index.d.ManagedInstance'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceAdministrator'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceAdministratorListResult'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceEditionCapability'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtector'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceEncryptionProtectorListResult'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceFamilyCapability'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKey'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceKeyListResult'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceKeysListByInstanceOptionalParams
+  - '@azure/arm-sql.models.index.d.ManagedInstanceListResult'
+  - '@azure/arm-sql.models.index.d.ManagedInstancePairInfo'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceUpdate'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceVcoresCapability'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceVersionCapability'
+  - '@azure/arm-sql.models.index.d.ManagedInstanceVulnerabilityAssessment'
+  - >-
+    @azure/arm-sql.models.index.d.ManagedInstanceVulnerabilityAssessmentListResult
+  - '@azure/arm-sql.models.index.d.ManagedServerSecurityAlertPolicy'
+  - '@azure/arm-sql.models.index.d.ManagedServerSecurityAlertPolicyListResult'
+  - '@azure/arm-sql.models.index.d.MaxSizeCapability'
+  - '@azure/arm-sql.models.index.d.MaxSizeRangeCapability'
+  - '@azure/arm-sql.models.index.d.Metric'
+  - '@azure/arm-sql.models.index.d.MetricAvailability'
+  - '@azure/arm-sql.models.index.d.MetricDefinition'
+  - '@azure/arm-sql.models.index.d.MetricDefinitionListResult'
+  - '@azure/arm-sql.models.index.d.MetricListResult'
+  - '@azure/arm-sql.models.index.d.MetricName'
+  - '@azure/arm-sql.models.index.d.MetricValue'
+  - '@azure/arm-sql.models.index.d.Name'
+  - '@azure/arm-sql.models.index.d.Operation'
+  - '@azure/arm-sql.models.index.d.OperationDisplay'
+  - '@azure/arm-sql.models.index.d.OperationImpact'
+  - '@azure/arm-sql.models.index.d.OperationListResult'
+  - '@azure/arm-sql.models.index.d.PartnerInfo'
+  - '@azure/arm-sql.models.index.d.PartnerRegionInfo'
+  - '@azure/arm-sql.models.index.d.PerformanceLevelCapability'
+  - '@azure/arm-sql.models.index.d.PrivateEndpointConnection'
+  - '@azure/arm-sql.models.index.d.PrivateEndpointConnectionListResult'
+  - '@azure/arm-sql.models.index.d.PrivateEndpointProperty'
+  - '@azure/arm-sql.models.index.d.PrivateLinkResource'
+  - '@azure/arm-sql.models.index.d.PrivateLinkResourceListResult'
+  - '@azure/arm-sql.models.index.d.PrivateLinkResourceProperties'
+  - '@azure/arm-sql.models.index.d.PrivateLinkServiceConnectionStateProperty'
+  - '@azure/arm-sql.models.index.d.ProxyResource'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPool'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPoolListMetricsResult'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPoolListResult'
+  - '@azure/arm-sql.models.index.d.RecommendedElasticPoolMetric'
+  - '@azure/arm-sql.models.index.d.RecommendedIndex'
+  - '@azure/arm-sql.models.index.d.RecoverableDatabase'
+  - '@azure/arm-sql.models.index.d.RecoverableDatabaseListResult'
+  - '@azure/arm-sql.models.index.d.RecoverableManagedDatabase'
+  - '@azure/arm-sql.models.index.d.RecoverableManagedDatabaseListResult'
+  - '@azure/arm-sql.models.index.d.ReplicationLink'
+  - '@azure/arm-sql.models.index.d.ReplicationLinkListResult'
+  - '@azure/arm-sql.models.index.d.Resource'
+  - '@azure/arm-sql.models.index.d.ResourceIdentity'
+  - '@azure/arm-sql.models.index.d.ResourceMoveDefinition'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedDatabase'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedDatabaseListResult'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedManagedDatabase'
+  - '@azure/arm-sql.models.index.d.RestorableDroppedManagedDatabaseListResult'
+  - '@azure/arm-sql.models.index.d.RestorePoint'
+  - '@azure/arm-sql.models.index.d.RestorePointListResult'
+  - '@azure/arm-sql.models.index.d.SensitivityLabel'
+  - '@azure/arm-sql.models.index.d.SensitivityLabelListResult'
+  - >-
+    @azure/arm-sql.models.index.d.SensitivityLabelsListCurrentByDatabaseOptionalParams
+  - >-
+    @azure/arm-sql.models.index.d.SensitivityLabelsListRecommendedByDatabaseOptionalParams
+  - '@azure/arm-sql.models.index.d.Server'
+  - '@azure/arm-sql.models.index.d.ServerAdministratorListResult'
+  - '@azure/arm-sql.models.index.d.ServerAutomaticTuning'
+  - '@azure/arm-sql.models.index.d.ServerAzureADAdministrator'
+  - '@azure/arm-sql.models.index.d.ServerBlobAuditingPolicy'
+  - '@azure/arm-sql.models.index.d.ServerBlobAuditingPolicyListResult'
+  - '@azure/arm-sql.models.index.d.ServerCommunicationLink'
+  - '@azure/arm-sql.models.index.d.ServerCommunicationLinkListResult'
+  - '@azure/arm-sql.models.index.d.ServerConnectionPolicy'
+  - '@azure/arm-sql.models.index.d.ServerDnsAlias'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasAcquisition'
+  - '@azure/arm-sql.models.index.d.ServerDnsAliasListResult'
+  - '@azure/arm-sql.models.index.d.ServerKey'
+  - '@azure/arm-sql.models.index.d.ServerKeyListResult'
+  - '@azure/arm-sql.models.index.d.ServerListResult'
+  - '@azure/arm-sql.models.index.d.ServerSecurityAlertPolicy'
+  - '@azure/arm-sql.models.index.d.ServerUpdate'
+  - '@azure/arm-sql.models.index.d.ServerUsage'
+  - '@azure/arm-sql.models.index.d.ServerUsageListResult'
+  - '@azure/arm-sql.models.index.d.ServerVersionCapability'
+  - '@azure/arm-sql.models.index.d.ServerVulnerabilityAssessment'
+  - '@azure/arm-sql.models.index.d.ServerVulnerabilityAssessmentListResult'
+  - '@azure/arm-sql.models.index.d.ServiceObjective'
+  - '@azure/arm-sql.models.index.d.ServiceObjectiveCapability'
+  - '@azure/arm-sql.models.index.d.ServiceObjectiveListResult'
+  - '@azure/arm-sql.models.index.d.ServiceTierAdvisor'
+  - '@azure/arm-sql.models.index.d.ServiceTierAdvisorListResult'
+  - '@azure/arm-sql.models.index.d.Sku'
+  - '@azure/arm-sql.models.index.d.SloUsageMetric'
+  - '@azure/arm-sql.models.index.d.SqlManagementClientOptions'
+  - '@azure/arm-sql.models.index.d.SubscriptionUsage'
+  - '@azure/arm-sql.models.index.d.SubscriptionUsageListResult'
+  - '@azure/arm-sql.models.index.d.SyncAgent'
+  - '@azure/arm-sql.models.index.d.SyncAgentKeyProperties'
+  - '@azure/arm-sql.models.index.d.SyncAgentLinkedDatabase'
+  - '@azure/arm-sql.models.index.d.SyncAgentLinkedDatabaseListResult'
+  - '@azure/arm-sql.models.index.d.SyncAgentListResult'
+  - '@azure/arm-sql.models.index.d.SyncDatabaseIdListResult'
+  - '@azure/arm-sql.models.index.d.SyncDatabaseIdProperties'
+  - '@azure/arm-sql.models.index.d.SyncFullSchemaProperties'
+  - '@azure/arm-sql.models.index.d.SyncFullSchemaPropertiesListResult'
+  - '@azure/arm-sql.models.index.d.SyncFullSchemaTable'
+  - '@azure/arm-sql.models.index.d.SyncFullSchemaTableColumn'
+  - '@azure/arm-sql.models.index.d.SyncGroup'
+  - '@azure/arm-sql.models.index.d.SyncGroupListResult'
+  - '@azure/arm-sql.models.index.d.SyncGroupLogListResult'
+  - '@azure/arm-sql.models.index.d.SyncGroupLogProperties'
+  - '@azure/arm-sql.models.index.d.SyncGroupSchema'
+  - '@azure/arm-sql.models.index.d.SyncGroupSchemaTable'
+  - '@azure/arm-sql.models.index.d.SyncGroupSchemaTableColumn'
+  - '@azure/arm-sql.models.index.d.SyncGroupsListLogsOptionalParams'
+  - '@azure/arm-sql.models.index.d.SyncMember'
+  - '@azure/arm-sql.models.index.d.SyncMemberListResult'
+  - '@azure/arm-sql.models.index.d.TdeCertificate'
+  - '@azure/arm-sql.models.index.d.TrackedResource'
+  - '@azure/arm-sql.models.index.d.TransparentDataEncryption'
+  - '@azure/arm-sql.models.index.d.TransparentDataEncryptionActivity'
+  - '@azure/arm-sql.models.index.d.TransparentDataEncryptionActivityListResult'
+  - '@azure/arm-sql.models.index.d.Usage'
+  - '@azure/arm-sql.models.index.d.UsageListResult'
+  - '@azure/arm-sql.models.index.d.UsagesListByInstancePoolOptionalParams'
+  - '@azure/arm-sql.models.index.d.VirtualCluster'
+  - '@azure/arm-sql.models.index.d.VirtualClusterListResult'
+  - '@azure/arm-sql.models.index.d.VirtualClusterUpdate'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRule'
+  - '@azure/arm-sql.models.index.d.VirtualNetworkRuleListResult'
+  - >-
+    @azure/arm-sql.models.index.d.VulnerabilityAssessmentRecurringScansProperties
+  - '@azure/arm-sql.models.index.d.VulnerabilityAssessmentScanError'
+  - '@azure/arm-sql.models.index.d.VulnerabilityAssessmentScanRecord'
+  - '@azure/arm-sql.models.index.d.VulnerabilityAssessmentScanRecordListResult'
 classes:
-  - '@azure/arm-sql.BackupLongTermRetentionPolicies'
-  - '@azure/arm-sql.BackupShortTermRetentionPolicies'
-  - '@azure/arm-sql.Capabilities'
-  - '@azure/arm-sql.DataMaskingPolicies'
-  - '@azure/arm-sql.DataMaskingRules'
-  - '@azure/arm-sql.DatabaseAutomaticTuningOperations'
-  - '@azure/arm-sql.DatabaseBlobAuditingPolicies'
-  - '@azure/arm-sql.DatabaseOperations'
-  - '@azure/arm-sql.DatabaseThreatDetectionPolicies'
-  - '@azure/arm-sql.DatabaseUsages'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentRuleBaselines'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessmentScans'
-  - '@azure/arm-sql.DatabaseVulnerabilityAssessments'
-  - '@azure/arm-sql.Databases'
-  - '@azure/arm-sql.ElasticPoolActivities'
-  - '@azure/arm-sql.ElasticPoolDatabaseActivities'
-  - '@azure/arm-sql.ElasticPoolOperations'
-  - '@azure/arm-sql.ElasticPools'
-  - '@azure/arm-sql.EncryptionProtectors'
-  - '@azure/arm-sql.ExtendedDatabaseBlobAuditingPolicies'
-  - '@azure/arm-sql.ExtendedServerBlobAuditingPolicies'
-  - '@azure/arm-sql.FailoverGroups'
-  - '@azure/arm-sql.FirewallRules'
-  - '@azure/arm-sql.GeoBackupPolicies'
-  - '@azure/arm-sql.InstanceFailoverGroups'
-  - '@azure/arm-sql.InstancePools'
-  - '@azure/arm-sql.JobAgents'
-  - '@azure/arm-sql.JobCredentials'
-  - '@azure/arm-sql.JobExecutions'
-  - '@azure/arm-sql.JobStepExecutions'
-  - '@azure/arm-sql.JobSteps'
-  - '@azure/arm-sql.JobTargetExecutions'
-  - '@azure/arm-sql.JobTargetGroups'
-  - '@azure/arm-sql.JobVersions'
-  - '@azure/arm-sql.Jobs'
-  - '@azure/arm-sql.LongTermRetentionBackups'
-  - '@azure/arm-sql.ManagedBackupShortTermRetentionPolicies'
-  - '@azure/arm-sql.ManagedDatabaseRestoreDetails'
-  - '@azure/arm-sql.ManagedDatabaseSecurityAlertPolicies'
-  - '@azure/arm-sql.ManagedDatabaseSensitivityLabels'
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentRuleBaselines'
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessmentScans'
-  - '@azure/arm-sql.ManagedDatabaseVulnerabilityAssessments'
-  - '@azure/arm-sql.ManagedDatabases'
-  - '@azure/arm-sql.ManagedInstanceAdministrators'
-  - '@azure/arm-sql.ManagedInstanceEncryptionProtectors'
-  - '@azure/arm-sql.ManagedInstanceKeys'
-  - '@azure/arm-sql.ManagedInstanceTdeCertificates'
-  - '@azure/arm-sql.ManagedInstanceVulnerabilityAssessments'
-  - '@azure/arm-sql.ManagedInstances'
   - >-
-    @azure/arm-sql.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPolicies
-  - '@azure/arm-sql.ManagedServerSecurityAlertPolicies'
-  - '@azure/arm-sql.Operations'
-  - '@azure/arm-sql.PrivateEndpointConnections'
-  - '@azure/arm-sql.PrivateLinkResources'
-  - '@azure/arm-sql.RecommendedElasticPools'
-  - '@azure/arm-sql.RecoverableDatabases'
-  - '@azure/arm-sql.RecoverableManagedDatabases'
-  - '@azure/arm-sql.ReplicationLinks'
-  - '@azure/arm-sql.RestorableDroppedDatabases'
-  - '@azure/arm-sql.RestorableDroppedManagedDatabases'
-  - '@azure/arm-sql.RestorePoints'
-  - '@azure/arm-sql.SensitivityLabels'
-  - '@azure/arm-sql.ServerAutomaticTuningOperations'
-  - '@azure/arm-sql.ServerAzureADAdministrators'
-  - '@azure/arm-sql.ServerBlobAuditingPolicies'
-  - '@azure/arm-sql.ServerCommunicationLinks'
-  - '@azure/arm-sql.ServerConnectionPolicies'
-  - '@azure/arm-sql.ServerDnsAliases'
-  - '@azure/arm-sql.ServerKeys'
-  - '@azure/arm-sql.ServerSecurityAlertPolicies'
-  - '@azure/arm-sql.ServerUsages'
-  - '@azure/arm-sql.ServerVulnerabilityAssessments'
-  - '@azure/arm-sql.Servers'
-  - '@azure/arm-sql.ServiceObjectives'
-  - '@azure/arm-sql.ServiceTierAdvisors'
-  - '@azure/arm-sql.SubscriptionUsages'
-  - '@azure/arm-sql.SyncAgents'
-  - '@azure/arm-sql.SyncGroups'
-  - '@azure/arm-sql.SyncMembers'
-  - '@azure/arm-sql.TdeCertificates'
-  - '@azure/arm-sql.TransparentDataEncryptionActivities'
-  - '@azure/arm-sql.TransparentDataEncryptions'
-  - '@azure/arm-sql.Usages'
-  - '@azure/arm-sql.VirtualClusters'
-  - '@azure/arm-sql.VirtualNetworkRules'
-  - '@azure/arm-sql.SqlManagementClient'
-  - '@azure/arm-sql.SqlManagementClientContext'
+    @azure/arm-sql.operations.backupLongTermRetentionPolicies.d.BackupLongTermRetentionPolicies
+  - >-
+    @azure/arm-sql.operations.backupShortTermRetentionPolicies.d.BackupShortTermRetentionPolicies
+  - '@azure/arm-sql.operations.capabilities.d.Capabilities'
+  - '@azure/arm-sql.operations.dataMaskingPolicies.d.DataMaskingPolicies'
+  - '@azure/arm-sql.operations.dataMaskingRules.d.DataMaskingRules'
+  - >-
+    @azure/arm-sql.operations.databaseAutomaticTuningOperations.d.DatabaseAutomaticTuningOperations
+  - >-
+    @azure/arm-sql.operations.databaseBlobAuditingPolicies.d.DatabaseBlobAuditingPolicies
+  - '@azure/arm-sql.operations.databaseOperations.d.DatabaseOperations'
+  - >-
+    @azure/arm-sql.operations.databaseThreatDetectionPolicies.d.DatabaseThreatDetectionPolicies
+  - '@azure/arm-sql.operations.databaseUsages.d.DatabaseUsages'
+  - >-
+    @azure/arm-sql.operations.databaseVulnerabilityAssessmentRuleBaselines.d.DatabaseVulnerabilityAssessmentRuleBaselines
+  - >-
+    @azure/arm-sql.operations.databaseVulnerabilityAssessmentScans.d.DatabaseVulnerabilityAssessmentScans
+  - >-
+    @azure/arm-sql.operations.databaseVulnerabilityAssessments.d.DatabaseVulnerabilityAssessments
+  - '@azure/arm-sql.operations.databases.d.Databases'
+  - '@azure/arm-sql.operations.elasticPoolActivities.d.ElasticPoolActivities'
+  - >-
+    @azure/arm-sql.operations.elasticPoolDatabaseActivities.d.ElasticPoolDatabaseActivities
+  - '@azure/arm-sql.operations.elasticPoolOperations.d.ElasticPoolOperations'
+  - '@azure/arm-sql.operations.elasticPools.d.ElasticPools'
+  - '@azure/arm-sql.operations.encryptionProtectors.d.EncryptionProtectors'
+  - >-
+    @azure/arm-sql.operations.extendedDatabaseBlobAuditingPolicies.d.ExtendedDatabaseBlobAuditingPolicies
+  - >-
+    @azure/arm-sql.operations.extendedServerBlobAuditingPolicies.d.ExtendedServerBlobAuditingPolicies
+  - '@azure/arm-sql.operations.failoverGroups.d.FailoverGroups'
+  - '@azure/arm-sql.operations.firewallRules.d.FirewallRules'
+  - '@azure/arm-sql.operations.geoBackupPolicies.d.GeoBackupPolicies'
+  - '@azure/arm-sql.operations.instanceFailoverGroups.d.InstanceFailoverGroups'
+  - '@azure/arm-sql.operations.instancePools.d.InstancePools'
+  - '@azure/arm-sql.operations.jobAgents.d.JobAgents'
+  - '@azure/arm-sql.operations.jobCredentials.d.JobCredentials'
+  - '@azure/arm-sql.operations.jobExecutions.d.JobExecutions'
+  - '@azure/arm-sql.operations.jobStepExecutions.d.JobStepExecutions'
+  - '@azure/arm-sql.operations.jobSteps.d.JobSteps'
+  - '@azure/arm-sql.operations.jobTargetExecutions.d.JobTargetExecutions'
+  - '@azure/arm-sql.operations.jobTargetGroups.d.JobTargetGroups'
+  - '@azure/arm-sql.operations.jobVersions.d.JobVersions'
+  - '@azure/arm-sql.operations.jobs.d.Jobs'
+  - >-
+    @azure/arm-sql.operations.longTermRetentionBackups.d.LongTermRetentionBackups
+  - >-
+    @azure/arm-sql.operations.managedBackupShortTermRetentionPolicies.d.ManagedBackupShortTermRetentionPolicies
+  - >-
+    @azure/arm-sql.operations.managedDatabaseRestoreDetails.d.ManagedDatabaseRestoreDetails
+  - >-
+    @azure/arm-sql.operations.managedDatabaseSecurityAlertPolicies.d.ManagedDatabaseSecurityAlertPolicies
+  - >-
+    @azure/arm-sql.operations.managedDatabaseSensitivityLabels.d.ManagedDatabaseSensitivityLabels
+  - >-
+    @azure/arm-sql.operations.managedDatabaseVulnerabilityAssessmentRuleBaselines.d.ManagedDatabaseVulnerabilityAssessmentRuleBaselines
+  - >-
+    @azure/arm-sql.operations.managedDatabaseVulnerabilityAssessmentScans.d.ManagedDatabaseVulnerabilityAssessmentScans
+  - >-
+    @azure/arm-sql.operations.managedDatabaseVulnerabilityAssessments.d.ManagedDatabaseVulnerabilityAssessments
+  - '@azure/arm-sql.operations.managedDatabases.d.ManagedDatabases'
+  - >-
+    @azure/arm-sql.operations.managedInstanceAdministrators.d.ManagedInstanceAdministrators
+  - >-
+    @azure/arm-sql.operations.managedInstanceEncryptionProtectors.d.ManagedInstanceEncryptionProtectors
+  - '@azure/arm-sql.operations.managedInstanceKeys.d.ManagedInstanceKeys'
+  - >-
+    @azure/arm-sql.operations.managedInstanceTdeCertificates.d.ManagedInstanceTdeCertificates
+  - >-
+    @azure/arm-sql.operations.managedInstanceVulnerabilityAssessments.d.ManagedInstanceVulnerabilityAssessments
+  - '@azure/arm-sql.operations.managedInstances.d.ManagedInstances'
+  - >-
+    @azure/arm-sql.operations.managedRestorableDroppedDatabaseBackupShortTermRetentionPolicies.d.ManagedRestorableDroppedDatabaseBackupShortTermRetentionPolicies
+  - >-
+    @azure/arm-sql.operations.managedServerSecurityAlertPolicies.d.ManagedServerSecurityAlertPolicies
+  - '@azure/arm-sql.operations.operations.d.Operations'
+  - >-
+    @azure/arm-sql.operations.privateEndpointConnections.d.PrivateEndpointConnections
+  - '@azure/arm-sql.operations.privateLinkResources.d.PrivateLinkResources'
+  - '@azure/arm-sql.operations.recommendedElasticPools.d.RecommendedElasticPools'
+  - '@azure/arm-sql.operations.recoverableDatabases.d.RecoverableDatabases'
+  - >-
+    @azure/arm-sql.operations.recoverableManagedDatabases.d.RecoverableManagedDatabases
+  - '@azure/arm-sql.operations.replicationLinks.d.ReplicationLinks'
+  - >-
+    @azure/arm-sql.operations.restorableDroppedDatabases.d.RestorableDroppedDatabases
+  - >-
+    @azure/arm-sql.operations.restorableDroppedManagedDatabases.d.RestorableDroppedManagedDatabases
+  - '@azure/arm-sql.operations.restorePoints.d.RestorePoints'
+  - '@azure/arm-sql.operations.sensitivityLabels.d.SensitivityLabels'
+  - >-
+    @azure/arm-sql.operations.serverAutomaticTuningOperations.d.ServerAutomaticTuningOperations
+  - >-
+    @azure/arm-sql.operations.serverAzureADAdministrators.d.ServerAzureADAdministrators
+  - >-
+    @azure/arm-sql.operations.serverBlobAuditingPolicies.d.ServerBlobAuditingPolicies
+  - >-
+    @azure/arm-sql.operations.serverCommunicationLinks.d.ServerCommunicationLinks
+  - >-
+    @azure/arm-sql.operations.serverConnectionPolicies.d.ServerConnectionPolicies
+  - '@azure/arm-sql.operations.serverDnsAliases.d.ServerDnsAliases'
+  - '@azure/arm-sql.operations.serverKeys.d.ServerKeys'
+  - >-
+    @azure/arm-sql.operations.serverSecurityAlertPolicies.d.ServerSecurityAlertPolicies
+  - '@azure/arm-sql.operations.serverUsages.d.ServerUsages'
+  - >-
+    @azure/arm-sql.operations.serverVulnerabilityAssessments.d.ServerVulnerabilityAssessments
+  - '@azure/arm-sql.operations.servers.d.Servers'
+  - '@azure/arm-sql.operations.serviceObjectives.d.ServiceObjectives'
+  - '@azure/arm-sql.operations.serviceTierAdvisors.d.ServiceTierAdvisors'
+  - '@azure/arm-sql.operations.subscriptionUsages.d.SubscriptionUsages'
+  - '@azure/arm-sql.operations.syncAgents.d.SyncAgents'
+  - '@azure/arm-sql.operations.syncGroups.d.SyncGroups'
+  - '@azure/arm-sql.operations.syncMembers.d.SyncMembers'
+  - '@azure/arm-sql.operations.tdeCertificates.d.TdeCertificates'
+  - >-
+    @azure/arm-sql.operations.transparentDataEncryptionActivities.d.TransparentDataEncryptionActivities
+  - >-
+    @azure/arm-sql.operations.transparentDataEncryptions.d.TransparentDataEncryptions
+  - '@azure/arm-sql.operations.usages.d.Usages'
+  - '@azure/arm-sql.operations.virtualClusters.d.VirtualClusters'
+  - '@azure/arm-sql.operations.virtualNetworkRules.d.VirtualNetworkRules'
+  - '@azure/arm-sql.sqlManagementClient.d.SqlManagementClient'
+  - '@azure/arm-sql.sqlManagementClientContext.d.SqlManagementClientContext'

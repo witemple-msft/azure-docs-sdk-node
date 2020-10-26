@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ClientGroupMembersCollection
-uid: '@azure/arm-servicemap.ClientGroupMembersCollection'
+uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection'
 package: '@azure/arm-servicemap'
 summary: ''
 fullName: ClientGroupMembersCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.Array'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.Array'
     package: '@azure/arm-servicemap'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.length'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.length'
     package: '@azure/arm-servicemap'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.nextLink'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.nextLink'
     package: '@azure/arm-servicemap'
     summary: The URL to the next set of resources.
     fullName: nextLink
@@ -51,8 +51,33 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(ClientGroupMember | ConcatArray<ClientGroupMember>[])'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.concat_1'
+    package: '@azure/arm-servicemap'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: ClientGroupMember |
+        ConcatArray<ClientGroupMember>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<ClientGroupMember>[])'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.concat'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.concat'
     package: '@azure/arm-servicemap'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +88,19 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-servicemap.ClientGroupMember"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.concat_1'
-    package: '@azure/arm-servicemap'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.copyWithin'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.copyWithin
     package: '@azure/arm-servicemap'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.entries'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.entries'
     package: '@azure/arm-servicemap'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: ClientGroupMember, index: number, array:
       ClientGroupMember[]) => unknown, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.every'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.every_1'
     package: '@azure/arm-servicemap'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: ClientGroupMember, index: number,
+        function every(predicate: (value: ClientGroupMember, index: number,
         array: ClientGroupMember[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ClientGroupMember, index: number, array:
             ClientGroupMember[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: ClientGroupMember, index: number, array:
+      ClientGroupMember[]) => value, any)
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.every'
+    package: '@azure/arm-servicemap'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: ClientGroupMember, index: number,
+        array: ClientGroupMember[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: ClientGroupMember, index: number, array:
+            ClientGroupMember[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(ClientGroupMember, undefined | number, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.fill'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.fill'
     package: '@azure/arm-servicemap'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: ClientGroupMember, index: number, array:
       ClientGroupMember[]) => unknown, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.filter_1'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.filter_1'
     package: '@azure/arm-servicemap'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: ClientGroupMember, index: number,
+        function filter(predicate: (value: ClientGroupMember, index: number,
         array: ClientGroupMember[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ClientGroupMember, index: number, array:
             ClientGroupMember[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: ClientGroupMember, index: number, array:
-      ClientGroupMember[]) => boolean, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.filter'
+      ClientGroupMember[]) => value, any)
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.filter'
     package: '@azure/arm-servicemap'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: ClientGroupMember, index: number,
-        array: ClientGroupMember[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: ClientGroupMember, index: number,
+        array: ClientGroupMember[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ClientGroupMember, index: number, array:
-            ClientGroupMember[]) =&gt; boolean
+            ClientGroupMember[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: ClientGroupMember, index: number, obj: ClientGroupMember[])
       => unknown, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.find_1'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.find_1'
     package: '@azure/arm-servicemap'
     summary: ''
     remarks: ''
@@ -291,12 +348,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: ClientGroupMember, index: number, obj:
-      ClientGroupMember[]) => boolean, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.find'
+      ClientGroupMember[]) => value, any)
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.find'
     package: '@azure/arm-servicemap'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +368,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: ClientGroupMember,
-        index: number, obj: ClientGroupMember[]) => boolean, thisArg?: any)
+        index: number, obj: ClientGroupMember[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: ClientGroupMember, index: number, obj:
-            ClientGroupMember[]) =&gt; boolean
+            ClientGroupMember[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +396,8 @@ methods:
   - name: >-
       findIndex((value: ClientGroupMember, index: number, obj:
       ClientGroupMember[]) => unknown, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.findIndex'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.findIndex
     package: '@azure/arm-servicemap'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +438,7 @@ methods:
   - name: >-
       forEach((value: ClientGroupMember, index: number, array:
       ClientGroupMember[]) => void, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.forEach'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.forEach'
     package: '@azure/arm-servicemap'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +463,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(ClientGroupMember, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.includes'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.includes'
     package: '@azure/arm-servicemap'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +477,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +490,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(ClientGroupMember, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.indexOf'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.indexOf'
     package: '@azure/arm-servicemap'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +502,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +515,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.join'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.join'
     package: '@azure/arm-servicemap'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +536,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.keys'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.keys'
     package: '@azure/arm-servicemap'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +548,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(ClientGroupMember, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.lastIndexOf
     package: '@azure/arm-servicemap'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +561,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +576,7 @@ methods:
   - name: >-
       map<U>((value: ClientGroupMember, index: number, array:
       ClientGroupMember[]) => U, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.map'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.map'
     package: '@azure/arm-servicemap'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +606,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.pop'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.pop'
     package: '@azure/arm-servicemap'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +615,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
+          | undefined
         description: ''
   - name: 'push(ClientGroupMember[])'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.push'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.push'
     package: '@azure/arm-servicemap'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +630,9 @@ methods:
       content: 'function push(items: ClientGroupMember[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -570,7 +641,7 @@ methods:
   - name: >-
       reduce((previousValue: ClientGroupMember, currentValue: ClientGroupMember,
       currentIndex: number, array: ClientGroupMember[]) => ClientGroupMember)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reduce'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reduce'
     package: '@azure/arm-servicemap'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -595,13 +666,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+        type: <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
         description: ''
   - name: >-
       reduce((previousValue: ClientGroupMember, currentValue: ClientGroupMember,
       currentIndex: number, array: ClientGroupMember[]) => ClientGroupMember,
       ClientGroupMember)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reduce_1'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reduce_1'
     package: '@azure/arm-servicemap'
     summary: ''
     remarks: ''
@@ -621,15 +692,17 @@ methods:
             ClientGroupMember
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+        type: <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: ClientGroupMember,
       currentIndex: number, array: ClientGroupMember[]) => U, U)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reduce_2'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reduce_2'
     package: '@azure/arm-servicemap'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -665,7 +738,8 @@ methods:
       reduceRight((previousValue: ClientGroupMember, currentValue:
       ClientGroupMember, currentIndex: number, array: ClientGroupMember[]) =>
       ClientGroupMember)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reduceRight'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reduceRight
     package: '@azure/arm-servicemap'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -691,13 +765,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+        type: <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
         description: ''
   - name: >-
       reduceRight((previousValue: ClientGroupMember, currentValue:
       ClientGroupMember, currentIndex: number, array: ClientGroupMember[]) =>
       ClientGroupMember, ClientGroupMember)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reduceRight_1
     package: '@azure/arm-servicemap'
     summary: ''
     remarks: ''
@@ -717,15 +792,18 @@ methods:
             ClientGroupMember
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" />
+        type: <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: ClientGroupMember,
       currentIndex: number, array: ClientGroupMember[]) => U, U)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reduceRight_2
     package: '@azure/arm-servicemap'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -759,7 +837,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.reverse'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.reverse'
     package: '@azure/arm-servicemap'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -768,10 +846,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.shift'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.shift'
     package: '@azure/arm-servicemap'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -780,10 +860,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-servicemap.ClientGroupMember" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.slice'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.slice'
     package: '@azure/arm-servicemap'
     summary: Returns a section of an array.
     remarks: ''
@@ -797,15 +879,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
         description: ''
   - name: >-
       some((value: ClientGroupMember, index: number, array: ClientGroupMember[])
       => unknown, any)
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.some'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.some'
     package: '@azure/arm-servicemap'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -815,28 +900,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: ClientGroupMember, index: number,
+        function some(predicate: (value: ClientGroupMember, index: number,
         array: ClientGroupMember[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: ClientGroupMember, index: number, array:
             ClientGroupMember[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: ClientGroupMember, b: ClientGroupMember) => number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.sort'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.sort'
     package: '@azure/arm-servicemap'
     summary: Sorts an array.
     remarks: ''
@@ -852,14 +942,25 @@ methods:
             undefined | (a: ClientGroupMember, b: ClientGroupMember) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, ClientGroupMember[])'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.splice_1'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.splice_1'
     package: '@azure/arm-servicemap'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -881,14 +982,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.splice'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.splice'
     package: '@azure/arm-servicemap'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -909,10 +1014,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+        type: >-
+          <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.toLocaleString'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.toLocaleString
     package: '@azure/arm-servicemap'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -926,7 +1034,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.toString'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.toString'
     package: '@azure/arm-servicemap'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -938,7 +1046,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(ClientGroupMember[])'
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.unshift'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.unshift'
     package: '@azure/arm-servicemap'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -948,14 +1056,16 @@ methods:
       content: 'function unshift(items: ClientGroupMember[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-servicemap.ClientGroupMember" />[]'
+          type: >-
+            <xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-servicemap.ClientGroupMembersCollection.values'
+    uid: '@azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.values'
     package: '@azure/arm-servicemap'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -966,6 +1076,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-servicemap.ClientGroupMember" />&gt;
+          uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-servicemap.ClientGroupMember" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.[Symbol.iterator]
+    package: '@azure/arm-servicemap'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-servicemap.models.index.d.ClientGroupMember" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-servicemap.models.index.d.ClientGroupMembersCollection.[Symbol.unscopables]
+    package: '@azure/arm-servicemap'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-servicemap.models.index.d.MachineCollection.Array"
+  />&lt;<xref uid="@azure/arm-servicemap.models.index.d.ClientGroupMember"
+  />&gt;

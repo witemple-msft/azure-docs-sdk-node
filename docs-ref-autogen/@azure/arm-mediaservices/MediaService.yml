@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: MediaService
-uid: '@azure/arm-mediaservices.MediaService'
+uid: '@azure/arm-mediaservices.models.index.d.MediaService'
 package: '@azure/arm-mediaservices'
 summary: A Media Services account.
 fullName: MediaService
@@ -9,11 +9,28 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
+  - name: encryption
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.encryption'
+    package: '@azure/arm-mediaservices'
+    summary: The account encryption properties.
+    fullName: encryption
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'encryption?: AccountEncryption'
+      return:
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.AccountEncryption"
+          />
+        description: ''
   - name: id
-    uid: '@azure/arm-mediaservices.MediaService.id'
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.id'
     package: '@azure/arm-mediaservices'
     summary: >-
-      Fully qualified resource ID for the resource.
+      Fully qualified resource Id for the resource. Ex -
+
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -26,21 +43,36 @@ properties:
       return:
         type: undefined | string
         description: ''
-  - name: location
-    uid: '@azure/arm-mediaservices.MediaService.location'
+  - name: identity
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.identity'
     package: '@azure/arm-mediaservices'
-    summary: The Azure Region of the resource.
+    summary: The Managed Identity for the Media Services account.
+    fullName: identity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'identity?: MediaServiceIdentity'
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-mediaservices.models.index.d.MediaServiceIdentity" />
+        description: ''
+  - name: location
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.location'
+    package: '@azure/arm-mediaservices'
+    summary: The geo-location where the resource lives
     fullName: location
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'location?: undefined | string'
+      content: 'location: string'
       return:
-        type: undefined | string
+        type: string
         description: ''
   - name: mediaServiceId
-    uid: '@azure/arm-mediaservices.MediaService.mediaServiceId'
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.mediaServiceId'
     package: '@azure/arm-mediaservices'
     summary: >-
       The Media Services account ID.
@@ -57,10 +89,10 @@ properties:
         type: undefined | string
         description: ''
   - name: name
-    uid: '@azure/arm-mediaservices.MediaService.name'
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.name'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The name of the resource.
+      The name of the resource
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -74,7 +106,7 @@ properties:
         type: undefined | string
         description: ''
   - name: storageAccounts
-    uid: '@azure/arm-mediaservices.MediaService.storageAccounts'
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.storageAccounts'
     package: '@azure/arm-mediaservices'
     summary: The storage accounts for this resource.
     fullName: storageAccounts
@@ -84,10 +116,27 @@ properties:
     syntax:
       content: 'storageAccounts?: StorageAccount[]'
       return:
-        type: '<xref uid="@azure/arm-mediaservices.StorageAccount" />[]'
+        type: >-
+          <xref uid="@azure/arm-mediaservices.models.index.d.StorageAccount"
+          />[]
+        description: ''
+  - name: storageAuthentication
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.storageAuthentication'
+    package: '@azure/arm-mediaservices'
+    summary: 'Possible values include: ''System'', ''ManagedIdentity'''
+    fullName: storageAuthentication
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'storageAuthentication?: StorageAuthentication'
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-mediaservices.models.index.d.StorageAuthentication" />
         description: ''
   - name: tags
-    uid: '@azure/arm-mediaservices.MediaService.tags'
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.tags'
     package: '@azure/arm-mediaservices'
     summary: Resource tags.
     fullName: tags
@@ -100,10 +149,12 @@ properties:
         type: 'undefined | [key: string]: string'
         description: ''
   - name: type
-    uid: '@azure/arm-mediaservices.MediaService.type'
+    uid: '@azure/arm-mediaservices.models.index.d.MediaService.type'
     package: '@azure/arm-mediaservices'
     summary: >-
-      The type of the resource.
+      The type of the resource. Ex- Microsoft.Compute/virtualMachines or
+
+      Microsoft.Storage/storageAccounts.
 
       **NOTE: This property will not be serialized. It can only be populated by
       the server.**
@@ -116,4 +167,4 @@ properties:
       return:
         type: undefined | string
         description: ''
-extends: <xref uid="@azure/arm-mediaservices.TrackedResource" />
+extends: <xref uid="@azure/arm-mediaservices.models.index.d.TrackedResource" />

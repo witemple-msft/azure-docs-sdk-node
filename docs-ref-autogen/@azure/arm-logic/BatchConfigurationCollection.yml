@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BatchConfigurationCollection
-uid: '@azure/arm-logic.BatchConfigurationCollection'
+uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection'
 package: '@azure/arm-logic'
 summary: ''
 fullName: BatchConfigurationCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-logic.BatchConfigurationCollection.Array'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.Array'
     package: '@azure/arm-logic'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-logic.BatchConfigurationCollection.length'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.length'
     package: '@azure/arm-logic'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,8 +38,30 @@ properties:
         type: number
         description: ''
 methods:
+  - name: 'concat(BatchConfiguration | ConcatArray<BatchConfiguration>[])'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.concat_1'
+    package: '@azure/arm-logic'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: BatchConfiguration |
+        ConcatArray<BatchConfiguration>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-logic.models.index.d.BatchConfiguration" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
+        description: ''
   - name: 'concat(ConcatArray<BatchConfiguration>[])'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.concat'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.concat'
     package: '@azure/arm-logic'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +72,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-logic.BatchConfiguration"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-logic.models.index.d.BatchConfiguration" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.concat_1'
-    package: '@azure/arm-logic'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.copyWithin'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.copyWithin'
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +118,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.entries'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.entries'
     package: '@azure/arm-logic'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +132,7 @@ methods:
   - name: >-
       every((value: BatchConfiguration, index: number, array:
       BatchConfiguration[]) => unknown, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.every'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.every_1'
     package: '@azure/arm-logic'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +140,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: BatchConfiguration, index: number,
+        function every(predicate: (value: BatchConfiguration, index: number,
         array: BatchConfiguration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchConfiguration, index: number, array:
             BatchConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: BatchConfiguration, index: number, array:
+      BatchConfiguration[]) => value, any)
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.every'
+    package: '@azure/arm-logic'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: BatchConfiguration, index: number,
+        array: BatchConfiguration[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: BatchConfiguration, index: number, array:
+            BatchConfiguration[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(BatchConfiguration, undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.fill'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.fill'
     package: '@azure/arm-logic'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +218,7 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+          type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +240,7 @@ methods:
   - name: >-
       filter((value: BatchConfiguration, index: number, array:
       BatchConfiguration[]) => unknown, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.filter_1'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.filter_1'
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +250,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: BatchConfiguration, index: number,
+        function filter(predicate: (value: BatchConfiguration, index: number,
         array: BatchConfiguration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchConfiguration, index: number, array:
             BatchConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
         description: ''
   - name: >-
       filter<S>((value: BatchConfiguration, index: number, array:
-      BatchConfiguration[]) => boolean, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.filter'
+      BatchConfiguration[]) => value, any)
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.filter'
     package: '@azure/arm-logic'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +282,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: BatchConfiguration, index:
-        number, array: BatchConfiguration[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: BatchConfiguration, index: number,
+        array: BatchConfiguration[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchConfiguration, index: number, array:
-            BatchConfiguration[]) =&gt; boolean
+            BatchConfiguration[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +304,7 @@ methods:
   - name: >-
       find((value: BatchConfiguration, index: number, obj: BatchConfiguration[])
       => unknown, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.find_1'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.find_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -278,12 +324,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: BatchConfiguration, index: number, obj:
-      BatchConfiguration[]) => boolean, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.find'
+      BatchConfiguration[]) => value, any)
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.find'
     package: '@azure/arm-logic'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +344,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: BatchConfiguration,
-        index: number, obj: BatchConfiguration[]) => boolean, thisArg?: any)
+        index: number, obj: BatchConfiguration[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: BatchConfiguration, index: number, obj:
-            BatchConfiguration[]) =&gt; boolean
+            BatchConfiguration[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +372,7 @@ methods:
   - name: >-
       findIndex((value: BatchConfiguration, index: number, obj:
       BatchConfiguration[]) => unknown, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.findIndex'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.findIndex'
     package: '@azure/arm-logic'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +413,7 @@ methods:
   - name: >-
       forEach((value: BatchConfiguration, index: number, array:
       BatchConfiguration[]) => void, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.forEach'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.forEach'
     package: '@azure/arm-logic'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +438,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(BatchConfiguration, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.includes'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.includes'
     package: '@azure/arm-logic'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +452,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+          type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +463,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(BatchConfiguration, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.indexOf'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.indexOf'
     package: '@azure/arm-logic'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +475,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+          type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +486,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.join'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.join'
     package: '@azure/arm-logic'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +507,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.keys'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.keys'
     package: '@azure/arm-logic'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +519,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(BatchConfiguration, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.lastIndexOf'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.lastIndexOf'
     package: '@azure/arm-logic'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +531,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+          type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +544,7 @@ methods:
   - name: >-
       map<U>((value: BatchConfiguration, index: number, array:
       BatchConfiguration[]) => U, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.map'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.map'
     package: '@azure/arm-logic'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +574,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.pop'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.pop'
     package: '@azure/arm-logic'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +583,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" /> |
+          undefined
         description: ''
   - name: 'push(BatchConfiguration[])'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.push'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.push'
     package: '@azure/arm-logic'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +598,7 @@ methods:
       content: 'function push(items: BatchConfiguration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+          type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
           description: |
             New elements of the Array.
       return:
@@ -558,7 +608,7 @@ methods:
       reduce((previousValue: BatchConfiguration, currentValue:
       BatchConfiguration, currentIndex: number, array: BatchConfiguration[]) =>
       BatchConfiguration)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reduce'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reduce'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -583,13 +633,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+        type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
         description: ''
   - name: >-
       reduce((previousValue: BatchConfiguration, currentValue:
       BatchConfiguration, currentIndex: number, array: BatchConfiguration[]) =>
       BatchConfiguration, BatchConfiguration)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reduce_1'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reduce_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -609,15 +659,15 @@ methods:
             BatchConfiguration[]) =&gt; BatchConfiguration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+          type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+        type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: BatchConfiguration,
       currentIndex: number, array: BatchConfiguration[]) => U, U)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reduce_2'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reduce_2'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -653,7 +703,7 @@ methods:
       reduceRight((previousValue: BatchConfiguration, currentValue:
       BatchConfiguration, currentIndex: number, array: BatchConfiguration[]) =>
       BatchConfiguration)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reduceRight'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reduceRight'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -679,13 +729,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+        type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
         description: ''
   - name: >-
       reduceRight((previousValue: BatchConfiguration, currentValue:
       BatchConfiguration, currentIndex: number, array: BatchConfiguration[]) =>
       BatchConfiguration, BatchConfiguration)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reduceRight_1'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reduceRight_1'
     package: '@azure/arm-logic'
     summary: ''
     remarks: ''
@@ -705,15 +755,15 @@ methods:
             BatchConfiguration[]) =&gt; BatchConfiguration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+          type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" />
+        type: <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: BatchConfiguration,
       currentIndex: number, array: BatchConfiguration[]) => U, U)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reduceRight_2'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reduceRight_2'
     package: '@azure/arm-logic'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -747,7 +797,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.reverse'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.reverse'
     package: '@azure/arm-logic'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -756,10 +806,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.shift'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.shift'
     package: '@azure/arm-logic'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -768,10 +818,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-logic.BatchConfiguration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.slice'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.slice'
     package: '@azure/arm-logic'
     summary: Returns a section of an array.
     remarks: ''
@@ -785,15 +837,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
         description: ''
   - name: >-
       some((value: BatchConfiguration, index: number, array:
       BatchConfiguration[]) => unknown, any)
-    uid: '@azure/arm-logic.BatchConfigurationCollection.some'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.some'
     package: '@azure/arm-logic'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -803,28 +856,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: BatchConfiguration, index: number,
+        function some(predicate: (value: BatchConfiguration, index: number,
         array: BatchConfiguration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BatchConfiguration, index: number, array:
             BatchConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: BatchConfiguration, b: BatchConfiguration) => number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.sort'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.sort'
     package: '@azure/arm-logic'
     summary: Sorts an array.
     remarks: ''
@@ -840,14 +898,25 @@ methods:
             undefined | (a: BatchConfiguration, b: BatchConfiguration) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, BatchConfiguration[])'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.splice_1'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.splice_1'
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -869,14 +938,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+          type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.splice'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.splice'
     package: '@azure/arm-logic'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -897,10 +966,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+        type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.toLocaleString'
+    uid: >-
+      @azure/arm-logic.models.index.d.BatchConfigurationCollection.toLocaleString
     package: '@azure/arm-logic'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -914,7 +984,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.toString'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.toString'
     package: '@azure/arm-logic'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -926,7 +996,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(BatchConfiguration[])'
-    uid: '@azure/arm-logic.BatchConfigurationCollection.unshift'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.unshift'
     package: '@azure/arm-logic'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -936,14 +1006,14 @@ methods:
       content: 'function unshift(items: BatchConfiguration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-logic.BatchConfiguration" />[]'
+          type: '<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-logic.BatchConfigurationCollection.values'
+    uid: '@azure/arm-logic.models.index.d.BatchConfigurationCollection.values'
     package: '@azure/arm-logic'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -953,7 +1023,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-logic.BatchConfiguration"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-logic.models.index.d.BatchConfiguration" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-logic.BatchConfiguration" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-logic.models.index.d.BatchConfigurationCollection.[Symbol.iterator]
+    package: '@azure/arm-logic'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-logic.models.index.d.BatchConfiguration" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-logic.models.index.d.BatchConfigurationCollection.[Symbol.unscopables]
+    package: '@azure/arm-logic'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-logic.models.index.d.WorkflowListResult.Array"
+  />&lt;<xref uid="@azure/arm-logic.models.index.d.BatchConfiguration" />&gt;

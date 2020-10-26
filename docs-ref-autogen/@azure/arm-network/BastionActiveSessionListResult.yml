@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BastionActiveSessionListResult
-uid: '@azure/arm-network.BastionActiveSessionListResult'
+uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult'
 package: '@azure/arm-network'
 summary: ''
 fullName: BastionActiveSessionListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-network.BastionActiveSessionListResult.Array'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.Array'
     package: '@azure/arm-network'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-network.BastionActiveSessionListResult.length'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.length'
     package: '@azure/arm-network'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-network.BastionActiveSessionListResult.nextLink'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.nextLink'
     package: '@azure/arm-network'
     summary: The URL to get the next set of results.
     fullName: nextLink
@@ -51,8 +51,33 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(BastionActiveSession | ConcatArray<BastionActiveSession>[])'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.concat_1'
+    package: '@azure/arm-network'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: BastionActiveSession |
+        ConcatArray<BastionActiveSession>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<BastionActiveSession>[])'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.concat'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.concat'
     package: '@azure/arm-network'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +88,19 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-network.BastionActiveSession"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-network.models.index.d.BastionActiveSession"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.concat_1'
-    package: '@azure/arm-network'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.copyWithin'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.copyWithin
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +138,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.entries'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.entries'
     package: '@azure/arm-network'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +152,7 @@ methods:
   - name: >-
       every((value: BastionActiveSession, index: number, array:
       BastionActiveSession[]) => unknown, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.every'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.every_1'
     package: '@azure/arm-network'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +160,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: BastionActiveSession, index: number,
+        function every(predicate: (value: BastionActiveSession, index: number,
         array: BastionActiveSession[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BastionActiveSession, index: number, array:
             BastionActiveSession[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: BastionActiveSession, index: number, array:
+      BastionActiveSession[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.every'
+    package: '@azure/arm-network'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: BastionActiveSession, index:
+        number, array: BastionActiveSession[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: BastionActiveSession, index: number, array:
+            BastionActiveSession[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(BastionActiveSession, undefined | number, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.fill'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.fill'
     package: '@azure/arm-network'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +238,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-network.BastionActiveSession" />
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +262,7 @@ methods:
   - name: >-
       filter((value: BastionActiveSession, index: number, array:
       BastionActiveSession[]) => unknown, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.filter_1'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.filter_1'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +272,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: BastionActiveSession, index: number,
+        function filter(predicate: (value: BastionActiveSession, index: number,
         array: BastionActiveSession[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BastionActiveSession, index: number, array:
             BastionActiveSession[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: BastionActiveSession, index: number, array:
-      BastionActiveSession[]) => boolean, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.filter'
+      BastionActiveSession[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.filter'
     package: '@azure/arm-network'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +306,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: BastionActiveSession, index:
-        number, array: BastionActiveSession[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: BastionActiveSession, index:
+        number, array: BastionActiveSession[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BastionActiveSession, index: number, array:
-            BastionActiveSession[]) =&gt; boolean
+            BastionActiveSession[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +328,7 @@ methods:
   - name: >-
       find((value: BastionActiveSession, index: number, obj:
       BastionActiveSession[]) => unknown, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.find_1'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.find_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -291,12 +348,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: BastionActiveSession, index: number, obj:
-      BastionActiveSession[]) => boolean, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.find'
+      BastionActiveSession[]) => value, any)
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.find'
     package: '@azure/arm-network'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +368,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: BastionActiveSession,
-        index: number, obj: BastionActiveSession[]) => boolean, thisArg?: any)
+        index: number, obj: BastionActiveSession[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: BastionActiveSession, index: number, obj:
-            BastionActiveSession[]) =&gt; boolean
+            BastionActiveSession[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +396,7 @@ methods:
   - name: >-
       findIndex((value: BastionActiveSession, index: number, obj:
       BastionActiveSession[]) => unknown, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.findIndex'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.findIndex'
     package: '@azure/arm-network'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +437,7 @@ methods:
   - name: >-
       forEach((value: BastionActiveSession, index: number, array:
       BastionActiveSession[]) => void, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.forEach'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.forEach'
     package: '@azure/arm-network'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +462,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(BastionActiveSession, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.includes'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.includes'
     package: '@azure/arm-network'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +476,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.BastionActiveSession" />
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +489,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(BastionActiveSession, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.indexOf'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.indexOf'
     package: '@azure/arm-network'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +501,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.BastionActiveSession" />
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +514,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.join'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.join'
     package: '@azure/arm-network'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +535,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.keys'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.keys'
     package: '@azure/arm-network'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +547,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(BastionActiveSession, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.lastIndexOf
     package: '@azure/arm-network'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +560,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-network.BastionActiveSession" />
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +575,7 @@ methods:
   - name: >-
       map<U>((value: BastionActiveSession, index: number, array:
       BastionActiveSession[]) => U, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.map'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.map'
     package: '@azure/arm-network'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +605,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.pop'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.pop'
     package: '@azure/arm-network'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +614,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
+          | undefined
         description: ''
   - name: 'push(BastionActiveSession[])'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.push'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.push'
     package: '@azure/arm-network'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +629,9 @@ methods:
       content: 'function push(items: BastionActiveSession[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -571,7 +641,7 @@ methods:
       reduce((previousValue: BastionActiveSession, currentValue:
       BastionActiveSession, currentIndex: number, array: BastionActiveSession[])
       => BastionActiveSession)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reduce'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.reduce'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -596,13 +666,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" />
+        type: <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
         description: ''
   - name: >-
       reduce((previousValue: BastionActiveSession, currentValue:
       BastionActiveSession, currentIndex: number, array: BastionActiveSession[])
       => BastionActiveSession, BastionActiveSession)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reduce_1'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.reduce_1'
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -622,15 +692,17 @@ methods:
             BastionActiveSession[]) =&gt; BastionActiveSession
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.BastionActiveSession" />
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" />
+        type: <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: BastionActiveSession,
       currentIndex: number, array: BastionActiveSession[]) => U, U)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reduce_2'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.reduce_2'
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -666,7 +738,8 @@ methods:
       reduceRight((previousValue: BastionActiveSession, currentValue:
       BastionActiveSession, currentIndex: number, array: BastionActiveSession[])
       => BastionActiveSession)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reduceRight'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.reduceRight
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -692,13 +765,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" />
+        type: <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
         description: ''
   - name: >-
       reduceRight((previousValue: BastionActiveSession, currentValue:
       BastionActiveSession, currentIndex: number, array: BastionActiveSession[])
       => BastionActiveSession, BastionActiveSession)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.reduceRight_1
     package: '@azure/arm-network'
     summary: ''
     remarks: ''
@@ -718,15 +792,18 @@ methods:
             BastionActiveSession[]) =&gt; BastionActiveSession
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-network.BastionActiveSession" />
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" />
+        type: <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: BastionActiveSession,
       currentIndex: number, array: BastionActiveSession[]) => U, U)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.reduceRight_2
     package: '@azure/arm-network'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -760,7 +837,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.reverse'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.reverse'
     package: '@azure/arm-network'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -769,10 +846,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.shift'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.shift'
     package: '@azure/arm-network'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -781,10 +860,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-network.BastionActiveSession" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.slice'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.slice'
     package: '@azure/arm-network'
     summary: Returns a section of an array.
     remarks: ''
@@ -798,15 +879,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
         description: ''
   - name: >-
       some((value: BastionActiveSession, index: number, array:
       BastionActiveSession[]) => unknown, any)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.some'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.some'
     package: '@azure/arm-network'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -816,30 +900,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: BastionActiveSession, index: number,
+        function some(predicate: (value: BastionActiveSession, index: number,
         array: BastionActiveSession[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BastionActiveSession, index: number, array:
             BastionActiveSession[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: BastionActiveSession, b: BastionActiveSession) =>
       number)
-    uid: '@azure/arm-network.BastionActiveSessionListResult.sort'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.sort'
     package: '@azure/arm-network'
     summary: Sorts an array.
     remarks: ''
@@ -855,14 +944,25 @@ methods:
             undefined | (a: BastionActiveSession, b: BastionActiveSession) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, BastionActiveSession[])'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.splice_1'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.splice_1'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -884,14 +984,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.splice'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.splice'
     package: '@azure/arm-network'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -912,10 +1016,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+        type: >-
+          <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.toLocaleString'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.toLocaleString
     package: '@azure/arm-network'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -929,7 +1036,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.toString'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.toString'
     package: '@azure/arm-network'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -941,7 +1048,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(BastionActiveSession[])'
-    uid: '@azure/arm-network.BastionActiveSessionListResult.unshift'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.unshift'
     package: '@azure/arm-network'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -951,14 +1058,16 @@ methods:
       content: 'function unshift(items: BastionActiveSession[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-network.BastionActiveSession" />[]'
+          type: >-
+            <xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-network.BastionActiveSessionListResult.values'
+    uid: '@azure/arm-network.models.index.d.BastionActiveSessionListResult.values'
     package: '@azure/arm-network'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -969,6 +1078,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-network.BastionActiveSession" />&gt;
+          uid="@azure/arm-network.models.index.d.BastionActiveSession" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-network.BastionActiveSession" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.[Symbol.iterator]
+    package: '@azure/arm-network'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-network.models.index.d.BastionActiveSession" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-network.models.index.d.BastionActiveSessionListResult.[Symbol.unscopables]
+    package: '@azure/arm-network'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-network.models.index.d.ApplicationGatewayListResult.Array"
+  />&lt;<xref uid="@azure/arm-network.models.index.d.BastionActiveSession"
+  />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: EndpointHealthDataListResult
-uid: '@azure/arm-iothub.EndpointHealthDataListResult'
+uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult'
 package: '@azure/arm-iothub'
 summary: ''
 fullName: EndpointHealthDataListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.Array'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.Array'
     package: '@azure/arm-iothub'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.length'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.length'
     package: '@azure/arm-iothub'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.nextLink'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.nextLink'
     package: '@azure/arm-iothub'
     summary: >-
       Link to more results
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<EndpointHealthData>[])'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.concat'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.concat'
     package: '@azure/arm-iothub'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-iothub.EndpointHealthData"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.concat_1'
+  - name: 'concat(EndpointHealthData | ConcatArray<EndpointHealthData>[])'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.concat_1'
     package: '@azure/arm-iothub'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: EndpointHealthData |
+        ConcatArray<EndpointHealthData>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.copyWithin'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.copyWithin'
     package: '@azure/arm-iothub'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +135,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.entries'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.entries'
     package: '@azure/arm-iothub'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +149,7 @@ methods:
   - name: >-
       every((value: EndpointHealthData, index: number, array:
       EndpointHealthData[]) => unknown, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.every'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.every_1'
     package: '@azure/arm-iothub'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +157,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: EndpointHealthData, index: number,
+        function every(predicate: (value: EndpointHealthData, index: number,
         array: EndpointHealthData[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EndpointHealthData, index: number, array:
             EndpointHealthData[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: EndpointHealthData, index: number, array:
+      EndpointHealthData[]) => value, any)
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.every'
+    package: '@azure/arm-iothub'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: EndpointHealthData, index: number,
+        array: EndpointHealthData[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: EndpointHealthData, index: number, array:
+            EndpointHealthData[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(EndpointHealthData, undefined | number, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.fill'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.fill'
     package: '@azure/arm-iothub'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +235,7 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+          type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +257,7 @@ methods:
   - name: >-
       filter((value: EndpointHealthData, index: number, array:
       EndpointHealthData[]) => unknown, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.filter_1'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.filter_1'
     package: '@azure/arm-iothub'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +267,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: EndpointHealthData, index: number,
+        function filter(predicate: (value: EndpointHealthData, index: number,
         array: EndpointHealthData[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EndpointHealthData, index: number, array:
             EndpointHealthData[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
   - name: >-
       filter<S>((value: EndpointHealthData, index: number, array:
-      EndpointHealthData[]) => boolean, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.filter'
+      EndpointHealthData[]) => value, any)
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.filter'
     package: '@azure/arm-iothub'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +299,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: EndpointHealthData, index:
-        number, array: EndpointHealthData[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: EndpointHealthData, index: number,
+        array: EndpointHealthData[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EndpointHealthData, index: number, array:
-            EndpointHealthData[]) =&gt; boolean
+            EndpointHealthData[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +321,7 @@ methods:
   - name: >-
       find((value: EndpointHealthData, index: number, obj: EndpointHealthData[])
       => unknown, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.find_1'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.find_1'
     package: '@azure/arm-iothub'
     summary: ''
     remarks: ''
@@ -295,12 +341,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: EndpointHealthData, index: number, obj:
-      EndpointHealthData[]) => boolean, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.find'
+      EndpointHealthData[]) => value, any)
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.find'
     package: '@azure/arm-iothub'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +361,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: EndpointHealthData,
-        index: number, obj: EndpointHealthData[]) => boolean, thisArg?: any)
+        index: number, obj: EndpointHealthData[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: EndpointHealthData, index: number, obj:
-            EndpointHealthData[]) =&gt; boolean
+            EndpointHealthData[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +389,7 @@ methods:
   - name: >-
       findIndex((value: EndpointHealthData, index: number, obj:
       EndpointHealthData[]) => unknown, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.findIndex'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.findIndex'
     package: '@azure/arm-iothub'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +430,7 @@ methods:
   - name: >-
       forEach((value: EndpointHealthData, index: number, array:
       EndpointHealthData[]) => void, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.forEach'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.forEach'
     package: '@azure/arm-iothub'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +455,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(EndpointHealthData, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.includes'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.includes'
     package: '@azure/arm-iothub'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +469,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+          type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +480,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(EndpointHealthData, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.indexOf'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.indexOf'
     package: '@azure/arm-iothub'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +492,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+          type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +503,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.join'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.join'
     package: '@azure/arm-iothub'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +524,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.keys'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.keys'
     package: '@azure/arm-iothub'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +536,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(EndpointHealthData, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.lastIndexOf'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.lastIndexOf'
     package: '@azure/arm-iothub'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +548,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+          type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +561,7 @@ methods:
   - name: >-
       map<U>((value: EndpointHealthData, index: number, array:
       EndpointHealthData[]) => U, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.map'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.map'
     package: '@azure/arm-iothub'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +591,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.pop'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.pop'
     package: '@azure/arm-iothub'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +600,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" /> |
+          undefined
         description: ''
   - name: 'push(EndpointHealthData[])'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.push'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.push'
     package: '@azure/arm-iothub'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +615,7 @@ methods:
       content: 'function push(items: EndpointHealthData[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+          type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
           description: |
             New elements of the Array.
       return:
@@ -575,7 +625,7 @@ methods:
       reduce((previousValue: EndpointHealthData, currentValue:
       EndpointHealthData, currentIndex: number, array: EndpointHealthData[]) =>
       EndpointHealthData)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reduce'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reduce'
     package: '@azure/arm-iothub'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +650,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+        type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
         description: ''
   - name: >-
       reduce((previousValue: EndpointHealthData, currentValue:
       EndpointHealthData, currentIndex: number, array: EndpointHealthData[]) =>
       EndpointHealthData, EndpointHealthData)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reduce_1'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reduce_1'
     package: '@azure/arm-iothub'
     summary: ''
     remarks: ''
@@ -626,15 +676,15 @@ methods:
             EndpointHealthData[]) =&gt; EndpointHealthData
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+          type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+        type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: EndpointHealthData,
       currentIndex: number, array: EndpointHealthData[]) => U, U)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reduce_2'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reduce_2'
     package: '@azure/arm-iothub'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +720,7 @@ methods:
       reduceRight((previousValue: EndpointHealthData, currentValue:
       EndpointHealthData, currentIndex: number, array: EndpointHealthData[]) =>
       EndpointHealthData)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reduceRight'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reduceRight'
     package: '@azure/arm-iothub'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +746,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+        type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
         description: ''
   - name: >-
       reduceRight((previousValue: EndpointHealthData, currentValue:
       EndpointHealthData, currentIndex: number, array: EndpointHealthData[]) =>
       EndpointHealthData, EndpointHealthData)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reduceRight_1
     package: '@azure/arm-iothub'
     summary: ''
     remarks: ''
@@ -722,15 +773,16 @@ methods:
             EndpointHealthData[]) =&gt; EndpointHealthData
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+          type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" />
+        type: <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: EndpointHealthData,
       currentIndex: number, array: EndpointHealthData[]) => U, U)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reduceRight_2
     package: '@azure/arm-iothub'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +816,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.reverse'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.reverse'
     package: '@azure/arm-iothub'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +825,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.shift'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.shift'
     package: '@azure/arm-iothub'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +837,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-iothub.EndpointHealthData" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.slice'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.slice'
     package: '@azure/arm-iothub'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +856,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
   - name: >-
       some((value: EndpointHealthData, index: number, array:
       EndpointHealthData[]) => unknown, any)
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.some'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.some'
     package: '@azure/arm-iothub'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,28 +875,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: EndpointHealthData, index: number,
+        function some(predicate: (value: EndpointHealthData, index: number,
         array: EndpointHealthData[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: EndpointHealthData, index: number, array:
             EndpointHealthData[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: EndpointHealthData, b: EndpointHealthData) => number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.sort'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.sort'
     package: '@azure/arm-iothub'
     summary: Sorts an array.
     remarks: ''
@@ -857,14 +917,25 @@ methods:
             undefined | (a: EndpointHealthData, b: EndpointHealthData) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, EndpointHealthData[])'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.splice_1'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.splice_1'
     package: '@azure/arm-iothub'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -886,14 +957,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+          type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.splice'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.splice'
     package: '@azure/arm-iothub'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -914,10 +985,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+        type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.toLocaleString'
+    uid: >-
+      @azure/arm-iothub.models.index.d.EndpointHealthDataListResult.toLocaleString
     package: '@azure/arm-iothub'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -931,7 +1003,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.toString'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.toString'
     package: '@azure/arm-iothub'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -943,7 +1015,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(EndpointHealthData[])'
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.unshift'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.unshift'
     package: '@azure/arm-iothub'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -953,14 +1025,14 @@ methods:
       content: 'function unshift(items: EndpointHealthData[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-iothub.EndpointHealthData" />[]'
+          type: '<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-iothub.EndpointHealthDataListResult.values'
+    uid: '@azure/arm-iothub.models.index.d.EndpointHealthDataListResult.values'
     package: '@azure/arm-iothub'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -970,7 +1042,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-iothub.EndpointHealthData"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-iothub.EndpointHealthData" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-iothub.models.index.d.EndpointHealthDataListResult.[Symbol.iterator]
+    package: '@azure/arm-iothub'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-iothub.models.index.d.EndpointHealthDataListResult.[Symbol.unscopables]
+    package: '@azure/arm-iothub'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-iothub.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-iothub.models.index.d.EndpointHealthData" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DiskAccessList
-uid: '@azure/arm-compute.DiskAccessList'
+uid: '@azure/arm-compute.models.index.d.DiskAccessList'
 package: '@azure/arm-compute'
 summary: ''
 fullName: DiskAccessList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-compute.DiskAccessList.Array'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.Array'
     package: '@azure/arm-compute'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-compute.DiskAccessList.length'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.length'
     package: '@azure/arm-compute'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-compute.DiskAccessList.nextLink'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.nextLink'
     package: '@azure/arm-compute'
     summary: >-
       The uri to fetch the next page of disk access resources. Call ListNext()
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<DiskAccess>[])'
-    uid: '@azure/arm-compute.DiskAccessList.concat'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.concat'
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<DiskAccess>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-compute.DiskAccess" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-compute.models.index.d.DiskAccess" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-compute.DiskAccessList.concat_1'
+  - name: 'concat(DiskAccess | ConcatArray<DiskAccess>[])'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.concat_1'
     package: '@azure/arm-compute'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: DiskAccess | ConcatArray<DiskAccess>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-compute.models.index.d.DiskAccess" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-compute.models.index.d.DiskAccess" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.copyWithin'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.copyWithin'
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-compute.DiskAccessList.entries'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.entries'
     package: '@azure/arm-compute'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: DiskAccess, index: number, array: DiskAccess[]) => unknown,
       any)
-    uid: '@azure/arm-compute.DiskAccessList.every'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.every_1'
     package: '@azure/arm-compute'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: DiskAccess, index: number, array:
+        function every(predicate: (value: DiskAccess, index: number, array:
         DiskAccess[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DiskAccess, index: number, array: DiskAccess[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: DiskAccess, index: number, array: DiskAccess[]) => value,
+      any)
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.every'
+    package: '@azure/arm-compute'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: DiskAccess, index: number, array:
+        DiskAccess[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: DiskAccess, index: number, array: DiskAccess[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(DiskAccess, undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.fill'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.fill'
     package: '@azure/arm-compute'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-compute.DiskAccess" />
+          type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +253,7 @@ methods:
   - name: >-
       filter((value: DiskAccess, index: number, array: DiskAccess[]) => unknown,
       any)
-    uid: '@azure/arm-compute.DiskAccessList.filter_1'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.filter_1'
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: DiskAccess, index: number, array:
+        function filter(predicate: (value: DiskAccess, index: number, array:
         DiskAccess[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DiskAccess, index: number, array: DiskAccess[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
   - name: >-
       filter<S>((value: DiskAccess, index: number, array: DiskAccess[]) =>
-      boolean, any)
-    uid: '@azure/arm-compute.DiskAccessList.filter'
+      value, any)
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.filter'
     package: '@azure/arm-compute'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +295,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: DiskAccess, index: number, array:
-        DiskAccess[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: DiskAccess, index: number, array:
+        DiskAccess[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: DiskAccess, index: number, array: DiskAccess[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: DiskAccess, index: number, array: DiskAccess[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +315,7 @@ methods:
   - name: >-
       find((value: DiskAccess, index: number, obj: DiskAccess[]) => unknown,
       any)
-    uid: '@azure/arm-compute.DiskAccessList.find_1'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.find_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -291,12 +333,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.DiskAccess" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: DiskAccess, index: number, obj: DiskAccess[])
-      => boolean, any)
-    uid: '@azure/arm-compute.DiskAccessList.find'
+      => value, any)
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.find'
     package: '@azure/arm-compute'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +353,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: DiskAccess, index:
-        number, obj: DiskAccess[]) => boolean, thisArg?: any)
+        number, obj: DiskAccess[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: DiskAccess, index: number, obj: DiskAccess[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +381,7 @@ methods:
   - name: >-
       findIndex((value: DiskAccess, index: number, obj: DiskAccess[]) =>
       unknown, any)
-    uid: '@azure/arm-compute.DiskAccessList.findIndex'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.findIndex'
     package: '@azure/arm-compute'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +420,7 @@ methods:
   - name: >-
       forEach((value: DiskAccess, index: number, array: DiskAccess[]) => void,
       any)
-    uid: '@azure/arm-compute.DiskAccessList.forEach'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.forEach'
     package: '@azure/arm-compute'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -399,7 +443,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(DiskAccess, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.includes'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.includes'
     package: '@azure/arm-compute'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -413,7 +457,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.DiskAccess" />
+          type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -424,7 +468,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(DiskAccess, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.indexOf'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.indexOf'
     package: '@azure/arm-compute'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -436,7 +480,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.DiskAccess" />
+          type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -447,7 +491,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-compute.DiskAccessList.join'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.join'
     package: '@azure/arm-compute'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -468,7 +512,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-compute.DiskAccessList.keys'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.keys'
     package: '@azure/arm-compute'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -480,7 +524,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(DiskAccess, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.lastIndexOf'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.lastIndexOf'
     package: '@azure/arm-compute'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -492,7 +536,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-compute.DiskAccess" />
+          type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -503,7 +547,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: DiskAccess, index: number, array: DiskAccess[]) => U, any)'
-    uid: '@azure/arm-compute.DiskAccessList.map'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.map'
     package: '@azure/arm-compute'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -531,7 +575,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-compute.DiskAccessList.pop'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.pop'
     package: '@azure/arm-compute'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -540,10 +584,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.DiskAccess" /> |
+          undefined
         description: ''
   - name: 'push(DiskAccess[])'
-    uid: '@azure/arm-compute.DiskAccessList.push'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.push'
     package: '@azure/arm-compute'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -553,7 +599,7 @@ methods:
       content: 'function push(items: DiskAccess[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+          type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
           description: |
             New elements of the Array.
       return:
@@ -562,7 +608,7 @@ methods:
   - name: >-
       reduce((previousValue: DiskAccess, currentValue: DiskAccess, currentIndex:
       number, array: DiskAccess[]) => DiskAccess)
-    uid: '@azure/arm-compute.DiskAccessList.reduce'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reduce'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -585,12 +631,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" />
+        type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
         description: ''
   - name: >-
       reduce((previousValue: DiskAccess, currentValue: DiskAccess, currentIndex:
       number, array: DiskAccess[]) => DiskAccess, DiskAccess)
-    uid: '@azure/arm-compute.DiskAccessList.reduce_1'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reduce_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -608,15 +654,15 @@ methods:
             number, array: DiskAccess[]) =&gt; DiskAccess
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.DiskAccess" />
+          type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" />
+        type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: DiskAccess, currentIndex:
       number, array: DiskAccess[]) => U, U)
-    uid: '@azure/arm-compute.DiskAccessList.reduce_2'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reduce_2'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -651,7 +697,7 @@ methods:
   - name: >-
       reduceRight((previousValue: DiskAccess, currentValue: DiskAccess,
       currentIndex: number, array: DiskAccess[]) => DiskAccess)
-    uid: '@azure/arm-compute.DiskAccessList.reduceRight'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reduceRight'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -676,12 +722,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" />
+        type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
         description: ''
   - name: >-
       reduceRight((previousValue: DiskAccess, currentValue: DiskAccess,
       currentIndex: number, array: DiskAccess[]) => DiskAccess, DiskAccess)
-    uid: '@azure/arm-compute.DiskAccessList.reduceRight_1'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reduceRight_1'
     package: '@azure/arm-compute'
     summary: ''
     remarks: ''
@@ -699,15 +745,15 @@ methods:
             number, array: DiskAccess[]) =&gt; DiskAccess
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-compute.DiskAccess" />
+          type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" />
+        type: <xref uid="@azure/arm-compute.models.index.d.DiskAccess" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: DiskAccess, currentIndex:
       number, array: DiskAccess[]) => U, U)
-    uid: '@azure/arm-compute.DiskAccessList.reduceRight_2'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reduceRight_2'
     package: '@azure/arm-compute'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -741,7 +787,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-compute.DiskAccessList.reverse'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.reverse'
     package: '@azure/arm-compute'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -750,10 +796,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-compute.DiskAccessList.shift'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.shift'
     package: '@azure/arm-compute'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -762,10 +808,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-compute.DiskAccess" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-compute.models.index.d.DiskAccess" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.slice'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.slice'
     package: '@azure/arm-compute'
     summary: Returns a section of an array.
     remarks: ''
@@ -779,15 +827,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
   - name: >-
       some((value: DiskAccess, index: number, array: DiskAccess[]) => unknown,
       any)
-    uid: '@azure/arm-compute.DiskAccessList.some'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.some'
     package: '@azure/arm-compute'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -797,28 +846,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: DiskAccess, index: number, array:
+        function some(predicate: (value: DiskAccess, index: number, array:
         DiskAccess[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DiskAccess, index: number, array: DiskAccess[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: DiskAccess, b: DiskAccess) => number)'
-    uid: '@azure/arm-compute.DiskAccessList.sort'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.sort'
     package: '@azure/arm-compute'
     summary: Sorts an array.
     remarks: ''
@@ -832,14 +886,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: DiskAccess, b: DiskAccess) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, DiskAccess[])'
-    uid: '@azure/arm-compute.DiskAccessList.splice_1'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.splice_1'
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +924,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+          type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-compute.DiskAccessList.splice'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.splice'
     package: '@azure/arm-compute'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +952,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+        type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-compute.DiskAccessList.toLocaleString'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.toLocaleString'
     package: '@azure/arm-compute'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +969,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-compute.DiskAccessList.toString'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.toString'
     package: '@azure/arm-compute'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +981,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(DiskAccess[])'
-    uid: '@azure/arm-compute.DiskAccessList.unshift'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.unshift'
     package: '@azure/arm-compute'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +991,14 @@ methods:
       content: 'function unshift(items: DiskAccess[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-compute.DiskAccess" />[]'
+          type: '<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-compute.DiskAccessList.values'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.values'
     package: '@azure/arm-compute'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -942,6 +1007,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-compute.DiskAccess" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-compute.models.index.d.DiskAccess" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-compute.DiskAccess" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.[Symbol.iterator]'
+    package: '@azure/arm-compute'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-compute.models.index.d.DiskAccess" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-compute.models.index.d.DiskAccessList.[Symbol.unscopables]'
+    package: '@azure/arm-compute'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-compute.models.index.d.ComputeOperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-compute.models.index.d.DiskAccess" />&gt;

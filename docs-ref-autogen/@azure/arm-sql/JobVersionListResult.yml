@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: JobVersionListResult
-uid: '@azure/arm-sql.JobVersionListResult'
+uid: '@azure/arm-sql.models.index.d.JobVersionListResult'
 package: '@azure/arm-sql'
 summary: ''
 fullName: JobVersionListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-sql.JobVersionListResult.Array'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.Array'
     package: '@azure/arm-sql'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-sql.JobVersionListResult.length'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.length'
     package: '@azure/arm-sql'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-sql.JobVersionListResult.nextLink'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.nextLink'
     package: '@azure/arm-sql'
     summary: >-
       Link to retrieve next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<JobVersion>[])'
-    uid: '@azure/arm-sql.JobVersionListResult.concat'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.concat'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<JobVersion>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-sql.JobVersion" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-sql.models.index.d.JobVersion"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-sql.JobVersionListResult.concat_1'
+  - name: 'concat(JobVersion | ConcatArray<JobVersion>[])'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.concat_1'
     package: '@azure/arm-sql'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: JobVersion | ConcatArray<JobVersion>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-sql.models.index.d.JobVersion" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-sql.models.index.d.JobVersion"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.copyWithin'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.copyWithin'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-sql.JobVersionListResult.entries'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.entries'
     package: '@azure/arm-sql'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: JobVersion, index: number, array: JobVersion[]) => unknown,
       any)
-    uid: '@azure/arm-sql.JobVersionListResult.every'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.every_1'
     package: '@azure/arm-sql'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: JobVersion, index: number, array:
+        function every(predicate: (value: JobVersion, index: number, array:
         JobVersion[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobVersion, index: number, array: JobVersion[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: JobVersion, index: number, array: JobVersion[]) => value,
+      any)
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.every'
+    package: '@azure/arm-sql'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: JobVersion, index: number, array:
+        JobVersion[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: JobVersion, index: number, array: JobVersion[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(JobVersion, undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.fill'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.fill'
     package: '@azure/arm-sql'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-sql.JobVersion" />
+          type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +253,7 @@ methods:
   - name: >-
       filter((value: JobVersion, index: number, array: JobVersion[]) => unknown,
       any)
-    uid: '@azure/arm-sql.JobVersionListResult.filter_1'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.filter_1'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: JobVersion, index: number, array:
+        function filter(predicate: (value: JobVersion, index: number, array:
         JobVersion[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobVersion, index: number, array: JobVersion[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
   - name: >-
       filter<S>((value: JobVersion, index: number, array: JobVersion[]) =>
-      boolean, any)
-    uid: '@azure/arm-sql.JobVersionListResult.filter'
+      value, any)
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.filter'
     package: '@azure/arm-sql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +295,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: JobVersion, index: number, array:
-        JobVersion[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: JobVersion, index: number, array:
+        JobVersion[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: JobVersion, index: number, array: JobVersion[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: JobVersion, index: number, array: JobVersion[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +315,7 @@ methods:
   - name: >-
       find((value: JobVersion, index: number, obj: JobVersion[]) => unknown,
       any)
-    uid: '@azure/arm-sql.JobVersionListResult.find_1'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.find_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -291,12 +333,12 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: JobVersion, index: number, obj: JobVersion[])
-      => boolean, any)
-    uid: '@azure/arm-sql.JobVersionListResult.find'
+      => value, any)
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.find'
     package: '@azure/arm-sql'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +351,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: JobVersion, index:
-        number, obj: JobVersion[]) => boolean, thisArg?: any)
+        number, obj: JobVersion[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: JobVersion, index: number, obj: JobVersion[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +379,7 @@ methods:
   - name: >-
       findIndex((value: JobVersion, index: number, obj: JobVersion[]) =>
       unknown, any)
-    uid: '@azure/arm-sql.JobVersionListResult.findIndex'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.findIndex'
     package: '@azure/arm-sql'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -376,7 +418,7 @@ methods:
   - name: >-
       forEach((value: JobVersion, index: number, array: JobVersion[]) => void,
       any)
-    uid: '@azure/arm-sql.JobVersionListResult.forEach'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.forEach'
     package: '@azure/arm-sql'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -399,7 +441,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(JobVersion, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.includes'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.includes'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -413,7 +455,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.JobVersion" />
+          type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -424,7 +466,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(JobVersion, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.indexOf'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.indexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -436,7 +478,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.JobVersion" />
+          type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -447,7 +489,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-sql.JobVersionListResult.join'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.join'
     package: '@azure/arm-sql'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -468,7 +510,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-sql.JobVersionListResult.keys'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.keys'
     package: '@azure/arm-sql'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -480,7 +522,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(JobVersion, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.lastIndexOf'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.lastIndexOf'
     package: '@azure/arm-sql'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -492,7 +534,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-sql.JobVersion" />
+          type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -503,7 +545,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: JobVersion, index: number, array: JobVersion[]) => U, any)'
-    uid: '@azure/arm-sql.JobVersionListResult.map'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.map'
     package: '@azure/arm-sql'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -531,7 +573,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-sql.JobVersionListResult.pop'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.pop'
     package: '@azure/arm-sql'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -540,10 +582,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" /> | undefined
         description: ''
   - name: 'push(JobVersion[])'
-    uid: '@azure/arm-sql.JobVersionListResult.push'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.push'
     package: '@azure/arm-sql'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -553,7 +595,7 @@ methods:
       content: 'function push(items: JobVersion[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
           description: |
             New elements of the Array.
       return:
@@ -562,7 +604,7 @@ methods:
   - name: >-
       reduce((previousValue: JobVersion, currentValue: JobVersion, currentIndex:
       number, array: JobVersion[]) => JobVersion)
-    uid: '@azure/arm-sql.JobVersionListResult.reduce'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reduce'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -585,12 +627,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" />
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
         description: ''
   - name: >-
       reduce((previousValue: JobVersion, currentValue: JobVersion, currentIndex:
       number, array: JobVersion[]) => JobVersion, JobVersion)
-    uid: '@azure/arm-sql.JobVersionListResult.reduce_1'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reduce_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -608,15 +650,15 @@ methods:
             number, array: JobVersion[]) =&gt; JobVersion
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.JobVersion" />
+          type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" />
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: JobVersion, currentIndex:
       number, array: JobVersion[]) => U, U)
-    uid: '@azure/arm-sql.JobVersionListResult.reduce_2'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reduce_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -651,7 +693,7 @@ methods:
   - name: >-
       reduceRight((previousValue: JobVersion, currentValue: JobVersion,
       currentIndex: number, array: JobVersion[]) => JobVersion)
-    uid: '@azure/arm-sql.JobVersionListResult.reduceRight'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reduceRight'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -676,12 +718,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" />
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
         description: ''
   - name: >-
       reduceRight((previousValue: JobVersion, currentValue: JobVersion,
       currentIndex: number, array: JobVersion[]) => JobVersion, JobVersion)
-    uid: '@azure/arm-sql.JobVersionListResult.reduceRight_1'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reduceRight_1'
     package: '@azure/arm-sql'
     summary: ''
     remarks: ''
@@ -699,15 +741,15 @@ methods:
             number, array: JobVersion[]) =&gt; JobVersion
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-sql.JobVersion" />
+          type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" />
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: JobVersion, currentIndex:
       number, array: JobVersion[]) => U, U)
-    uid: '@azure/arm-sql.JobVersionListResult.reduceRight_2'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reduceRight_2'
     package: '@azure/arm-sql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -741,7 +783,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-sql.JobVersionListResult.reverse'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.reverse'
     package: '@azure/arm-sql'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -750,10 +792,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-sql.JobVersionListResult.shift'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.shift'
     package: '@azure/arm-sql'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -762,10 +804,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-sql.JobVersion" /> | undefined
+        type: <xref uid="@azure/arm-sql.models.index.d.JobVersion" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.slice'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.slice'
     package: '@azure/arm-sql'
     summary: Returns a section of an array.
     remarks: ''
@@ -779,15 +821,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
   - name: >-
       some((value: JobVersion, index: number, array: JobVersion[]) => unknown,
       any)
-    uid: '@azure/arm-sql.JobVersionListResult.some'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.some'
     package: '@azure/arm-sql'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -797,28 +840,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: JobVersion, index: number, array:
+        function some(predicate: (value: JobVersion, index: number, array:
         JobVersion[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: JobVersion, index: number, array: JobVersion[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: JobVersion, b: JobVersion) => number)'
-    uid: '@azure/arm-sql.JobVersionListResult.sort'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.sort'
     package: '@azure/arm-sql'
     summary: Sorts an array.
     remarks: ''
@@ -832,14 +880,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: JobVersion, b: JobVersion) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, JobVersion[])'
-    uid: '@azure/arm-sql.JobVersionListResult.splice_1'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.splice_1'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +918,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-sql.JobVersionListResult.splice'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.splice'
     package: '@azure/arm-sql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +946,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+        type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-sql.JobVersionListResult.toLocaleString'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.toLocaleString'
     package: '@azure/arm-sql'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +963,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-sql.JobVersionListResult.toString'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.toString'
     package: '@azure/arm-sql'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +975,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(JobVersion[])'
-    uid: '@azure/arm-sql.JobVersionListResult.unshift'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.unshift'
     package: '@azure/arm-sql'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +985,14 @@ methods:
       content: 'function unshift(items: JobVersion[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-sql.JobVersion" />[]'
+          type: '<xref uid="@azure/arm-sql.models.index.d.JobVersion" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-sql.JobVersionListResult.values'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.values'
     package: '@azure/arm-sql'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -942,6 +1001,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-sql.JobVersion" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.JobVersion" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-sql.JobVersion" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.[Symbol.iterator]'
+    package: '@azure/arm-sql'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-sql.models.index.d.JobVersion" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-sql.models.index.d.JobVersionListResult.[Symbol.unscopables]'
+    package: '@azure/arm-sql'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-sql.models.index.d.RecoverableDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-sql.models.index.d.JobVersion" />&gt;

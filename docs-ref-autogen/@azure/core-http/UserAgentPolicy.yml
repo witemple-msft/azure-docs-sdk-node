@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: UserAgentPolicy
-uid: '@azure/core-http.UserAgentPolicy'
+uid: '@azure/core-http.policies.userAgentPolicy.d.UserAgentPolicy'
 package: '@azure/core-http'
 summary: ''
 fullName: UserAgentPolicy
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'UserAgentPolicy(RequestPolicy, RequestPolicyOptions, string, string)'
-    uid: '@azure/core-http.UserAgentPolicy.constructor'
+    uid: '@azure/core-http.policies.userAgentPolicy.d.UserAgentPolicy.constructor'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -22,10 +22,15 @@ constructors:
         RequestPolicyOptions, headerKey: string, headerValue: string)
       parameters:
         - id: _nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: _options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: headerKey
           type: string
@@ -35,7 +40,8 @@ constructors:
           description: ''
 methods:
   - name: addUserAgentHeader(WebResourceLike)
-    uid: '@azure/core-http.UserAgentPolicy.addUserAgentHeader'
+    uid: >-
+      @azure/core-http.policies.userAgentPolicy.d.UserAgentPolicy.addUserAgentHeader
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -45,10 +51,10 @@ methods:
       content: 'function addUserAgentHeader(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.UserAgentPolicy.log'
+    uid: '@azure/core-http.policies.userAgentPolicy.d.UserAgentPolicy.log'
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -63,14 +69,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.UserAgentPolicy.sendRequest'
+    uid: '@azure/core-http.policies.userAgentPolicy.d.UserAgentPolicy.sendRequest'
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -80,13 +89,16 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.UserAgentPolicy.shouldLog'
+    uid: '@azure/core-http.policies.userAgentPolicy.d.UserAgentPolicy.shouldLog'
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -96,9 +108,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

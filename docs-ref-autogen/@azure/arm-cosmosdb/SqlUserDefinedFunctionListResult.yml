@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SqlUserDefinedFunctionListResult
-uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult'
+uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult'
 package: '@azure/arm-cosmosdb'
 summary: ''
 fullName: SqlUserDefinedFunctionListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.Array'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.Array'
     package: '@azure/arm-cosmosdb'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.length'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.length'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SqlUserDefinedFunctionGetResults>[])'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.concat'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.concat'
     package: '@azure/arm-cosmosdb'
     summary: Combines two or more arrays.
     remarks: ''
@@ -51,31 +51,49 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />&gt;[]
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.concat_1'
+  - name: >-
+      concat(SqlUserDefinedFunctionGetResults |
+      ConcatArray<SqlUserDefinedFunctionGetResults>[])
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.concat_1
     package: '@azure/arm-cosmosdb'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SqlUserDefinedFunctionGetResults |
+        ConcatArray<SqlUserDefinedFunctionGetResults>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.copyWithin'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.copyWithin
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +131,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.entries'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.entries
     package: '@azure/arm-cosmosdb'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +146,8 @@ methods:
   - name: >-
       every((value: SqlUserDefinedFunctionGetResults, index: number, array:
       SqlUserDefinedFunctionGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.every'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.every_1
     package: '@azure/arm-cosmosdb'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,31 +155,75 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SqlUserDefinedFunctionGetResults,
+        function every(predicate: (value: SqlUserDefinedFunctionGetResults,
         index: number, array: SqlUserDefinedFunctionGetResults[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlUserDefinedFunctionGetResults, index: number, array:
             SqlUserDefinedFunctionGetResults[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
+      every<S>((value: SqlUserDefinedFunctionGetResults, index: number, array:
+      SqlUserDefinedFunctionGetResults[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.every'
+    package: '@azure/arm-cosmosdb'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SqlUserDefinedFunctionGetResults,
+        index: number, array: SqlUserDefinedFunctionGetResults[]) => value,
+        thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SqlUserDefinedFunctionGetResults, index: number, array:
+            SqlUserDefinedFunctionGetResults[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
+  - name: >-
       fill(SqlUserDefinedFunctionGetResults, undefined | number, undefined |
       number)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.fill'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.fill'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -173,7 +237,10 @@ methods:
         | number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -195,7 +262,8 @@ methods:
   - name: >-
       filter((value: SqlUserDefinedFunctionGetResults, index: number, array:
       SqlUserDefinedFunctionGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.filter_1'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.filter_1
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -205,31 +273,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SqlUserDefinedFunctionGetResults,
+        function filter(predicate: (value: SqlUserDefinedFunctionGetResults,
         index: number, array: SqlUserDefinedFunctionGetResults[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlUserDefinedFunctionGetResults, index: number, array:
             SqlUserDefinedFunctionGetResults[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: SqlUserDefinedFunctionGetResults, index: number, array:
-      SqlUserDefinedFunctionGetResults[]) => boolean, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.filter'
+      SqlUserDefinedFunctionGetResults[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.filter'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -239,22 +309,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SqlUserDefinedFunctionGetResults,
-        index: number, array: SqlUserDefinedFunctionGetResults[]) => boolean,
+        function filter<S>(predicate: (value: SqlUserDefinedFunctionGetResults,
+        index: number, array: SqlUserDefinedFunctionGetResults[]) => value,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlUserDefinedFunctionGetResults, index: number, array:
-            SqlUserDefinedFunctionGetResults[]) =&gt; boolean
+            SqlUserDefinedFunctionGetResults[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -263,7 +332,7 @@ methods:
   - name: >-
       find((value: SqlUserDefinedFunctionGetResults, index: number, obj:
       SqlUserDefinedFunctionGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.find_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.find_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -285,13 +354,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" /> |
-          undefined
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SqlUserDefinedFunctionGetResults, index:
-      number, obj: SqlUserDefinedFunctionGetResults[]) => boolean, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.find'
+      number, obj: SqlUserDefinedFunctionGetResults[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.find'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -305,12 +375,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         SqlUserDefinedFunctionGetResults, index: number, obj:
-        SqlUserDefinedFunctionGetResults[]) => boolean, thisArg?: any)
+        SqlUserDefinedFunctionGetResults[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SqlUserDefinedFunctionGetResults, index: number,
-            obj: SqlUserDefinedFunctionGetResults[]) =&gt; boolean
+            obj: SqlUserDefinedFunctionGetResults[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -333,7 +403,8 @@ methods:
   - name: >-
       findIndex((value: SqlUserDefinedFunctionGetResults, index: number, obj:
       SqlUserDefinedFunctionGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.findIndex'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.findIndex
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -375,7 +446,8 @@ methods:
   - name: >-
       forEach((value: SqlUserDefinedFunctionGetResults, index: number, array:
       SqlUserDefinedFunctionGetResults[]) => void, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.forEach'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.forEach
     package: '@azure/arm-cosmosdb'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -401,7 +473,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SqlUserDefinedFunctionGetResults, undefined | number)'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.includes'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.includes
     package: '@azure/arm-cosmosdb'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -415,7 +488,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -426,7 +502,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SqlUserDefinedFunctionGetResults, undefined | number)'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.indexOf'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.indexOf
     package: '@azure/arm-cosmosdb'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -438,7 +515,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -449,7 +529,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.join'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.join'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -470,7 +550,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.keys'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.keys'
     package: '@azure/arm-cosmosdb'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -482,7 +562,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SqlUserDefinedFunctionGetResults, undefined | number)'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.lastIndexOf
     package: '@azure/arm-cosmosdb'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -494,7 +575,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -507,7 +591,7 @@ methods:
   - name: >-
       map<U>((value: SqlUserDefinedFunctionGetResults, index: number, array:
       SqlUserDefinedFunctionGetResults[]) => U, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.map'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.map'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -538,7 +622,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.pop'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.pop'
     package: '@azure/arm-cosmosdb'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,11 +632,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" /> |
-          undefined
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          /> | undefined
         description: ''
   - name: 'push(SqlUserDefinedFunctionGetResults[])'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.push'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.push'
     package: '@azure/arm-cosmosdb'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -563,7 +648,8 @@ methods:
       parameters:
         - id: items
           type: >-
-            <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults"
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
             />[]
           description: |
             New elements of the Array.
@@ -574,7 +660,7 @@ methods:
       reduce((previousValue: SqlUserDefinedFunctionGetResults, currentValue:
       SqlUserDefinedFunctionGetResults, currentIndex: number, array:
       SqlUserDefinedFunctionGetResults[]) => SqlUserDefinedFunctionGetResults)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reduce'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reduce'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -601,14 +687,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />
         description: ''
   - name: >-
       reduce((previousValue: SqlUserDefinedFunctionGetResults, currentValue:
       SqlUserDefinedFunctionGetResults, currentIndex: number, array:
       SqlUserDefinedFunctionGetResults[]) => SqlUserDefinedFunctionGetResults,
       SqlUserDefinedFunctionGetResults)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reduce_1'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reduce_1
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -630,16 +720,23 @@ methods:
             SqlUserDefinedFunctionGetResults
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue:
       SqlUserDefinedFunctionGetResults, currentIndex: number, array:
       SqlUserDefinedFunctionGetResults[]) => U, U)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reduce_2'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reduce_2
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -677,7 +774,8 @@ methods:
       currentValue: SqlUserDefinedFunctionGetResults, currentIndex: number,
       array: SqlUserDefinedFunctionGetResults[]) =>
       SqlUserDefinedFunctionGetResults)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reduceRight'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reduceRight
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -705,14 +803,18 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: SqlUserDefinedFunctionGetResults,
       currentValue: SqlUserDefinedFunctionGetResults, currentIndex: number,
       array: SqlUserDefinedFunctionGetResults[]) =>
       SqlUserDefinedFunctionGetResults, SqlUserDefinedFunctionGetResults)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reduceRight_1
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -734,16 +836,23 @@ methods:
             SqlUserDefinedFunctionGetResults
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       SqlUserDefinedFunctionGetResults, currentIndex: number, array:
       SqlUserDefinedFunctionGetResults[]) => U, U)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reduceRight_2
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -778,7 +887,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.reverse'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.reverse
     package: '@azure/arm-cosmosdb'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -787,10 +897,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.shift'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.shift'
     package: '@azure/arm-cosmosdb'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -800,11 +913,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" /> |
-          undefined
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.slice'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.slice'
     package: '@azure/arm-cosmosdb'
     summary: Returns a section of an array.
     remarks: ''
@@ -818,15 +932,19 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
   - name: >-
       some((value: SqlUserDefinedFunctionGetResults, index: number, array:
       SqlUserDefinedFunctionGetResults[]) => unknown, any)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.some'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.some'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -836,31 +954,36 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SqlUserDefinedFunctionGetResults,
+        function some(predicate: (value: SqlUserDefinedFunctionGetResults,
         index: number, array: SqlUserDefinedFunctionGetResults[]) => unknown,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlUserDefinedFunctionGetResults, index: number, array:
             SqlUserDefinedFunctionGetResults[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: SqlUserDefinedFunctionGetResults, b:
       SqlUserDefinedFunctionGetResults) => number)
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.sort'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.sort'
     package: '@azure/arm-cosmosdb'
     summary: Sorts an array.
     remarks: ''
@@ -877,14 +1000,26 @@ methods:
             undefined | (a: SqlUserDefinedFunctionGetResults, b:
             SqlUserDefinedFunctionGetResults) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SqlUserDefinedFunctionGetResults[])'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.splice_1'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.splice_1
     package: '@azure/arm-cosmosdb'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -907,15 +1042,19 @@ methods:
           description: The number of elements to remove.
         - id: items
           type: >-
-            <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults"
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
             />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.splice'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.splice'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -936,10 +1075,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.toLocaleString'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.toLocaleString
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -953,7 +1096,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.toString'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.toString
     package: '@azure/arm-cosmosdb'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -965,7 +1109,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SqlUserDefinedFunctionGetResults[])'
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.unshift'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.unshift
     package: '@azure/arm-cosmosdb'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -976,7 +1121,8 @@ methods:
       parameters:
         - id: items
           type: >-
-            <xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults"
+            <xref
+            uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
             />[]
           description: |
             Elements to insert at the start of the Array.
@@ -984,7 +1130,7 @@ methods:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-cosmosdb.SqlUserDefinedFunctionListResult.values'
+    uid: '@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.values'
     package: '@azure/arm-cosmosdb'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -995,8 +1141,43 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults" />&gt;
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />&gt;
+        description: ''
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.[Symbol.iterator]
+    package: '@azure/arm-cosmosdb'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionListResult.[Symbol.unscopables]
+    package: '@azure/arm-cosmosdb'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
         description: ''
 extends: >-
-  Array&lt;<xref uid="@azure/arm-cosmosdb.SqlUserDefinedFunctionGetResults"
+  <xref
+  uid="@azure/arm-cosmosdb.models.index.d.DatabaseAccountsListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-cosmosdb.models.index.d.SqlUserDefinedFunctionGetResults"
   />&gt;

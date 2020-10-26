@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SnapshotCollection
-uid: '@azure/arm-appservice.SnapshotCollection'
+uid: '@azure/arm-appservice.models.index.d.SnapshotCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: SnapshotCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.SnapshotCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.SnapshotCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.SnapshotCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Snapshot>[])'
-    uid: '@azure/arm-appservice.SnapshotCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<Snapshot>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-appservice.Snapshot" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.Snapshot" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.SnapshotCollection.concat_1'
+  - name: 'concat(Snapshot | ConcatArray<Snapshot>[])'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Snapshot | ConcatArray<Snapshot>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.Snapshot" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.Snapshot" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.SnapshotCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Snapshot, index: number, array: Snapshot[]) => unknown, any)'
-    uid: '@azure/arm-appservice.SnapshotCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,26 +153,67 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Snapshot, index: number, array:
+        function every(predicate: (value: Snapshot, index: number, array:
         Snapshot[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Snapshot, index: number, array: Snapshot[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Snapshot, index: number, array: Snapshot[]) => value,
+      any)
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Snapshot, index: number, array:
+        Snapshot[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Snapshot, index: number, array: Snapshot[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Snapshot, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -181,7 +227,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.Snapshot" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -203,7 +249,7 @@ methods:
   - name: >-
       filter((value: Snapshot, index: number, array: Snapshot[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.SnapshotCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -213,28 +259,27 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Snapshot, index: number, array:
+        function filter(predicate: (value: Snapshot, index: number, array:
         Snapshot[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Snapshot, index: number, array: Snapshot[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
   - name: >-
-      filter<S>((value: Snapshot, index: number, array: Snapshot[]) => boolean,
+      filter<S>((value: Snapshot, index: number, array: Snapshot[]) => value,
       any)
-    uid: '@azure/arm-appservice.SnapshotCollection.filter'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -244,26 +289,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Snapshot, index: number, array:
-        Snapshot[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Snapshot, index: number, array:
+        Snapshot[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Snapshot, index: number, array: Snapshot[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Snapshot, index: number, array: Snapshot[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Snapshot, index: number, obj: Snapshot[]) => unknown, any)'
-    uid: '@azure/arm-appservice.SnapshotCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -281,12 +325,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Snapshot" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Snapshot, index: number, obj: Snapshot[]) =>
-      boolean, any)
-    uid: '@azure/arm-appservice.SnapshotCollection.find'
+      value, any)
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -299,12 +345,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Snapshot, index: number,
-        obj: Snapshot[]) => boolean, thisArg?: any)
+        obj: Snapshot[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Snapshot, index: number, obj: Snapshot[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -327,7 +373,7 @@ methods:
   - name: >-
       findIndex((value: Snapshot, index: number, obj: Snapshot[]) => unknown,
       any)
-    uid: '@azure/arm-appservice.SnapshotCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -364,7 +410,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Snapshot, index: number, array: Snapshot[]) => void, any)'
-    uid: '@azure/arm-appservice.SnapshotCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -387,7 +433,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Snapshot, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -401,7 +447,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Snapshot" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -412,7 +458,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Snapshot, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -424,7 +470,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Snapshot" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -435,7 +481,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.SnapshotCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -456,7 +502,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.SnapshotCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -468,7 +514,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Snapshot, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -480,7 +526,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.Snapshot" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -491,7 +537,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Snapshot, index: number, array: Snapshot[]) => U, any)'
-    uid: '@azure/arm-appservice.SnapshotCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -519,7 +565,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.SnapshotCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -528,10 +574,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Snapshot" /> |
+          undefined
         description: ''
   - name: 'push(Snapshot[])'
-    uid: '@azure/arm-appservice.SnapshotCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -541,7 +589,7 @@ methods:
       content: 'function push(items: Snapshot[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
           description: |
             New elements of the Array.
       return:
@@ -550,7 +598,7 @@ methods:
   - name: >-
       reduce((previousValue: Snapshot, currentValue: Snapshot, currentIndex:
       number, array: Snapshot[]) => Snapshot)
-    uid: '@azure/arm-appservice.SnapshotCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -573,12 +621,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
         description: ''
   - name: >-
       reduce((previousValue: Snapshot, currentValue: Snapshot, currentIndex:
       number, array: Snapshot[]) => Snapshot, Snapshot)
-    uid: '@azure/arm-appservice.SnapshotCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -596,15 +644,15 @@ methods:
             number, array: Snapshot[]) =&gt; Snapshot
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.Snapshot" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Snapshot, currentIndex: number,
       array: Snapshot[]) => U, U)
-    uid: '@azure/arm-appservice.SnapshotCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -639,7 +687,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Snapshot, currentValue: Snapshot,
       currentIndex: number, array: Snapshot[]) => Snapshot)
-    uid: '@azure/arm-appservice.SnapshotCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -663,12 +711,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
         description: ''
   - name: >-
       reduceRight((previousValue: Snapshot, currentValue: Snapshot,
       currentIndex: number, array: Snapshot[]) => Snapshot, Snapshot)
-    uid: '@azure/arm-appservice.SnapshotCollection.reduceRight_1'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reduceRight_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -686,15 +734,15 @@ methods:
             number, array: Snapshot[]) =&gt; Snapshot
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.Snapshot" />
+          type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.Snapshot" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Snapshot, currentIndex:
       number, array: Snapshot[]) => U, U)
-    uid: '@azure/arm-appservice.SnapshotCollection.reduceRight_2'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reduceRight_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -728,7 +776,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.SnapshotCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -737,10 +785,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.SnapshotCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -749,10 +797,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.Snapshot" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.Snapshot" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -766,13 +816,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
   - name: 'some((value: Snapshot, index: number, array: Snapshot[]) => unknown, any)'
-    uid: '@azure/arm-appservice.SnapshotCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -782,26 +833,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Snapshot, index: number, array:
+        function some(predicate: (value: Snapshot, index: number, array:
         Snapshot[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Snapshot, index: number, array: Snapshot[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Snapshot, b: Snapshot) => number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -815,14 +871,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Snapshot, b: Snapshot) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Snapshot[])'
-    uid: '@azure/arm-appservice.SnapshotCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -842,14 +909,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.SnapshotCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -870,10 +937,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+        type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.SnapshotCollection.toLocaleString'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.toLocaleString'
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -887,7 +954,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.SnapshotCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -899,7 +966,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Snapshot[])'
-    uid: '@azure/arm-appservice.SnapshotCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -909,14 +976,14 @@ methods:
       content: 'function unshift(items: Snapshot[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.Snapshot" />[]'
+          type: '<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.SnapshotCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -925,6 +992,40 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-appservice.Snapshot" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.Snapshot" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.Snapshot" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-appservice.models.index.d.SnapshotCollection.[Symbol.iterator]'
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.Snapshot" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.SnapshotCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.Snapshot" />&gt;

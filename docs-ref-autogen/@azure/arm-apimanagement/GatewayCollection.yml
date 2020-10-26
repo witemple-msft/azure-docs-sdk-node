@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: GatewayCollection
-uid: '@azure/arm-apimanagement.GatewayCollection'
+uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection'
 package: '@azure/arm-apimanagement'
 summary: ''
 fullName: GatewayCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-apimanagement.GatewayCollection.Array'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.Array'
     package: '@azure/arm-apimanagement'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-apimanagement.GatewayCollection.length'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.length'
     package: '@azure/arm-apimanagement'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-apimanagement.GatewayCollection.nextLink'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.nextLink'
     package: '@azure/arm-apimanagement'
     summary: >-
       Next page link if any.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<GatewayContract>[])'
-    uid: '@azure/arm-apimanagement.GatewayCollection.concat'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.concat'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +67,41 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-apimanagement.GatewayContract"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-apimanagement.GatewayCollection.concat_1'
+  - name: 'concat(GatewayContract | ConcatArray<GatewayContract>[])'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.concat_1'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: GatewayContract | ConcatArray<GatewayContract>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.copyWithin'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.copyWithin'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +139,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-apimanagement.GatewayCollection.entries'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.entries'
     package: '@azure/arm-apimanagement'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +153,7 @@ methods:
   - name: >-
       every((value: GatewayContract, index: number, array: GatewayContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.every'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.every_1'
     package: '@azure/arm-apimanagement'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +161,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: GatewayContract, index: number,
-        array: GatewayContract[]) => unknown, thisArg?: any)
+        function every(predicate: (value: GatewayContract, index: number, array:
+        GatewayContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GatewayContract, index: number, array: GatewayContract[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: GatewayContract, index: number, array: GatewayContract[])
+      => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.every'
+    package: '@azure/arm-apimanagement'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: GatewayContract, index: number,
+        array: GatewayContract[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: GatewayContract, index: number, array: GatewayContract[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(GatewayContract, undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.fill'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.fill'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +239,9 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +263,7 @@ methods:
   - name: >-
       filter((value: GatewayContract, index: number, array: GatewayContract[])
       => unknown, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.filter_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.filter_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +273,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: GatewayContract, index: number,
+        function filter(predicate: (value: GatewayContract, index: number,
         array: GatewayContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GatewayContract, index: number, array: GatewayContract[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: GatewayContract, index: number, array:
-      GatewayContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.filter'
+      GatewayContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.filter'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +307,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: GatewayContract, index: number,
-        array: GatewayContract[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: GatewayContract, index: number,
+        array: GatewayContract[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GatewayContract, index: number, array: GatewayContract[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +329,7 @@ methods:
   - name: >-
       find((value: GatewayContract, index: number, obj: GatewayContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.find_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.find_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -295,12 +349,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: GatewayContract, index: number, obj:
-      GatewayContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.find'
+      GatewayContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.find'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +369,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: GatewayContract, index:
-        number, obj: GatewayContract[]) => boolean, thisArg?: any)
+        number, obj: GatewayContract[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: GatewayContract, index: number, obj:
-            GatewayContract[]) =&gt; boolean
+            GatewayContract[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +397,7 @@ methods:
   - name: >-
       findIndex((value: GatewayContract, index: number, obj: GatewayContract[])
       => unknown, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.findIndex'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.findIndex'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +438,7 @@ methods:
   - name: >-
       forEach((value: GatewayContract, index: number, array: GatewayContract[])
       => void, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.forEach'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.forEach'
     package: '@azure/arm-apimanagement'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +463,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(GatewayContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.includes'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.includes'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +477,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +490,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(GatewayContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.indexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.indexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +502,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +515,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-apimanagement.GatewayCollection.join'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.join'
     package: '@azure/arm-apimanagement'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +536,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-apimanagement.GatewayCollection.keys'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.keys'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +548,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(GatewayContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.lastIndexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.lastIndexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +560,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +575,7 @@ methods:
   - name: >-
       map<U>((value: GatewayContract, index: number, array: GatewayContract[])
       => U, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.map'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.map'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +605,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-apimanagement.GatewayCollection.pop'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.pop'
     package: '@azure/arm-apimanagement'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +614,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
+          | undefined
         description: ''
   - name: 'push(GatewayContract[])'
-    uid: '@azure/arm-apimanagement.GatewayCollection.push'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.push'
     package: '@azure/arm-apimanagement'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +629,9 @@ methods:
       content: 'function push(items: GatewayContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -574,7 +640,7 @@ methods:
   - name: >-
       reduce((previousValue: GatewayContract, currentValue: GatewayContract,
       currentIndex: number, array: GatewayContract[]) => GatewayContract)
-    uid: '@azure/arm-apimanagement.GatewayCollection.reduce'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reduce'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -599,13 +665,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
         description: ''
   - name: >-
       reduce((previousValue: GatewayContract, currentValue: GatewayContract,
       currentIndex: number, array: GatewayContract[]) => GatewayContract,
       GatewayContract)
-    uid: '@azure/arm-apimanagement.GatewayCollection.reduce_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reduce_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -624,15 +690,17 @@ methods:
             GatewayContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: GatewayContract, currentIndex:
       number, array: GatewayContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.GatewayCollection.reduce_2'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reduce_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -668,7 +736,7 @@ methods:
       reduceRight((previousValue: GatewayContract, currentValue:
       GatewayContract, currentIndex: number, array: GatewayContract[]) =>
       GatewayContract)
-    uid: '@azure/arm-apimanagement.GatewayCollection.reduceRight'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reduceRight'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -694,13 +762,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
         description: ''
   - name: >-
       reduceRight((previousValue: GatewayContract, currentValue:
       GatewayContract, currentIndex: number, array: GatewayContract[]) =>
       GatewayContract, GatewayContract)
-    uid: '@azure/arm-apimanagement.GatewayCollection.reduceRight_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reduceRight_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -719,15 +787,17 @@ methods:
             GatewayContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: GatewayContract,
       currentIndex: number, array: GatewayContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.GatewayCollection.reduceRight_2'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reduceRight_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -761,7 +831,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-apimanagement.GatewayCollection.reverse'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.reverse'
     package: '@azure/arm-apimanagement'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -770,10 +840,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-apimanagement.GatewayCollection.shift'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.shift'
     package: '@azure/arm-apimanagement'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -782,10 +854,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-apimanagement.GatewayContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.slice'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.slice'
     package: '@azure/arm-apimanagement'
     summary: Returns a section of an array.
     remarks: ''
@@ -799,15 +873,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
   - name: >-
       some((value: GatewayContract, index: number, array: GatewayContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GatewayCollection.some'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.some'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -817,28 +894,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: GatewayContract, index: number, array:
+        function some(predicate: (value: GatewayContract, index: number, array:
         GatewayContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GatewayContract, index: number, array: GatewayContract[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: GatewayContract, b: GatewayContract) => number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.sort'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.sort'
     package: '@azure/arm-apimanagement'
     summary: Sorts an array.
     remarks: ''
@@ -852,14 +934,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: GatewayContract, b: GatewayContract) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, GatewayContract[])'
-    uid: '@azure/arm-apimanagement.GatewayCollection.splice_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.splice_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -881,14 +974,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GatewayCollection.splice'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.splice'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -909,10 +1006,12 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-apimanagement.GatewayCollection.toLocaleString'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.toLocaleString'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -926,7 +1025,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-apimanagement.GatewayCollection.toString'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.toString'
     package: '@azure/arm-apimanagement'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -938,7 +1037,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(GatewayContract[])'
-    uid: '@azure/arm-apimanagement.GatewayCollection.unshift'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.unshift'
     package: '@azure/arm-apimanagement'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -948,14 +1047,16 @@ methods:
       content: 'function unshift(items: GatewayContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.GatewayContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-apimanagement.GatewayCollection.values'
+    uid: '@azure/arm-apimanagement.models.index.d.GatewayCollection.values'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -966,6 +1067,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-apimanagement.GatewayContract" />&gt;
+          uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-apimanagement.GatewayContract" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.GatewayCollection.[Symbol.iterator]
+    package: '@azure/arm-apimanagement'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.GatewayContract" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.GatewayCollection.[Symbol.unscopables]
+    package: '@azure/arm-apimanagement'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-apimanagement.models.index.d.ApiCollection.Array"
+  />&lt;<xref uid="@azure/arm-apimanagement.models.index.d.GatewayContract"
+  />&gt;

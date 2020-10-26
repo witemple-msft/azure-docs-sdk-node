@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BillingAccountListResult
-uid: '@azure/arm-billing.BillingAccountListResult'
+uid: '@azure/arm-billing.models.index.d.BillingAccountListResult'
 package: '@azure/arm-billing'
 summary: ''
 fullName: BillingAccountListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-billing.BillingAccountListResult.Array'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.Array'
     package: '@azure/arm-billing'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-billing.BillingAccountListResult.length'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.length'
     package: '@azure/arm-billing'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-billing.BillingAccountListResult.nextLink'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.nextLink'
     package: '@azure/arm-billing'
     summary: >-
       The link (url) to the next page of results.
@@ -55,8 +55,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(BillingAccount | ConcatArray<BillingAccount>[])'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.concat_1'
+    package: '@azure/arm-billing'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: BillingAccount | ConcatArray<BillingAccount>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-billing.models.index.d.BillingAccount" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-billing.models.index.d.BillingAccount" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
+        description: ''
   - name: 'concat(ConcatArray<BillingAccount>[])'
-    uid: '@azure/arm-billing.BillingAccountListResult.concat'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.concat'
     package: '@azure/arm-billing'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +87,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-billing.BillingAccount"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-billing.models.index.d.BillingAccount" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-billing.BillingAccountListResult.concat_1'
-    package: '@azure/arm-billing'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.copyWithin'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.copyWithin'
     package: '@azure/arm-billing'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-billing.BillingAccountListResult.entries'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.entries'
     package: '@azure/arm-billing'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +147,7 @@ methods:
   - name: >-
       every((value: BillingAccount, index: number, array: BillingAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.every'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.every_1'
     package: '@azure/arm-billing'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +155,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: BillingAccount, index: number, array:
+        function every(predicate: (value: BillingAccount, index: number, array:
         BillingAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BillingAccount, index: number, array: BillingAccount[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: BillingAccount, index: number, array: BillingAccount[])
+      => value, any)
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.every'
+    package: '@azure/arm-billing'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: BillingAccount, index: number,
+        array: BillingAccount[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: BillingAccount, index: number, array: BillingAccount[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(BillingAccount, undefined | number, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.fill'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.fill'
     package: '@azure/arm-billing'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +233,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-billing.BillingAccount" />
+          type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +255,7 @@ methods:
   - name: >-
       filter((value: BillingAccount, index: number, array: BillingAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.filter_1'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.filter_1'
     package: '@azure/arm-billing'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +265,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: BillingAccount, index: number,
-        array: BillingAccount[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: BillingAccount, index: number, array:
+        BillingAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BillingAccount, index: number, array: BillingAccount[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
         description: ''
   - name: >-
       filter<S>((value: BillingAccount, index: number, array: BillingAccount[])
-      => boolean, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.filter'
+      => value, any)
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.filter'
     package: '@azure/arm-billing'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +297,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: BillingAccount, index: number,
-        array: BillingAccount[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: BillingAccount, index: number,
+        array: BillingAccount[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BillingAccount, index: number, array: BillingAccount[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +319,7 @@ methods:
   - name: >-
       find((value: BillingAccount, index: number, obj: BillingAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.find_1'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.find_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -295,12 +339,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-billing.models.index.d.BillingAccount" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: BillingAccount, index: number, obj:
-      BillingAccount[]) => boolean, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.find'
+      BillingAccount[]) => value, any)
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.find'
     package: '@azure/arm-billing'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +359,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: BillingAccount, index:
-        number, obj: BillingAccount[]) => boolean, thisArg?: any)
+        number, obj: BillingAccount[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: BillingAccount, index: number, obj:
-            BillingAccount[]) =&gt; boolean
+            BillingAccount[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +387,7 @@ methods:
   - name: >-
       findIndex((value: BillingAccount, index: number, obj: BillingAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.findIndex'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.findIndex'
     package: '@azure/arm-billing'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +428,7 @@ methods:
   - name: >-
       forEach((value: BillingAccount, index: number, array: BillingAccount[]) =>
       void, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.forEach'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.forEach'
     package: '@azure/arm-billing'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +453,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(BillingAccount, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.includes'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.includes'
     package: '@azure/arm-billing'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +467,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-billing.BillingAccount" />
+          type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +478,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(BillingAccount, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.indexOf'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.indexOf'
     package: '@azure/arm-billing'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +490,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-billing.BillingAccount" />
+          type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +501,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-billing.BillingAccountListResult.join'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.join'
     package: '@azure/arm-billing'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +522,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-billing.BillingAccountListResult.keys'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.keys'
     package: '@azure/arm-billing'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +534,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(BillingAccount, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.lastIndexOf'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.lastIndexOf'
     package: '@azure/arm-billing'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +546,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-billing.BillingAccount" />
+          type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +559,7 @@ methods:
   - name: >-
       map<U>((value: BillingAccount, index: number, array: BillingAccount[]) =>
       U, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.map'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.map'
     package: '@azure/arm-billing'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +589,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-billing.BillingAccountListResult.pop'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.pop'
     package: '@azure/arm-billing'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +598,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-billing.models.index.d.BillingAccount" /> |
+          undefined
         description: ''
   - name: 'push(BillingAccount[])'
-    uid: '@azure/arm-billing.BillingAccountListResult.push'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.push'
     package: '@azure/arm-billing'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +613,7 @@ methods:
       content: 'function push(items: BillingAccount[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+          type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
           description: |
             New elements of the Array.
       return:
@@ -574,7 +622,7 @@ methods:
   - name: >-
       reduce((previousValue: BillingAccount, currentValue: BillingAccount,
       currentIndex: number, array: BillingAccount[]) => BillingAccount)
-    uid: '@azure/arm-billing.BillingAccountListResult.reduce'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reduce'
     package: '@azure/arm-billing'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -598,13 +646,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" />
+        type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
         description: ''
   - name: >-
       reduce((previousValue: BillingAccount, currentValue: BillingAccount,
       currentIndex: number, array: BillingAccount[]) => BillingAccount,
       BillingAccount)
-    uid: '@azure/arm-billing.BillingAccountListResult.reduce_1'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reduce_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -622,15 +670,15 @@ methods:
             currentIndex: number, array: BillingAccount[]) =&gt; BillingAccount
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-billing.BillingAccount" />
+          type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" />
+        type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: BillingAccount, currentIndex:
       number, array: BillingAccount[]) => U, U)
-    uid: '@azure/arm-billing.BillingAccountListResult.reduce_2'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reduce_2'
     package: '@azure/arm-billing'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -665,7 +713,7 @@ methods:
   - name: >-
       reduceRight((previousValue: BillingAccount, currentValue: BillingAccount,
       currentIndex: number, array: BillingAccount[]) => BillingAccount)
-    uid: '@azure/arm-billing.BillingAccountListResult.reduceRight'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reduceRight'
     package: '@azure/arm-billing'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -690,13 +738,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" />
+        type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
         description: ''
   - name: >-
       reduceRight((previousValue: BillingAccount, currentValue: BillingAccount,
       currentIndex: number, array: BillingAccount[]) => BillingAccount,
       BillingAccount)
-    uid: '@azure/arm-billing.BillingAccountListResult.reduceRight_1'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reduceRight_1'
     package: '@azure/arm-billing'
     summary: ''
     remarks: ''
@@ -714,15 +762,15 @@ methods:
             currentIndex: number, array: BillingAccount[]) =&gt; BillingAccount
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-billing.BillingAccount" />
+          type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" />
+        type: <xref uid="@azure/arm-billing.models.index.d.BillingAccount" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: BillingAccount,
       currentIndex: number, array: BillingAccount[]) => U, U)
-    uid: '@azure/arm-billing.BillingAccountListResult.reduceRight_2'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reduceRight_2'
     package: '@azure/arm-billing'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -756,7 +804,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-billing.BillingAccountListResult.reverse'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.reverse'
     package: '@azure/arm-billing'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -765,10 +813,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-billing.BillingAccountListResult.shift'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.shift'
     package: '@azure/arm-billing'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -777,10 +825,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-billing.BillingAccount" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-billing.models.index.d.BillingAccount" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.slice'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.slice'
     package: '@azure/arm-billing'
     summary: Returns a section of an array.
     remarks: ''
@@ -794,15 +844,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
         description: ''
   - name: >-
       some((value: BillingAccount, index: number, array: BillingAccount[]) =>
       unknown, any)
-    uid: '@azure/arm-billing.BillingAccountListResult.some'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.some'
     package: '@azure/arm-billing'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -812,28 +863,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: BillingAccount, index: number, array:
+        function some(predicate: (value: BillingAccount, index: number, array:
         BillingAccount[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BillingAccount, index: number, array: BillingAccount[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: BillingAccount, b: BillingAccount) => number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.sort'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.sort'
     package: '@azure/arm-billing'
     summary: Sorts an array.
     remarks: ''
@@ -847,14 +903,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: BillingAccount, b: BillingAccount) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, BillingAccount[])'
-    uid: '@azure/arm-billing.BillingAccountListResult.splice_1'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.splice_1'
     package: '@azure/arm-billing'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -876,14 +943,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+          type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-billing.BillingAccountListResult.splice'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.splice'
     package: '@azure/arm-billing'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -904,10 +971,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+        type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-billing.BillingAccountListResult.toLocaleString'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.toLocaleString'
     package: '@azure/arm-billing'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -921,7 +988,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-billing.BillingAccountListResult.toString'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.toString'
     package: '@azure/arm-billing'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -933,7 +1000,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(BillingAccount[])'
-    uid: '@azure/arm-billing.BillingAccountListResult.unshift'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.unshift'
     package: '@azure/arm-billing'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -943,14 +1010,14 @@ methods:
       content: 'function unshift(items: BillingAccount[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-billing.BillingAccount" />[]'
+          type: '<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-billing.BillingAccountListResult.values'
+    uid: '@azure/arm-billing.models.index.d.BillingAccountListResult.values'
     package: '@azure/arm-billing'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -960,7 +1027,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-billing.BillingAccount"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-billing.models.index.d.BillingAccount" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-billing.BillingAccount" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-billing.models.index.d.BillingAccountListResult.[Symbol.iterator]
+    package: '@azure/arm-billing'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-billing.models.index.d.BillingAccount" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-billing.models.index.d.BillingAccountListResult.[Symbol.unscopables]
+    package: '@azure/arm-billing'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-billing.models.index.d.BillingAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-billing.models.index.d.BillingAccount" />&gt;

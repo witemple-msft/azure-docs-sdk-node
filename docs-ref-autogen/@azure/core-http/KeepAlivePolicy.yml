@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: KeepAlivePolicy
-uid: '@azure/core-http.KeepAlivePolicy'
+uid: '@azure/core-http.policies.keepAlivePolicy.d.KeepAlivePolicy'
 package: '@azure/core-http'
 summary: >-
   KeepAlivePolicy is a policy used to control keep alive settings for every
@@ -12,7 +12,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'KeepAlivePolicy(RequestPolicy, RequestPolicyOptions, KeepAliveOptions)'
-    uid: '@azure/core-http.KeepAlivePolicy.constructor'
+    uid: '@azure/core-http.policies.keepAlivePolicy.d.KeepAlivePolicy.constructor'
     package: '@azure/core-http'
     summary: Creates an instance of KeepAlivePolicy.
     remarks: ''
@@ -24,17 +24,25 @@ constructors:
         RequestPolicyOptions, keepAliveOptions: KeepAliveOptions)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: keepAliveOptions
-          type: <xref uid="@azure/core-http.KeepAliveOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.keepAlivePolicy.d.KeepAliveOptions"
+            />
           description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.KeepAlivePolicy.log'
+    uid: '@azure/core-http.policies.keepAlivePolicy.d.KeepAlivePolicy.log'
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -49,14 +57,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.KeepAlivePolicy.sendRequest'
+    uid: '@azure/core-http.policies.keepAlivePolicy.d.KeepAlivePolicy.sendRequest'
     package: '@azure/core-http'
     summary: Sends out request.
     remarks: ''
@@ -66,13 +77,16 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.KeepAlivePolicy.shouldLog'
+    uid: '@azure/core-http.policies.keepAlivePolicy.d.KeepAlivePolicy.shouldLog'
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -82,9 +96,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: GroupCollection
-uid: '@azure/arm-apimanagement.GroupCollection'
+uid: '@azure/arm-apimanagement.models.index.d.GroupCollection'
 package: '@azure/arm-apimanagement'
 summary: ''
 fullName: GroupCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-apimanagement.GroupCollection.Array'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.Array'
     package: '@azure/arm-apimanagement'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-apimanagement.GroupCollection.length'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.length'
     package: '@azure/arm-apimanagement'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-apimanagement.GroupCollection.nextLink'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.nextLink'
     package: '@azure/arm-apimanagement'
     summary: Next page link if any.
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<GroupContract>[])'
-    uid: '@azure/arm-apimanagement.GroupCollection.concat'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.concat'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-apimanagement.GroupContract"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.GroupContract" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-apimanagement.GroupCollection.concat_1'
+  - name: 'concat(GroupContract | ConcatArray<GroupContract>[])'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.concat_1'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: GroupContract | ConcatArray<GroupContract>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.GroupContract" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.copyWithin'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.copyWithin'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-apimanagement.GroupCollection.entries'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.entries'
     package: '@azure/arm-apimanagement'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +143,7 @@ methods:
   - name: >-
       every((value: GroupContract, index: number, array: GroupContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.every'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.every_1'
     package: '@azure/arm-apimanagement'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +151,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: GroupContract, index: number, array:
+        function every(predicate: (value: GroupContract, index: number, array:
         GroupContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GroupContract, index: number, array: GroupContract[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: GroupContract, index: number, array: GroupContract[]) =>
+      value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.every'
+    package: '@azure/arm-apimanagement'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: GroupContract, index: number,
+        array: GroupContract[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: GroupContract, index: number, array: GroupContract[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(GroupContract, undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.fill'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.fill'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +229,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+          type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +251,7 @@ methods:
   - name: >-
       filter((value: GroupContract, index: number, array: GroupContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.filter_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.filter_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +261,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: GroupContract, index: number, array:
+        function filter(predicate: (value: GroupContract, index: number, array:
         GroupContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GroupContract, index: number, array: GroupContract[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
   - name: >-
       filter<S>((value: GroupContract, index: number, array: GroupContract[]) =>
-      boolean, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.filter'
+      value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.filter'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +293,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: GroupContract, index: number,
-        array: GroupContract[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: GroupContract, index: number,
+        array: GroupContract[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GroupContract, index: number, array: GroupContract[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +315,7 @@ methods:
   - name: >-
       find((value: GroupContract, index: number, obj: GroupContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.find_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.find_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -291,12 +335,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: GroupContract, index: number, obj:
-      GroupContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.find'
+      GroupContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.find'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +355,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: GroupContract, index:
-        number, obj: GroupContract[]) => boolean, thisArg?: any)
+        number, obj: GroupContract[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: GroupContract, index: number, obj:
-            GroupContract[]) =&gt; boolean
+            GroupContract[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +383,7 @@ methods:
   - name: >-
       findIndex((value: GroupContract, index: number, obj: GroupContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.findIndex'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.findIndex'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +424,7 @@ methods:
   - name: >-
       forEach((value: GroupContract, index: number, array: GroupContract[]) =>
       void, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.forEach'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.forEach'
     package: '@azure/arm-apimanagement'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +449,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(GroupContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.includes'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.includes'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+          type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +474,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(GroupContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.indexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.indexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +486,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+          type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +497,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-apimanagement.GroupCollection.join'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.join'
     package: '@azure/arm-apimanagement'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +518,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-apimanagement.GroupCollection.keys'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.keys'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +530,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(GroupContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.lastIndexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.lastIndexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +542,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+          type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +555,7 @@ methods:
   - name: >-
       map<U>((value: GroupContract, index: number, array: GroupContract[]) => U,
       any)
-    uid: '@azure/arm-apimanagement.GroupCollection.map'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.map'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +585,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-apimanagement.GroupCollection.pop'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.pop'
     package: '@azure/arm-apimanagement'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +594,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" /> |
+          undefined
         description: ''
   - name: 'push(GroupContract[])'
-    uid: '@azure/arm-apimanagement.GroupCollection.push'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.push'
     package: '@azure/arm-apimanagement'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +609,9 @@ methods:
       content: 'function push(items: GroupContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -570,7 +620,7 @@ methods:
   - name: >-
       reduce((previousValue: GroupContract, currentValue: GroupContract,
       currentIndex: number, array: GroupContract[]) => GroupContract)
-    uid: '@azure/arm-apimanagement.GroupCollection.reduce'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reduce'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -594,13 +644,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
         description: ''
   - name: >-
       reduce((previousValue: GroupContract, currentValue: GroupContract,
       currentIndex: number, array: GroupContract[]) => GroupContract,
       GroupContract)
-    uid: '@azure/arm-apimanagement.GroupCollection.reduce_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reduce_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -618,15 +668,15 @@ methods:
             currentIndex: number, array: GroupContract[]) =&gt; GroupContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+          type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: GroupContract, currentIndex:
       number, array: GroupContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.GroupCollection.reduce_2'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reduce_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +711,7 @@ methods:
   - name: >-
       reduceRight((previousValue: GroupContract, currentValue: GroupContract,
       currentIndex: number, array: GroupContract[]) => GroupContract)
-    uid: '@azure/arm-apimanagement.GroupCollection.reduceRight'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reduceRight'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -686,13 +736,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
         description: ''
   - name: >-
       reduceRight((previousValue: GroupContract, currentValue: GroupContract,
       currentIndex: number, array: GroupContract[]) => GroupContract,
       GroupContract)
-    uid: '@azure/arm-apimanagement.GroupCollection.reduceRight_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reduceRight_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -710,15 +760,15 @@ methods:
             currentIndex: number, array: GroupContract[]) =&gt; GroupContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+          type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: GroupContract,
       currentIndex: number, array: GroupContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.GroupCollection.reduceRight_2'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reduceRight_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -752,7 +802,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-apimanagement.GroupCollection.reverse'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.reverse'
     package: '@azure/arm-apimanagement'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -761,10 +811,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-apimanagement.GroupCollection.shift'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.shift'
     package: '@azure/arm-apimanagement'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -773,10 +823,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-apimanagement.GroupContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.slice'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.slice'
     package: '@azure/arm-apimanagement'
     summary: Returns a section of an array.
     remarks: ''
@@ -790,15 +842,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
   - name: >-
       some((value: GroupContract, index: number, array: GroupContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.GroupCollection.some'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.some'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -808,28 +861,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: GroupContract, index: number, array:
+        function some(predicate: (value: GroupContract, index: number, array:
         GroupContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: GroupContract, index: number, array: GroupContract[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: GroupContract, b: GroupContract) => number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.sort'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.sort'
     package: '@azure/arm-apimanagement'
     summary: Sorts an array.
     remarks: ''
@@ -843,14 +901,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: GroupContract, b: GroupContract) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, GroupContract[])'
-    uid: '@azure/arm-apimanagement.GroupCollection.splice_1'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.splice_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,14 +941,16 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-apimanagement.GroupCollection.splice'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.splice'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,10 +971,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+        type: '<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-apimanagement.GroupCollection.toLocaleString'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.toLocaleString'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -917,7 +988,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-apimanagement.GroupCollection.toString'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.toString'
     package: '@azure/arm-apimanagement'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -929,7 +1000,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(GroupContract[])'
-    uid: '@azure/arm-apimanagement.GroupCollection.unshift'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.unshift'
     package: '@azure/arm-apimanagement'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -939,14 +1010,16 @@ methods:
       content: 'function unshift(items: GroupContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.GroupContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.GroupContract"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-apimanagement.GroupCollection.values'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.values'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -956,7 +1029,38 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-apimanagement.GroupContract"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.GroupContract" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-apimanagement.GroupContract" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-apimanagement.models.index.d.GroupCollection.[Symbol.iterator]'
+    package: '@azure/arm-apimanagement'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.GroupContract" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.GroupCollection.[Symbol.unscopables]
+    package: '@azure/arm-apimanagement'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-apimanagement.models.index.d.ApiCollection.Array"
+  />&lt;<xref uid="@azure/arm-apimanagement.models.index.d.GroupContract" />&gt;

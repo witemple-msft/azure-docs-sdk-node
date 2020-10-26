@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Job
-uid: '@azure/batch.Job'
+uid: '@azure/batch.operations.job.d.Job'
 package: '@azure/batch'
 summary: Class representing a Job.
 fullName: Job
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Job(BatchServiceClientContext)
-    uid: '@azure/batch.Job.constructor'
+    uid: '@azure/batch.operations.job.d.Job.constructor'
     package: '@azure/batch'
     summary: Create a Job.
     remarks: ''
@@ -20,12 +20,15 @@ constructors:
       content: 'new Job(client: BatchServiceClientContext)'
       parameters:
         - id: client
-          type: <xref uid="@azure/batch.BatchServiceClientContext" />
+          type: >-
+            <xref
+            uid="@azure/batch.batchServiceClientContext.d.BatchServiceClientContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: 'add(JobAddParameter, JobAddOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.add_2'
+    uid: '@azure/batch.operations.job.d.Job.add_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -37,33 +40,33 @@ methods:
         callback: ServiceCallback<void>)
       parameters:
         - id: job
-          type: <xref uid="@azure/batch.JobAddParameter" />
-          description: The job to be added.
+          type: <xref uid="@azure/batch.models.index.d.JobAddParameter" />
+          description: The Job to be added.
         - id: options
-          type: <xref uid="@azure/batch.JobAddOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobAddOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'add(JobAddParameter, Models.JobAddOptionalParams)'
-    uid: '@azure/batch.Job.add'
+    uid: '@azure/batch.operations.job.d.Job.add'
     package: '@azure/batch'
     summary: >-
       The Batch service supports two ways to control the work done as part of a
-      job. In the first
+      Job. In the first
 
-      approach, the user specifies a Job Manager task. The Batch service
-      launches this task when it is
+      approach, the user specifies a Job Manager Task. The Batch service
+      launches this Task when it is
 
-      ready to start the job. The Job Manager task controls all other tasks that
-      run under this job,
+      ready to start the Job. The Job Manager Task controls all other Tasks that
+      run under this Job,
 
       by using the Task APIs. In the second approach, the user directly controls
       the execution of
 
-      tasks under an active job, by using the Task APIs. Also note: when naming
-      jobs, avoid including
+      Tasks under an active Job, by using the Task APIs. Also note: when naming
+      Jobs, avoid including
 
       sensitive information such as user names or secret project names. This
       information may appear in
@@ -78,8 +81,8 @@ methods:
         Models.JobAddOptionalParams)
       parameters:
         - id: job
-          type: <xref uid="@azure/batch.JobAddParameter" />
-          description: The job to be added.
+          type: <xref uid="@azure/batch.models.index.d.JobAddParameter" />
+          description: The Job to be added.
         - id: options
           type: <xref uid="Models.JobAddOptionalParams" />
           description: ''
@@ -87,7 +90,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobAddResponse" />&gt;
         description: Promise<Models.JobAddResponse>
   - name: 'add(JobAddParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.add_1'
+    uid: '@azure/batch.operations.job.d.Job.add_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -97,14 +100,14 @@ methods:
       content: 'function add(job: JobAddParameter, callback: ServiceCallback<void>)'
       parameters:
         - id: job
-          type: <xref uid="@azure/batch.JobAddParameter" />
-          description: The job to be added.
+          type: <xref uid="@azure/batch.models.index.d.JobAddParameter" />
+          description: The Job to be added.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, JobDeleteMethodOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.deleteMethod_2'
+    uid: '@azure/batch.operations.job.d.Job.deleteMethod_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -117,35 +120,37 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to delete.
+          description: The ID of the Job to delete.
         - id: options
-          type: <xref uid="@azure/batch.JobDeleteMethodOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.JobDeleteMethodOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'deleteMethod(string, Models.JobDeleteMethodOptionalParams)'
-    uid: '@azure/batch.Job.deleteMethod'
+    uid: '@azure/batch.operations.job.d.Job.deleteMethod'
     package: '@azure/batch'
     summary: >-
-      Deleting a job also deletes all tasks that are part of that job, and all
-      job statistics. This
+      Deleting a Job also deletes all Tasks that are part of that Job, and all
+      Job statistics. This
 
-      also overrides the retention period for task data; that is, if the job
-      contains tasks which are
+      also overrides the retention period for Task data; that is, if the Job
+      contains Tasks which are
 
-      still retained on compute nodes, the Batch services deletes those tasks'
+      still retained on Compute Nodes, the Batch services deletes those Tasks'
       working directories and
 
       all their contents.  When a Delete Job request is received, the Batch
-      service sets the job to
+      service sets the Job to
 
-      the deleting state. All update operations on a job that is in deleting
+      the deleting state. All update operations on a Job that is in deleting
       state will fail with
 
       status code 409 (Conflict), with additional information indicating that
-      the job is being
+      the Job is being
 
       deleted.
     remarks: ''
@@ -158,7 +163,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to delete.
+          description: The ID of the Job to delete.
         - id: options
           type: <xref uid="Models.JobDeleteMethodOptionalParams" />
           description: ''
@@ -166,7 +171,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobDeleteResponse" />&gt;
         description: Promise<Models.JobDeleteResponse>
   - name: 'deleteMethod(string, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.deleteMethod_1'
+    uid: '@azure/batch.operations.job.d.Job.deleteMethod_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -177,7 +182,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to delete.
+          description: The ID of the Job to delete.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -185,7 +190,7 @@ methods:
   - name: >-
       disable(string, Models.DisableJobOption, JobDisableOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Job.disable_2'
+    uid: '@azure/batch.operations.job.d.Job.disable_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -198,41 +203,41 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to disable.
+          description: The ID of the Job to disable.
         - id: disableTasks
           type: <xref uid="Models.DisableJobOption" />
           description: >-
-            What to do with active tasks associated with the job. Possible
+            What to do with active Tasks associated with the Job. Possible
             values
 
             include: 'requeue', 'terminate', 'wait'
         - id: options
-          type: <xref uid="@azure/batch.JobDisableOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobDisableOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'disable(string, Models.DisableJobOption, Models.JobDisableOptionalParams)'
-    uid: '@azure/batch.Job.disable'
+    uid: '@azure/batch.operations.job.d.Job.disable'
     package: '@azure/batch'
     summary: >-
-      The Batch Service immediately moves the job to the disabling state. Batch
+      The Batch Service immediately moves the Job to the disabling state. Batch
       then uses the
 
       disableTasks parameter to determine what to do with the currently running
-      tasks of the job. The
+      Tasks of the Job. The
 
-      job remains in the disabling state until the disable operation is
-      completed and all tasks have
+      Job remains in the disabling state until the disable operation is
+      completed and all Tasks have
 
-      been dealt with according to the disableTasks option; the job then moves
+      been dealt with according to the disableTasks option; the Job then moves
       to the disabled state.
 
-      No new tasks are started under the job until it moves back to active
+      No new Tasks are started under the Job until it moves back to active
       state. If you try to
 
-      disable a job that is in any state other than active, disabling, or
+      disable a Job that is in any state other than active, disabling, or
       disabled, the request fails
 
       with status code 409.
@@ -246,11 +251,11 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to disable.
+          description: The ID of the Job to disable.
         - id: disableTasks
           type: <xref uid="Models.DisableJobOption" />
           description: >-
-            What to do with active tasks associated with the job. Possible
+            What to do with active Tasks associated with the Job. Possible
             values
 
             include: 'requeue', 'terminate', 'wait'
@@ -261,7 +266,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobDisableResponse" />&gt;
         description: Promise<Models.JobDisableResponse>
   - name: 'disable(string, Models.DisableJobOption, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.disable_1'
+    uid: '@azure/batch.operations.job.d.Job.disable_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -274,11 +279,11 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to disable.
+          description: The ID of the Job to disable.
         - id: disableTasks
           type: <xref uid="Models.DisableJobOption" />
           description: >-
-            What to do with active tasks associated with the job. Possible
+            What to do with active Tasks associated with the Job. Possible
             values
 
             include: 'requeue', 'terminate', 'wait'
@@ -287,7 +292,7 @@ methods:
           description: |
             The callback
   - name: 'enable(string, JobEnableOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.enable_2'
+    uid: '@azure/batch.operations.job.d.Job.enable_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -300,31 +305,31 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to enable.
+          description: The ID of the Job to enable.
         - id: options
-          type: <xref uid="@azure/batch.JobEnableOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobEnableOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'enable(string, Models.JobEnableOptionalParams)'
-    uid: '@azure/batch.Job.enable'
+    uid: '@azure/batch.operations.job.d.Job.enable'
     package: '@azure/batch'
     summary: >-
-      When you call this API, the Batch service sets a disabled job to the
+      When you call this API, the Batch service sets a disabled Job to the
       enabling state. After the
 
-      this operation is completed, the job moves to the active state, and
-      scheduling of new tasks
+      this operation is completed, the Job moves to the active state, and
+      scheduling of new Tasks
 
-      under the job resumes. The Batch service does not allow a task to remain
+      under the Job resumes. The Batch service does not allow a Task to remain
       in the active state for
 
-      more than 180 days. Therefore, if you enable a job containing active tasks
+      more than 180 days. Therefore, if you enable a Job containing active Tasks
       which were added more
 
-      than 180 days ago, those tasks will not run.
+      than 180 days ago, those Tasks will not run.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -333,7 +338,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to enable.
+          description: The ID of the Job to enable.
         - id: options
           type: <xref uid="Models.JobEnableOptionalParams" />
           description: ''
@@ -341,7 +346,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobEnableResponse" />&gt;
         description: Promise<Models.JobEnableResponse>
   - name: 'enable(string, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.enable_1'
+    uid: '@azure/batch.operations.job.d.Job.enable_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -352,13 +357,13 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to enable.
+          description: The ID of the Job to enable.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'get(string, JobGetOptionalParams, ServiceCallback<CloudJob>)'
-    uid: '@azure/batch.Job.get_2'
+    uid: '@azure/batch.operations.job.d.Job.get_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -371,16 +376,18 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
-          type: <xref uid="@azure/batch.JobGetOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobGetOptionalParams" />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.CloudJob" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.models.index.d.CloudJob"
+            />&gt;
           description: |
             The callback
   - name: 'get(string, Models.JobGetOptionalParams)'
-    uid: '@azure/batch.Job.get'
+    uid: '@azure/batch.operations.job.d.Job.get'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -391,7 +398,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
           type: <xref uid="Models.JobGetOptionalParams" />
           description: ''
@@ -399,7 +406,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobGetResponse" />&gt;
         description: Promise<Models.JobGetResponse>
   - name: 'get(string, ServiceCallback<CloudJob>)'
-    uid: '@azure/batch.Job.get_1'
+    uid: '@azure/batch.operations.job.d.Job.get_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -410,15 +417,17 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.CloudJob" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref uid="@azure/batch.models.index.d.CloudJob"
+            />&gt;
           description: |
             The callback
   - name: >-
       getAllLifetimeStatistics(JobGetAllLifetimeStatisticsOptionalParams,
       ServiceCallback<JobStatistics>)
-    uid: '@azure/batch.Job.getAllLifetimeStatistics_2'
+    uid: '@azure/batch.operations.job.d.Job.getAllLifetimeStatistics_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -432,19 +441,22 @@ methods:
       parameters:
         - id: options
           type: >-
-            <xref uid="@azure/batch.JobGetAllLifetimeStatisticsOptionalParams"
+            <xref
+            uid="@azure/batch.models.index.d.JobGetAllLifetimeStatisticsOptionalParams"
             />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.JobStatistics" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.JobStatistics" />&gt;
           description: |
             The callback
   - name: getAllLifetimeStatistics(Models.JobGetAllLifetimeStatisticsOptionalParams)
-    uid: '@azure/batch.Job.getAllLifetimeStatistics'
+    uid: '@azure/batch.operations.job.d.Job.getAllLifetimeStatistics'
     package: '@azure/batch'
     summary: >-
-      Statistics are aggregated across all jobs that have ever existed in the
-      account, from account
+      Statistics are aggregated across all Jobs that have ever existed in the
+      Account, from Account
 
       creation to the last update time of the statistics. The statistics may not
       be immediately
@@ -470,7 +482,7 @@ methods:
           />&gt;
         description: Promise<Models.JobGetAllLifetimeStatisticsResponse>
   - name: getAllLifetimeStatistics(ServiceCallback<JobStatistics>)
-    uid: '@azure/batch.Job.getAllLifetimeStatistics_1'
+    uid: '@azure/batch.operations.job.d.Job.getAllLifetimeStatistics_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -482,13 +494,15 @@ methods:
         ServiceCallback<JobStatistics>)
       parameters:
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.JobStatistics" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.JobStatistics" />&gt;
           description: |
             The callback
   - name: >-
       getTaskCounts(string, JobGetTaskCountsOptionalParams,
-      ServiceCallback<TaskCounts>)
-    uid: '@azure/batch.Job.getTaskCounts_2'
+      ServiceCallback<TaskCountsResult>)
+    uid: '@azure/batch.operations.job.d.Job.getTaskCounts_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -497,27 +511,37 @@ methods:
     syntax:
       content: >-
         function getTaskCounts(jobId: string, options:
-        JobGetTaskCountsOptionalParams, callback: ServiceCallback<TaskCounts>)
+        JobGetTaskCountsOptionalParams, callback:
+        ServiceCallback<TaskCountsResult>)
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
-          type: <xref uid="@azure/batch.JobGetTaskCountsOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.JobGetTaskCountsOptionalParams" />
           description: The optional parameters
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.TaskCounts" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.TaskCountsResult" />&gt;
           description: |
             The callback
   - name: 'getTaskCounts(string, Models.JobGetTaskCountsOptionalParams)'
-    uid: '@azure/batch.Job.getTaskCounts'
+    uid: '@azure/batch.operations.job.d.Job.getTaskCounts'
     package: '@azure/batch'
     summary: >-
-      Task counts provide a count of the tasks by active, running or completed
-      task state, and a count
+      Task counts provide a count of the Tasks by active, running or completed
+      Task state, and a count
 
-      of tasks which succeeded or failed. Tasks in the preparing state are
-      counted as running.
+      of Tasks which succeeded or failed. Tasks in the preparing state are
+      counted as running. Note
+
+      that the numbers returned may not always be up to date. If you need exact
+      task counts, use a
+
+      list query.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -528,15 +552,15 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
           type: <xref uid="Models.JobGetTaskCountsOptionalParams" />
           description: ''
       return:
         type: Promise&lt;<xref uid="Models.JobGetTaskCountsResponse" />&gt;
         description: Promise<Models.JobGetTaskCountsResponse>
-  - name: 'getTaskCounts(string, ServiceCallback<TaskCounts>)'
-    uid: '@azure/batch.Job.getTaskCounts_1'
+  - name: 'getTaskCounts(string, ServiceCallback<TaskCountsResult>)'
+    uid: '@azure/batch.operations.job.d.Job.getTaskCounts_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -545,17 +569,19 @@ methods:
     syntax:
       content: >-
         function getTaskCounts(jobId: string, callback:
-        ServiceCallback<TaskCounts>)
+        ServiceCallback<TaskCountsResult>)
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: callback
-          type: ServiceCallback&lt;<xref uid="@azure/batch.TaskCounts" />&gt;
+          type: >-
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.TaskCountsResult" />&gt;
           description: |
             The callback
   - name: 'list(JobListOptionalParams, ServiceCallback<CloudJobListResult>)'
-    uid: '@azure/batch.Job.list_2'
+    uid: '@azure/batch.operations.job.d.Job.list_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -567,16 +593,16 @@ methods:
         ServiceCallback<CloudJobListResult>)
       parameters:
         - id: options
-          type: <xref uid="@azure/batch.JobListOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobListOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: list(Models.JobListOptionalParams)
-    uid: '@azure/batch.Job.list'
+    uid: '@azure/batch.operations.job.d.Job.list'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -592,7 +618,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobListResponse" />&gt;
         description: Promise<Models.JobListResponse>
   - name: list(ServiceCallback<CloudJobListResult>)
-    uid: '@azure/batch.Job.list_1'
+    uid: '@azure/batch.operations.job.d.Job.list_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -603,14 +629,14 @@ methods:
       parameters:
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromJobSchedule(string, JobListFromJobScheduleOptionalParams,
       ServiceCallback<CloudJobListResult>)
-    uid: '@azure/batch.Job.listFromJobSchedule_2'
+    uid: '@azure/batch.operations.job.d.Job.listFromJobSchedule_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -625,19 +651,22 @@ methods:
         - id: jobScheduleId
           type: string
           description: >-
-            The ID of the job schedule from which you want to get a list of
-            jobs.
+            The ID of the Job Schedule from which you want to get a list of
+            Jobs.
         - id: options
-          type: <xref uid="@azure/batch.JobListFromJobScheduleOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.JobListFromJobScheduleOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: 'listFromJobSchedule(string, Models.JobListFromJobScheduleOptionalParams)'
-    uid: '@azure/batch.Job.listFromJobSchedule'
+    uid: '@azure/batch.operations.job.d.Job.listFromJobSchedule'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -651,8 +680,8 @@ methods:
         - id: jobScheduleId
           type: string
           description: >-
-            The ID of the job schedule from which you want to get a list of
-            jobs.
+            The ID of the Job Schedule from which you want to get a list of
+            Jobs.
         - id: options
           type: <xref uid="Models.JobListFromJobScheduleOptionalParams" />
           description: ''
@@ -660,7 +689,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobListFromJobScheduleResponse" />&gt;
         description: Promise<Models.JobListFromJobScheduleResponse>
   - name: 'listFromJobSchedule(string, ServiceCallback<CloudJobListResult>)'
-    uid: '@azure/batch.Job.listFromJobSchedule_1'
+    uid: '@azure/batch.operations.job.d.Job.listFromJobSchedule_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -674,18 +703,18 @@ methods:
         - id: jobScheduleId
           type: string
           description: >-
-            The ID of the job schedule from which you want to get a list of
-            jobs.
+            The ID of the Job Schedule from which you want to get a list of
+            Jobs.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromJobScheduleNext(string, JobListFromJobScheduleNextOptionalParams,
       ServiceCallback<CloudJobListResult>)
-    uid: '@azure/batch.Job.listFromJobScheduleNext_2'
+    uid: '@azure/batch.operations.job.d.Job.listFromJobScheduleNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -701,18 +730,21 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.JobListFromJobScheduleNextOptionalParams" />
+          type: >-
+            <xref
+            uid="@azure/batch.models.index.d.JobListFromJobScheduleNextOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listFromJobScheduleNext(string,
       Models.JobListFromJobScheduleNextOptionalParams)
-    uid: '@azure/batch.Job.listFromJobScheduleNext'
+    uid: '@azure/batch.operations.job.d.Job.listFromJobScheduleNext'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -733,7 +765,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobListFromJobScheduleResponse" />&gt;
         description: Promise<Models.JobListFromJobScheduleResponse>
   - name: 'listFromJobScheduleNext(string, ServiceCallback<CloudJobListResult>)'
-    uid: '@azure/batch.Job.listFromJobScheduleNext_1'
+    uid: '@azure/batch.operations.job.d.Job.listFromJobScheduleNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -749,14 +781,14 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listNext(string, JobListNextOptionalParams,
       ServiceCallback<CloudJobListResult>)
-    uid: '@azure/batch.Job.listNext_2'
+    uid: '@azure/batch.operations.job.d.Job.listNext_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -772,16 +804,16 @@ methods:
           type: string
           description: The NextLink from the previous successful call to List operation.
         - id: options
-          type: <xref uid="@azure/batch.JobListNextOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobListNextOptionalParams" />
           description: The optional parameters
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: 'listNext(string, Models.JobListNextOptionalParams)'
-    uid: '@azure/batch.Job.listNext'
+    uid: '@azure/batch.operations.job.d.Job.listNext'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -802,7 +834,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobListResponse" />&gt;
         description: Promise<Models.JobListResponse>
   - name: 'listNext(string, ServiceCallback<CloudJobListResult>)'
-    uid: '@azure/batch.Job.listNext_1'
+    uid: '@azure/batch.operations.job.d.Job.listNext_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -818,15 +850,15 @@ methods:
           description: The NextLink from the previous successful call to List operation.
         - id: callback
           type: >-
-            ServiceCallback&lt;<xref uid="@azure/batch.CloudJobListResult"
-            />&gt;
+            ServiceCallback&lt;<xref
+            uid="@azure/batch.models.index.d.CloudJobListResult" />&gt;
           description: |
             The callback
   - name: >-
       listPreparationAndReleaseTaskStatus(string,
       JobListPreparationAndReleaseTaskStatusOptionalParams,
       ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)
-    uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_2'
+    uid: '@azure/batch.operations.job.d.Job.listPreparationAndReleaseTaskStatus_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -840,37 +872,37 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
           type: >-
             <xref
-            uid="@azure/batch.JobListPreparationAndReleaseTaskStatusOptionalParams"
+            uid="@azure/batch.models.index.d.JobListPreparationAndReleaseTaskStatusOptionalParams"
             />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult"
+            uid="@azure/batch.models.index.d.CloudJobListPreparationAndReleaseTaskStatusResult"
             />&gt;
           description: |
             The callback
   - name: >-
       listPreparationAndReleaseTaskStatus(string,
       Models.JobListPreparationAndReleaseTaskStatusOptionalParams)
-    uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus'
+    uid: '@azure/batch.operations.job.d.Job.listPreparationAndReleaseTaskStatus'
     package: '@azure/batch'
     summary: >-
-      This API returns the Job Preparation and Job Release task status on all
-      compute nodes that have
+      This API returns the Job Preparation and Job Release Task status on all
+      Compute Nodes that have
 
-      run the Job Preparation or Job Release task. This includes nodes which
-      have since been removed
+      run the Job Preparation or Job Release Task. This includes Compute Nodes
+      which have since been
 
-      from the pool. If this API is invoked on a job which has no Job
-      Preparation or Job Release task,
+      removed from the Pool. If this API is invoked on a Job which has no Job
+      Preparation or Job
 
-      the Batch service returns HTTP status code 409 (Conflict) with an error
-      code of
+      Release Task, the Batch service returns HTTP status code 409 (Conflict)
+      with an error code of
 
       JobPreparationTaskNotSpecified.
     remarks: ''
@@ -883,7 +915,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: options
           type: >-
             <xref
@@ -897,7 +929,7 @@ methods:
   - name: >-
       listPreparationAndReleaseTaskStatus(string,
       ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)
-    uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatus_1'
+    uid: '@azure/batch.operations.job.d.Job.listPreparationAndReleaseTaskStatus_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -910,11 +942,11 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job.
+          description: The ID of the Job.
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult"
+            uid="@azure/batch.models.index.d.CloudJobListPreparationAndReleaseTaskStatusResult"
             />&gt;
           description: |
             The callback
@@ -922,7 +954,8 @@ methods:
       listPreparationAndReleaseTaskStatusNext(string,
       JobListPreparationAndReleaseTaskStatusNextOptionalParams,
       ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)
-    uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_2'
+    uid: >-
+      @azure/batch.operations.job.d.Job.listPreparationAndReleaseTaskStatusNext_2
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -941,33 +974,33 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/batch.JobListPreparationAndReleaseTaskStatusNextOptionalParams"
+            uid="@azure/batch.models.index.d.JobListPreparationAndReleaseTaskStatusNextOptionalParams"
             />
           description: The optional parameters
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult"
+            uid="@azure/batch.models.index.d.CloudJobListPreparationAndReleaseTaskStatusResult"
             />&gt;
           description: |
             The callback
   - name: >-
       listPreparationAndReleaseTaskStatusNext(string,
       Models.JobListPreparationAndReleaseTaskStatusNextOptionalParams)
-    uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext'
+    uid: '@azure/batch.operations.job.d.Job.listPreparationAndReleaseTaskStatusNext'
     package: '@azure/batch'
     summary: >-
-      This API returns the Job Preparation and Job Release task status on all
-      compute nodes that have
+      This API returns the Job Preparation and Job Release Task status on all
+      Compute Nodes that have
 
-      run the Job Preparation or Job Release task. This includes nodes which
-      have since been removed
+      run the Job Preparation or Job Release Task. This includes Compute Nodes
+      which have since been
 
-      from the pool. If this API is invoked on a job which has no Job
-      Preparation or Job Release task,
+      removed from the Pool. If this API is invoked on a Job which has no Job
+      Preparation or Job
 
-      the Batch service returns HTTP status code 409 (Conflict) with an error
-      code of
+      Release Task, the Batch service returns HTTP status code 409 (Conflict)
+      with an error code of
 
       JobPreparationTaskNotSpecified.
     remarks: ''
@@ -996,7 +1029,8 @@ methods:
   - name: >-
       listPreparationAndReleaseTaskStatusNext(string,
       ServiceCallback<CloudJobListPreparationAndReleaseTaskStatusResult>)
-    uid: '@azure/batch.Job.listPreparationAndReleaseTaskStatusNext_1'
+    uid: >-
+      @azure/batch.operations.job.d.Job.listPreparationAndReleaseTaskStatusNext_1
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1014,14 +1048,14 @@ methods:
         - id: callback
           type: >-
             ServiceCallback&lt;<xref
-            uid="@azure/batch.CloudJobListPreparationAndReleaseTaskStatusResult"
+            uid="@azure/batch.models.index.d.CloudJobListPreparationAndReleaseTaskStatusResult"
             />&gt;
           description: |
             The callback
   - name: >-
       patch(string, JobPatchParameter, JobPatchOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Job.patch_2'
+    uid: '@azure/batch.operations.job.d.Job.patch_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1034,26 +1068,26 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job whose properties you want to update.
+          description: The ID of the Job whose properties you want to update.
         - id: jobPatchParameter
-          type: <xref uid="@azure/batch.JobPatchParameter" />
+          type: <xref uid="@azure/batch.models.index.d.JobPatchParameter" />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.JobPatchOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobPatchOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'patch(string, JobPatchParameter, Models.JobPatchOptionalParams)'
-    uid: '@azure/batch.Job.patch'
+    uid: '@azure/batch.operations.job.d.Job.patch'
     package: '@azure/batch'
     summary: >-
-      This replaces only the job properties specified in the request. For
-      example, if the job has
+      This replaces only the Job properties specified in the request. For
+      example, if the Job has
 
       constraints, and a request does not specify the constraints element, then
-      the job keeps the
+      the Job keeps the
 
       existing constraints.
     remarks: ''
@@ -1066,9 +1100,9 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job whose properties you want to update.
+          description: The ID of the Job whose properties you want to update.
         - id: jobPatchParameter
-          type: <xref uid="@azure/batch.JobPatchParameter" />
+          type: <xref uid="@azure/batch.models.index.d.JobPatchParameter" />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.JobPatchOptionalParams" />
@@ -1077,7 +1111,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobPatchResponse" />&gt;
         description: Promise<Models.JobPatchResponse>
   - name: 'patch(string, JobPatchParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.patch_1'
+    uid: '@azure/batch.operations.job.d.Job.patch_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1090,16 +1124,16 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job whose properties you want to update.
+          description: The ID of the Job whose properties you want to update.
         - id: jobPatchParameter
-          type: <xref uid="@azure/batch.JobPatchParameter" />
+          type: <xref uid="@azure/batch.models.index.d.JobPatchParameter" />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'terminate(string, JobTerminateOptionalParams, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.terminate_2'
+    uid: '@azure/batch.operations.job.d.Job.terminate_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1112,31 +1146,33 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to terminate.
+          description: The ID of the Job to terminate.
         - id: options
-          type: <xref uid="@azure/batch.JobTerminateOptionalParams" />
+          type: >-
+            <xref uid="@azure/batch.models.index.d.JobTerminateOptionalParams"
+            />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'terminate(string, Models.JobTerminateOptionalParams)'
-    uid: '@azure/batch.Job.terminate'
+    uid: '@azure/batch.operations.job.d.Job.terminate'
     package: '@azure/batch'
     summary: >-
-      When a Terminate Job request is received, the Batch service sets the job
+      When a Terminate Job request is received, the Batch service sets the Job
       to the terminating
 
-      state. The Batch service then terminates any running tasks associated with
-      the job and runs any
+      state. The Batch service then terminates any running Tasks associated with
+      the Job and runs any
 
-      required job release tasks. Then the job moves into the completed state.
-      If there are any tasks
+      required Job release Tasks. Then the Job moves into the completed state.
+      If there are any Tasks
 
-      in the job in the active state, they will remain in the active state. Once
-      a job is terminated,
+      in the Job in the active state, they will remain in the active state. Once
+      a Job is terminated,
 
-      new tasks cannot be added and any remaining active tasks will not be
+      new Tasks cannot be added and any remaining active Tasks will not be
       scheduled.
     remarks: ''
     isPreview: false
@@ -1148,7 +1184,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to terminate.
+          description: The ID of the Job to terminate.
         - id: options
           type: <xref uid="Models.JobTerminateOptionalParams" />
           description: ''
@@ -1156,7 +1192,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobTerminateResponse" />&gt;
         description: Promise<Models.JobTerminateResponse>
   - name: 'terminate(string, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.terminate_1'
+    uid: '@azure/batch.operations.job.d.Job.terminate_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1167,7 +1203,7 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job to terminate.
+          description: The ID of the Job to terminate.
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
@@ -1175,7 +1211,7 @@ methods:
   - name: >-
       update(string, JobUpdateParameter, JobUpdateOptionalParams,
       ServiceCallback<void>)
-    uid: '@azure/batch.Job.update_2'
+    uid: '@azure/batch.operations.job.d.Job.update_2'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1188,23 +1224,23 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job whose properties you want to update.
+          description: The ID of the Job whose properties you want to update.
         - id: jobUpdateParameter
-          type: <xref uid="@azure/batch.JobUpdateParameter" />
+          type: <xref uid="@azure/batch.models.index.d.JobUpdateParameter" />
           description: The parameters for the request.
         - id: options
-          type: <xref uid="@azure/batch.JobUpdateOptionalParams" />
+          type: <xref uid="@azure/batch.models.index.d.JobUpdateOptionalParams" />
           description: The optional parameters
         - id: callback
           type: ServiceCallback&lt;void&gt;
           description: |
             The callback
   - name: 'update(string, JobUpdateParameter, Models.JobUpdateOptionalParams)'
-    uid: '@azure/batch.Job.update'
+    uid: '@azure/batch.operations.job.d.Job.update'
     package: '@azure/batch'
     summary: >-
-      This fully replaces all the updatable properties of the job. For example,
-      if the job has
+      This fully replaces all the updatable properties of the Job. For example,
+      if the Job has
 
       constraints associated with it and if constraints is not specified with
       this request, then the
@@ -1220,9 +1256,9 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job whose properties you want to update.
+          description: The ID of the Job whose properties you want to update.
         - id: jobUpdateParameter
-          type: <xref uid="@azure/batch.JobUpdateParameter" />
+          type: <xref uid="@azure/batch.models.index.d.JobUpdateParameter" />
           description: The parameters for the request.
         - id: options
           type: <xref uid="Models.JobUpdateOptionalParams" />
@@ -1231,7 +1267,7 @@ methods:
         type: Promise&lt;<xref uid="Models.JobUpdateResponse" />&gt;
         description: Promise<Models.JobUpdateResponse>
   - name: 'update(string, JobUpdateParameter, ServiceCallback<void>)'
-    uid: '@azure/batch.Job.update_1'
+    uid: '@azure/batch.operations.job.d.Job.update_1'
     package: '@azure/batch'
     summary: ''
     remarks: ''
@@ -1244,9 +1280,9 @@ methods:
       parameters:
         - id: jobId
           type: string
-          description: The ID of the job whose properties you want to update.
+          description: The ID of the Job whose properties you want to update.
         - id: jobUpdateParameter
-          type: <xref uid="@azure/batch.JobUpdateParameter" />
+          type: <xref uid="@azure/batch.models.index.d.JobUpdateParameter" />
           description: The parameters for the request.
         - id: callback
           type: ServiceCallback&lt;void&gt;

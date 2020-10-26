@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Registry
-uid: azure-iothub.Registry
+uid: azure-iothub.registry.d.Registry
 package: azure-iothub
 summary: >
   The Registry class provides access to the IoT Hub device identity service.
@@ -19,7 +19,7 @@ isDeprecated: false
 type: class
 methods:
   - name: addConfiguration(Configuration)
-    uid: azure-iothub.Registry.addConfiguration_1
+    uid: azure-iothub.registry.d.Registry.addConfiguration_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -29,13 +29,13 @@ methods:
       content: 'function addConfiguration(configuration: Configuration)'
       parameters:
         - id: configuration
-          type: <xref uid="azure-iothub.Configuration" />
+          type: <xref uid="azure-iothub.configuration.d.Configuration" />
           description: ''
       return:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'addConfiguration(Configuration, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.addConfiguration
+    uid: azure-iothub.registry.d.Registry.addConfiguration
     package: azure-iothub
     summary: Add a configuration to an IoT hub.
     remarks: ''
@@ -47,7 +47,7 @@ methods:
         HttpResponseCallback<any>)
       parameters:
         - id: configuration
-          type: <xref uid="azure-iothub.Configuration" />
+          type: <xref uid="azure-iothub.configuration.d.Configuration" />
           description: |-
             An object of type module:azure-iothub.Configuration
                                                  to add to the hub
@@ -55,7 +55,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'addDevices(DeviceDescription[])'
-    uid: azure-iothub.Registry.addDevices_1
+    uid: azure-iothub.registry.d.Registry.addDevices_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -65,17 +65,18 @@ methods:
       content: 'function addDevices(devices: DeviceDescription[])'
       parameters:
         - id: devices
-          type: '<xref uid="azure-iothub.Registry.DeviceDescription" />[]'
+          type: '<xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />[]'
           description: ''
       return:
         type: >-
           Promise&lt;ResultWithHttpResponse&lt;<xref
-          uid="azure-iothub.Registry.BulkRegistryOperationResult" />&gt;&gt;
+          uid="azure-iothub.registry.d.Registry.BulkRegistryOperationResult"
+          />&gt;&gt;
         description: ''
   - name: >-
       addDevices(DeviceDescription[],
       HttpResponseCallback<BulkRegistryOperationResult>)
-    uid: azure-iothub.Registry.addDevices
+    uid: azure-iothub.registry.d.Registry.addDevices
     package: azure-iothub
     summary: Adds an array of devices.
     remarks: ''
@@ -87,7 +88,7 @@ methods:
         HttpResponseCallback<BulkRegistryOperationResult>)
       parameters:
         - id: devices
-          type: '<xref uid="azure-iothub.Registry.DeviceDescription" />[]'
+          type: '<xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />[]'
           description: |-
             An array of objects which must include a `deviceId`
                                            property whose value is a valid device
@@ -95,10 +96,11 @@ methods:
         - id: done
           type: >-
             HttpResponseCallback&lt;<xref
-            uid="azure-iothub.Registry.BulkRegistryOperationResult" />&gt;
+            uid="azure-iothub.registry.d.Registry.BulkRegistryOperationResult"
+            />&gt;
           description: ''
   - name: addModule(Module)
-    uid: azure-iothub.Registry.addModule_1
+    uid: azure-iothub.registry.d.Registry.addModule_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -108,13 +110,13 @@ methods:
       content: 'function addModule(module: Module)'
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: ''
       return:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'addModule(Module, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.addModule
+    uid: azure-iothub.registry.d.Registry.addModule
     package: azure-iothub
     summary: Add the given module to the registry.
     remarks: ''
@@ -124,13 +126,13 @@ methods:
       content: 'function addModule(module: Module, done: HttpResponseCallback<any>)'
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: Module object to add to the registry.
         - id: done
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'applyConfigurationContentOnDevice(string, ConfigurationContent)'
-    uid: azure-iothub.Registry.applyConfigurationContentOnDevice_1
+    uid: azure-iothub.registry.d.Registry.applyConfigurationContentOnDevice_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -145,7 +147,7 @@ methods:
           type: string
           description: ''
         - id: content
-          type: <xref uid="azure-iothub.ConfigurationContent" />
+          type: <xref uid="azure-iothub.configuration.d.ConfigurationContent" />
           description: ''
       return:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
@@ -153,7 +155,7 @@ methods:
   - name: >-
       applyConfigurationContentOnDevice(string, ConfigurationContent,
       HttpResponseCallback<any>)
-    uid: azure-iothub.Registry.applyConfigurationContentOnDevice
+    uid: azure-iothub.registry.d.Registry.applyConfigurationContentOnDevice
     package: azure-iothub
     summary: Apply the given configuration to a device on an IoT Hub
     remarks: ''
@@ -168,13 +170,13 @@ methods:
           type: string
           description: ID of the device to apply the configuration to
         - id: content
-          type: <xref uid="azure-iothub.ConfigurationContent" />
+          type: <xref uid="azure-iothub.configuration.d.ConfigurationContent" />
           description: The Configuration to apply
         - id: done
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: cancelJob(string)
-    uid: azure-iothub.Registry.cancelJob_1
+    uid: azure-iothub.registry.d.Registry.cancelJob_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -187,10 +189,12 @@ methods:
           type: string
           description: ''
       return:
-        type: Promise&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+        type: >-
+          Promise&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+          />&gt;
         description: ''
   - name: 'cancelJob(string, Callback<JobStatus>)'
-    uid: azure-iothub.Registry.cancelJob
+    uid: azure-iothub.registry.d.Registry.cancelJob
     package: azure-iothub
     summary: Cancel a bulk import/export job.
     remarks: ''
@@ -205,10 +209,12 @@ methods:
             The identifier of the job for which the user wants to get status
             information.
         - id: done
-          type: Callback&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+          type: >-
+            Callback&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+            />&gt;
           description: ''
   - name: create(DeviceDescription)
-    uid: azure-iothub.Registry.create_1
+    uid: azure-iothub.registry.d.Registry.create_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -218,15 +224,15 @@ methods:
       content: 'function create(deviceInfo: DeviceDescription)'
       parameters:
         - id: deviceInfo
-          type: <xref uid="azure-iothub.Registry.DeviceDescription" />
+          type: <xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Device"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.device.d.Device" />&gt;&gt;
         description: ''
   - name: 'create(DeviceDescription, HttpResponseCallback<Device>)'
-    uid: azure-iothub.Registry.create
+    uid: azure-iothub.registry.d.Registry.create
     package: azure-iothub
     summary: Creates a new device identity on an IoT hub.
     remarks: ''
@@ -238,15 +244,17 @@ methods:
         HttpResponseCallback<Device>)
       parameters:
         - id: deviceInfo
-          type: <xref uid="azure-iothub.Registry.DeviceDescription" />
+          type: <xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />
           description: |-
             The object must include a `deviceId` property
                                            with a valid device identifier.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Device" />&gt;
+          type: >-
+            HttpResponseCallback&lt;<xref uid="azure-iothub.device.d.Device"
+            />&gt;
           description: ''
   - name: 'createQuery(string, number)'
-    uid: azure-iothub.Registry.createQuery
+    uid: azure-iothub.registry.d.Registry.createQuery
     package: azure-iothub
     summary: >-
       Creates a query that can be run on the IoT Hub instance to find
@@ -266,10 +274,10 @@ methods:
             The desired number of results per page (optional. default: 1000,
             max: 10000).
       return:
-        type: <xref uid="azure-iothub.Query" />
+        type: <xref uid="azure-iothub.query.d.Query" />
         description: ''
   - name: delete(string)
-    uid: azure-iothub.Registry.delete_1
+    uid: azure-iothub.registry.d.Registry.delete_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -285,7 +293,7 @@ methods:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'delete(string, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.delete
+    uid: azure-iothub.registry.d.Registry.delete
     package: azure-iothub
     summary: Removes an existing device identity from an IoT hub.
     remarks: ''
@@ -301,7 +309,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'exportDevicesToBlob(string, boolean)'
-    uid: azure-iothub.Registry.exportDevicesToBlob_1
+    uid: azure-iothub.registry.d.Registry.exportDevicesToBlob_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -319,10 +327,12 @@ methods:
           type: boolean
           description: ''
       return:
-        type: Promise&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+        type: >-
+          Promise&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+          />&gt;
         description: ''
   - name: 'exportDevicesToBlob(string, boolean, Callback<JobStatus>)'
-    uid: azure-iothub.Registry.exportDevicesToBlob
+    uid: azure-iothub.registry.d.Registry.exportDevicesToBlob
     package: azure-iothub
     summary: Export devices to a blob in a bulk job.
     remarks: ''
@@ -344,10 +354,12 @@ methods:
             Boolean indicating whether security keys should be excluded from the
             exported data.
         - id: done
-          type: Callback&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+          type: >-
+            Callback&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+            />&gt;
           description: ''
   - name: 'exportDevicesToBlobByIdentity(string, boolean)'
-    uid: azure-iothub.Registry.exportDevicesToBlobByIdentity_1
+    uid: azure-iothub.registry.d.Registry.exportDevicesToBlobByIdentity_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -365,10 +377,12 @@ methods:
           type: boolean
           description: ''
       return:
-        type: Promise&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+        type: >-
+          Promise&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+          />&gt;
         description: ''
   - name: 'exportDevicesToBlobByIdentity(string, boolean, Callback<JobStatus>)'
-    uid: azure-iothub.Registry.exportDevicesToBlobByIdentity
+    uid: azure-iothub.registry.d.Registry.exportDevicesToBlobByIdentity
     package: azure-iothub
     summary: >-
       Export devices to a blob in a bulk job using the configured identity. 
@@ -394,10 +408,12 @@ methods:
             Boolean indicating whether security keys should be excluded from the
             exported data.
         - id: done
-          type: Callback&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+          type: >-
+            Callback&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+            />&gt;
           description: ''
   - name: fromConnectionString(string)
-    uid: azure-iothub.Registry.fromConnectionString
+    uid: azure-iothub.registry.d.Registry.fromConnectionString
     package: azure-iothub
     summary: Constructs a Registry object from the given connection string.
     remarks: ''
@@ -413,10 +429,10 @@ methods:
                                          appropriate (read and/or write) Registry
                                          permissions.
       return:
-        type: <xref uid="azure-iothub.Registry" />
+        type: <xref uid="azure-iothub.registry.d.Registry" />
         description: ''
   - name: fromSharedAccessSignature(string)
-    uid: azure-iothub.Registry.fromSharedAccessSignature
+    uid: azure-iothub.registry.d.Registry.fromSharedAccessSignature
     package: azure-iothub
     summary: Constructs a Registry object from the given shared access signature.
     remarks: ''
@@ -432,10 +448,10 @@ methods:
                                          the appropriate (read and/or write) Registry
                                          permissions.
       return:
-        type: <xref uid="azure-iothub.Registry" />
+        type: <xref uid="azure-iothub.registry.d.Registry" />
         description: ''
   - name: get(string)
-    uid: azure-iothub.Registry.get_1
+    uid: azure-iothub.registry.d.Registry.get_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -449,11 +465,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Device"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.device.d.Device" />&gt;&gt;
         description: ''
   - name: 'get(string, HttpResponseCallback<Device>)'
-    uid: azure-iothub.Registry.get
+    uid: azure-iothub.registry.d.Registry.get
     package: azure-iothub
     summary: |-
       Requests information about an existing device identity
@@ -468,10 +484,12 @@ methods:
           type: string
           description: The identifier of an existing device identity.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Device" />&gt;
+          type: >-
+            HttpResponseCallback&lt;<xref uid="azure-iothub.device.d.Device"
+            />&gt;
           description: ''
   - name: getConfiguration(string)
-    uid: azure-iothub.Registry.getConfiguration_1
+    uid: azure-iothub.registry.d.Registry.getConfiguration_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -486,10 +504,10 @@ methods:
       return:
         type: >-
           Promise&lt;ResultWithHttpResponse&lt;<xref
-          uid="azure-iothub.Configuration" />&gt;&gt;
+          uid="azure-iothub.configuration.d.Configuration" />&gt;&gt;
         description: ''
   - name: 'getConfiguration(string, HttpResponseCallback<Configuration>)'
-    uid: azure-iothub.Registry.getConfiguration
+    uid: azure-iothub.registry.d.Registry.getConfiguration
     package: azure-iothub
     summary: Get a single configuration from an IoT Hub
     remarks: ''
@@ -505,11 +523,11 @@ methods:
           description: The ID of the configuration you with to retrieve
         - id: done
           type: >-
-            HttpResponseCallback&lt;<xref uid="azure-iothub.Configuration"
-            />&gt;
+            HttpResponseCallback&lt;<xref
+            uid="azure-iothub.configuration.d.Configuration" />&gt;
           description: ''
   - name: getConfigurations()
-    uid: azure-iothub.Registry.getConfigurations_1
+    uid: azure-iothub.registry.d.Registry.getConfigurations_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -520,10 +538,10 @@ methods:
       return:
         type: >-
           Promise&lt;ResultWithHttpResponse&lt;<xref
-          uid="azure-iothub.Configuration" />[]&gt;&gt;
+          uid="azure-iothub.configuration.d.Configuration" />[]&gt;&gt;
         description: ''
   - name: 'getConfigurations(HttpResponseCallback<Configuration[]>)'
-    uid: azure-iothub.Registry.getConfigurations
+    uid: azure-iothub.registry.d.Registry.getConfigurations
     package: azure-iothub
     summary: Get all configurations on an IoT Hub
     remarks: ''
@@ -534,11 +552,11 @@ methods:
       parameters:
         - id: done
           type: >-
-            HttpResponseCallback&lt;<xref uid="azure-iothub.Configuration"
-            />[]&gt;
+            HttpResponseCallback&lt;<xref
+            uid="azure-iothub.configuration.d.Configuration" />[]&gt;
           description: ''
   - name: getJob(string)
-    uid: azure-iothub.Registry.getJob_1
+    uid: azure-iothub.registry.d.Registry.getJob_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -551,10 +569,12 @@ methods:
           type: string
           description: ''
       return:
-        type: Promise&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+        type: >-
+          Promise&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+          />&gt;
         description: ''
   - name: 'getJob(string, Callback<JobStatus>)'
-    uid: azure-iothub.Registry.getJob
+    uid: azure-iothub.registry.d.Registry.getJob
     package: azure-iothub
     summary: Get the status of a bulk import/export job.
     remarks: ''
@@ -569,10 +589,12 @@ methods:
             The identifier of the job for which the user wants to get status
             information.
         - id: done
-          type: Callback&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+          type: >-
+            Callback&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+            />&gt;
           description: ''
   - name: 'getModule(string, string)'
-    uid: azure-iothub.Registry.getModule_1
+    uid: azure-iothub.registry.d.Registry.getModule_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -589,11 +611,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Module"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.module.d.Module" />&gt;&gt;
         description: ''
   - name: 'getModule(string, string, HttpResponseCallback<Module>)'
-    uid: azure-iothub.Registry.getModule
+    uid: azure-iothub.registry.d.Registry.getModule
     package: azure-iothub
     summary: Get a single module from a device on an IoT Hub
     remarks: ''
@@ -611,10 +633,12 @@ methods:
           type: string
           description: Module ID to retrieve
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Module" />&gt;
+          type: >-
+            HttpResponseCallback&lt;<xref uid="azure-iothub.module.d.Module"
+            />&gt;
           description: ''
   - name: getModulesOnDevice(string)
-    uid: azure-iothub.Registry.getModulesOnDevice_1
+    uid: azure-iothub.registry.d.Registry.getModulesOnDevice_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -628,11 +652,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Module"
-          />[]&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.module.d.Module" />[]&gt;&gt;
         description: ''
   - name: 'getModulesOnDevice(string, HttpResponseCallback<Module[]>)'
-    uid: azure-iothub.Registry.getModulesOnDevice
+    uid: azure-iothub.registry.d.Registry.getModulesOnDevice
     package: azure-iothub
     summary: Get a list of all modules on an IoT Hub device
     remarks: ''
@@ -647,10 +671,12 @@ methods:
           type: string
           description: ID of the device we're getting modules for
         - id: done
-          type: 'HttpResponseCallback&lt;<xref uid="azure-iothub.Module" />[]&gt;'
+          type: >-
+            HttpResponseCallback&lt;<xref uid="azure-iothub.module.d.Module"
+            />[]&gt;
           description: ''
   - name: 'getModuleTwin(string, string)'
-    uid: azure-iothub.Registry.getModuleTwin_1
+    uid: azure-iothub.registry.d.Registry.getModuleTwin_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -667,11 +693,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Twin"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.twin.d.Twin" />&gt;&gt;
         description: ''
   - name: 'getModuleTwin(string, string, HttpResponseCallback<Twin>)'
-    uid: azure-iothub.Registry.getModuleTwin
+    uid: azure-iothub.registry.d.Registry.getModuleTwin
     package: azure-iothub
     summary: Gets the Module Twin of the module with the specified module identifier.
     remarks: ''
@@ -689,10 +715,10 @@ methods:
           type: string
           description: The module identifier.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Twin" />&gt;
+          type: HttpResponseCallback&lt;<xref uid="azure-iothub.twin.d.Twin" />&gt;
           description: ''
   - name: getRegistryStatistics()
-    uid: azure-iothub.Registry.getRegistryStatistics_1
+    uid: azure-iothub.registry.d.Registry.getRegistryStatistics_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -703,10 +729,10 @@ methods:
       return:
         type: >-
           Promise&lt;ResultWithHttpResponse&lt;<xref
-          uid="azure-iothub.Registry.RegistryStatistics" />&gt;&gt;
+          uid="azure-iothub.registry.d.Registry.RegistryStatistics" />&gt;&gt;
         description: ''
   - name: getRegistryStatistics(HttpResponseCallback<RegistryStatistics>)
-    uid: azure-iothub.Registry.getRegistryStatistics
+    uid: azure-iothub.registry.d.Registry.getRegistryStatistics
     package: azure-iothub
     summary: Gets statistics about the devices in the device identity registry.
     remarks: ''
@@ -720,10 +746,10 @@ methods:
         - id: done
           type: >-
             HttpResponseCallback&lt;<xref
-            uid="azure-iothub.Registry.RegistryStatistics" />&gt;
+            uid="azure-iothub.registry.d.Registry.RegistryStatistics" />&gt;
           description: ''
   - name: getTwin(string)
-    uid: azure-iothub.Registry.getTwin_1
+    uid: azure-iothub.registry.d.Registry.getTwin_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -737,11 +763,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Twin"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.twin.d.Twin" />&gt;&gt;
         description: ''
   - name: 'getTwin(string, HttpResponseCallback<Twin>)'
-    uid: azure-iothub.Registry.getTwin
+    uid: azure-iothub.registry.d.Registry.getTwin
     package: azure-iothub
     summary: Gets the Device Twin of the device with the specified device identifier.
     remarks: ''
@@ -754,10 +780,10 @@ methods:
           type: string
           description: The device identifier.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Twin" />&gt;
+          type: HttpResponseCallback&lt;<xref uid="azure-iothub.twin.d.Twin" />&gt;
           description: ''
   - name: 'importDevicesFromBlob(string, string)'
-    uid: azure-iothub.Registry.importDevicesFromBlob_1
+    uid: azure-iothub.registry.d.Registry.importDevicesFromBlob_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -775,10 +801,12 @@ methods:
           type: string
           description: ''
       return:
-        type: Promise&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+        type: >-
+          Promise&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+          />&gt;
         description: ''
   - name: 'importDevicesFromBlob(string, string, Callback<JobStatus>)'
-    uid: azure-iothub.Registry.importDevicesFromBlob
+    uid: azure-iothub.registry.d.Registry.importDevicesFromBlob
     package: azure-iothub
     summary: Imports devices from a blob in bulk job.
     remarks: ''
@@ -800,10 +828,12 @@ methods:
             The URI to a container where a blob will be created with logs of the
             import process.
         - id: done
-          type: Callback&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+          type: >-
+            Callback&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+            />&gt;
           description: ''
   - name: 'importDevicesFromBlobByIdentity(string, string)'
-    uid: azure-iothub.Registry.importDevicesFromBlobByIdentity_1
+    uid: azure-iothub.registry.d.Registry.importDevicesFromBlobByIdentity_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -821,10 +851,12 @@ methods:
           type: string
           description: ''
       return:
-        type: Promise&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+        type: >-
+          Promise&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+          />&gt;
         description: ''
   - name: 'importDevicesFromBlobByIdentity(string, string, Callback<JobStatus>)'
-    uid: azure-iothub.Registry.importDevicesFromBlobByIdentity
+    uid: azure-iothub.registry.d.Registry.importDevicesFromBlobByIdentity
     package: azure-iothub
     summary: >-
       Imports devices from a blob in bulk job using the configured identity. 
@@ -850,10 +882,12 @@ methods:
             The URI to a container where a blob will be created with logs of the
             import process.
         - id: done
-          type: Callback&lt;<xref uid="azure-iothub.Registry.JobStatus" />&gt;
+          type: >-
+            Callback&lt;<xref uid="azure-iothub.registry.d.Registry.JobStatus"
+            />&gt;
           description: ''
   - name: list()
-    uid: azure-iothub.Registry.list_1
+    uid: azure-iothub.registry.d.Registry.list_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -863,11 +897,11 @@ methods:
       content: function list()
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Device"
-          />[]&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.device.d.Device" />[]&gt;&gt;
         description: ''
   - name: 'list(HttpResponseCallback<Device[]>)'
-    uid: azure-iothub.Registry.list
+    uid: azure-iothub.registry.d.Registry.list
     package: azure-iothub
     summary: |-
       Requests information about the first 1000 device
@@ -879,10 +913,12 @@ methods:
       content: 'function list(done: HttpResponseCallback<Device[]>)'
       parameters:
         - id: done
-          type: 'HttpResponseCallback&lt;<xref uid="azure-iothub.Device" />[]&gt;'
+          type: >-
+            HttpResponseCallback&lt;<xref uid="azure-iothub.device.d.Device"
+            />[]&gt;
           description: ''
   - name: listJobs()
-    uid: azure-iothub.Registry.listJobs_1
+    uid: azure-iothub.registry.d.Registry.listJobs_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -894,7 +930,7 @@ methods:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: listJobs(HttpResponseCallback<any>)
-    uid: azure-iothub.Registry.listJobs
+    uid: azure-iothub.registry.d.Registry.listJobs
     package: azure-iothub
     summary: 'List the last import/export jobs (including the active one, if any).'
     remarks: ''
@@ -907,7 +943,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: removeConfiguration(string)
-    uid: azure-iothub.Registry.removeConfiguration_1
+    uid: azure-iothub.registry.d.Registry.removeConfiguration_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -923,7 +959,7 @@ methods:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'removeConfiguration(string, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.removeConfiguration
+    uid: azure-iothub.registry.d.Registry.removeConfiguration
     package: azure-iothub
     summary: Remove a configuration with the given ID from an IoT Hub
     remarks: ''
@@ -941,7 +977,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'removeDevices(DeviceDescription[], boolean)'
-    uid: azure-iothub.Registry.removeDevices_1
+    uid: azure-iothub.registry.d.Registry.removeDevices_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -953,7 +989,7 @@ methods:
         boolean)
       parameters:
         - id: devices
-          type: '<xref uid="azure-iothub.Registry.DeviceDescription" />[]'
+          type: '<xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />[]'
           description: ''
         - id: forceRemove
           type: boolean
@@ -961,12 +997,13 @@ methods:
       return:
         type: >-
           Promise&lt;ResultWithHttpResponse&lt;<xref
-          uid="azure-iothub.Registry.BulkRegistryOperationResult" />&gt;&gt;
+          uid="azure-iothub.registry.d.Registry.BulkRegistryOperationResult"
+          />&gt;&gt;
         description: ''
   - name: >-
       removeDevices(DeviceDescription[], boolean,
       HttpResponseCallback<BulkRegistryOperationResult>)
-    uid: azure-iothub.Registry.removeDevices
+    uid: azure-iothub.registry.d.Registry.removeDevices
     package: azure-iothub
     summary: Updates an array of devices.
     remarks: ''
@@ -978,7 +1015,7 @@ methods:
         boolean, done: HttpResponseCallback<BulkRegistryOperationResult>)
       parameters:
         - id: devices
-          type: '<xref uid="azure-iothub.Registry.DeviceDescription" />[]'
+          type: '<xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />[]'
           description: |-
             An array of objects which must include a `deviceId`
                                            property whose value is a valid device
@@ -992,10 +1029,11 @@ methods:
         - id: done
           type: >-
             HttpResponseCallback&lt;<xref
-            uid="azure-iothub.Registry.BulkRegistryOperationResult" />&gt;
+            uid="azure-iothub.registry.d.Registry.BulkRegistryOperationResult"
+            />&gt;
           description: ''
   - name: removeModule(Module | string)
-    uid: azure-iothub.Registry.removeModule_3
+    uid: azure-iothub.registry.d.Registry.removeModule_3
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1005,13 +1043,13 @@ methods:
       content: 'function removeModule(moduleOrDeviceId: Module | string)'
       parameters:
         - id: moduleOrDeviceId
-          type: <xref uid="azure-iothub.Module" /> | string
+          type: <xref uid="azure-iothub.module.d.Module" /> | string
           description: ''
       return:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'removeModule(Module | string, string)'
-    uid: azure-iothub.Registry.removeModule_2
+    uid: azure-iothub.registry.d.Registry.removeModule_2
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1023,7 +1061,7 @@ methods:
         string)
       parameters:
         - id: moduleOrDeviceId
-          type: <xref uid="azure-iothub.Module" /> | string
+          type: <xref uid="azure-iothub.module.d.Module" /> | string
           description: ''
         - id: moduleId
           type: string
@@ -1032,7 +1070,7 @@ methods:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'removeModule(Module, TripleValueCallback<any, any>)'
-    uid: azure-iothub.Registry.removeModule
+    uid: azure-iothub.registry.d.Registry.removeModule
     package: azure-iothub
     summary: Remove the given module from the registry
     remarks: ''
@@ -1044,13 +1082,13 @@ methods:
         any>)
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: ''
         - id: done
           type: 'TripleValueCallback&lt;any, any&gt;'
           description: ''
   - name: 'removeModule(string, string, TripleValueCallback<any, any>)'
-    uid: azure-iothub.Registry.removeModule_1
+    uid: azure-iothub.registry.d.Registry.removeModule_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1071,7 +1109,7 @@ methods:
           type: 'TripleValueCallback&lt;any, any&gt;'
           description: ''
   - name: update(DeviceDescription)
-    uid: azure-iothub.Registry.update_1
+    uid: azure-iothub.registry.d.Registry.update_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1081,15 +1119,15 @@ methods:
       content: 'function update(deviceInfo: DeviceDescription)'
       parameters:
         - id: deviceInfo
-          type: <xref uid="azure-iothub.Registry.DeviceDescription" />
+          type: <xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Device"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.device.d.Device" />&gt;&gt;
         description: ''
   - name: 'update(DeviceDescription, HttpResponseCallback<Device>)'
-    uid: azure-iothub.Registry.update
+    uid: azure-iothub.registry.d.Registry.update
     package: azure-iothub
     summary: |-
       Updates an existing device identity on an IoT hub with
@@ -1103,16 +1141,18 @@ methods:
         HttpResponseCallback<Device>)
       parameters:
         - id: deviceInfo
-          type: <xref uid="azure-iothub.Registry.DeviceDescription" />
+          type: <xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />
           description: |-
             An object which must include a `deviceId`
                                            property whose value is a valid device
                                            identifier.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Device" />&gt;
+          type: >-
+            HttpResponseCallback&lt;<xref uid="azure-iothub.device.d.Device"
+            />&gt;
           description: ''
   - name: updateConfiguration(Configuration)
-    uid: azure-iothub.Registry.updateConfiguration_3
+    uid: azure-iothub.registry.d.Registry.updateConfiguration_3
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1122,13 +1162,13 @@ methods:
       content: 'function updateConfiguration(configuration: Configuration)'
       parameters:
         - id: configuration
-          type: <xref uid="azure-iothub.Configuration" />
+          type: <xref uid="azure-iothub.configuration.d.Configuration" />
           description: ''
       return:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'updateConfiguration(Configuration, boolean)'
-    uid: azure-iothub.Registry.updateConfiguration_2
+    uid: azure-iothub.registry.d.Registry.updateConfiguration_2
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1140,7 +1180,7 @@ methods:
         boolean)
       parameters:
         - id: configuration
-          type: <xref uid="azure-iothub.Configuration" />
+          type: <xref uid="azure-iothub.configuration.d.Configuration" />
           description: ''
         - id: forceUpdate
           type: boolean
@@ -1149,7 +1189,7 @@ methods:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'updateConfiguration(Configuration, boolean, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.updateConfiguration_1
+    uid: azure-iothub.registry.d.Registry.updateConfiguration_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1161,7 +1201,7 @@ methods:
         boolean, done: HttpResponseCallback<any>)
       parameters:
         - id: configuration
-          type: <xref uid="azure-iothub.Configuration" />
+          type: <xref uid="azure-iothub.configuration.d.Configuration" />
           description: ''
         - id: forceUpdate
           type: boolean
@@ -1170,7 +1210,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'updateConfiguration(Configuration, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.updateConfiguration
+    uid: azure-iothub.registry.d.Registry.updateConfiguration
     package: azure-iothub
     summary: Update a configuration in an IoT hub
     remarks: ''
@@ -1182,7 +1222,7 @@ methods:
         HttpResponseCallback<any>)
       parameters:
         - id: configuration
-          type: <xref uid="azure-iothub.Configuration" />
+          type: <xref uid="azure-iothub.configuration.d.Configuration" />
           description: |-
             An object of type module:azure-iothub.Configuration
                                                  to add to the hub
@@ -1190,7 +1230,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'updateDevices(DeviceDescription[], boolean)'
-    uid: azure-iothub.Registry.updateDevices_1
+    uid: azure-iothub.registry.d.Registry.updateDevices_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1202,7 +1242,7 @@ methods:
         boolean)
       parameters:
         - id: devices
-          type: '<xref uid="azure-iothub.Registry.DeviceDescription" />[]'
+          type: '<xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />[]'
           description: ''
         - id: forceUpdate
           type: boolean
@@ -1210,12 +1250,13 @@ methods:
       return:
         type: >-
           Promise&lt;ResultWithHttpResponse&lt;<xref
-          uid="azure-iothub.Registry.BulkRegistryOperationResult" />&gt;&gt;
+          uid="azure-iothub.registry.d.Registry.BulkRegistryOperationResult"
+          />&gt;&gt;
         description: ''
   - name: >-
       updateDevices(DeviceDescription[], boolean,
       HttpResponseCallback<BulkRegistryOperationResult>)
-    uid: azure-iothub.Registry.updateDevices
+    uid: azure-iothub.registry.d.Registry.updateDevices
     package: azure-iothub
     summary: Updates an array of devices.
     remarks: ''
@@ -1227,7 +1268,7 @@ methods:
         boolean, done: HttpResponseCallback<BulkRegistryOperationResult>)
       parameters:
         - id: devices
-          type: '<xref uid="azure-iothub.Registry.DeviceDescription" />[]'
+          type: '<xref uid="azure-iothub.registry.d.Registry.DeviceDescription" />[]'
           description: |-
             An array of objects which must include a `deviceId`
                                            property whose value is a valid device
@@ -1241,10 +1282,11 @@ methods:
         - id: done
           type: >-
             HttpResponseCallback&lt;<xref
-            uid="azure-iothub.Registry.BulkRegistryOperationResult" />&gt;
+            uid="azure-iothub.registry.d.Registry.BulkRegistryOperationResult"
+            />&gt;
           description: ''
   - name: updateModule(Module)
-    uid: azure-iothub.Registry.updateModule_3
+    uid: azure-iothub.registry.d.Registry.updateModule_3
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1254,13 +1296,13 @@ methods:
       content: 'function updateModule(module: Module)'
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: ''
       return:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'updateModule(Module, boolean)'
-    uid: azure-iothub.Registry.updateModule_2
+    uid: azure-iothub.registry.d.Registry.updateModule_2
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1270,7 +1312,7 @@ methods:
       content: 'function updateModule(module: Module, forceUpdate: boolean)'
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: ''
         - id: forceUpdate
           type: boolean
@@ -1279,7 +1321,7 @@ methods:
         type: Promise&lt;ResultWithHttpResponse&lt;any&gt;&gt;
         description: ''
   - name: 'updateModule(Module, boolean, HttpResponseCallback<any>)'
-    uid: azure-iothub.Registry.updateModule_1
+    uid: azure-iothub.registry.d.Registry.updateModule_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1291,7 +1333,7 @@ methods:
         HttpResponseCallback<any>)
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: ''
         - id: forceUpdate
           type: boolean
@@ -1300,7 +1342,7 @@ methods:
           type: HttpResponseCallback&lt;any&gt;
           description: ''
   - name: 'updateModule(Module, TripleValueCallback<any, any>)'
-    uid: azure-iothub.Registry.updateModule
+    uid: azure-iothub.registry.d.Registry.updateModule
     package: azure-iothub
     summary: Update the given module object in the registry
     remarks: ''
@@ -1312,13 +1354,13 @@ methods:
         any>)
       parameters:
         - id: module
-          type: <xref uid="azure-iothub.Module" />
+          type: <xref uid="azure-iothub.module.d.Module" />
           description: Module object to update.
         - id: done
           type: 'TripleValueCallback&lt;any, any&gt;'
           description: ''
   - name: 'updateModuleTwin(string, string, any, string)'
-    uid: azure-iothub.Registry.updateModuleTwin_1
+    uid: azure-iothub.registry.d.Registry.updateModuleTwin_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1343,11 +1385,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Twin"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.twin.d.Twin" />&gt;&gt;
         description: ''
   - name: 'updateModuleTwin(string, string, any, string, HttpResponseCallback<Twin>)'
-    uid: azure-iothub.Registry.updateModuleTwin
+    uid: azure-iothub.registry.d.Registry.updateModuleTwin
     package: azure-iothub
     summary: Updates the Twin of a specific module with the given patch.
     remarks: ''
@@ -1374,10 +1416,10 @@ methods:
             if
                                              the module twin has been updated since the etag was obtained.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Twin" />&gt;
+          type: HttpResponseCallback&lt;<xref uid="azure-iothub.twin.d.Twin" />&gt;
           description: ''
   - name: 'updateTwin(string, any, string)'
-    uid: azure-iothub.Registry.updateTwin_1
+    uid: azure-iothub.registry.d.Registry.updateTwin_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -1397,11 +1439,11 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;ResultWithHttpResponse&lt;<xref uid="azure-iothub.Twin"
-          />&gt;&gt;
+          Promise&lt;ResultWithHttpResponse&lt;<xref
+          uid="azure-iothub.twin.d.Twin" />&gt;&gt;
         description: ''
   - name: 'updateTwin(string, any, string, HttpResponseCallback<Twin>)'
-    uid: azure-iothub.Registry.updateTwin
+    uid: azure-iothub.registry.d.Registry.updateTwin
     package: azure-iothub
     summary: Updates the Device Twin of a specific device with the given patch.
     remarks: ''
@@ -1425,5 +1467,5 @@ methods:
             if
                                             the device twin has been updated since the etag was obtained.
         - id: done
-          type: HttpResponseCallback&lt;<xref uid="azure-iothub.Twin" />&gt;
+          type: HttpResponseCallback&lt;<xref uid="azure-iothub.twin.d.Twin" />&gt;
           description: ''

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AuthManager
-uid: '@azure/ms-rest-browserauth.AuthManager'
+uid: '@azure/ms-rest-browserauth.index.d.AuthManager'
 package: '@azure/ms-rest-browserauth'
 summary: Authenticates users to Azure AD and obtains tokens for API requests.
 fullName: AuthManager
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: AuthManager(AuthOptions)
-    uid: '@azure/ms-rest-browserauth.AuthManager.constructor'
+    uid: '@azure/ms-rest-browserauth.index.d.AuthManager.constructor'
     package: '@azure/ms-rest-browserauth'
     summary: ''
     remarks: ''
@@ -20,11 +20,11 @@ constructors:
       content: 'new AuthManager(opts: AuthOptions)'
       parameters:
         - id: opts
-          type: <xref uid="@azure/ms-rest-browserauth.AuthOptions" />
+          type: <xref uid="@azure/ms-rest-browserauth.index.d.AuthOptions" />
           description: ''
 methods:
   - name: finalizeLogin()
-    uid: '@azure/ms-rest-browserauth.AuthManager.finalizeLogin'
+    uid: '@azure/ms-rest-browserauth.index.d.AuthManager.finalizeLogin'
     package: '@azure/ms-rest-browserauth'
     summary: >-
       Should be called each time the page requiring auth loads.
@@ -37,12 +37,14 @@ methods:
     syntax:
       content: function finalizeLogin()
       return:
-        type: Promise&lt;<xref uid="@azure/ms-rest-browserauth.LoginResult" />&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/ms-rest-browserauth.index.d.LoginResult"
+          />&gt;
         description: >-
           a Promise resolving with the login result or rejecting with an error
           if one occurred.
   - name: login()
-    uid: '@azure/ms-rest-browserauth.AuthManager.login'
+    uid: '@azure/ms-rest-browserauth.index.d.AuthManager.login'
     package: '@azure/ms-rest-browserauth'
     summary: >-
       Logs the user into Azure AD via redirect.
@@ -55,7 +57,7 @@ methods:
     syntax:
       content: function login()
   - name: logout()
-    uid: '@azure/ms-rest-browserauth.AuthManager.logout'
+    uid: '@azure/ms-rest-browserauth.index.d.AuthManager.logout'
     package: '@azure/ms-rest-browserauth'
     summary: Logs the user out of Azure AD via redirect.
     remarks: ''

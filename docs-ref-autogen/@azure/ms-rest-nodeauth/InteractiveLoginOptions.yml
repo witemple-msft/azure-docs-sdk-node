@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: InteractiveLoginOptions
-uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions'
+uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions'
 package: '@azure/ms-rest-nodeauth'
 summary: ''
 fullName: InteractiveLoginOptions
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: clientId
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.clientId'
+    uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.clientId'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {string} [clientId] - The active directory application client id.
@@ -29,7 +29,7 @@ properties:
         type: undefined | string
         description: ''
   - name: domain
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.domain'
+    uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.domain'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {string} [domain] - The domain or tenant Id containing this application.
@@ -44,7 +44,7 @@ properties:
         type: undefined | string
         description: ''
   - name: environment
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.environment'
+    uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.environment'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {AzureEnvironment} [environment] - The Azure environment to authenticate
@@ -59,7 +59,7 @@ properties:
         type: Environment
         description: ''
   - name: language
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.language'
+    uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.language'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {string} [language] The language code specifying how the message should be
@@ -74,7 +74,7 @@ properties:
         type: undefined | string
         description: ''
   - name: tokenAudience
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenAudience'
+    uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.tokenAudience'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {TokenAudience} [tokenAudience] - The audience for which the token is
@@ -91,10 +91,12 @@ properties:
     syntax:
       content: 'tokenAudience?: TokenAudience'
       return:
-        type: <xref uid="@azure/ms-rest-nodeauth.TokenAudience" />
+        type: >-
+          <xref uid="@azure/ms-rest-nodeauth.util.authConstants.d.TokenAudience"
+          />
         description: ''
   - name: tokenCache
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenCache'
+    uid: '@azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.tokenCache'
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {TokenCache} [tokenCache] - The token cache. Default value is MemoryCache
@@ -109,7 +111,8 @@ properties:
         type: <xref uid="adal.TokenCache" />
         description: ''
   - name: userCodeResponseLogger
-    uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.userCodeResponseLogger'
+    uid: >-
+      @azure/ms-rest-nodeauth.login.d.InteractiveLoginOptions.userCodeResponseLogger
     package: '@azure/ms-rest-nodeauth'
     summary: >-
       {object|function} [userCodeResponseLogger] A logger that logs the user
@@ -126,4 +129,6 @@ properties:
       return:
         type: any
         description: ''
-extends: <xref uid="@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions" />
+extends: >-
+  <xref uid="@azure/ms-rest-nodeauth.login.d.LoginWithUsernamePasswordOptions"
+  />

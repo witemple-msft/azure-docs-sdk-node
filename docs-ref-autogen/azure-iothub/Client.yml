@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Client
-uid: azure-iothub.Client
+uid: azure-iothub.client.d.Client
 package: azure-iothub
 summary: >
   The IoT Hub service client is used to communicate with devices through an
@@ -26,7 +26,7 @@ isDeprecated: false
 type: class
 properties:
   - name: defaultMaxListeners
-    uid: azure-iothub.Client.defaultMaxListeners
+    uid: azure-iothub.client.d.Client.defaultMaxListeners
     package: azure-iothub
     summary: ''
     fullName: defaultMaxListeners
@@ -39,7 +39,7 @@ properties:
         type: number
         description: ''
   - name: errorMonitor
-    uid: azure-iothub.Client.errorMonitor
+    uid: azure-iothub.client.d.Client.errorMonitor
     package: azure-iothub
     summary: >
       This symbol shall be used to install a listener for only monitoring
@@ -67,7 +67,7 @@ properties:
         description: ''
 methods:
   - name: 'addListener(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.addListener
+    uid: azure-iothub.client.d.Client.addListener
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -88,7 +88,7 @@ methods:
         type: this
         description: ''
   - name: close()
-    uid: azure-iothub.Client.close_1
+    uid: azure-iothub.client.d.Client.close_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -98,11 +98,12 @@ methods:
       content: function close()
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage"
           />&lt;Disconnected&gt;&gt;
         description: ''
   - name: close(IncomingMessageCallback<Disconnected>)
-    uid: azure-iothub.Client.close
+    uid: azure-iothub.client.d.Client.close
     package: azure-iothub
     summary: Closes the connection to an IoT hub.
     remarks: ''
@@ -113,11 +114,11 @@ methods:
       parameters:
         - id: done
           type: >-
-            <xref uid="azure-iothub.IncomingMessageCallback"
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
             />&lt;Disconnected&gt;
           description: ''
   - name: 'emit(string | symbol, any[])'
-    uid: azure-iothub.Client.emit
+    uid: azure-iothub.client.d.Client.emit
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -136,7 +137,7 @@ methods:
         type: boolean
         description: ''
   - name: eventNames()
-    uid: azure-iothub.Client.eventNames
+    uid: azure-iothub.client.d.Client.eventNames
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -148,7 +149,7 @@ methods:
         type: Array&lt;string | symbol&gt;
         description: ''
   - name: 'fromConnectionString(string, Client.TransportCtor)'
-    uid: azure-iothub.Client.fromConnectionString
+    uid: azure-iothub.client.d.Client.fromConnectionString
     package: azure-iothub
     summary: |-
       Creates an IoT Hub service client from the given
@@ -168,13 +169,13 @@ methods:
             A connection string which encapsulates "device
                                              connect" permissions on an IoT hub.
         - id: transportCtor
-          type: <xref uid="azure-iothub.Client.TransportCtor" />
+          type: <xref uid="azure-iothub.client.d.Client.TransportCtor" />
           description: ''
       return:
-        type: <xref uid="azure-iothub.Client" />
+        type: <xref uid="azure-iothub.client.d.Client" />
         description: ''
   - name: 'fromSharedAccessSignature(string, Client.TransportCtor)'
-    uid: azure-iothub.Client.fromSharedAccessSignature
+    uid: azure-iothub.client.d.Client.fromSharedAccessSignature
     package: azure-iothub
     summary: |-
       Creates an IoT Hub service client from the given
@@ -194,13 +195,13 @@ methods:
             A shared access signature which encapsulates
                                        "service connect" permissions on an IoT hub.
         - id: transportCtor
-          type: <xref uid="azure-iothub.Client.TransportCtor" />
+          type: <xref uid="azure-iothub.client.d.Client.TransportCtor" />
           description: ''
       return:
-        type: <xref uid="azure-iothub.Client" />
+        type: <xref uid="azure-iothub.client.d.Client" />
         description: ''
   - name: getFeedbackReceiver()
-    uid: azure-iothub.Client.getFeedbackReceiver_1
+    uid: azure-iothub.client.d.Client.getFeedbackReceiver_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -210,11 +211,12 @@ methods:
       content: function getFeedbackReceiver()
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
-          />&lt;<xref uid="azure-iothub.Client.ServiceReceiver" />&gt;&gt;
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage" />&lt;<xref
+          uid="azure-iothub.client.d.Client.ServiceReceiver" />&gt;&gt;
         description: ''
   - name: getFeedbackReceiver(IncomingMessageCallback<ServiceReceiver>)
-    uid: azure-iothub.Client.getFeedbackReceiver
+    uid: azure-iothub.client.d.Client.getFeedbackReceiver
     package: azure-iothub
     summary: >-
       Returns a AmqpReceiver object which emits events when new feedback
@@ -229,11 +231,12 @@ methods:
       parameters:
         - id: done
           type: >-
-            <xref uid="azure-iothub.IncomingMessageCallback" />&lt;<xref
-            uid="azure-iothub.Client.ServiceReceiver" />&gt;
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;<xref uid="azure-iothub.client.d.Client.ServiceReceiver"
+            />&gt;
           description: ''
   - name: getFileNotificationReceiver()
-    uid: azure-iothub.Client.getFileNotificationReceiver_1
+    uid: azure-iothub.client.d.Client.getFileNotificationReceiver_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -243,11 +246,12 @@ methods:
       content: function getFileNotificationReceiver()
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
-          />&lt;<xref uid="azure-iothub.Client.ServiceReceiver" />&gt;&gt;
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage" />&lt;<xref
+          uid="azure-iothub.client.d.Client.ServiceReceiver" />&gt;&gt;
         description: ''
   - name: getFileNotificationReceiver(IncomingMessageCallback<ServiceReceiver>)
-    uid: azure-iothub.Client.getFileNotificationReceiver
+    uid: azure-iothub.client.d.Client.getFileNotificationReceiver
     package: azure-iothub
     summary: >-
       Returns a AmqpReceiver object which emits events when new file upload
@@ -262,11 +266,12 @@ methods:
       parameters:
         - id: done
           type: >-
-            <xref uid="azure-iothub.IncomingMessageCallback" />&lt;<xref
-            uid="azure-iothub.Client.ServiceReceiver" />&gt;
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;<xref uid="azure-iothub.client.d.Client.ServiceReceiver"
+            />&gt;
           description: ''
   - name: getMaxListeners()
-    uid: azure-iothub.Client.getMaxListeners
+    uid: azure-iothub.client.d.Client.getMaxListeners
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -278,7 +283,7 @@ methods:
         type: number
         description: ''
   - name: 'invokeDeviceMethod(string, DeviceMethodParams)'
-    uid: azure-iothub.Client.invokeDeviceMethod_2
+    uid: azure-iothub.client.d.Client.invokeDeviceMethod_2
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -293,17 +298,18 @@ methods:
           type: string
           description: ''
         - id: methodParams
-          type: <xref uid="azure-iothub.DeviceMethodParams" />
+          type: <xref uid="azure-iothub.interfaces.d.DeviceMethodParams" />
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage"
           />&lt;any&gt;&gt;
         description: ''
   - name: >-
       invokeDeviceMethod(string, DeviceMethodParams,
       IncomingMessageCallback<any>)
-    uid: azure-iothub.Client.invokeDeviceMethod
+    uid: azure-iothub.client.d.Client.invokeDeviceMethod
     package: azure-iothub
     summary: Invokes a method on a particular device or module.
     remarks: ''
@@ -318,13 +324,15 @@ methods:
           type: string
           description: The identifier of an existing device identity.
         - id: methodParams
-          type: <xref uid="azure-iothub.DeviceMethodParams" />
+          type: <xref uid="azure-iothub.interfaces.d.DeviceMethodParams" />
           description: ''
         - id: done
-          type: <xref uid="azure-iothub.IncomingMessageCallback" />&lt;any&gt;
+          type: >-
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;any&gt;
           description: ''
   - name: 'invokeDeviceMethod(string, string, DeviceMethodParams)'
-    uid: azure-iothub.Client.invokeDeviceMethod_3
+    uid: azure-iothub.client.d.Client.invokeDeviceMethod_3
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -342,17 +350,18 @@ methods:
           type: string
           description: ''
         - id: methodParams
-          type: <xref uid="azure-iothub.DeviceMethodParams" />
+          type: <xref uid="azure-iothub.interfaces.d.DeviceMethodParams" />
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage"
           />&lt;any&gt;&gt;
         description: ''
   - name: >-
       invokeDeviceMethod(string, string, DeviceMethodParams,
       IncomingMessageCallback<any>)
-    uid: azure-iothub.Client.invokeDeviceMethod_1
+    uid: azure-iothub.client.d.Client.invokeDeviceMethod_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -370,13 +379,15 @@ methods:
           type: string
           description: ''
         - id: methodParams
-          type: <xref uid="azure-iothub.DeviceMethodParams" />
+          type: <xref uid="azure-iothub.interfaces.d.DeviceMethodParams" />
           description: ''
         - id: done
-          type: <xref uid="azure-iothub.IncomingMessageCallback" />&lt;any&gt;
+          type: >-
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;any&gt;
           description: ''
   - name: 'listenerCount(EventEmitter, string | symbol)'
-    uid: azure-iothub.Client.listenerCount
+    uid: azure-iothub.client.d.Client.listenerCount
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -398,7 +409,7 @@ methods:
         type: number
         description: ''
   - name: listenerCount(string | symbol)
-    uid: azure-iothub.Client.listenerCount
+    uid: azure-iothub.client.d.Client.listenerCount
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -414,7 +425,7 @@ methods:
         type: number
         description: ''
   - name: listeners(string | symbol)
-    uid: azure-iothub.Client.listeners
+    uid: azure-iothub.client.d.Client.listeners
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -430,7 +441,7 @@ methods:
         type: 'Function[]'
         description: ''
   - name: 'off(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.off
+    uid: azure-iothub.client.d.Client.off
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -449,7 +460,7 @@ methods:
         type: this
         description: ''
   - name: 'on(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.on
+    uid: azure-iothub.client.d.Client.on
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -468,7 +479,7 @@ methods:
         type: this
         description: ''
   - name: 'once(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.once
+    uid: azure-iothub.client.d.Client.once
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -487,7 +498,7 @@ methods:
         type: this
         description: ''
   - name: open()
-    uid: azure-iothub.Client.open_1
+    uid: azure-iothub.client.d.Client.open_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -497,11 +508,12 @@ methods:
       content: function open()
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage"
           />&lt;Connected&gt;&gt;
         description: ''
   - name: open(IncomingMessageCallback<Connected>)
-    uid: azure-iothub.Client.open
+    uid: azure-iothub.client.d.Client.open
     package: azure-iothub
     summary: Opens the connection to an IoT hub.
     remarks: ''
@@ -511,10 +523,12 @@ methods:
       content: 'function open(done: IncomingMessageCallback<Connected>)'
       parameters:
         - id: done
-          type: <xref uid="azure-iothub.IncomingMessageCallback" />&lt;Connected&gt;
+          type: >-
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
+            />&lt;Connected&gt;
           description: ''
   - name: 'prependListener(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.prependListener
+    uid: azure-iothub.client.d.Client.prependListener
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -535,7 +549,7 @@ methods:
         type: this
         description: ''
   - name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.prependOnceListener
+    uid: azure-iothub.client.d.Client.prependOnceListener
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -556,7 +570,7 @@ methods:
         type: this
         description: ''
   - name: rawListeners(string | symbol)
-    uid: azure-iothub.Client.rawListeners
+    uid: azure-iothub.client.d.Client.rawListeners
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -572,7 +586,7 @@ methods:
         type: 'Function[]'
         description: ''
   - name: removeAllListeners(string | symbol)
-    uid: azure-iothub.Client.removeAllListeners
+    uid: azure-iothub.client.d.Client.removeAllListeners
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -588,7 +602,7 @@ methods:
         type: this
         description: ''
   - name: 'removeListener(string | symbol, (args: any[]) => void)'
-    uid: azure-iothub.Client.removeListener
+    uid: azure-iothub.client.d.Client.removeListener
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -609,7 +623,7 @@ methods:
         type: this
         description: ''
   - name: 'send(string, Message | Message.BufferConvertible)'
-    uid: azure-iothub.Client.send_1
+    uid: azure-iothub.client.d.Client.send_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -628,13 +642,14 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="azure-iothub.ResultWithIncomingMessage"
+          Promise&lt;<xref
+          uid="azure-iothub.interfaces.d.ResultWithIncomingMessage"
           />&lt;MessageEnqueued&gt;&gt;
         description: ''
   - name: >-
       send(string, Message | Message.BufferConvertible,
       IncomingMessageCallback<MessageEnqueued>)
-    uid: azure-iothub.Client.send
+    uid: azure-iothub.client.d.Client.send
     package: azure-iothub
     summary: Sends a message to a device.
     remarks: ''
@@ -658,11 +673,11 @@ methods:
                                          it will be converted.
         - id: done
           type: >-
-            <xref uid="azure-iothub.IncomingMessageCallback"
+            <xref uid="azure-iothub.interfaces.d.IncomingMessageCallback"
             />&lt;MessageEnqueued&gt;
           description: ''
   - name: setMaxListeners(number)
-    uid: azure-iothub.Client.setMaxListeners
+    uid: azure-iothub.client.d.Client.setMaxListeners
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -678,7 +693,7 @@ methods:
         type: this
         description: ''
   - name: setRetryPolicy(RetryPolicy)
-    uid: azure-iothub.Client.setRetryPolicy
+    uid: azure-iothub.client.d.Client.setRetryPolicy
     package: azure-iothub
     summary: Set the policy used by the client to retry network operations.
     remarks: ''

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: PartitionUsagesResult
-uid: '@azure/arm-cosmosdb.PartitionUsagesResult'
+uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult'
 package: '@azure/arm-cosmosdb'
 summary: ''
 fullName: PartitionUsagesResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.Array'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.Array'
     package: '@azure/arm-cosmosdb'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.length'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.length'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<PartitionUsage>[])'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.concat'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.concat'
     package: '@azure/arm-cosmosdb'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +50,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-cosmosdb.PartitionUsage"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.concat_1'
+  - name: 'concat(PartitionUsage | ConcatArray<PartitionUsage>[])'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.concat_1'
     package: '@azure/arm-cosmosdb'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: PartitionUsage | ConcatArray<PartitionUsage>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.copyWithin'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.copyWithin'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.entries'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.entries'
     package: '@azure/arm-cosmosdb'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +130,7 @@ methods:
   - name: >-
       every((value: PartitionUsage, index: number, array: PartitionUsage[]) =>
       unknown, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.every'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.every_1'
     package: '@azure/arm-cosmosdb'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +138,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: PartitionUsage, index: number, array:
+        function every(predicate: (value: PartitionUsage, index: number, array:
         PartitionUsage[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PartitionUsage, index: number, array: PartitionUsage[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: PartitionUsage, index: number, array: PartitionUsage[])
+      => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.every'
+    package: '@azure/arm-cosmosdb'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: PartitionUsage, index: number,
+        array: PartitionUsage[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: PartitionUsage, index: number, array: PartitionUsage[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(PartitionUsage, undefined | number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.fill'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.fill'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +216,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+          type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +238,7 @@ methods:
   - name: >-
       filter((value: PartitionUsage, index: number, array: PartitionUsage[]) =>
       unknown, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.filter_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.filter_1'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +248,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: PartitionUsage, index: number,
-        array: PartitionUsage[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: PartitionUsage, index: number, array:
+        PartitionUsage[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PartitionUsage, index: number, array: PartitionUsage[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
   - name: >-
       filter<S>((value: PartitionUsage, index: number, array: PartitionUsage[])
-      => boolean, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.filter'
+      => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.filter'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +280,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: PartitionUsage, index: number,
-        array: PartitionUsage[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: PartitionUsage, index: number,
+        array: PartitionUsage[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PartitionUsage, index: number, array: PartitionUsage[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +302,7 @@ methods:
   - name: >-
       find((value: PartitionUsage, index: number, obj: PartitionUsage[]) =>
       unknown, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.find_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.find_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -278,12 +322,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: PartitionUsage, index: number, obj:
-      PartitionUsage[]) => boolean, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.find'
+      PartitionUsage[]) => value, any)
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.find'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +342,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: PartitionUsage, index:
-        number, obj: PartitionUsage[]) => boolean, thisArg?: any)
+        number, obj: PartitionUsage[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: PartitionUsage, index: number, obj:
-            PartitionUsage[]) =&gt; boolean
+            PartitionUsage[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +370,7 @@ methods:
   - name: >-
       findIndex((value: PartitionUsage, index: number, obj: PartitionUsage[]) =>
       unknown, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.findIndex'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.findIndex'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +411,7 @@ methods:
   - name: >-
       forEach((value: PartitionUsage, index: number, array: PartitionUsage[]) =>
       void, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.forEach'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.forEach'
     package: '@azure/arm-cosmosdb'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +436,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(PartitionUsage, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.includes'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.includes'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +450,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+          type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +461,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(PartitionUsage, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.indexOf'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.indexOf'
     package: '@azure/arm-cosmosdb'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +473,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+          type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +484,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.join'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.join'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +505,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.keys'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.keys'
     package: '@azure/arm-cosmosdb'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +517,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(PartitionUsage, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.lastIndexOf'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.lastIndexOf'
     package: '@azure/arm-cosmosdb'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +529,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+          type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +542,7 @@ methods:
   - name: >-
       map<U>((value: PartitionUsage, index: number, array: PartitionUsage[]) =>
       U, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.map'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.map'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +572,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.pop'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.pop'
     package: '@azure/arm-cosmosdb'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +581,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" /> |
+          undefined
         description: ''
   - name: 'push(PartitionUsage[])'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.push'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.push'
     package: '@azure/arm-cosmosdb'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +596,7 @@ methods:
       content: 'function push(items: PartitionUsage[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+          type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
           description: |
             New elements of the Array.
       return:
@@ -557,7 +605,7 @@ methods:
   - name: >-
       reduce((previousValue: PartitionUsage, currentValue: PartitionUsage,
       currentIndex: number, array: PartitionUsage[]) => PartitionUsage)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reduce'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reduce'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -581,13 +629,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+        type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
         description: ''
   - name: >-
       reduce((previousValue: PartitionUsage, currentValue: PartitionUsage,
       currentIndex: number, array: PartitionUsage[]) => PartitionUsage,
       PartitionUsage)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reduce_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reduce_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -605,15 +653,15 @@ methods:
             currentIndex: number, array: PartitionUsage[]) =&gt; PartitionUsage
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+          type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+        type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: PartitionUsage, currentIndex:
       number, array: PartitionUsage[]) => U, U)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reduce_2'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reduce_2'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -648,7 +696,7 @@ methods:
   - name: >-
       reduceRight((previousValue: PartitionUsage, currentValue: PartitionUsage,
       currentIndex: number, array: PartitionUsage[]) => PartitionUsage)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reduceRight'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reduceRight'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -673,13 +721,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+        type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
         description: ''
   - name: >-
       reduceRight((previousValue: PartitionUsage, currentValue: PartitionUsage,
       currentIndex: number, array: PartitionUsage[]) => PartitionUsage,
       PartitionUsage)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reduceRight_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reduceRight_1'
     package: '@azure/arm-cosmosdb'
     summary: ''
     remarks: ''
@@ -697,15 +745,15 @@ methods:
             currentIndex: number, array: PartitionUsage[]) =&gt; PartitionUsage
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+          type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" />
+        type: <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: PartitionUsage,
       currentIndex: number, array: PartitionUsage[]) => U, U)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reduceRight_2'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reduceRight_2'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -739,7 +787,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.reverse'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.reverse'
     package: '@azure/arm-cosmosdb'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -748,10 +796,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.shift'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.shift'
     package: '@azure/arm-cosmosdb'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -760,10 +808,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-cosmosdb.PartitionUsage" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.slice'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.slice'
     package: '@azure/arm-cosmosdb'
     summary: Returns a section of an array.
     remarks: ''
@@ -777,15 +827,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
   - name: >-
       some((value: PartitionUsage, index: number, array: PartitionUsage[]) =>
       unknown, any)
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.some'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.some'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -795,28 +846,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: PartitionUsage, index: number, array:
+        function some(predicate: (value: PartitionUsage, index: number, array:
         PartitionUsage[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: PartitionUsage, index: number, array: PartitionUsage[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: PartitionUsage, b: PartitionUsage) => number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.sort'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.sort'
     package: '@azure/arm-cosmosdb'
     summary: Sorts an array.
     remarks: ''
@@ -830,14 +886,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: PartitionUsage, b: PartitionUsage) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, PartitionUsage[])'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.splice_1'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.splice_1'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +926,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+          type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.splice'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.splice'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +954,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+        type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.toLocaleString'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.toLocaleString'
     package: '@azure/arm-cosmosdb'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +971,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.toString'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.toString'
     package: '@azure/arm-cosmosdb'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +983,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(PartitionUsage[])'
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.unshift'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.unshift'
     package: '@azure/arm-cosmosdb'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +993,14 @@ methods:
       content: 'function unshift(items: PartitionUsage[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-cosmosdb.PartitionUsage" />[]'
+          type: '<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-cosmosdb.PartitionUsagesResult.values'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.values'
     package: '@azure/arm-cosmosdb'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -943,7 +1010,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-cosmosdb.PartitionUsage"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-cosmosdb.PartitionUsage" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.[Symbol.iterator]'
+    package: '@azure/arm-cosmosdb'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-cosmosdb.models.index.d.PartitionUsagesResult.[Symbol.unscopables]
+    package: '@azure/arm-cosmosdb'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-cosmosdb.models.index.d.DatabaseAccountsListResult.Array"
+  />&lt;<xref uid="@azure/arm-cosmosdb.models.index.d.PartitionUsage" />&gt;

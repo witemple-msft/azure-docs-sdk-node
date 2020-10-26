@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: HybridConnectionListResult
-uid: '@azure/arm-relay.HybridConnectionListResult'
+uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult'
 package: '@azure/arm-relay'
 summary: ''
 fullName: HybridConnectionListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-relay.HybridConnectionListResult.Array'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.Array'
     package: '@azure/arm-relay'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-relay.HybridConnectionListResult.length'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.length'
     package: '@azure/arm-relay'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-relay.HybridConnectionListResult.nextLink'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.nextLink'
     package: '@azure/arm-relay'
     summary: ''
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<HybridConnection>[])'
-    uid: '@azure/arm-relay.HybridConnectionListResult.concat'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.concat'
     package: '@azure/arm-relay'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-relay.HybridConnection"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-relay.models.index.d.HybridConnection" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-relay.HybridConnectionListResult.concat_1'
+  - name: 'concat(HybridConnection | ConcatArray<HybridConnection>[])'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.concat_1'
     package: '@azure/arm-relay'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: HybridConnection |
+        ConcatArray<HybridConnection>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-relay.models.index.d.HybridConnection" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-relay.models.index.d.HybridConnection" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.copyWithin'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.copyWithin'
     package: '@azure/arm-relay'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +131,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-relay.HybridConnectionListResult.entries'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.entries'
     package: '@azure/arm-relay'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +145,7 @@ methods:
   - name: >-
       every((value: HybridConnection, index: number, array: HybridConnection[])
       => unknown, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.every'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.every_1'
     package: '@azure/arm-relay'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +153,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: HybridConnection, index: number,
+        function every(predicate: (value: HybridConnection, index: number,
         array: HybridConnection[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: HybridConnection, index: number, array: HybridConnection[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: HybridConnection, index: number, array:
+      HybridConnection[]) => value, any)
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.every'
+    package: '@azure/arm-relay'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: HybridConnection, index: number,
+        array: HybridConnection[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: HybridConnection, index: number, array: HybridConnection[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(HybridConnection, undefined | number, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.fill'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.fill'
     package: '@azure/arm-relay'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +231,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-relay.HybridConnection" />
+          type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +253,7 @@ methods:
   - name: >-
       filter((value: HybridConnection, index: number, array: HybridConnection[])
       => unknown, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.filter_1'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.filter_1'
     package: '@azure/arm-relay'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +263,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: HybridConnection, index: number,
+        function filter(predicate: (value: HybridConnection, index: number,
         array: HybridConnection[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: HybridConnection, index: number, array: HybridConnection[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
   - name: >-
       filter<S>((value: HybridConnection, index: number, array:
-      HybridConnection[]) => boolean, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.filter'
+      HybridConnection[]) => value, any)
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.filter'
     package: '@azure/arm-relay'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +295,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: HybridConnection, index: number,
-        array: HybridConnection[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: HybridConnection, index: number,
+        array: HybridConnection[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: HybridConnection, index: number, array: HybridConnection[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +317,7 @@ methods:
   - name: >-
       find((value: HybridConnection, index: number, obj: HybridConnection[]) =>
       unknown, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.find_1'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.find_1'
     package: '@azure/arm-relay'
     summary: ''
     remarks: ''
@@ -291,12 +337,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-relay.models.index.d.HybridConnection" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: HybridConnection, index: number, obj:
-      HybridConnection[]) => boolean, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.find'
+      HybridConnection[]) => value, any)
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.find'
     package: '@azure/arm-relay'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +357,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: HybridConnection, index:
-        number, obj: HybridConnection[]) => boolean, thisArg?: any)
+        number, obj: HybridConnection[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: HybridConnection, index: number, obj:
-            HybridConnection[]) =&gt; boolean
+            HybridConnection[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +385,7 @@ methods:
   - name: >-
       findIndex((value: HybridConnection, index: number, obj:
       HybridConnection[]) => unknown, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.findIndex'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.findIndex'
     package: '@azure/arm-relay'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +426,7 @@ methods:
   - name: >-
       forEach((value: HybridConnection, index: number, array:
       HybridConnection[]) => void, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.forEach'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.forEach'
     package: '@azure/arm-relay'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +451,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(HybridConnection, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.includes'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.includes'
     package: '@azure/arm-relay'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +465,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-relay.HybridConnection" />
+          type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +476,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(HybridConnection, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.indexOf'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.indexOf'
     package: '@azure/arm-relay'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +488,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-relay.HybridConnection" />
+          type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +499,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-relay.HybridConnectionListResult.join'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.join'
     package: '@azure/arm-relay'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +520,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-relay.HybridConnectionListResult.keys'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.keys'
     package: '@azure/arm-relay'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +532,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(HybridConnection, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.lastIndexOf'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.lastIndexOf'
     package: '@azure/arm-relay'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +544,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-relay.HybridConnection" />
+          type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +557,7 @@ methods:
   - name: >-
       map<U>((value: HybridConnection, index: number, array: HybridConnection[])
       => U, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.map'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.map'
     package: '@azure/arm-relay'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +587,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-relay.HybridConnectionListResult.pop'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.pop'
     package: '@azure/arm-relay'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +596,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-relay.models.index.d.HybridConnection" /> |
+          undefined
         description: ''
   - name: 'push(HybridConnection[])'
-    uid: '@azure/arm-relay.HybridConnectionListResult.push'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.push'
     package: '@azure/arm-relay'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +611,7 @@ methods:
       content: 'function push(items: HybridConnection[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+          type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
           description: |
             New elements of the Array.
       return:
@@ -570,7 +620,7 @@ methods:
   - name: >-
       reduce((previousValue: HybridConnection, currentValue: HybridConnection,
       currentIndex: number, array: HybridConnection[]) => HybridConnection)
-    uid: '@azure/arm-relay.HybridConnectionListResult.reduce'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reduce'
     package: '@azure/arm-relay'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -595,13 +645,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" />
+        type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
         description: ''
   - name: >-
       reduce((previousValue: HybridConnection, currentValue: HybridConnection,
       currentIndex: number, array: HybridConnection[]) => HybridConnection,
       HybridConnection)
-    uid: '@azure/arm-relay.HybridConnectionListResult.reduce_1'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reduce_1'
     package: '@azure/arm-relay'
     summary: ''
     remarks: ''
@@ -620,15 +670,15 @@ methods:
             HybridConnection
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-relay.HybridConnection" />
+          type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" />
+        type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: HybridConnection, currentIndex:
       number, array: HybridConnection[]) => U, U)
-    uid: '@azure/arm-relay.HybridConnectionListResult.reduce_2'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reduce_2'
     package: '@azure/arm-relay'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -664,7 +714,7 @@ methods:
       reduceRight((previousValue: HybridConnection, currentValue:
       HybridConnection, currentIndex: number, array: HybridConnection[]) =>
       HybridConnection)
-    uid: '@azure/arm-relay.HybridConnectionListResult.reduceRight'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reduceRight'
     package: '@azure/arm-relay'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -690,13 +740,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" />
+        type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
         description: ''
   - name: >-
       reduceRight((previousValue: HybridConnection, currentValue:
       HybridConnection, currentIndex: number, array: HybridConnection[]) =>
       HybridConnection, HybridConnection)
-    uid: '@azure/arm-relay.HybridConnectionListResult.reduceRight_1'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reduceRight_1'
     package: '@azure/arm-relay'
     summary: ''
     remarks: ''
@@ -715,15 +765,15 @@ methods:
             HybridConnection
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-relay.HybridConnection" />
+          type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" />
+        type: <xref uid="@azure/arm-relay.models.index.d.HybridConnection" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: HybridConnection,
       currentIndex: number, array: HybridConnection[]) => U, U)
-    uid: '@azure/arm-relay.HybridConnectionListResult.reduceRight_2'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reduceRight_2'
     package: '@azure/arm-relay'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -757,7 +807,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-relay.HybridConnectionListResult.reverse'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.reverse'
     package: '@azure/arm-relay'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -766,10 +816,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-relay.HybridConnectionListResult.shift'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.shift'
     package: '@azure/arm-relay'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -778,10 +828,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-relay.HybridConnection" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-relay.models.index.d.HybridConnection" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.slice'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.slice'
     package: '@azure/arm-relay'
     summary: Returns a section of an array.
     remarks: ''
@@ -795,15 +847,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
   - name: >-
       some((value: HybridConnection, index: number, array: HybridConnection[])
       => unknown, any)
-    uid: '@azure/arm-relay.HybridConnectionListResult.some'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.some'
     package: '@azure/arm-relay'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -813,28 +866,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: HybridConnection, index: number,
-        array: HybridConnection[]) => unknown, thisArg?: any)
+        function some(predicate: (value: HybridConnection, index: number, array:
+        HybridConnection[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: HybridConnection, index: number, array: HybridConnection[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: HybridConnection, b: HybridConnection) => number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.sort'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.sort'
     package: '@azure/arm-relay'
     summary: Sorts an array.
     remarks: ''
@@ -848,14 +906,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: HybridConnection, b: HybridConnection) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, HybridConnection[])'
-    uid: '@azure/arm-relay.HybridConnectionListResult.splice_1'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.splice_1'
     package: '@azure/arm-relay'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -877,14 +946,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+          type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-relay.HybridConnectionListResult.splice'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.splice'
     package: '@azure/arm-relay'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -905,10 +974,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+        type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-relay.HybridConnectionListResult.toLocaleString'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.toLocaleString'
     package: '@azure/arm-relay'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -922,7 +991,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-relay.HybridConnectionListResult.toString'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.toString'
     package: '@azure/arm-relay'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -934,7 +1003,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(HybridConnection[])'
-    uid: '@azure/arm-relay.HybridConnectionListResult.unshift'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.unshift'
     package: '@azure/arm-relay'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -944,14 +1013,14 @@ methods:
       content: 'function unshift(items: HybridConnection[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-relay.HybridConnection" />[]'
+          type: '<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-relay.HybridConnectionListResult.values'
+    uid: '@azure/arm-relay.models.index.d.HybridConnectionListResult.values'
     package: '@azure/arm-relay'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -961,7 +1030,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-relay.HybridConnection"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-relay.models.index.d.HybridConnection" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-relay.HybridConnection" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-relay.models.index.d.HybridConnectionListResult.[Symbol.iterator]
+    package: '@azure/arm-relay'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-relay.models.index.d.HybridConnection" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-relay.models.index.d.HybridConnectionListResult.[Symbol.unscopables]
+    package: '@azure/arm-relay'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-relay.models.index.d.OperationListResult.Array"
+  />&lt;<xref uid="@azure/arm-relay.models.index.d.HybridConnection" />&gt;

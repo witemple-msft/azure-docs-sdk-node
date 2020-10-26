@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DiagnosticAnalysisCollection
-uid: '@azure/arm-appservice.DiagnosticAnalysisCollection'
+uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: DiagnosticAnalysisCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -55,8 +55,33 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(AnalysisDefinition | ConcatArray<AnalysisDefinition>[])'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.concat_1'
+    package: '@azure/arm-appservice'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: AnalysisDefinition |
+        ConcatArray<AnalysisDefinition>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<AnalysisDefinition>[])'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -67,32 +92,19 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-appservice.AnalysisDefinition"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.concat_1'
-    package: '@azure/arm-appservice'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.copyWithin'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.copyWithin
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +156,7 @@ methods:
   - name: >-
       every((value: AnalysisDefinition, index: number, array:
       AnalysisDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +164,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: AnalysisDefinition, index: number,
+        function every(predicate: (value: AnalysisDefinition, index: number,
         array: AnalysisDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AnalysisDefinition, index: number, array:
             AnalysisDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: AnalysisDefinition, index: number, array:
+      AnalysisDefinition[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: AnalysisDefinition, index: number,
+        array: AnalysisDefinition[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: AnalysisDefinition, index: number, array:
+            AnalysisDefinition[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(AnalysisDefinition, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +242,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +266,7 @@ methods:
   - name: >-
       filter((value: AnalysisDefinition, index: number, array:
       AnalysisDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +276,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: AnalysisDefinition, index: number,
+        function filter(predicate: (value: AnalysisDefinition, index: number,
         array: AnalysisDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AnalysisDefinition, index: number, array:
             AnalysisDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: AnalysisDefinition, index: number, array:
-      AnalysisDefinition[]) => boolean, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.filter'
+      AnalysisDefinition[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +310,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: AnalysisDefinition, index:
-        number, array: AnalysisDefinition[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: AnalysisDefinition, index: number,
+        array: AnalysisDefinition[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AnalysisDefinition, index: number, array:
-            AnalysisDefinition[]) =&gt; boolean
+            AnalysisDefinition[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +332,7 @@ methods:
   - name: >-
       find((value: AnalysisDefinition, index: number, obj: AnalysisDefinition[])
       => unknown, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -295,12 +352,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: AnalysisDefinition, index: number, obj:
-      AnalysisDefinition[]) => boolean, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.find'
+      AnalysisDefinition[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +372,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: AnalysisDefinition,
-        index: number, obj: AnalysisDefinition[]) => boolean, thisArg?: any)
+        index: number, obj: AnalysisDefinition[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: AnalysisDefinition, index: number, obj:
-            AnalysisDefinition[]) =&gt; boolean
+            AnalysisDefinition[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +400,8 @@ methods:
   - name: >-
       findIndex((value: AnalysisDefinition, index: number, obj:
       AnalysisDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.findIndex'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.findIndex
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +442,7 @@ methods:
   - name: >-
       forEach((value: AnalysisDefinition, index: number, array:
       AnalysisDefinition[]) => void, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +467,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(AnalysisDefinition, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +481,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +494,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(AnalysisDefinition, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +506,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +519,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +540,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +552,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(AnalysisDefinition, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.lastIndexOf
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +565,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +580,7 @@ methods:
   - name: >-
       map<U>((value: AnalysisDefinition, index: number, array:
       AnalysisDefinition[]) => U, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +610,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +619,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
+          | undefined
         description: ''
   - name: 'push(AnalysisDefinition[])'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +634,9 @@ methods:
       content: 'function push(items: AnalysisDefinition[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +646,7 @@ methods:
       reduce((previousValue: AnalysisDefinition, currentValue:
       AnalysisDefinition, currentIndex: number, array: AnalysisDefinition[]) =>
       AnalysisDefinition)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +671,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
         description: ''
   - name: >-
       reduce((previousValue: AnalysisDefinition, currentValue:
       AnalysisDefinition, currentIndex: number, array: AnalysisDefinition[]) =>
       AnalysisDefinition, AnalysisDefinition)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -626,15 +697,17 @@ methods:
             AnalysisDefinition[]) =&gt; AnalysisDefinition
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: AnalysisDefinition,
       currentIndex: number, array: AnalysisDefinition[]) => U, U)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +743,8 @@ methods:
       reduceRight((previousValue: AnalysisDefinition, currentValue:
       AnalysisDefinition, currentIndex: number, array: AnalysisDefinition[]) =>
       AnalysisDefinition)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reduceRight'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reduceRight
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +770,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
         description: ''
   - name: >-
       reduceRight((previousValue: AnalysisDefinition, currentValue:
       AnalysisDefinition, currentIndex: number, array: AnalysisDefinition[]) =>
       AnalysisDefinition, AnalysisDefinition)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reduceRight_1
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -722,15 +797,18 @@ methods:
             AnalysisDefinition[]) =&gt; AnalysisDefinition
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" />
+        type: <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: AnalysisDefinition,
       currentIndex: number, array: AnalysisDefinition[]) => U, U)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reduceRight_2
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +842,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +851,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +865,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.AnalysisDefinition" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +884,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
         description: ''
   - name: >-
       some((value: AnalysisDefinition, index: number, array:
       AnalysisDefinition[]) => unknown, any)
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,28 +905,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: AnalysisDefinition, index: number,
+        function some(predicate: (value: AnalysisDefinition, index: number,
         array: AnalysisDefinition[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AnalysisDefinition, index: number, array:
             AnalysisDefinition[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: AnalysisDefinition, b: AnalysisDefinition) => number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -857,14 +947,25 @@ methods:
             undefined | (a: AnalysisDefinition, b: AnalysisDefinition) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, AnalysisDefinition[])'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -886,14 +987,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -914,10 +1019,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.toLocaleString'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.toLocaleString
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -931,7 +1039,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -943,7 +1051,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(AnalysisDefinition[])'
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -953,14 +1061,16 @@ methods:
       content: 'function unshift(items: AnalysisDefinition[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.AnalysisDefinition" />[]'
+          type: >-
+            <xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.DiagnosticAnalysisCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -971,6 +1081,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-appservice.AnalysisDefinition" />&gt;
+          uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.AnalysisDefinition" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.AnalysisDefinition" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.DiagnosticAnalysisCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.AnalysisDefinition"
+  />&gt;

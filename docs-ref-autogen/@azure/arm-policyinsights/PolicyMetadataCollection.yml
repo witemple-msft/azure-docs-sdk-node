@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: PolicyMetadataCollection
-uid: '@azure/arm-policyinsights.PolicyMetadataCollection'
+uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection'
 package: '@azure/arm-policyinsights'
 summary: ''
 fullName: PolicyMetadataCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.Array'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.Array'
     package: '@azure/arm-policyinsights'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.length'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.length'
     package: '@azure/arm-policyinsights'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.nextLink'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.nextLink'
     package: '@azure/arm-policyinsights'
     summary: >-
       The URL to get the next set of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SlimPolicyMetadata>[])'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.concat'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.concat'
     package: '@azure/arm-policyinsights'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +68,44 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-policyinsights.SlimPolicyMetadata" />&gt;[]
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.concat_1'
+  - name: 'concat(SlimPolicyMetadata | ConcatArray<SlimPolicyMetadata>[])'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.concat_1'
     package: '@azure/arm-policyinsights'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: SlimPolicyMetadata |
+        ConcatArray<SlimPolicyMetadata>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.copyWithin'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.copyWithin
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +143,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.entries'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.entries'
     package: '@azure/arm-policyinsights'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +157,7 @@ methods:
   - name: >-
       every((value: SlimPolicyMetadata, index: number, array:
       SlimPolicyMetadata[]) => unknown, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.every'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.every_1'
     package: '@azure/arm-policyinsights'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +165,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SlimPolicyMetadata, index: number,
+        function every(predicate: (value: SlimPolicyMetadata, index: number,
         array: SlimPolicyMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SlimPolicyMetadata, index: number, array:
             SlimPolicyMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SlimPolicyMetadata, index: number, array:
+      SlimPolicyMetadata[]) => value, any)
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.every'
+    package: '@azure/arm-policyinsights'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SlimPolicyMetadata, index: number,
+        array: SlimPolicyMetadata[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SlimPolicyMetadata, index: number, array:
+            SlimPolicyMetadata[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SlimPolicyMetadata, undefined | number, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.fill'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.fill'
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +243,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +267,7 @@ methods:
   - name: >-
       filter((value: SlimPolicyMetadata, index: number, array:
       SlimPolicyMetadata[]) => unknown, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.filter_1'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.filter_1'
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +277,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SlimPolicyMetadata, index: number,
+        function filter(predicate: (value: SlimPolicyMetadata, index: number,
         array: SlimPolicyMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SlimPolicyMetadata, index: number, array:
             SlimPolicyMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
   - name: >-
       filter<S>((value: SlimPolicyMetadata, index: number, array:
-      SlimPolicyMetadata[]) => boolean, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.filter'
+      SlimPolicyMetadata[]) => value, any)
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.filter'
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +311,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SlimPolicyMetadata, index:
-        number, array: SlimPolicyMetadata[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SlimPolicyMetadata, index: number,
+        array: SlimPolicyMetadata[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SlimPolicyMetadata, index: number, array:
-            SlimPolicyMetadata[]) =&gt; boolean
+            SlimPolicyMetadata[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +333,7 @@ methods:
   - name: >-
       find((value: SlimPolicyMetadata, index: number, obj: SlimPolicyMetadata[])
       => unknown, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.find_1'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.find_1'
     package: '@azure/arm-policyinsights'
     summary: ''
     remarks: ''
@@ -296,13 +354,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" /> |
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" /> |
           undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SlimPolicyMetadata, index: number, obj:
-      SlimPolicyMetadata[]) => boolean, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.find'
+      SlimPolicyMetadata[]) => value, any)
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.find'
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -315,12 +374,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SlimPolicyMetadata,
-        index: number, obj: SlimPolicyMetadata[]) => boolean, thisArg?: any)
+        index: number, obj: SlimPolicyMetadata[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SlimPolicyMetadata, index: number, obj:
-            SlimPolicyMetadata[]) =&gt; boolean
+            SlimPolicyMetadata[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -343,7 +402,8 @@ methods:
   - name: >-
       findIndex((value: SlimPolicyMetadata, index: number, obj:
       SlimPolicyMetadata[]) => unknown, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.findIndex'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.findIndex
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -384,7 +444,7 @@ methods:
   - name: >-
       forEach((value: SlimPolicyMetadata, index: number, array:
       SlimPolicyMetadata[]) => void, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.forEach'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.forEach'
     package: '@azure/arm-policyinsights'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -409,7 +469,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SlimPolicyMetadata, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.includes'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.includes'
     package: '@azure/arm-policyinsights'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -423,7 +483,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -434,7 +496,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SlimPolicyMetadata, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.indexOf'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.indexOf'
     package: '@azure/arm-policyinsights'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -446,7 +508,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -457,7 +521,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.join'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.join'
     package: '@azure/arm-policyinsights'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -478,7 +542,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.keys'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.keys'
     package: '@azure/arm-policyinsights'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -490,7 +554,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SlimPolicyMetadata, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.lastIndexOf'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.lastIndexOf
     package: '@azure/arm-policyinsights'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -502,7 +567,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -515,7 +582,7 @@ methods:
   - name: >-
       map<U>((value: SlimPolicyMetadata, index: number, array:
       SlimPolicyMetadata[]) => U, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.map'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.map'
     package: '@azure/arm-policyinsights'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -545,7 +612,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.pop'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.pop'
     package: '@azure/arm-policyinsights'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -555,11 +622,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" /> |
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" /> |
           undefined
         description: ''
   - name: 'push(SlimPolicyMetadata[])'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.push'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.push'
     package: '@azure/arm-policyinsights'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -569,7 +637,10 @@ methods:
       content: 'function push(items: SlimPolicyMetadata[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -579,7 +650,7 @@ methods:
       reduce((previousValue: SlimPolicyMetadata, currentValue:
       SlimPolicyMetadata, currentIndex: number, array: SlimPolicyMetadata[]) =>
       SlimPolicyMetadata)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reduce'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reduce'
     package: '@azure/arm-policyinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -604,13 +675,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
         description: ''
   - name: >-
       reduce((previousValue: SlimPolicyMetadata, currentValue:
       SlimPolicyMetadata, currentIndex: number, array: SlimPolicyMetadata[]) =>
       SlimPolicyMetadata, SlimPolicyMetadata)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reduce_1'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reduce_1'
     package: '@azure/arm-policyinsights'
     summary: ''
     remarks: ''
@@ -630,15 +703,19 @@ methods:
             SlimPolicyMetadata[]) =&gt; SlimPolicyMetadata
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SlimPolicyMetadata,
       currentIndex: number, array: SlimPolicyMetadata[]) => U, U)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reduce_2'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reduce_2'
     package: '@azure/arm-policyinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -674,7 +751,8 @@ methods:
       reduceRight((previousValue: SlimPolicyMetadata, currentValue:
       SlimPolicyMetadata, currentIndex: number, array: SlimPolicyMetadata[]) =>
       SlimPolicyMetadata)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reduceRight'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reduceRight
     package: '@azure/arm-policyinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -700,13 +778,16 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
         description: ''
   - name: >-
       reduceRight((previousValue: SlimPolicyMetadata, currentValue:
       SlimPolicyMetadata, currentIndex: number, array: SlimPolicyMetadata[]) =>
       SlimPolicyMetadata, SlimPolicyMetadata)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reduceRight_1'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reduceRight_1
     package: '@azure/arm-policyinsights'
     summary: ''
     remarks: ''
@@ -726,15 +807,20 @@ methods:
             SlimPolicyMetadata[]) =&gt; SlimPolicyMetadata
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SlimPolicyMetadata,
       currentIndex: number, array: SlimPolicyMetadata[]) => U, U)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reduceRight_2'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reduceRight_2
     package: '@azure/arm-policyinsights'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -768,7 +854,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.reverse'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.reverse'
     package: '@azure/arm-policyinsights'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -777,10 +863,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.shift'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.shift'
     package: '@azure/arm-policyinsights'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -790,11 +878,12 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" /> |
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" /> |
           undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.slice'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.slice'
     package: '@azure/arm-policyinsights'
     summary: Returns a section of an array.
     remarks: ''
@@ -808,15 +897,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
   - name: >-
       some((value: SlimPolicyMetadata, index: number, array:
       SlimPolicyMetadata[]) => unknown, any)
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.some'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.some'
     package: '@azure/arm-policyinsights'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -826,28 +918,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SlimPolicyMetadata, index: number,
+        function some(predicate: (value: SlimPolicyMetadata, index: number,
         array: SlimPolicyMetadata[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SlimPolicyMetadata, index: number, array:
             SlimPolicyMetadata[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: SlimPolicyMetadata, b: SlimPolicyMetadata) => number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.sort'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.sort'
     package: '@azure/arm-policyinsights'
     summary: Sorts an array.
     remarks: ''
@@ -863,14 +960,25 @@ methods:
             undefined | (a: SlimPolicyMetadata, b: SlimPolicyMetadata) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SlimPolicyMetadata[])'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.splice_1'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.splice_1'
     package: '@azure/arm-policyinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -892,14 +1000,19 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.splice'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.splice'
     package: '@azure/arm-policyinsights'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -920,10 +1033,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata" />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.toLocaleString'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.toLocaleString
     package: '@azure/arm-policyinsights'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -937,7 +1053,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.toString'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.toString'
     package: '@azure/arm-policyinsights'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -949,7 +1065,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SlimPolicyMetadata[])'
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.unshift'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.unshift'
     package: '@azure/arm-policyinsights'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -959,14 +1075,17 @@ methods:
       content: 'function unshift(items: SlimPolicyMetadata[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-policyinsights.PolicyMetadataCollection.values'
+    uid: '@azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.values'
     package: '@azure/arm-policyinsights'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -977,6 +1096,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-policyinsights.SlimPolicyMetadata" />&gt;
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-policyinsights.SlimPolicyMetadata" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.[Symbol.iterator]
+    package: '@azure/arm-policyinsights'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-policyinsights.models.index.d.PolicyMetadataCollection.[Symbol.unscopables]
+    package: '@azure/arm-policyinsights'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-policyinsights.models.index.d.PolicyTrackedResourcesQueryResults.Array"
+  />&lt;<xref uid="@azure/arm-policyinsights.models.index.d.SlimPolicyMetadata"
+  />&gt;

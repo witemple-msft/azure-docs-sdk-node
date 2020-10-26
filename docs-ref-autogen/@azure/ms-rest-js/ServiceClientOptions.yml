@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ServiceClientOptions
-uid: '@azure/ms-rest-js.ServiceClientOptions'
+uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions'
 package: '@azure/ms-rest-js'
 summary: Options to be provided while creating the client.
 fullName: ServiceClientOptions
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: agentSettings
-    uid: '@azure/ms-rest-js.ServiceClientOptions.agentSettings'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.agentSettings'
     package: '@azure/ms-rest-js'
     summary: >-
       HTTP and HTTPS agents which will be used for every HTTP request (Node.js
@@ -22,10 +22,11 @@ properties:
     syntax:
       content: 'agentSettings?: AgentSettings'
       return:
-        type: <xref uid="@azure/ms-rest-js.AgentSettings" />
+        type: <xref uid="@azure/ms-rest-js.serviceClient.d.AgentSettings" />
         description: ''
   - name: clientRequestIdHeaderName
-    uid: '@azure/ms-rest-js.ServiceClientOptions.clientRequestIdHeaderName'
+    uid: >-
+      @azure/ms-rest-js.serviceClient.d.ServiceClientOptions.clientRequestIdHeaderName
     package: '@azure/ms-rest-js'
     summary: >-
       If specified, a GenerateRequestIdPolicy will be added to the HTTP pipeline
@@ -43,7 +44,8 @@ properties:
         type: string
         description: ''
   - name: deserializationContentTypes
-    uid: '@azure/ms-rest-js.ServiceClientOptions.deserializationContentTypes'
+    uid: >-
+      @azure/ms-rest-js.serviceClient.d.ServiceClientOptions.deserializationContentTypes
     package: '@azure/ms-rest-js'
     summary: The content-types that will be associated with JSON or XML serialization.
     fullName: deserializationContentTypes
@@ -53,10 +55,14 @@ properties:
     syntax:
       content: 'deserializationContentTypes?: DeserializationContentTypes'
       return:
-        type: <xref uid="@azure/ms-rest-js.DeserializationContentTypes" />
+        type: >-
+          <xref
+          uid="@azure/ms-rest-js.policies.deserializationPolicy.d.DeserializationContentTypes"
+          />
         description: ''
   - name: generateClientRequestIdHeader
-    uid: '@azure/ms-rest-js.ServiceClientOptions.generateClientRequestIdHeader'
+    uid: >-
+      @azure/ms-rest-js.serviceClient.d.ServiceClientOptions.generateClientRequestIdHeader
     package: '@azure/ms-rest-js'
     summary: >-
       Whether or not to generate a client request ID header for each HTTP
@@ -71,7 +77,7 @@ properties:
         type: boolean
         description: ''
   - name: httpClient
-    uid: '@azure/ms-rest-js.ServiceClientOptions.httpClient'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.httpClient'
     package: '@azure/ms-rest-js'
     summary: The HttpClient that will be used to send HTTP requests.
     fullName: httpClient
@@ -81,10 +87,10 @@ properties:
     syntax:
       content: 'httpClient?: HttpClient'
       return:
-        type: <xref uid="@azure/ms-rest-js.HttpClient" />
+        type: <xref uid="@azure/ms-rest-js.httpClient.d.HttpClient" />
         description: ''
   - name: httpPipelineLogger
-    uid: '@azure/ms-rest-js.ServiceClientOptions.httpPipelineLogger'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.httpPipelineLogger'
     package: '@azure/ms-rest-js'
     summary: >-
       The HttpPipelineLogger that can be used to debug RequestPolicies within
@@ -96,10 +102,12 @@ properties:
     syntax:
       content: 'httpPipelineLogger?: HttpPipelineLogger'
       return:
-        type: <xref uid="@azure/ms-rest-js.HttpPipelineLogger" />
+        type: >-
+          <xref uid="@azure/ms-rest-js.httpPipelineLogger.d.HttpPipelineLogger"
+          />
         description: ''
   - name: noRetryPolicy
-    uid: '@azure/ms-rest-js.ServiceClientOptions.noRetryPolicy'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.noRetryPolicy'
     package: '@azure/ms-rest-js'
     summary: 'If set to true, turn off the default retry policy.'
     fullName: noRetryPolicy
@@ -112,7 +120,7 @@ properties:
         type: boolean
         description: ''
   - name: proxySettings
-    uid: '@azure/ms-rest-js.ServiceClientOptions.proxySettings'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.proxySettings'
     package: '@azure/ms-rest-js'
     summary: Proxy settings which will be used for every HTTP request (Node.js only).
     fullName: proxySettings
@@ -122,10 +130,11 @@ properties:
     syntax:
       content: 'proxySettings?: ProxySettings'
       return:
-        type: <xref uid="@azure/ms-rest-js.ProxySettings" />
+        type: <xref uid="@azure/ms-rest-js.serviceClient.d.ProxySettings" />
         description: ''
   - name: requestPolicyFactories
-    uid: '@azure/ms-rest-js.ServiceClientOptions.requestPolicyFactories'
+    uid: >-
+      @azure/ms-rest-js.serviceClient.d.ServiceClientOptions.requestPolicyFactories
     package: '@azure/ms-rest-js'
     summary: >-
       An array of factories which get called to create the RequestPolicy
@@ -143,15 +152,17 @@ properties:
       content: >-
         requestPolicyFactories?: RequestPolicyFactory[] |
         (defaultRequestPolicyFactories: RequestPolicyFactory[]) => void |
-        Object[]
+        RequestPolicyFactory[]
       return:
         type: >-
-          <xref uid="@azure/ms-rest-js.RequestPolicyFactory" />[] |
-          (defaultRequestPolicyFactories: RequestPolicyFactory[]) =&gt; void |
-          Object[]
+          <xref
+          uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicyFactory"
+          />[] | (defaultRequestPolicyFactories: RequestPolicyFactory[]) =&gt;
+          void | RequestPolicyFactory[]
         description: ''
   - name: rpRegistrationRetryTimeout
-    uid: '@azure/ms-rest-js.ServiceClientOptions.rpRegistrationRetryTimeout'
+    uid: >-
+      @azure/ms-rest-js.serviceClient.d.ServiceClientOptions.rpRegistrationRetryTimeout
     package: '@azure/ms-rest-js'
     summary: >-
       Gets or sets the retry timeout in seconds for AutomaticRPRegistration.
@@ -166,7 +177,7 @@ properties:
         type: number
         description: ''
   - name: userAgent
-    uid: '@azure/ms-rest-js.ServiceClientOptions.userAgent'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.userAgent'
     package: '@azure/ms-rest-js'
     summary: >-
       The string to be set to the telemetry header while sending the request, or
@@ -184,7 +195,7 @@ properties:
         type: 'string | (defaultUserAgent: string) =&gt; string'
         description: ''
   - name: userAgentHeaderName
-    uid: '@azure/ms-rest-js.ServiceClientOptions.userAgentHeaderName'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.userAgentHeaderName'
     package: '@azure/ms-rest-js'
     summary: >-
       The header name to use for the telemetry header while sending the request.
@@ -206,7 +217,7 @@ properties:
         type: 'string | (defaultUserAgentHeaderName: string) =&gt; string'
         description: ''
   - name: withCredentials
-    uid: '@azure/ms-rest-js.ServiceClientOptions.withCredentials'
+    uid: '@azure/ms-rest-js.serviceClient.d.ServiceClientOptions.withCredentials'
     package: '@azure/ms-rest-js'
     summary: >-
       Whether to include credentials in CORS requests in the browser.

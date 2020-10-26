@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: SqlPoolColumnListResult
-uid: '@azure/arm-synapse.SqlPoolColumnListResult'
+uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult'
 package: '@azure/arm-synapse'
 summary: ''
 fullName: SqlPoolColumnListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.Array'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.Array'
     package: '@azure/arm-synapse'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.length'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.length'
     package: '@azure/arm-synapse'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.nextLink'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.nextLink'
     package: '@azure/arm-synapse'
     summary: >-
       Link to retrieve next page of results.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<SqlPoolColumn>[])'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.concat'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.concat'
     package: '@azure/arm-synapse'
     summary: Combines two or more arrays.
     remarks: ''
@@ -66,31 +66,36 @@ methods:
       content: 'function concat(items: ConcatArray<SqlPoolColumn>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-synapse.SqlPoolColumn" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.concat_1'
+  - name: 'concat(SqlPoolColumn | ConcatArray<SqlPoolColumn>[])'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.concat_1'
     package: '@azure/arm-synapse'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: SqlPoolColumn | ConcatArray<SqlPoolColumn>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.copyWithin'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.copyWithin'
     package: '@azure/arm-synapse'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -128,7 +133,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.entries'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.entries'
     package: '@azure/arm-synapse'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -142,7 +147,7 @@ methods:
   - name: >-
       every((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =>
       unknown, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.every'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.every_1'
     package: '@azure/arm-synapse'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -150,28 +155,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: SqlPoolColumn, index: number, array:
+        function every(predicate: (value: SqlPoolColumn, index: number, array:
         SqlPoolColumn[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =>
+      value, any)
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.every'
+    package: '@azure/arm-synapse'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: SqlPoolColumn, index: number,
+        array: SqlPoolColumn[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(SqlPoolColumn, undefined | number, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.fill'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.fill'
     package: '@azure/arm-synapse'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -185,7 +233,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+          type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -207,7 +255,7 @@ methods:
   - name: >-
       filter((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =>
       unknown, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.filter_1'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.filter_1'
     package: '@azure/arm-synapse'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -217,30 +265,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: SqlPoolColumn, index: number, array:
+        function filter(predicate: (value: SqlPoolColumn, index: number, array:
         SqlPoolColumn[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
   - name: >-
       filter<S>((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =>
-      boolean, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.filter'
+      value, any)
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.filter'
     package: '@azure/arm-synapse'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -250,21 +297,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: SqlPoolColumn, index: number,
-        array: SqlPoolColumn[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: SqlPoolColumn, index: number,
+        array: SqlPoolColumn[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -273,7 +319,7 @@ methods:
   - name: >-
       find((value: SqlPoolColumn, index: number, obj: SqlPoolColumn[]) =>
       unknown, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.find_1'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.find_1'
     package: '@azure/arm-synapse'
     summary: ''
     remarks: ''
@@ -293,12 +339,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: SqlPoolColumn, index: number, obj:
-      SqlPoolColumn[]) => boolean, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.find'
+      SqlPoolColumn[]) => value, any)
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.find'
     package: '@azure/arm-synapse'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -311,12 +359,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: SqlPoolColumn, index:
-        number, obj: SqlPoolColumn[]) => boolean, thisArg?: any)
+        number, obj: SqlPoolColumn[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: SqlPoolColumn, index: number, obj:
-            SqlPoolColumn[]) =&gt; boolean
+            SqlPoolColumn[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -339,7 +387,7 @@ methods:
   - name: >-
       findIndex((value: SqlPoolColumn, index: number, obj: SqlPoolColumn[]) =>
       unknown, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.findIndex'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.findIndex'
     package: '@azure/arm-synapse'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -380,7 +428,7 @@ methods:
   - name: >-
       forEach((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =>
       void, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.forEach'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.forEach'
     package: '@azure/arm-synapse'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -405,7 +453,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(SqlPoolColumn, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.includes'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.includes'
     package: '@azure/arm-synapse'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -419,7 +467,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+          type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +478,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(SqlPoolColumn, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.indexOf'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.indexOf'
     package: '@azure/arm-synapse'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -442,7 +490,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+          type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -453,7 +501,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.join'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.join'
     package: '@azure/arm-synapse'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -474,7 +522,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.keys'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.keys'
     package: '@azure/arm-synapse'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -486,7 +534,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(SqlPoolColumn, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.lastIndexOf'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.lastIndexOf'
     package: '@azure/arm-synapse'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -498,7 +546,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+          type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -511,7 +559,7 @@ methods:
   - name: >-
       map<U>((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) => U,
       any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.map'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.map'
     package: '@azure/arm-synapse'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -541,7 +589,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.pop'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.pop'
     package: '@azure/arm-synapse'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -550,10 +598,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" /> |
+          undefined
         description: ''
   - name: 'push(SqlPoolColumn[])'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.push'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.push'
     package: '@azure/arm-synapse'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -563,7 +613,7 @@ methods:
       content: 'function push(items: SqlPoolColumn[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+          type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
           description: |
             New elements of the Array.
       return:
@@ -572,7 +622,7 @@ methods:
   - name: >-
       reduce((previousValue: SqlPoolColumn, currentValue: SqlPoolColumn,
       currentIndex: number, array: SqlPoolColumn[]) => SqlPoolColumn)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reduce'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reduce'
     package: '@azure/arm-synapse'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -596,13 +646,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+        type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
         description: ''
   - name: >-
       reduce((previousValue: SqlPoolColumn, currentValue: SqlPoolColumn,
       currentIndex: number, array: SqlPoolColumn[]) => SqlPoolColumn,
       SqlPoolColumn)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reduce_1'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reduce_1'
     package: '@azure/arm-synapse'
     summary: ''
     remarks: ''
@@ -620,15 +670,15 @@ methods:
             currentIndex: number, array: SqlPoolColumn[]) =&gt; SqlPoolColumn
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+          type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+        type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: SqlPoolColumn, currentIndex:
       number, array: SqlPoolColumn[]) => U, U)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reduce_2'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reduce_2'
     package: '@azure/arm-synapse'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -663,7 +713,7 @@ methods:
   - name: >-
       reduceRight((previousValue: SqlPoolColumn, currentValue: SqlPoolColumn,
       currentIndex: number, array: SqlPoolColumn[]) => SqlPoolColumn)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reduceRight'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reduceRight'
     package: '@azure/arm-synapse'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -688,13 +738,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+        type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
         description: ''
   - name: >-
       reduceRight((previousValue: SqlPoolColumn, currentValue: SqlPoolColumn,
       currentIndex: number, array: SqlPoolColumn[]) => SqlPoolColumn,
       SqlPoolColumn)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reduceRight_1'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reduceRight_1'
     package: '@azure/arm-synapse'
     summary: ''
     remarks: ''
@@ -712,15 +762,15 @@ methods:
             currentIndex: number, array: SqlPoolColumn[]) =&gt; SqlPoolColumn
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+          type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" />
+        type: <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: SqlPoolColumn,
       currentIndex: number, array: SqlPoolColumn[]) => U, U)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reduceRight_2'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reduceRight_2'
     package: '@azure/arm-synapse'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -754,7 +804,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.reverse'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.reverse'
     package: '@azure/arm-synapse'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -763,10 +813,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.shift'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.shift'
     package: '@azure/arm-synapse'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -775,10 +825,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-synapse.SqlPoolColumn" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.slice'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.slice'
     package: '@azure/arm-synapse'
     summary: Returns a section of an array.
     remarks: ''
@@ -792,15 +844,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
   - name: >-
       some((value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =>
       unknown, any)
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.some'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.some'
     package: '@azure/arm-synapse'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -810,28 +863,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: SqlPoolColumn, index: number, array:
+        function some(predicate: (value: SqlPoolColumn, index: number, array:
         SqlPoolColumn[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: SqlPoolColumn, index: number, array: SqlPoolColumn[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: SqlPoolColumn, b: SqlPoolColumn) => number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.sort'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.sort'
     package: '@azure/arm-synapse'
     summary: Sorts an array.
     remarks: ''
@@ -845,14 +903,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: SqlPoolColumn, b: SqlPoolColumn) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, SqlPoolColumn[])'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.splice_1'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.splice_1'
     package: '@azure/arm-synapse'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -874,14 +943,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+          type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.splice'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.splice'
     package: '@azure/arm-synapse'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -902,10 +971,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+        type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.toLocaleString'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.toLocaleString'
     package: '@azure/arm-synapse'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -919,7 +988,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.toString'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.toString'
     package: '@azure/arm-synapse'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -931,7 +1000,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(SqlPoolColumn[])'
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.unshift'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.unshift'
     package: '@azure/arm-synapse'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -941,14 +1010,14 @@ methods:
       content: 'function unshift(items: SqlPoolColumn[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-synapse.SqlPoolColumn" />[]'
+          type: '<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-synapse.SqlPoolColumnListResult.values'
+    uid: '@azure/arm-synapse.models.index.d.SqlPoolColumnListResult.values'
     package: '@azure/arm-synapse'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -958,7 +1027,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-synapse.SqlPoolColumn"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-synapse.SqlPoolColumn" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-synapse.models.index.d.SqlPoolColumnListResult.[Symbol.iterator]
+    package: '@azure/arm-synapse'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-synapse.models.index.d.SqlPoolColumnListResult.[Symbol.unscopables]
+    package: '@azure/arm-synapse'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-synapse.models.index.d.BigDataPoolResourceInfoListResult.Array"
+  />&lt;<xref uid="@azure/arm-synapse.models.index.d.SqlPoolColumn" />&gt;

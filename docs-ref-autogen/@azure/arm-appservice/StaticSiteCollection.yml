@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: StaticSiteCollection
-uid: '@azure/arm-appservice.StaticSiteCollection'
+uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection'
 package: '@azure/arm-appservice'
 summary: ''
 fullName: StaticSiteCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-appservice.StaticSiteCollection.Array'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.Array'
     package: '@azure/arm-appservice'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-appservice.StaticSiteCollection.length'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.length'
     package: '@azure/arm-appservice'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-appservice.StaticSiteCollection.nextLink'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.nextLink'
     package: '@azure/arm-appservice'
     summary: >-
       Link to next page of resources.
@@ -56,7 +56,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<StaticSiteARMResource>[])'
-    uid: '@azure/arm-appservice.StaticSiteCollection.concat'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.concat'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
@@ -68,31 +68,43 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-appservice.StaticSiteARMResource" />&gt;[]
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-appservice.StaticSiteCollection.concat_1'
+  - name: 'concat(StaticSiteARMResource | ConcatArray<StaticSiteARMResource>[])'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.concat_1'
     package: '@azure/arm-appservice'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: StaticSiteARMResource |
+        ConcatArray<StaticSiteARMResource>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.copyWithin'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.copyWithin'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -130,7 +142,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-appservice.StaticSiteCollection.entries'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.entries'
     package: '@azure/arm-appservice'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -144,7 +156,7 @@ methods:
   - name: >-
       every((value: StaticSiteARMResource, index: number, array:
       StaticSiteARMResource[]) => unknown, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.every'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.every_1'
     package: '@azure/arm-appservice'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -152,28 +164,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: StaticSiteARMResource, index: number,
+        function every(predicate: (value: StaticSiteARMResource, index: number,
         array: StaticSiteARMResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StaticSiteARMResource, index: number, array:
             StaticSiteARMResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: StaticSiteARMResource, index: number, array:
+      StaticSiteARMResource[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.every'
+    package: '@azure/arm-appservice'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: StaticSiteARMResource, index:
+        number, array: StaticSiteARMResource[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: StaticSiteARMResource, index: number, array:
+            StaticSiteARMResource[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(StaticSiteARMResource, undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.fill'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.fill'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -187,7 +242,9 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -209,7 +266,7 @@ methods:
   - name: >-
       filter((value: StaticSiteARMResource, index: number, array:
       StaticSiteARMResource[]) => unknown, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.filter_1'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.filter_1'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -219,30 +276,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: StaticSiteARMResource, index:
-        number, array: StaticSiteARMResource[]) => unknown, thisArg?: any)
+        function filter(predicate: (value: StaticSiteARMResource, index: number,
+        array: StaticSiteARMResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StaticSiteARMResource, index: number, array:
             StaticSiteARMResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: StaticSiteARMResource, index: number, array:
-      StaticSiteARMResource[]) => boolean, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.filter'
+      StaticSiteARMResource[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.filter'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -252,21 +310,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: StaticSiteARMResource, index:
-        number, array: StaticSiteARMResource[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: StaticSiteARMResource, index:
+        number, array: StaticSiteARMResource[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StaticSiteARMResource, index: number, array:
-            StaticSiteARMResource[]) =&gt; boolean
+            StaticSiteARMResource[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -275,7 +332,7 @@ methods:
   - name: >-
       find((value: StaticSiteARMResource, index: number, obj:
       StaticSiteARMResource[]) => unknown, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.find_1'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.find_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -295,12 +352,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          /> | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: StaticSiteARMResource, index: number, obj:
-      StaticSiteARMResource[]) => boolean, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.find'
+      StaticSiteARMResource[]) => value, any)
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.find'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -313,12 +372,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: StaticSiteARMResource,
-        index: number, obj: StaticSiteARMResource[]) => boolean, thisArg?: any)
+        index: number, obj: StaticSiteARMResource[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: StaticSiteARMResource, index: number, obj:
-            StaticSiteARMResource[]) =&gt; boolean
+            StaticSiteARMResource[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -341,7 +400,7 @@ methods:
   - name: >-
       findIndex((value: StaticSiteARMResource, index: number, obj:
       StaticSiteARMResource[]) => unknown, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.findIndex'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.findIndex'
     package: '@azure/arm-appservice'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -382,7 +441,7 @@ methods:
   - name: >-
       forEach((value: StaticSiteARMResource, index: number, array:
       StaticSiteARMResource[]) => void, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.forEach'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.forEach'
     package: '@azure/arm-appservice'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -407,7 +466,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(StaticSiteARMResource, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.includes'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.includes'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -421,7 +480,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -432,7 +493,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(StaticSiteARMResource, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.indexOf'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.indexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -444,7 +505,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -455,7 +518,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-appservice.StaticSiteCollection.join'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.join'
     package: '@azure/arm-appservice'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -476,7 +539,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-appservice.StaticSiteCollection.keys'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.keys'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -488,7 +551,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(StaticSiteARMResource, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.lastIndexOf'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.lastIndexOf'
     package: '@azure/arm-appservice'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -500,7 +563,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -513,7 +578,7 @@ methods:
   - name: >-
       map<U>((value: StaticSiteARMResource, index: number, array:
       StaticSiteARMResource[]) => U, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.map'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.map'
     package: '@azure/arm-appservice'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -543,7 +608,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-appservice.StaticSiteCollection.pop'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.pop'
     package: '@azure/arm-appservice'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -552,10 +617,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          /> | undefined
         description: ''
   - name: 'push(StaticSiteARMResource[])'
-    uid: '@azure/arm-appservice.StaticSiteCollection.push'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.push'
     package: '@azure/arm-appservice'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -565,7 +632,10 @@ methods:
       content: 'function push(items: StaticSiteARMResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -575,7 +645,7 @@ methods:
       reduce((previousValue: StaticSiteARMResource, currentValue:
       StaticSiteARMResource, currentIndex: number, array:
       StaticSiteARMResource[]) => StaticSiteARMResource)
-    uid: '@azure/arm-appservice.StaticSiteCollection.reduce'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reduce'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -600,13 +670,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />
         description: ''
   - name: >-
       reduce((previousValue: StaticSiteARMResource, currentValue:
       StaticSiteARMResource, currentIndex: number, array:
       StaticSiteARMResource[]) => StaticSiteARMResource, StaticSiteARMResource)
-    uid: '@azure/arm-appservice.StaticSiteCollection.reduce_1'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reduce_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -626,15 +698,19 @@ methods:
             StaticSiteARMResource[]) =&gt; StaticSiteARMResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: StaticSiteARMResource,
       currentIndex: number, array: StaticSiteARMResource[]) => U, U)
-    uid: '@azure/arm-appservice.StaticSiteCollection.reduce_2'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reduce_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +746,7 @@ methods:
       reduceRight((previousValue: StaticSiteARMResource, currentValue:
       StaticSiteARMResource, currentIndex: number, array:
       StaticSiteARMResource[]) => StaticSiteARMResource)
-    uid: '@azure/arm-appservice.StaticSiteCollection.reduceRight'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reduceRight'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -696,13 +772,15 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />
         description: ''
   - name: >-
       reduceRight((previousValue: StaticSiteARMResource, currentValue:
       StaticSiteARMResource, currentIndex: number, array:
       StaticSiteARMResource[]) => StaticSiteARMResource, StaticSiteARMResource)
-    uid: '@azure/arm-appservice.StaticSiteCollection.reduceRight_1'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reduceRight_1'
     package: '@azure/arm-appservice'
     summary: ''
     remarks: ''
@@ -722,15 +800,19 @@ methods:
             StaticSiteARMResource[]) =&gt; StaticSiteARMResource
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" />
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: StaticSiteARMResource,
       currentIndex: number, array: StaticSiteARMResource[]) => U, U)
-    uid: '@azure/arm-appservice.StaticSiteCollection.reduceRight_2'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reduceRight_2'
     package: '@azure/arm-appservice'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -764,7 +846,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-appservice.StaticSiteCollection.reverse'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.reverse'
     package: '@azure/arm-appservice'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -773,10 +855,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-appservice.StaticSiteCollection.shift'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.shift'
     package: '@azure/arm-appservice'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -785,10 +869,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-appservice.StaticSiteARMResource" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.slice'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.slice'
     package: '@azure/arm-appservice'
     summary: Returns a section of an array.
     remarks: ''
@@ -802,15 +888,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
   - name: >-
       some((value: StaticSiteARMResource, index: number, array:
       StaticSiteARMResource[]) => unknown, any)
-    uid: '@azure/arm-appservice.StaticSiteCollection.some'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.some'
     package: '@azure/arm-appservice'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -820,30 +909,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: StaticSiteARMResource, index: number,
+        function some(predicate: (value: StaticSiteARMResource, index: number,
         array: StaticSiteARMResource[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: StaticSiteARMResource, index: number, array:
             StaticSiteARMResource[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: StaticSiteARMResource, b: StaticSiteARMResource) =>
       number)
-    uid: '@azure/arm-appservice.StaticSiteCollection.sort'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.sort'
     package: '@azure/arm-appservice'
     summary: Sorts an array.
     remarks: ''
@@ -859,14 +953,25 @@ methods:
             undefined | (a: StaticSiteARMResource, b: StaticSiteARMResource)
             =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, StaticSiteARMResource[])'
-    uid: '@azure/arm-appservice.StaticSiteCollection.splice_1'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.splice_1'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -888,14 +993,19 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-appservice.StaticSiteCollection.splice'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.splice'
     package: '@azure/arm-appservice'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -916,10 +1026,12 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+        type: >-
+          <xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-appservice.StaticSiteCollection.toLocaleString'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.toLocaleString'
     package: '@azure/arm-appservice'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -933,7 +1045,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-appservice.StaticSiteCollection.toString'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.toString'
     package: '@azure/arm-appservice'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -945,7 +1057,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(StaticSiteARMResource[])'
-    uid: '@azure/arm-appservice.StaticSiteCollection.unshift'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.unshift'
     package: '@azure/arm-appservice'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -955,14 +1067,17 @@ methods:
       content: 'function unshift(items: StaticSiteARMResource[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-appservice.StaticSiteARMResource" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-appservice.StaticSiteCollection.values'
+    uid: '@azure/arm-appservice.models.index.d.StaticSiteCollection.values'
     package: '@azure/arm-appservice'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -973,6 +1088,42 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-appservice.StaticSiteARMResource" />&gt;
+          uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-appservice.StaticSiteARMResource" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.StaticSiteCollection.[Symbol.iterator]
+    package: '@azure/arm-appservice'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-appservice.models.index.d.StaticSiteCollection.[Symbol.unscopables]
+    package: '@azure/arm-appservice'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-appservice.models.index.d.AppServiceCertificateOrderCollection.Array"
+  />&lt;<xref uid="@azure/arm-appservice.models.index.d.StaticSiteARMResource"
+  />&gt;

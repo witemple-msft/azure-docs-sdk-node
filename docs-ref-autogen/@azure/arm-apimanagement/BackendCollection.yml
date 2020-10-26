@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BackendCollection
-uid: '@azure/arm-apimanagement.BackendCollection'
+uid: '@azure/arm-apimanagement.models.index.d.BackendCollection'
 package: '@azure/arm-apimanagement'
 summary: ''
 fullName: BackendCollection
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-apimanagement.BackendCollection.Array'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.Array'
     package: '@azure/arm-apimanagement'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-apimanagement.BackendCollection.length'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.length'
     package: '@azure/arm-apimanagement'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-apimanagement.BackendCollection.nextLink'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.nextLink'
     package: '@azure/arm-apimanagement'
     summary: Next page link if any.
     fullName: nextLink
@@ -51,8 +51,31 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(BackendContract | ConcatArray<BackendContract>[])'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.concat_1'
+    package: '@azure/arm-apimanagement'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: BackendContract | ConcatArray<BackendContract>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<BackendContract>[])'
-    uid: '@azure/arm-apimanagement.BackendCollection.concat'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.concat'
     package: '@azure/arm-apimanagement'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +86,18 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-apimanagement.BackendContract"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-apimanagement.models.index.d.BackendContract"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-apimanagement.BackendCollection.concat_1'
-    package: '@azure/arm-apimanagement'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.copyWithin'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.copyWithin'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +135,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-apimanagement.BackendCollection.entries'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.entries'
     package: '@azure/arm-apimanagement'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +149,7 @@ methods:
   - name: >-
       every((value: BackendContract, index: number, array: BackendContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.every'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.every_1'
     package: '@azure/arm-apimanagement'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +157,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: BackendContract, index: number,
-        array: BackendContract[]) => unknown, thisArg?: any)
+        function every(predicate: (value: BackendContract, index: number, array:
+        BackendContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BackendContract, index: number, array: BackendContract[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: BackendContract, index: number, array: BackendContract[])
+      => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.every'
+    package: '@azure/arm-apimanagement'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: BackendContract, index: number,
+        array: BackendContract[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: BackendContract, index: number, array: BackendContract[])
+            =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(BackendContract, undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.fill'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.fill'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +235,9 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +259,7 @@ methods:
   - name: >-
       filter((value: BackendContract, index: number, array: BackendContract[])
       => unknown, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.filter_1'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.filter_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +269,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: BackendContract, index: number,
+        function filter(predicate: (value: BackendContract, index: number,
         array: BackendContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BackendContract, index: number, array: BackendContract[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: BackendContract, index: number, array:
-      BackendContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.filter'
+      BackendContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.filter'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +303,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: BackendContract, index: number,
-        array: BackendContract[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: BackendContract, index: number,
+        array: BackendContract[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BackendContract, index: number, array: BackendContract[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +325,7 @@ methods:
   - name: >-
       find((value: BackendContract, index: number, obj: BackendContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.find_1'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.find_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -291,12 +345,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: BackendContract, index: number, obj:
-      BackendContract[]) => boolean, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.find'
+      BackendContract[]) => value, any)
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.find'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +365,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: BackendContract, index:
-        number, obj: BackendContract[]) => boolean, thisArg?: any)
+        number, obj: BackendContract[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: BackendContract, index: number, obj:
-            BackendContract[]) =&gt; boolean
+            BackendContract[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +393,7 @@ methods:
   - name: >-
       findIndex((value: BackendContract, index: number, obj: BackendContract[])
       => unknown, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.findIndex'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.findIndex'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +434,7 @@ methods:
   - name: >-
       forEach((value: BackendContract, index: number, array: BackendContract[])
       => void, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.forEach'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.forEach'
     package: '@azure/arm-apimanagement'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +459,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(BackendContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.includes'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.includes'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +473,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +486,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(BackendContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.indexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.indexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +498,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +511,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-apimanagement.BackendCollection.join'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.join'
     package: '@azure/arm-apimanagement'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +532,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-apimanagement.BackendCollection.keys'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.keys'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +544,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(BackendContract, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.lastIndexOf'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.lastIndexOf'
     package: '@azure/arm-apimanagement'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +556,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +571,7 @@ methods:
   - name: >-
       map<U>((value: BackendContract, index: number, array: BackendContract[])
       => U, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.map'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.map'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +601,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-apimanagement.BackendCollection.pop'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.pop'
     package: '@azure/arm-apimanagement'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +610,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
+          | undefined
         description: ''
   - name: 'push(BackendContract[])'
-    uid: '@azure/arm-apimanagement.BackendCollection.push'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.push'
     package: '@azure/arm-apimanagement'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +625,9 @@ methods:
       content: 'function push(items: BackendContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -570,7 +636,7 @@ methods:
   - name: >-
       reduce((previousValue: BackendContract, currentValue: BackendContract,
       currentIndex: number, array: BackendContract[]) => BackendContract)
-    uid: '@azure/arm-apimanagement.BackendCollection.reduce'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reduce'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -595,13 +661,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
         description: ''
   - name: >-
       reduce((previousValue: BackendContract, currentValue: BackendContract,
       currentIndex: number, array: BackendContract[]) => BackendContract,
       BackendContract)
-    uid: '@azure/arm-apimanagement.BackendCollection.reduce_1'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reduce_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -620,15 +686,17 @@ methods:
             BackendContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: BackendContract, currentIndex:
       number, array: BackendContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.BackendCollection.reduce_2'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reduce_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -664,7 +732,7 @@ methods:
       reduceRight((previousValue: BackendContract, currentValue:
       BackendContract, currentIndex: number, array: BackendContract[]) =>
       BackendContract)
-    uid: '@azure/arm-apimanagement.BackendCollection.reduceRight'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reduceRight'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -690,13 +758,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
         description: ''
   - name: >-
       reduceRight((previousValue: BackendContract, currentValue:
       BackendContract, currentIndex: number, array: BackendContract[]) =>
       BackendContract, BackendContract)
-    uid: '@azure/arm-apimanagement.BackendCollection.reduceRight_1'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reduceRight_1'
     package: '@azure/arm-apimanagement'
     summary: ''
     remarks: ''
@@ -715,15 +783,17 @@ methods:
             BackendContract
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" />
+        type: <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: BackendContract,
       currentIndex: number, array: BackendContract[]) => U, U)
-    uid: '@azure/arm-apimanagement.BackendCollection.reduceRight_2'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reduceRight_2'
     package: '@azure/arm-apimanagement'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -757,7 +827,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-apimanagement.BackendCollection.reverse'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.reverse'
     package: '@azure/arm-apimanagement'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -766,10 +836,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-apimanagement.BackendCollection.shift'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.shift'
     package: '@azure/arm-apimanagement'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -778,10 +850,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-apimanagement.BackendContract" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.slice'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.slice'
     package: '@azure/arm-apimanagement'
     summary: Returns a section of an array.
     remarks: ''
@@ -795,15 +869,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
         description: ''
   - name: >-
       some((value: BackendContract, index: number, array: BackendContract[]) =>
       unknown, any)
-    uid: '@azure/arm-apimanagement.BackendCollection.some'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.some'
     package: '@azure/arm-apimanagement'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -813,28 +890,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: BackendContract, index: number, array:
+        function some(predicate: (value: BackendContract, index: number, array:
         BackendContract[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: BackendContract, index: number, array: BackendContract[])
             =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: BackendContract, b: BackendContract) => number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.sort'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.sort'
     package: '@azure/arm-apimanagement'
     summary: Sorts an array.
     remarks: ''
@@ -848,14 +930,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: BackendContract, b: BackendContract) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, BackendContract[])'
-    uid: '@azure/arm-apimanagement.BackendCollection.splice_1'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.splice_1'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -877,14 +970,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-apimanagement.BackendCollection.splice'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.splice'
     package: '@azure/arm-apimanagement'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -905,10 +1002,12 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+        type: >-
+          <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-apimanagement.BackendCollection.toLocaleString'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.toLocaleString'
     package: '@azure/arm-apimanagement'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -922,7 +1021,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-apimanagement.BackendCollection.toString'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.toString'
     package: '@azure/arm-apimanagement'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -934,7 +1033,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(BackendContract[])'
-    uid: '@azure/arm-apimanagement.BackendCollection.unshift'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.unshift'
     package: '@azure/arm-apimanagement'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -944,14 +1043,16 @@ methods:
       content: 'function unshift(items: BackendContract[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-apimanagement.BackendContract" />[]'
+          type: >-
+            <xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-apimanagement.BackendCollection.values'
+    uid: '@azure/arm-apimanagement.models.index.d.BackendCollection.values'
     package: '@azure/arm-apimanagement'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -962,6 +1063,39 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-apimanagement.BackendContract" />&gt;
+          uid="@azure/arm-apimanagement.models.index.d.BackendContract" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-apimanagement.BackendContract" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.BackendCollection.[Symbol.iterator]
+    package: '@azure/arm-apimanagement'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-apimanagement.models.index.d.BackendContract" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-apimanagement.models.index.d.BackendCollection.[Symbol.unscopables]
+    package: '@azure/arm-apimanagement'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-apimanagement.models.index.d.ApiCollection.Array"
+  />&lt;<xref uid="@azure/arm-apimanagement.models.index.d.BackendContract"
+  />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: BackupList
-uid: '@azure/arm-storsimple8000series.BackupList'
+uid: '@azure/arm-storsimple8000series.models.index.d.BackupList'
 package: '@azure/arm-storsimple8000series'
 summary: ''
 fullName: BackupList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-storsimple8000series.BackupList.Array'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.Array'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-storsimple8000series.BackupList.length'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.length'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-storsimple8000series.BackupList.nextLink'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.nextLink'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     fullName: nextLink
@@ -51,8 +51,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(Backup | ConcatArray<Backup>[])'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.concat_1'
+    package: '@azure/arm-storsimple8000series'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: Backup | ConcatArray<Backup>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-storsimple8000series.models.index.d.Backup" />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
+        description: ''
   - name: 'concat(ConcatArray<Backup>[])'
-    uid: '@azure/arm-storsimple8000series.BackupList.concat'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.concat'
     package: '@azure/arm-storsimple8000series'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +83,15 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-storsimple8000series.Backup"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-storsimple8000series.models.index.d.Backup" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-storsimple8000series.BackupList.concat_1'
-    package: '@azure/arm-storsimple8000series'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.copyWithin'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.copyWithin'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-storsimple8000series.BackupList.entries'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.entries'
     package: '@azure/arm-storsimple8000series'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -138,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: Backup, index: number, array: Backup[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.every'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.every_1'
     package: '@azure/arm-storsimple8000series'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -146,26 +149,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Backup, index: number, array:
+        function every(predicate: (value: Backup, index: number, array:
         Backup[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Backup, index: number, array: Backup[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: Backup, index: number, array: Backup[]) => value, any)'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.every'
+    package: '@azure/arm-storsimple8000series'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Backup, index: number, array:
+        Backup[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Backup, index: number, array: Backup[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Backup, undefined | number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.fill'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.fill'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -179,7 +221,7 @@ methods:
         | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -199,7 +241,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: Backup, index: number, array: Backup[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.filter_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.filter_1'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -209,26 +251,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Backup, index: number, array:
+        function filter(predicate: (value: Backup, index: number, array:
         Backup[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Backup, index: number, array: Backup[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
         description: ''
-  - name: 'filter<S>((value: Backup, index: number, array: Backup[]) => boolean, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.filter'
+  - name: 'filter<S>((value: Backup, index: number, array: Backup[]) => value, any)'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.filter'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -238,26 +279,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Backup, index: number, array:
-        Backup[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Backup, index: number, array:
+        Backup[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: Backup, index: number, array: Backup[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: Backup, index: number, array: Backup[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: Backup, index: number, obj: Backup[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.find_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.find_1'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     remarks: ''
@@ -275,12 +315,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Backup, index: number, obj: Backup[]) =>
-      boolean, any)
-    uid: '@azure/arm-storsimple8000series.BackupList.find'
+      value, any)
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.find'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -293,12 +335,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Backup, index: number,
-        obj: Backup[]) => boolean, thisArg?: any)
+        obj: Backup[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Backup, index: number, obj: Backup[]) =&gt;
-            boolean
+            value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -319,7 +361,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: Backup, index: number, obj: Backup[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.findIndex'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.findIndex'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -356,7 +398,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: Backup, index: number, array: Backup[]) => void, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.forEach'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.forEach'
     package: '@azure/arm-storsimple8000series'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -379,7 +421,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Backup, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.includes'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.includes'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -391,7 +433,7 @@ methods:
       content: 'function includes(searchElement: Backup, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -402,7 +444,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Backup, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.indexOf'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.indexOf'
     package: '@azure/arm-storsimple8000series'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -412,7 +454,7 @@ methods:
       content: 'function indexOf(searchElement: Backup, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -423,7 +465,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-storsimple8000series.BackupList.join'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.join'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -444,7 +486,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-storsimple8000series.BackupList.keys'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.keys'
     package: '@azure/arm-storsimple8000series'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -456,7 +498,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Backup, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.lastIndexOf'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.lastIndexOf'
     package: '@azure/arm-storsimple8000series'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -468,7 +510,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -479,7 +521,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Backup, index: number, array: Backup[]) => U, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.map'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.map'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -507,7 +549,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-storsimple8000series.BackupList.pop'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.pop'
     package: '@azure/arm-storsimple8000series'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -516,10 +558,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" /> |
+          undefined
         description: ''
   - name: 'push(Backup[])'
-    uid: '@azure/arm-storsimple8000series.BackupList.push'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.push'
     package: '@azure/arm-storsimple8000series'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -529,7 +573,9 @@ methods:
       content: 'function push(items: Backup[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -538,7 +584,7 @@ methods:
   - name: >-
       reduce((previousValue: Backup, currentValue: Backup, currentIndex: number,
       array: Backup[]) => Backup)
-    uid: '@azure/arm-storsimple8000series.BackupList.reduce'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reduce'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -561,12 +607,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
         description: ''
   - name: >-
       reduce((previousValue: Backup, currentValue: Backup, currentIndex: number,
       array: Backup[]) => Backup, Backup)
-    uid: '@azure/arm-storsimple8000series.BackupList.reduce_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reduce_1'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     remarks: ''
@@ -584,15 +630,15 @@ methods:
             array: Backup[]) =&gt; Backup
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Backup, currentIndex: number,
       array: Backup[]) => U, U)
-    uid: '@azure/arm-storsimple8000series.BackupList.reduce_2'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reduce_2'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -626,7 +672,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Backup, currentValue: Backup, currentIndex:
       number, array: Backup[]) => Backup)
-    uid: '@azure/arm-storsimple8000series.BackupList.reduceRight'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reduceRight'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -650,12 +696,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
         description: ''
   - name: >-
       reduceRight((previousValue: Backup, currentValue: Backup, currentIndex:
       number, array: Backup[]) => Backup, Backup)
-    uid: '@azure/arm-storsimple8000series.BackupList.reduceRight_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reduceRight_1'
     package: '@azure/arm-storsimple8000series'
     summary: ''
     remarks: ''
@@ -673,15 +719,15 @@ methods:
             array: Backup[]) =&gt; Backup
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+          type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" />
+        type: <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Backup, currentIndex:
       number, array: Backup[]) => U, U)
-    uid: '@azure/arm-storsimple8000series.BackupList.reduceRight_2'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reduceRight_2'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -714,7 +760,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-storsimple8000series.BackupList.reverse'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.reverse'
     package: '@azure/arm-storsimple8000series'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -723,10 +769,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-storsimple8000series.BackupList.shift'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.shift'
     package: '@azure/arm-storsimple8000series'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -735,10 +781,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-storsimple8000series.Backup" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.slice'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.slice'
     package: '@azure/arm-storsimple8000series'
     summary: Returns a section of an array.
     remarks: ''
@@ -752,13 +800,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
         description: ''
   - name: 'some((value: Backup, index: number, array: Backup[]) => unknown, any)'
-    uid: '@azure/arm-storsimple8000series.BackupList.some'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.some'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -768,26 +817,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Backup, index: number, array:
-        Backup[]) => unknown, thisArg?: any)
+        function some(predicate: (value: Backup, index: number, array: Backup[])
+        => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: Backup, index: number, array: Backup[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Backup, b: Backup) => number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.sort'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.sort'
     package: '@azure/arm-storsimple8000series'
     summary: Sorts an array.
     remarks: ''
@@ -799,14 +853,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Backup, b: Backup) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Backup[])'
-    uid: '@azure/arm-storsimple8000series.BackupList.splice_1'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.splice_1'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -826,14 +891,16 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-storsimple8000series.BackupList.splice'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.splice'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -854,10 +921,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+        type: '<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-storsimple8000series.BackupList.toLocaleString'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.toLocaleString'
     package: '@azure/arm-storsimple8000series'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -871,7 +938,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-storsimple8000series.BackupList.toString'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.toString'
     package: '@azure/arm-storsimple8000series'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -883,7 +950,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Backup[])'
-    uid: '@azure/arm-storsimple8000series.BackupList.unshift'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.unshift'
     package: '@azure/arm-storsimple8000series'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -893,14 +960,16 @@ methods:
       content: 'function unshift(items: Backup[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-storsimple8000series.Backup" />[]'
+          type: >-
+            <xref uid="@azure/arm-storsimple8000series.models.index.d.Backup"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-storsimple8000series.BackupList.values'
+    uid: '@azure/arm-storsimple8000series.models.index.d.BackupList.values'
     package: '@azure/arm-storsimple8000series'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -910,7 +979,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-storsimple8000series.Backup"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storsimple8000series.models.index.d.Backup" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-storsimple8000series.Backup" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-storsimple8000series.models.index.d.BackupList.[Symbol.iterator]
+    package: '@azure/arm-storsimple8000series'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-storsimple8000series.models.index.d.Backup" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-storsimple8000series.models.index.d.BackupList.[Symbol.unscopables]
+    package: '@azure/arm-storsimple8000series'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-storsimple8000series.models.index.d.AvailableProviderOperationList.Array"
+  />&lt;<xref uid="@azure/arm-storsimple8000series.models.index.d.Backup" />&gt;

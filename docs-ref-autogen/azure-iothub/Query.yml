@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: Query
-uid: azure-iothub.Query
+uid: azure-iothub.pl.operations.query.d.Query
 package: azure-iothub
 summary: Class representing a Query.
 fullName: Query
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: Query(IotHubGatewayServiceAPIsContext)
-    uid: azure-iothub.Query.constructor
+    uid: azure-iothub.pl.operations.query.d.Query.constructor
     package: azure-iothub
     summary: Create a Query.
     remarks: ''
@@ -20,12 +20,15 @@ constructors:
       content: 'new Query(client: IotHubGatewayServiceAPIsContext)'
       parameters:
         - id: client
-          type: <xref uid="azure-iothub.IotHubGatewayServiceAPIsContext" />
+          type: >-
+            <xref
+            uid="azure-iothub.pl.iotHubGatewayServiceAPIsContext.d.IotHubGatewayServiceAPIsContext"
+            />
           description: |
             Reference to the service client.
 methods:
   - name: 'getTwins(QuerySpecification, QueryGetTwinsOptionalParams)'
-    uid: azure-iothub.Query.getTwins
+    uid: azure-iothub.pl.operations.query.d.Query.getTwins
     package: azure-iothub
     summary: >-
       Query an IoT Hub to retrieve information regarding device twins using a
@@ -44,14 +47,16 @@ methods:
         QueryGetTwinsOptionalParams)
       parameters:
         - id: querySpecification
-          type: <xref uid="azure-iothub.QuerySpecification" />
+          type: <xref uid="azure-iothub.pl.models.index.d.QuerySpecification" />
           description: >-
             The query string. See
 
             https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
             for more information.
         - id: options
-          type: <xref uid="azure-iothub.QueryGetTwinsOptionalParams" />
+          type: >-
+            <xref
+            uid="azure-iothub.pl.models.index.d.QueryGetTwinsOptionalParams" />
           description: ''
       return:
         type: Promise&lt;<xref uid="Models.QueryGetTwinsResponse" />&gt;
@@ -59,7 +64,7 @@ methods:
   - name: >-
       getTwins(QuerySpecification, QueryGetTwinsOptionalParams,
       ServiceCallback<Twin[]>)
-    uid: azure-iothub.Query.getTwins_2
+    uid: azure-iothub.pl.operations.query.d.Query.getTwins_2
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -71,21 +76,25 @@ methods:
         QueryGetTwinsOptionalParams, callback: ServiceCallback<Twin[]>)
       parameters:
         - id: querySpecification
-          type: <xref uid="azure-iothub.QuerySpecification" />
+          type: <xref uid="azure-iothub.pl.models.index.d.QuerySpecification" />
           description: >-
             The query string. See
 
             https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
             for more information.
         - id: options
-          type: <xref uid="azure-iothub.QueryGetTwinsOptionalParams" />
+          type: >-
+            <xref
+            uid="azure-iothub.pl.models.index.d.QueryGetTwinsOptionalParams" />
           description: The optional parameters
         - id: callback
-          type: 'ServiceCallback&lt;<xref uid="azure-iothub.Twin" />[]&gt;'
+          type: >-
+            ServiceCallback&lt;<xref uid="azure-iothub.pl.models.index.d.Twin"
+            />[]&gt;
           description: |
             The callback
   - name: 'getTwins(QuerySpecification, ServiceCallback<Twin[]>)'
-    uid: azure-iothub.Query.getTwins_1
+    uid: azure-iothub.pl.operations.query.d.Query.getTwins_1
     package: azure-iothub
     summary: ''
     remarks: ''
@@ -97,13 +106,15 @@ methods:
         ServiceCallback<Twin[]>)
       parameters:
         - id: querySpecification
-          type: <xref uid="azure-iothub.QuerySpecification" />
+          type: <xref uid="azure-iothub.pl.models.index.d.QuerySpecification" />
           description: >-
             The query string. See
 
             https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
             for more information.
         - id: callback
-          type: 'ServiceCallback&lt;<xref uid="azure-iothub.Twin" />[]&gt;'
+          type: >-
+            ServiceCallback&lt;<xref uid="azure-iothub.pl.models.index.d.Twin"
+            />[]&gt;
           description: |
             The callback

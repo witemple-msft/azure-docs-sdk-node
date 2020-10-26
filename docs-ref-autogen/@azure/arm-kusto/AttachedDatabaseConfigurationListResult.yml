@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AttachedDatabaseConfigurationListResult
-uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult'
+uid: '@azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult'
 package: '@azure/arm-kusto'
 summary: ''
 fullName: AttachedDatabaseConfigurationListResult
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.Array'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.Array
     package: '@azure/arm-kusto'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.length'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.length
     package: '@azure/arm-kusto'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,8 +40,39 @@ properties:
         type: number
         description: ''
 methods:
+  - name: >-
+      concat(AttachedDatabaseConfiguration |
+      ConcatArray<AttachedDatabaseConfiguration>[])
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.concat_1
+    package: '@azure/arm-kusto'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function concat(items: AttachedDatabaseConfiguration |
+        ConcatArray<AttachedDatabaseConfiguration>[])
+      parameters:
+        - id: items
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
+        description: ''
   - name: 'concat(ConcatArray<AttachedDatabaseConfiguration>[])'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.concat'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.concat
     package: '@azure/arm-kusto'
     summary: Combines two or more arrays.
     remarks: ''
@@ -51,31 +84,19 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />&gt;[]
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.concat_1'
-    package: '@azure/arm-kusto'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.copyWithin'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.copyWithin
     package: '@azure/arm-kusto'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +134,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.entries'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.entries
     package: '@azure/arm-kusto'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +149,8 @@ methods:
   - name: >-
       every((value: AttachedDatabaseConfiguration, index: number, array:
       AttachedDatabaseConfiguration[]) => unknown, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.every'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.every_1
     package: '@azure/arm-kusto'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,31 +158,77 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: AttachedDatabaseConfiguration, index:
+        function every(predicate: (value: AttachedDatabaseConfiguration, index:
         number, array: AttachedDatabaseConfiguration[]) => unknown, thisArg?:
         any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AttachedDatabaseConfiguration, index: number, array:
             AttachedDatabaseConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
+      every<S>((value: AttachedDatabaseConfiguration, index: number, array:
+      AttachedDatabaseConfiguration[]) => value, any)
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.every
+    package: '@azure/arm-kusto'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: AttachedDatabaseConfiguration,
+        index: number, array: AttachedDatabaseConfiguration[]) => value,
+        thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: AttachedDatabaseConfiguration, index: number, array:
+            AttachedDatabaseConfiguration[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
+  - name: >-
       fill(AttachedDatabaseConfiguration, undefined | number, undefined |
       number)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.fill'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.fill
     package: '@azure/arm-kusto'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -173,7 +242,10 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -195,7 +267,8 @@ methods:
   - name: >-
       filter((value: AttachedDatabaseConfiguration, index: number, array:
       AttachedDatabaseConfiguration[]) => unknown, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.filter_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.filter_1
     package: '@azure/arm-kusto'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -205,31 +278,34 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: AttachedDatabaseConfiguration,
-        index: number, array: AttachedDatabaseConfiguration[]) => unknown,
-        thisArg?: any)
+        function filter(predicate: (value: AttachedDatabaseConfiguration, index:
+        number, array: AttachedDatabaseConfiguration[]) => unknown, thisArg?:
+        any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AttachedDatabaseConfiguration, index: number, array:
             AttachedDatabaseConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: AttachedDatabaseConfiguration, index: number, array:
-      AttachedDatabaseConfiguration[]) => boolean, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.filter'
+      AttachedDatabaseConfiguration[]) => value, any)
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.filter
     package: '@azure/arm-kusto'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -239,22 +315,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: AttachedDatabaseConfiguration,
-        index: number, array: AttachedDatabaseConfiguration[]) => boolean,
+        function filter<S>(predicate: (value: AttachedDatabaseConfiguration,
+        index: number, array: AttachedDatabaseConfiguration[]) => value,
         thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AttachedDatabaseConfiguration, index: number, array:
-            AttachedDatabaseConfiguration[]) =&gt; boolean
+            AttachedDatabaseConfiguration[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -263,7 +338,8 @@ methods:
   - name: >-
       find((value: AttachedDatabaseConfiguration, index: number, obj:
       AttachedDatabaseConfiguration[]) => unknown, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.find_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.find_1
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -284,13 +360,15 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" /> |
-          undefined
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: AttachedDatabaseConfiguration, index: number,
-      obj: AttachedDatabaseConfiguration[]) => boolean, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.find'
+      obj: AttachedDatabaseConfiguration[]) => value, any)
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.find
     package: '@azure/arm-kusto'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -304,12 +382,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         AttachedDatabaseConfiguration, index: number, obj:
-        AttachedDatabaseConfiguration[]) => boolean, thisArg?: any)
+        AttachedDatabaseConfiguration[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: AttachedDatabaseConfiguration, index: number,
-            obj: AttachedDatabaseConfiguration[]) =&gt; boolean
+            obj: AttachedDatabaseConfiguration[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -332,7 +410,8 @@ methods:
   - name: >-
       findIndex((value: AttachedDatabaseConfiguration, index: number, obj:
       AttachedDatabaseConfiguration[]) => unknown, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.findIndex'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.findIndex
     package: '@azure/arm-kusto'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -374,7 +453,8 @@ methods:
   - name: >-
       forEach((value: AttachedDatabaseConfiguration, index: number, array:
       AttachedDatabaseConfiguration[]) => void, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.forEach'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.forEach
     package: '@azure/arm-kusto'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -400,7 +480,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(AttachedDatabaseConfiguration, undefined | number)'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.includes'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.includes
     package: '@azure/arm-kusto'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -414,7 +495,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -425,7 +509,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(AttachedDatabaseConfiguration, undefined | number)'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.indexOf'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.indexOf
     package: '@azure/arm-kusto'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -437,7 +522,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -448,7 +536,8 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.join'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.join
     package: '@azure/arm-kusto'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -469,7 +558,8 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.keys'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.keys
     package: '@azure/arm-kusto'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -481,7 +571,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(AttachedDatabaseConfiguration, undefined | number)'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.lastIndexOf
     package: '@azure/arm-kusto'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -493,7 +584,10 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -506,7 +600,8 @@ methods:
   - name: >-
       map<U>((value: AttachedDatabaseConfiguration, index: number, array:
       AttachedDatabaseConfiguration[]) => U, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.map'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.map
     package: '@azure/arm-kusto'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -537,7 +632,8 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.pop'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.pop
     package: '@azure/arm-kusto'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -547,11 +643,13 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" /> |
-          undefined
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
+          | undefined
         description: ''
   - name: 'push(AttachedDatabaseConfiguration[])'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.push'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.push
     package: '@azure/arm-kusto'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +659,10 @@ methods:
       content: 'function push(items: AttachedDatabaseConfiguration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -571,7 +672,8 @@ methods:
       reduce((previousValue: AttachedDatabaseConfiguration, currentValue:
       AttachedDatabaseConfiguration, currentIndex: number, array:
       AttachedDatabaseConfiguration[]) => AttachedDatabaseConfiguration)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reduce'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reduce
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -597,14 +699,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
         description: ''
   - name: >-
       reduce((previousValue: AttachedDatabaseConfiguration, currentValue:
       AttachedDatabaseConfiguration, currentIndex: number, array:
       AttachedDatabaseConfiguration[]) => AttachedDatabaseConfiguration,
       AttachedDatabaseConfiguration)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reduce_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reduce_1
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -625,15 +730,21 @@ methods:
             AttachedDatabaseConfiguration[]) =&gt; AttachedDatabaseConfiguration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: AttachedDatabaseConfiguration,
       currentIndex: number, array: AttachedDatabaseConfiguration[]) => U, U)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reduce_2'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reduce_2
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -670,7 +781,8 @@ methods:
       reduceRight((previousValue: AttachedDatabaseConfiguration, currentValue:
       AttachedDatabaseConfiguration, currentIndex: number, array:
       AttachedDatabaseConfiguration[]) => AttachedDatabaseConfiguration)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reduceRight'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reduceRight
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -697,14 +809,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
         description: ''
   - name: >-
       reduceRight((previousValue: AttachedDatabaseConfiguration, currentValue:
       AttachedDatabaseConfiguration, currentIndex: number, array:
       AttachedDatabaseConfiguration[]) => AttachedDatabaseConfiguration,
       AttachedDatabaseConfiguration)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reduceRight_1
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -725,16 +840,22 @@ methods:
             AttachedDatabaseConfiguration[]) =&gt; AttachedDatabaseConfiguration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       AttachedDatabaseConfiguration, currentIndex: number, array:
       AttachedDatabaseConfiguration[]) => U, U)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reduceRight_2
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -769,7 +890,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.reverse'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.reverse
     package: '@azure/arm-kusto'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -778,10 +900,14 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.shift'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.shift
     package: '@azure/arm-kusto'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -791,11 +917,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" /> |
-          undefined
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.slice'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.slice
     package: '@azure/arm-kusto'
     summary: Returns a section of an array.
     remarks: ''
@@ -809,15 +937,20 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
         description: ''
   - name: >-
       some((value: AttachedDatabaseConfiguration, index: number, array:
       AttachedDatabaseConfiguration[]) => unknown, any)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.some'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.some
     package: '@azure/arm-kusto'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -827,31 +960,37 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: AttachedDatabaseConfiguration, index:
+        function some(predicate: (value: AttachedDatabaseConfiguration, index:
         number, array: AttachedDatabaseConfiguration[]) => unknown, thisArg?:
         any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: AttachedDatabaseConfiguration, index: number, array:
             AttachedDatabaseConfiguration[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: AttachedDatabaseConfiguration, b:
       AttachedDatabaseConfiguration) => number)
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.sort'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.sort
     package: '@azure/arm-kusto'
     summary: Sorts an array.
     remarks: ''
@@ -867,14 +1006,26 @@ methods:
             undefined | (a: AttachedDatabaseConfiguration, b:
             AttachedDatabaseConfiguration) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, AttachedDatabaseConfiguration[])'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.splice_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.splice_1
     package: '@azure/arm-kusto'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -896,14 +1047,21 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.splice'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.splice
     package: '@azure/arm-kusto'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -924,10 +1082,14 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.toLocaleString'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.toLocaleString
     package: '@azure/arm-kusto'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -941,7 +1103,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.toString'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.toString
     package: '@azure/arm-kusto'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -953,7 +1116,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(AttachedDatabaseConfiguration[])'
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.unshift'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.unshift
     package: '@azure/arm-kusto'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -963,14 +1127,18 @@ methods:
       content: 'function unshift(items: AttachedDatabaseConfiguration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-kusto.AttachedDatabaseConfigurationListResult.values'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.values
     package: '@azure/arm-kusto'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -981,6 +1149,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />&gt;
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-kusto.AttachedDatabaseConfiguration" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.[Symbol.iterator]
+    package: '@azure/arm-kusto'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-kusto.models.index.d.AttachedDatabaseConfigurationListResult.[Symbol.unscopables]
+    package: '@azure/arm-kusto'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-kusto.models.index.d.FollowerDatabaseListResult.Array"
+  />&lt;<xref
+  uid="@azure/arm-kusto.models.index.d.AttachedDatabaseConfiguration" />&gt;

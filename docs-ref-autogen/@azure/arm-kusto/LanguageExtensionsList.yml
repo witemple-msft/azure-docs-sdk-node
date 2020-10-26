@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: LanguageExtensionsList
-uid: '@azure/arm-kusto.LanguageExtensionsList'
+uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList'
 package: '@azure/arm-kusto'
 summary: ''
 fullName: LanguageExtensionsList
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-kusto.LanguageExtensionsList.Array'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.Array'
     package: '@azure/arm-kusto'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-kusto.LanguageExtensionsList.length'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.length'
     package: '@azure/arm-kusto'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<LanguageExtension>[])'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.concat'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.concat'
     package: '@azure/arm-kusto'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +50,37 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-kusto.LanguageExtension"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-kusto.models.index.d.LanguageExtension" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.concat_1'
+  - name: 'concat(LanguageExtension | ConcatArray<LanguageExtension>[])'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.concat_1'
     package: '@azure/arm-kusto'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: LanguageExtension |
+        ConcatArray<LanguageExtension>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-kusto.models.index.d.LanguageExtension" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.copyWithin'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.copyWithin'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +118,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.entries'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.entries'
     package: '@azure/arm-kusto'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +132,7 @@ methods:
   - name: >-
       every((value: LanguageExtension, index: number, array:
       LanguageExtension[]) => unknown, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.every'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.every_1'
     package: '@azure/arm-kusto'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +140,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: LanguageExtension, index: number,
+        function every(predicate: (value: LanguageExtension, index: number,
         array: LanguageExtension[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LanguageExtension, index: number, array:
             LanguageExtension[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: LanguageExtension, index: number, array:
+      LanguageExtension[]) => value, any)
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.every'
+    package: '@azure/arm-kusto'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: LanguageExtension, index: number,
+        array: LanguageExtension[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: LanguageExtension, index: number, array:
+            LanguageExtension[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(LanguageExtension, undefined | number, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.fill'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.fill'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +218,7 @@ methods:
         end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+          type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +240,7 @@ methods:
   - name: >-
       filter((value: LanguageExtension, index: number, array:
       LanguageExtension[]) => unknown, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.filter_1'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.filter_1'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +250,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: LanguageExtension, index: number,
+        function filter(predicate: (value: LanguageExtension, index: number,
         array: LanguageExtension[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LanguageExtension, index: number, array:
             LanguageExtension[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
   - name: >-
       filter<S>((value: LanguageExtension, index: number, array:
-      LanguageExtension[]) => boolean, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.filter'
+      LanguageExtension[]) => value, any)
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.filter'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +282,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: LanguageExtension, index: number,
-        array: LanguageExtension[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: LanguageExtension, index: number,
+        array: LanguageExtension[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LanguageExtension, index: number, array:
-            LanguageExtension[]) =&gt; boolean
+            LanguageExtension[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +304,7 @@ methods:
   - name: >-
       find((value: LanguageExtension, index: number, obj: LanguageExtension[])
       => unknown, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.find_1'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.find_1'
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -278,12 +324,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: LanguageExtension, index: number, obj:
-      LanguageExtension[]) => boolean, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.find'
+      LanguageExtension[]) => value, any)
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.find'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +344,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: LanguageExtension,
-        index: number, obj: LanguageExtension[]) => boolean, thisArg?: any)
+        index: number, obj: LanguageExtension[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: LanguageExtension, index: number, obj:
-            LanguageExtension[]) =&gt; boolean
+            LanguageExtension[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +372,7 @@ methods:
   - name: >-
       findIndex((value: LanguageExtension, index: number, obj:
       LanguageExtension[]) => unknown, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.findIndex'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.findIndex'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +413,7 @@ methods:
   - name: >-
       forEach((value: LanguageExtension, index: number, array:
       LanguageExtension[]) => void, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.forEach'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.forEach'
     package: '@azure/arm-kusto'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +438,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(LanguageExtension, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.includes'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.includes'
     package: '@azure/arm-kusto'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +452,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+          type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +463,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(LanguageExtension, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.indexOf'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.indexOf'
     package: '@azure/arm-kusto'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +475,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+          type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +486,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.join'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.join'
     package: '@azure/arm-kusto'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +507,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.keys'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.keys'
     package: '@azure/arm-kusto'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +519,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(LanguageExtension, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.lastIndexOf'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.lastIndexOf'
     package: '@azure/arm-kusto'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +531,7 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+          type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +544,7 @@ methods:
   - name: >-
       map<U>((value: LanguageExtension, index: number, array:
       LanguageExtension[]) => U, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.map'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.map'
     package: '@azure/arm-kusto'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +574,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.pop'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.pop'
     package: '@azure/arm-kusto'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +583,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" /> |
+          undefined
         description: ''
   - name: 'push(LanguageExtension[])'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.push'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.push'
     package: '@azure/arm-kusto'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +598,7 @@ methods:
       content: 'function push(items: LanguageExtension[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+          type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
           description: |
             New elements of the Array.
       return:
@@ -557,7 +607,7 @@ methods:
   - name: >-
       reduce((previousValue: LanguageExtension, currentValue: LanguageExtension,
       currentIndex: number, array: LanguageExtension[]) => LanguageExtension)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reduce'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reduce'
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -582,13 +632,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+        type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
         description: ''
   - name: >-
       reduce((previousValue: LanguageExtension, currentValue: LanguageExtension,
       currentIndex: number, array: LanguageExtension[]) => LanguageExtension,
       LanguageExtension)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reduce_1'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reduce_1'
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -608,15 +658,15 @@ methods:
             LanguageExtension
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+          type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+        type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: LanguageExtension,
       currentIndex: number, array: LanguageExtension[]) => U, U)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reduce_2'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reduce_2'
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -652,7 +702,7 @@ methods:
       reduceRight((previousValue: LanguageExtension, currentValue:
       LanguageExtension, currentIndex: number, array: LanguageExtension[]) =>
       LanguageExtension)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reduceRight'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reduceRight'
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -678,13 +728,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+        type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
         description: ''
   - name: >-
       reduceRight((previousValue: LanguageExtension, currentValue:
       LanguageExtension, currentIndex: number, array: LanguageExtension[]) =>
       LanguageExtension, LanguageExtension)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reduceRight_1'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reduceRight_1'
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -704,15 +754,15 @@ methods:
             LanguageExtension
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+          type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" />
+        type: <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: LanguageExtension,
       currentIndex: number, array: LanguageExtension[]) => U, U)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reduceRight_2'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reduceRight_2'
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -746,7 +796,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.reverse'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.reverse'
     package: '@azure/arm-kusto'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -755,10 +805,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.shift'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.shift'
     package: '@azure/arm-kusto'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -767,10 +817,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-kusto.LanguageExtension" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.slice'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.slice'
     package: '@azure/arm-kusto'
     summary: Returns a section of an array.
     remarks: ''
@@ -784,15 +836,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
   - name: >-
       some((value: LanguageExtension, index: number, array: LanguageExtension[])
       => unknown, any)
-    uid: '@azure/arm-kusto.LanguageExtensionsList.some'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.some'
     package: '@azure/arm-kusto'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -802,28 +855,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: LanguageExtension, index: number,
+        function some(predicate: (value: LanguageExtension, index: number,
         array: LanguageExtension[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: LanguageExtension, index: number, array:
             LanguageExtension[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: LanguageExtension, b: LanguageExtension) => number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.sort'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.sort'
     package: '@azure/arm-kusto'
     summary: Sorts an array.
     remarks: ''
@@ -839,14 +897,25 @@ methods:
             undefined | (a: LanguageExtension, b: LanguageExtension) =&gt;
             number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, LanguageExtension[])'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.splice_1'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.splice_1'
     package: '@azure/arm-kusto'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -868,14 +937,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+          type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.splice'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.splice'
     package: '@azure/arm-kusto'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -896,10 +965,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+        type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.toLocaleString'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.toLocaleString'
     package: '@azure/arm-kusto'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -913,7 +982,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.toString'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.toString'
     package: '@azure/arm-kusto'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -925,7 +994,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(LanguageExtension[])'
-    uid: '@azure/arm-kusto.LanguageExtensionsList.unshift'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.unshift'
     package: '@azure/arm-kusto'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -935,14 +1004,14 @@ methods:
       content: 'function unshift(items: LanguageExtension[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-kusto.LanguageExtension" />[]'
+          type: '<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-kusto.LanguageExtensionsList.values'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.values'
     package: '@azure/arm-kusto'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -952,7 +1021,38 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-kusto.LanguageExtension"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-kusto.models.index.d.LanguageExtension" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-kusto.LanguageExtension" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-kusto.models.index.d.LanguageExtensionsList.[Symbol.iterator]'
+    package: '@azure/arm-kusto'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-kusto.models.index.d.LanguageExtension" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-kusto.models.index.d.LanguageExtensionsList.[Symbol.unscopables]
+    package: '@azure/arm-kusto'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-kusto.models.index.d.FollowerDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-kusto.models.index.d.LanguageExtension" />&gt;

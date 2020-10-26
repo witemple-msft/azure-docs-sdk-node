@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ServiceClient
-uid: '@azure/core-http.ServiceClient'
+uid: '@azure/core-http.serviceClient.d.ServiceClient'
 package: '@azure/core-http'
 summary: ''
 fullName: ServiceClient
@@ -12,7 +12,7 @@ constructors:
   - name: >-
       ServiceClient(TokenCredential | ServiceClientCredentials,
       ServiceClientOptions)
-    uid: '@azure/core-http.ServiceClient.constructor'
+    uid: '@azure/core-http.serviceClient.d.ServiceClient.constructor'
     package: '@azure/core-http'
     summary: The ServiceClient constructor
     remarks: ''
@@ -26,17 +26,18 @@ constructors:
         - id: credentials
           type: >-
             TokenCredential | <xref
-            uid="@azure/core-http.ServiceClientCredentials" />
+            uid="@azure/core-http.credentials.serviceClientCredentials.d.ServiceClientCredentials"
+            />
           description: The credentials used for authentication with the service.
         - id: options
-          type: <xref uid="@azure/core-http.ServiceClientOptions" />
+          type: <xref uid="@azure/core-http.serviceClient.d.ServiceClientOptions" />
           description: |
             The service client options that govern the behavior of the client.
 methods:
   - name: >-
       sendOperationRequest(OperationArguments, OperationSpec,
       ServiceCallback<any>)
-    uid: '@azure/core-http.ServiceClient.sendOperationRequest'
+    uid: '@azure/core-http.serviceClient.d.ServiceClient.sendOperationRequest'
     package: '@azure/core-http'
     summary: Send an HTTP request that is populated using the provided OperationSpec.
     remarks: ''
@@ -48,22 +49,28 @@ methods:
         operationSpec: OperationSpec, callback?: ServiceCallback<any>)
       parameters:
         - id: operationArguments
-          type: <xref uid="@azure/core-http.OperationArguments" />
+          type: >-
+            <xref uid="@azure/core-http.operationArguments.d.OperationArguments"
+            />
           description: >-
             The arguments that the HTTP request's templated values will be
             populated from.
         - id: operationSpec
-          type: <xref uid="@azure/core-http.OperationSpec" />
+          type: <xref uid="@azure/core-http.operationSpec.d.OperationSpec" />
           description: The OperationSpec to use to populate the httpRequest.
         - id: callback
-          type: <xref uid="@azure/core-http.ServiceCallback" />&lt;any&gt;
+          type: >-
+            <xref uid="@azure/core-http.util.utils.d.ServiceCallback"
+            />&lt;any&gt;
           description: |
             The callback to call when the response is received.
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.RestResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.RestResponse" />&gt;
         description: ''
   - name: sendRequest(RequestPrepareOptions | WebResourceLike)
-    uid: '@azure/core-http.ServiceClient.sendRequest'
+    uid: '@azure/core-http.serviceClient.d.ServiceClient.sendRequest'
     package: '@azure/core-http'
     summary: Send the provided httpRequest.
     remarks: ''
@@ -74,9 +81,12 @@ methods:
       parameters:
         - id: options
           type: >-
-            <xref uid="@azure/core-http.RequestPrepareOptions" /> | <xref
-            uid="@azure/core-http.WebResourceLike" />
+            <xref uid="@azure/core-http.webResource.d.RequestPrepareOptions" />
+            | <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''

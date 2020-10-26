@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DatabasePrincipalAssignmentListResult
-uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult'
+uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult'
 package: '@azure/arm-kusto'
 summary: ''
 fullName: DatabasePrincipalAssignmentListResult
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.Array'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.Array
     package: '@azure/arm-kusto'
     summary: ''
     fullName: Array
@@ -23,7 +24,8 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.length'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.length
     package: '@azure/arm-kusto'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +41,8 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<DatabasePrincipalAssignment>[])'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.concat'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.concat
     package: '@azure/arm-kusto'
     summary: Combines two or more arrays.
     remarks: ''
@@ -51,31 +54,47 @@ methods:
         - id: items
           type: >-
             ConcatArray&lt;<xref
-            uid="@azure/arm-kusto.DatabasePrincipalAssignment" />&gt;[]
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.concat_1'
+  - name: >-
+      concat(DatabasePrincipalAssignment |
+      ConcatArray<DatabasePrincipalAssignment>[])
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.concat_1
     package: '@azure/arm-kusto'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: >-
+        function concat(items: DatabasePrincipalAssignment |
+        ConcatArray<DatabasePrincipalAssignment>[])
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
+            | ConcatArray&lt;<xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.copyWithin'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.copyWithin
     package: '@azure/arm-kusto'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +132,8 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.entries'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.entries
     package: '@azure/arm-kusto'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +147,8 @@ methods:
   - name: >-
       every((value: DatabasePrincipalAssignment, index: number, array:
       DatabasePrincipalAssignment[]) => unknown, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.every'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.every_1
     package: '@azure/arm-kusto'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +156,72 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: DatabasePrincipalAssignment, index:
+        function every(predicate: (value: DatabasePrincipalAssignment, index:
         number, array: DatabasePrincipalAssignment[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DatabasePrincipalAssignment, index: number, array:
             DatabasePrincipalAssignment[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: DatabasePrincipalAssignment, index: number, array:
+      DatabasePrincipalAssignment[]) => value, any)
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.every
+    package: '@azure/arm-kusto'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: DatabasePrincipalAssignment, index:
+        number, array: DatabasePrincipalAssignment[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: DatabasePrincipalAssignment, index: number, array:
+            DatabasePrincipalAssignment[]) =&gt; value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(DatabasePrincipalAssignment, undefined | number, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.fill'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.fill'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +235,9 @@ methods:
         number, end?: undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +259,8 @@ methods:
   - name: >-
       filter((value: DatabasePrincipalAssignment, index: number, array:
       DatabasePrincipalAssignment[]) => unknown, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.filter_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.filter_1
     package: '@azure/arm-kusto'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +270,32 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: DatabasePrincipalAssignment, index:
+        function filter(predicate: (value: DatabasePrincipalAssignment, index:
         number, array: DatabasePrincipalAssignment[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DatabasePrincipalAssignment, index: number, array:
             DatabasePrincipalAssignment[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
   - name: >-
       filter<S>((value: DatabasePrincipalAssignment, index: number, array:
-      DatabasePrincipalAssignment[]) => boolean, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.filter'
+      DatabasePrincipalAssignment[]) => value, any)
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.filter
     package: '@azure/arm-kusto'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,22 +305,21 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: DatabasePrincipalAssignment,
-        index: number, array: DatabasePrincipalAssignment[]) => boolean,
-        thisArg?: any)
+        function filter<S>(predicate: (value: DatabasePrincipalAssignment,
+        index: number, array: DatabasePrincipalAssignment[]) => value, thisArg?:
+        any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DatabasePrincipalAssignment, index: number, array:
-            DatabasePrincipalAssignment[]) =&gt; boolean
+            DatabasePrincipalAssignment[]) =&gt; value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -259,7 +328,8 @@ methods:
   - name: >-
       find((value: DatabasePrincipalAssignment, index: number, obj:
       DatabasePrincipalAssignment[]) => unknown, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.find_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.find_1
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -280,13 +350,14 @@ methods:
           description: ''
       return:
         type: >-
-          <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" /> |
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" /> |
           undefined
         description: ''
   - name: >-
       find<S>((this: void, value: DatabasePrincipalAssignment, index: number,
-      obj: DatabasePrincipalAssignment[]) => boolean, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.find'
+      obj: DatabasePrincipalAssignment[]) => value, any)
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.find'
     package: '@azure/arm-kusto'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -300,12 +371,12 @@ methods:
       content: >-
         function find<S>(predicate: (this: void, value:
         DatabasePrincipalAssignment, index: number, obj:
-        DatabasePrincipalAssignment[]) => boolean, thisArg?: any)
+        DatabasePrincipalAssignment[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: DatabasePrincipalAssignment, index: number, obj:
-            DatabasePrincipalAssignment[]) =&gt; boolean
+            DatabasePrincipalAssignment[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -328,7 +399,8 @@ methods:
   - name: >-
       findIndex((value: DatabasePrincipalAssignment, index: number, obj:
       DatabasePrincipalAssignment[]) => unknown, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.findIndex'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.findIndex
     package: '@azure/arm-kusto'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -370,7 +442,8 @@ methods:
   - name: >-
       forEach((value: DatabasePrincipalAssignment, index: number, array:
       DatabasePrincipalAssignment[]) => void, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.forEach'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.forEach
     package: '@azure/arm-kusto'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -395,7 +468,8 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(DatabasePrincipalAssignment, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.includes'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.includes
     package: '@azure/arm-kusto'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -409,7 +483,9 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -420,7 +496,8 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(DatabasePrincipalAssignment, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.indexOf'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.indexOf
     package: '@azure/arm-kusto'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -432,7 +509,9 @@ methods:
         undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -443,7 +522,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.join'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.join'
     package: '@azure/arm-kusto'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -464,7 +543,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.keys'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.keys'
     package: '@azure/arm-kusto'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -476,7 +555,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(DatabasePrincipalAssignment, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.lastIndexOf
     package: '@azure/arm-kusto'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -488,7 +568,9 @@ methods:
         fromIndex?: undefined | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -501,7 +583,7 @@ methods:
   - name: >-
       map<U>((value: DatabasePrincipalAssignment, index: number, array:
       DatabasePrincipalAssignment[]) => U, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.map'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.map'
     package: '@azure/arm-kusto'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -531,7 +613,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.pop'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.pop'
     package: '@azure/arm-kusto'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -541,11 +623,12 @@ methods:
       content: function pop()
       return:
         type: >-
-          <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" /> |
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" /> |
           undefined
         description: ''
   - name: 'push(DatabasePrincipalAssignment[])'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.push'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.push'
     package: '@azure/arm-kusto'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -555,7 +638,10 @@ methods:
       content: 'function push(items: DatabasePrincipalAssignment[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -565,7 +651,8 @@ methods:
       reduce((previousValue: DatabasePrincipalAssignment, currentValue:
       DatabasePrincipalAssignment, currentIndex: number, array:
       DatabasePrincipalAssignment[]) => DatabasePrincipalAssignment)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reduce'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reduce
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -590,14 +677,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
         description: ''
   - name: >-
       reduce((previousValue: DatabasePrincipalAssignment, currentValue:
       DatabasePrincipalAssignment, currentIndex: number, array:
       DatabasePrincipalAssignment[]) => DatabasePrincipalAssignment,
       DatabasePrincipalAssignment)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reduce_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reduce_1
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -617,15 +707,20 @@ methods:
             DatabasePrincipalAssignment[]) =&gt; DatabasePrincipalAssignment
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: DatabasePrincipalAssignment,
       currentIndex: number, array: DatabasePrincipalAssignment[]) => U, U)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reduce_2'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reduce_2
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +756,8 @@ methods:
       reduceRight((previousValue: DatabasePrincipalAssignment, currentValue:
       DatabasePrincipalAssignment, currentIndex: number, array:
       DatabasePrincipalAssignment[]) => DatabasePrincipalAssignment)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reduceRight'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reduceRight
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -688,14 +784,17 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
         description: ''
   - name: >-
       reduceRight((previousValue: DatabasePrincipalAssignment, currentValue:
       DatabasePrincipalAssignment, currentIndex: number, array:
       DatabasePrincipalAssignment[]) => DatabasePrincipalAssignment,
       DatabasePrincipalAssignment)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reduceRight_1
     package: '@azure/arm-kusto'
     summary: ''
     remarks: ''
@@ -715,16 +814,21 @@ methods:
             DatabasePrincipalAssignment[]) =&gt; DatabasePrincipalAssignment
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue:
       DatabasePrincipalAssignment, currentIndex: number, array:
       DatabasePrincipalAssignment[]) => U, U)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reduceRight_2
     package: '@azure/arm-kusto'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -758,7 +862,8 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.reverse'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.reverse
     package: '@azure/arm-kusto'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -767,10 +872,13 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.shift'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.shift
     package: '@azure/arm-kusto'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -780,11 +888,13 @@ methods:
       content: function shift()
       return:
         type: >-
-          <xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" /> |
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" /> |
           undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.slice'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.slice
     package: '@azure/arm-kusto'
     summary: Returns a section of an array.
     remarks: ''
@@ -798,15 +908,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
   - name: >-
       some((value: DatabasePrincipalAssignment, index: number, array:
       DatabasePrincipalAssignment[]) => unknown, any)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.some'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.some'
     package: '@azure/arm-kusto'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -816,30 +929,35 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: DatabasePrincipalAssignment, index:
+        function some(predicate: (value: DatabasePrincipalAssignment, index:
         number, array: DatabasePrincipalAssignment[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DatabasePrincipalAssignment, index: number, array:
             DatabasePrincipalAssignment[]) =&gt; unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: >-
       sort(undefined | (a: DatabasePrincipalAssignment, b:
       DatabasePrincipalAssignment) => number)
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.sort'
+    uid: '@azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.sort'
     package: '@azure/arm-kusto'
     summary: Sorts an array.
     remarks: ''
@@ -855,14 +973,26 @@ methods:
             undefined | (a: DatabasePrincipalAssignment, b:
             DatabasePrincipalAssignment) =&gt; number
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, DatabasePrincipalAssignment[])'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.splice_1'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.splice_1
     package: '@azure/arm-kusto'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -884,14 +1014,20 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.splice'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.splice
     package: '@azure/arm-kusto'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -912,10 +1048,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+        type: >-
+          <xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment" />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.toLocaleString'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.toLocaleString
     package: '@azure/arm-kusto'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -929,7 +1068,8 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.toString'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.toString
     package: '@azure/arm-kusto'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -941,7 +1081,8 @@ methods:
         type: string
         description: ''
   - name: 'unshift(DatabasePrincipalAssignment[])'
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.unshift'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.unshift
     package: '@azure/arm-kusto'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -951,14 +1092,18 @@ methods:
       content: 'function unshift(items: DatabasePrincipalAssignment[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />[]'
+          type: >-
+            <xref
+            uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-kusto.DatabasePrincipalAssignmentListResult.values'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.values
     package: '@azure/arm-kusto'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -969,6 +1114,41 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-kusto.DatabasePrincipalAssignment" />&gt;
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+          />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-kusto.DatabasePrincipalAssignment" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.[Symbol.iterator]
+    package: '@azure/arm-kusto'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+          />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-kusto.models.index.d.DatabasePrincipalAssignmentListResult.[Symbol.unscopables]
+    package: '@azure/arm-kusto'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-kusto.models.index.d.FollowerDatabaseListResult.Array"
+  />&lt;<xref uid="@azure/arm-kusto.models.index.d.DatabasePrincipalAssignment"
+  />&gt;

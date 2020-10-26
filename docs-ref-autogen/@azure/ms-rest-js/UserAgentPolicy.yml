@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: UserAgentPolicy
-uid: '@azure/ms-rest-js.UserAgentPolicy'
+uid: '@azure/ms-rest-js.policies.userAgentPolicy.d.UserAgentPolicy'
 package: '@azure/ms-rest-js'
 summary: ''
 fullName: UserAgentPolicy
@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: 'UserAgentPolicy(RequestPolicy, RequestPolicyOptionsLike, string, string)'
-    uid: '@azure/ms-rest-js.UserAgentPolicy.constructor'
+    uid: '@azure/ms-rest-js.policies.userAgentPolicy.d.UserAgentPolicy.constructor'
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -22,10 +22,15 @@ constructors:
         RequestPolicyOptionsLike, headerKey: string, headerValue: string)
       parameters:
         - id: _nextPolicy
-          type: <xref uid="@azure/ms-rest-js.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: _options
-          type: <xref uid="@azure/ms-rest-js.RequestPolicyOptionsLike" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.policies.requestPolicy.d.RequestPolicyOptionsLike"
+            />
           description: ''
         - id: headerKey
           type: string
@@ -35,7 +40,8 @@ constructors:
           description: ''
 methods:
   - name: addUserAgentHeader(WebResourceLike)
-    uid: '@azure/ms-rest-js.UserAgentPolicy.addUserAgentHeader'
+    uid: >-
+      @azure/ms-rest-js.policies.userAgentPolicy.d.UserAgentPolicy.addUserAgentHeader
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -45,10 +51,10 @@ methods:
       content: 'function addUserAgentHeader(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+          type: <xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike" />
           description: ''
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/ms-rest-js.UserAgentPolicy.log'
+    uid: '@azure/ms-rest-js.policies.userAgentPolicy.d.UserAgentPolicy.log'
     package: '@azure/ms-rest-js'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -63,14 +69,17 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/ms-rest-js.UserAgentPolicy.sendRequest'
+    uid: '@azure/ms-rest-js.policies.userAgentPolicy.d.UserAgentPolicy.sendRequest'
     package: '@azure/ms-rest-js'
     summary: ''
     remarks: ''
@@ -80,13 +89,16 @@ methods:
       content: 'function sendRequest(request: WebResourceLike)'
       parameters:
         - id: request
-          type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+          type: <xref uid="@azure/ms-rest-js.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/ms-rest-js.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/ms-rest-js.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/ms-rest-js.UserAgentPolicy.shouldLog'
+    uid: '@azure/ms-rest-js.policies.userAgentPolicy.d.UserAgentPolicy.shouldLog'
     package: '@azure/ms-rest-js'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -96,9 +108,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/ms-rest-js.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/ms-rest-js.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/ms-rest-js.BaseRequestPolicy" />
+extends: <xref uid="@azure/ms-rest-js.policies.requestPolicy.d.BaseRequestPolicy" />

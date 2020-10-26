@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: AppListResult
-uid: '@azure/arm-iotcentral.AppListResult'
+uid: '@azure/arm-iotcentral.models.index.d.AppListResult'
 package: '@azure/arm-iotcentral'
 summary: ''
 fullName: AppListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-iotcentral.AppListResult.Array'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.Array'
     package: '@azure/arm-iotcentral'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-iotcentral.AppListResult.length'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.length'
     package: '@azure/arm-iotcentral'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-iotcentral.AppListResult.nextLink'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.nextLink'
     package: '@azure/arm-iotcentral'
     summary: The link used to get the next page of IoT Central Applications.
     fullName: nextLink
@@ -51,8 +51,28 @@ properties:
         type: undefined | string
         description: ''
 methods:
+  - name: 'concat(App | ConcatArray<App>[])'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.concat_1'
+    package: '@azure/arm-iotcentral'
+    summary: Combines two or more arrays.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function concat(items: App | ConcatArray<App>[])'
+      parameters:
+        - id: items
+          type: >-
+            <xref uid="@azure/arm-iotcentral.models.index.d.App" /> |
+            ConcatArray&lt;<xref uid="@azure/arm-iotcentral.models.index.d.App"
+            />&gt;[]
+          description: |
+            Additional items to add to the end of array1.
+      return:
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
+        description: ''
   - name: 'concat(ConcatArray<App>[])'
-    uid: '@azure/arm-iotcentral.AppListResult.concat'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.concat'
     package: '@azure/arm-iotcentral'
     summary: Combines two or more arrays.
     remarks: ''
@@ -62,31 +82,16 @@ methods:
       content: 'function concat(items: ConcatArray<App>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-iotcentral.App" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref uid="@azure/arm-iotcentral.models.index.d.App"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
-        description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-iotcentral.AppListResult.concat_1'
-    package: '@azure/arm-iotcentral'
-    summary: Combines two or more arrays.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
-      parameters:
-        - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
-          description: |
-            Additional items to add to the end of array1.
-      return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.copyWithin'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.copyWithin'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -124,7 +129,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-iotcentral.AppListResult.entries'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.entries'
     package: '@azure/arm-iotcentral'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -136,7 +141,7 @@ methods:
         type: IterableIterator&lt;Object&gt;
         description: ''
   - name: 'every((value: App, index: number, array: App[]) => unknown, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.every'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.every_1'
     package: '@azure/arm-iotcentral'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -144,26 +149,65 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: App, index: number, array: App[]) =>
+        function every(predicate: (value: App, index: number, array: App[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: App, index: number, array: App[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: 'every<S>((value: App, index: number, array: App[]) => value, any)'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.every'
+    package: '@azure/arm-iotcentral'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: App, index: number, array: App[])
+        => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: App, index: number, array: App[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(App, undefined | number, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.fill'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.fill'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -177,7 +221,7 @@ methods:
         number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-iotcentral.App" />
+          type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -197,7 +241,7 @@ methods:
         type: this
         description: ''
   - name: 'filter((value: App, index: number, array: App[]) => unknown, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.filter_1'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.filter_1'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -207,26 +251,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: App, index: number, array: App[]) =>
+        function filter(predicate: (value: App, index: number, array: App[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: App, index: number, array: App[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
         description: ''
-  - name: 'filter<S>((value: App, index: number, array: App[]) => boolean, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.filter'
+  - name: 'filter<S>((value: App, index: number, array: App[]) => value, any)'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.filter'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -236,26 +279,25 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: App, index: number, array: App[])
-        => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: App, index: number, array: App[])
+        => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: '(value: App, index: number, array: App[]) =&gt; boolean'
+        - id: predicate
+          type: '(value: App, index: number, array: App[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
         type: 'S[]'
         description: ''
   - name: 'find((value: App, index: number, obj: App[]) => unknown, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.find_1'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.find_1'
     package: '@azure/arm-iotcentral'
     summary: ''
     remarks: ''
@@ -273,12 +315,10 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" /> | undefined
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" /> | undefined
         description: ''
-  - name: >-
-      find<S>((this: void, value: App, index: number, obj: App[]) => boolean,
-      any)
-    uid: '@azure/arm-iotcentral.AppListResult.find'
+  - name: 'find<S>((this: void, value: App, index: number, obj: App[]) => value, any)'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.find'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -291,10 +331,10 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: App, index: number, obj:
-        App[]) => boolean, thisArg?: any)
+        App[]) => value, thisArg?: any)
       parameters:
         - id: predicate
-          type: '(this: void, value: App, index: number, obj: App[]) =&gt; boolean'
+          type: '(this: void, value: App, index: number, obj: App[]) =&gt; value'
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -315,7 +355,7 @@ methods:
         type: S | undefined
         description: ''
   - name: 'findIndex((value: App, index: number, obj: App[]) => unknown, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.findIndex'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.findIndex'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -352,7 +392,7 @@ methods:
         type: number
         description: ''
   - name: 'forEach((value: App, index: number, array: App[]) => void, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.forEach'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.forEach'
     package: '@azure/arm-iotcentral'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -375,7 +415,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(App, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.includes'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.includes'
     package: '@azure/arm-iotcentral'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -387,7 +427,7 @@ methods:
       content: 'function includes(searchElement: App, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-iotcentral.App" />
+          type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -398,7 +438,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(App, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.indexOf'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.indexOf'
     package: '@azure/arm-iotcentral'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -408,7 +448,7 @@ methods:
       content: 'function indexOf(searchElement: App, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-iotcentral.App" />
+          type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -419,7 +459,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-iotcentral.AppListResult.join'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.join'
     package: '@azure/arm-iotcentral'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -440,7 +480,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-iotcentral.AppListResult.keys'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.keys'
     package: '@azure/arm-iotcentral'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -452,7 +492,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(App, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.lastIndexOf'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.lastIndexOf'
     package: '@azure/arm-iotcentral'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -462,7 +502,7 @@ methods:
       content: 'function lastIndexOf(searchElement: App, fromIndex?: undefined | number)'
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-iotcentral.App" />
+          type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -473,7 +513,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: App, index: number, array: App[]) => U, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.map'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.map'
     package: '@azure/arm-iotcentral'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -501,7 +541,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-iotcentral.AppListResult.pop'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.pop'
     package: '@azure/arm-iotcentral'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -510,10 +550,10 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" /> | undefined
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" /> | undefined
         description: ''
   - name: 'push(App[])'
-    uid: '@azure/arm-iotcentral.AppListResult.push'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.push'
     package: '@azure/arm-iotcentral'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -523,7 +563,7 @@ methods:
       content: 'function push(items: App[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+          type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
           description: |
             New elements of the Array.
       return:
@@ -532,7 +572,7 @@ methods:
   - name: >-
       reduce((previousValue: App, currentValue: App, currentIndex: number,
       array: App[]) => App)
-    uid: '@azure/arm-iotcentral.AppListResult.reduce'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reduce'
     package: '@azure/arm-iotcentral'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -555,12 +595,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" />
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
         description: ''
   - name: >-
       reduce((previousValue: App, currentValue: App, currentIndex: number,
       array: App[]) => App, App)
-    uid: '@azure/arm-iotcentral.AppListResult.reduce_1'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reduce_1'
     package: '@azure/arm-iotcentral'
     summary: ''
     remarks: ''
@@ -577,15 +617,15 @@ methods:
             App[]) =&gt; App
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-iotcentral.App" />
+          type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" />
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: App, currentIndex: number,
       array: App[]) => U, U)
-    uid: '@azure/arm-iotcentral.AppListResult.reduce_2'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reduce_2'
     package: '@azure/arm-iotcentral'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -619,7 +659,7 @@ methods:
   - name: >-
       reduceRight((previousValue: App, currentValue: App, currentIndex: number,
       array: App[]) => App)
-    uid: '@azure/arm-iotcentral.AppListResult.reduceRight'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reduceRight'
     package: '@azure/arm-iotcentral'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -643,12 +683,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" />
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
         description: ''
   - name: >-
       reduceRight((previousValue: App, currentValue: App, currentIndex: number,
       array: App[]) => App, App)
-    uid: '@azure/arm-iotcentral.AppListResult.reduceRight_1'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reduceRight_1'
     package: '@azure/arm-iotcentral'
     summary: ''
     remarks: ''
@@ -665,15 +705,15 @@ methods:
             App[]) =&gt; App
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-iotcentral.App" />
+          type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" />
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: App, currentIndex: number,
       array: App[]) => U, U)
-    uid: '@azure/arm-iotcentral.AppListResult.reduceRight_2'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reduceRight_2'
     package: '@azure/arm-iotcentral'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -706,7 +746,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-iotcentral.AppListResult.reverse'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.reverse'
     package: '@azure/arm-iotcentral'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -715,10 +755,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-iotcentral.AppListResult.shift'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.shift'
     package: '@azure/arm-iotcentral'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -727,10 +767,10 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-iotcentral.App" /> | undefined
+        type: <xref uid="@azure/arm-iotcentral.models.index.d.App" /> | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.slice'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.slice'
     package: '@azure/arm-iotcentral'
     summary: Returns a section of an array.
     remarks: ''
@@ -744,13 +784,14 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
         description: ''
   - name: 'some((value: App, index: number, array: App[]) => unknown, any)'
-    uid: '@azure/arm-iotcentral.AppListResult.some'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.some'
     package: '@azure/arm-iotcentral'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -760,26 +801,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: App, index: number, array: App[]) =>
+        function some(predicate: (value: App, index: number, array: App[]) =>
         unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: '(value: App, index: number, array: App[]) =&gt; unknown'
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: App, b: App) => number)'
-    uid: '@azure/arm-iotcentral.AppListResult.sort'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.sort'
     package: '@azure/arm-iotcentral'
     summary: Sorts an array.
     remarks: ''
@@ -791,14 +837,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: App, b: App) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, App[])'
-    uid: '@azure/arm-iotcentral.AppListResult.splice_1'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.splice_1'
     package: '@azure/arm-iotcentral'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -818,14 +875,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+          type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-iotcentral.AppListResult.splice'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.splice'
     package: '@azure/arm-iotcentral'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -846,10 +903,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+        type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-iotcentral.AppListResult.toLocaleString'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.toLocaleString'
     package: '@azure/arm-iotcentral'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -863,7 +920,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-iotcentral.AppListResult.toString'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.toString'
     package: '@azure/arm-iotcentral'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -875,7 +932,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(App[])'
-    uid: '@azure/arm-iotcentral.AppListResult.unshift'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.unshift'
     package: '@azure/arm-iotcentral'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -885,14 +942,14 @@ methods:
       content: 'function unshift(items: App[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-iotcentral.App" />[]'
+          type: '<xref uid="@azure/arm-iotcentral.models.index.d.App" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-iotcentral.AppListResult.values'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.values'
     package: '@azure/arm-iotcentral'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -901,6 +958,38 @@ methods:
     syntax:
       content: function values()
       return:
-        type: IterableIterator&lt;<xref uid="@azure/arm-iotcentral.App" />&gt;
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-iotcentral.models.index.d.App" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-iotcentral.App" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.[Symbol.iterator]'
+    package: '@azure/arm-iotcentral'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-iotcentral.models.index.d.App" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: '@azure/arm-iotcentral.models.index.d.AppListResult.[Symbol.unscopables]'
+    package: '@azure/arm-iotcentral'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-iotcentral.models.index.d.AppListResult.Array"
+  />&lt;<xref uid="@azure/arm-iotcentral.models.index.d.App" />&gt;

@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ConfigurationListResult
-uid: '@azure/arm-postgresql.ConfigurationListResult'
+uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult'
 package: '@azure/arm-postgresql'
 summary: ''
 fullName: ConfigurationListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-postgresql.ConfigurationListResult.Array'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.Array'
     package: '@azure/arm-postgresql'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-postgresql.ConfigurationListResult.length'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.length'
     package: '@azure/arm-postgresql'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Configuration>[])'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.concat'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.concat'
     package: '@azure/arm-postgresql'
     summary: Combines two or more arrays.
     remarks: ''
@@ -50,32 +50,35 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-postgresql.Configuration"
-            />&gt;[]
+            ConcatArray&lt;<xref
+            uid="@azure/arm-postgresql.models.index.d.Configuration" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.concat_1'
+  - name: 'concat(Configuration | ConcatArray<Configuration>[])'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.concat_1'
     package: '@azure/arm-postgresql'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Configuration | ConcatArray<Configuration>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-postgresql.models.index.d.Configuration" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-postgresql.models.index.d.Configuration" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.copyWithin'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.copyWithin'
     package: '@azure/arm-postgresql'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -113,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.entries'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.entries'
     package: '@azure/arm-postgresql'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -127,7 +130,7 @@ methods:
   - name: >-
       every((value: Configuration, index: number, array: Configuration[]) =>
       unknown, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.every'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.every_1'
     package: '@azure/arm-postgresql'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -135,28 +138,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Configuration, index: number, array:
+        function every(predicate: (value: Configuration, index: number, array:
         Configuration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Configuration, index: number, array: Configuration[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Configuration, index: number, array: Configuration[]) =>
+      value, any)
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.every'
+    package: '@azure/arm-postgresql'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Configuration, index: number,
+        array: Configuration[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: Configuration, index: number, array: Configuration[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Configuration, undefined | number, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.fill'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.fill'
     package: '@azure/arm-postgresql'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -170,7 +216,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-postgresql.Configuration" />
+          type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -192,7 +238,7 @@ methods:
   - name: >-
       filter((value: Configuration, index: number, array: Configuration[]) =>
       unknown, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.filter_1'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.filter_1'
     package: '@azure/arm-postgresql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -202,30 +248,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Configuration, index: number, array:
+        function filter(predicate: (value: Configuration, index: number, array:
         Configuration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Configuration, index: number, array: Configuration[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
   - name: >-
       filter<S>((value: Configuration, index: number, array: Configuration[]) =>
-      boolean, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.filter'
+      value, any)
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.filter'
     package: '@azure/arm-postgresql'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -235,21 +280,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Configuration, index: number,
-        array: Configuration[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Configuration, index: number,
+        array: Configuration[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Configuration, index: number, array: Configuration[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -258,7 +302,7 @@ methods:
   - name: >-
       find((value: Configuration, index: number, obj: Configuration[]) =>
       unknown, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.find_1'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.find_1'
     package: '@azure/arm-postgresql'
     summary: ''
     remarks: ''
@@ -278,12 +322,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-postgresql.models.index.d.Configuration" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Configuration, index: number, obj:
-      Configuration[]) => boolean, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.find'
+      Configuration[]) => value, any)
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.find'
     package: '@azure/arm-postgresql'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -296,12 +342,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Configuration, index:
-        number, obj: Configuration[]) => boolean, thisArg?: any)
+        number, obj: Configuration[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Configuration, index: number, obj:
-            Configuration[]) =&gt; boolean
+            Configuration[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -324,7 +370,7 @@ methods:
   - name: >-
       findIndex((value: Configuration, index: number, obj: Configuration[]) =>
       unknown, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.findIndex'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.findIndex'
     package: '@azure/arm-postgresql'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -365,7 +411,7 @@ methods:
   - name: >-
       forEach((value: Configuration, index: number, array: Configuration[]) =>
       void, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.forEach'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.forEach'
     package: '@azure/arm-postgresql'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -390,7 +436,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Configuration, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.includes'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.includes'
     package: '@azure/arm-postgresql'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -404,7 +450,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-postgresql.Configuration" />
+          type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -415,7 +461,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Configuration, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.indexOf'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.indexOf'
     package: '@azure/arm-postgresql'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -427,7 +473,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-postgresql.Configuration" />
+          type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -438,7 +484,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.join'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.join'
     package: '@azure/arm-postgresql'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -459,7 +505,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.keys'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.keys'
     package: '@azure/arm-postgresql'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -471,7 +517,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Configuration, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.lastIndexOf'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.lastIndexOf'
     package: '@azure/arm-postgresql'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -483,7 +529,7 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-postgresql.Configuration" />
+          type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -496,7 +542,7 @@ methods:
   - name: >-
       map<U>((value: Configuration, index: number, array: Configuration[]) => U,
       any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.map'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.map'
     package: '@azure/arm-postgresql'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -526,7 +572,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.pop'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.pop'
     package: '@azure/arm-postgresql'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -535,10 +581,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-postgresql.models.index.d.Configuration" /> |
+          undefined
         description: ''
   - name: 'push(Configuration[])'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.push'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.push'
     package: '@azure/arm-postgresql'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -548,7 +596,7 @@ methods:
       content: 'function push(items: Configuration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+          type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
           description: |
             New elements of the Array.
       return:
@@ -557,7 +605,7 @@ methods:
   - name: >-
       reduce((previousValue: Configuration, currentValue: Configuration,
       currentIndex: number, array: Configuration[]) => Configuration)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reduce'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reduce'
     package: '@azure/arm-postgresql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -581,13 +629,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" />
+        type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
         description: ''
   - name: >-
       reduce((previousValue: Configuration, currentValue: Configuration,
       currentIndex: number, array: Configuration[]) => Configuration,
       Configuration)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reduce_1'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reduce_1'
     package: '@azure/arm-postgresql'
     summary: ''
     remarks: ''
@@ -605,15 +653,15 @@ methods:
             currentIndex: number, array: Configuration[]) =&gt; Configuration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-postgresql.Configuration" />
+          type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" />
+        type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Configuration, currentIndex:
       number, array: Configuration[]) => U, U)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reduce_2'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reduce_2'
     package: '@azure/arm-postgresql'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -648,7 +696,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Configuration, currentValue: Configuration,
       currentIndex: number, array: Configuration[]) => Configuration)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reduceRight'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reduceRight'
     package: '@azure/arm-postgresql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -673,13 +721,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" />
+        type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
         description: ''
   - name: >-
       reduceRight((previousValue: Configuration, currentValue: Configuration,
       currentIndex: number, array: Configuration[]) => Configuration,
       Configuration)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reduceRight_1'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reduceRight_1'
     package: '@azure/arm-postgresql'
     summary: ''
     remarks: ''
@@ -697,15 +745,15 @@ methods:
             currentIndex: number, array: Configuration[]) =&gt; Configuration
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-postgresql.Configuration" />
+          type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" />
+        type: <xref uid="@azure/arm-postgresql.models.index.d.Configuration" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Configuration,
       currentIndex: number, array: Configuration[]) => U, U)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reduceRight_2'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reduceRight_2'
     package: '@azure/arm-postgresql'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -739,7 +787,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.reverse'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.reverse'
     package: '@azure/arm-postgresql'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -748,10 +796,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.shift'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.shift'
     package: '@azure/arm-postgresql'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -760,10 +808,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-postgresql.Configuration" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-postgresql.models.index.d.Configuration" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.slice'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.slice'
     package: '@azure/arm-postgresql'
     summary: Returns a section of an array.
     remarks: ''
@@ -777,15 +827,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
   - name: >-
       some((value: Configuration, index: number, array: Configuration[]) =>
       unknown, any)
-    uid: '@azure/arm-postgresql.ConfigurationListResult.some'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.some'
     package: '@azure/arm-postgresql'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -795,28 +846,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Configuration, index: number, array:
+        function some(predicate: (value: Configuration, index: number, array:
         Configuration[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Configuration, index: number, array: Configuration[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Configuration, b: Configuration) => number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.sort'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.sort'
     package: '@azure/arm-postgresql'
     summary: Sorts an array.
     remarks: ''
@@ -830,14 +886,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Configuration, b: Configuration) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Configuration[])'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.splice_1'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.splice_1'
     package: '@azure/arm-postgresql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -859,14 +926,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+          type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.splice'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.splice'
     package: '@azure/arm-postgresql'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -887,10 +954,11 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+        type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.toLocaleString'
+    uid: >-
+      @azure/arm-postgresql.models.index.d.ConfigurationListResult.toLocaleString
     package: '@azure/arm-postgresql'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -904,7 +972,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.toString'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.toString'
     package: '@azure/arm-postgresql'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -916,7 +984,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Configuration[])'
-    uid: '@azure/arm-postgresql.ConfigurationListResult.unshift'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.unshift'
     package: '@azure/arm-postgresql'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -926,14 +994,14 @@ methods:
       content: 'function unshift(items: Configuration[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-postgresql.Configuration" />[]'
+          type: '<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-postgresql.ConfigurationListResult.values'
+    uid: '@azure/arm-postgresql.models.index.d.ConfigurationListResult.values'
     package: '@azure/arm-postgresql'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -943,7 +1011,39 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-postgresql.Configuration"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-postgresql.models.index.d.Configuration" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-postgresql.Configuration" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-postgresql.models.index.d.ConfigurationListResult.[Symbol.iterator]
+    package: '@azure/arm-postgresql'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-postgresql.models.index.d.Configuration" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-postgresql.models.index.d.ConfigurationListResult.[Symbol.unscopables]
+    package: '@azure/arm-postgresql'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref uid="@azure/arm-postgresql.models.index.d.ServerListResult.Array"
+  />&lt;<xref uid="@azure/arm-postgresql.models.index.d.Configuration" />&gt;

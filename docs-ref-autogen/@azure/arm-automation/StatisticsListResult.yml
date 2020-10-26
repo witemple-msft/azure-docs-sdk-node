@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: StatisticsListResult
-uid: '@azure/arm-automation.StatisticsListResult'
+uid: '@azure/arm-automation.models.index.d.StatisticsListResult'
 package: '@azure/arm-automation'
 summary: ''
 fullName: StatisticsListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-automation.StatisticsListResult.Array'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.Array'
     package: '@azure/arm-automation'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-automation.StatisticsListResult.length'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.length'
     package: '@azure/arm-automation'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -39,7 +39,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<Statistics>[])'
-    uid: '@azure/arm-automation.StatisticsListResult.concat'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.concat'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
@@ -49,31 +49,36 @@ methods:
       content: 'function concat(items: ConcatArray<Statistics>[])'
       parameters:
         - id: items
-          type: 'ConcatArray&lt;<xref uid="@azure/arm-automation.Statistics" />&gt;[]'
+          type: >-
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.Statistics" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-automation.StatisticsListResult.concat_1'
+  - name: 'concat(Statistics | ConcatArray<Statistics>[])'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.concat_1'
     package: '@azure/arm-automation'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: Statistics | ConcatArray<Statistics>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-automation.models.index.d.Statistics" /> |
+            ConcatArray&lt;<xref
+            uid="@azure/arm-automation.models.index.d.Statistics" />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.copyWithin'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.copyWithin'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -111,7 +116,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-automation.StatisticsListResult.entries'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.entries'
     package: '@azure/arm-automation'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -125,7 +130,7 @@ methods:
   - name: >-
       every((value: Statistics, index: number, array: Statistics[]) => unknown,
       any)
-    uid: '@azure/arm-automation.StatisticsListResult.every'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.every_1'
     package: '@azure/arm-automation'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -133,28 +138,69 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: Statistics, index: number, array:
+        function every(predicate: (value: Statistics, index: number, array:
         Statistics[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Statistics, index: number, array: Statistics[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: Statistics, index: number, array: Statistics[]) => value,
+      any)
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.every'
+    package: '@azure/arm-automation'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: Statistics, index: number, array:
+        Statistics[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: '(value: Statistics, index: number, array: Statistics[]) =&gt; value'
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(Statistics, undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.fill'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.fill'
     package: '@azure/arm-automation'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -168,7 +214,7 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-automation.Statistics" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -190,7 +236,7 @@ methods:
   - name: >-
       filter((value: Statistics, index: number, array: Statistics[]) => unknown,
       any)
-    uid: '@azure/arm-automation.StatisticsListResult.filter_1'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.filter_1'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -200,30 +246,29 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: Statistics, index: number, array:
+        function filter(predicate: (value: Statistics, index: number, array:
         Statistics[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Statistics, index: number, array: Statistics[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
   - name: >-
       filter<S>((value: Statistics, index: number, array: Statistics[]) =>
-      boolean, any)
-    uid: '@azure/arm-automation.StatisticsListResult.filter'
+      value, any)
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.filter'
     package: '@azure/arm-automation'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -233,21 +278,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: Statistics, index: number, array:
-        Statistics[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: Statistics, index: number, array:
+        Statistics[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
-          type: >-
-            (value: Statistics, index: number, array: Statistics[]) =&gt;
-            boolean
+        - id: predicate
+          type: '(value: Statistics, index: number, array: Statistics[]) =&gt; value'
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -256,7 +298,7 @@ methods:
   - name: >-
       find((value: Statistics, index: number, obj: Statistics[]) => unknown,
       any)
-    uid: '@azure/arm-automation.StatisticsListResult.find_1'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.find_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -274,12 +316,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.Statistics" /> |
+          undefined
         description: ''
   - name: >-
       find<S>((this: void, value: Statistics, index: number, obj: Statistics[])
-      => boolean, any)
-    uid: '@azure/arm-automation.StatisticsListResult.find'
+      => value, any)
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.find'
     package: '@azure/arm-automation'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -292,12 +336,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: Statistics, index:
-        number, obj: Statistics[]) => boolean, thisArg?: any)
+        number, obj: Statistics[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: Statistics, index: number, obj: Statistics[])
-            =&gt; boolean
+            =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -320,7 +364,7 @@ methods:
   - name: >-
       findIndex((value: Statistics, index: number, obj: Statistics[]) =>
       unknown, any)
-    uid: '@azure/arm-automation.StatisticsListResult.findIndex'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.findIndex'
     package: '@azure/arm-automation'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -359,7 +403,7 @@ methods:
   - name: >-
       forEach((value: Statistics, index: number, array: Statistics[]) => void,
       any)
-    uid: '@azure/arm-automation.StatisticsListResult.forEach'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.forEach'
     package: '@azure/arm-automation'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -382,7 +426,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(Statistics, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.includes'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.includes'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -396,7 +440,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Statistics" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -407,7 +451,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(Statistics, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.indexOf'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.indexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -419,7 +463,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Statistics" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -430,7 +474,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-automation.StatisticsListResult.join'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.join'
     package: '@azure/arm-automation'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -451,7 +495,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-automation.StatisticsListResult.keys'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.keys'
     package: '@azure/arm-automation'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -463,7 +507,7 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(Statistics, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.lastIndexOf'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.lastIndexOf'
     package: '@azure/arm-automation'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -475,7 +519,7 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-automation.Statistics" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -486,7 +530,7 @@ methods:
         type: number
         description: ''
   - name: 'map<U>((value: Statistics, index: number, array: Statistics[]) => U, any)'
-    uid: '@azure/arm-automation.StatisticsListResult.map'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.map'
     package: '@azure/arm-automation'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -514,7 +558,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-automation.StatisticsListResult.pop'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.pop'
     package: '@azure/arm-automation'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -523,10 +567,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.Statistics" /> |
+          undefined
         description: ''
   - name: 'push(Statistics[])'
-    uid: '@azure/arm-automation.StatisticsListResult.push'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.push'
     package: '@azure/arm-automation'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -536,7 +582,7 @@ methods:
       content: 'function push(items: Statistics[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
           description: |
             New elements of the Array.
       return:
@@ -545,7 +591,7 @@ methods:
   - name: >-
       reduce((previousValue: Statistics, currentValue: Statistics, currentIndex:
       number, array: Statistics[]) => Statistics)
-    uid: '@azure/arm-automation.StatisticsListResult.reduce'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reduce'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -568,12 +614,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
         description: ''
   - name: >-
       reduce((previousValue: Statistics, currentValue: Statistics, currentIndex:
       number, array: Statistics[]) => Statistics, Statistics)
-    uid: '@azure/arm-automation.StatisticsListResult.reduce_1'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reduce_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -591,15 +637,15 @@ methods:
             number, array: Statistics[]) =&gt; Statistics
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.Statistics" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: Statistics, currentIndex:
       number, array: Statistics[]) => U, U)
-    uid: '@azure/arm-automation.StatisticsListResult.reduce_2'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reduce_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -634,7 +680,7 @@ methods:
   - name: >-
       reduceRight((previousValue: Statistics, currentValue: Statistics,
       currentIndex: number, array: Statistics[]) => Statistics)
-    uid: '@azure/arm-automation.StatisticsListResult.reduceRight'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reduceRight'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -659,12 +705,12 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
         description: ''
   - name: >-
       reduceRight((previousValue: Statistics, currentValue: Statistics,
       currentIndex: number, array: Statistics[]) => Statistics, Statistics)
-    uid: '@azure/arm-automation.StatisticsListResult.reduceRight_1'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reduceRight_1'
     package: '@azure/arm-automation'
     summary: ''
     remarks: ''
@@ -682,15 +728,15 @@ methods:
             number, array: Statistics[]) =&gt; Statistics
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-automation.Statistics" />
+          type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
           description: ''
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" />
+        type: <xref uid="@azure/arm-automation.models.index.d.Statistics" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: Statistics, currentIndex:
       number, array: Statistics[]) => U, U)
-    uid: '@azure/arm-automation.StatisticsListResult.reduceRight_2'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reduceRight_2'
     package: '@azure/arm-automation'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -724,7 +770,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-automation.StatisticsListResult.reverse'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.reverse'
     package: '@azure/arm-automation'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -733,10 +779,10 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
   - name: shift()
-    uid: '@azure/arm-automation.StatisticsListResult.shift'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.shift'
     package: '@azure/arm-automation'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -745,10 +791,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-automation.Statistics" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-automation.models.index.d.Statistics" /> |
+          undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.slice'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.slice'
     package: '@azure/arm-automation'
     summary: Returns a section of an array.
     remarks: ''
@@ -762,15 +810,16 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
   - name: >-
       some((value: Statistics, index: number, array: Statistics[]) => unknown,
       any)
-    uid: '@azure/arm-automation.StatisticsListResult.some'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.some'
     package: '@azure/arm-automation'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -780,28 +829,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: Statistics, index: number, array:
+        function some(predicate: (value: Statistics, index: number, array:
         Statistics[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: Statistics, index: number, array: Statistics[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: Statistics, b: Statistics) => number)'
-    uid: '@azure/arm-automation.StatisticsListResult.sort'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.sort'
     package: '@azure/arm-automation'
     summary: Sorts an array.
     remarks: ''
@@ -815,14 +869,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: Statistics, b: Statistics) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, Statistics[])'
-    uid: '@azure/arm-automation.StatisticsListResult.splice_1'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.splice_1'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -842,14 +907,14 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-automation.StatisticsListResult.splice'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.splice'
     package: '@azure/arm-automation'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -870,10 +935,10 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+        type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-automation.StatisticsListResult.toLocaleString'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.toLocaleString'
     package: '@azure/arm-automation'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -887,7 +952,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-automation.StatisticsListResult.toString'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.toString'
     package: '@azure/arm-automation'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -899,7 +964,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(Statistics[])'
-    uid: '@azure/arm-automation.StatisticsListResult.unshift'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.unshift'
     package: '@azure/arm-automation'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -909,14 +974,14 @@ methods:
       content: 'function unshift(items: Statistics[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-automation.Statistics" />[]'
+          type: '<xref uid="@azure/arm-automation.models.index.d.Statistics" />[]'
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-automation.StatisticsListResult.values'
+    uid: '@azure/arm-automation.models.index.d.StatisticsListResult.values'
     package: '@azure/arm-automation'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -926,7 +991,40 @@ methods:
       content: function values()
       return:
         type: >-
-          IterableIterator&lt;<xref uid="@azure/arm-automation.Statistics"
-          />&gt;
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.Statistics" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-automation.Statistics" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.StatisticsListResult.[Symbol.iterator]
+    package: '@azure/arm-automation'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-automation.models.index.d.Statistics" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-automation.models.index.d.StatisticsListResult.[Symbol.unscopables]
+    package: '@azure/arm-automation'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-automation.models.index.d.AutomationAccountListResult.Array"
+  />&lt;<xref uid="@azure/arm-automation.models.index.d.Statistics" />&gt;

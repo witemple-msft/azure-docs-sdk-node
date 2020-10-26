@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: ThrottlingRetryPolicy
-uid: '@azure/core-http.ThrottlingRetryPolicy'
+uid: '@azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy'
 package: '@azure/core-http'
 summary: >-
   To learn more, please refer to
@@ -19,7 +19,8 @@ constructors:
   - name: >-
       ThrottlingRetryPolicy(RequestPolicy, RequestPolicyOptions,
       ResponseHandler)
-    uid: '@azure/core-http.ThrottlingRetryPolicy.constructor'
+    uid: >-
+      @azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.constructor
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -31,17 +32,26 @@ constructors:
         RequestPolicyOptions, _handleResponse?: ResponseHandler)
       parameters:
         - id: nextPolicy
-          type: <xref uid="@azure/core-http.RequestPolicy" />
+          type: >-
+            <xref uid="@azure/core-http.policies.requestPolicy.d.RequestPolicy"
+            />
           description: ''
         - id: options
-          type: <xref uid="@azure/core-http.RequestPolicyOptions" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.requestPolicy.d.RequestPolicyOptions"
+            />
           description: ''
         - id: _handleResponse
-          type: <xref uid="@azure/core-http.ResponseHandler" />
+          type: >-
+            <xref
+            uid="@azure/core-http.policies.throttlingRetryPolicy.d.ResponseHandler"
+            />
           description: ''
 methods:
   - name: 'log(HttpPipelineLogLevel, string)'
-    uid: '@azure/core-http.ThrottlingRetryPolicy.log'
+    uid: >-
+      @azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.log
     package: '@azure/core-http'
     summary: >-
       Attempt to log the provided message to the provided logger. If no logger
@@ -56,14 +66,18 @@ methods:
       content: 'function log(logLevel: HttpPipelineLogLevel, message: string)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of this log.
         - id: message
           type: string
           description: |
             The message of this log.
   - name: parseDateRetryAfterHeader(string)
-    uid: '@azure/core-http.ThrottlingRetryPolicy.parseDateRetryAfterHeader'
+    uid: >-
+      @azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.parseDateRetryAfterHeader
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -79,7 +93,8 @@ methods:
         type: number | undefined
         description: ''
   - name: parseRetryAfterHeader(string)
-    uid: '@azure/core-http.ThrottlingRetryPolicy.parseRetryAfterHeader'
+    uid: >-
+      @azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.parseRetryAfterHeader
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -95,7 +110,8 @@ methods:
         type: number | undefined
         description: ''
   - name: sendRequest(WebResourceLike)
-    uid: '@azure/core-http.ThrottlingRetryPolicy.sendRequest'
+    uid: >-
+      @azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.sendRequest
     package: '@azure/core-http'
     summary: ''
     remarks: ''
@@ -105,13 +121,17 @@ methods:
       content: 'function sendRequest(httpRequest: WebResourceLike)'
       parameters:
         - id: httpRequest
-          type: <xref uid="@azure/core-http.WebResourceLike" />
+          type: <xref uid="@azure/core-http.webResource.d.WebResourceLike" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/core-http.HttpOperationResponse" />&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/core-http.httpOperationResponse.d.HttpOperationResponse"
+          />&gt;
         description: ''
   - name: shouldLog(HttpPipelineLogLevel)
-    uid: '@azure/core-http.ThrottlingRetryPolicy.shouldLog'
+    uid: >-
+      @azure/core-http.policies.throttlingRetryPolicy.d.ThrottlingRetryPolicy.shouldLog
     package: '@azure/core-http'
     summary: Get whether or not a log with the provided log level should be logged.
     remarks: ''
@@ -121,9 +141,12 @@ methods:
       content: 'function shouldLog(logLevel: HttpPipelineLogLevel)'
       parameters:
         - id: logLevel
-          type: <xref uid="@azure/core-http.HttpPipelineLogLevel" />
+          type: >-
+            <xref
+            uid="@azure/core-http.httpPipelineLogLevel.d.HttpPipelineLogLevel"
+            />
           description: The log level of the log that will be logged.
       return:
         type: boolean
         description: Whether or not a log with the provided log level should be logged.
-extends: <xref uid="@azure/core-http.BaseRequestPolicy" />
+extends: <xref uid="@azure/core-http.policies.requestPolicy.d.BaseRequestPolicy" />

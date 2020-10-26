@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: DomainServiceListResult
-uid: '@azure/arm-domainservices.DomainServiceListResult'
+uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult'
 package: '@azure/arm-domainservices'
 summary: ''
 fullName: DomainServiceListResult
@@ -10,7 +10,7 @@ isDeprecated: false
 type: interface
 properties:
   - name: Array
-    uid: '@azure/arm-domainservices.DomainServiceListResult.Array'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.Array'
     package: '@azure/arm-domainservices'
     summary: ''
     fullName: Array
@@ -23,7 +23,7 @@ properties:
         type: ArrayConstructor
         description: ''
   - name: length
-    uid: '@azure/arm-domainservices.DomainServiceListResult.length'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.length'
     package: '@azure/arm-domainservices'
     summary: >-
       Gets or sets the length of the array. This is a number one higher than the
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: nextLink
-    uid: '@azure/arm-domainservices.DomainServiceListResult.nextLink'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.nextLink'
     package: '@azure/arm-domainservices'
     summary: ''
     fullName: nextLink
@@ -52,7 +52,7 @@ properties:
         description: ''
 methods:
   - name: 'concat(ConcatArray<DomainService>[])'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.concat'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.concat'
     package: '@azure/arm-domainservices'
     summary: Combines two or more arrays.
     remarks: ''
@@ -63,32 +63,42 @@ methods:
       parameters:
         - id: items
           type: >-
-            ConcatArray&lt;<xref uid="@azure/arm-domainservices.DomainService"
+            ConcatArray&lt;<xref
+            uid="@azure/arm-domainservices.models.index.d.DomainService"
             />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
-  - name: 'concat(T | ConcatArray<T>[])'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.concat_1'
+  - name: 'concat(DomainService | ConcatArray<DomainService>[])'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.concat_1'
     package: '@azure/arm-domainservices'
     summary: Combines two or more arrays.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function concat(items: T | ConcatArray<T>[])'
+      content: 'function concat(items: DomainService | ConcatArray<DomainService>[])'
       parameters:
         - id: items
-          type: 'T | ConcatArray&lt;T&gt;[]'
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            /> | ConcatArray&lt;<xref
+            uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />&gt;[]
           description: |
             Additional items to add to the end of array1.
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
   - name: 'copyWithin(number, number, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.copyWithin'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.copyWithin
     package: '@azure/arm-domainservices'
     summary: >-
       Returns the this object after copying a section of the array identified by
@@ -126,7 +136,7 @@ methods:
         type: this
         description: ''
   - name: entries()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.entries'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.entries'
     package: '@azure/arm-domainservices'
     summary: 'Returns an iterable of key, value pairs for every entry in the array'
     remarks: ''
@@ -140,7 +150,7 @@ methods:
   - name: >-
       every((value: DomainService, index: number, array: DomainService[]) =>
       unknown, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.every'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.every_1'
     package: '@azure/arm-domainservices'
     summary: Determines whether all the members of an array satisfy the specified test.
     remarks: ''
@@ -148,28 +158,71 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function every(callbackfn: (value: DomainService, index: number, array:
+        function every(predicate: (value: DomainService, index: number, array:
         DomainService[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DomainService, index: number, array: DomainService[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The every method
-            calls the callbackfn function for each element in array1 until the
-            callbackfn returns false, or until the end of the array.
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
+  - name: >-
+      every<S>((value: DomainService, index: number, array: DomainService[]) =>
+      value, any)
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.every'
+    package: '@azure/arm-domainservices'
+    summary: Determines whether all the members of an array satisfy the specified test.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function every<S>(predicate: (value: DomainService, index: number,
+        array: DomainService[]) => value, thisArg?: any)
+      parameters:
+        - id: predicate
+          type: >-
+            (value: DomainService, index: number, array: DomainService[]) =&gt;
+            value
+          description: >-
+            A function that accepts up to three arguments. The every method
+            calls
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value false, or until the end of
+            the array.
+        - id: thisArg
+          type: any
+          description: >
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
+      return:
+        type: this
+        description: ''
   - name: 'fill(DomainService, undefined | number, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.fill'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.fill'
     package: '@azure/arm-domainservices'
     summary: >-
       Returns the this object after filling the section identified by start and
@@ -183,7 +236,9 @@ methods:
         undefined | number)
       parameters:
         - id: value
-          type: <xref uid="@azure/arm-domainservices.DomainService" />
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />
           description: value to fill array section with
         - id: start
           type: undefined | number
@@ -205,7 +260,7 @@ methods:
   - name: >-
       filter((value: DomainService, index: number, array: DomainService[]) =>
       unknown, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.filter_1'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.filter_1'
     package: '@azure/arm-domainservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -215,30 +270,31 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter(callbackfn: (value: DomainService, index: number, array:
+        function filter(predicate: (value: DomainService, index: number, array:
         DomainService[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DomainService, index: number, array: DomainService[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
   - name: >-
       filter<S>((value: DomainService, index: number, array: DomainService[]) =>
-      boolean, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.filter'
+      value, any)
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.filter'
     package: '@azure/arm-domainservices'
     summary: >-
       Returns the elements of an array that meet the condition specified in a
@@ -248,21 +304,20 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function filter<S>(callbackfn: (value: DomainService, index: number,
-        array: DomainService[]) => boolean, thisArg?: any)
+        function filter<S>(predicate: (value: DomainService, index: number,
+        array: DomainService[]) => value, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DomainService, index: number, array: DomainService[]) =&gt;
-            boolean
+            value
           description: >-
             A function that accepts up to three arguments. The filter method
-            calls the callbackfn function one time for each element in the
-            array.
+            calls the predicate function one time for each element in the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
+            An object to which the this keyword can refer in the predicate
             function. If thisArg is omitted, undefined is used as the this
             value.
       return:
@@ -271,7 +326,7 @@ methods:
   - name: >-
       find((value: DomainService, index: number, obj: DomainService[]) =>
       unknown, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.find_1'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.find_1'
     package: '@azure/arm-domainservices'
     summary: ''
     remarks: ''
@@ -291,12 +346,14 @@ methods:
           type: any
           description: ''
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
+          | undefined
         description: ''
   - name: >-
       find<S>((this: void, value: DomainService, index: number, obj:
-      DomainService[]) => boolean, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.find'
+      DomainService[]) => value, any)
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.find'
     package: '@azure/arm-domainservices'
     summary: >-
       Returns the value of the first element in the array where predicate is
@@ -309,12 +366,12 @@ methods:
     syntax:
       content: >-
         function find<S>(predicate: (this: void, value: DomainService, index:
-        number, obj: DomainService[]) => boolean, thisArg?: any)
+        number, obj: DomainService[]) => value, thisArg?: any)
       parameters:
         - id: predicate
           type: >-
             (this: void, value: DomainService, index: number, obj:
-            DomainService[]) =&gt; boolean
+            DomainService[]) =&gt; value
           description: >-
             find calls predicate once for each element of the array, in
             ascending
@@ -337,7 +394,7 @@ methods:
   - name: >-
       findIndex((value: DomainService, index: number, obj: DomainService[]) =>
       unknown, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.findIndex'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.findIndex'
     package: '@azure/arm-domainservices'
     summary: >-
       Returns the index of the first element in the array where predicate is
@@ -378,7 +435,7 @@ methods:
   - name: >-
       forEach((value: DomainService, index: number, array: DomainService[]) =>
       void, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.forEach'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.forEach'
     package: '@azure/arm-domainservices'
     summary: Performs the specified action for each element in an array.
     remarks: ''
@@ -403,7 +460,7 @@ methods:
             function. If thisArg is omitted, undefined is used as the this
             value.
   - name: 'includes(DomainService, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.includes'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.includes'
     package: '@azure/arm-domainservices'
     summary: >-
       Determines whether an array includes a certain element, returning true or
@@ -417,7 +474,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-domainservices.DomainService" />
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />
           description: The element to search for.
         - id: fromIndex
           type: undefined | number
@@ -428,7 +487,7 @@ methods:
         type: boolean
         description: ''
   - name: 'indexOf(DomainService, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.indexOf'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.indexOf'
     package: '@azure/arm-domainservices'
     summary: Returns the index of the first occurrence of a value in an array.
     remarks: ''
@@ -440,7 +499,9 @@ methods:
         number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-domainservices.DomainService" />
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -451,7 +512,7 @@ methods:
         type: number
         description: ''
   - name: join(undefined | string)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.join'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.join'
     package: '@azure/arm-domainservices'
     summary: >-
       Adds all the elements of an array separated by the specified separator
@@ -472,7 +533,7 @@ methods:
         type: string
         description: ''
   - name: keys()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.keys'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.keys'
     package: '@azure/arm-domainservices'
     summary: Returns an iterable of keys in the array
     remarks: ''
@@ -484,7 +545,8 @@ methods:
         type: IterableIterator&lt;number&gt;
         description: ''
   - name: 'lastIndexOf(DomainService, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.lastIndexOf'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.lastIndexOf
     package: '@azure/arm-domainservices'
     summary: Returns the index of the last occurrence of a specified value in an array.
     remarks: ''
@@ -496,7 +558,9 @@ methods:
         | number)
       parameters:
         - id: searchElement
-          type: <xref uid="@azure/arm-domainservices.DomainService" />
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />
           description: The value to locate in the array.
         - id: fromIndex
           type: undefined | number
@@ -509,7 +573,7 @@ methods:
   - name: >-
       map<U>((value: DomainService, index: number, array: DomainService[]) => U,
       any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.map'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.map'
     package: '@azure/arm-domainservices'
     summary: >-
       Calls a defined callback function on each element of an array, and returns
@@ -539,7 +603,7 @@ methods:
         type: 'U[]'
         description: ''
   - name: pop()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.pop'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.pop'
     package: '@azure/arm-domainservices'
     summary: Removes the last element from an array and returns it.
     remarks: ''
@@ -548,10 +612,12 @@ methods:
     syntax:
       content: function pop()
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
+          | undefined
         description: ''
   - name: 'push(DomainService[])'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.push'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.push'
     package: '@azure/arm-domainservices'
     summary: 'Appends new elements to an array, and returns the new length of the array.'
     remarks: ''
@@ -561,7 +627,9 @@ methods:
       content: 'function push(items: DomainService[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />[]
           description: |
             New elements of the Array.
       return:
@@ -570,7 +638,7 @@ methods:
   - name: >-
       reduce((previousValue: DomainService, currentValue: DomainService,
       currentIndex: number, array: DomainService[]) => DomainService)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reduce'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.reduce'
     package: '@azure/arm-domainservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -594,13 +662,13 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" />
+        type: <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
         description: ''
   - name: >-
       reduce((previousValue: DomainService, currentValue: DomainService,
       currentIndex: number, array: DomainService[]) => DomainService,
       DomainService)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reduce_1'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.reduce_1'
     package: '@azure/arm-domainservices'
     summary: ''
     remarks: ''
@@ -618,15 +686,17 @@ methods:
             currentIndex: number, array: DomainService[]) =&gt; DomainService
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-domainservices.DomainService" />
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" />
+        type: <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
         description: ''
   - name: >-
       reduce<U>((previousValue: U, currentValue: DomainService, currentIndex:
       number, array: DomainService[]) => U, U)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reduce_2'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.reduce_2'
     package: '@azure/arm-domainservices'
     summary: >-
       Calls the specified callback function for all the elements in an array.
@@ -661,7 +731,8 @@ methods:
   - name: >-
       reduceRight((previousValue: DomainService, currentValue: DomainService,
       currentIndex: number, array: DomainService[]) => DomainService)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reduceRight'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.reduceRight
     package: '@azure/arm-domainservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -686,13 +757,14 @@ methods:
             calls the callbackfn function one time for each element in the
             array.
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" />
+        type: <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
         description: ''
   - name: >-
       reduceRight((previousValue: DomainService, currentValue: DomainService,
       currentIndex: number, array: DomainService[]) => DomainService,
       DomainService)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reduceRight_1'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.reduceRight_1
     package: '@azure/arm-domainservices'
     summary: ''
     remarks: ''
@@ -710,15 +782,18 @@ methods:
             currentIndex: number, array: DomainService[]) =&gt; DomainService
           description: ''
         - id: initialValue
-          type: <xref uid="@azure/arm-domainservices.DomainService" />
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />
           description: ''
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" />
+        type: <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
         description: ''
   - name: >-
       reduceRight<U>((previousValue: U, currentValue: DomainService,
       currentIndex: number, array: DomainService[]) => U, U)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reduceRight_2'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.reduceRight_2
     package: '@azure/arm-domainservices'
     summary: >-
       Calls the specified callback function for all the elements in an array, in
@@ -752,7 +827,7 @@ methods:
         type: U
         description: ''
   - name: reverse()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.reverse'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.reverse'
     package: '@azure/arm-domainservices'
     summary: Reverses the elements in an Array.
     remarks: ''
@@ -761,10 +836,12 @@ methods:
     syntax:
       content: function reverse()
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
   - name: shift()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.shift'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.shift'
     package: '@azure/arm-domainservices'
     summary: Removes the first element from an array and returns it.
     remarks: ''
@@ -773,10 +850,12 @@ methods:
     syntax:
       content: function shift()
       return:
-        type: <xref uid="@azure/arm-domainservices.DomainService" /> | undefined
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService" />
+          | undefined
         description: ''
   - name: 'slice(undefined | number, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.slice'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.slice'
     package: '@azure/arm-domainservices'
     summary: Returns a section of an array.
     remarks: ''
@@ -790,15 +869,18 @@ methods:
           description: The beginning of the specified portion of the array.
         - id: end
           type: undefined | number
-          description: |
-            The end of the specified portion of the array.
+          description: >
+            The end of the specified portion of the array. This is exclusive of
+            the element at the index 'end'.
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
   - name: >-
       some((value: DomainService, index: number, array: DomainService[]) =>
       unknown, any)
-    uid: '@azure/arm-domainservices.DomainServiceListResult.some'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.some'
     package: '@azure/arm-domainservices'
     summary: >-
       Determines whether the specified callback function returns true for any
@@ -808,28 +890,33 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function some(callbackfn: (value: DomainService, index: number, array:
+        function some(predicate: (value: DomainService, index: number, array:
         DomainService[]) => unknown, thisArg?: any)
       parameters:
-        - id: callbackfn
+        - id: predicate
           type: >-
             (value: DomainService, index: number, array: DomainService[]) =&gt;
             unknown
           description: >-
             A function that accepts up to three arguments. The some method calls
-            the callbackfn function for each element in array1 until the
-            callbackfn returns true, or until the end of the array.
+
+            the predicate function for each element in the array until the
+            predicate returns a value
+
+            which is coercible to the Boolean value true, or until the end of
+            the array.
         - id: thisArg
           type: any
           description: >
-            An object to which the this keyword can refer in the callbackfn
-            function. If thisArg is omitted, undefined is used as the this
-            value.
+            An object to which the this keyword can refer in the predicate
+            function.
+
+            If thisArg is omitted, undefined is used as the this value.
       return:
         type: boolean
         description: ''
   - name: 'sort(undefined | (a: DomainService, b: DomainService) => number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.sort'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.sort'
     package: '@azure/arm-domainservices'
     summary: Sorts an array.
     remarks: ''
@@ -843,14 +930,25 @@ methods:
         - id: compareFn
           type: 'undefined | (a: DomainService, b: DomainService) =&gt; number'
           description: >
-            The name of the function used to determine the order of the
-            elements. If omitted, the elements are sorted in ascending, ASCII
-            character order.
+            Function used to determine the order of the elements. It is expected
+            to return
+
+            a negative value if first argument is less than second argument,
+            zero if they're equal and a positive
+
+            value otherwise. If omitted, the elements are sorted in ascending,
+            ASCII character order.
+
+            ```ts
+
+            [11,2,22,1].sort((a, b) => a - b)
+
+            ```
       return:
         type: this
         description: ''
   - name: 'splice(number, number, DomainService[])'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.splice_1'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.splice_1'
     package: '@azure/arm-domainservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -872,14 +970,18 @@ methods:
           type: number
           description: The number of elements to remove.
         - id: items
-          type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />[]
           description: |
             Elements to insert into the array in place of the deleted elements.
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
   - name: 'splice(number, undefined | number)'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.splice'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.splice'
     package: '@azure/arm-domainservices'
     summary: >-
       Removes elements from an array and, if necessary, inserts new elements in
@@ -900,10 +1002,13 @@ methods:
           description: |
             The number of elements to remove.
       return:
-        type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+        type: >-
+          <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+          />[]
         description: ''
   - name: toLocaleString()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.toLocaleString'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.toLocaleString
     package: '@azure/arm-domainservices'
     summary: >-
       Returns a string representation of an array. The elements are converted to
@@ -917,7 +1022,7 @@ methods:
         type: string
         description: ''
   - name: toString()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.toString'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.toString'
     package: '@azure/arm-domainservices'
     summary: Returns a string representation of an array.
     remarks: ''
@@ -929,7 +1034,7 @@ methods:
         type: string
         description: ''
   - name: 'unshift(DomainService[])'
-    uid: '@azure/arm-domainservices.DomainServiceListResult.unshift'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.unshift'
     package: '@azure/arm-domainservices'
     summary: Inserts new elements at the start of an array.
     remarks: ''
@@ -939,14 +1044,16 @@ methods:
       content: 'function unshift(items: DomainService[])'
       parameters:
         - id: items
-          type: '<xref uid="@azure/arm-domainservices.DomainService" />[]'
+          type: >-
+            <xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+            />[]
           description: |
             Elements to insert at the start of the Array.
       return:
         type: number
         description: ''
   - name: values()
-    uid: '@azure/arm-domainservices.DomainServiceListResult.values'
+    uid: '@azure/arm-domainservices.models.index.d.DomainServiceListResult.values'
     package: '@azure/arm-domainservices'
     summary: Returns an iterable of values in the array
     remarks: ''
@@ -957,6 +1064,40 @@ methods:
       return:
         type: >-
           IterableIterator&lt;<xref
-          uid="@azure/arm-domainservices.DomainService" />&gt;
+          uid="@azure/arm-domainservices.models.index.d.DomainService" />&gt;
         description: ''
-extends: Array&lt;<xref uid="@azure/arm-domainservices.DomainService" />&gt;
+  - name: '[Symbol.iterator]()'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.[Symbol.iterator]
+    package: '@azure/arm-domainservices'
+    summary: Iterator
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.iterator]()'
+      return:
+        type: >-
+          IterableIterator&lt;<xref
+          uid="@azure/arm-domainservices.models.index.d.DomainService" />&gt;
+        description: ''
+  - name: '[Symbol.unscopables]()'
+    uid: >-
+      @azure/arm-domainservices.models.index.d.DomainServiceListResult.[Symbol.unscopables]
+    package: '@azure/arm-domainservices'
+    summary: |-
+      Returns an object whose properties have the value 'true'
+      when they will be absent when used in a 'with' statement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function [Symbol.unscopables]()'
+      return:
+        type: Object
+        description: ''
+extends: >-
+  <xref
+  uid="@azure/arm-domainservices.models.index.d.OperationEntityListResult.Array"
+  />&lt;<xref uid="@azure/arm-domainservices.models.index.d.DomainService"
+  />&gt;

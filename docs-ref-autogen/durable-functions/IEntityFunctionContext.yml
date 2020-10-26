@@ -1,6 +1,6 @@
 ### YamlMime:TSType
 name: IEntityFunctionContext
-uid: durable-functions.IEntityFunctionContext
+uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext
 package: durable-functions
 summary: ''
 fullName: IEntityFunctionContext
@@ -10,7 +10,8 @@ isDeprecated: false
 type: interface
 properties:
   - name: bindingData
-    uid: durable-functions.IEntityFunctionContext.bindingData
+    uid: >-
+      durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.bindingData
     package: durable-functions
     summary: Trigger metadata and function invocation data.
     fullName: bindingData
@@ -23,7 +24,8 @@ properties:
         type: '[key: string]\: any'
         description: ''
   - name: bindingDefinitions
-    uid: durable-functions.IEntityFunctionContext.bindingDefinitions
+    uid: >-
+      durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.bindingDefinitions
     package: durable-functions
     summary: 'Bindings your function uses, as defined in function.json.'
     fullName: bindingDefinitions
@@ -36,7 +38,7 @@ properties:
         type: 'BindingDefinition[]'
         description: ''
   - name: bindings
-    uid: durable-functions.IEntityFunctionContext.bindings
+    uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.bindings
     package: durable-functions
     summary: >-
       Input and trigger binding data, as defined in function.json. Properties on
@@ -53,7 +55,7 @@ properties:
         type: '[key: string]\: any'
         description: ''
   - name: df
-    uid: durable-functions.IEntityFunctionContext.df
+    uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.df
     package: durable-functions
     summary: ''
     fullName: df
@@ -63,10 +65,13 @@ properties:
     syntax:
       content: 'df: DurableEntityContext'
       return:
-        type: <xref uid="durable-functions.DurableEntityContext" />
+        type: >-
+          <xref
+          uid="durable-functions.durableentitycontext.d.DurableEntityContext" />
         description: ''
   - name: executionContext
-    uid: durable-functions.IEntityFunctionContext.executionContext
+    uid: >-
+      durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.executionContext
     package: durable-functions
     summary: Function execution metadata.
     fullName: executionContext
@@ -79,7 +84,8 @@ properties:
         type: ExecutionContext
         description: ''
   - name: invocationId
-    uid: durable-functions.IEntityFunctionContext.invocationId
+    uid: >-
+      durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.invocationId
     package: durable-functions
     summary: A unique GUID per function invocation.
     fullName: invocationId
@@ -92,7 +98,7 @@ properties:
         type: string
         description: ''
   - name: log
-    uid: durable-functions.IEntityFunctionContext.log
+    uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.log
     package: durable-functions
     summary: >-
       Allows you to write streaming function logs. Calling directly allows you
@@ -109,7 +115,7 @@ properties:
         type: Logger
         description: ''
   - name: req
-    uid: durable-functions.IEntityFunctionContext.req
+    uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.req
     package: durable-functions
     summary: HTTP request object. Provided to your function when using HTTP Bindings.
     fullName: req
@@ -122,7 +128,7 @@ properties:
         type: HttpRequest
         description: ''
   - name: res
-    uid: durable-functions.IEntityFunctionContext.res
+    uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.res
     package: durable-functions
     summary: HTTP response object. Provided to your function when using HTTP Bindings.
     fullName: res
@@ -135,7 +141,8 @@ properties:
         type: '[key: string]\: any'
         description: ''
   - name: traceContext
-    uid: durable-functions.IEntityFunctionContext.traceContext
+    uid: >-
+      durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.traceContext
     package: durable-functions
     summary: TraceContext information to enable distributed tracing scenarios.
     fullName: traceContext
@@ -149,7 +156,7 @@ properties:
         description: ''
 methods:
   - name: 'done(Error | string | null, any)'
-    uid: durable-functions.IEntityFunctionContext.done
+    uid: durable-functions.ientityfunctioncontext.d.IEntityFunctionContext.done
     package: durable-functions
     summary: >-
       A callback function that signals to the runtime that your code has
@@ -166,7 +173,10 @@ methods:
       content: 'function done(err?: Error | string | null, result?: any)'
       parameters:
         - id: err
-          type: Error | string | null
+          type: >-
+            <xref
+            uid="durable-functions.aggregatederror.d.AggregatedError.Error" /> |
+            string | null
           description: >-
             A user-defined error to pass back to the runtime. If present, your
             function execution will fail.
