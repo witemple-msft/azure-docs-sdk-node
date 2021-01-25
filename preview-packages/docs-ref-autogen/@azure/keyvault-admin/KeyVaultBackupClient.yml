@@ -44,16 +44,18 @@ constructors:
           type: string
           description: >-
             the URL of the Key Vault. It should have this shape:
-            https://${your-key-vault-name}.vault.azure.net
+            `https://${your-key-vault-name}.vault.azure.net`
         - id: credential
           type: TokenCredential
           description: >-
             An object that implements the `TokenCredential` interface used to
-            authenticate requests to the service. Use the @azure/identity
+            authenticate requests to the service. Use the \@azure/identity
             package to create a credential that suits your needs.
         - id: pipelineOptions
           type: <xref uid="@azure/keyvault-admin.BackupClientOptions" />
-          description: ''
+          description: >
+            Pipeline options used to configure Key Vault API requests. Omit this
+            parameter to use the default pipeline configuration.
 properties:
   - name: vaultUrl
     uid: '@azure/keyvault-admin.KeyVaultBackupClient.vaultUrl'
@@ -120,6 +122,8 @@ methods:
       console.log(backupUri);
 
       ```
+
+      Starts a full backup operation.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -138,7 +142,8 @@ methods:
           description: The SAS token.
         - id: options
           type: <xref uid="@azure/keyvault-admin.BeginBackupOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           Promise&lt;PollerLike&lt;<xref
@@ -200,6 +205,8 @@ methods:
       console.log(backupUri);
 
       ```
+
+      Starts a full restore operation.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -223,7 +230,8 @@ methods:
             backup was stored. The URL segment after the container name.
         - id: options
           type: <xref uid="@azure/keyvault-admin.BeginRestoreOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           Promise&lt;PollerLike&lt;<xref
@@ -285,6 +293,8 @@ methods:
       await poller.pollUntilDone();
 
       ```
+
+      Creates a new role assignment.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -311,7 +321,8 @@ methods:
           description: The name of the key that wants to be restored.
         - id: options
           type: <xref uid="@azure/keyvault-admin.BeginBackupOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           Promise&lt;PollerLike&lt;<xref

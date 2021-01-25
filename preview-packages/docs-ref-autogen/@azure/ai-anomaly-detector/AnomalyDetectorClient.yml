@@ -41,7 +41,7 @@ constructors:
       parameters:
         - id: endpointUrl
           type: string
-          description: ''
+          description: Url to an Azure Anomaly Detector service endpoint
         - id: credential
           type: TokenCredential | KeyCredential
           description: Used to authenticate requests to the service.
@@ -49,9 +49,10 @@ constructors:
           type: >-
             <xref uid="@azure/ai-anomaly-detector.AnomalyDetectorClientOptions"
             />
-          description: ''
+          description: |
+            Used to configure the Form Recognizer client.
 methods:
-  - name: 'detectChangePoint(DetectChangePointRequest, OperationOptions)'
+  - name: 'detectChangePoint(DetectChangePointRequest, DetectChangePointOptions)'
     uid: '@azure/ai-anomaly-detector.AnomalyDetectorClient.detectChangePoint'
     package: '@azure/ai-anomaly-detector'
     summary: Evaluate change point score of every series point
@@ -61,7 +62,7 @@ methods:
     syntax:
       content: >-
         function detectChangePoint(body: DetectChangePointRequest, options?:
-        OperationOptions)
+        DetectChangePointOptions)
       parameters:
         - id: body
           type: <xref uid="@azure/ai-anomaly-detector.DetectChangePointRequest" />
@@ -70,7 +71,7 @@ methods:
             parameters can also be set
                         in the request if needed.
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/ai-anomaly-detector.DetectChangePointOptions" />
           description: |
             The options parameters.
       return:
@@ -79,7 +80,7 @@ methods:
           uid="@azure/ai-anomaly-detector.AnomalyDetectorClientDetectChangePointResponse"
           />&gt;
         description: ''
-  - name: 'detectEntireSeries(DetectRequest, OperationOptions)'
+  - name: 'detectEntireSeries(DetectRequest, DetectEntireSeriesOptions)'
     uid: '@azure/ai-anomaly-detector.AnomalyDetectorClient.detectEntireSeries'
     package: '@azure/ai-anomaly-detector'
     summary: >-
@@ -97,7 +98,7 @@ methods:
     syntax:
       content: >-
         function detectEntireSeries(body: DetectRequest, options?:
-        OperationOptions)
+        DetectEntireSeriesOptions)
       parameters:
         - id: body
           type: <xref uid="@azure/ai-anomaly-detector.DetectRequest" />
@@ -106,7 +107,7 @@ methods:
             can also be set in
                         the request.
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/ai-anomaly-detector.DetectEntireSeriesOptions" />
           description: |
             The options parameters.
       return:
@@ -115,7 +116,7 @@ methods:
           uid="@azure/ai-anomaly-detector.AnomalyDetectorClientDetectEntireResponse"
           />&gt;
         description: ''
-  - name: 'detectLastPoint(DetectRequest, OperationOptions)'
+  - name: 'detectLastPoint(DetectRequest, DetectLastPointOptions)'
     uid: '@azure/ai-anomaly-detector.AnomalyDetectorClient.detectLastPoint'
     package: '@azure/ai-anomaly-detector'
     summary: >-
@@ -133,7 +134,7 @@ methods:
     syntax:
       content: >-
         function detectLastPoint(body: DetectRequest, options?:
-        OperationOptions)
+        DetectLastPointOptions)
       parameters:
         - id: body
           type: <xref uid="@azure/ai-anomaly-detector.DetectRequest" />
@@ -142,7 +143,7 @@ methods:
             can also be set in
                         the request.
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/ai-anomaly-detector.DetectLastPointOptions" />
           description: |
             The options parameters.
       return:

@@ -3,6 +3,8 @@ uid: '@azure/keyvault-secrets'
 name: '@azure/keyvault-secrets'
 summary: ''
 type: package
+enums:
+  - '@azure/keyvault-secrets.KnownDeletionRecoveryLevel'
 classes:
   - '@azure/keyvault-secrets.SecretClient'
 interfaces:
@@ -30,18 +32,19 @@ functions:
   - name: parseKeyVaultSecretId(string)
     uid: '@azure/keyvault-secrets.parseKeyVaultSecretId'
     package: '@azure/keyvault-secrets'
-    summary: |
+    summary: |-
       Parses the given Key Vault Secret Id. An example is:
         https://<keyvault-name>.vault.azure.net/secrets/<secret-name>/<unique-version-id>
 
       On parsing the above Id, this function returns:
-
+      ```ts
         {
            sourceId: "https://<keyvault-name>.vault.azure.net/secrets/<secret-name>/<unique-version-id>",
            vaultUrl: "https://<keyvault-name>.vault.azure.net",
            version: "<unique-version-id>",
            name: "<secret-name>"
         }
+      ```
     remarks: ''
     isPreview: false
     isDeprecated: false

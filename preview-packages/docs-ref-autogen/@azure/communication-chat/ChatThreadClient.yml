@@ -10,7 +10,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: >-
-      ChatThreadClient(string, string, CommunicationUserCredential,
+      ChatThreadClient(string, string, CommunicationTokenCredential,
       ChatThreadClientOptions)
     uid: '@azure/communication-chat.ChatThreadClient.constructor'
     package: '@azure/communication-chat'
@@ -21,7 +21,7 @@ constructors:
     syntax:
       content: >-
         new ChatThreadClient(threadId: string, url: string, credential:
-        CommunicationUserCredential, options?: ChatThreadClientOptions)
+        CommunicationTokenCredential, options?: ChatThreadClientOptions)
       parameters:
         - id: threadId
           type: string
@@ -30,7 +30,7 @@ constructors:
           type: string
           description: ''
         - id: credential
-          type: CommunicationUserCredential
+          type: CommunicationTokenCredential
           description: ''
         - id: options
           type: <xref uid="@azure/communication-chat.ChatThreadClientOptions" />
@@ -196,7 +196,7 @@ methods:
           PagedAsyncIterableIterator&lt;<xref
           uid="@azure/communication-chat.ReadReceipt" />&gt;
         description: ''
-  - name: 'removeMember(CommunicationUser, RemoveMemberOptions)'
+  - name: 'removeMember(CommunicationUserIdentifier, RemoveMemberOptions)'
     uid: '@azure/communication-chat.ChatThreadClient.removeMember'
     package: '@azure/communication-chat'
     summary: Removes member from the thread identified by threadId.
@@ -205,11 +205,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function removeMember(member: CommunicationUser, options?:
+        function removeMember(member: CommunicationUserIdentifier, options?:
         RemoveMemberOptions)
       parameters:
         - id: member
-          type: CommunicationUser
+          type: CommunicationUserIdentifier
           description: Thread member to remove from the thread roster
         - id: options
           type: <xref uid="@azure/communication-chat.RemoveMemberOptions" />

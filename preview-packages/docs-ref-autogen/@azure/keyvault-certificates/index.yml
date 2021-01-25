@@ -4,6 +4,10 @@ name: '@azure/keyvault-certificates'
 summary: ''
 type: package
 enums:
+  - '@azure/keyvault-certificates.KnownCertificateKeyCurveNames'
+  - '@azure/keyvault-certificates.KnownCertificateKeyTypes'
+  - '@azure/keyvault-certificates.KnownDeletionRecoveryLevels'
+  - '@azure/keyvault-certificates.KnownKeyUsageTypes'
   - '@azure/keyvault-certificates.WellKnownIssuer'
 classes:
   - '@azure/keyvault-certificates.CertificateClient'
@@ -32,6 +36,7 @@ interfaces:
   - '@azure/keyvault-certificates.IssuerProperties'
   - '@azure/keyvault-certificates.KeyVaultCertificate'
   - '@azure/keyvault-certificates.KeyVaultCertificateId'
+  - '@azure/keyvault-certificates.KeyVaultCertificatePollOperationState'
   - '@azure/keyvault-certificates.KeyVaultCertificateWithPolicy'
   - '@azure/keyvault-certificates.LifetimeAction'
   - '@azure/keyvault-certificates.ListDeletedCertificatesOptions'
@@ -47,6 +52,7 @@ typeAliases:
   - '@azure/keyvault-certificates.BackupCertificateOptions'
   - '@azure/keyvault-certificates.BeginDeleteCertificateOptions'
   - '@azure/keyvault-certificates.BeginRecoverDeletedCertificateOptions'
+  - '@azure/keyvault-certificates.CancelCertificateOperationOptions'
   - '@azure/keyvault-certificates.CertificateContact'
   - '@azure/keyvault-certificates.CertificateContentType'
   - '@azure/keyvault-certificates.CertificateKeyCurveName'
@@ -84,18 +90,19 @@ functions:
   - name: parseKeyVaultCertificateId(string)
     uid: '@azure/keyvault-certificates.parseKeyVaultCertificateId'
     package: '@azure/keyvault-certificates'
-    summary: |
+    summary: |-
       Parses the given Key Vault Certificate Id. An example is:
         https://<keyvault-name>.vault.azure.net/certificates/<certificate-name>/<unique-version-id>
 
       On parsing the above Id, this function returns:
-
+      ```ts
         {
            sourceId: "https://<keyvault-name>.vault.azure.net/certificates/<certificate-name>/<unique-version-id>",
            vaultUrl: "https://<keyvault-name>.vault.azure.net",
            version: "<unique-version-id>",
            name: "<certificate-name>"
         }
+      ```
     remarks: ''
     isPreview: false
     isDeprecated: false

@@ -41,16 +41,18 @@ constructors:
           type: string
           description: >-
             the URL of the Key Vault. It should have this shape:
-            https://${your-key-vault-name}.vault.azure.net
+            `https://${your-key-vault-name}.vault.azure.net`
         - id: credential
           type: TokenCredential
           description: >-
             An object that implements the `TokenCredential` interface used to
-            authenticate requests to the service. Use the @azure/identity
+            authenticate requests to the service. Use the \@azure/identity
             package to create a credential that suits your needs.
         - id: pipelineOptions
           type: <xref uid="@azure/keyvault-admin.AccessControlClientOptions" />
-          description: ''
+          description: >
+            Pipeline options used to configure Key Vault API requests. Omit this
+            parameter to use the default pipeline configuration.
 properties:
   - name: vaultUrl
     uid: '@azure/keyvault-admin.KeyVaultAccessControlClient.vaultUrl'
@@ -88,6 +90,8 @@ methods:
       "295c179b-9ad3-4117-99cd-b1aa66cf4517", roleDefinition, principalId);
 
       ```
+
+      Creates a new role assignment.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -114,7 +118,8 @@ methods:
             security group.
         - id: options
           type: <xref uid="@azure/keyvault-admin.CreateRoleAssignmentOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/keyvault-admin.KeyVaultRoleAssignment"
@@ -144,6 +149,8 @@ methods:
       console.log(deletedRoleAssignment);
 
       ```
+
+      Deletes an existing role assignment.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -160,7 +167,8 @@ methods:
           description: The name of the role assignment.
         - id: options
           type: <xref uid="@azure/keyvault-admin.DeleteRoleAssignmentOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/keyvault-admin.KeyVaultRoleAssignment"
@@ -188,6 +196,8 @@ methods:
       console.log(roleAssignment);
 
       ```
+
+      Gets an existing role assignment.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -204,7 +214,8 @@ methods:
           description: The name of the role assignment.
         - id: options
           type: <xref uid="@azure/keyvault-admin.GetRoleAssignmentOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/keyvault-admin.KeyVaultRoleAssignment"
@@ -222,6 +233,7 @@ methods:
         console.log("Role assignment: ", roleAssignment);
       }
       ```
+      Lists all of the role assignments in a given scope.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -235,7 +247,8 @@ methods:
           description: The scope of the role assignments.
         - id: options
           type: <xref uid="@azure/keyvault-admin.ListRoleAssignmentsOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           PagedAsyncIterableIterator&lt;<xref
@@ -253,6 +266,7 @@ methods:
         console.log("Role definition: ", roleDefinitions);
       }
       ```
+      Lists all of the role definition in a given scope.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -266,7 +280,8 @@ methods:
           description: The scope of the role definition.
         - id: options
           type: <xref uid="@azure/keyvault-admin.ListRoleDefinitionsOptions" />
-          description: ''
+          description: |
+            The optional parameters.
       return:
         type: >-
           PagedAsyncIterableIterator&lt;<xref
