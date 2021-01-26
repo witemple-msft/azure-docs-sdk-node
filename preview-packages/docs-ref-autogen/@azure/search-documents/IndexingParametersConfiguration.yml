@@ -4,9 +4,7 @@ uid: '@azure/search-documents.IndexingParametersConfiguration'
 package: '@azure/search-documents'
 summary: >-
   A dictionary of indexer-specific configuration properties. Each name is the
-  name of a specific
-
-  property. Each value must be of a primitive type.
+  name of a specific property. Each value must be of a primitive type.
 fullName: IndexingParametersConfiguration
 remarks: ''
 isPreview: false
@@ -19,15 +17,10 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       If true, will create a path //document//file_data that is an object
-      representing the original
-
-      file data downloaded from your blob data source.  This allows you to pass
-      the original file
-
-      data to a custom skill for processing within the enrichment pipeline, or
-      to the Document
-
-      Extraction skill. Default value: false.
+      representing the original file data downloaded from your blob data
+      source.  This allows you to pass the original file data to a custom skill
+      for processing within the enrichment pipeline, or to the Document
+      Extraction skill.
     fullName: allowSkillsetToReadFileData
     remarks: ''
     isPreview: false
@@ -41,10 +34,11 @@ properties:
     uid: '@azure/search-documents.IndexingParametersConfiguration.dataToExtract'
     package: '@azure/search-documents'
     summary: >-
-      Possible values include: 'StorageMetadata', 'AllMetadata',
-      'ContentAndMetadata'. Default
-
-      value: 'contentAndMetadata'.
+      Specifies the data to extract from Azure blob storage and tells the
+      indexer which data to extract from image content when "imageAction" is set
+      to a value other than "none".  This applies to embedded image content in a
+      .PDF or other application, or image files such as .jpg and .png, in Azure
+      blobs.
     fullName: dataToExtract
     remarks: ''
     isPreview: false
@@ -60,9 +54,7 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       For CSV blobs, specifies the end-of-line single-character delimiter for
-      CSV files where each
-
-      line starts a new document (for example, "|").
+      CSV files where each line starts a new document (for example, "|").
     fullName: delimitedTextDelimiter
     remarks: ''
     isPreview: false
@@ -78,9 +70,7 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       For CSV blobs, specifies a comma-delimited list of column headers, useful
-      for mapping source
-
-      fields to destination fields in an index.
+      for mapping source fields to destination fields in an index.
     fullName: delimitedTextHeaders
     remarks: ''
     isPreview: false
@@ -95,9 +85,7 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       For JSON arrays, given a structured or semi-structured document, you can
-      specify a path to the
-
-      array using this property.
+      specify a path to the array using this property.
     fullName: documentRoot
     remarks: ''
     isPreview: false
@@ -113,12 +101,8 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       Comma-delimited list of filename extensions to ignore when processing from
-      Azure blob storage.
-
-      For example, you could exclude ".png, .mp4" to skip over those files
-      during indexing. Default
-
-      value: ''.
+      Azure blob storage.  For example, you could exclude ".png, .mp4" to skip
+      over those files during indexing.
     fullName: excludedFileNameExtensions
     remarks: ''
     isPreview: false
@@ -132,7 +116,7 @@ properties:
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.executionEnvironment
     package: '@azure/search-documents'
-    summary: 'Possible values include: ''standard'', ''private''. Default value: ''standard''.'
+    summary: Specifies the environment in which the indexer should execute.
     fullName: executionEnvironment
     remarks: ''
     isPreview: false
@@ -149,8 +133,6 @@ properties:
     summary: >-
       For Azure blobs, set to false if you want to continue indexing if a
       document fails indexing.
-
-      Default value: false.
     fullName: failOnUnprocessableDocument
     remarks: ''
     isPreview: false
@@ -166,12 +148,8 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       For Azure blobs, set to false if you want to continue indexing when an
-      unsupported content
-
-      type is encountered, and you don't know all the content types (file
-      extensions) in advance.
-
-      Default value: false.
+      unsupported content type is encountered, and you don't know all the
+      content types (file extensions) in advance.
     fullName: failOnUnsupportedContentType
     remarks: ''
     isPreview: false
@@ -188,8 +166,6 @@ properties:
     summary: >-
       For CSV blobs, indicates that the first (non-blank) line of each blob
       contains headers.
-
-      Default value: true.
     fullName: firstLineContainsHeaders
     remarks: ''
     isPreview: false
@@ -203,10 +179,9 @@ properties:
     uid: '@azure/search-documents.IndexingParametersConfiguration.imageAction'
     package: '@azure/search-documents'
     summary: >-
-      Possible values include: 'None', 'GenerateNormalizedImages',
-      'GenerateNormalizedImagePerPage'.
-
-      Default value: 'none'.
+      Determines how to process embedded images and image files in Azure blob
+      storage.  Setting the "imageAction" configuration to any value other than
+      "none" requires that a skillset also be attached to that indexer.
     fullName: imageAction
     remarks: ''
     isPreview: false
@@ -222,12 +197,9 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       Comma-delimited list of filename extensions to select when processing from
-      Azure blob storage.
-
-      For example, you could focus indexing on specific application files
-      ".docx, .pptx, .msg" to
-
-      specifically include those file types. Default value: ''.
+      Azure blob storage.  For example, you could focus indexing on specific
+      application files ".docx, .pptx, .msg" to specifically include those file
+      types.
     fullName: indexedFileNameExtensions
     remarks: ''
     isPreview: false
@@ -243,16 +215,9 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       For Azure blobs, set this property to true to still index storage metadata
-      for blob content
-
-      that is too large to process. Oversized blobs are treated as errors by
-      default. For limits on
-
-      blob size, see
+      for blob content that is too large to process. Oversized blobs are treated
+      as errors by default. For limits on blob size, see
       https://docs.microsoft.com/azure/search/search-limits-quotas-capacity.
-      Default
-
-      value: false.
     fullName: indexStorageMetadataOnlyForOversizedDocuments
     remarks: ''
     isPreview: false
@@ -265,11 +230,7 @@ properties:
   - name: parsingMode
     uid: '@azure/search-documents.IndexingParametersConfiguration.parsingMode'
     package: '@azure/search-documents'
-    summary: >-
-      Possible values include: 'Default', 'Text', 'DelimitedText', 'Json',
-      'JsonArray', 'JsonLines'.
-
-      Default value: 'default'.
+    summary: Represents the parsing mode for indexing from an Azure blob data source.
     fullName: parsingMode
     remarks: ''
     isPreview: false
@@ -283,7 +244,9 @@ properties:
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.pdfTextRotationAlgorithm
     package: '@azure/search-documents'
-    summary: 'Possible values include: ''None'', ''DetectAngles''. Default value: ''none''.'
+    summary: >-
+      Determines algorithm for text extraction from PDF files in Azure blob
+      storage.
     fullName: pdfTextRotationAlgorithm
     remarks: ''
     isPreview: false
@@ -300,9 +263,7 @@ properties:
     package: '@azure/search-documents'
     summary: >-
       Increases the timeout beyond the 5-minute default for Azure SQL database
-      data sources,
-
-      specified in the format "hh:mm:ss". Default value: '00:05:00'.
+      data sources, specified in the format "hh:mm:ss".
     fullName: queryTimeout
     remarks: ''
     isPreview: false
