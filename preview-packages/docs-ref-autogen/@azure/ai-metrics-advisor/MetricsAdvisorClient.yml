@@ -12,8 +12,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: >-
-      MetricsAdvisorClient(string, MetricsAdvisorKeyCredential,
-      MetricsAdvisorClientOptions)
+      MetricsAdvisorClient(string, TokenCredential |
+      MetricsAdvisorKeyCredential, MetricsAdvisorClientOptions)
     uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.constructor'
     package: '@azure/ai-metrics-advisor'
     summary: >-
@@ -39,13 +39,16 @@ constructors:
     syntax:
       content: >-
         new MetricsAdvisorClient(endpointUrl: string, credential:
-        MetricsAdvisorKeyCredential, options?: MetricsAdvisorClientOptions)
+        TokenCredential | MetricsAdvisorKeyCredential, options?:
+        MetricsAdvisorClientOptions)
       parameters:
         - id: endpointUrl
           type: string
           description: Url to an Azure Metrics Advisor service endpoint
         - id: credential
-          type: <xref uid="@azure/ai-metrics-advisor.MetricsAdvisorKeyCredential" />
+          type: >-
+            TokenCredential | <xref
+            uid="@azure/ai-metrics-advisor.MetricsAdvisorKeyCredential" />
           description: Used to authenticate requests to the service.
         - id: options
           type: <xref uid="@azure/ai-metrics-advisor.MetricsAdvisorClientOptions" />
