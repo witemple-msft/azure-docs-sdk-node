@@ -98,7 +98,7 @@ methods:
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.GetAnomalyAlertConfigurationResponse"
+          uid="@azure/ai-metrics-advisor.CreateAnomalyAlertConfigurationResponse"
           />&gt;
         description: ''
   - name: 'createDataFeed(DataFeedDescriptor, OperationOptions)'
@@ -122,8 +122,8 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetDataFeedResponse"
-          />&gt;
+          Promise&lt;<xref
+          uid="@azure/ai-metrics-advisor.CreateDataFeedResponse" />&gt;
         description: ''
   - name: >-
       createDetectionConfig(Omit<AnomalyDetectionConfiguration, "id">,
@@ -153,7 +153,7 @@ methods:
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.GetAnomalyDetectionConfigurationResponse"
+          uid="@azure/ai-metrics-advisor.CreateAnomalyDetectionConfigurationResponse"
           />&gt;
         description: ''
   - name: 'createHook(EmailNotificationHook | WebNotificationHook, OperationOptions)'
@@ -181,7 +181,7 @@ methods:
             The options parameter.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetHookResponse"
+          Promise&lt;<xref uid="@azure/ai-metrics-advisor.CreateHookResponse"
           />&gt;
         description: ''
   - name: 'deleteAlertConfig(string, OperationOptions)'
@@ -884,10 +884,7 @@ methods:
           description: |
             The options parameter
       return:
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.GetAnomalyAlertConfigurationResponse"
-          />&gt;
+        type: Promise&lt;RestResponse&gt;
         description: ''
   - name: 'updateDataFeed(string, DataFeedPatch, OperationOptions)'
     uid: >-
@@ -913,9 +910,7 @@ methods:
           description: |
             The options parameter.
       return:
-        type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetDataFeedResponse"
-          />&gt;
+        type: Promise&lt;RestResponse&gt;
         description: ''
   - name: >-
       updateDetectionConfig(string, Partial<Omit<AnomalyDetectionConfiguration,
@@ -951,10 +946,7 @@ methods:
           description: |
             The options parameter.
       return:
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.GetAnomalyDetectionConfigurationResponse"
-          />&gt;
+        type: Promise&lt;RestResponse&gt;
         description: ''
   - name: >-
       updateHook(string, EmailNotificationHookPatch | WebNotificationHookPatch,
@@ -985,7 +977,5 @@ methods:
           description: |
             The options parameter
       return:
-        type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetHookResponse"
-          />&gt;
+        type: Promise&lt;RestResponse&gt;
         description: ''
