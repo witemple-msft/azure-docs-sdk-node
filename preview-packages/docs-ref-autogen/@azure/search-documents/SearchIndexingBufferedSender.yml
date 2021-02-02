@@ -12,8 +12,8 @@ isDeprecated: false
 type: class
 constructors:
   - name: >-
-      SearchIndexingBufferedSender(IndexDocumentsClient<T>,
-      SearchIndexingBufferedSenderOptions)
+      SearchIndexingBufferedSender(IndexDocumentsClient<T>, (document: T) =>
+      string, SearchIndexingBufferedSenderOptions)
     uid: '@azure/search-documents.SearchIndexingBufferedSender.constructor'
     package: '@azure/search-documents'
     summary: Creates a new instance of SearchIndexingBufferedSender.
@@ -23,11 +23,15 @@ constructors:
     syntax:
       content: >-
         new SearchIndexingBufferedSender(client: IndexDocumentsClient<T>,
-        options?: SearchIndexingBufferedSenderOptions)
+        documentKeyRetriever: (document: T) => string, options?:
+        SearchIndexingBufferedSenderOptions)
       parameters:
         - id: client
           type: <xref uid="@azure/search-documents.IndexDocumentsClient" />&lt;T&gt;
           description: Search Client used to call the underlying IndexBatch operations.
+        - id: documentKeyRetriever
+          type: '(document: T) =&gt; string'
+          description: ''
         - id: options
           type: >-
             <xref
