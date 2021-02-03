@@ -334,6 +334,46 @@ methods:
       return:
         type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
         description: ''
+  - name: 'createOctKey(string, CreateOctKeyOptions)'
+    uid: '@azure/keyvault-keys.KeyClient.createOctKey'
+    package: '@azure/keyvault-keys'
+    summary: >-
+      The createOctKey method creates a new OCT key in Azure Key Vault. If the
+      named key
+
+      already exists, Azure Key Vault creates a new version of the key. It
+      requires the keys/create
+
+      permission.
+
+      Example usage:
+
+      ```ts
+
+      let client = new KeyClient(url, credentials);
+
+      let result = await client.createOctKey("MyKey", { hsm: true });
+
+      ```
+
+      Creates a new key, stores it, then returns key parameters and properties
+      to the client.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function createOctKey(name: string, options?: CreateOctKeyOptions)'
+      parameters:
+        - id: name
+          type: string
+          description: The name of the key.
+        - id: options
+          type: <xref uid="@azure/keyvault-keys.CreateOctKeyOptions" />
+          description: |
+            The optional parameters.
+      return:
+        type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
+        description: ''
   - name: 'createRsaKey(string, CreateRsaKeyOptions)'
     uid: '@azure/keyvault-keys.KeyClient.createRsaKey'
     package: '@azure/keyvault-keys'
