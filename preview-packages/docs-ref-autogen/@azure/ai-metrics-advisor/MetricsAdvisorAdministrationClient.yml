@@ -90,17 +90,16 @@ methods:
             Omit&lt;<xref
             uid="@azure/ai-metrics-advisor.AnomalyAlertConfiguration" />,
             "id"&gt;
-          description: |
-            The alert configuration object to create
+          description: The alert configuration object to create
         - id: options
           type: OperationOptions
           description: ''
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.CreateAnomalyAlertConfigurationResponse"
+          uid="@azure/ai-metrics-advisor.GetAnomalyAlertConfigurationResponse"
           />&gt;
-        description: ''
+        description: Response with Alert object
   - name: 'createDataFeed(DataFeedDescriptor, OperationOptions)'
     uid: >-
       @azure/ai-metrics-advisor.MetricsAdvisorAdministrationClient.createDataFeed
@@ -122,9 +121,9 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.CreateDataFeedResponse" />&gt;
-        description: ''
+          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetDataFeedResponse"
+          />&gt;
+        description: Response with Datafeed object
   - name: >-
       createDetectionConfig(Omit<AnomalyDetectionConfiguration, "id">,
       OperationOptions)
@@ -148,14 +147,13 @@ methods:
           description: The detection configuration object to create
         - id: options
           type: OperationOptions
-          description: |
-            The options parameter
+          description: The options parameter
       return:
         type: >-
           Promise&lt;<xref
-          uid="@azure/ai-metrics-advisor.CreateAnomalyDetectionConfigurationResponse"
+          uid="@azure/ai-metrics-advisor.GetAnomalyDetectionConfigurationResponse"
           />&gt;
-        description: ''
+        description: Response with Detection Config object
   - name: 'createHook(EmailNotificationHook | WebNotificationHook, OperationOptions)'
     uid: '@azure/ai-metrics-advisor.MetricsAdvisorAdministrationClient.createHook'
     package: '@azure/ai-metrics-advisor'
@@ -177,13 +175,12 @@ methods:
             description, external link and hook parameter
         - id: options
           type: OperationOptions
-          description: |
-            The options parameter.
+          description: The options parameter.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.CreateHookResponse"
+          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetHookResponse"
           />&gt;
-        description: ''
+        description: Response with Hook object
   - name: 'deleteAlertConfig(string, OperationOptions)'
     uid: >-
       @azure/ai-metrics-advisor.MetricsAdvisorAdministrationClient.deleteAlertConfig

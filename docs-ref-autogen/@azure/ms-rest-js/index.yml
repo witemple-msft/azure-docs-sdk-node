@@ -60,6 +60,7 @@ interfaces:
   - '@azure/ms-rest-js.RetryError'
   - '@azure/ms-rest-js.RequestPolicy'
   - '@azure/ms-rest-js.RequestPolicyOptionsLike'
+  - '@azure/ms-rest-js.ThrottlingRetryOptions'
   - '@azure/ms-rest-js.BaseMapper'
   - '@azure/ms-rest-js.CompositeMapper'
   - '@azure/ms-rest-js.CompositeMapperType'
@@ -84,10 +85,12 @@ interfaces:
   - '@azure/ms-rest-js.WebResourceLike'
 typeAliases:
   - '@azure/ms-rest-js.Authenticator'
+  - '@azure/ms-rest-js.CommonRequestInfo'
+  - '@azure/ms-rest-js.CommonRequestInit'
+  - '@azure/ms-rest-js.CommonResponse'
   - '@azure/ms-rest-js.RawHttpHeaders'
   - '@azure/ms-rest-js.ParameterPath'
   - '@azure/ms-rest-js.RequestPolicyFactory'
-  - '@azure/ms-rest-js.ResponseHandler'
   - '@azure/ms-rest-js.TelemetryInfo'
   - '@azure/ms-rest-js.ProxyAgent'
   - '@azure/ms-rest-js.Mapper'
@@ -436,7 +439,7 @@ functions:
       return:
         type: <xref uid="@azure/ms-rest-js.RequestPolicyFactory" />
         description: ''
-  - name: throttlingRetryPolicy()
+  - name: throttlingRetryPolicy(number)
     uid: '@azure/ms-rest-js.throttlingRetryPolicy'
     package: '@azure/ms-rest-js'
     summary: ''
@@ -444,7 +447,11 @@ functions:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function throttlingRetryPolicy()
+      content: 'function throttlingRetryPolicy(maxRetries?: number)'
+      parameters:
+        - id: maxRetries
+          type: number
+          description: ''
       return:
         type: <xref uid="@azure/ms-rest-js.RequestPolicyFactory" />
         description: ''
