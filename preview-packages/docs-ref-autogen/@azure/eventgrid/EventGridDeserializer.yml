@@ -1,17 +1,17 @@
 ### YamlMime:TSType
-name: EventGridConsumer
-uid: '@azure/eventgrid.EventGridConsumer'
+name: EventGridDeserializer
+uid: '@azure/eventgrid.EventGridDeserializer'
 package: '@azure/eventgrid'
 summary: >
-  EventGridConsumer is used to aid in processing events delivered by EventGrid.
-  It can deserialize a JSON encoded payload
+  EventGridDeserializer is used to aid in processing events delivered by
+  EventGrid. It can deserialize a JSON encoded payload
 
   of either a single event or batch of events as well as be used to convert the
   result of `JSON.parse` into an
 
   `EventGridEvent` or `CloudEvent` like object.
 
-  Unlike normal JSON deseralization, EventGridConsumer does some additional
+  Unlike normal JSON deseralization, EventGridDeserializer does some additional
   conversions:
 
 
@@ -23,64 +23,24 @@ summary: >
     and returned as an instance of the `Uint8Array` type.
   - The `data` payload from system events is converted to match the interfaces
   this library defines.
-
-
-  When constructing an `EventGridConsumer`, a map of event types to custom
-  deserializers may be provided. When
-
-  deserializing, if a custom deserializer has been registered for a given event
-  type, it will be called with the
-
-  data object. The object this deserializer returns will replace the existing
-  data object.
-fullName: EventGridConsumer
+fullName: EventGridDeserializer
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
-constructors:
-  - name: EventGridConsumer(EventGridConsumerOptions)
-    uid: '@azure/eventgrid.EventGridConsumer.constructor'
-    package: '@azure/eventgrid'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'new EventGridConsumer(options?: EventGridConsumerOptions)'
-      parameters:
-        - id: options
-          type: <xref uid="@azure/eventgrid.EventGridConsumerOptions" />
-          description: ''
-properties:
-  - name: customDeserializers
-    uid: '@azure/eventgrid.EventGridConsumer.customDeserializers'
-    package: '@azure/eventgrid'
-    summary: ''
-    fullName: customDeserializers
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'customDeserializers: Record<string, CustomEventDataDeserializer>'
-      return:
-        type: >-
-          Record&lt;string, <xref
-          uid="@azure/eventgrid.CustomEventDataDeserializer" />&gt;
-        description: ''
 methods:
-  - name: deserializeCloudEvents(object)
-    uid: '@azure/eventgrid.EventGridConsumer.deserializeCloudEvents_1'
+  - name: 'deserializeCloudEvents(Record<string, unknown>)'
+    uid: '@azure/eventgrid.EventGridDeserializer.deserializeCloudEvents_1'
     package: '@azure/eventgrid'
     summary: Deserializes events encoded in the Cloud Events 1.0 schema.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deserializeCloudEvents(encodedEvents: object)'
+      content: 'function deserializeCloudEvents(encodedEvents: Record<string, unknown>)'
       parameters:
         - id: encodedEvents
-          type: object
+          type: 'Record&lt;string, unknown&gt;'
           description: >
             an object representing a single event, encoded in the Cloud Events
             1.0 schema.
@@ -90,7 +50,7 @@ methods:
           />&lt;unknown&gt;[]&gt;
         description: ''
   - name: deserializeCloudEvents(string)
-    uid: '@azure/eventgrid.EventGridConsumer.deserializeCloudEvents'
+    uid: '@azure/eventgrid.EventGridDeserializer.deserializeCloudEvents'
     package: '@azure/eventgrid'
     summary: Deserializes events encoded in the Cloud Events 1.0 schema.
     remarks: ''
@@ -111,18 +71,20 @@ methods:
           Promise&lt;<xref uid="@azure/eventgrid.CloudEvent"
           />&lt;unknown&gt;[]&gt;
         description: ''
-  - name: deserializeEventGridEvents(object)
-    uid: '@azure/eventgrid.EventGridConsumer.deserializeEventGridEvents_1'
+  - name: 'deserializeEventGridEvents(Record<string, unknown>)'
+    uid: '@azure/eventgrid.EventGridDeserializer.deserializeEventGridEvents_1'
     package: '@azure/eventgrid'
     summary: Deserializes events encoded in the Event Grid schema.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function deserializeEventGridEvents(encodedEvents: object)'
+      content: >-
+        function deserializeEventGridEvents(encodedEvents: Record<string,
+        unknown>)
       parameters:
         - id: encodedEvents
-          type: object
+          type: 'Record&lt;string, unknown&gt;'
           description: >
             an object representing a single event, encoded in the Event Grid
             schema.
@@ -132,7 +94,7 @@ methods:
           />&lt;unknown&gt;[]&gt;
         description: ''
   - name: deserializeEventGridEvents(string)
-    uid: '@azure/eventgrid.EventGridConsumer.deserializeEventGridEvents'
+    uid: '@azure/eventgrid.EventGridDeserializer.deserializeEventGridEvents'
     package: '@azure/eventgrid'
     summary: Deserializes events encoded in the Event Grid schema.
     remarks: ''
