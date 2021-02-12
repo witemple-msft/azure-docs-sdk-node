@@ -1,90 +1,18 @@
 ### YamlMime:TSType
-name: WebResource
-uid: '@azure/ms-rest-js.WebResource'
+name: WebResourceLike
+uid: '@azure/ms-rest-js.WebResourceLike'
 package: '@azure/ms-rest-js'
-summary: >
-  Creates a new WebResource object.
-
-  This class provides an abstraction over a REST call by being library /
-  implementation agnostic and wrapping the necessary
-
-  properties to initiate a request.
-fullName: WebResource
+summary: An abstraction over a REST call.
+fullName: WebResourceLike
 remarks: ''
 isPreview: false
 isDeprecated: false
-type: class
-constructors:
-  - name: >-
-      WebResource(string, HttpMethods, any, [key: string]: any, [key: string]:
-      any | HttpHeadersLike, boolean, boolean, AbortSignalLike, number,
-      (progress: TransferProgressEvent) => void, (progress:
-      TransferProgressEvent) => void, ProxySettings, boolean, AgentSettings)
-    uid: '@azure/ms-rest-js.WebResource.constructor'
-    package: '@azure/ms-rest-js'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        new WebResource(url?: string, method?: HttpMethods, body?: any, query?:
-        [key: string]: any, headers?: [key: string]: any | HttpHeadersLike,
-        streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?:
-        AbortSignalLike, timeout?: number, onUploadProgress?: (progress:
-        TransferProgressEvent) => void, onDownloadProgress?: (progress:
-        TransferProgressEvent) => void, proxySettings?: ProxySettings,
-        keepAlive?: boolean, agentSettings?: AgentSettings)
-      parameters:
-        - id: url
-          type: string
-          description: ''
-        - id: method
-          type: <xref uid="@azure/ms-rest-js.HttpMethods" />
-          description: ''
-        - id: body
-          type: any
-          description: ''
-        - id: query
-          type: '[key: string]\: any'
-          description: ''
-        - id: headers
-          type: >-
-            [key: string]\: any | <xref uid="@azure/ms-rest-js.HttpHeadersLike"
-            />
-          description: ''
-        - id: streamResponseBody
-          type: boolean
-          description: ''
-        - id: withCredentials
-          type: boolean
-          description: ''
-        - id: abortSignal
-          type: <xref uid="@azure/ms-rest-js.AbortSignalLike" />
-          description: ''
-        - id: timeout
-          type: number
-          description: ''
-        - id: onUploadProgress
-          type: '(progress: TransferProgressEvent) =&gt; void'
-          description: ''
-        - id: onDownloadProgress
-          type: '(progress: TransferProgressEvent) =&gt; void'
-          description: ''
-        - id: proxySettings
-          type: <xref uid="@azure/ms-rest-js.ProxySettings" />
-          description: ''
-        - id: keepAlive
-          type: boolean
-          description: ''
-        - id: agentSettings
-          type: <xref uid="@azure/ms-rest-js.AgentSettings" />
-          description: ''
+type: interface
 properties:
   - name: abortSignal
-    uid: '@azure/ms-rest-js.WebResource.abortSignal'
+    uid: '@azure/ms-rest-js.WebResourceLike.abortSignal'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: Used to abort the request later.
     fullName: abortSignal
     remarks: ''
     isPreview: false
@@ -95,9 +23,9 @@ properties:
         type: <xref uid="@azure/ms-rest-js.AbortSignalLike" />
         description: ''
   - name: agentSettings
-    uid: '@azure/ms-rest-js.WebResource.agentSettings'
+    uid: '@azure/ms-rest-js.WebResourceLike.agentSettings'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: HTTP(S) agent configuration.
     fullName: agentSettings
     remarks: ''
     isPreview: false
@@ -108,9 +36,9 @@ properties:
         type: <xref uid="@azure/ms-rest-js.AgentSettings" />
         description: ''
   - name: body
-    uid: '@azure/ms-rest-js.WebResource.body'
+    uid: '@azure/ms-rest-js.WebResourceLike.body'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: The HTTP body contents of the request.
     fullName: body
     remarks: ''
     isPreview: false
@@ -121,7 +49,7 @@ properties:
         type: any
         description: ''
   - name: formData
-    uid: '@azure/ms-rest-js.WebResource.formData'
+    uid: '@azure/ms-rest-js.WebResourceLike.formData'
     package: '@azure/ms-rest-js'
     summary: ''
     fullName: formData
@@ -134,9 +62,9 @@ properties:
         type: any
         description: ''
   - name: headers
-    uid: '@azure/ms-rest-js.WebResource.headers'
+    uid: '@azure/ms-rest-js.WebResourceLike.headers'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: The HTTP headers to use when making the request.
     fullName: headers
     remarks: ''
     isPreview: false
@@ -147,9 +75,9 @@ properties:
         type: <xref uid="@azure/ms-rest-js.HttpHeadersLike" />
         description: ''
   - name: keepAlive
-    uid: '@azure/ms-rest-js.WebResource.keepAlive'
+    uid: '@azure/ms-rest-js.WebResourceLike.keepAlive'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: If the connection should be reused.
     fullName: keepAlive
     remarks: ''
     isPreview: false
@@ -160,9 +88,9 @@ properties:
         type: boolean
         description: ''
   - name: method
-    uid: '@azure/ms-rest-js.WebResource.method'
+    uid: '@azure/ms-rest-js.WebResourceLike.method'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: The HTTP method to use when making the request.
     fullName: method
     remarks: ''
     isPreview: false
@@ -173,7 +101,7 @@ properties:
         type: <xref uid="@azure/ms-rest-js.HttpMethods" />
         description: ''
   - name: onDownloadProgress
-    uid: '@azure/ms-rest-js.WebResource.onDownloadProgress'
+    uid: '@azure/ms-rest-js.WebResourceLike.onDownloadProgress'
     package: '@azure/ms-rest-js'
     summary: Callback which fires upon download progress.
     fullName: onDownloadProgress
@@ -186,7 +114,7 @@ properties:
         type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
   - name: onUploadProgress
-    uid: '@azure/ms-rest-js.WebResource.onUploadProgress'
+    uid: '@azure/ms-rest-js.WebResourceLike.onUploadProgress'
     package: '@azure/ms-rest-js'
     summary: Callback which fires upon upload progress.
     fullName: onUploadProgress
@@ -199,7 +127,7 @@ properties:
         type: '(progress: TransferProgressEvent) =&gt; void'
         description: ''
   - name: operationResponseGetter
-    uid: '@azure/ms-rest-js.WebResource.operationResponseGetter'
+    uid: '@azure/ms-rest-js.WebResourceLike.operationResponseGetter'
     package: '@azure/ms-rest-js'
     summary: >-
       A function that returns the proper OperationResponse for the given
@@ -223,9 +151,9 @@ properties:
           undefined | OperationResponse
         description: ''
   - name: operationSpec
-    uid: '@azure/ms-rest-js.WebResource.operationSpec'
+    uid: '@azure/ms-rest-js.WebResourceLike.operationSpec'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: Used to parse the response.
     fullName: operationSpec
     remarks: ''
     isPreview: false
@@ -236,9 +164,9 @@ properties:
         type: <xref uid="@azure/ms-rest-js.OperationSpec" />
         description: ''
   - name: proxySettings
-    uid: '@azure/ms-rest-js.WebResource.proxySettings'
+    uid: '@azure/ms-rest-js.WebResourceLike.proxySettings'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: Proxy configuration.
     fullName: proxySettings
     remarks: ''
     isPreview: false
@@ -249,9 +177,9 @@ properties:
         type: <xref uid="@azure/ms-rest-js.ProxySettings" />
         description: ''
   - name: query
-    uid: '@azure/ms-rest-js.WebResource.query'
+    uid: '@azure/ms-rest-js.WebResourceLike.query'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: A query string represented as an object.
     fullName: query
     remarks: ''
     isPreview: false
@@ -262,7 +190,7 @@ properties:
         type: '[key: string]\: any'
         description: ''
   - name: shouldDeserialize
-    uid: '@azure/ms-rest-js.WebResource.shouldDeserialize'
+    uid: '@azure/ms-rest-js.WebResourceLike.shouldDeserialize'
     package: '@azure/ms-rest-js'
     summary: >-
       Whether or not the HttpOperationResponse should be deserialized. If this
@@ -281,7 +209,7 @@ properties:
         type: 'boolean | (response: HttpOperationResponse) =&gt; boolean'
         description: ''
   - name: streamResponseBody
-    uid: '@azure/ms-rest-js.WebResource.streamResponseBody'
+    uid: '@azure/ms-rest-js.WebResourceLike.streamResponseBody'
     package: '@azure/ms-rest-js'
     summary: >-
       Whether or not the body of the HttpOperationResponse should be treated as
@@ -296,9 +224,13 @@ properties:
         type: boolean
         description: ''
   - name: timeout
-    uid: '@azure/ms-rest-js.WebResource.timeout'
+    uid: '@azure/ms-rest-js.WebResourceLike.timeout'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: >-
+      The number of milliseconds a request can take before automatically being
+      terminated.
+
+      If the request is terminated, an `AbortError` is thrown.
     fullName: timeout
     remarks: ''
     isPreview: false
@@ -309,9 +241,9 @@ properties:
         type: number
         description: ''
   - name: url
-    uid: '@azure/ms-rest-js.WebResource.url'
+    uid: '@azure/ms-rest-js.WebResourceLike.url'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: The URL being accessed by the request.
     fullName: url
     remarks: ''
     isPreview: false
@@ -322,9 +254,9 @@ properties:
         type: string
         description: ''
   - name: withCredentials
-    uid: '@azure/ms-rest-js.WebResource.withCredentials'
+    uid: '@azure/ms-rest-js.WebResourceLike.withCredentials'
     package: '@azure/ms-rest-js'
-    summary: ''
+    summary: If credentials (cookies) should be sent along during an XHR.
     fullName: withCredentials
     remarks: ''
     isPreview: false
@@ -336,21 +268,21 @@ properties:
         description: ''
 methods:
   - name: clone()
-    uid: '@azure/ms-rest-js.WebResource.clone'
+    uid: '@azure/ms-rest-js.WebResourceLike.clone'
     package: '@azure/ms-rest-js'
-    summary: Clone this WebResource HTTP request object.
+    summary: Clone this request object.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: function clone()
       return:
-        type: <xref uid="@azure/ms-rest-js.WebResource" />
-        description: The clone of this WebResource HTTP request object.
+        type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+        description: ''
   - name: prepare(RequestPrepareOptions)
-    uid: '@azure/ms-rest-js.WebResource.prepare'
+    uid: '@azure/ms-rest-js.WebResourceLike.prepare'
     package: '@azure/ms-rest-js'
-    summary: Prepares the request.
+    summary: Sets options on the request.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -359,14 +291,12 @@ methods:
       parameters:
         - id: options
           type: <xref uid="@azure/ms-rest-js.RequestPrepareOptions" />
-          description: Options to provide for preparing the request.
+          description: ''
       return:
-        type: <xref uid="@azure/ms-rest-js.WebResource" />
-        description: >-
-          Returns the prepared WebResource (HTTP Request) object that needs to
-          be given to the request pipeline.
+        type: <xref uid="@azure/ms-rest-js.WebResourceLike" />
+        description: ''
   - name: validateRequestProperties()
-    uid: '@azure/ms-rest-js.WebResource.validateRequestProperties'
+    uid: '@azure/ms-rest-js.WebResourceLike.validateRequestProperties'
     package: '@azure/ms-rest-js'
     summary: >-
       Validates that the required properties such as method, url,
