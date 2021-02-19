@@ -117,7 +117,7 @@ methods:
       return:
         type: Promise&lt;void&gt;
         description: ''
-  - name: init()
+  - name: init(Object)
     uid: '@azure/core-amqp.CbsClient.init'
     package: '@azure/core-amqp'
     summary: >-
@@ -129,11 +129,18 @@ methods:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: function init()
+      content: 'function init(options?: Object)'
+      parameters:
+        - id: options
+          type: Object
+          description: >-
+            Optional parameters that can be used to affect this method's
+            behavior.
+               For example, `abortSignal` can be passed to allow cancelling an in-progress `init` invocation.
       return:
         type: Promise&lt;void&gt;
         description: Promise<void>.
-  - name: 'negotiateClaim(string, string, TokenType)'
+  - name: 'negotiateClaim(string, string, TokenType, Object)'
     uid: '@azure/core-amqp.CbsClient.negotiateClaim'
     package: '@azure/core-amqp'
     summary: Negotiates the CBS claim with the EventHub/ServiceBus Service.
@@ -143,7 +150,7 @@ methods:
     syntax:
       content: >-
         function negotiateClaim(audience: string, token: string, tokenType:
-        TokenType)
+        TokenType, options?: Object)
       parameters:
         - id: audience
           type: string
@@ -179,7 +186,15 @@ methods:
           description: The token that needs to be sent in the put-token request.
         - id: tokenType
           type: <xref uid="@azure/core-amqp.TokenType" />
-          description: ''
+          description: >-
+            The type of token being used. For example, 'jwt' or
+            'servicebus.windows.net:sastoken'.
+        - id: options
+          type: Object
+          description: >-
+            Optional parameters that can be used to affect this method's
+            behavior.
+               For example, `abortSignal` can be passed to allow cancelling an in-progress `negotiateClaim` invocation.
       return:
         type: Promise&lt;<xref uid="@azure/core-amqp.CbsResponse" />&gt;
         description: |-

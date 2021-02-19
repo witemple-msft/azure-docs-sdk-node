@@ -60,10 +60,15 @@ constructors:
             <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential"
             /> | <xref uid="@azure/storage-file-datalake.AnonymousCredential" />
             | TokenCredential
-          description: ''
+          description: >-
+            Such as AnonymousCredential, StorageSharedKeyCredential or any
+            credential from the @azure/identity package to authenticate requests
+            to the service. You can also provide an object that implements the
+            TokenCredential interface. If not specified, AnonymousCredential is
+            used.
         - id: options
           type: <xref uid="@azure/storage-file-datalake.StoragePipelineOptions" />
-          description: ''
+          description: Optional. Options to configure the HTTP pipeline.
 properties:
   - name: accountName
     uid: '@azure/storage-file-datalake.DataLakePathClient.accountName'
@@ -157,7 +162,8 @@ methods:
           description: 'Resource type, "directory" or "file".'
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathCreateOptions" />
-          description: ''
+          description: |
+            Optional. Options when creating path.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/storage-file-datalake.PathCreateResponse"
@@ -184,7 +190,8 @@ methods:
           type: >-
             <xref
             uid="@azure/storage-file-datalake.PathCreateIfNotExistsOptions" />
-          description: ''
+          description: |
+            -
       return:
         type: >-
           Promise&lt;<xref
@@ -203,10 +210,13 @@ methods:
       parameters:
         - id: recursive
           type: boolean
-          description: ''
+          description: >-
+            Required and valid only when the resource is a directory. If "true",
+            all paths beneath the directory will be deleted.
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathDeleteOptions" />
-          description: ''
+          description: |
+            Optional. Options when deleting path.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/storage-file-datalake.PathDeleteResponse"
@@ -226,10 +236,13 @@ methods:
       parameters:
         - id: recursive
           type: boolean
-          description: ''
+          description: >-
+            Required and valid only when the resource is a directory. If "true",
+            all paths beneath the directory will be deleted.
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathDeleteOptions" />
-          description: ''
+          description: |
+            -
       return:
         type: >-
           Promise&lt;<xref
@@ -257,7 +270,8 @@ methods:
       parameters:
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathExistsOptions" />
-          description: ''
+          description: |
+            options to Exists operation.
       return:
         type: Promise&lt;boolean&gt;
         description: ''
@@ -275,7 +289,8 @@ methods:
           type: >-
             <xref uid="@azure/storage-file-datalake.PathGetAccessControlOptions"
             />
-          description: ''
+          description: |
+            Optional. Options when getting file access control.
       return:
         type: >-
           Promise&lt;<xref
@@ -295,7 +310,8 @@ methods:
       parameters:
         - id: proposeLeaseId
           type: string
-          description: ''
+          description: |
+            Optional. Initial proposed lease Id.
       return:
         type: <xref uid="@azure/storage-file-datalake.DataLakeLeaseClient" />
         description: ''
@@ -326,7 +342,8 @@ methods:
       parameters:
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathGetPropertiesOptions" />
-          description: ''
+          description: |
+            Optional. Options when getting path properties.
       return:
         type: >-
           Promise&lt;<xref
@@ -350,7 +367,8 @@ methods:
                                             If the destinationPath is authenticated with SAS, add the SAS to the destination path like "directory/file?sasToken".
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathMoveOptions" />
-          description: ''
+          description: |
+            Optional. Options when moving directory or file.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/storage-file-datalake.PathMoveResponse"
@@ -379,7 +397,8 @@ methods:
                                             If the destinationPath is authenticated with SAS, add the SAS to the destination path like "directory/file?sasToken".
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathMoveOptions" />
-          description: ''
+          description: |
+            Optional. Options when moving directory or file.
       return:
         type: >-
           Promise&lt;<xref uid="@azure/storage-file-datalake.PathMoveResponse"
@@ -411,7 +430,8 @@ methods:
             <xref
             uid="@azure/storage-file-datalake.PathChangeAccessControlRecursiveOptions"
             />
-          description: ''
+          description: |
+            Optional. Options
       return:
         type: >-
           Promise&lt;<xref
@@ -437,7 +457,8 @@ methods:
           type: >-
             <xref uid="@azure/storage-file-datalake.PathSetAccessControlOptions"
             />
-          description: ''
+          description: |
+            Optional. Options when setting path access control.
       return:
         type: >-
           Promise&lt;<xref
@@ -465,7 +486,8 @@ methods:
             <xref
             uid="@azure/storage-file-datalake.PathChangeAccessControlRecursiveOptions"
             />
-          description: ''
+          description: |
+            Optional. Options
       return:
         type: >-
           Promise&lt;<xref
@@ -492,12 +514,13 @@ methods:
       parameters:
         - id: httpHeaders
           type: <xref uid="@azure/storage-file-datalake.PathHttpHeaders" />
-          description: ''
+          description: '-'
         - id: options
           type: >-
             <xref uid="@azure/storage-file-datalake.PathSetHttpHeadersOptions"
             />
-          description: ''
+          description: |
+            -
       return:
         type: >-
           Promise&lt;<xref
@@ -523,10 +546,13 @@ methods:
       parameters:
         - id: metadata
           type: <xref uid="@azure/storage-file-datalake.Metadata" />
-          description: ''
+          description: |-
+            Optional. Replace existing metadata with this value.
+                                         If no value provided the existing metadata will be removed.
         - id: options
           type: <xref uid="@azure/storage-file-datalake.PathSetMetadataOptions" />
-          description: ''
+          description: |
+            Optional. Options when setting path metadata.
       return:
         type: >-
           Promise&lt;<xref
@@ -553,7 +579,8 @@ methods:
           type: >-
             <xref uid="@azure/storage-file-datalake.PathSetPermissionsOptions"
             />
-          description: ''
+          description: |
+            Optional. Options when setting path permissions.
       return:
         type: >-
           Promise&lt;<xref
@@ -610,7 +637,8 @@ methods:
             <xref
             uid="@azure/storage-file-datalake.PathChangeAccessControlRecursiveOptions"
             />
-          description: ''
+          description: |
+            Optional. Options
       return:
         type: >-
           Promise&lt;<xref
