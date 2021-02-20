@@ -41,7 +41,8 @@ constructors:
                                              If not specified, AnonymousCredential is used.
         - id: options
           type: <xref uid="@azure/storage-file-share.StoragePipelineOptions" />
-          description: Optional. Options to configure the HTTP pipeline.
+          description: |
+            Optional. Options to configure the HTTP pipeline.
   - name: 'ShareDirectoryClient(string, Pipeline)'
     uid: '@azure/storage-file-share.ShareDirectoryClient.constructor_1'
     package: '@azure/storage-file-share'
@@ -65,7 +66,7 @@ constructors:
                                 Such as a directory named "mydir%", the URL should be "https://myaccount.file.core.windows.net/myshare/mydir%25".
         - id: pipeline
           type: <xref uid="@azure/storage-file-share.Pipeline" />
-          description: |-
+          description: |
             Call newPipeline() to create a default
                                        pipeline, or provide a customized pipeline.
 properties:
@@ -432,7 +433,23 @@ methods:
           description: A subdirectory name
       return:
         type: <xref uid="@azure/storage-file-share.ShareDirectoryClient" />
-        description: The ShareDirectoryClient object for the given subdirectory name.
+        description: >-
+          The ShareDirectoryClient object for the given subdirectory name.
+
+
+          Example usage:
+
+
+          ```js
+
+          const directoryClient = shareClient.getDirectoryClient("<directory
+          name>");
+
+          await directoryClient.create();
+
+          console.log("Created directory successfully");
+
+          ```
   - name: getFileClient(string)
     uid: '@azure/storage-file-share.ShareDirectoryClient.getFileClient'
     package: '@azure/storage-file-share'
@@ -448,7 +465,22 @@ methods:
           description: A file name.
       return:
         type: <xref uid="@azure/storage-file-share.ShareFileClient" />
-        description: A new ShareFileClient object for the given file name.
+        description: |-
+          A new ShareFileClient object for the given file name.
+
+          Example usage:
+
+          ```js
+          const content = "Hello world!"
+
+          const fileClient = directoryClient.getFileClient("<file name>");
+
+          await fileClient.create(content.length);
+          console.log("Created file successfully!");
+
+          await fileClient.uploadRange(content, 0, content.length);
+          console.log("Updated file successfully!")
+          ```
   - name: getProperties(DirectoryGetPropertiesOptions)
     uid: '@azure/storage-file-share.ShareDirectoryClient.getProperties'
     package: '@azure/storage-file-share'
@@ -623,9 +655,7 @@ methods:
           uid="@azure/storage-file-share.DirectoryItem" />, <xref
           uid="@azure/storage-file-share.DirectoryListFilesAndDirectoriesSegmentResponse"
           />&gt;
-        description: |-
-          , DirectoryListFilesAndDirectoriesSegmentResponse>}
-          An asyncIterableIterator that supports paging.
+        description: An asyncIterableIterator that supports paging.
   - name: listHandles(DirectoryListHandlesOptions)
     uid: '@azure/storage-file-share.ShareDirectoryClient.listHandles'
     package: '@azure/storage-file-share'
@@ -747,7 +777,10 @@ methods:
       parameters:
         - id: options
           type: <xref uid="@azure/storage-file-share.DirectoryListHandlesOptions" />
-          description: Options to list handles operation.
+          description: |
+            Options to list handles operation.
+
+            An asyncIterableIterator that supports paging.
       return:
         type: >-
           PagedAsyncIterableIterator&lt;<xref

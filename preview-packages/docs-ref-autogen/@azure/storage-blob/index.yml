@@ -487,9 +487,8 @@ functions:
           description: '-'
         - id: sharedKeyCredential
           type: <xref uid="@azure/storage-blob.StorageSharedKeyCredential" />
-          description: |+
+          description: |
             -
-
       return:
         type: <xref uid="@azure/storage-blob.SASQueryParameters" />
         description: ''
@@ -524,7 +523,7 @@ functions:
           expiresOn, // Required. Date type
           ipRange: { start: "0.0.0.0", end: "255.255.255.255" }, // Optional
           protocol: SASProtocol.HttpsAndHttp, // Optional
-          version: "2018-11-09" // Must >= 2018-11-09 to generate user delegation SAS
+          version: "2018-11-09" // Must greater than or equal to 2018-11-09 to generate user delegation SAS
         },
         userDelegationKey, // UserDelegationKey
         accountName
@@ -548,9 +547,8 @@ functions:
           description: Return value of `blobServiceClient.getUserDelegationKey()`
         - id: accountName
           type: string
-          description: |+
+          description: |
             -
-
       return:
         type: <xref uid="@azure/storage-blob.SASQueryParameters" />
         description: ''
@@ -576,10 +574,10 @@ functions:
             TokenCredential
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
-            credential from the @azure/identity package to authenticate requests
-            to the service. You can also provide an object that implements the
-            TokenCredential interface. If not specified, AnonymousCredential is
-            used.
+            credential from the `@azure/identity` package to authenticate
+            requests to the service. You can also provide an object that
+            implements the TokenCredential interface. If not specified,
+            AnonymousCredential is used.
         - id: pipelineOptions
           type: <xref uid="@azure/storage-blob.StoragePipelineOptions" />
           description: Optional. Options.

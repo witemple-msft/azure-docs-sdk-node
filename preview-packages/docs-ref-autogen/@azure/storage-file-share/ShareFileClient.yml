@@ -39,7 +39,8 @@ constructors:
                                              If not specified, AnonymousCredential is used.
         - id: options
           type: <xref uid="@azure/storage-file-share.StoragePipelineOptions" />
-          description: Optional. Options to configure the HTTP pipeline.
+          description: |
+            Optional. Options to configure the HTTP pipeline.
   - name: 'ShareFileClient(string, Pipeline)'
     uid: '@azure/storage-file-share.ShareFileClient.constructor_1'
     package: '@azure/storage-file-share'
@@ -63,7 +64,7 @@ constructors:
                                 Such as a file named "myfile%", the URL should be "https://myaccount.file.core.windows.net/myshare/mydirectory/myfile%25".
         - id: pipeline
           type: <xref uid="@azure/storage-file-share.Pipeline" />
-          description: |-
+          description: |
             Call newPipeline() to create a default
                                        pipeline, or provide a customized pipeline.
 properties:
@@ -212,7 +213,22 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/storage-file-share.FileCreateResponse"
           />&gt;
-        description: Response data for the File Create  operation.
+        description: |-
+          Response data for the File Create  operation.
+
+          Example usage:
+
+          ```js
+          const content = "Hello world!";
+
+          // Create the file
+          await fileClient.create(content.length);
+          console.log("Created file successfully!");
+
+          // Then upload data to the file
+          await fileClient.uploadRange(content, 0, content.length);
+          console.log("Updated file successfully!")
+          ```
   - name: delete(FileDeleteOptions)
     uid: '@azure/storage-file-share.ShareFileClient.delete'
     package: '@azure/storage-file-share'
@@ -312,12 +328,14 @@ methods:
       parameters:
         - id: offset
           type: number
-          description: 'From which position of the file to download, >= 0'
+          description: >-
+            From which position of the file to download, greater than or equal
+            to 0
         - id: count
           type: number
           description: >-
-            How much data to be downloaded, > 0. Will download to the end when
-            undefined
+            How much data to be downloaded, greater than 0. Will download to the
+            end when undefined
         - id: options
           type: <xref uid="@azure/storage-file-share.FileDownloadOptions" />
           description: Options to File Download operation.
@@ -325,7 +343,56 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/storage-file-share.FileDownloadResponseModel" />&gt;
-        description: Response data for the File Download operation.
+        description: |-
+          Response data for the File Download operation.
+
+          Example usage (Node.js):
+
+          ```js
+          // Download a file to a string
+          const downloadFileResponse = await fileClient.download();
+          console.log(
+            "Downloaded file content:",
+            (await streamToBuffer(downloadFileResponse.readableStreamBody)).toString()}
+          );
+
+          // A helper method used to read a Node.js readable stream into string
+          async function streamToBuffer(readableStream) {
+            return new Promise((resolve, reject) => {
+              const chunks = [];
+              readableStream.on("data", (data) => {
+                chunks.push(data instanceof Buffer ? data : Buffer.from(data));
+              });
+              readableStream.on("end", () => {
+                resolve(Buffer.concat(chunks));
+              });
+              readableStream.on("error", reject);
+            });
+          }
+          ```
+
+          Example usage (browsers):
+
+          ```js
+          // Download a file to a string
+          const downloadFileResponse = await fileClient.download(0);
+          console.log(
+            "Downloaded file content:",
+            await blobToString(await downloadFileResponse.blobBody)}
+          );
+
+          // A helper method used to convert a browser Blob into string.
+          export async function blobToString(blob: Blob): Promise<string> {
+            const fileReader = new FileReader();
+            return new Promise<string>((resolve, reject) => {
+              fileReader.onloadend = (ev: any) => {
+                resolve(ev.target!.result);
+              };
+              fileReader.onerror = reject;
+              fileReader.readAsText(blob);
+            });
+          }
+          ```
   - name: 'downloadToBuffer(Buffer, number, number, FileDownloadToBufferOptions)'
     uid: '@azure/storage-file-share.ShareFileClient.downloadToBuffer'
     package: '@azure/storage-file-share'
@@ -366,9 +433,8 @@ methods:
             passing undefined
         - id: options
           type: <xref uid="@azure/storage-file-share.FileDownloadToBufferOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;Buffer&gt;
         description: ''
@@ -408,9 +474,8 @@ methods:
             passing undefined
         - id: options
           type: <xref uid="@azure/storage-file-share.FileDownloadToBufferOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;Buffer&gt;
         description: ''
@@ -656,7 +721,10 @@ methods:
       parameters:
         - id: options
           type: <xref uid="@azure/storage-file-share.FileListHandlesOptions" />
-          description: Options to list handles operation.
+          description: |
+            Options to list handles operation.
+
+            An asyncIterableIterator that supports paging.
       return:
         type: >-
           PagedAsyncIterableIterator&lt;<xref
@@ -829,9 +897,8 @@ methods:
           description: 'Buffer(Node), Blob, ArrayBuffer or ArrayBufferView'
         - id: options
           type: <xref uid="@azure/storage-file-share.FileParallelUploadOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;void&gt;
         description: ''
@@ -856,9 +923,8 @@ methods:
           description: Full path of local file
         - id: options
           type: <xref uid="@azure/storage-file-share.FileParallelUploadOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;void&gt;
         description: ''
@@ -902,7 +968,22 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/storage-file-share.FileUploadRangeResponse" />&gt;
-        description: Response data for the File Upload Range operation.
+        description: |-
+          Response data for the File Upload Range operation.
+
+          Example usage:
+
+          ```js
+          const content = "Hello world!";
+
+          // Create the file
+          await fileClient.create(content.length);
+          console.log("Created file successfully!");
+
+          // Then upload data to the file
+          await fileClient.uploadRange(content, 0, content.length);
+          console.log("Updated file successfully!")
+          ```
   - name: >-
       uploadRangeFromURL(string, number, number, number,
       FileUploadRangeFromURLOptions)
@@ -983,9 +1064,8 @@ methods:
           description: Size of the Azure file
         - id: options
           type: <xref uid="@azure/storage-file-share.FileParallelUploadOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;void&gt;
         description: ''
@@ -1017,9 +1097,8 @@ methods:
           description: '-'
         - id: options
           type: <xref uid="@azure/storage-file-share.FileParallelUploadOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;void&gt;
         description: ''
@@ -1065,7 +1144,7 @@ methods:
           description: >-
             Size of every buffer allocated in bytes, also the chunk/range size
             during
-                                       the uploaded file. Size must be > 0 and <= 4 * 1024 * 1024 (4MB)
+                                       the uploaded file. Size must be greater than 0 and lesser than or equal to 4 * 1024 * 1024 (4MB)
         - id: maxBuffers
           type: number
           description: |-
@@ -1073,9 +1152,8 @@ methods:
                                        with max uploading concurrency
         - id: options
           type: <xref uid="@azure/storage-file-share.FileUploadStreamOptions" />
-          description: |+
+          description: |
             -
-
       return:
         type: Promise&lt;void&gt;
         description: ''

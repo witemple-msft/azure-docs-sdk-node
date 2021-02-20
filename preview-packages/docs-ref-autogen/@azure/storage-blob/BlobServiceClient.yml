@@ -31,7 +31,7 @@ constructors:
                                 if using AnonymousCredential, such as "https://myaccount.blob.core.windows.net?sasString".
         - id: pipeline
           type: <xref uid="@azure/storage-blob.Pipeline" />
-          description: |-
+          description: |
             Call newPipeline() to create a default
                                        pipeline, or provide a customized pipeline.
   - name: >-
@@ -62,13 +62,52 @@ constructors:
             TokenCredential
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
-            credential from the @azure/identity package to authenticate requests
-            to the service. You can also provide an object that implements the
-            TokenCredential interface. If not specified, AnonymousCredential is
-            used.
+            credential from the `@azure/identity` package to authenticate
+            requests to the service. You can also provide an object that
+            implements the TokenCredential interface. If not specified,
+            AnonymousCredential is used.
         - id: options
           type: <xref uid="@azure/storage-blob.StoragePipelineOptions" />
-          description: Optional. Options to configure the HTTP pipeline.
+          description: >
+            Optional. Options to configure the HTTP pipeline.
+
+
+            Example using DefaultAzureCredential from `@azure/identity`:
+
+
+            ```js
+
+            const account = "<storage account name>";
+
+
+            const defaultAzureCredential = new DefaultAzureCredential();
+
+
+            const blobServiceClient = new BlobServiceClient(
+              `https://${account}.blob.core.windows.net`,
+              defaultAzureCredential
+            );
+
+            ```
+
+
+            Example using an account name/key:
+
+
+            ```js
+
+            const account = "<storage account name>"
+
+            const sharedKeyCredential = new StorageSharedKeyCredential(account,
+            "<account key>");
+
+
+            const blobServiceClient = new BlobServiceClient(
+              `https://${account}.blob.core.windows.net`,
+              sharedKeyCredential
+            );
+
+            ```
 properties:
   - name: accountName
     uid: '@azure/storage-blob.BlobServiceClient.accountName'
@@ -88,9 +127,9 @@ properties:
     package: '@azure/storage-blob'
     summary: >-
       Such as AnonymousCredential, StorageSharedKeyCredential or any credential
-      from the @azure/identity package to authenticate requests to the service.
-      You can also provide an object that implements the TokenCredential
-      interface. If not specified, AnonymousCredential is used.
+      from the `@azure/identity` package to authenticate requests to the
+      service. You can also provide an object that implements the
+      TokenCredential interface. If not specified, AnonymousCredential is used.
     fullName: credential
     remarks: ''
     isPreview: false
@@ -219,7 +258,8 @@ methods:
                                              `BlobEndpoint=https://myaccount.blob.core.windows.net/;QueueEndpoint=https://myaccount.queue.core.windows.net/;FileEndpoint=https://myaccount.file.core.windows.net/;TableEndpoint=https://myaccount.table.core.windows.net/;SharedAccessSignature=sasString`
         - id: options
           type: <xref uid="@azure/storage-blob.StoragePipelineOptions" />
-          description: Optional. Options to configure the HTTP pipeline.
+          description: |
+            Optional. Options to configure the HTTP pipeline.
       return:
         type: <xref uid="@azure/storage-blob.BlobServiceClient" />
         description: ''
@@ -323,7 +363,19 @@ methods:
           description: A container name
       return:
         type: <xref uid="@azure/storage-blob.ContainerClient" />
-        description: A new ContainerClient object for the given container name.
+        description: >-
+          A new ContainerClient object for the given container name.
+
+
+          Example usage:
+
+
+          ```js
+
+          const containerClient =
+          blobServiceClient.getContainerClient("<container name>");
+
+          ```
   - name: getProperties(ServiceGetPropertiesOptions)
     uid: '@azure/storage-blob.BlobServiceClient.getProperties'
     package: '@azure/storage-blob'

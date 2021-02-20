@@ -38,7 +38,8 @@ constructors:
                                              If not specified, AnonymousCredential is used.
         - id: options
           type: <xref uid="@azure/storage-file-share.StoragePipelineOptions" />
-          description: Optional. Options to configure the HTTP pipeline.
+          description: |
+            Optional. Options to configure the HTTP pipeline.
   - name: 'ShareServiceClient(string, Pipeline)'
     uid: '@azure/storage-file-share.ShareServiceClient.constructor_1'
     package: '@azure/storage-file-share'
@@ -57,7 +58,7 @@ constructors:
                                 if using AnonymousCredential, such as "https://myaccount.file.core.windows.net?sasString".
         - id: pipeline
           type: <xref uid="@azure/storage-file-share.Pipeline" />
-          description: |-
+          description: |
             Call newPipeline() to create a default
                                        pipeline, or provide a customized pipeline.
 properties:
@@ -242,7 +243,16 @@ methods:
           description: Name of a share.
       return:
         type: <xref uid="@azure/storage-file-share.ShareClient" />
-        description: The ShareClient object for the given share name.
+        description: |-
+          The ShareClient object for the given share name.
+
+          Example usage:
+
+          ```js
+          const shareClient = serviceClient.getShareClient("<share name>");
+          await shareClient.create();
+          console.log("Created share successfully!");
+          ```
   - name: listShares(ServiceListSharesOptions)
     uid: '@azure/storage-file-share.ShareServiceClient.listShares'
     package: '@azure/storage-file-share'
@@ -359,7 +369,10 @@ methods:
       parameters:
         - id: options
           type: <xref uid="@azure/storage-file-share.ServiceListSharesOptions" />
-          description: Options to list shares operation.
+          description: |
+            Options to list shares operation.
+
+            An asyncIterableIterator that supports paging.
       return:
         type: >-
           PagedAsyncIterableIterator&lt;<xref
