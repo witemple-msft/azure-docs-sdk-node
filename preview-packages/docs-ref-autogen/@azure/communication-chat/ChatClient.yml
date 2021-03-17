@@ -18,10 +18,10 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new ChatClient(url: string, credential: CommunicationTokenCredential,
-        options?: ChatClientOptions)
+        new ChatClient(endpoint: string, credential:
+        CommunicationTokenCredential, options?: ChatClientOptions)
       parameters:
-        - id: url
+        - id: endpoint
           type: string
           description: The url of the Communication Services resouce.
         - id: credential
@@ -82,28 +82,6 @@ methods:
       return:
         type: Promise&lt;void&gt;
         description: ''
-  - name: 'getChatThread(string, GetChatThreadOptions)'
-    uid: '@azure/communication-chat.ChatClient.getChatThread'
-    package: '@azure/communication-chat'
-    summary: |-
-      Gets a chat thread.
-      Returns the chat thread.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function getChatThread(threadId: string, options?: GetChatThreadOptions)'
-      parameters:
-        - id: threadId
-          type: string
-          description: The ID of the thread to get.
-        - id: options
-          type: <xref uid="@azure/communication-chat.GetChatThreadOptions" />
-          description: |
-            Operation options.
-      return:
-        type: Promise&lt;<xref uid="@azure/communication-chat.ChatThread" />&gt;
-        description: ''
   - name: getChatThreadClient(string)
     uid: '@azure/communication-chat.ChatClient.getChatThreadClient'
     package: '@azure/communication-chat'
@@ -119,9 +97,7 @@ methods:
           description: |
             Thread ID for the ChatThreadClient
       return:
-        type: >-
-          Promise&lt;<xref uid="@azure/communication-chat.ChatThreadClient"
-          />&gt;
+        type: <xref uid="@azure/communication-chat.ChatThreadClient" />
         description: ''
   - name: listChatThreads(ListChatThreadsOptions)
     uid: '@azure/communication-chat.ChatClient.listChatThreads'
@@ -140,7 +116,7 @@ methods:
       return:
         type: >-
           PagedAsyncIterableIterator&lt;<xref
-          uid="@azure/communication-chat.ChatThreadInfo" />&gt;
+          uid="@azure/communication-chat.ChatThreadItem" />&gt;
         description: ''
   - name: 'off("chatMessageDeleted", (e: ChatMessageDeletedEvent) => void)'
     uid: '@azure/communication-chat.ChatClient.off_2'

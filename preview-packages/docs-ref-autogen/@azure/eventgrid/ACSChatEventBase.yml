@@ -1,29 +1,29 @@
 ### YamlMime:TSType
-name: ACSChatEventBase
-uid: '@azure/eventgrid.ACSChatEventBase'
+name: AcsChatEventBase
+uid: '@azure/eventgrid.AcsChatEventBase'
 package: '@azure/eventgrid'
 summary: Schema of common properties of all chat events
-fullName: ACSChatEventBase
+fullName: AcsChatEventBase
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: recipientId
-    uid: '@azure/eventgrid.ACSChatEventBase.recipientId'
+  - name: recipientCommunicationIdentifier
+    uid: '@azure/eventgrid.AcsChatEventBase.recipientCommunicationIdentifier'
     package: '@azure/eventgrid'
-    summary: The MRI of the target user
-    fullName: recipientId
+    summary: The communication identifier of the target user
+    fullName: recipientCommunicationIdentifier
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'recipientId?: string'
+      content: 'recipientCommunicationIdentifier: CommunicationIdentifierModel'
       return:
-        type: string
+        type: <xref uid="@azure/eventgrid.CommunicationIdentifierModel" />
         description: ''
   - name: threadId
-    uid: '@azure/eventgrid.ACSChatEventBase.threadId'
+    uid: '@azure/eventgrid.AcsChatEventBase.threadId'
     package: '@azure/eventgrid'
     summary: The chat thread id
     fullName: threadId
@@ -31,12 +31,12 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'threadId?: string'
+      content: 'threadId: string'
       return:
         type: string
         description: ''
   - name: transactionId
-    uid: '@azure/eventgrid.ACSChatEventBase.transactionId'
+    uid: '@azure/eventgrid.AcsChatEventBase.transactionId'
     package: '@azure/eventgrid'
     summary: The transaction id will be used as co-relation vector
     fullName: transactionId
@@ -44,7 +44,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'transactionId?: string'
+      content: 'transactionId: string'
       return:
         type: string
         description: ''

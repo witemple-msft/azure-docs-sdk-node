@@ -1,18 +1,18 @@
 ### YamlMime:TSType
-name: MapsGeofenceEventProperties
-uid: '@azure/eventgrid.MapsGeofenceEventProperties'
+name: MapsGeofenceEvent
+uid: '@azure/eventgrid.MapsGeofenceEvent'
 package: '@azure/eventgrid'
 summary: >-
   Schema of the Data property of an EventGridEvent for a Geofence event
   (GeofenceEntered, GeofenceExited, GeofenceResult).
-fullName: MapsGeofenceEventProperties
+fullName: MapsGeofenceEvent
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: expiredGeofenceGeometryId
-    uid: '@azure/eventgrid.MapsGeofenceEventProperties.expiredGeofenceGeometryId'
+    uid: '@azure/eventgrid.MapsGeofenceEvent.expiredGeofenceGeometryId'
     package: '@azure/eventgrid'
     summary: >-
       Lists of the geometry ID of the geofence which is expired relative to the
@@ -22,12 +22,12 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'expiredGeofenceGeometryId?: string[]'
+      content: 'expiredGeofenceGeometryId: string[]'
       return:
         type: 'string[]'
         description: ''
   - name: geometries
-    uid: '@azure/eventgrid.MapsGeofenceEventProperties.geometries'
+    uid: '@azure/eventgrid.MapsGeofenceEvent.geometries'
     package: '@azure/eventgrid'
     summary: >-
       Lists the fence geometries that either fully contain the coordinate
@@ -37,13 +37,12 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'geometries?: MapsGeofenceGeometry[]'
+      content: 'geometries: MapsGeofenceGeometry[]'
       return:
         type: '<xref uid="@azure/eventgrid.MapsGeofenceGeometry" />[]'
         description: ''
   - name: invalidPeriodGeofenceGeometryId
-    uid: >-
-      @azure/eventgrid.MapsGeofenceEventProperties.invalidPeriodGeofenceGeometryId
+    uid: '@azure/eventgrid.MapsGeofenceEvent.invalidPeriodGeofenceGeometryId'
     package: '@azure/eventgrid'
     summary: >-
       Lists of the geometry ID of the geofence which is in invalid period
@@ -53,12 +52,12 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'invalidPeriodGeofenceGeometryId?: string[]'
+      content: 'invalidPeriodGeofenceGeometryId: string[]'
       return:
         type: 'string[]'
         description: ''
   - name: isEventPublished
-    uid: '@azure/eventgrid.MapsGeofenceEventProperties.isEventPublished'
+    uid: '@azure/eventgrid.MapsGeofenceEvent.isEventPublished'
     package: '@azure/eventgrid'
     summary: >-
       True if at least one event is published to the Azure Maps event
@@ -69,7 +68,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'isEventPublished?: boolean'
+      content: 'isEventPublished: boolean'
       return:
         type: boolean
         description: ''

@@ -1,29 +1,33 @@
 ### YamlMime:TSType
-name: RestChatThread
-uid: '@azure/communication-chat.RestChatThread'
+name: ChatThreadProperties
+uid: '@azure/communication-chat.ChatThreadProperties'
 package: '@azure/communication-chat'
 summary: Chat thread.
-fullName: RestChatThread
+fullName: ChatThreadProperties
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: createdBy
-    uid: '@azure/communication-chat.RestChatThread.createdBy'
+    uid: '@azure/communication-chat.ChatThreadProperties.createdBy'
     package: '@azure/communication-chat'
-    summary: Id of the chat thread owner.
+    summary: >-
+      Identifies a participant in Azure Communication services. A participant
+      is, for example, a phone number or an Azure communication user. This model
+      must be interpreted as a union: Apart from rawId, at most one further
+      property may be set.
     fullName: createdBy
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'createdBy: string'
+      content: 'createdBy?: CommunicationIdentifierKind'
       return:
-        type: string
+        type: CommunicationIdentifierKind
         description: ''
   - name: createdOn
-    uid: '@azure/communication-chat.RestChatThread.createdOn'
+    uid: '@azure/communication-chat.ChatThreadProperties.createdOn'
     package: '@azure/communication-chat'
     summary: >-
       The timestamp when the chat thread was created. The timestamp is in
@@ -38,7 +42,7 @@ properties:
         type: Date
         description: ''
   - name: deletedOn
-    uid: '@azure/communication-chat.RestChatThread.deletedOn'
+    uid: '@azure/communication-chat.ChatThreadProperties.deletedOn'
     package: '@azure/communication-chat'
     summary: >-
       The timestamp when the chat thread was deleted. The timestamp is in
@@ -53,7 +57,7 @@ properties:
         type: Date
         description: ''
   - name: id
-    uid: '@azure/communication-chat.RestChatThread.id'
+    uid: '@azure/communication-chat.ChatThreadProperties.id'
     package: '@azure/communication-chat'
     summary: Chat thread id.
     fullName: id
@@ -66,7 +70,7 @@ properties:
         type: string
         description: ''
   - name: topic
-    uid: '@azure/communication-chat.RestChatThread.topic'
+    uid: '@azure/communication-chat.ChatThreadProperties.topic'
     package: '@azure/communication-chat'
     summary: Chat thread topic.
     fullName: topic
