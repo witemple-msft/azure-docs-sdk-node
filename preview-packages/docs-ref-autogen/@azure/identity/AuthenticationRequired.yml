@@ -1,46 +1,32 @@
 ### YamlMime:TSType
-name: CredentialUnavailable
-uid: '@azure/identity.CredentialUnavailable'
+name: AuthenticationRequired
+uid: '@azure/identity.AuthenticationRequired'
 package: '@azure/identity'
-summary: |-
-  This signifies that the credential that was tried in a chained credential
-  was not available to be used as the credential. Rather than treating this as
-  an error that should halt the chain, it's caught and the chain continues
-fullName: CredentialUnavailable
+summary: >-
+  Error used to enforce authentication after trying to retrieve a token
+  silently.
+fullName: AuthenticationRequired
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: CredentialUnavailable(string)
-    uid: '@azure/identity.CredentialUnavailable.constructor'
+  - name: AuthenticationRequired(string)
+    uid: '@azure/identity.AuthenticationRequired.constructor'
     package: '@azure/identity'
     summary: ''
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new CredentialUnavailable(message?: string)'
+      content: 'new AuthenticationRequired(message?: string)'
       parameters:
         - id: message
           type: string
           description: ''
 properties:
-  - name: Error
-    uid: '@azure/identity.CredentialUnavailable.Error'
-    package: '@azure/identity'
-    summary: ''
-    fullName: Error
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static Error: ErrorConstructor'
-      return:
-        type: ErrorConstructor
-        description: ''
   - name: message
-    uid: '@azure/identity.CredentialUnavailable.message'
+    uid: '@azure/identity.AuthenticationRequired.message'
     package: '@azure/identity'
     summary: ''
     fullName: message
@@ -53,7 +39,7 @@ properties:
         type: string
         description: ''
   - name: name
-    uid: '@azure/identity.CredentialUnavailable.name'
+    uid: '@azure/identity.AuthenticationRequired.name'
     package: '@azure/identity'
     summary: ''
     fullName: name
@@ -66,7 +52,7 @@ properties:
         type: string
         description: ''
   - name: stack
-    uid: '@azure/identity.CredentialUnavailable.stack'
+    uid: '@azure/identity.AuthenticationRequired.stack'
     package: '@azure/identity'
     summary: ''
     fullName: stack
@@ -78,4 +64,4 @@ properties:
       return:
         type: string
         description: ''
-extends: Error
+extends: <xref uid="@azure/identity.CredentialUnavailable" />
