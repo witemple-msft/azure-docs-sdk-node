@@ -11,7 +11,7 @@ isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: AuthenticationRequired(string)
+  - name: 'AuthenticationRequired(string[], GetTokenOptions, string)'
     uid: '@azure/identity.AuthenticationRequired.constructor'
     package: '@azure/identity'
     summary: ''
@@ -19,12 +19,33 @@ constructors:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new AuthenticationRequired(message?: string)'
+      content: >-
+        new AuthenticationRequired(scopes: string[], getTokenOptions?:
+        GetTokenOptions, message?: string)
       parameters:
+        - id: scopes
+          type: 'string[]'
+          description: ''
+        - id: getTokenOptions
+          type: GetTokenOptions
+          description: ''
         - id: message
           type: string
           description: ''
 properties:
+  - name: getTokenOptions
+    uid: '@azure/identity.AuthenticationRequired.getTokenOptions'
+    package: '@azure/identity'
+    summary: The options used to configure the getToken request.
+    fullName: getTokenOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'getTokenOptions: GetTokenOptions'
+      return:
+        type: GetTokenOptions
+        description: ''
   - name: message
     uid: '@azure/identity.AuthenticationRequired.message'
     package: '@azure/identity'
@@ -50,6 +71,19 @@ properties:
       content: 'name: string'
       return:
         type: string
+        description: ''
+  - name: scopes
+    uid: '@azure/identity.AuthenticationRequired.scopes'
+    package: '@azure/identity'
+    summary: The list of scopes for which the token will have access.
+    fullName: scopes
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'scopes: string[]'
+      return:
+        type: 'string[]'
         description: ''
   - name: stack
     uid: '@azure/identity.AuthenticationRequired.stack'
