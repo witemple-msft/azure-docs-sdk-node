@@ -486,9 +486,10 @@ methods:
         type: Promise&lt;<xref uid="@azure/ai-form-recognizer.FormPollerLike" />&gt;
         description: ''
   - name: >-
-      beginRecognizeIdDocuments(FormRecognizerRequestBody,
-      BeginRecognizeIdDocumentsOptions)
-    uid: '@azure/ai-form-recognizer.FormRecognizerClient.beginRecognizeIdDocuments'
+      beginRecognizeIdentityDocuments(FormRecognizerRequestBody,
+      BeginRecognizeIdentityDocumentsOptions)
+    uid: >-
+      @azure/ai-form-recognizer.FormRecognizerClient.beginRecognizeIdentityDocuments
     package: '@azure/ai-form-recognizer'
     summary: >
       Recognizes data from identification documents using a pre-built ID
@@ -529,12 +530,12 @@ methods:
       const client = new FormRecognizerClient(endpoint, new
       AzureKeyCredential(apiKey));
 
-      const poller = await client.beginRecognizeIdDocuments(readStream, {
+      const poller = await client.beginRecognizeIdentityDocuments(readStream, {
         onProgress: (state) => { console.log(`status: ${state.status}`); }
       });
 
 
-      const [idDocument] = await poller.pollUntilDone();
+      const [identityDocument] = await poller.pollUntilDone();
 
       ```
     remarks: ''
@@ -542,24 +543,28 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function beginRecognizeIdDocuments(idDocument:
-        FormRecognizerRequestBody, options?: BeginRecognizeIdDocumentsOptions)
+        function beginRecognizeIdentityDocuments(identityDocument:
+        FormRecognizerRequestBody, options?:
+        BeginRecognizeIdentityDocumentsOptions)
       parameters:
-        - id: idDocument
+        - id: identityDocument
           type: <xref uid="@azure/ai-form-recognizer.FormRecognizerRequestBody" />
           description: Input document
         - id: options
           type: >-
             <xref
-            uid="@azure/ai-form-recognizer.BeginRecognizeIdDocumentsOptions" />
+            uid="@azure/ai-form-recognizer.BeginRecognizeIdentityDocumentsOptions"
+            />
           description: |
             Options for the recognition operation
       return:
         type: Promise&lt;<xref uid="@azure/ai-form-recognizer.FormPollerLike" />&gt;
         description: ''
-  - name: 'beginRecognizeIdDocumentsFromUrl(string, BeginRecognizeIdDocumentsOptions)'
+  - name: >-
+      beginRecognizeIdentityDocumentsFromUrl(string,
+      BeginRecognizeIdentityDocumentsOptions)
     uid: >-
-      @azure/ai-form-recognizer.FormRecognizerClient.beginRecognizeIdDocumentsFromUrl
+      @azure/ai-form-recognizer.FormRecognizerClient.beginRecognizeIdentityDocumentsFromUrl
     package: '@azure/ai-form-recognizer'
     summary: >
       Recognizes identity document information from a url using pre-built ID
@@ -597,7 +602,7 @@ methods:
       const client = new FormRecognizerClient(endpoint, new
       AzureKeyCredential(apiKey));
 
-      const poller = await client.beginRecognizeIdDocumentsFromUrl(url, {
+      const poller = await client.beginRecognizeIdentityDocumentsFromUrl(url, {
         includeFieldElements: true,
         onProgress: (state) => {
           console.log(`analyzing status: ${state.status}`);
@@ -605,7 +610,7 @@ methods:
       });
 
 
-      const [idDocument] = await poller.pollUntilDone();
+      const [identityDocument] = await poller.pollUntilDone();
 
       ```
     remarks: ''
@@ -613,10 +618,10 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function beginRecognizeIdDocumentsFromUrl(idDocumentUrl: string,
-        options?: BeginRecognizeIdDocumentsOptions)
+        function beginRecognizeIdentityDocumentsFromUrl(identityDocumentUrl:
+        string, options?: BeginRecognizeIdentityDocumentsOptions)
       parameters:
-        - id: idDocumentUrl
+        - id: identityDocumentUrl
           type: string
           description: >-
             Url to an identity document that is accessible from
@@ -628,7 +633,8 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/ai-form-recognizer.BeginRecognizeIdDocumentsOptions" />
+            uid="@azure/ai-form-recognizer.BeginRecognizeIdentityDocumentsOptions"
+            />
           description: |
             Options for the recognition operation
       return:
