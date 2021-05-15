@@ -1,16 +1,16 @@
 ### YamlMime:TSType
-name: TableBatchResponse
-uid: '@azure/data-tables.TableBatchResponse'
+name: TableTransactionResponse
+uid: '@azure/data-tables.TableTransactionResponse'
 package: '@azure/data-tables'
-summary: Represents the response of a Batch operation
-fullName: TableBatchResponse
+summary: Represents the response of a Transaction operation
+fullName: TableTransactionResponse
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: interface
 properties:
   - name: getResponseForEntity
-    uid: '@azure/data-tables.TableBatchResponse.getResponseForEntity'
+    uid: '@azure/data-tables.TableTransactionResponse.getResponseForEntity'
     package: '@azure/data-tables'
     summary: Gets a specific response given a row key
     fullName: getResponseForEntity
@@ -19,15 +19,15 @@ properties:
     isDeprecated: false
     syntax:
       content: >-
-        getResponseForEntity: (rowKey: string) => TableBatchEntityResponse |
-        undefined
+        getResponseForEntity: (rowKey: string) => TableTransactionEntityResponse
+        | undefined
       return:
-        type: '(rowKey: string) =&gt; TableBatchEntityResponse | undefined'
+        type: '(rowKey: string) =&gt; TableTransactionEntityResponse | undefined'
         description: ''
   - name: status
-    uid: '@azure/data-tables.TableBatchResponse.status'
+    uid: '@azure/data-tables.TableTransactionResponse.status'
     package: '@azure/data-tables'
-    summary: Main Batch request status code
+    summary: Main Transaction request status code
     fullName: status
     remarks: ''
     isPreview: false
@@ -38,7 +38,7 @@ properties:
         type: number
         description: ''
   - name: subResponses
-    uid: '@azure/data-tables.TableBatchResponse.subResponses'
+    uid: '@azure/data-tables.TableTransactionResponse.subResponses'
     package: '@azure/data-tables'
     summary: Collection of sub responses
     fullName: subResponses
@@ -46,7 +46,7 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'subResponses: TableBatchEntityResponse[]'
+      content: 'subResponses: TableTransactionEntityResponse[]'
       return:
-        type: '<xref uid="@azure/data-tables.TableBatchEntityResponse" />[]'
+        type: '<xref uid="@azure/data-tables.TableTransactionEntityResponse" />[]'
         description: ''
