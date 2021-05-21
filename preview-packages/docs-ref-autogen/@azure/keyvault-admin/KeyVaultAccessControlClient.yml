@@ -372,9 +372,7 @@ methods:
           PagedAsyncIterableIterator&lt;<xref
           uid="@azure/keyvault-admin.KeyVaultRoleDefinition" />&gt;
         description: ''
-  - name: >-
-      upsertRoleDefinition(KeyVaultRoleScope, string, KeyVaultPermission[],
-      string, UpsertRoleDefinitionOptions)
+  - name: 'upsertRoleDefinition(KeyVaultRoleScope, UpsertRoleDefinitionOptions)'
     uid: '@azure/keyvault-admin.KeyVaultAccessControlClient.upsertRoleDefinition'
     package: '@azure/keyvault-admin'
     summary: >-
@@ -400,22 +398,12 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function upsertRoleDefinition(roleScope: KeyVaultRoleScope, name:
-        string, permissions: KeyVaultPermission[], description?: string,
-        options?: UpsertRoleDefinitionOptions)
+        function upsertRoleDefinition(roleScope: KeyVaultRoleScope, options?:
+        UpsertRoleDefinitionOptions)
       parameters:
         - id: roleScope
           type: <xref uid="@azure/keyvault-admin.KeyVaultRoleScope" />
           description: The scope of the role definition.
-        - id: name
-          type: string
-          description: The name of the role definition. Must be a UUID.
-        - id: permissions
-          type: '<xref uid="@azure/keyvault-admin.KeyVaultPermission" />[]'
-          description: 'The set of <xref:KeyVaultPermission> for this role definition.'
-        - id: description
-          type: string
-          description: The role definition description.
         - id: options
           type: <xref uid="@azure/keyvault-admin.UpsertRoleDefinitionOptions" />
           description: |
