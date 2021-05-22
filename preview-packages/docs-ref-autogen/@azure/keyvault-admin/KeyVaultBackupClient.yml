@@ -230,8 +230,10 @@ methods:
           uid="@azure/keyvault-admin.KeyVaultRestoreOperationState" />, <xref
           uid="@azure/keyvault-admin.KeyVaultRestoreResult" />&gt;&gt;
         description: ''
-  - name: 'beginSelectiveRestore(string, string, string, KeyVaultBeginBackupOptions)'
-    uid: '@azure/keyvault-admin.KeyVaultBackupClient.beginSelectiveRestore'
+  - name: >-
+      beginSelectiveKeyRestore(string, string, string,
+      KeyVaultBeginSelectiveKeyRestoreOptions)
+    uid: '@azure/keyvault-admin.KeyVaultBackupClient.beginSelectiveKeyRestore'
     package: '@azure/keyvault-admin'
     summary: >-
       Starts restoring all key versions of a given key using user supplied SAS
@@ -256,8 +258,8 @@ methods:
 
       const keyName = "<key-name>";
 
-      const poller = await client.beginSelectiveRestore(keyName, blobStorageUri,
-      sasToken);
+      const poller = await client.beginSelectiveKeyRestore(keyName,
+      blobStorageUri, sasToken);
 
 
       // Serializing the poller
@@ -272,8 +274,8 @@ methods:
 
       //
 
-      //   await client.beginSelectiveRestore(keyName, blobStorageUri, sasToken,
-      { resumeFrom: serialized });
+      //   await client.beginSelectiveKeyRestore(keyName, blobStorageUri,
+      sasToken, { resumeFrom: serialized });
 
       //
 
@@ -290,8 +292,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function beginSelectiveRestore(keyName: string, folderUri: string,
-        sasToken: string, options?: KeyVaultBeginBackupOptions)
+        function beginSelectiveKeyRestore(keyName: string, folderUri: string,
+        sasToken: string, options?: KeyVaultBeginSelectiveKeyRestoreOptions)
       parameters:
         - id: keyName
           type: string
@@ -305,12 +307,17 @@ methods:
           type: string
           description: The SAS token.
         - id: options
-          type: <xref uid="@azure/keyvault-admin.KeyVaultBeginBackupOptions" />
+          type: >-
+            <xref
+            uid="@azure/keyvault-admin.KeyVaultBeginSelectiveKeyRestoreOptions"
+            />
           description: |
             The optional parameters.
       return:
         type: >-
           Promise&lt;PollerLike&lt;<xref
-          uid="@azure/keyvault-admin.KeyVaultSelectiveRestoreOperationState" />,
-          <xref uid="@azure/keyvault-admin.KeyVaultRestoreResult" />&gt;&gt;
+          uid="@azure/keyvault-admin.KeyVaultSelectiveKeyRestoreOperationState"
+          />, <xref
+          uid="@azure/keyvault-admin.KeyVaultSelectiveKeyRestoreResult"
+          />&gt;&gt;
         description: ''
