@@ -2,56 +2,56 @@
 name: AttestationClient
 uid: '@azure/attestation.AttestationClient'
 package: '@azure/attestation'
-summary: ''
+summary: |
+  Attestation Client class.
+  The AttestationClient class enables access to the Attestation related APIs:
+
+  - getOpenIdMetadata
+  - getAttestationSigners
+  - attestSgxEnclave
+  - attestOpenEnclave
+  - attestTpm
 fullName: AttestationClient
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: >-
-      AttestationClient(TokenCredential | ServiceClientCredentials, string,
-      AttestationClientOptionalParams)
+  - name: 'AttestationClient(TokenCredential, string, AttestationClientOptions)'
     uid: '@azure/attestation.AttestationClient.constructor'
     package: '@azure/attestation'
-    summary: Initializes a new instance of the AttestationClient class.
+    summary: |
+      Creates an instance of AttestationClient.
+      Example usage:
+      ```ts
+      import { AttestationClient } from "@azure/attestation";
+
+      const client = new AttestationClient(
+         "<service endpoint>",
+         new TokenCredential("<>")
+      );
+      ```
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        new AttestationClient(credentials: TokenCredential |
-        ServiceClientCredentials, instanceUrl: string, options?:
-        AttestationClientOptionalParams)
+        new AttestationClient(credentials: TokenCredential, instanceUrl: string,
+        options?: AttestationClientOptions)
       parameters:
         - id: credentials
-          type: TokenCredential | ServiceClientCredentials
-          description: >-
-            Subscription credentials which uniquely identify client
-            subscription.
+          type: TokenCredential
+          description: ''
         - id: instanceUrl
           type: string
           description: >-
             The attestation instance base URI, for example
             https://mytenant.attest.azure.net.
         - id: options
-          type: <xref uid="@azure/attestation.AttestationClientOptionalParams" />
+          type: <xref uid="@azure/attestation.AttestationClientOptions" />
           description: |
-            The parameter options
+            Used to configure the Form Recognizer client.
 properties:
-  - name: apiVersion
-    uid: '@azure/attestation.AttestationClient.apiVersion'
-    package: '@azure/attestation'
-    summary: ''
-    fullName: apiVersion
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'apiVersion: string'
-      return:
-        type: string
-        description: ''
   - name: attestation
     uid: '@azure/attestation.AttestationClient.attestation'
     package: '@azure/attestation'
@@ -77,19 +77,6 @@ properties:
       content: 'instanceUrl: string'
       return:
         type: string
-        description: ''
-  - name: metadataConfiguration
-    uid: '@azure/attestation.AttestationClient.metadataConfiguration'
-    package: '@azure/attestation'
-    summary: ''
-    fullName: metadataConfiguration
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'metadataConfiguration: MetadataConfiguration'
-      return:
-        type: <xref uid="@azure/attestation.MetadataConfiguration" />
         description: ''
   - name: policy
     uid: '@azure/attestation.AttestationClient.policy'
@@ -117,63 +104,58 @@ properties:
       return:
         type: <xref uid="@azure/attestation.PolicyCertificates" />
         description: ''
-  - name: signingCertificates
-    uid: '@azure/attestation.AttestationClient.signingCertificates'
+methods:
+  - name: BaseClient()
+    uid: '@azure/attestation.AttestationClient.BaseClient'
     package: '@azure/attestation'
-    summary: ''
-    fullName: signingCertificates
+    summary: |-
+      Temporary function to access the generated client, used for the operations
+      TS files.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'signingCertificates: SigningCertificates'
+      content: function BaseClient()
       return:
-        type: <xref uid="@azure/attestation.SigningCertificates" />
-        description: ''
-methods:
-  - name: >-
-      sendOperationRequest(OperationArguments, OperationSpec,
-      ServiceCallback<any>)
-    uid: '@azure/attestation.AttestationClient.sendOperationRequest'
+        type: <xref uid="@azure/attestation.GeneratedClient" />
+        description: The generated client for the attestation service.
+  - name: getAttestationSigners(AttestationClientOperationOptions)
+    uid: '@azure/attestation.AttestationClient.getAttestationSigners'
     package: '@azure/attestation'
-    summary: Send an HTTP request that is populated using the provided OperationSpec.
+    summary: >-
+      Returns the list of attestation signers which can be used to sign
+      attestation
+
+      service tokens.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function sendOperationRequest(operationArguments: OperationArguments,
-        operationSpec: OperationSpec, callback?: ServiceCallback<any>)
+        function getAttestationSigners(options?:
+        AttestationClientOperationOptions)
       parameters:
-        - id: operationArguments
-          type: OperationArguments
-          description: >-
-            The arguments that the HTTP request's templated values will be
-            populated from.
-        - id: operationSpec
-          type: OperationSpec
-          description: The OperationSpec to use to populate the httpRequest.
-        - id: callback
-          type: ServiceCallback&lt;any&gt;
-          description: |
-            The callback to call when the response is received.
+        - id: options
+          type: <xref uid="@azure/attestation.AttestationClientOperationOptions" />
+          description: Client operation options.
       return:
-        type: Promise&lt;RestResponse&gt;
-        description: ''
-  - name: sendRequest(RequestPrepareOptions | WebResourceLike)
-    uid: '@azure/attestation.AttestationClient.sendRequest'
+        type: 'Promise&lt;<xref uid="@azure/attestation.AttestationSigner" />[]&gt;'
+        description: >-
+          the set of AttestationSigners which may be used to sign attestation
+          tokens.
+  - name: getOpenIdMetadata(AttestationClientOperationOptions)
+    uid: '@azure/attestation.AttestationClient.getOpenIdMetadata'
     package: '@azure/attestation'
-    summary: Send the provided httpRequest.
+    summary: ''
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function sendRequest(options: RequestPrepareOptions | WebResourceLike)'
+      content: 'function getOpenIdMetadata(options?: AttestationClientOperationOptions)'
       parameters:
         - id: options
-          type: RequestPrepareOptions | WebResourceLike
-          description: ''
+          type: <xref uid="@azure/attestation.AttestationClientOperationOptions" />
+          description: Client operation options.
       return:
-        type: Promise&lt;HttpOperationResponse&gt;
-        description: ''
-extends: <xref uid="@azure/attestation.AttestationClientContext" />
+        type: Promise&lt;any&gt;
+        description: The OpenID metadata discovery document for the attestation service.
