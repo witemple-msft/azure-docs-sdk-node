@@ -8,6 +8,7 @@ items:
     type: Class
     children:
       - azure-sb.ServiceBusServiceClient.#ctor
+      - azure-sb.ServiceBusServiceClient#setAgentOptions
     langs:
       - js
   - id: azure-sb.ServiceBusServiceClient.#ctor
@@ -64,5 +65,25 @@ items:
       content: >-
         new ServiceBusServiceClient(accessKey, issuer, sharedAccessKeyName,
         sharedAccessKeyValue, host, acsHost, authenticationProvider)
+    langs:
+      - js
+  - uid: azure-sb.ServiceBusServiceClient#setAgentOptions
+    id: azure-sb.ServiceBusServiceClient#setAgentOptions
+    parent: azure-sb.ServiceBusServiceClient
+    name: setAgentOptions(options)
+    summary: >-
+      Sets the agent options to be sent to the request method which includes the
+      keepAlive and maxSockets.
+    fullName: azure-sb.ServiceBusServiceClient.setAgentOptions(options)
+    type: Function
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - object
+          description: >-
+            The agent options which sets the keepAlive and maxSockets
+            properties.
+      content: function setAgentOptions(options)
     langs:
       - js
