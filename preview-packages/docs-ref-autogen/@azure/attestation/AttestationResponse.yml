@@ -2,25 +2,68 @@
 name: AttestationResponse
 uid: '@azure/attestation.AttestationResponse'
 package: '@azure/attestation'
-summary: The result of an attestation operation
-fullName: AttestationResponse
+summary: |
+  An AttestationResponse represents the response from the Microsoft Azure
+  Attestation service. It has two properties:
+  - token: The attestation token returned from the attestation service.
+  - value: The body of the token returned by the attestation service.
+fullName: AttestationResponse<T>
 remarks: ''
 isPreview: false
 isDeprecated: false
-type: interface
+type: class
+constructors:
+  - name: 'AttestationResponse(AttestationToken, Serializer, Mapper, string, any)'
+    uid: '@azure/attestation.AttestationResponse.constructor'
+    package: '@azure/attestation'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AttestationResponse(token: AttestationToken, serializer: Serializer,
+        bodyMapper: Mapper, bodyTypeName: string, rawResult: any)
+      parameters:
+        - id: token
+          type: <xref uid="@azure/attestation.AttestationToken" />
+          description: ''
+        - id: serializer
+          type: Serializer
+          description: ''
+        - id: bodyMapper
+          type: Mapper
+          description: ''
+        - id: bodyTypeName
+          type: string
+          description: ''
+        - id: rawResult
+          type: any
+          description: ''
 properties:
   - name: token
     uid: '@azure/attestation.AttestationResponse.token'
     package: '@azure/attestation'
-    summary: >-
-      An RFC 7519 JSON Web Token, the body of which is an AttestationResult
-      object.
+    summary: The Attestation Token returned from the attestation service.
     fullName: token
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'token?: string'
+      content: 'token: AttestationToken'
       return:
-        type: string
+        type: <xref uid="@azure/attestation.AttestationToken" />
+        description: ''
+  - name: value
+    uid: '@azure/attestation.AttestationResponse.value'
+    package: '@azure/attestation'
+    summary: The value of the response from the attestation service.
+    fullName: value
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'value: T'
+      return:
+        type: T
         description: ''

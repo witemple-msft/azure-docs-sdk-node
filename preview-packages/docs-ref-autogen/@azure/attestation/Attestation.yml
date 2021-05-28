@@ -9,7 +9,7 @@ isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: Attestation(AttestationClient)
+  - name: Attestation(GeneratedClient)
     uid: '@azure/attestation.Attestation.constructor'
     package: '@azure/attestation'
     summary: Initialize a new instance of the class Attestation class.
@@ -17,10 +17,10 @@ constructors:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new Attestation(client: AttestationClient)'
+      content: 'new Attestation(client: GeneratedClient)'
       parameters:
         - id: client
-          type: <xref uid="@azure/attestation.AttestationClient" />
+          type: <xref uid="@azure/attestation.GeneratedClient" />
           description: |
             Reference to the service client
 methods:
@@ -80,26 +80,31 @@ methods:
           Promise&lt;<xref
           uid="@azure/attestation.AttestationAttestSgxEnclaveResponse" />&gt;
         description: ''
-  - name: 'attestTpm(TpmAttestationRequest, OperationOptions)'
+  - name: 'attestTpm(TpmAttestationRequest_2, OperationOptions)'
     uid: '@azure/attestation.Attestation.attestTpm'
     package: '@azure/attestation'
-    summary: ''
+    summary: >-
+      Processes attestation evidence from a VBS enclave, producing an
+      attestation result. The attestation
+
+      result produced is dependent upon the attestation policy.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function attestTpm(request: TpmAttestationRequest, options?:
+        function attestTpm(request: TpmAttestationRequest_2, options?:
         OperationOptions)
       parameters:
         - id: request
-          type: <xref uid="@azure/attestation.TpmAttestationRequest" />
-          description: ''
+          type: <xref uid="@azure/attestation.TpmAttestationRequest_2" />
+          description: Request object
         - id: options
           type: OperationOptions
-          description: ''
+          description: |
+            The options parameters.
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/attestation.AttestationAttestTpmResponse"
-          />&gt;
+          Promise&lt;<xref
+          uid="@azure/attestation.AttestationAttestTpmResponse_2" />&gt;
         description: ''
