@@ -2,7 +2,30 @@
 name: AttestationSigningKey
 uid: '@azure/attestation.AttestationSigningKey'
 package: '@azure/attestation'
-summary: ''
+summary: >+
+  Creates an instance of AttestationSigningKey.
+
+  An AttestationSigningKey represents a tuple\<AsymmetricKey, Certificate\>
+  where
+
+  the certificate wraps the public portion of the asymmetric key. It is used
+
+  in signing Attestation JSON Web Tokens.
+
+
+  Example usage:
+
+  ```ts
+
+  import { AttestationSigningKey } from "@azure/security-attestation";
+
+
+  const client = new AttestationSigningKey(
+     "<key value>", "<certificate value>"
+  );
+
+  ```
+
 fullName: AttestationSigningKey
 remarks: ''
 isPreview: false
@@ -12,29 +35,7 @@ constructors:
   - name: 'AttestationSigningKey(string, string)'
     uid: '@azure/attestation.AttestationSigningKey.constructor'
     package: '@azure/attestation'
-    summary: >
-      Creates an instance of AttestationSigningKey.
-
-      An AttestationSigningKey represents a tuple<AsymmetricKey, Certificate>
-      where
-
-      the certificate wraps the public portion of the asymmetric key. It is used
-
-      in signing Attestation JSON Web Tokens.
-
-
-      Example usage:
-
-      ```ts
-
-      import { AttestationSigningKey } from "@azure/security-attestation";
-
-
-      const client = new AttestationSigningKey(
-         "<key value>", "<certificate value>"
-      );
-
-      ```
+    summary: ''
     remarks: ''
     isPreview: false
     isDeprecated: false

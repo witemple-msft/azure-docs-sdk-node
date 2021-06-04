@@ -50,7 +50,7 @@ constructors:
         - id: options
           type: <xref uid="@azure/attestation.AttestationClientOptions" />
           description: |
-            Used to configure the Form Recognizer client.
+            Used to configure the Attestation Client.
 properties:
   - name: instanceUrl
     uid: '@azure/attestation.AttestationClient.instanceUrl'
@@ -90,7 +90,10 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/attestation.AttestationResponse"
           />&lt;<xref uid="@azure/attestation.AttestationResult" />&gt;&gt;
-        description: ''
+        description: >-
+          Returns an AttestationResponse whose body is an AttestationResult
+          describing
+             the claims returned by the attestation service.
   - name: 'attestSgxEnclave(Uint8Array, AttestSgxEnclaveOptions)'
     uid: '@azure/attestation.AttestationClient.attestSgxEnclave'
     package: '@azure/attestation'
@@ -113,15 +116,18 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/attestation.AttestationResponse"
           />&lt;<xref uid="@azure/attestation.AttestationResult" />&gt;&gt;
-        description: ''
+        description: >-
+          Returns an AttestationResponse whose body is an AttestationResult
+          describing
+             the claims returned by the attestation service.
   - name: 'attestTpm(TpmAttestationRequest, AttestTpmOptions)'
     uid: '@azure/attestation.AttestationClient.attestTpm'
     package: '@azure/attestation'
     summary: >
       Attest a TPM based enclave.
 
-      See the `TPM Attestation Protocol Reference
-      <https://docs.microsoft.com/en-us/azure/attestation/virtualization-based-security-protocol>`_
+      See the TPM Attestation Protocol Reference
+      <xref:https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fattestation%2Fvirtualization-based-security-protocol>
       for more information.
     remarks: ''
     isPreview: false

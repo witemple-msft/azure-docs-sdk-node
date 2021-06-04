@@ -25,7 +25,9 @@ properties:
   - name: draftPolicyForAttestation
     uid: '@azure/attestation.AttestOpenEnclaveOptions.draftPolicyForAttestation'
     package: '@azure/attestation'
-    summary: ''
+    summary: >-
+      draftPolicyForAttestation - If specified, the attestation policy to be
+      used during the attestation request.
     fullName: draftPolicyForAttestation
     remarks: ''
     isPreview: false
@@ -38,7 +40,9 @@ properties:
   - name: initTimeData
     uid: '@azure/attestation.AttestOpenEnclaveOptions.initTimeData'
     package: '@azure/attestation'
-    summary: ''
+    summary: >-
+      initTimeData : AttestationData - data provided at the time the enclave was
+      initialized.
     fullName: initTimeData
     remarks: ''
     isPreview: false
@@ -47,6 +51,22 @@ properties:
       content: 'initTimeData?: AttestationData'
       return:
         type: <xref uid="@azure/attestation.AttestationData" />
+        description: ''
+  - name: onResponse
+    uid: '@azure/attestation.AttestOpenEnclaveOptions.onResponse'
+    package: '@azure/attestation'
+    summary: |-
+      A function to be called each time a response is received from the server
+      while performing the requested operation.
+      May be called multiple times.
+    fullName: onResponse
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onResponse?: RawResponseCallback'
+      return:
+        type: RawResponseCallback
         description: ''
   - name: requestOptions
     uid: '@azure/attestation.AttestOpenEnclaveOptions.requestOptions'
@@ -64,7 +84,9 @@ properties:
   - name: runTimeData
     uid: '@azure/attestation.AttestOpenEnclaveOptions.runTimeData'
     package: '@azure/attestation'
-    summary: ''
+    summary: >-
+      runTimeData  - data provided at the time the SGX quote being attested was
+      created.
     fullName: runTimeData
     remarks: ''
     isPreview: false
@@ -73,6 +95,19 @@ properties:
       content: 'runTimeData?: AttestationData'
       return:
         type: <xref uid="@azure/attestation.AttestationData" />
+        description: ''
+  - name: serializerOptions
+    uid: '@azure/attestation.AttestOpenEnclaveOptions.serializerOptions'
+    package: '@azure/attestation'
+    summary: Options to override serialization/de-serialization behavior.
+    fullName: serializerOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'serializerOptions?: SerializerOptions'
+      return:
+        type: SerializerOptions
         description: ''
   - name: tracingOptions
     uid: '@azure/attestation.AttestOpenEnclaveOptions.tracingOptions'

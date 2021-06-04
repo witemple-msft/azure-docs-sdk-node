@@ -2,18 +2,16 @@
 name: AttestationResponse
 uid: '@azure/attestation.AttestationResponse'
 package: '@azure/attestation'
-summary: |
+summary: |-
   An AttestationResponse represents the response from the Microsoft Azure
   Attestation service. It has two properties:
-  - token: The attestation token returned from the attestation service.
-  - value: The body of the token returned by the attestation service.
 fullName: AttestationResponse<T>
 remarks: ''
 isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'AttestationResponse(AttestationToken, Serializer, Mapper, string, any)'
+  - name: 'AttestationResponse(AttestationToken, T)'
     uid: '@azure/attestation.AttestationResponse.constructor'
     package: '@azure/attestation'
     summary: ''
@@ -21,24 +19,13 @@ constructors:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        new AttestationResponse(token: AttestationToken, serializer: Serializer,
-        bodyMapper: Mapper, bodyTypeName: string, rawResult: any)
+      content: 'new AttestationResponse(token: AttestationToken, value: T)'
       parameters:
         - id: token
           type: <xref uid="@azure/attestation.AttestationToken" />
           description: ''
-        - id: serializer
-          type: Serializer
-          description: ''
-        - id: bodyMapper
-          type: Mapper
-          description: ''
-        - id: bodyTypeName
-          type: string
-          description: ''
-        - id: rawResult
-          type: any
+        - id: value
+          type: T
           description: ''
 properties:
   - name: token
