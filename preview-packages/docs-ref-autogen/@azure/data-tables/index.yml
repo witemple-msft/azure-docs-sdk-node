@@ -9,15 +9,18 @@ classes:
   - '@azure/data-tables.TableClient'
   - '@azure/data-tables.TableServiceClient'
   - '@azure/data-tables.TableTransaction'
-  - '@azure/data-tables.TablesSharedKeyCredential'
 interfaces:
   - '@azure/data-tables.AccessPolicy'
+  - '@azure/data-tables.AccountSasOptions'
+  - '@azure/data-tables.AccountSasPermissions'
+  - '@azure/data-tables.AccountSasServices'
   - '@azure/data-tables.CorsRule'
   - '@azure/data-tables.Edm'
   - '@azure/data-tables.GeoReplication'
   - '@azure/data-tables.Logging'
   - '@azure/data-tables.Metrics'
   - '@azure/data-tables.RetentionPolicy'
+  - '@azure/data-tables.SasIPRange'
   - '@azure/data-tables.ServiceGetPropertiesHeaders'
   - '@azure/data-tables.ServiceGetStatisticsHeaders'
   - '@azure/data-tables.ServiceProperties'
@@ -34,12 +37,13 @@ interfaces:
   - '@azure/data-tables.TableMergeEntityHeaders'
   - '@azure/data-tables.TableQueryOptions'
   - '@azure/data-tables.TableQueryResponse'
+  - '@azure/data-tables.TableSasPermissions'
+  - '@azure/data-tables.TableSasSignatureValues'
   - '@azure/data-tables.TableServiceStats'
   - '@azure/data-tables.TableSetAccessPolicyHeaders'
   - '@azure/data-tables.TableTransactionEntityResponse'
   - '@azure/data-tables.TableTransactionResponse'
   - '@azure/data-tables.TableUpdateEntityHeaders'
-  - '@azure/data-tables.TablesSharedKeyCredentialLike'
 typeAliases:
   - '@azure/data-tables.CreateDeleteEntityAction'
   - '@azure/data-tables.CreateTableEntityResponse'
@@ -54,6 +58,7 @@ typeAliases:
   - '@azure/data-tables.GetTableEntityResponse'
   - '@azure/data-tables.ListTableEntitiesOptions'
   - '@azure/data-tables.ListTableItemsOptions'
+  - '@azure/data-tables.SasProtocol'
   - '@azure/data-tables.SetAccessPolicyResponse'
   - '@azure/data-tables.SetPropertiesResponse'
   - '@azure/data-tables.TableEntity'
@@ -66,6 +71,63 @@ typeAliases:
   - '@azure/data-tables.UpdateTableEntityOptions'
   - '@azure/data-tables.UpsertEntityResponse'
 functions:
+  - name: 'generateAccountSas(NamedKeyCredential, AccountSasOptions)'
+    uid: '@azure/data-tables.generateAccountSas'
+    package: '@azure/data-tables'
+    summary: >-
+      Generates a Table Account Shared Access Signature (SAS) URI based on the
+      client properties
+
+      and parameters passed in. The SAS is signed by the shared key credential
+      of the client.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateAccountSas(credential: NamedKeyCredential, options?:
+        AccountSasOptions)
+      parameters:
+        - id: credential
+          type: NamedKeyCredential
+          description: ''
+        - id: options
+          type: <xref uid="@azure/data-tables.AccountSasOptions" />
+          description: Optional parameters.
+      return:
+        type: string
+        description: An account SAS token
+  - name: 'generateTableSas(string, NamedKeyCredential, TableSasSignatureValues)'
+    uid: '@azure/data-tables.generateTableSas'
+    package: '@azure/data-tables'
+    summary: >-
+      Generates a Table Service Shared Access Signature (SAS) URI based on the
+      client properties
+
+      and parameters passed in. The SAS is signed by the shared key credential
+      of the client.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateTableSas(tableName: string, credential:
+        NamedKeyCredential, options?: TableSasSignatureValues)
+      parameters:
+        - id: tableName
+          type: string
+          description: ''
+        - id: credential
+          type: NamedKeyCredential
+          description: ''
+        - id: options
+          type: <xref uid="@azure/data-tables.TableSasSignatureValues" />
+          description: Optional parameters.
+      return:
+        type: string
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
   - name: 'odata(TemplateStringsArray, unknown[])'
     uid: '@azure/data-tables.odata'
     package: '@azure/data-tables'
@@ -86,24 +148,4 @@ functions:
           description: ''
       return:
         type: string
-        description: ''
-  - name: tablesSharedKeyCredentialPolicy(TablesSharedKeyCredentialLike)
-    uid: '@azure/data-tables.tablesSharedKeyCredentialPolicy'
-    package: '@azure/data-tables'
-    summary: >-
-      tablesSharedKeyCredentialPolicy is a policy used to sign HTTP request with
-      a shared key.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function tablesSharedKeyCredentialPolicy(credential:
-        TablesSharedKeyCredentialLike)
-      parameters:
-        - id: credential
-          type: <xref uid="@azure/data-tables.TablesSharedKeyCredentialLike" />
-          description: ''
-      return:
-        type: PipelinePolicy
         description: ''

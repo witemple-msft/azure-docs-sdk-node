@@ -52,18 +52,20 @@ constructors:
           description: |
             Used to configure the Attestation Client.
 properties:
-  - name: instanceUrl
-    uid: '@azure/attestation.AttestationClient.instanceUrl'
+  - name: policyCertificates
+    uid: '@azure/attestation.AttestationClient.policyCertificates'
     package: '@azure/attestation'
-    summary: ''
-    fullName: instanceUrl
+    summary: |
+      Legacy property to access policy certificate management APIs.
+      Will be removed.
+    fullName: policyCertificates
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'instanceUrl: string'
+      content: 'policyCertificates: PolicyCertificates'
       return:
-        type: string
+        type: <xref uid="@azure/attestation.PolicyCertificates" />
         description: ''
 methods:
   - name: 'attestOpenEnclave(Uint8Array, AttestOpenEnclaveOptions)'
@@ -120,34 +122,36 @@ methods:
           Returns an AttestationResponse whose body is an AttestationResult
           describing
              the claims returned by the attestation service.
-  - name: 'attestTpm(TpmAttestationRequest, AttestTpmOptions)'
+  - name: 'attestTpm(string, AttestTpmOptions)'
     uid: '@azure/attestation.AttestationClient.attestTpm'
     package: '@azure/attestation'
     summary: >
       Attest a TPM based enclave.
 
-      See the TPM Attestation Protocol Reference
-      <xref:https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fazure%2Fattestation%2Fvirtualization-based-security-protocol>
+      See the  [| TPM Attestation Protocol
+      Reference](https://docs.microsoft.com/en-us/azure/attestation/virtualization-based-security-protocol)
       for more information.
-    remarks: ''
+    remarks: >-
+      The incoming requests to the TPM attestation API are stringified JSON
+      objects.
     isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        function attestTpm(request: TpmAttestationRequest, options?:
-        AttestTpmOptions)
+      content: 'function attestTpm(request: string, options?: AttestTpmOptions)'
       parameters:
         - id: request
-          type: <xref uid="@azure/attestation.TpmAttestationRequest" />
-          description: Incoming request to send to the TPM attestation service.
+          type: string
+          description: >-
+            Incoming request to send to the TPM attestation service, Utf8
+            encoded.
         - id: options
           type: <xref uid="@azure/attestation.AttestTpmOptions" />
           description: Pipeline options for TPM attestation request.
       return:
-        type: >-
-          Promise&lt;<xref uid="@azure/attestation.TpmAttestationResponse"
-          />&gt;
-        description: A structure containing the response from the TPM attestation.
+        type: Promise&lt;string&gt;
+        description: >-
+          A structure containing the response from the TPM attestation, Utf8
+          encoded.
   - name: getAttestationSigners(AttestationClientOperationOptions)
     uid: '@azure/attestation.AttestationClient.getAttestationSigners'
     package: '@azure/attestation'

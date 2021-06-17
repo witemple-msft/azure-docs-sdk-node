@@ -287,24 +287,22 @@ methods:
       return:
         type: string
         description: The token serialized to a RFC 7515 JSON Web Signature.
-  - name: 'validateToken(AttestationSigner[], TokenValidationOptions)'
+  - name: 'validateToken(AttestationSigner[], AttestationTokenValidationOptions)'
     uid: '@azure/attestation.AttestationToken.validateToken'
     package: '@azure/attestation'
-    summary: ''
+    summary: Validates the attestation token to verify that it is semantically correct.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function validateToken(possibleSigners?: AttestationSigner[], options?:
-        TokenValidationOptions)
+        AttestationTokenValidationOptions)
       parameters:
         - id: possibleSigners
           type: '<xref uid="@azure/attestation.AttestationSigner" />[]'
-          description: ''
+          description: the set of possible signers for this attestation token.
         - id: options
-          type: <xref uid="@azure/attestation.TokenValidationOptions" />
-          description: ''
-      return:
-        type: boolean
-        description: ''
+          type: <xref uid="@azure/attestation.AttestationTokenValidationOptions" />
+          description: |
+            validation options

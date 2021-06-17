@@ -140,11 +140,8 @@ methods:
       const roleAssignment = await client.createRoleAssignment("/",
       "295c179b-9ad3-4117-99cd-b1aa66cf4517");
 
-      const deletedRoleAssignment = await
-      client.deleteRoleAssignment(roleAssignment.properties.roleScope,
+      await client.deleteRoleAssignment(roleAssignment.properties.roleScope,
       roleAssignment.name);
-
-      console.log(deletedRoleAssignment);
 
       ```
 
@@ -168,9 +165,7 @@ methods:
           description: |
             The optional parameters.
       return:
-        type: >-
-          Promise&lt;<xref uid="@azure/keyvault-admin.KeyVaultRoleAssignment"
-          />&gt;
+        type: Promise&lt;void&gt;
         description: ''
   - name: >-
       deleteRoleDefinition(KeyVaultRoleScope, string,
@@ -186,13 +181,10 @@ methods:
 
       const client = new KeyVaultAccessControlClient(url, credentials);
 
-      const roleDefinition = await client.upsertRoleDefintion("/",
+      const roleDefinition = await client.setRoleDefinition("/",
       "23b8bb1a-39c0-4c89-a85b-dd3c99273a8a", []);
 
-      const deletedRoleDefinition = await client.deleteRoleDefinition("/",
-      roleDefinition.name);
-
-      console.log(deletedRoleDefinition);
+      await client.deleteRoleDefinition("/", roleDefinition.name);
 
       ```
     remarks: ''
@@ -214,9 +206,7 @@ methods:
           description: |
             The optional parameters.
       return:
-        type: >-
-          Promise&lt;<xref uid="@azure/keyvault-admin.KeyVaultRoleDefinition"
-          />&gt;
+        type: Promise&lt;void&gt;
         description: ''
   - name: 'getRoleAssignment(KeyVaultRoleScope, string, GetRoleAssignmentOptions)'
     uid: '@azure/keyvault-admin.KeyVaultAccessControlClient.getRoleAssignment'
