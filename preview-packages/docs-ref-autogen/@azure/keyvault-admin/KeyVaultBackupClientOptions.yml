@@ -12,9 +12,7 @@ properties:
   - name: httpClient
     uid: '@azure/keyvault-admin.KeyVaultBackupClientOptions.httpClient'
     package: '@azure/keyvault-admin'
-    summary: |-
-      The HttpClient implementation to use for outgoing HTTP requests.  Defaults
-      to DefaultHttpClient.
+    summary: The HttpClient that will be used to send HTTP requests.
     fullName: httpClient
     remarks: ''
     isPreview: false
@@ -23,19 +21,6 @@ properties:
       content: 'httpClient?: HttpClient'
       return:
         type: HttpClient
-        description: ''
-  - name: keepAliveOptions
-    uid: '@azure/keyvault-admin.KeyVaultBackupClientOptions.keepAliveOptions'
-    package: '@azure/keyvault-admin'
-    summary: ''
-    fullName: keepAliveOptions
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'keepAliveOptions?: KeepAliveOptions'
-      return:
-        type: KeepAliveOptions
         description: ''
   - name: proxyOptions
     uid: '@azure/keyvault-admin.KeyVaultBackupClientOptions.proxyOptions'
@@ -46,9 +31,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'proxyOptions?: ProxyOptions'
+      content: 'proxyOptions?: ProxySettings'
       return:
-        type: ProxyOptions
+        type: ProxySettings
         description: ''
   - name: redirectOptions
     uid: '@azure/keyvault-admin.KeyVaultBackupClientOptions.redirectOptions'
@@ -59,9 +44,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'redirectOptions?: RedirectOptions'
+      content: 'redirectOptions?: RedirectPolicyOptions'
       return:
-        type: RedirectOptions
+        type: RedirectPolicyOptions
         description: ''
   - name: retryOptions
     uid: '@azure/keyvault-admin.KeyVaultBackupClientOptions.retryOptions'
@@ -72,9 +57,9 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'retryOptions?: RetryOptions'
+      content: 'retryOptions?: ExponentialRetryPolicyOptions'
       return:
-        type: RetryOptions
+        type: ExponentialRetryPolicyOptions
         description: ''
   - name: serviceVersion
     uid: '@azure/keyvault-admin.KeyVaultBackupClientOptions.serviceVersion'
@@ -98,8 +83,8 @@ properties:
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'userAgentOptions?: UserAgentOptions'
+      content: 'userAgentOptions?: UserAgentPolicyOptions'
       return:
-        type: UserAgentOptions
+        type: UserAgentPolicyOptions
         description: ''
-extends: PipelineOptions
+extends: CommonClientOptions
