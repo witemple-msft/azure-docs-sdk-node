@@ -69,8 +69,8 @@ properties:
         type: string
         description: ''
 methods:
-  - name: 'createFeedback(MetricFeedbackUnion, OperationOptions)'
-    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.createFeedback'
+  - name: 'addFeedback(MetricFeedbackUnion, OperationOptions)'
+    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.addFeedback'
     package: '@azure/ai-metrics-advisor'
     summary: Creates a metric feedback.
     remarks: ''
@@ -78,7 +78,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function createFeedback(feedback: MetricFeedbackUnion, options?:
+        function addFeedback(feedback: MetricFeedbackUnion, options?:
         OperationOptions)
       parameters:
         - id: feedback
@@ -89,7 +89,7 @@ methods:
           description: The options parameter
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetFeedbackResponse"
+          Promise&lt;<xref uid="@azure/ai-metrics-advisor.MetricFeedbackUnion"
           />&gt;
         description: Response with Feedback object
   - name: 'getFeedback(string, OperationOptions)'
@@ -111,7 +111,7 @@ methods:
             The options parameter
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/ai-metrics-advisor.GetFeedbackResponse"
+          Promise&lt;<xref uid="@azure/ai-metrics-advisor.MetricFeedbackUnion"
           />&gt;
         description: ''
   - name: 'getIncidentRootCauses(string, string, OperationOptions)'
@@ -142,8 +142,8 @@ methods:
           uid="@azure/ai-metrics-advisor.GetIncidentRootCauseResponse" />&gt;
         description: ''
   - name: >-
-      getMetricEnrichedSeriesData(string, Date | string, Date | string,
-      DimensionKey[], GetMetricEnrichedSeriesDataOptions)
+      getMetricEnrichedSeriesData(string, DimensionKey[], Date | string, Date |
+      string, GetMetricEnrichedSeriesDataOptions)
     uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.getMetricEnrichedSeriesData'
     package: '@azure/ai-metrics-advisor'
     summary: Retrieves enriched metric series data for a detection configuration
@@ -153,21 +153,21 @@ methods:
     syntax:
       content: >-
         function getMetricEnrichedSeriesData(detectionConfigId: string,
-        startTime: Date | string, endTime: Date | string, seriesToFilter:
-        DimensionKey[], options?: GetMetricEnrichedSeriesDataOptions)
+        seriesKey: DimensionKey[], startTime: Date | string, endTime: Date |
+        string, options?: GetMetricEnrichedSeriesDataOptions)
       parameters:
         - id: detectionConfigId
           type: string
           description: Anomaly detection configuration id
+        - id: seriesKey
+          type: '<xref uid="@azure/ai-metrics-advisor.DimensionKey" />[]'
+          description: Series to retrieve their data
         - id: startTime
           type: Date | string
           description: The start of time range to query metric enriched series data
         - id: endTime
           type: Date | string
           description: The end of time range to query metric enriched series data
-        - id: seriesToFilter
-          type: '<xref uid="@azure/ai-metrics-advisor.DimensionKey" />[]'
-          description: Series to retrieve their data
         - id: options
           type: >-
             <xref
@@ -182,7 +182,7 @@ methods:
           />&gt;
         description: ''
   - name: >-
-      getMetricSeriesData(string, Date | string, Date | string, DimensionKey[],
+      getMetricSeriesData(string, DimensionKey[], Date | string, Date | string,
       GetMetricSeriesDataOptions)
     uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.getMetricSeriesData'
     package: '@azure/ai-metrics-advisor'
@@ -192,22 +192,22 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getMetricSeriesData(metricId: string, startTime: Date | string,
-        endTime: Date | string, seriesToFilter: DimensionKey[], options?:
-        GetMetricSeriesDataOptions)
+        function getMetricSeriesData(metricId: string, seriesKey:
+        DimensionKey[], startTime: Date | string, endTime: Date | string,
+        options?: GetMetricSeriesDataOptions)
       parameters:
         - id: metricId
           type: string
           description: Metric id
+        - id: seriesKey
+          type: '<xref uid="@azure/ai-metrics-advisor.DimensionKey" />[]'
+          description: A list of time series to retrieve their data
         - id: startTime
           type: Date | string
           description: The start of the time range to retrieve series data
         - id: endTime
           type: Date | string
           description: The end of the time range to retrieve series data
-        - id: seriesToFilter
-          type: '<xref uid="@azure/ai-metrics-advisor.DimensionKey" />[]'
-          description: A list of time series to retrieve their data
         - id: options
           type: <xref uid="@azure/ai-metrics-advisor.GetMetricSeriesDataOptions" />
           description: |
@@ -329,8 +329,10 @@ methods:
           uid="@azure/ai-metrics-advisor.AnomalyAlert" />, <xref
           uid="@azure/ai-metrics-advisor.AlertsPageResponse" />&gt;
         description: ''
-  - name: 'listAnomalies(AnomalyAlert, ListAnomaliesForAlertConfigurationOptions)'
-    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.listAnomalies'
+  - name: >-
+      listAnomaliesForAlert(AnomalyAlert,
+      ListAnomaliesForAlertConfigurationOptions)
+    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.listAnomaliesForAlert'
     package: '@azure/ai-metrics-advisor'
     summary: >-
       Returns an async iterable iterator to list anamolies associated with an
@@ -347,7 +349,8 @@ methods:
 
       const client = new MetricsAdvisorClient(endpoint,
         new MetricsAdvisorKeyCredential(subscriptionKey, apiKey));
-      const anamolyList = client.listAnomalies({alertConfigId, id: alertId});
+      const anamolyList = client.listAnomaliesForAlert({alertConfigId, id:
+      alertId});
 
       let i = 1;
 
@@ -364,7 +367,7 @@ methods:
 
       ```js
 
-      let iter = client.listAnomalies({alertConfigId, id: alertId});
+      let iter = client.listAnomaliesForAlert({alertConfigId, id: alertId});
 
       let result = await iter.next();
 
@@ -381,8 +384,8 @@ methods:
 
       ```js
 
-      const pages = client.listAnomalies({alertConfigId, id: alertId}).byPage({
-      maxPageSize: 10 });
+      const pages = client.listAnomaliesForAlert({alertConfigId, id:
+      alertId}).byPage({ maxPageSize: 10 });
 
       let page = await pages.next();
 
@@ -405,7 +408,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listAnomalies(alert: AnomalyAlert, options?:
+        function listAnomaliesForAlert(alert: AnomalyAlert, options?:
         ListAnomaliesForAlertConfigurationOptions)
       parameters:
         - id: alert
@@ -425,9 +428,10 @@ methods:
           uid="@azure/ai-metrics-advisor.AnomaliesPageResponse" />&gt;
         description: ''
   - name: >-
-      listAnomalies(string, Date | string, Date | string,
-      ListAnomaliesForDetectionConfigurationOptions)
-    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.listAnomalies_1'
+      listAnomaliesForDetectionConfiguration(string, Date | string, Date |
+      string, ListAnomaliesForDetectionConfigurationOptions)
+    uid: >-
+      @azure/ai-metrics-advisor.MetricsAdvisorClient.listAnomaliesForDetectionConfiguration
     package: '@azure/ai-metrics-advisor'
     summary: >-
       Returns an async iterable iterator to list anomalies for a detection
@@ -444,8 +448,9 @@ methods:
 
       const client = new MetricsAdvisorClient(endpoint,
         new MetricsAdvisorKeyCredential(subscriptionKey, apiKey));
-      const anomalies = client.listAnomalies(detectionConfigId, startTime,
-      endTime);
+      const anomalies =
+      client.listAnomaliesForDetectionConfiguration(detectionConfigId,
+      startTime, endTime);
 
       let i = 1;
 
@@ -462,7 +467,9 @@ methods:
 
       ```js
 
-      let iter = client.listAnomalies(detectionConfigId, startTime, endTime);
+      let iter =
+      client.listAnomaliesForDetectionConfiguration(detectionConfigId,
+      startTime, endTime);
 
       let result = await iter.next();
 
@@ -480,7 +487,9 @@ methods:
 
       ```js
 
-      const pages = client.listAnomalies(detectionConfigId, startTime, endTime)
+      const pages =
+      client.listAnomaliesForDetectionConfiguration(detectionConfigId,
+      startTime, endTime)
         .byPage({ maxPageSize: 10 });
       let page = await pages.next();
 
@@ -503,8 +512,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listAnomalies(detectionConfigId: string, startTime: Date |
-        string, endTime: Date | string, options?:
+        function listAnomaliesForDetectionConfiguration(detectionConfigId:
+        string, startTime: Date | string, endTime: Date | string, options?:
         ListAnomaliesForDetectionConfigurationOptions)
       parameters:
         - id: detectionConfigId
@@ -723,8 +732,8 @@ methods:
           uid="@azure/ai-metrics-advisor.MetricFeedbackUnion" />, <xref
           uid="@azure/ai-metrics-advisor.MetricFeedbackPageResponse" />&gt;
         description: ''
-  - name: 'listIncidents(AnomalyAlert, ListIncidentsForAlertOptions)'
-    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.listIncidents'
+  - name: 'listIncidentsForAlert(AnomalyAlert, ListIncidentsForAlertOptions)'
+    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.listIncidentsForAlert'
     package: '@azure/ai-metrics-advisor'
     summary: >-
       Returns an async iterable iterator to list incidents associated with an
@@ -741,7 +750,7 @@ methods:
 
       const client = new MetricsAdvisorClient(endpoint,
         new MetricsAdvisorKeyCredential(subscriptionKey, apiKey));
-      const incidentList = client.listIncidents(anomalyAlert);
+      const incidentList = client.listIncidentsForAlert(anomalyAlert);
 
       let i = 1;
 
@@ -758,7 +767,7 @@ methods:
 
       ```js
 
-      let iter = client.listIncidents(anomalyAlert);
+      let iter = client.listIncidentsForAlert(anomalyAlert);
 
       let result = await iter.next();
 
@@ -776,8 +785,8 @@ methods:
 
       ```js
 
-      const pages = client.listIncidents(anomalyAlert).byPage({ maxPageSize: 10
-      });
+      const pages = client.listIncidentsForAlert(anomalyAlert).byPage({
+      maxPageSize: 10 });
 
       let page = await pages.next();
 
@@ -799,7 +808,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listIncidents(alert: AnomalyAlert, options?:
+        function listIncidentsForAlert(alert: AnomalyAlert, options?:
         ListIncidentsForAlertOptions)
       parameters:
         - id: alert
@@ -818,9 +827,10 @@ methods:
           uid="@azure/ai-metrics-advisor.IncidentsPageResponse" />&gt;
         description: ''
   - name: >-
-      listIncidents(string, Date | string, Date | string,
-      ListIncidentsForDetectionConfigurationOptions)
-    uid: '@azure/ai-metrics-advisor.MetricsAdvisorClient.listIncidents_1'
+      listIncidentsForDetectionConfiguration(string, Date | string, Date |
+      string, ListIncidentsForDetectionConfigurationOptions)
+    uid: >-
+      @azure/ai-metrics-advisor.MetricsAdvisorClient.listIncidentsForDetectionConfiguration
     package: '@azure/ai-metrics-advisor'
     summary: >-
       Returns an async iterable iterator to list incidents for an anomaly
@@ -838,7 +848,7 @@ methods:
       const client = new MetricsAdvisorClient(endpoint,
         new MetricsAdvisorKeyCredential(subscriptionKey, apiKey));
       const incidentList = client
-        .listIncidents(detectionConfigId, startTime, endTime);
+        .listIncidentsForDetectionConfiguration(detectionConfigId, startTime, endTime);
       let i = 1;
 
       for await (const incident of incidentList){
@@ -854,7 +864,9 @@ methods:
 
       ```js
 
-      let iter = client.listIncidents(detectionConfigId, startTime, endTime);
+      let iter =
+      client.listIncidentsForDetectionConfiguration(detectionConfigId,
+      startTime, endTime);
 
       let result = await iter.next();
 
@@ -872,7 +884,9 @@ methods:
 
       ```js
 
-      const pages = client.listIncidents(detectionConfigId, startTime, endTime)
+      const pages =
+      client.listIncidentsForDetectionConfiguration(detectionConfigId,
+      startTime, endTime)
         .byPage({ maxPageSize: 10 });
       let page = await pages.next();
 
@@ -894,8 +908,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listIncidents(detectionConfigId: string, startTime: Date |
-        string, endTime: Date | string, options?:
+        function listIncidentsForDetectionConfiguration(detectionConfigId:
+        string, startTime: Date | string, endTime: Date | string, options?:
         ListIncidentsForDetectionConfigurationOptions)
       parameters:
         - id: detectionConfigId

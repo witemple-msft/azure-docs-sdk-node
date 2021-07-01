@@ -486,6 +486,38 @@ methods:
       return:
         type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
         description: ''
+  - name: 'getRandomBytes(number, GetRandomBytesOptions)'
+    uid: '@azure/keyvault-keys.KeyClient.getRandomBytes'
+    package: '@azure/keyvault-keys'
+    summary: >-
+      Gets the requested number of bytes containing random values from a managed
+      HSM.
+
+      Example usage:
+
+      ```ts
+
+      let client = new KeyClient(vaultUrl, credentials);
+
+      let bytes = await client.getRandomBytes(10);
+
+      ```
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRandomBytes(count: number, options?: GetRandomBytesOptions)'
+      parameters:
+        - id: count
+          type: number
+          description: The number of bytes to generate between 1 and 128 inclusive.
+        - id: options
+          type: <xref uid="@azure/keyvault-keys.GetRandomBytesOptions" />
+          description: |
+            The optional parameters.
+      return:
+        type: Promise&lt;Uint8Array&gt;
+        description: ''
   - name: 'importKey(string, JsonWebKey, ImportKeyOptions)'
     uid: '@azure/keyvault-keys.KeyClient.importKey'
     package: '@azure/keyvault-keys'

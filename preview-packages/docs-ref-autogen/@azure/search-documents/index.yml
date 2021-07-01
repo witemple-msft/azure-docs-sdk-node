@@ -298,6 +298,25 @@ typeAliases:
   - '@azure/search-documents.WebApiSkill'
   - '@azure/search-documents.WordDelimiterTokenFilter'
 functions:
+  - name: 'createSynonymMapFromFile(string, string)'
+    uid: '@azure/search-documents.createSynonymMapFromFile'
+    package: '@azure/search-documents'
+    summary: Helper method to create a SynonymMap object. This is a NodeJS only method.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function createSynonymMapFromFile(name: string, filePath: string)'
+      parameters:
+        - id: name
+          type: string
+          description: Name of the SynonymMap.
+        - id: filePath
+          type: string
+          description: Path of the file that contains the Synonyms (seperated by new lines)
+      return:
+        type: Promise&lt;<xref uid="@azure/search-documents.SynonymMap" />&gt;
+        description: SynonymMap object
   - name: 'odata(TemplateStringsArray, unknown[])'
     uid: '@azure/search-documents.odata'
     package: '@azure/search-documents'
