@@ -9,16 +9,35 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: adminEmails
-    uid: '@azure/ai-metrics-advisor.NotificationHook.adminEmails'
+  - name: admins
+    uid: '@azure/ai-metrics-advisor.NotificationHook.admins'
     package: '@azure/ai-metrics-advisor'
-    summary: email addresses of hook administrators
-    fullName: adminEmails
+    summary: >-
+      The administrators of this {@link NotificationHook }.
+
+      Administrators have total control over a NotificationHook, being allowed
+      to update or delete.
+
+      Each element in this list represents a user with administrator access, but
+      the value of each `string` element
+
+      depends on the type of authentication to be used by this administrator
+      when communicating with the service.
+
+      If {@link MetricsAdvisorKeyCredential } authentication will be used, the
+      `string` must be the user's email address.
+
+      If AAD authentication will be used instead, the `string` must uniquely
+      identify the user's principal.
+
+      For instance, for a `ClientSecretCredential`, the `string` must be the
+      client ID.
+    fullName: admins
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'adminEmails?: string[]'
+      content: 'admins?: string[]'
       return:
         type: 'string[]'
         description: ''
