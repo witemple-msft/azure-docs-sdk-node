@@ -26,6 +26,33 @@ properties:
       return:
         type: string
         description: ''
+  - name: getProblemsCallback
+    uid: '@azure/attestation.AttestationTokenValidationOptions.getProblemsCallback'
+    package: '@azure/attestation'
+    summary: >-
+      Validation Callback which allows developers to provide their own
+      validation
+
+      functionality for the attestation token. This can be used to validate
+
+      the signing certificate in AttestationSigner.
+    fullName: getProblemsCallback
+    remarks: >-
+      If there is a problem with token validation, the getProblemsCallback will
+      return
+
+      a string indicating the set of problems found in the token.
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        getProblemsCallback?: (token: AttestationToken, signer?:
+        AttestationSigner) => string[] | undefined
+      return:
+        type: >-
+          (token: AttestationToken, signer?: AttestationSigner) =&gt; string[] |
+          undefined
+        description: ''
   - name: timeValidationSlack
     uid: '@azure/attestation.AttestationTokenValidationOptions.timeValidationSlack'
     package: '@azure/attestation'
@@ -95,26 +122,4 @@ properties:
       content: 'validateToken?: boolean'
       return:
         type: boolean
-        description: ''
-  - name: validationCallback
-    uid: '@azure/attestation.AttestationTokenValidationOptions.validationCallback'
-    package: '@azure/attestation'
-    summary: |-
-      Validation Callback which allows customers to provide their own validation
-      functionality for the attestation token. This can be used to validate
-      the signing certificate in AttestationSigner.
-    fullName: validationCallback
-    remarks: >-
-      If there is a problem with token validation, the validaitonCallback is
-      expected
-
-      to throw an exception.
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        validationCallback?: (token: AttestationToken, signer?:
-        AttestationSigner) => void
-      return:
-        type: '(token: AttestationToken, signer?: AttestationSigner) =&gt; void'
         description: ''
