@@ -3,7 +3,7 @@ title: Azure Core Authentication client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/core-auth, core
 author: maggiepint
 ms.author: magpint
-ms.date: 07/01/2021
+ms.date: 08/02/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: core
 ---
 
-# Azure Core Authentication client library for JavaScript - Version 1.3.2 
+# Azure Core Authentication client library for JavaScript - Version 1.3.3-alpha.20210713.1 
 
 
 The `@azure/core-auth` package provides core interfaces and helper methods for authenticating with Azure services using Azure Active Directory and other authentication schemes common across the Azure SDK. As a "core" library, it shouldn't need to be added as a dependency to any user code, only other Azure SDK libraries.
@@ -87,7 +87,7 @@ If you run into issues while using this library, please feel free to [file an is
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/core-auth_1.3.2/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcore%2Fcore-auth%2FREADME.png)
 
