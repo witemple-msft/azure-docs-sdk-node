@@ -59,7 +59,7 @@ constructors:
 methods:
   - name: >-
       addPolicyManagementCertificate(string, string, string,
-      AttestationAdministrationClientOperationOptions)
+      AttestationAdministrationClientPolicyCertificateOperationOptions)
     uid: >-
       @azure/attestation.AttestationAdministrationClient.addPolicyManagementCertificate
     package: '@azure/attestation'
@@ -81,7 +81,7 @@ methods:
       content: >-
         function addPolicyManagementCertificate(pemCertificate: string,
         privateKey: string, certificate: string, options?:
-        AttestationAdministrationClientOperationOptions)
+        AttestationAdministrationClientPolicyCertificateOperationOptions)
       parameters:
         - id: pemCertificate
           type: string
@@ -99,7 +99,7 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/attestation.AttestationAdministrationClientOperationOptions"
+            uid="@azure/attestation.AttestationAdministrationClientPolicyCertificateOperationOptions"
             />
           description: Options used in the call to the service.
       return:
@@ -113,7 +113,7 @@ methods:
           PolicyCertificatesModificationResult
   - name: >-
       getPolicy(AttestationType,
-      AttestationAdministrationClientOperationOptions)
+      AttestationAdministrationClientPolicyOperationOptions)
     uid: '@azure/attestation.AttestationAdministrationClient.getPolicy'
     package: '@azure/attestation'
     summary: |-
@@ -125,7 +125,7 @@ methods:
     syntax:
       content: >-
         function getPolicy(attestationType: AttestationType, options?:
-        AttestationAdministrationClientOperationOptions)
+        AttestationAdministrationClientPolicyOperationOptions)
       parameters:
         - id: attestationType
           type: <xref uid="@azure/attestation.AttestationType" />
@@ -133,7 +133,7 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/attestation.AttestationAdministrationClientOperationOptions"
+            uid="@azure/attestation.AttestationAdministrationClientPolicyOperationOptions"
             />
           description: Pipeline and client options for the `getPolicy` call.
       return:
@@ -145,7 +145,7 @@ methods:
                attestation policy,  the `token` property will be the actual token
                returned by the attestation service.
   - name: >-
-      getPolicyManagementCertificates(AttestationAdministrationClientOperationOptions)
+      getPolicyManagementCertificates(AttestationAdministrationClientPolicyCertificateOperationOptions)
     uid: >-
       @azure/attestation.AttestationAdministrationClient.getPolicyManagementCertificates
     package: '@azure/attestation'
@@ -160,12 +160,12 @@ methods:
     syntax:
       content: >-
         function getPolicyManagementCertificates(options?:
-        AttestationAdministrationClientOperationOptions)
+        AttestationAdministrationClientPolicyCertificateOperationOptions)
       parameters:
         - id: options
           type: >-
             <xref
-            uid="@azure/attestation.AttestationAdministrationClientOperationOptions"
+            uid="@azure/attestation.AttestationAdministrationClientPolicyCertificateOperationOptions"
             />
           description: Options for the call to the attestation service.
       return:
@@ -175,7 +175,7 @@ methods:
         description: AttestationResponse wrapping a list of Attestation Signers.
   - name: >-
       removePolicyManagementCertificate(string, string, string,
-      AttestationAdministrationClientOperationOptions)
+      AttestationAdministrationClientPolicyCertificateOperationOptions)
     uid: >-
       @azure/attestation.AttestationAdministrationClient.removePolicyManagementCertificate
     package: '@azure/attestation'
@@ -197,7 +197,7 @@ methods:
       content: >-
         function removePolicyManagementCertificate(pemCertificate: string,
         privateKey: string, certificate: string, options?:
-        AttestationAdministrationClientOperationOptions)
+        AttestationAdministrationClientPolicyCertificateOperationOptions)
       parameters:
         - id: pemCertificate
           type: string
@@ -215,7 +215,7 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/attestation.AttestationAdministrationClientOperationOptions"
+            uid="@azure/attestation.AttestationAdministrationClientPolicyCertificateOperationOptions"
             />
           description: Options used in the call to the service.
       return:
@@ -229,7 +229,7 @@ methods:
           PolicyCertificatesModificationResult
   - name: >-
       resetPolicy(AttestationType,
-      AttestationAdministrationClientOperationOptions & Object)
+      AttestationAdministrationClientPolicyOperationOptions)
     uid: '@azure/attestation.AttestationAdministrationClient.resetPolicy'
     package: '@azure/attestation'
     summary: |-
@@ -248,7 +248,7 @@ methods:
     syntax:
       content: >-
         function resetPolicy(attestationType: AttestationType, options?:
-        AttestationAdministrationClientOperationOptions & Object)
+        AttestationAdministrationClientPolicyOperationOptions)
       parameters:
         - id: attestationType
           type: <xref uid="@azure/attestation.AttestationType" />
@@ -256,8 +256,8 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/attestation.AttestationAdministrationClientOperationOptions"
-            /> & Object
+            uid="@azure/attestation.AttestationAdministrationClientPolicyOperationOptions"
+            />
           description: call options.
       return:
         type: >-
@@ -269,7 +269,7 @@ methods:
            reset by the attestation service.
   - name: >-
       setPolicy(AttestationType, string,
-      AttestationAdministrationClientOperationOptions & Object)
+      AttestationAdministrationClientPolicyOperationOptions)
     uid: '@azure/attestation.AttestationAdministrationClient.setPolicy'
     package: '@azure/attestation'
     summary: 'Sets the attestation policy for the specified <xref:attestationType>.'
@@ -286,8 +286,7 @@ methods:
     syntax:
       content: >-
         function setPolicy(attestationType: AttestationType, newPolicyDocument:
-        string, options?: AttestationAdministrationClientOperationOptions &
-        Object)
+        string, options?: AttestationAdministrationClientPolicyOperationOptions)
       parameters:
         - id: attestationType
           type: <xref uid="@azure/attestation.AttestationType" />
@@ -298,8 +297,8 @@ methods:
         - id: options
           type: >-
             <xref
-            uid="@azure/attestation.AttestationAdministrationClientOperationOptions"
-            /> & Object
+            uid="@azure/attestation.AttestationAdministrationClientPolicyOperationOptions"
+            />
           description: call options.
       return:
         type: >-
