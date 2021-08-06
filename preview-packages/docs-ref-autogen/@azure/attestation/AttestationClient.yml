@@ -27,8 +27,7 @@ constructors:
       import { AttestationClient } from "@azure/attestation";
 
       const client = new AttestationClient(
-         "<service endpoint>",
-         {credentials: new TokenCredential("<>")}
+         "<service endpoint>"
       );
       ```
     remarks: ''
@@ -47,7 +46,47 @@ constructors:
         - id: options
           type: <xref uid="@azure/attestation.AttestationClientOptions" />
           description: |+
-            Used to configure the Attestation Client.
+            Options used to configure the Attestation Client.
+
+  - name: 'AttestationClient(string, TokenCredential, AttestationClientOptions)'
+    uid: '@azure/attestation.AttestationClient.constructor_1'
+    package: '@azure/attestation'
+    summary: |
+      Creates an instance of AttestationClient with options and credentials.
+      Example usage:
+      ```ts
+      import { AttestationClient } from "@azure/attestation";
+
+      const client = new AttestationClient(
+         "<service endpoint>",
+         new TokenCredential("<>"),
+         { tokenValidationOptions: { validateToken: false } }
+      );
+      ```
+
+      Note that credentials are required to call the `attestTpm` API.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AttestationClient(endpoint: string, credentials: TokenCredential,
+        options?: AttestationClientOptions)
+      parameters:
+        - id: endpoint
+          type: string
+          description: >-
+            The attestation instance base URI, for example
+            https://mytenant.attest.azure.net.
+        - id: credentials
+          type: TokenCredential
+          description: |+
+            Credentials used to configure the attestation client.
+
+        - id: options
+          type: <xref uid="@azure/attestation.AttestationClientOptions" />
+          description: |+
+            Options used to configure the Attestation Client.
 
 methods:
   - name: 'attestOpenEnclave(Uint8Array | Buffer | Blob, AttestOpenEnclaveOptions)'
