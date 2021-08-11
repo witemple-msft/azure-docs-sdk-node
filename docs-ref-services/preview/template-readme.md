@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: template
 ---
 
-# Azure Template client library for JavaScript - Version 1.0.9-alpha.20210810.3 
+# Azure Template client library for JavaScript - Version 1.0.9-alpha.20210811.4 
 
 
 <!-- NOTE: This README file is a template. Read through it and replace the instructions (keeping an eye out for package names like "@azure/template") with the ones that pertain to your package. For a complete example based on the real Azure App Configuration SDK, see README-TEMPLATE.md in this directory. -->
