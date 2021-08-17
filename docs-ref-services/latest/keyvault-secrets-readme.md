@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: keyvault
 ---
 
-# Azure Key Vault Secret client library for JavaScript - Version 4.3.1-alpha.20210812.2 
+# Azure Key Vault Secret client library for JavaScript - Version 4.3.1-alpha.20210816.1 
 
 
 Azure Key Vault is a service that allows you to encrypt authentication keys, storage account keys, data encryption keys, .pfx files, and passwords by using secured keys.
