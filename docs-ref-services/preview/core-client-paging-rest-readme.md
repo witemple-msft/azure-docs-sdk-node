@@ -3,7 +3,7 @@ title:
 keywords: Azure, javascript, SDK, API, @azure-rest/core-client-paging, core
 author: maggiepint
 ms.author: magpint
-ms.date: 08/06/2021
+ms.date: 08/20/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -120,7 +120,7 @@ If you run into issues while using this library, please feel free to [file an is
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure-rest/core-client-paging_1.0.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/master/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcore-rest%2Fcore-client%2FREADME.png)
 
