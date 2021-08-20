@@ -3,7 +3,7 @@ title: Azure Attestation client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/attestation, attestation
 author: maggiepint
 ms.author: magpint
-ms.date: 08/13/2021
+ms.date: 08/20/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: attestation
 ---
 
-# Azure Attestation client library for JavaScript - Version 1.0.0 
+# Azure Attestation client library for JavaScript - Version 1.0.0-alpha.20210819.1 
 
 
 The Microsoft Azure Attestation (MAA) service is a unified solution for remotely verifying the trustworthiness of a platform and integrity of the binaries running inside it. The service supports attestation of the platforms backed by Trusted Platform Modules (TPMs) alongside the ability to attest to the state of Trusted Execution Environments (TEEs) such as Intel(tm) Software Guard Extensions (SGX) enclaves and Virtualization-based Security (VBS) enclaves.
@@ -40,7 +40,7 @@ Key links:
 - [LTS versions of Node.js](https://nodejs.org/about/releases/)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/attestation_1.0.0/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -109,7 +109,7 @@ Use the [Azure CLI][azure_cli] snippet below to create/get client secret credent
     $Env:AZURE_TENANT_ID="tenant-ID"
 ```
 
-For more information about the Azure Identity APIs and how to use them, see [Azure Identity client library](https://github.com/Azure/azure-sdk-for-js/tree/@azure/attestation_1.0.0/sdk/identity/identity)
+For more information about the Azure Identity APIs and how to use them, see [Azure Identity client library](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity)
 
 ## Key concepts
 
@@ -365,7 +365,7 @@ console.log(`There are ${attestationSigners.length} signers`);
 
 ## Troubleshooting
 
-Most Attestation service operations will raise exceptions defined in [Azure Core](https://github.com/Azure/azure-sdk-for-js/blob/@azure/attestation_1.0.0/sdk/core/README.md). The attestation service APIs will throw a `RestError` on failure with helpful error codes. Many of these errors are recoverable.
+Most Attestation service operations will raise exceptions defined in [Azure Core](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/core/README.md). The attestation service APIs will throw a `RestError` on failure with helpful error codes. Many of these errors are recoverable.
 
 ```ts
 try {
@@ -385,7 +385,7 @@ import { setLogLevel } from "@azure/logger";
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/attestation_1.0.0/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 Additional troubleshooting information for the MAA service can be found [here](https://docs.microsoft.com/azure/attestation/troubleshoot-guide)
 
@@ -411,7 +411,7 @@ section of the project.
 
 <!-- LINKS -->
 
-[source_code]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/attestation_1.0.0/sdk/attestation/attestation
+[source_code]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/attestation/attestation
 [azure_identity]: https://docs.microsoft.com/javascript/api/@azure/identity
 [defaultazurecredential]: https://docs.microsoft.com/javascript/api/@azure/identity/defaultazurecredential
 [attestation_policy_result]: https://azuresdkdocs.blob.core.windows.net/$web/javascript/azure-attestation/1.0.0-beta.4/interfaces/policyresult.html
@@ -431,7 +431,7 @@ section of the project.
 [json_web_token]: https://tools.ietf.org/html/rfc7519
 [jwk]: https://tools.ietf.org/html/rfc7517
 [base64url_encoding]: https://tools.ietf.org/html/rfc4648#section-5
-[contributing]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/attestation_1.0.0/CONTRIBUTING.md
+[contributing]: https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
 ## Related projects
