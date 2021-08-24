@@ -3,7 +3,7 @@ title:
 keywords: Azure, javascript, SDK, API, @azure/web-pubsub-express, webpubsub
 author: maggiepint
 ms.author: magpint
-ms.date: 08/02/2021
+ms.date: 08/24/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -24,7 +24,7 @@ Use the express library to:
   - Handle client events requests
   
 Key links:
-- [Source code](https://github.com/Azure/azure-sdk-for-js/blob/@azure/web-pubsub-express_1.0.0-beta.3/sdk/web-pubsub/web-pubsub-express)
+- [Source code](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/web-pubsub/web-pubsub-express)
 - [Package (NPM)](https://www.npmjs.com/package/@azure/web-pubsub-express)
 - [API reference documentation](https://aka.ms/awps/sdk/js)
 - [Product documentation](https://aka.ms/awps/doc)
@@ -118,7 +118,7 @@ directory for detailed examples on how to use this library.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/web-pubsub-express_1.0.0-beta.3/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
