@@ -1,0 +1,64 @@
+### YamlMime:TSPackage
+uid: '@azure-rest/core-client-lro'
+name: '@azure-rest/core-client-lro'
+summary: ''
+type: package
+interfaces:
+  - '@azure-rest/core-client-lro.PollerOptions'
+functions:
+  - name: 'getLongRunningPoller<TResult>(Client, TResult)'
+    uid: '@azure-rest/core-client-lro.getLongRunningPoller'
+    package: '@azure-rest/core-client-lro'
+    summary: >-
+      Helper function that builds a Poller object to help polling a long running
+      operation.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getLongRunningPoller<TResult>(client: Client, initialResponse:
+        TResult)
+      parameters:
+        - id: client
+          type: Client
+          description: Client to use for sending the request to get additional pages.
+        - id: initialResponse
+          type: TResult
+          description: The initial response.
+      return:
+        type: 'PollerLike&lt;PollOperationState&lt;TResult&gt;, TResult&gt;'
+        description: >-
+          - A poller object to poll for operation state updates and eventually
+          get the final response.
+  - name: >-
+      getLongRunningPoller<TResult>(Client, TResult, LroEngineOptions<TResult,
+      PollOperationState<TResult>>)
+    uid: '@azure-rest/core-client-lro.getLongRunningPoller_1'
+    package: '@azure-rest/core-client-lro'
+    summary: >-
+      Helper function that builds a Poller object to help polling a long running
+      operation.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getLongRunningPoller<TResult>(client: Client, initialResponse:
+        TResult, pollerOptions: LroEngineOptions<TResult,
+        PollOperationState<TResult>>)
+      parameters:
+        - id: client
+          type: Client
+          description: Client to use for sending the request to get additional pages.
+        - id: initialResponse
+          type: TResult
+          description: The initial response.
+        - id: pollerOptions
+          type: 'LroEngineOptions&lt;TResult, PollOperationState&lt;TResult&gt;&gt;'
+          description: Options to set a resume state or custom polling interval.
+      return:
+        type: 'PollerLike&lt;PollOperationState&lt;TResult&gt;, TResult&gt;'
+        description: >-
+          - A poller object to poll for operation state updates and eventually
+          get the final response.
