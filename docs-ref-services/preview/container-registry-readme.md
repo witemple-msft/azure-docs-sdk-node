@@ -3,7 +3,7 @@ title: Azure Container Registry client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/container-registry, containerregistry
 author: maggiepint
 ms.author: magpint
-ms.date: 08/17/2021
+ms.date: 08/24/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: containerregistry
 ---
 
-# Azure Container Registry client library for JavaScript - Version 1.0.0-beta.4 
+# Azure Container Registry client library for JavaScript - Version 1.0.0-alpha.20210819.2 
 
 
 Azure Container Registry allows you to store and manage container images and artifacts in a private registry for all types of container deployments.
@@ -39,7 +39,7 @@ Key links:
 - [LTS versions of Node.js](https://nodejs.org/about/releases/)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.0.0-beta.4/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -256,7 +256,7 @@ Please take a look at the [samples][samples] directory for detailed examples tha
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.0.0-beta.4/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
@@ -266,12 +266,12 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 [azure_sub]: https://azure.microsoft.com/free/
 [acr_resource]: https://ms.portal.azure.com/#create/Microsoft.ContainerRegistry
-[source]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.0.0-beta.4/sdk/containerregistry/container-registry/
+[source]: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/containerregistry/container-registry/
 [package]: https://www.npmjs.com/package/@azure/container-registry
 [api_docs]: https://docs.microsoft.com/javascript/api/@azure/container-registry
 [rest_docs]: https://docs.microsoft.com/rest/api/containerregistry/
 [product_docs]: https://docs.microsoft.com/azure/container-registry/
-[samples]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/container-registry_1.0.0-beta.4/sdk/containerregistry/container-registry/samples
+[samples]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/containerregistry/container-registry/samples
 [container_registry_docs]: https://docs.microsoft.com/azure/container-registry/container-registry-intro
 [container_registry_create_ps]: https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell
 [container_registry_create_cli]: https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli
@@ -279,6 +279,6 @@ If you'd like to contribute to this library, please read the [contributing guide
 [container_registry_concepts]: https://docs.microsoft.com/azure/container-registry/container-registry-concepts
 [azure_cli]: https://docs.microsoft.com/cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
-[identity]: https://github.com/Azure/azure-sdk-for-js/blob/@azure/container-registry_1.0.0-beta.4/sdk/identity/identity/README.md
+[identity]: https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity/README.md
 [az_sdk_js]: https://github.com/Azure/azure-sdk-for-js
 
