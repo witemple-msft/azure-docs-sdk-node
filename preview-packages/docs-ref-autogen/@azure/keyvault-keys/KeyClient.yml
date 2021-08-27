@@ -486,6 +486,37 @@ methods:
       return:
         type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
         description: ''
+  - name: 'getKeyRotationPolicy(string, GetKeyRotationPolicyOptions)'
+    uid: '@azure/keyvault-keys.KeyClient.getKeyRotationPolicy'
+    package: '@azure/keyvault-keys'
+    summary: |
+      Gets the rotation policy of a Key Vault Key.
+      Example usage:
+      ```ts
+      let client = new KeyClient(vaultUrl, credentials);
+      await client.updateKeyRotationPolicy("MyKey", myPolicy);
+      let result = await client.getKeyRotationPolicy("myKey");
+      ```
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getKeyRotationPolicy(name: string, options?:
+        GetKeyRotationPolicyOptions)
+      parameters:
+        - id: name
+          type: string
+          description: The name of the key.
+        - id: options
+          type: <xref uid="@azure/keyvault-keys.GetKeyRotationPolicyOptions" />
+          description: |
+            The optional parameters.
+      return:
+        type: >-
+          Promise&lt;<xref uid="@azure/keyvault-keys.KeyRotationPolicy" /> |
+          undefined&gt;
+        description: ''
   - name: 'getRandomBytes(number, GetRandomBytesOptions)'
     uid: '@azure/keyvault-keys.KeyClient.getRandomBytes'
     package: '@azure/keyvault-keys'
@@ -763,7 +794,7 @@ methods:
           description: The name of the key.
         - id: target
           type: string
-          description: ''
+          description: The attestation assertion for the target of the key release.
         - id: options
           type: <xref uid="@azure/keyvault-keys.ReleaseKeyOptions" />
           description: |
@@ -808,6 +839,38 @@ methods:
           description: The backup blob associated with a key bundle.
         - id: options
           type: <xref uid="@azure/keyvault-keys.RestoreKeyBackupOptions" />
+          description: |
+            The optional parameters.
+      return:
+        type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
+        description: ''
+  - name: 'rotateKey(string, RotateKeyOptions)'
+    uid: '@azure/keyvault-keys.KeyClient.rotateKey'
+    package: '@azure/keyvault-keys'
+    summary: >
+      Rotates the key based on the key policy by generating a new version of the
+      key. This operation requires the keys/rotate permission.
+
+      Example usage:
+
+      ```ts
+
+      let client = new KeyClient(vaultUrl, credentials);
+
+      let key = await client.rotateKey("MyKey");
+
+      ```
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function rotateKey(name: string, options?: RotateKeyOptions)'
+      parameters:
+        - id: name
+          type: string
+          description: The name of the key to rotate.
+        - id: options
+          type: <xref uid="@azure/keyvault-keys.RotateKeyOptions" />
           description: |
             The optional parameters.
       return:
@@ -909,4 +972,37 @@ methods:
             The optional parameters.
       return:
         type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
+        description: ''
+  - name: >-
+      updateKeyRotationPolicy(string, KeyRotationPolicyProperties,
+      UpdateKeyRotationPolicyOptions)
+    uid: '@azure/keyvault-keys.KeyClient.updateKeyRotationPolicy'
+    package: '@azure/keyvault-keys'
+    summary: |
+      Updates the rotation policy of a Key Vault Key.
+      Example usage:
+      ```ts
+      let client = new KeyClient(vaultUrl, credentials);
+      const setPolicy = await client.updateKeyRotationPolicy("MyKey", myPolicy);
+      ```
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateKeyRotationPolicy(name: string, policy:
+        KeyRotationPolicyProperties, options?: UpdateKeyRotationPolicyOptions)
+      parameters:
+        - id: name
+          type: string
+          description: The name of the key.
+        - id: policy
+          type: <xref uid="@azure/keyvault-keys.KeyRotationPolicyProperties" />
+          description: ''
+        - id: options
+          type: <xref uid="@azure/keyvault-keys.UpdateKeyRotationPolicyOptions" />
+          description: |
+            The optional parameters.
+      return:
+        type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyRotationPolicy" />&gt;
         description: ''
