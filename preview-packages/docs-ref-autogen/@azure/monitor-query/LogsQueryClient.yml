@@ -48,12 +48,12 @@ methods:
           description: The 'Workspace Id' for the Log Analytics Workspace
         - id: query
           type: string
-          description: A Log Analytics Query
+          description: A Kusto query.
         - id: timespan
           type: string
           description: >-
             The timespan over which to query data. This is an ISO8601 time
-            period value.  This timespan is applied in addition to any that are
+            period value. This timespan is applied in addition to any that are
             specified in the query expression.
              Some common durations can be found in the `Durations` object.
         - id: options
@@ -65,7 +65,7 @@ methods:
   - name: 'queryLogsBatch(QueryLogsBatch, QueryLogsBatchOptions)'
     uid: '@azure/monitor-query.LogsQueryClient.queryLogsBatch'
     package: '@azure/monitor-query'
-    summary: 'Query logs with multiple queries, in a batch.'
+    summary: 'Query Logs with multiple queries, in a batch.'
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -77,8 +77,8 @@ methods:
         - id: batch
           type: <xref uid="@azure/monitor-query.QueryLogsBatch" />
           description: >-
-            A batch of queries to run. Each query can be configured to run
-            against separate workspaces.
+            A batch of Kusto queries to execute. Each query can be configured to
+            run against separate workspaces.
         - id: options
           type: <xref uid="@azure/monitor-query.QueryLogsBatchOptions" />
           description: Options for querying logs in a batch.
@@ -86,4 +86,4 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/monitor-query.QueryLogsBatchResult"
           />&gt;
-        description: The log query results for all the queries.
+        description: The Logs query results for all the queries.
