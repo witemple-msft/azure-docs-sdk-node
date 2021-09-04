@@ -1,0 +1,53 @@
+### YamlMime:TSPackage
+uid: '@azure/core-crypto'
+name: '@azure/core-crypto'
+summary: ''
+type: package
+functions:
+  - name: 'computeSha256Hash(string, "base64" | "hex")'
+    uid: '@azure/core-crypto.computeSha256Hash'
+    package: '@azure/core-crypto'
+    summary: Generates a SHA-256 hash.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function computeSha256Hash(content: string, encoding: "base64" | "hex")'
+      parameters:
+        - id: content
+          type: string
+          description: The data to be included in the hash.
+        - id: encoding
+          type: '"base64" | "hex"'
+          description: |
+            The textual encoding to use for the returned hash.
+      return:
+        type: Promise&lt;string&gt;
+        description: ''
+  - name: 'computeSha256Hmac(string, string, "base64" | "hex")'
+    uid: '@azure/core-crypto.computeSha256Hmac'
+    package: '@azure/core-crypto'
+    summary: Generates a SHA-256 HMAC signature.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function computeSha256Hmac(key: string, stringToSign: string, encoding:
+        "base64" | "hex")
+      parameters:
+        - id: key
+          type: string
+          description: >-
+            The HMAC key represented as a base64 string, used to generate the
+            cryptographic HMAC hash.
+        - id: stringToSign
+          type: string
+          description: The data to be signed.
+        - id: encoding
+          type: '"base64" | "hex"'
+          description: |
+            The textual encoding to use for the returned HMAC digest.
+      return:
+        type: Promise&lt;string&gt;
+        description: ''

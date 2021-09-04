@@ -48,21 +48,21 @@ properties:
         type: string
         description: ''
 methods:
-  - name: 'getSchemaById(string, GetSchemaByIdOptions)'
-    uid: '@azure/schema-registry.SchemaRegistryClient.getSchemaById'
+  - name: 'getSchema(string, GetSchemaOptions)'
+    uid: '@azure/schema-registry.SchemaRegistryClient.getSchema'
     package: '@azure/schema-registry'
     summary: Gets an existing schema by ID.
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getSchemaById(id: string, options?: GetSchemaByIdOptions)'
+      content: 'function getSchema(id: string, options?: GetSchemaOptions)'
       parameters:
         - id: id
           type: string
           description: Unique schema ID.
         - id: options
-          type: <xref uid="@azure/schema-registry.GetSchemaByIdOptions" />
+          type: <xref uid="@azure/schema-registry.GetSchemaOptions" />
           description: ''
       return:
         type: >-
@@ -93,7 +93,7 @@ methods:
           description: ''
       return:
         type: >-
-          Promise&lt;<xref uid="@azure/schema-registry.SchemaId" /> |
+          Promise&lt;<xref uid="@azure/schema-registry.SchemaProperties" /> |
           undefined&gt;
         description: Matched schema's ID or undefined if no matching schema was found.
   - name: 'registerSchema(SchemaDescription, RegisterSchemaOptions)'
@@ -123,5 +123,5 @@ methods:
           type: <xref uid="@azure/schema-registry.RegisterSchemaOptions" />
           description: ''
       return:
-        type: Promise&lt;<xref uid="@azure/schema-registry.SchemaId" />&gt;
+        type: Promise&lt;<xref uid="@azure/schema-registry.SchemaProperties" />&gt;
         description: Registered schema's ID.
