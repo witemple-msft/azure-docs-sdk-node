@@ -1,6 +1,6 @@
 ---
-title: Azure Purview Account REST client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure-rest/purview-account, purview
+title: Azure Purview Catalog REST client library for JavaScript
+keywords: Azure, javascript, SDK, API, @azure-rest/purview-catalog, azurepurviewcatalog
 author: maggiepint
 ms.author: magpint
 ms.date: 09/14/2021
@@ -8,25 +8,25 @@ ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: javascript
-ms.service: purview
+ms.service: azurepurviewcatalog
 ---
 
-# Azure Purview Account REST client library for JavaScript - Version 1.0.0-alpha.20210901.2 
+# Azure Purview Catalog REST client library for JavaScript - Version 1.0.0-alpha.20210901.2 
 
 
-Azure Purview Account is a fully managed cloud service whose users can discover the data sources they need and understand the data sources they find. At the same time, Data Account helps organizations get more value from their existing investments.
+Azure Purview Catalog is a fully managed cloud service whose users can discover the data sources they need and understand the data sources they find. At the same time, Data Catalog helps organizations get more value from their existing investments.
 
 - Search for data using technical or business terms
 - Browse associated technical, business, semantic, and operational metadata
 - Identify the sensitivity level of data.
 
-**Please rely heavily on the [service's documentation][account_product_documentation] and our [REST client docs][rest_client] to use this library**
+**Please rely heavily on the [service's documentation][catalog_product_documentation] and our [REST client docs][rest_client] to use this library**
 
 Key links:
 - [Source code][source_code]
-- [Package (NPM)][account_npm]
-- [API reference documentation][account_ref_docs]
-- [Product documentation][account_product_documentation]
+- [Package (NPM)][catalog_npm]
+- [API reference documentation][catalog_ref_docs]
+- [Product documentation][catalog_product_documentation]
 
 ## Getting started
 
@@ -42,15 +42,15 @@ Key links:
 
 Follow [these][purview_resource] instructions to create your Purview resource
 
-### Install the `@azure-rest/purview-account` package
+### Install the `@azure-rest/purview-catalog` package
 
-Install the Azure Purview Account client library for JavaScript with `npm`:
+Install the Azure Purview Catalog client library for JavaScript with `npm`:
 
 ```bash
-npm install @azure-rest/purview-account
+npm install @azure-rest/purview-catalog
 ```
 
-### Create and authenticate a `PurviewAccount`
+### Create and authenticate a `PurviewCatalog`
 
 To use an [Azure Active Directory (AAD) token credential][authenticate_with_token],
 provide an instance of the desired credential type obtained from the
@@ -69,10 +69,10 @@ AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_CLIENT_SECRET
 Use the returned token credential to authenticate the client:
 
 ```typescript
-import PurviewAccount from "@azure-rest/purview-account";
+import PurviewCatalog from "@azure-rest/purview-catalog";
 import { DefaultAzureCredential } from "@azure/identity";
-const client = PurviewAccount(
-  "https://<my-account-name>.purview.azure.com",
+const client = PurviewCatalog(
+  "https://<my-account-name>.catalog.purview.azure.com",
   new DefaultAzureCredential()
 );
 ```
@@ -87,32 +87,26 @@ This client is one of our REST clients. We highly recommend you read how to use 
 
 The following section shows you how to initialize and authenticate your client, then get all of your type-defs.
 
-- [Get A List of Collections](#get-a-list-of-collections "Get A List of Collections")
+- [Get All Type Definitions](#get-all-type-definitions "Get All Type Definitions")
 
 ```typescript
-import PurviewAccount from "@azure-rest/purview-account";
+import PurviewCatalog from "@azure-rest/purview-catalog";
 import { DefaultAzureCredential } from "@azure/identity";
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const endpoint = process.env["ENDPOINT"] || "";
 
 async function main() {
-  console.log("== List collections sample ==");
-  const client = PurviewAccount(endpoint, new DefaultAzureCredential());
+  console.log("== List entity typedefs ==");
+  const client = PurviewCatalog(endpoint, new DefaultAzureCredential());
 
-  const response = await client.path("/collections").get();
+  const dataSources = await client.path("/atlas/v2/types/typedefs").get();
 
-  if (response.status !== "200") {
-    console.log(`GET "/collections" failed with ${response.status}`);
+  if (dataSources.status !== "200") {
+    throw dataSources;
   }
 
-  console.log(response.body);
+  console.log(dataSources.body.entityDefs?.map((ds) => ds.name).join("\n"));
 }
 
 main().catch(console.error);
-
 ```
 
 ## Troubleshooting
@@ -139,13 +133,13 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fpurview%2Fpurview-account-rest%2FREADME.png)
+![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fpurview%2Fpurview-catalog-rest%2FREADME.png)
 
-[account_product_documentation]: https://azure.microsoft.com/services/purview/
+[catalog_product_documentation]: https://azure.microsoft.com/services/purview/
 [rest_client]: https://github.com/Azure/azure-sdk-for-js/blob/main/documentation/rest-clients.md
 [source_code]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/purview/purview-catalog-rest
-[account_npm]: https://www.npmjs.com/org/azure-rest
-[account_ref_docs]: https://azure.github.io/azure-sdk-for-js
+[catalog_npm]: https://www.npmjs.com/org/azure-rest
+[catalog_ref_docs]: https://azure.github.io/azure-sdk-for-js
 [azure_subscription]: https://azure.microsoft.com/free/
 [purview_resource]: https://docs.microsoft.com/azure/purview/create-catalog-portal
 [authenticate_with_token]: https://docs.microsoft.com/azure/cognitive-services/authentication?tabs=powershell#authenticate-with-an-authentication-token
