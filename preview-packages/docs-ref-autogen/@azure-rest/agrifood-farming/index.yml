@@ -508,6 +508,7 @@ typeAliases:
   - '@azure-rest/agrifood-farming.FieldsListParameters'
   - '@azure-rest/agrifood-farming.GeoJsonObject'
   - '@azure-rest/agrifood-farming.GeoJsonObjectType'
+  - '@azure-rest/agrifood-farming.GetArrayType'
   - '@azure-rest/agrifood-farming.HarvestDataCreateOrUpdateParameters'
   - '@azure-rest/agrifood-farming.HarvestDataDeleteParameters'
   - '@azure-rest/agrifood-farming.HarvestDataGetParameters'
@@ -530,6 +531,7 @@ typeAliases:
   - '@azure-rest/agrifood-farming.OAuthTokensGetCascadeDeleteJobDetailsParameters'
   - '@azure-rest/agrifood-farming.OAuthTokensGetOAuthConnectionLinkParameters'
   - '@azure-rest/agrifood-farming.OAuthTokensListParameters'
+  - '@azure-rest/agrifood-farming.PaginateReturn'
   - '@azure-rest/agrifood-farming.PlantingDataCreateOrUpdateParameters'
   - '@azure-rest/agrifood-farming.PlantingDataDeleteParameters'
   - '@azure-rest/agrifood-farming.PlantingDataGetParameters'
@@ -600,3 +602,58 @@ functions:
       return:
         type: <xref uid="@azure-rest/agrifood-farming.FarmBeatsRestClient" />
         description: ''
+  - name: 'getPoller<TResult>(FarmBeatsRestClient, TResult, PollerOptions)'
+    uid: '@azure-rest/agrifood-farming.getPoller'
+    package: '@azure-rest/agrifood-farming'
+    summary: Gets a poller object to help polling for a long running operation status.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPoller<TResult>(client: FarmBeatsRestClient,
+        initialResponse: TResult, options?: PollerOptions)
+      parameters:
+        - id: client
+          type: <xref uid="@azure-rest/agrifood-farming.FarmBeatsRestClient" />
+          description: FarmBeats Rest Client.
+        - id: initialResponse
+          type: TResult
+          description: Initial response for the operation that needs to be polled.
+        - id: options
+          type: PollerOptions
+          description: Polling options
+      return:
+        type: 'PollerLike&lt;PollOperationState&lt;TResult&gt;, TResult&gt;'
+        description: >-
+          - Gets a poller that can be run on demand or automatically awaited
+          until the operation is completed.
+  - name: 'paginate<TReturn>(Client, TReturn)'
+    uid: '@azure-rest/agrifood-farming.paginate'
+    package: '@azure-rest/agrifood-farming'
+    summary: >-
+      This is the wrapper function that would be exposed. It is hiding the
+      Pagination Options because it can be
+
+      obtained from the swagger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function paginate<TReturn>(client: Client, initialResponse: TReturn)'
+      parameters:
+        - id: client
+          type: Client
+          description: Client to use for sending the next page requests
+        - id: initialResponse
+          type: TReturn
+          description: >-
+            Initial response containing the nextLink and current page of
+            elements
+      return:
+        type: >-
+          PagedAsyncIterableIterator&lt;<xref
+          uid="@azure-rest/agrifood-farming.PaginateReturn" />&lt;TReturn&gt;,
+          <xref uid="@azure-rest/agrifood-farming.PaginateReturn"
+          />&lt;TReturn&gt;[]&gt;
+        description: '- PagedAsyncIterableIterator to iterate the elements'
