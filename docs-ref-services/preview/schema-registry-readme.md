@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: eventhubs
 ---
 
-# Azure Schema Registry client library for JavaScript - Version 1.0.0-alpha.20210903.1 
+# Azure Schema Registry client library for JavaScript - Version 1.0.0-alpha.20210915.3 
 
 
 Azure Schema Registry is a schema repository service hosted by Azure Event Hubs,
