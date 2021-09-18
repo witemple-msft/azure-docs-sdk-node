@@ -414,6 +414,36 @@ methods:
       return:
         type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
         description: ''
+  - name: 'getCryptographyClient(string, GetCryptographyClientOptions)'
+    uid: '@azure/keyvault-keys.KeyClient.getCryptographyClient'
+    package: '@azure/keyvault-keys'
+    summary: |-
+      Gets a <xref:CryptographyClient> for the given key.
+      Example usage:
+      ```ts
+      let client = new KeyClient(url, credentials);
+      // get a cryptography client for a given key
+      let cryptographyClient = client.getCryptographyClient("MyKey");
+      ```
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getCryptographyClient(keyName: string, options?:
+        GetCryptographyClientOptions)
+      parameters:
+        - id: keyName
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/keyvault-keys.GetCryptographyClientOptions" />
+          description: ''
+      return:
+        type: <xref uid="@azure/keyvault-keys.CryptographyClient" />
+        description: >-
+          - A {@link CryptographyClient} using the same options, credentials,
+          and http client as this {@link KeyClient}
   - name: 'getDeletedKey(string, GetDeletedKeyOptions)'
     uid: '@azure/keyvault-keys.KeyClient.getDeletedKey'
     package: '@azure/keyvault-keys'
