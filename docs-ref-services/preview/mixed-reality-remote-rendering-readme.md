@@ -3,7 +3,7 @@ title: Azure Remote Rendering client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/mixed-reality-remote-rendering, remoterendering
 author: maggiepint
 ms.author: magpint
-ms.date: 09/21/2021
+ms.date: 09/22/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: remoterendering
 ---
 
-# Azure Remote Rendering client library for JavaScript - Version 1.0.0-beta.1 
+# Azure Remote Rendering client library for JavaScript - Version 1.0.0-alpha.20210922.1 
 
 
 Azure Remote Rendering (ARR) is a service that enables you to render high-quality, interactive 3D content in the cloud and stream it in real time to devices, such as the HoloLens 2.
@@ -54,7 +54,7 @@ To use this client library in the browser, first you need to use a bundler. For 
 #### CORS
 
 This library cannot be used to make direct calls to the Azure Remote Rendering service from a browser.
-Please refer to [this document](https://github.com/Azure/azure-sdk-for-js/blob/@azure/mixed-reality-remote-rendering_1.0.0-beta.1/samples/cors/ts/README.md) for guidance.
+Please refer to [this document](https://github.com/Azure/azure-sdk-for-js/blob/main/samples/cors/ts/README.md) for guidance.
 
 ### Authenticate the client
 
@@ -142,7 +142,7 @@ return new RemoteRenderingClient(serviceEndpoint, accountId, accountDomain, cred
 #### Authenticating with a static access token
 
 You can pass a Mixed Reality access token as an `AccessToken` previously retrieved from the
-[Mixed Reality STS service](https://github.com/Azure/azure-sdk-for-js/tree/@azure/mixed-reality-remote-rendering_1.0.0-beta.1/sdk/mixedreality/mixed-reality-authentication)
+[Mixed Reality STS service](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/mixedreality/mixed-reality-authentication)
 to be used with a Mixed Reality client library:
 
 ```typescript Snippet:CreateAClientWithStaticAccessToken
@@ -392,7 +392,7 @@ RemoteRenderingServiceError with details.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/mixed-reality-remote-rendering_1.0.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
