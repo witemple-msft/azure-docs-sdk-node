@@ -9,16 +9,31 @@ isPreview: false
 isDeprecated: false
 type: interface
 properties:
-  - name: content
-    uid: '@azure/schema-registry.Schema.content'
+  - name: definition
+    uid: '@azure/schema-registry.Schema.definition'
     package: '@azure/schema-registry'
     summary: String representation of schema.
-    fullName: content
+    fullName: definition
     remarks: ''
     isPreview: false
     isDeprecated: false
     syntax:
-      content: 'content: string'
+      content: 'definition: string'
+      return:
+        type: string
+        description: ''
+  - name: format
+    uid: '@azure/schema-registry.Schema.format'
+    package: '@azure/schema-registry'
+    summary: |-
+      Serialization type of schema.
+      Currently only 'avro' is supported, but this is subject to change.
+    fullName: format
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'format: string'
       return:
         type: string
         description: ''
@@ -35,47 +50,6 @@ properties:
       return:
         type: string
         description: ''
-  - name: location
-    uid: '@azure/schema-registry.Schema.location'
-    package: '@azure/schema-registry'
-    summary: URL of schema by group and name.
-    fullName: location
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'location: string'
-      return:
-        type: string
-        description: ''
-  - name: locationById
-    uid: '@azure/schema-registry.Schema.locationById'
-    package: '@azure/schema-registry'
-    summary: URL of schema by ID.
-    fullName: locationById
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'locationById: string'
-      return:
-        type: string
-        description: ''
-  - name: serializationType
-    uid: '@azure/schema-registry.Schema.serializationType'
-    package: '@azure/schema-registry'
-    summary: |-
-      Serialization type of schema.
-      Currently only 'avro' is supported, but this is subject to change.
-    fullName: serializationType
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'serializationType: string'
-      return:
-        type: string
-        description: ''
   - name: version
     uid: '@azure/schema-registry.Schema.version'
     package: '@azure/schema-registry'
@@ -89,4 +63,4 @@ properties:
       return:
         type: number
         description: ''
-extends: <xref uid="@azure/schema-registry.SchemaId" />
+extends: <xref uid="@azure/schema-registry.SchemaProperties" />
