@@ -3,7 +3,7 @@ title: Azure Mixed Reality Authentication client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/mixed-reality-authentication, mixedreality
 author: maggiepint
 ms.author: magpint
-ms.date: 09/21/2021
+ms.date: 09/23/2021
 ms.topic: reference
 ms.prod: azure
 ms.technology: azure
@@ -11,7 +11,7 @@ ms.devlang: javascript
 ms.service: mixedreality
 ---
 
-# Azure Mixed Reality Authentication client library for JavaScript - Version 1.0.0-beta.1 
+# Azure Mixed Reality Authentication client library for JavaScript - Version 1.0.0-alpha.20210920.2 
 
 
 Mixed Reality services, like Azure Spatial Anchors, Azure Remote Rendering, and others, use the Mixed Reality security
@@ -19,10 +19,10 @@ token service (STS) for authentication. This package supports exchanging Mixed R
 token from the STS that can be used to access Mixed Reality services.
 
 Key links:
-- [Source code](https://github.com/Azure/azure-sdk-for-js/blob/@azure/mixed-reality-authentication_1.0.0-beta.1/sdk/mixedreality/mixed-reality-authentication/) |
+- [Source code](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/mixedreality/mixed-reality-authentication/) |
 - [Package (NPM)](https://www.npmjs.com/package/@azure/mixed-reality-authentication) |
 - [API reference documentation](https://aka.ms/azsdk/js/mixed-reality-authentication/docs) |
-- [Samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/mixed-reality-authentication_1.0.0-beta.1/sdk/mixedreality/mixed-reality-authentication/samples)
+- [Samples](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/mixedreality/mixed-reality-authentication/samples)
 
 ![Mixed Reality service authentication diagram](https://docs.microsoft.com/azure/spatial-anchors/concepts/media/spatial-anchors-authentication-overview.png)
 
@@ -184,12 +184,12 @@ import { setLogLevel } from "@azure/logger";
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/mixed-reality-authentication_1.0.0-beta.1/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 ## Next steps
 
 Please take a look at the
-[samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/mixed-reality-authentication_1.0.0-beta.1/sdk/mixedreality/mixed-reality-authentication/samples)
+[samples](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/mixedreality/mixed-reality-authentication/samples)
 directory for detailed examples on how to use this library.
 
 ## Contributing
@@ -207,7 +207,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 If you'd like to contribute to this library, please read the
-[contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/mixed-reality-authentication_1.0.0-beta.1/CONTRIBUTING.md) to learn more about how to
+[contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to
 build and test the code.
 
 ## Related projects
@@ -217,9 +217,9 @@ build and test the code.
 [azure_cli]: https://docs.microsoft.com/cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
 [azure_portal]: https://portal.azure.com
-[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/mixed-reality-authentication_1.0.0-beta.1/sdk/identity/identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity
 [register_aad_app]: https://docs.microsoft.com/azure/spatial-anchors/concepts/authentication
-[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/mixed-reality-authentication_1.0.0-beta.1/sdk/identity/identity#defaultazurecredential
+[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity#defaultazurecredential
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%mixedreality%2Fmixed-reality-authentication%2FREADME.png)
 
